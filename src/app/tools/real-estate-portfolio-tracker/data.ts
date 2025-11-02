@@ -1,0 +1,38 @@
+import { Property } from './components/types';
+
+export const initialProperties: Property[] = [
+  {
+    id: '1',
+    name: 'Sunset Villa',
+    address: '123 Ocean View Drive, Malibu, CA',
+    type: 'single-family',
+    purchasePrice: 3500000,
+    value: 4200000,
+    equity: 1400000,
+    purchaseDate: '2021-03-15',
+    monthlyRent: 15000,
+    monthlyExpenses: 4500,
+    downPayment: 700000,
+    loanAmount: 2800000,
+    interestRate: 3.5,
+    loanTerm: 30,
+    notes: 'Beautiful beachfront property with stunning sunset views. Rented to a long-term tenant.',
+  },
+  {
+    id: '2',
+    name: 'Downtown Loft',
+    address: '456 Urban Center, New York, NY',
+    type: 'condo',
+    purchasePrice: 1200000,
+    value: 1500000,
+    equity: 540000,
+    purchaseDate: '2022-08-20',
+    monthlyRent: 6000,
+    monthlyExpenses: 2000,
+    downPayment: 240000,
+    loanAmount: 960000,
+    interestRate: 4.0,
+    loanTerm: 30,
+    notes: 'Modern loft in the heart of the city. Close to all amenities.',
+  },
+];

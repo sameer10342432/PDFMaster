@@ -1,0 +1,70 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'School District Finder | Property Tools - Find Best Schools Near Properties',
+  description: 'Find and compare school districts, ratings, and educational quality near properties. Research elementary, middle, and high schools to make informed real estate decisions based on education quality.',
+  keywords: [
+    'school district finder',
+    'school ratings',
+    'property school zones',
+    'education quality',
+    'school district comparison',
+    'elementary schools',
+    'middle schools',
+    'high schools',
+    'school catchment areas',
+    'education research',
+    'school performance',
+    'academic ratings',
+    'school boundaries',
+    'property education value',
+    'school district map',
+    'education investment',
+    'family property search',
+    'school quality assessment',
+    'educational opportunities',
+    'school district analysis'
+  ],
+  authors: [{ name: 'Property Tools' }],
+  creator: 'Property Tools',
+  publisher: 'Property Tools',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: 'School District Finder | Property Tools - Find Best Schools Near Properties',
+    description: 'Find and compare school districts, ratings, and educational quality near properties. Research elementary, middle, and high schools to make informed real estate decisions based on education quality.',
+    url: 'https://propertytools.com.au/tools/school-district-finder',
+    siteName: 'Property Tools',
+    locale: 'en_AU',
+    type: 'website',
+    images: [
+      {
+        url: 'https://propertytools.com.au/images/school-district-finder-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'School District Finder Tool - Find Best Schools Near Properties',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'School District Finder | Property Tools - Find Best Schools Near Properties',
+    description: 'Find and compare school districts, ratings, and educational quality near properties. Research elementary, middle, and high schools to make informed real estate decisions based on education quality.',
+    images: ['https://propertytools.com.au/images/school-district-finder-twitter.jpg'],
+    creator: '@PropertyToolsAU',
+  },
+  alternates: {
+    canonical: 'https://propertytools.com.au/tools/school-district-finder',
+  },
+  category: 'Real Estate Tools',
+  classification: 'Education and Property Research Tool',
+}

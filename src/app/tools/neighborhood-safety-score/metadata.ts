@@ -1,0 +1,76 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Neighborhood Safety Score Calculator | Property Safety Analysis Tool',
+  description: 'Evaluate neighborhood safety with our comprehensive safety score calculator. Analyze crime rates, emergency services, lighting, and community factors to make informed property decisions.',
+  keywords: [
+    'neighborhood safety score',
+    'crime rate calculator',
+    'property safety analysis',
+    'neighborhood security assessment',
+    'area safety rating',
+    'community safety evaluation',
+    'property crime statistics',
+    'neighborhood risk assessment',
+    'safety score tool',
+    'residential area safety',
+    'home security analysis',
+    'local crime data',
+    'neighborhood watch',
+    'property safety factors',
+    'area security rating',
+    'community safety index',
+    'residential safety guide',
+    'property location safety',
+    'neighborhood crime analysis',
+    'safety evaluation tool'
+  ],
+  authors: [{ name: 'Property Tools Team' }],
+  creator: 'Property Tools',
+  publisher: 'Property Tools',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: 'Neighborhood Safety Score Calculator | Property Safety Analysis',
+    description: 'Evaluate neighborhood safety with comprehensive crime analysis, emergency services assessment, and community safety factors for informed property decisions.',
+    url: 'https://propertytools.com.au/tools/neighborhood-safety-score',
+    siteName: 'Property Tools Australia',
+    images: [
+      {
+        url: 'https://propertytools.com.au/images/neighborhood-safety-score-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Neighborhood Safety Score Calculator',
+      },
+    ],
+    locale: 'en_AU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Neighborhood Safety Score Calculator | Property Safety Analysis',
+    description: 'Evaluate neighborhood safety with comprehensive analysis tools. Assess crime rates, emergency services, and community factors.',
+    images: ['https://propertytools.com.au/images/neighborhood-safety-score-twitter.jpg'],
+    creator: '@PropertyToolsAU',
+  },
+  alternates: {
+    canonical: 'https://propertytools.com.au/tools/neighborhood-safety-score',
+  },
+  category: 'Real Estate Tools',
+  classification: 'Property Analysis Tool',
+  other: {
+    'property-type': 'safety-analysis',
+    'tool-category': 'neighborhood-assessment',
+    'audience': 'property-buyers-investors',
+    'content-type': 'interactive-calculator',
+  },
+}

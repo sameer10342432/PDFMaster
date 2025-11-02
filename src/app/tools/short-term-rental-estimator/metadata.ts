@@ -1,0 +1,75 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Short-Term Rental Estimator | Airbnb Revenue Calculator | Property Tools',
+  description: 'Calculate potential Airbnb and short-term rental income with our comprehensive estimator. Analyze occupancy rates, seasonal pricing, expenses, and ROI for vacation rental properties.',
+  keywords: [
+    'short-term rental calculator',
+    'Airbnb revenue estimator',
+    'vacation rental income',
+    'STR calculator',
+    'Airbnb profit calculator',
+    'holiday rental estimator',
+    'short-term rental ROI',
+    'vacation property calculator',
+    'Airbnb occupancy rates',
+    'rental arbitrage calculator',
+    'STR investment analysis',
+    'vacation rental profitability',
+    'Airbnb cash flow',
+    'short-term rental expenses',
+    'holiday let calculator',
+    'Airbnb pricing strategy',
+    'vacation rental yield',
+    'STR market analysis',
+    'short-term rental income',
+    'Airbnb investment calculator'
+  ],
+  authors: [{ name: 'Property Tools' }],
+  creator: 'Property Tools',
+  publisher: 'Property Tools',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: 'Short-Term Rental Estimator | Calculate Airbnb Revenue & ROI',
+    description: 'Estimate your short-term rental income potential with our advanced calculator. Analyze Airbnb revenue, occupancy rates, expenses, and profitability for vacation rental investments.',
+    url: 'https://propertytools.com.au/tools/short-term-rental-estimator',
+    siteName: 'Property Tools Australia',
+    locale: 'en_AU',
+    type: 'website',
+    images: [
+      {
+        url: 'https://propertytools.com.au/images/short-term-rental-estimator-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Short-Term Rental Estimator - Calculate Airbnb Revenue',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Short-Term Rental Estimator | Airbnb Revenue Calculator',
+    description: 'Calculate potential Airbnb income, occupancy rates, and ROI for short-term rental properties. Free vacation rental investment calculator.',
+    images: ['https://propertytools.com.au/images/short-term-rental-estimator-twitter.jpg'],
+    creator: '@PropertyToolsAU',
+  },
+  alternates: {
+    canonical: 'https://propertytools.com.au/tools/short-term-rental-estimator',
+  },
+  category: 'Real Estate Tools',
+  classification: 'Property Investment Calculator',
+  other: {
+    'application-name': 'Property Tools',
+    'msapplication-TileColor': '#2563eb',
+    'theme-color': '#2563eb',
+  },
+}

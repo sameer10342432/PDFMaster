@@ -1,0 +1,75 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Cap Rate Calculator - Calculate Capitalization Rate & NOI for Investment Properties | Property Tools',
+  description: 'Calculate cap rates and net operating income (NOI) for rental properties. Analyze vacancy rates, operating expenses, property taxes, and insurance. Compare investment opportunities with detailed profitability metrics.',
+  keywords: [
+    'cap rate calculator',
+    'capitalization rate',
+    'real estate investment',
+    'property investment analysis',
+    'rental property calculator',
+    'investment property ROI',
+    'NOI calculator',
+    'net operating income',
+    'property valuation',
+    'real estate metrics',
+    'investment analysis',
+    'property cash flow',
+    'rental income calculator',
+    'operating expenses',
+    'property investment tools',
+    'real estate cap rate',
+    'investment property evaluation',
+    'property performance metrics',
+    'real estate financial analysis',
+    'investment property comparison'
+  ],
+  authors: [{ name: 'Property Tools' }],
+  creator: 'Property Tools',
+  publisher: 'Property Tools',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: 'Cap Rate Calculator - Real Estate Investment Analysis Tool',
+    description: 'Calculate capitalization rates for investment properties. Analyze rental income, operating expenses, and property values to determine investment profitability.',
+    url: '/tools/cap-rate-calculator',
+    siteName: 'Property Tools',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: '/og-cap-rate-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Cap Rate Calculator Tool',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cap Rate Calculator - Real Estate Investment Analysis',
+    description: 'Calculate capitalization rates and analyze investment property profitability with our comprehensive tool.',
+    images: ['/twitter-cap-rate-calculator.jpg'],
+    creator: '@PropertyTools',
+  },
+  alternates: {
+    canonical: '/tools/cap-rate-calculator',
+  },
+  category: 'Real Estate Tools',
+  classification: 'Real Estate Investment Calculator',
+  other: {
+    'application-name': 'Property Tools',
+    'msapplication-TileColor': '#2563eb',
+    'theme-color': '#2563eb',
+  },
+}
