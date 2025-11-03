@@ -11,6 +11,7 @@ const ArvCalculatorPage = () => {
         title={ARV_CALCULATOR_CONTENT.title}
         description={ARV_CALCULATOR_CONTENT.description}
         inputs={ARV_CALCULATOR_CONTENT.calculator.fields}
+        results={ARV_CALCULATOR_CONTENT.calculator.results}
         calculation={ARV_CALCULATOR_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>

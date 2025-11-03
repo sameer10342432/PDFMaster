@@ -3,8 +3,11 @@ import { CalculatorContent } from '@/types';
 export const INVESTMENT_PROPERTY_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Investment Property Calculator',
   description: 'Analyze the potential of an investment property. Calculate cash flow, cap rate, and more.',
+  icon: 'Icon',
+  slug: 'investment-property-calculator',
   category: 'Financial',
   article: {
+    title: 'How to Analyze an Investment Property',
     content: `
     <h2>How to Analyze an Investment Property</h2>
     <p>Investing in rental properties can be a powerful way to build wealth and generate passive income. However, not all properties are good investments. A thorough financial analysis is essential to ensure a property will be profitable. This calculator will help you evaluate a potential rental property investment by calculating key performance metrics.</p>
@@ -103,6 +106,7 @@ export const INVESTMENT_PROPERTY_CALCULATOR_CONTENT: CalculatorContent = {
         defaultValue: 10,
       },
     ],
+    results: [],
     calculate: (values) => {
       const { purchasePrice, downPayment, interestRate, loanTerm, grossMonthlyRent, propertyTaxes, insurance, vacancyRate, maintenance, managementFee } = values;
       const downPaymentAmount = purchasePrice * (downPayment / 100);

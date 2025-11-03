@@ -4,7 +4,12 @@ export const WHOLESALE_REAL_ESTATE_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Wholesale Real Estate Calculator',
   description:
     'A tool for real estate wholesalers to quickly estimate the potential profitability of a deal. It helps calculate the maximum allowable offer (MAO) to a seller, ensuring a profitable exit strategy when selling the contract to an end buyer.',
-  article: `
+  icon: 'Icon',
+  category: 'Real Estate',
+  slug: 'wholesale-real-estate-calculator',
+  article: {
+    title: 'Analyzing a Wholesale Real Estate Deal',
+    content: `
       <p>A wholesale real estate calculator is an indispensable tool for investors who specialize in wholesaling properties. This calculator is designed to help you quickly and accurately determine the maximum offer you can make on a property to ensure a profitable deal. By inputting key figures such as the After Repair Value (ARV), estimated repair costs, and your desired wholesale fee, you can calculate the Maximum Allowable Offer (MAO). This ensures that you leave enough room for the end buyer to make a profit, which is crucial for a successful wholesale transaction.</p>
     <h2>Analyzing a Wholesale Real Estate Deal</h2>
     <p>Wholesaling is a real estate investment strategy where you get a property under contract and then sell that contract to another buyer, usually a cash buyer or a fix-and-flip investor. The goal is to make a profit, known as a wholesale fee, without ever taking ownership of the property. This calculator will help you analyze a potential wholesale deal.</p>
@@ -39,6 +44,7 @@ export const WHOLESALE_REAL_ESTATE_CALCULATOR_CONTENT: CalculatorContent = {
     </ul>
     <p>The calculator will then tell you the maximum price you can offer to the seller to make the deal work. This is a crucial step in ensuring a profitable wholesale transaction.</p>
   `,
+  },
   calculator: {
     fields: [
       {
@@ -65,6 +71,9 @@ export const WHOLESALE_REAL_ESTATE_CALCULATOR_CONTENT: CalculatorContent = {
         type: 'number',
         defaultValue: 70,
       },
+    ],
+    results: [
+      { label: 'Maximum Allowable Offer (MAO)', isCurrency: true },
     ],
     calculate: (values: any) => {
       const { arv, rehabCosts, wholesaleFee, investorPercentage } = values;

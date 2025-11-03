@@ -10,6 +10,7 @@ const MortgageCalculatorPage = () => {
         title={MORTGAGE_CALCULATOR_CONTENT.title}
         description={MORTGAGE_CALCULATOR_CONTENT.description}
         inputs={MORTGAGE_CALCULATOR_CONTENT.calculator.fields}
+        results={MORTGAGE_CALCULATOR_CONTENT.calculator.results}
         calculation={MORTGAGE_CALCULATOR_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>

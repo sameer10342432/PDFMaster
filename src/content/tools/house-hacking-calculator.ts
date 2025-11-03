@@ -3,8 +3,11 @@ import { CalculatorContent } from '@/types';
 export const HOUSE_HACKING_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'House Hacking Calculator',
   description: 'See how much you can save by house hacking. Calculate your net monthly housing cost.',
+  icon: 'Icon',
+  slug: 'house-hacking-calculator',
   category: 'Financial',
   article: {
+    title: 'What is House Hacking?',
     content: `
     <h2>What is House Hacking?</h2>
     <p>House hacking is a real estate investment strategy where you purchase a multi-unit property, live in one unit, and rent out the others. The goal is to have the rental income from the other units cover your entire mortgage payment, allowing you to live for free or even generate positive cash flow. This calculator will help you analyze a potential house hacking deal.</p>
@@ -89,6 +92,7 @@ export const HOUSE_HACKING_CALCULATOR_CONTENT: CalculatorContent = {
         defaultValue: 2000,
       },
     ],
+    results: [],
     calculate: (values) => {
       const { purchasePrice, downPayment, interestRate, loanTerm, rentalIncome, propertyTaxes, insurance, maintenance } = values;
       const downPaymentAmount = purchasePrice * (downPayment / 100);

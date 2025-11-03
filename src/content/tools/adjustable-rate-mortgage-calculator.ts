@@ -3,6 +3,7 @@ import { CalculatorContent } from '@/types';
 export const ADJUSTABLE_RATE_MORTGAGE_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Adjustable-Rate Mortgage (ARM) Calculator',
   description: 'Calculate the monthly payments for an adjustable-rate mortgage. See how your payments can change over time.',
+  icon: 'Icon',
   category: 'Mortgage',
   slug: 'adjustable-rate-mortgage-calculator',
   article: {
@@ -91,6 +92,10 @@ export const ADJUSTABLE_RATE_MORTGAGE_CALCULATOR_CONTENT: CalculatorContent = {
         type: 'number',
         defaultValue: 5,
       },
+    ],
+    results: [
+      { label: 'Initial Monthly Payment', isCurrency: true },
+      { label: `Payment after first adjustment (estimated)`, isCurrency: true },
     ],
     calculate: (values) => {
       const { loanAmount, initialRate, loanTerm, initialPeriod, firstAdjustmentCap, periodicCap, lifetimeCap } = values;

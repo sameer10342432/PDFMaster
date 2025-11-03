@@ -11,6 +11,7 @@ const ROICalculatorPage = () => {
         title={ROI_CALCULATOR_CONTENT.title}
         description={ROI_CALCULATOR_CONTENT.description}
         inputs={ROI_CALCULATOR_CONTENT.calculator.fields}
+        results={ROI_CALCULATOR_CONTENT.calculator.results}
         calculation={ROI_CALCULATOR_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>

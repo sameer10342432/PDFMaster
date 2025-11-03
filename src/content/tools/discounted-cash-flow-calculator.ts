@@ -3,8 +3,11 @@ import { CalculatorContent } from '@/types';
 export const DCF_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Discounted Cash Flow (DCF) Calculator',
   description: 'Calculate the discounted cash flow (DCF) of your investment. Understand the present value of your future cash flows.',
+  icon: 'Icon',
   category: 'Financial',
+  slug: 'discounted-cash-flow-calculator',
   article: {
+    title: 'What is Discounted Cash Flow (DCF)?',
     content: `
     <h2>What is Discounted Cash Flow (DCF)?</h2>
     <p>Discounted cash flow (DCF) is a valuation method used to estimate the value of an investment based on its expected future cash flows. DCF analysis attempts to figure out the value of an investment today, based on projections of how much money it will generate in the future. This calculator will help you perform a DCF analysis.</p>
@@ -28,6 +31,7 @@ export const DCF_CALCULATOR_CONTENT: CalculatorContent = {
   `,
   },
   calculator: {
+    results: [],
     fields: [
       {
         name: 'initialInvestment',

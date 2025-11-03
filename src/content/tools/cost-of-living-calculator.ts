@@ -3,8 +3,12 @@ import { CalculatorContent } from '@/types';
 export const COST_OF_LIVING_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Cost of Living Calculator',
   description: 'Compare the cost of living between two cities. See how your salary and expenses may change.',
+  icon: 'Icon',
+  slug: 'cost-of-living-calculator',
   category: 'General',
-  article: `
+  article: {
+    title: 'Comparing the Cost of Living',
+    content: `
     <h2>Comparing the Cost of Living</h2>
     <p>Whether you are moving for a new job, retirement, or a change of scenery, it is crucial to understand how your cost of living will change. The cost of living can vary significantly from one city to another, and a higher salary in a new city does not always mean you will have more disposable income. This calculator will help you compare the cost of living between two cities.</p>
 
@@ -33,7 +37,9 @@ export const COST_OF_LIVING_CALCULATOR_CONTENT: CalculatorContent = {
     </ul>
     <p>The calculator will then compare your total monthly expenses in both cities and estimate the equivalent salary you would need in the new city to maintain your current lifestyle. This will give you a better idea of how a move could impact your finances.</p>
   `,
+  },
   calculator: {
+    results: [],
     fields: [
       {
         name: 'currentSalary',

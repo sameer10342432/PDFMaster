@@ -4,6 +4,7 @@ export const amortizationCalculator: CalculatorContent = {
   title: "Amortization Calculator",
   description:
     "Calculate your amortization schedule to see how your loan is paid off over time.",
+  icon: "Icon",
   category: "Calculators",
   slug: "amortization-calculator",
   article: {
@@ -32,6 +33,20 @@ export const amortizationCalculator: CalculatorContent = {
             defaultValue: "30",
         },
     ],
+    results: [
+        {
+          label: "Monthly Payment",
+          isCurrency: true,
+        },
+        {
+          label: "Total Interest Paid",
+          isCurrency: true,
+        },
+        {
+          label: "Amortization Schedule",
+          isCurrency: false,
+        },
+      ],
     calculate: (values) => {
       const { loanAmount, interestRate, loanTerm } = values;
       const principal = parseFloat(loanAmount);
@@ -75,7 +90,7 @@ export const amortizationCalculator: CalculatorContent = {
         {
           label: "Amortization Schedule",
           value: amortizationSchedule,
-          isTable: true,
+          isCurrency: false,
         },
       ];
     },

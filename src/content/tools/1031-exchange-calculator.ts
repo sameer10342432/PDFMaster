@@ -3,6 +3,7 @@ import { CalculatorContent } from "@/types";
 export const exchange1031Calculator: CalculatorContent = {
   title: "1031 Exchange Calculator",
   description: "Determine the tax-deferred gain from a 1031 exchange.",
+  icon: 'Icon',
   category: "Real Estate",
   slug: "1031-exchange-calculator",
   article: {
@@ -61,6 +62,13 @@ export const exchange1031Calculator: CalculatorContent = {
         type: 'number',
         defaultValue: 20,
       },
+    ],
+    results: [
+      { label: 'Realized Gain', isCurrency: true },
+      { label: 'Recognized Gain (Taxable)', isCurrency: true },
+      { label: 'Deferred Gain', isCurrency: true },
+      { label: 'Estimated Tax Savings', isCurrency: true },
+      { label: 'Required Reinvestment for Full Deferral', isCurrency: true },
     ],
     calculate: (values) => {
       const { salePrice, adjustedBasis, purchasePrice, cashBoot, capitalGainsRate } = values;

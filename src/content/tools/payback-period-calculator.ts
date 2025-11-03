@@ -4,8 +4,11 @@ import { CalculatorContent } from '@/types';
 export const PAYBACK_PERIOD_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Payback Period Calculator',
   description: 'Calculate the payback period for your investment. Understand how long it will take to recoup your initial investment.',
+  slug: 'payback-period-calculator',
+  icon: 'Icon',
   category: 'Financial',
   article: {
+    title: 'What is the Payback Period?',
     content: `
     <h2>What is the Payback Period?</h2>
     <p>The payback period is the length of time it takes for an investment to generate enough cash flow to recover the initial cost of the investment. It is a simple way to evaluate the risk of an investment. This calculator will help you determine the payback period for an investment.</p>
@@ -37,6 +40,12 @@ export const PAYBACK_PERIOD_CALCULATOR_CONTENT: CalculatorContent = {
         label: 'Annual Cash Flow',
         type: 'number',
         defaultValue: 20000,
+      },
+    ],
+    results: [
+      {
+        label: 'Payback Period',
+        isCurrency: false,
       },
     ],
     calculate: (values) => {

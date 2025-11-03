@@ -1,10 +1,14 @@
-import { CalculatorContent } from "@/types/calculators";
+import { CalculatorContent } from "@/types";
 
 export const rentalPropertyCalculator: CalculatorContent = {
   title: "Rental Property Calculator",
   description: "Analyze the profitability of a rental property.",
+  icon: "Icon",
   category: "Real Estate",
-  article: `
+  slug: "rental-property-calculator",
+  article: {
+    title: "Analyzing Rental Properties for Maximum Returns",
+    content: `
     <h2>Analyzing Rental Properties for Maximum Returns</h2>
     <p>
       A rental property calculator is an essential tool for any real estate investor. It helps you evaluate the financial performance of a potential rental property, ensuring you make a sound investment decision. This calculator will help you analyze key metrics like cash flow, cap rate, and cash-on-cash return.
@@ -29,9 +33,11 @@ export const rentalPropertyCalculator: CalculatorContent = {
       <strong>Cash-on-Cash Return:</strong> This metric calculates the cash income earned on the cash invested in a property. It's a key metric for investors who use financing, as it measures the return on their actual cash investment.
     </p>
   `,
+  },
   calculator: {
     fields: [],
-    calculation: async (data) => {
+    results: [],
+    calculate: async (data) => {
       return { result: 0 };
     },
   },

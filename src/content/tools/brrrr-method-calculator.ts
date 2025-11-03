@@ -3,6 +3,7 @@ import { CalculatorContent } from "@/types";
 export const BRRRR_METHOD_CALCULATOR_CONTENT: CalculatorContent = {
   title: "BRRRR Method Calculator",
   description: "Analyze a BRRRR (Buy, Rehab, Rent, Refinance, Repeat) deal.",
+  icon: "Icon",
   category: "Real Estate",
   slug: "brrrr-method-calculator",
   article: {
@@ -97,6 +98,16 @@ export const BRRRR_METHOD_CALCULATOR_CONTENT: CalculatorContent = {
         defaultValue: "300",
       },
     ],
+    results: [
+        { label: "Total Investment", isCurrency: true },
+        { label: "Cash Invested", isCurrency: true },
+        { label: "Refinance Loan Amount", isCurrency: true },
+        { label: "Cash Out from Refinance", isCurrency: true },
+        { label: "Monthly Cash Flow", isCurrency: true },
+        { label: "Annual Cash Flow", isCurrency: true },
+        { label: "Cash on Cash Return", isCurrency: false },
+        { label: "Cap Rate", isCurrency: false },
+      ],
     calculate: (values) => {
       const { purchasePrice, renovationCosts, arv, loanAmount, interestRate, loanTerm, refinanceLTV, monthlyRent, vacancyRate, propertyManagement, operatingExpenses } = values;
       const totalInvestment = purchasePrice + renovationCosts;
@@ -117,8 +128,8 @@ export const BRRRR_METHOD_CALCULATOR_CONTENT: CalculatorContent = {
         { label: "Cash Out from Refinance", value: cashOut.toFixed(2), isCurrency: true },
         { label: "Monthly Cash Flow", value: monthlyCashFlow.toFixed(2), isCurrency: true },
         { label: "Annual Cash Flow", value: annualCashFlow.toFixed(2), isCurrency: true },
-        { label: "Cash on Cash Return", value: cashOnCashReturn.toFixed(2), isPercentage: true },
-        { label: "Cap Rate", value: capRate.toFixed(2), isPercentage: true },
+        { label: "Cash on Cash Return", value: cashOnCashReturn.toFixed(2) + '%', isCurrency: false },
+        { label: "Cap Rate", value: capRate.toFixed(2) + '%', isCurrency: false },
       ];
     },
   },

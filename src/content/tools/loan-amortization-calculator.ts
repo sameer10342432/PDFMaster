@@ -3,8 +3,11 @@ import { CalculatorContent } from '@/types';
 export const LOAN_AMORTIZATION_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Loan Amortization Calculator',
   description: 'See how your loan is paid off over time.',
+  slug: 'loan-amortization-calculator',
+  icon: 'Icon',
   category: 'Financial',
   article: {
+    title: 'Understanding Loan Amortization',
     content: `
     <h2>Understanding Loan Amortization</h2>
     <p>Loan amortization is the process of paying off a debt over time through regular payments. An amortization schedule is a table that details each periodic payment on a loan, showing how much of each payment goes toward interest and how much goes toward paying down the principal balance.</p>
@@ -60,6 +63,13 @@ export const LOAN_AMORTIZATION_CALCULATOR_CONTENT: CalculatorContent = {
         type: 'number',
         defaultValue: 30,
       },
+    ],
+    results: [
+      { label: 'Payment Number', isCurrency: false },
+      { label: 'Payment Amount', isCurrency: true },
+      { label: 'Principal Paid', isCurrency: true },
+      { label: 'Interest Paid', isCurrency: true },
+      { label: 'Remaining Balance', isCurrency: true },
     ],
     calculate: (values) => {
       const { loanAmount, interestRate, loanTerm } = values;

@@ -26,6 +26,7 @@ const PaybackPeriodCalculatorPage = () => {
         title={PAYBACK_PERIOD_CALCULATOR_CONTENT.title}
         description={PAYBACK_PERIOD_CALCULATOR_CONTENT.description}
         inputs={PAYBACK_PERIOD_CALCULATOR_CONTENT.calculator.fields}
+        results={PAYBACK_PERIOD_CALCULATOR_CONTENT.calculator.results}
         calculation={PAYBACK_PERIOD_CALCULATOR_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>

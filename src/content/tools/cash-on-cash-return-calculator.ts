@@ -4,8 +4,11 @@ export const CASH_ON_CASH_RETURN_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Cash-on-Cash Return Calculator',
   description:
     'Calculate the cash-on-cash return of your real estate investment. This calculator helps you understand the return on your actual cash invested.',
+  icon: 'Icon',
   category: 'Real Estate',
+  slug: 'cash-on-cash-return-calculator',
   article: {
+    title: "Understanding Cash-on-Cash Return",
     content: `
 ## Understanding Cash-on-Cash Return
 
@@ -22,7 +25,33 @@ The formula for cash-on-cash return is:
 
 ### Why is Cash-on-Cash Return Important?
 
-This metric is important because it gives you a clear picture of the performance of your investment based on the cash you have personally invested. It helps you compare different investment opportunities and make informed decisions.
-`,
+This metric is important because it gives you a clear picture of the performance of your investment based on the cash you have personally invested. It helps you compare different investment opportunities and make informed decisions.`,
+  },
+  calculator: {
+    results: [],
+    fields: [
+      {
+        name: 'annualCashFlow',
+        label: 'Annual Cash Flow',
+        type: 'number',
+        defaultValue: '12000',
+      },
+      {
+        name: 'totalCashInvested',
+        label: 'Total Cash Invested',
+        type: 'number',
+        defaultValue: '100000',
+      },
+    ],
+    calculate: (values) => {
+      const { annualCashFlow, totalCashInvested } = values;
+      const cashOnCashReturn = (annualCashFlow / totalCashInvested) * 100;
+      return [
+        {
+          label: 'Cash-on-Cash Return',
+          value: `${cashOnCashReturn.toFixed(2)}%`,
+        },
+      ];
+    },
   },
 };

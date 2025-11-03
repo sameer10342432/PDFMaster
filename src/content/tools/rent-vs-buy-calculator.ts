@@ -3,8 +3,12 @@ import { CalculatorContent } from '@/types';
 export const RENT_VS_BUY_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Rent vs. Buy Calculator',
   description: 'Compare the costs of renting vs. buying a home. Make an informed decision for your housing future.',
+  icon: 'Icon',
   category: 'Buying',
-  article: `
+  slug: 'rent-vs-buy-calculator',
+  article: {
+    title: 'Renting vs. Buying: Which is Right for You?',
+    content: `
     <h2>Renting vs. Buying: Which is Right for You?</h2>
     <p>The decision to rent or buy a home is a major financial milestone. Both options have their pros and cons, and the right choice for you depends on your personal financial situation, lifestyle, and long-term goals. This calculator will help you compare the costs of renting and buying to see which makes more financial sense for you over time.</p>
 
@@ -39,6 +43,7 @@ export const RENT_VS_BUY_CALCULATOR_CONTENT: CalculatorContent = {
     <h3>How to Use the Rent vs. Buy Calculator</h3>
     <p>This calculator will help you compare the total costs of renting and buying over a period of time. You will need to provide information about your expected rent, the home you are considering buying, and your financial situation. The calculator will then show you a side-by-side comparison of the costs and help you determine the breakeven point where buying becomes more financially advantageous than renting.</p>
   `,
+  },
   calculator: {
     fields: [
       {
@@ -95,6 +100,11 @@ export const RENT_VS_BUY_CALCULATOR_CONTENT: CalculatorContent = {
         type: 'number',
         defaultValue: 5,
       },
+    ],
+    results: [
+      { label: 'Total Cost of Renting', isCurrency: true },
+      { label: 'Total Cost of Buying', isCurrency: true },
+      { label: 'Breakeven Point', isCurrency: false },
     ],
     calculate: (values) => {
       const { monthlyRent, homePrice, downPayment, interestRate, loanTerm, propertyTaxRate, homeownersInsurance, maintenanceCosts, timeFrame } = values;

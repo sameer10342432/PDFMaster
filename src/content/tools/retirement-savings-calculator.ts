@@ -3,8 +3,12 @@ import { CalculatorContent } from '@/types';
 export const RETIREMENT_SAVINGS_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Retirement Savings Calculator',
   description: 'Plan for your retirement. Estimate how much you need to save to reach your retirement goals.',
+  icon: 'Icon',
   category: 'Financial',
-  article: `
+  slug: 'retirement-savings-calculator',
+  article: {
+    title: 'How Much to Save for Retirement?',
+    content: `
     <h2>How Much to Save for Retirement?</h2>
     <p>Retirement may seem like a long way off, but it is never too early to start saving. The sooner you start, the more time your money has to grow. This calculator will help you estimate how much your savings could be worth at retirement and see if you are on track to meet your financial goals.</p>
 
@@ -34,6 +38,7 @@ export const RETIREMENT_SAVINGS_CALCULATOR_CONTENT: CalculatorContent = {
     </ul>
     <p>The calculator will then estimate the total amount you will have saved by retirement. You can adjust the numbers to see how different scenarios could impact your savings goals.</p>
   `,
+  },
   calculator: {
     fields: [
       {
@@ -66,6 +71,9 @@ export const RETIREMENT_SAVINGS_CALCULATOR_CONTENT: CalculatorContent = {
         type: 'number',
         defaultValue: 7,
       },
+    ],
+    results: [
+      { label: 'Estimated Retirement Savings', isCurrency: true },
     ],
     calculate: (values) => {
       const { currentAge, retirementAge, currentSavings, monthlyContribution, rateOfReturn } = values;

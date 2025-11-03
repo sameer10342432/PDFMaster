@@ -3,8 +3,11 @@ import { CalculatorContent } from '@/types';
 export const MORTGAGE_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Mortgage Calculator',
   description: 'Calculate your monthly mortgage payment.',
+  slug: 'mortgage-calculator',
+  icon: 'Icon',
   category: 'Financial',
   article: {
+    title: 'Understanding Mortgages',
     content: `
     <h2>Understanding Mortgages</h2>
     <p>A mortgage is a loan used to purchase a home or other type of real estate. The borrower agrees to pay the lender back over a set period of time, typically with interest. The property itself is used as collateral to secure the loan.</p>
@@ -46,6 +49,7 @@ export const MORTGAGE_CALCULATOR_CONTENT: CalculatorContent = {
         defaultValue: 30,
       },
     ],
+    results: [{ label: 'Monthly Payment', isCurrency: true }],
     calculate: (values) => {
       const { homePrice, downPayment, interestRate, loanTerm } = values;
       const loanAmount = homePrice - downPayment;

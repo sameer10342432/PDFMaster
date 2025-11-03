@@ -11,6 +11,7 @@ const ClosingCostCalculatorPage = () => {
         title={CLOSING_COST_CALCULATOR_CONTENT.title}
         description={CLOSING_COST_CALCULATOR_CONTENT.description}
         inputs={CLOSING_COST_CALCULATOR_CONTENT.calculator.fields}
+        results={CLOSING_COST_CALCULATOR_CONTENT.calculator.results}
         calculation={CLOSING_COST_CALCULATOR_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>

@@ -3,8 +3,12 @@ import { CalculatorContent } from '@/types';
 export const MORTGAGE_REFINANCE_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Mortgage Refinance Calculator',
   description: 'See if refinancing your mortgage is the right move. Calculate your potential savings and break-even point.',
+  slug: 'mortgage-refinance-calculator',
+  icon: 'Icon',
   category: 'Mortgage',
-  article: `
+  article: {
+    title: 'Should You Refinance Your Mortgage?',
+    content: `
     <h2>Should You Refinance Your Mortgage?</h2>
     <p>Refinancing your mortgage can be a smart financial move, but it\'s not right for everyone. It involves replacing your current mortgage with a new one, typically with a lower interest rate or a different loan term. This calculator will help you determine if refinancing makes sense for your situation by calculating your potential savings and your breakeven point.</p>
 
@@ -35,6 +39,7 @@ export const MORTGAGE_REFINANCE_CALCULATOR_CONTENT: CalculatorContent = {
     </ul>
     <p>This information will help you make an informed decision about whether refinancing is the right choice for you.</p>
   `,
+  },
   calculator: {
     fields: [
       {
@@ -73,6 +78,11 @@ export const MORTGAGE_REFINANCE_CALCULATOR_CONTENT: CalculatorContent = {
         type: 'number',
         defaultValue: 5000,
       },
+    ],
+    results: [
+        { label: 'New Monthly Payment', isCurrency: true },
+        { label: 'Monthly Savings', isCurrency: true },
+        { label: 'Breakeven Point (Months)', isCurrency: false },
     ],
     calculate: (values) => {
       const { currentLoanAmount, currentInterestRate, currentTerm, newInterestRate, newTerm, refinanceCosts } = values;

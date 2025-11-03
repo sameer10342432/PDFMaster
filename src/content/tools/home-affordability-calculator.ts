@@ -3,8 +3,12 @@ import { CalculatorContent } from '@/types';
 export const HOME_AFFORDABILITY_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Home Affordability Calculator',
   description: 'Determine how much house you can afford. Based on your income, debt, and down payment.',
+  icon: 'Icon',
+  slug: 'home-affordability-calculator',
   category: 'Buying',
-  article: `
+  article: {
+    title: 'How Much House Can You Afford?',
+    content: `
     <h2>How Much House Can You Afford?</h2>
     <p>Buying a home is one of the biggest financial decisions you will ever make. Before you start looking at properties, it\'s essential to determine how much house you can realistically afford. This calculator will help you get a better understanding of your budget based on your income, monthly debts, and down payment.</p>
 
@@ -40,7 +44,9 @@ export const HOME_AFFORDABILITY_CALCULATOR_CONTENT: CalculatorContent = {
     </ul>
     <p>The calculator will then provide you with an estimate of the maximum home price you can afford, as well as your estimated monthly mortgage payment.</p>
   `,
+  },
   calculator: {
+    results: [],
     fields: [
       {
         name: 'annualIncome',

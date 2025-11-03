@@ -4,7 +4,12 @@ export const SELF_STORAGE_INVESTMENT_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Self Storage Investment Calculator',
   description:
     'An analyze potential returns on a self-storage facility investment. Taking into account factors like occupancy rates, rental income, and operating expenses, it helps investors make informed decisions in the self-storage market.',
-  article: `
+  icon: 'Icon',
+  category: 'Investing',
+  slug: 'self-storage-investment-calculator',
+  article: {
+    title: 'Investing in Self-Storage Facilities',
+    content: `
       <p>A self-storage investment calculator is an essential tool for investors looking to venture into the lucrative world of self-storage facilities. This calculator helps in analyzing the potential profitability and returns of a self-storage investment by taking into account various factors such as purchase price, financing details, rental income, operating expenses, and occupancy rates. By inputting these variables, investors can get a clear picture of the cash flow, capitalization rate (cap rate), and overall return on investment (ROI).</p>
     <h2>Investing in Self-Storage Facilities</h2>
     <p>Self-storage facilities have become an increasingly popular asset class for real estate investors. They are often considered to be recession-resistant and can provide a steady stream of passive income. This calculator will help you analyze the potential financial performance of a self-storage investment.</p>
@@ -38,6 +43,7 @@ export const SELF_STORAGE_INVESTMENT_CALCULATOR_CONTENT: CalculatorContent = {
     </ul>
     <p>The calculator will then estimate the property\'s Gross Potential Income, Effective Gross Income, and Net Operating Income, giving you a clear picture of its potential financial performance.</p>
   `,
+  },
   calculator: {
     fields: [
       {
@@ -64,6 +70,11 @@ export const SELF_STORAGE_INVESTMENT_CALCULATOR_CONTENT: CalculatorContent = {
         type: 'number',
         defaultValue: 30000,
       },
+    ],
+    results: [
+      { label: 'Gross Potential Income', isCurrency: true },
+      { label: 'Effective Gross Income', isCurrency: true },
+      { label: 'Net Operating Income (NOI)', isCurrency: true },
     ],
     calculate: (values: any) => {
       const { numberOfUnits, averageRentPerUnit, vacancyRate, operatingExpenses } = values;

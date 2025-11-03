@@ -4,7 +4,11 @@ export const LEASE_VS_BUY_CAR_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Lease vs. Buy Car Calculator',
   description: 'Compare the costs of leasing vs. buying a car. Make an informed decision for your next vehicle.',
   category: 'Financial',
-  article: `
+  icon: 'Icon',
+  slug: 'lease-vs-buy-car-calculator',
+  article: {
+    title: 'Should You Lease or Buy a Car?',
+    content: `
     <h2>Should You Lease or Buy a Car?</h2>
     <p>Deciding whether to lease or buy a car is a major financial decision. Both options have their advantages and disadvantages, and the best choice depends on your driving habits, financial situation, and personal preferences. This calculator will help you compare the long-term costs of leasing and buying a car.</p>
 
@@ -36,6 +40,7 @@ export const LEASE_VS_BUY_CAR_CALCULATOR_CONTENT: CalculatorContent = {
     </ul>
     <p>The calculator will then show you a side-by-side comparison of the total costs, helping you make a more informed decision.</p>
   `,
+  },
   calculator: {
     fields: [
       {
@@ -81,6 +86,7 @@ export const LEASE_VS_BUY_CAR_CALCULATOR_CONTENT: CalculatorContent = {
         defaultValue: 4000,
       },
     ],
+    results: [],
     calculate: (values) => {
       const { carPrice, leaseTerm, leaseDownPayment, leaseMonthlyPayment, loanTerm, loanInterestRate, loanDownPayment } = values;
       

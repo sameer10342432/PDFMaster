@@ -3,8 +3,12 @@ import { CalculatorContent } from '@/types';
 export const PERSONAL_LOAN_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Personal Loan Calculator',
   description: 'Estimate the monthly payments for a personal loan. See how the loan term and interest rate affect your payment.',
+  icon: 'calculator',
+  slug: 'personal-loan-calculator',
   category: 'Financial',
-  article: `
+  article: {
+    title: 'How Do Personal Loans Work?',
+    content: `
     <h2>How Do Personal Loans Work?</h2>
     <p>A personal loan is a type of unsecured loan that you can use for a variety of purposes, such as debt consolidation, home improvements, medical bills, or other large expenses. Because they are unsecured, personal loans do not require collateral, but they often have higher interest rates than secured loans like mortgages or auto loans.</p>
 
@@ -32,6 +36,7 @@ export const PERSONAL_LOAN_CALCULATOR_CONTENT: CalculatorContent = {
     </ul>
     <p>The calculator will then show you your estimated monthly payment, the total principal you will pay, and the total interest you will pay over the life of the loan. This will help you understand the true cost of the loan and whether it fits into your budget.</p>
   `,
+  },
   calculator: {
     fields: [
       {
@@ -51,6 +56,20 @@ export const PERSONAL_LOAN_CALCULATOR_CONTENT: CalculatorContent = {
         label: 'Loan Term (Years)',
         type: 'number',
         defaultValue: 5,
+      },
+    ],
+    results: [
+      {
+        label: 'Monthly Payment',
+        isCurrency: true,
+      },
+      {
+        label: 'Total Principal',
+        isCurrency: true,
+      },
+      {
+        label: 'Total Interest',
+        isCurrency: true,
       },
     ],
     calculate: (values) => {

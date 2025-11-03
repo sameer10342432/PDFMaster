@@ -3,8 +3,11 @@ import { CalculatorContent } from '@/types';
 export const CAGR_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Compound Annual Growth Rate (CAGR) Calculator',
   description: 'Calculate the compound annual growth rate (CAGR) of your investment. Understand the average annual growth of your investment.',
+  icon: 'Icon',
   category: 'Financial',
+  slug: 'compound-annual-growth-rate-calculator',
   article: {
+    title: 'What is Compound Annual Growth Rate (CAGR)?',
     content: `
     <h2>What is Compound Annual Growth Rate (CAGR)?</h2>
     <p>The compound annual growth rate (CAGR) is the rate of return that would be required for an investment to grow from its beginning balance to its ending balance, assuming the profits were reinvested at the end of each year of the investment’s lifespan. This calculator will help you determine the CAGR of an investment.</p>
@@ -21,6 +24,7 @@ export const CAGR_CALCULATOR_CONTENT: CalculatorContent = {
   `,
   },
   calculator: {
+    results: [],
     fields: [
       {
         name: 'beginningValue',

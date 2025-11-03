@@ -3,6 +3,7 @@ import { CalculatorContent } from "@/types";
 export const CAP_RATE_CALCULATOR_CONTENT: CalculatorContent = {
   title: "Cap Rate Calculator",
   description: "Calculate the capitalization rate of a real estate investment.",
+  icon: "Icon",
   category: "Real Estate",
   slug: "cap-rate-calculator",
   article: {
@@ -41,6 +42,7 @@ export const CAP_RATE_CALCULATOR_CONTENT: CalculatorContent = {
         defaultValue: "1000000",
       },
     ],
+    results: [{ label: "Cap Rate", isCurrency: false }],
     calculate: (values) => {
       const { noi, propertyValue } = values;
       const capRate = (noi / propertyValue) * 100;

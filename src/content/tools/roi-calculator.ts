@@ -1,9 +1,11 @@
+import { CalculatorContent } from '@/types';
 
-import { Calculator, CalculatorContent } from '@/components/calculators/Calculator';
-
-const ROI_CALCULATOR_CONTENT: CalculatorContent = {
+export const ROI_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Return on Investment (ROI) Calculator',
   description: 'Calculate the ROI of your real estate investment.',
+  icon: 'Icon',
+  category: 'Financial',
+  slug: 'roi-calculator',
   calculator: {
     fields: [
       {
@@ -37,6 +39,11 @@ const ROI_CALCULATOR_CONTENT: CalculatorContent = {
         defaultValue: '5000',
       },
     ],
+    results: [
+      { label: 'Total Investment', isCurrency: true },
+      { label: 'Net Profit', isCurrency: true },
+      { label: 'Return on Investment (ROI)', isCurrency: false },
+    ],
     calculate: (values) => {
       const totalInvestment = values.purchasePrice + values.closingCosts + values.rehabCosts + values.holdingCosts;
       const netProfit = values.salePrice - totalInvestment;
@@ -58,7 +65,9 @@ const ROI_CALCULATOR_CONTENT: CalculatorContent = {
       ];
     },
   },
-  article: `
+  article: {
+    title: 'Understanding Return on Investment (ROI) in Real Estate',
+    content: `
   <h2>Understanding Return on Investment (ROI) in Real Estate</h2>
   <p>
     Return on Investment (ROI) is a fundamental metric for evaluating the profitability of a real estate investment. It measures the gain or loss generated on an investment relative to the amount of money invested. A higher ROI indicates a more profitable investment.
@@ -75,7 +84,6 @@ const ROI_CALCULATOR_CONTENT: CalculatorContent = {
   <p>
     A positive ROI means the investment has generated a profit, while a negative ROI indicates a loss. When comparing different investment opportunities, the one with the higher ROI is generally the more attractive option. However, it's important to also consider other factors such as risk, holding period, and market conditions.
   </p>
-`,
+`
+  }
 };
-
-export { ROI_CALCULATOR_CONTENT };

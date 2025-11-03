@@ -1,23 +1,16 @@
 "use client";
 
-import { Form } from "@/components/ui/form";
-import { useFixAndFlipCalculator } from "@/hooks/fix-and-flip-calculator/useFixAndFlipCalculator";
-import { CalculatorForm } from "@/components/fix-and-flip-calculator/CalculatorForm";
-import { Results } from "@/components/fix-and-flip-calculator/Results";
+import { Calculator } from "@/components/calculators/Calculator";
 import { FIX_AND_FLIP_CALCULATOR_CONTENT } from "@/content/tools/fix-and-flip-calculator";
-import { CalculatorLayout } from "@/components/calculators/CalculatorLayout";
 
-export default function FixAndFlipCalculator() {
-  const { form, params, profit, roi } = useFixAndFlipCalculator();
-
+export default function FixAndFlipCalculatorPage() {
   return (
-    <CalculatorLayout content={FIX_AND_FLIP_CALCULATOR_CONTENT}>
-      <Form {...form}>
-        <form className="space-y-8">
-          <CalculatorForm form={form} />
-          <Results profit={profit} roi={roi} />
-        </form>
-      </Form>
-    </CalculatorLayout>
+    <Calculator
+      title={FIX_AND_FLIP_CALCULATOR_CONTENT.title}
+      description={FIX_AND_FLIP_CALCULATOR_CONTENT.description}
+      inputs={FIX_AND_FLIP_CALCULATOR_CONTENT.calculator.fields}
+      results={FIX_AND_FLIP_CALCULATOR_CONTENT.calculator.results}
+      calculation={FIX_AND_FLIP_CALCULATOR_CONTENT.calculator.calculate}
+    />
   );
 }

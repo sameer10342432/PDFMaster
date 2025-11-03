@@ -3,14 +3,20 @@ export interface CalculatorInput {
   label: string;
   type: string;
   defaultValue?: any;
+  placeholder?: string;
+  options?: { value: string; label: string }[];
   rules?: Record<string, any>;
 }
 
-import { CalculatorContent } from './index';
+export interface CalculatorResult {
+  label: string;
+  isCurrency: boolean;
+}
 
 export interface ICalculator {
   title: string;
   description: string;
-  inputs: CalculatorContent['calculator']['fields'];
-  calculation: (data: any) => any[];
+  inputs: CalculatorInput[];
+  results: CalculatorResult[];
+  calculation: (values: any) => any;
 }

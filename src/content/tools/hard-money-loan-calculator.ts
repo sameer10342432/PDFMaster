@@ -3,8 +3,12 @@ import { CalculatorContent } from '@/types';
 export const HARD_MONEY_LOAN_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Hard Money Loan Calculator',
   description: 'Calculate the costs of a hard money loan. For real estate investors using short-term financing.',
+  icon: 'Icon',
+  slug: 'hard-money-loan-calculator',
   category: 'Investing',
-  article: `
+  article: {
+    title: 'What is a Hard Money Loan?',
+    content: `
     <h2>What is a Hard Money Loan?</h2>
     <h2>Understanding Hard Money Loans</h2>
     <p>A hard money loan is a type of short-term, asset-based loan that is secured by real property. Hard money loans are often used by real estate investors for fix and flip projects or other short-term financing needs. Unlike traditional mortgages, which are underwritten based on the borrower\'s creditworthiness, hard money loans are underwritten based on the value of the property being used as collateral.</p>
@@ -39,7 +43,9 @@ export const HARD_MONEY_LOAN_CALCULATOR_CONTENT: CalculatorContent = {
     </ul>
     <p>This will help you determine if a hard money loan is a viable financing option for your project.</p>
   `,
+  },
   calculator: {
+    results: [],
     fields: [
       {
         name: 'loanAmount',

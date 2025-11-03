@@ -3,8 +3,12 @@ import { CalculatorContent } from '@/types';
 export const CAPITAL_GAIN_TAX_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Capital Gains Tax Calculator',
   description: 'Estimate the capital gains tax you may owe on the sale of a property. For informational purposes only.',
+  icon: 'Icon',
   category: 'Taxes',
-  article: `
+  slug: 'capital-gain-tax-calculator',
+  article: {
+    title: "Understanding Capital Gains Tax",
+    content: `
     <h2>What is Capital Gains Tax?</h2>
     <h2>Understanding Capital Gain Tax on Real Estate</h2>
     <p>Capital gain tax is a tax on the profit from the sale of an asset, like real estate. It's the difference between the selling price and the purchase price, with adjustments for costs like improvements and selling expenses.</p>
@@ -17,7 +21,9 @@ export const CAPITAL_GAIN_TAX_CALCULATOR_CONTENT: CalculatorContent = {
       <li><strong>Holding Period:</strong> Whether it's a short-term (less than a year) or long-term (a year or more) gain determines the tax rate.</li>
     </ul>
   `,
+},
   calculator: {
+    results: [],
     fields: [
       {
         name: 'purchasePrice',

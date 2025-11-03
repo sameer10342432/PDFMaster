@@ -1,13 +1,11 @@
+import { CalculatorContent } from "@/types";
 
-import { Calculator } from "@/types";
-
-export const homeRenovationRoiCalculator: Calculator = {
-  id: "home-renovation-roi-calculator",
+export const HOME_RENOVATION_ROI_CALCULATOR_CONTENT: CalculatorContent = {
   title: "Home Renovation ROI Calculator",
-  description:
-    "The Home Renovation ROI Calculator helps you determine the return on investment for your home improvement projects.",
+  description: "The Home Renovation ROI Calculator helps you determine the return on investment for your home improvement projects.",
+  icon: "Icon",
   category: "Real Estate",
-  icon: "/icons/home-renovation.svg",
+  slug: "home-renovation-roi-calculator",
   article: {
     title: "Understanding Home Renovation ROI",
     content: `
@@ -18,5 +16,30 @@ export const homeRenovationRoiCalculator: Calculator = {
         A positive ROI indicates that the increase in property value is greater than the cost of the renovation, resulting in a financial gain. A negative ROI, on the other hand, means that the project costs more than the value it adds to your property.
       </p>
     `,
+  },
+  calculator: {
+    fields: [
+      {
+        name: "renovationCost",
+        label: "Renovation Cost",
+        type: "number",
+        defaultValue: 25000,
+      },
+      {
+        name: "valueIncrease",
+        label: "Increase in Property Value",
+        type: "number",
+        defaultValue: 40000,
+      },
+    ],
+    results: [],
+    calculate: (values) => {
+      const { renovationCost, valueIncrease } = values;
+      const roi = ((valueIncrease - renovationCost) / renovationCost) * 100;
+
+      return [
+        { label: "Return on Investment (ROI)", value: roi.toFixed(2) + "%" },
+      ];
+    },
   },
 };

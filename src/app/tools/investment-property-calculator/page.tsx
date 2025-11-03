@@ -11,6 +11,7 @@ const InvestmentPropertyCalculatorPage = () => {
         title={INVESTMENT_PROPERTY_CALCULATOR_CONTENT.title}
         description={INVESTMENT_PROPERTY_CALCULATOR_CONTENT.description}
         inputs={INVESTMENT_PROPERTY_CALCULATOR_CONTENT.calculator.fields}
+        results={INVESTMENT_PROPERTY_CALCULATOR_CONTENT.calculator.results}
         calculation={INVESTMENT_PROPERTY_CALCULATOR_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>

@@ -1,11 +1,14 @@
 
 import { CalculatorContent } from '@/types';
 
-export const LTV_CALCULATOR_CONTENT: CalculatorContent = {
+export const LOAN_TO_VALUE_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Loan-to-Value (LTV) Calculator',
   description: 'Calculate your loan-to-value ratio. Understand a key metric lenders use to evaluate your loan applications.',
+  slug: 'loan-to-value-calculator',
+  icon: 'Icon',
   category: 'Financial',
   article: {
+    title: 'What is Your Loan-to-Value (LTV) Ratio?',
     content: `
     <h2>What is Your Loan-to-Value (LTV) Ratio?</h2>
     <p>The loan-to-value (LTV) ratio is a financial term used by lenders to express the ratio of a loan to the value of an asset purchased. It is a key metric used to assess the risk of a loan. This calculator will help you determine your LTV ratio.</p>
@@ -41,6 +44,9 @@ export const LTV_CALCULATOR_CONTENT: CalculatorContent = {
         type: 'number',
         defaultValue: 250000,
       },
+    ],
+    results: [
+        { label: 'Loan-to-Value (LTV) Ratio', isCurrency: false },
     ],
     calculate: (values) => {
       const { loanAmount, appraisedValue } = values;

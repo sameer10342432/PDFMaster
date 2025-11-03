@@ -3,8 +3,12 @@ import { CalculatorContent } from '@/types';
 export const COLLEGE_SAVINGS_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'College Savings Calculator',
   description: 'Plan for your child\'s future. Estimate how much you need to save for college.',
+  icon: 'Icon',
+  slug: 'college-savings-calculator',
   category: 'Financial',
-  article: `
+  article: {
+    title: 'How Much to Save for College?',
+    content: `
     <h2>How Much to Save for College?</h2>
     <p>The cost of a college education continues to rise, making it one of the most significant expenses a family will face. Planning and saving early is crucial to ensure you can afford the costs of higher education. This calculator will help you estimate the future cost of college and determine how much you need to save each month to meet your goals.</p>
 
@@ -37,7 +41,9 @@ export const COLLEGE_SAVINGS_CALCULATOR_CONTENT: CalculatorContent = {
     </ul>
     <p>The calculator will then estimate the future cost of a four-year degree and tell you how much you need to save each month to reach that goal.</p>
   `,
+  },
   calculator: {
+    results: [],
     fields: [
       {
         name: 'childsAge',

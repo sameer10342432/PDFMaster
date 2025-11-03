@@ -1,7 +1,5 @@
 'use client';
 
-import Footer from '@/components/footer/Footer';
-
 import { useState } from 'react';
 import Link from 'next/link';
 
@@ -183,6 +181,20 @@ const tools = [
     category: 'Investment Analysis',
     icon: '🏢',
     path: '/tools/debt-service-coverage-calculator'
+  },
+  {
+    name: '1% Rule Calculator',
+    description: 'Quickly screen potential investment properties based on the 1% rule.',
+    category: 'Investment Analysis',
+    icon: '📈',
+    path: '/tools/1-percent-rule-calculator'
+  },
+  {
+    name: '70% Rule Calculator',
+    description: 'Determine the maximum purchase price for a fix-and-flip property.',
+    category: 'Investment Analysis',
+    icon: '🔨',
+    path: '/tools/70-percent-rule-calculator'
   },
   {
     name: '1031 Exchange Calculator',
@@ -662,8 +674,6 @@ export default function ToolsPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

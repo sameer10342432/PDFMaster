@@ -5,7 +5,7 @@ export const CalculatorLayout = ({ children, content }: { children?: React.React
     <div>
       <h1>{content?.title}</h1>
       <p>{content?.description}</p>
-      <div>{React.cloneElement(children as React.ReactElement, { calculator: content.calculator })}</div>
+      <div>{children}</div>
       {content?.article && (
         <article>
           <h2>{content.article.title}</h2>

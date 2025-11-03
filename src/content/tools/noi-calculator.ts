@@ -1,9 +1,12 @@
 
-import { Calculator, CalculatorContent } from '@/components/calculators/Calculator';
+import { CalculatorContent } from '@/types';
 
 const NOI_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Net Operating Income (NOI) Calculator',
   description: 'Calculate the Net Operating Income (NOI) of your property.',
+  icon: 'calculator',
+  category: 'Real Estate',
+  slug: 'noi-calculator',
   calculator: {
     fields: [
       {
@@ -25,6 +28,16 @@ const NOI_CALCULATOR_CONTENT: CalculatorContent = {
         defaultValue: '45000',
       },
     ],
+    results: [
+      {
+        label: 'Gross Operating Income',
+        isCurrency: true,
+      },
+      {
+        label: 'Net Operating Income (NOI)',
+        isCurrency: true,
+      },
+    ],
     calculate: (values) => {
       const grossOperatingIncome = values.grossPotentialIncome * (1 - values.vacancy / 100);
       const noi = grossOperatingIncome - values.operatingExpenses;
@@ -41,7 +54,9 @@ const NOI_CALCULATOR_CONTENT: CalculatorContent = {
       ];
     },
   },
-  article: `
+  article: {
+    title: 'Understanding Net Operating Income (NOI)',
+    content: `
   <h2>Understanding Net Operating Income (NOI)</h2>
   <p>
     Net Operating Income (NOI) is a calculation used to analyze the profitability of income-generating real estate investments. NOI equals all revenue from the property, minus all reasonably necessary operating expenses.
@@ -71,6 +86,7 @@ const NOI_CALCULATOR_CONTENT: CalculatorContent = {
     <li>Lenders use NOI to determine how much debt a property can support.</li>
   </ul>
 `,
+  },
 };
 
 export { NOI_CALCULATOR_CONTENT };

@@ -3,8 +3,12 @@ import { CalculatorContent } from '@/types';
 export const REAL_ESTATE_CROWDFUNDING_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Real Estate Crowdfunding Calculator',
   description: 'Estimate your potential returns from a real estate crowdfunding investment. For passive investors.',
+  slug: 'real-estate-crowdfunding-calculator',
+  icon: 'Icon',
   category: 'Investing',
-  article: `
+  article: {
+    title: 'What is Real Estate Crowdfunding?',
+    content: `
     <h2>What is Real Estate Crowdfunding?</h2>
     <p>Real estate crowdfunding has emerged as a popular way for individuals to invest in real estate without the need for large amounts of capital or the hassles of property management. Crowdfunding platforms pool money from multiple investors to purchase properties, and the investors share in the profits.</p>
 
@@ -45,6 +49,7 @@ export const REAL_ESTATE_CROWDFUNDING_CALCULATOR_CONTENT: CalculatorContent = {
     <h3>How to Use the Crowdfunding Calculator</h3>
     <p>This calculator will help you estimate the potential returns on a real estate crowdfunding investment. You will need to provide your initial investment amount, the expected annual return from rental income, the expected annual appreciation, and the investment holding period. The calculator will then project the growth of your investment over time.</p>
   `,
+  },
   calculator: {
     fields: [
       {
@@ -70,6 +75,24 @@ export const REAL_ESTATE_CROWDFUNDING_CALCULATOR_CONTENT: CalculatorContent = {
         label: 'Holding Period (Years)',
         type: 'number',
         defaultValue: 5,
+      },
+    ],
+    results: [
+      {
+        label: 'Total Investment Value',
+        isCurrency: true,
+      },
+      {
+        label: 'Total Rental Income',
+        isCurrency: true,
+      },
+      {
+        label: 'Total Appreciation',
+        isCurrency: true,
+      },
+      {
+        label: 'Return on Investment (ROI)',
+        isCurrency: false,
       },
     ],
     calculate: (values) => {

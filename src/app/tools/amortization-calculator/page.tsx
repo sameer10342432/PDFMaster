@@ -10,6 +10,7 @@ const AmortizationCalculatorPage = () => {
         title={amortizationCalculator.title}
         description={amortizationCalculator.description}
         inputs={amortizationCalculator.calculator.fields}
+        results={amortizationCalculator.calculator.results}
         calculation={amortizationCalculator.calculator.calculate}
       />
     </CalculatorLayout>

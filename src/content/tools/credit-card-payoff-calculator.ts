@@ -3,8 +3,12 @@ import { CalculatorContent } from '@/types';
 export const CREDIT_CARD_PAYOFF_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Credit Card Payoff Calculator',
   description: 'Find the best strategy to pay off your credit card debt. See how long it will take to become debt-free.',
+  icon: 'Icon',
+  slug: 'credit-card-payoff-calculator',
   category: 'Financial',
-  article: `
+  article: {
+    title: 'How to Pay Off Credit Card Debt?',
+    content: `
     <h2>How to Pay Off Credit Card Debt?</h2>
     <p>High-interest credit card debt can be a major obstacle to achieving your financial goals. The longer you carry a balance, the more you pay in interest, and the harder it becomes to get ahead. This calculator will help you create a plan to pay off your credit card debt and see how much you can save by paying more than the minimum payment.</p>
 
@@ -27,7 +31,9 @@ export const CREDIT_CARD_PAYOFF_CALCULATOR_CONTENT: CalculatorContent = {
     </ul>
     <p>The calculator will then show you your payoff timeline and the total interest you will pay. You can experiment with different payment amounts to see how it impacts your results.</p>
   `,
+  },
   calculator: {
+    results: [],
     fields: [
       {
         name: 'balance',

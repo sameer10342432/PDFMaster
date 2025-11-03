@@ -3,7 +3,9 @@ import { CalculatorContent } from '@/types';
 export const COMMISSION_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Commission Calculator',
   description: 'Calculate the commission for a real estate transaction. For agents and sellers.',
+  icon: 'Icon',
   category: 'General',
+  slug: 'commission-calculator',
     article: {
     title: 'Understanding Real Estate Commissions',
     content: `
@@ -34,20 +36,19 @@ The calculator will then compute the total commission amount in dollars. This fi
         label: 'Sale Price',
         type: 'number',
         defaultValue: 250000,
-        rules: { required: true, min: 0 },
       },
       {
         name: 'commissionRate',
         label: 'Commission Rate (%)',
         type: 'number',
         defaultValue: 6,
-        rules: { required: true, min: 0, max: 100 },
       },
     ],
+    results: [{ label: "Commission", isCurrency: true }],
     calculate: (data) => {
       const { salePrice, commissionRate } = data;
       const commission = salePrice * (commissionRate / 100);
-      return [{ name: 'Commission', value: commission, isCurrency: true }];
+      return [{ label: 'Commission', value: `$${commission.toLocaleString()}` }];
     },
   },
 };

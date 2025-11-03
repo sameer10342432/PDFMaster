@@ -1,10 +1,14 @@
 
-import { Calculator, CalculatorContent } from '@/components/calculators/Calculator';
+import { CalculatorContent } from '@/types';
 
 const CLOSING_COST_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Closing Cost Calculator',
-  description: 'Estimate the closing costs for your real estate purchase.',
+  description: 'Estimate the closing costs for a real estate transaction.',
+  icon: 'Icon',
+  slug: 'closing-cost-calculator',
+  category: 'Real Estate',
   calculator: {
+    results: [],
     fields: [
       {
         name: 'purchasePrice',
@@ -68,24 +72,20 @@ const CLOSING_COST_CALCULATOR_CONTENT: CalculatorContent = {
       ];
     },
   },
-  article: `
-  <h2>Understanding Closing Costs</h2>
-  <p>
-    Closing costs are the fees and expenses you pay when you close on a home. These costs are in addition to the down payment and are typically 2-5% of the purchase price. Both buyers and sellers can have closing costs.
-  </p>
-  <h3>Common Closing Costs for Buyers</h3>
-  <ul>
-    <li><strong>Loan Origination Fee:</strong> This is a fee charged by the lender for processing your loan application. It's typically 0.5% to 1% of the loan amount.</li>
-    <li><strong>Appraisal Fee:</strong> This fee pays for an appraisal of the home, which is an estimate of the property's market value.</li>
-    <li><strong>Title Insurance:</strong> This protects you and the lender from any claims against the title of the property.</li>
-    <li><strong>Home Inspection Fee:</strong> This fee pays for a professional inspection of the home's condition.</li>
-    <li><strong>Recording Fee:</strong> This is a fee charged by the county or city to record the sale of the property.</li>
-    <li><strong>Attorney Fee:</strong> In some states, an attorney is required to be present at closing.</li>
-  </ul>
-  <p>
-    Our Closing Cost Calculator provides an estimate of these costs to help you budget for your home purchase. Please note that these are estimates and actual costs may vary.
-  </p>
-`,
+  article: {
+    title: 'Understanding Closing Costs',
+    content: `
+      <p>Closing costs are the fees and expenses you pay when you close on a house, beyond the down payment. These costs can vary widely depending on your location, the property, and the type of loan you get.</p>
+      <h3>Common Closing Costs</h3>
+      <ul>
+        <li><strong>Loan Origination Fees:</strong> Charged by the lender for processing the loan.</li>
+        <li><strong>Appraisal Fees:</strong> The cost of having the property appraised to determine its value.</li>
+        <li><strong>Title Insurance:</strong> Protects you and the lender from any disputes over the property's title.</li>
+        <li><strong>Property Taxes:</strong> You may need to prepay some property taxes at closing.</li>
+        <li><strong>Homeowners Insurance:</strong> You'll likely need to pay for your first year's homeowners insurance premium upfront.</li>
+      </ul>
+    `
+  },
 };
 
 export { CLOSING_COST_CALCULATOR_CONTENT };

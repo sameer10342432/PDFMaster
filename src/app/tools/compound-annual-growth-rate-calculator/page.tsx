@@ -11,6 +11,7 @@ const CompoundAnnualGrowthRateCalculatorPage = () => {
         title={CAGR_CALCULATOR_CONTENT.title}
         description={CAGR_CALCULATOR_CONTENT.description}
         inputs={CAGR_CALCULATOR_CONTENT.calculator.fields}
+        results={CAGR_CALCULATOR_CONTENT.calculator.results}
         calculation={CAGR_CALCULATOR_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>

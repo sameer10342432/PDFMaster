@@ -1,9 +1,9 @@
 'use client';
 
-import { Calculator } from "@/components/calculators/Calculator";
-import { COMMISSION_CALCULATOR_CONTENT } from "@/content/tools/commission-calculator";
+import { COMMISSION_CALCULATOR_CONTENT } from '@/content/tools/commission-calculator';
+import { Calculator } from '@/components/calculators';
 
-export default function CommissionCalculatorPage() {
+export const CommissionCalculator = () => {
   return (
     <Calculator
       title={COMMISSION_CALCULATOR_CONTENT.title}
@@ -13,4 +13,4 @@ export default function CommissionCalculatorPage() {
       calculation={COMMISSION_CALCULATOR_CONTENT.calculator.calculate}
     />
   );
-}
+};

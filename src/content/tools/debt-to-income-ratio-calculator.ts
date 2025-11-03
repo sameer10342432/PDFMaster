@@ -1,10 +1,13 @@
 import { CalculatorContent } from '@/types';
 
-export const DTI_CALCULATOR_CONTENT: CalculatorContent = {
+export const DEBT_TO_INCOME_RATIO_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Debt-to-Income (DTI) Ratio Calculator',
   description: 'Calculate your debt-to-income ratio. Understand a key metric lenders use to evaluate your loan applications.',
+  slug: 'debt-to-income-ratio-calculator',
+  icon: 'Icon',
   category: 'Financial',
   article: {
+    title: 'What is Your Debt-to-Income (DTI) Ratio?',
     content: `
     <h2>What is Your Debt-to-Income (DTI) Ratio?</h2>
     <p>Your debt-to-income (DTI) ratio is a key financial metric that lenders use to assess your ability to manage monthly payments and repay debts. It compares your total monthly debt payments to your gross monthly income. This calculator will help you determine your DTI ratio.</p>
@@ -27,6 +30,7 @@ export const DTI_CALCULATOR_CONTENT: CalculatorContent = {
   `,
   },
   calculator: {
+    results: [],
     fields: [
       {
         name: 'grossMonthlyIncome',

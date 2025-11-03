@@ -3,8 +3,12 @@ import { CalculatorContent } from '@/types';
 export const NET_OPERATING_INCOME_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Net Operating Income (NOI) Calculator',
   description: 'Calculate the net operating income (NOI) of a property. A key metric for evaluating rental property investments.',
+  icon: 'Icon',
   category: 'Investing',
-  article: `
+  slug: 'net-operating-income-calculator',
+  article: {
+    title: 'What is Net Operating Income (NOI)?',
+    content: `
     <h2>What is Net Operating Income (NOI)?</h2>
     <p>Net Operating Income (NOI) is a calculation used to analyze the profitability of income-generating real estate investments. NOI is equal to all revenue from the property, minus all reasonably necessary operating expenses. NOI is a before-tax figure; it excludes principal and interest payments on loans, capital expenditures, depreciation, and amortization.</p>
 
@@ -43,6 +47,7 @@ export const NET_OPERATING_INCOME_CALCULATOR_CONTENT: CalculatorContent = {
     <h3>How to Use the NOI Calculator</h3>
     <p>This calculator will help you determine the NOI of a property. You will need to provide the property\'s gross rental income and a breakdown of its operating expenses. The calculator will then compute the NOI, giving you a key indicator of the property\'s financial performance.</p>
   `,
+  },
   calculator: {
     fields: [
       {
@@ -88,16 +93,26 @@ export const NET_OPERATING_INCOME_CALCULATOR_CONTENT: CalculatorContent = {
         defaultValue: 1000,
       },
     ],
+    results: [
+      {
+        label: 'Net Operating Income',
+        isCurrency: true,
+      },
+      {
+        label: 'Total Operating Expenses',
+        isCurrency: true,
+      },
+    ],
     calculate: (values) => {
       const { grossRentalIncome, vacancyRate, propertyTaxes, insurance, maintenance, managementFees, otherExpenses } = values;
       const effectiveGrossIncome = grossRentalIncome * (1 - vacancyRate / 100);
       const totalOperatingExpenses = propertyTaxes + insurance + maintenance + managementFees + otherExpenses;
       const noi = effectiveGrossIncome - totalOperatingExpenses;
 
-      return [
-        { label: 'Net Operating Income (NOI)', value: noi.toFixed(2), isCurrency: true },
-        { label: 'Total Operating Expenses', value: totalOperatingExpenses.toFixed(2), isCurrency: true },
-      ];
+      return {
+        netOperatingIncome: noi.toFixed(2),
+        totalOperatingExpenses: totalOperatingExpenses.toFixed(2),
+      };
     },
   },
 };

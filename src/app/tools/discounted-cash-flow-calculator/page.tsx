@@ -11,6 +11,7 @@ const DiscountedCashFlowCalculatorPage = () => {
         title={DCF_CALCULATOR_CONTENT.title}
         description={DCF_CALCULATOR_CONTENT.description}
         inputs={DCF_CALCULATOR_CONTENT.calculator.fields}
+        results={DCF_CALCULATOR_CONTENT.calculator.results}
         calculation={DCF_CALCULATOR_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>

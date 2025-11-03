@@ -1,3 +1,5 @@
+import { CalculatorInput, CalculatorResult } from "./calculators";
+
 export interface CalculatorField {
   name: string;
   label: string;
@@ -10,6 +12,7 @@ export interface CalculatorField {
 export interface CalculatorContent {
   title: string;
   description: string;
+  icon: string;
   category: string;
   slug: string;
   article: {
@@ -17,7 +20,8 @@ export interface CalculatorContent {
     content: string;
   };
   calculator: {
-    fields: CalculatorField[];
+    fields: CalculatorInput[];
+    results: CalculatorResult[];
     calculate: (values: any) => any;
   };
 }

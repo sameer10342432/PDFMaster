@@ -11,6 +11,7 @@ const CapitalizationRateCalculatorPage = () => {
         title={CAP_RATE_CALCULATOR_CONTENT.title}
         description={CAP_RATE_CALCULATOR_CONTENT.description}
         inputs={CAP_RATE_CALCULATOR_CONTENT.calculator.fields}
+        results={CAP_RATE_CALCULATOR_CONTENT.calculator.results}
         calculation={CAP_RATE_CALCULATOR_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>

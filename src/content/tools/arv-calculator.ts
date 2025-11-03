@@ -3,6 +3,7 @@ import { CalculatorContent } from '@/types';
 export const ARV_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'After Repair Value (ARV) Calculator',
   description: 'Estimate the after repair value (ARV) of a property. A key metric for fix-and-flip investors.',
+  icon: 'Icon',
   category: 'Real Estate',
   slug: 'arv-calculator',
   article: {
@@ -48,6 +49,10 @@ export const ARV_CALCULATOR_CONTENT: CalculatorContent = {
             placeholder: "295000",
             defaultValue: "295000",
         },
+    ],
+    results: [
+      { label: "After Repair Value (ARV)", isCurrency: true },
+      { label: "Potential Profit", isCurrency: true },
     ],
     calculate: (data: any) => {
         const { purchasePrice, renovationCosts, comp1, comp2, comp3 } = data;
