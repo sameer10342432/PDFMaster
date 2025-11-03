@@ -1,6 +1,6 @@
 'use client';
 
-import { Calculator } from "@/components/calculators/Calculator";
+import { Calculator } from "@/components/calculators/Calculator";s/Calculator";
 import { COMMISSION_CALCULATOR_CONTENT } from "@/content/tools/commission-calculator";
 
 export default function CommissionCalculatorPage() {
