@@ -134,6 +134,69 @@ export const allTools: Tool[] = [
     icon: '🏦',
     path: '/tools/heloc-calculator'
   },
+  {
+    name: 'VA vs. Conventional Loan Comparison',
+    description: 'Compare VA and Conventional loans side-by-side to find the best mortgage option',
+    category: 'Basic Calculators',
+    icon: '⚖️',
+    path: '/tools/va-vs-conventional-loan-comparison'
+  },
+  {
+    name: 'USDA Loan Eligibility Checker',
+    description: 'Check your eligibility for USDA rural development home loans',
+    category: 'Basic Calculators',
+    icon: '🌾',
+    path: '/tools/usda-loan-eligibility-checker'
+  },
+  {
+    name: 'FHA Loan Limit Finder',
+    description: 'Find current FHA loan limits for your county and property type',
+    category: 'Basic Calculators',
+    icon: '💵',
+    path: '/tools/fha-loan-limit-finder'
+  },
+  {
+    name: 'VA Loan Entitlement Calculator',
+    description: 'Calculate your available VA loan entitlement and maximum purchase price',
+    category: 'Basic Calculators',
+    icon: '🎖️',
+    path: '/tools/va-loan-entitlement-calculator'
+  },
+  {
+    name: 'Debt-to-Income (DTI) Ratio Calculator',
+    description: 'Calculate your DTI ratio to determine mortgage eligibility',
+    category: 'Basic Calculators',
+    icon: '📊',
+    path: '/tools/debt-to-income-calculator'
+  },
+  {
+    name: 'Loan-to-Value (LTV) Calculator',
+    description: 'Calculate your LTV ratio to determine equity and PMI requirements',
+    category: 'Basic Calculators',
+    icon: '📈',
+    path: '/tools/loan-to-value-calculator'
+  },
+  {
+    name: 'Mortgage Pre-Approval Calculator',
+    description: 'Estimate your pre-approval amount based on income, debts, and credit',
+    category: 'Basic Calculators',
+    icon: '✅',
+    path: '/tools/mortgage-pre-approval-calculator'
+  },
+  {
+    name: 'Mortgage Rate by Credit Score Estimator',
+    description: 'Estimate mortgage interest rates based on your credit score',
+    category: 'Basic Calculators',
+    icon: '💳',
+    path: '/tools/mortgage-rate-credit-score-estimator'
+  },
+  {
+    name: 'DTI Calculator for FHA Loans',
+    description: 'Calculate DTI ratio specifically for FHA loan qualification',
+    category: 'Basic Calculators',
+    icon: '🏦',
+    path: '/tools/dti-calculator-fha-loans'
+  },
 
   // Investment Analysis (26 tools)
   {
@@ -542,6 +605,13 @@ export const allTools: Tool[] = [
     category: 'Financial Planning',
     icon: '💵',
     path: '/tools/noi-calculator'
+  },
+  {
+    name: 'Credit Score Improvement Simulator (for Mortgage)',
+    description: 'Simulate credit score improvements and see how different actions impact your mortgage',
+    category: 'Financial Planning',
+    icon: '📈',
+    path: '/tools/credit-score-improvement-simulator'
   },
 
   // Risk Assessment (2 tools)
