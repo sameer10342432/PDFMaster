@@ -45,22 +45,31 @@ export const ROI_CALCULATOR_CONTENT: CalculatorContent = {
       { label: 'Return on Investment (ROI)', isCurrency: false },
     ],
     calculate: (values) => {
-      const totalInvestment = values.purchasePrice + values.closingCosts + values.rehabCosts + values.holdingCosts;
-      const netProfit = values.salePrice - totalInvestment;
-      const roi = (netProfit / totalInvestment) * 100;
+      const purchasePrice = parseFloat(values.purchasePrice) || 0;
+      const closingCosts = parseFloat(values.closingCosts) || 0;
+      const rehabCosts = parseFloat(values.rehabCosts) || 0;
+      const holdingCosts = parseFloat(values.holdingCosts) || 0;
+      const salePrice = parseFloat(values.salePrice) || 0;
+      
+      const totalInvestment = purchasePrice + closingCosts + rehabCosts + holdingCosts;
+      const netProfit = salePrice - totalInvestment;
+      const roi = totalInvestment > 0 ? (netProfit / totalInvestment) * 100 : 0;
 
       return [
         {
           label: 'Total Investment',
-          value: `$${totalInvestment.toFixed(2)}`,
+          value: `${totalInvestment.toFixed(2)}`,
+          isCurrency: true,
         },
         {
           label: 'Net Profit',
-          value: `$${netProfit.toFixed(2)}`,
+          value: `${netProfit.toFixed(2)}`,
+          isCurrency: true,
         },
         {
           label: 'Return on Investment (ROI)',
           value: `${roi.toFixed(2)}%`,
+          isCurrency: false,
         },
       ];
     },

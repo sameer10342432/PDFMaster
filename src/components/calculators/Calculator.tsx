@@ -16,31 +16,31 @@ export const Calculator = ({ title, description, inputs, results, calculation }:
   }, [values]);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       {/* Input Section */}
-      <Card className="border-2 border-blue-100">
-        <CardHeader className="bg-gradient-to-r from-blue-50 to-indigo-50">
-          <CardTitle className="text-2xl text-blue-900">📊 Calculator Inputs</CardTitle>
-          {description && <p className="text-sm text-gray-600 mt-2">{description}</p>}
+      <Card className="border-0 shadow-xl">
+        <CardHeader className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-t-xl pb-8">
+          <CardTitle className="text-3xl text-white">Calculator Inputs</CardTitle>
+          {description && <p className="text-sm text-blue-100 mt-3">{description}</p>}
         </CardHeader>
-        <CardContent className="pt-6">
+        <CardContent className="pt-8 pb-8">
           <CalculatorFields fields={inputs} values={values} handleChange={handleChange} />
           <Button 
             onClick={handleCalculate} 
-            className="mt-6 w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-all duration-200 hover:shadow-xl"
+            className="mt-8 w-full md:w-auto bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-3 px-10 rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105"
           >
-            🔢 Calculate Now
+            Calculate Now
           </Button>
         </CardContent>
       </Card>
 
       {/* Results Section */}
       {displayResults && displayResults.length > 0 && (
-        <Card className="border-2 border-green-100 shadow-lg">
-          <CardHeader className="bg-gradient-to-r from-green-50 to-emerald-50">
-            <CardTitle className="text-2xl text-green-900">💰 Results</CardTitle>
+        <Card className="border-0 shadow-xl bg-gradient-to-br from-green-50 to-emerald-50">
+          <CardHeader className="bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-t-xl pb-8">
+            <CardTitle className="text-3xl text-white">Your Results</CardTitle>
           </CardHeader>
-          <CardContent className="pt-6">
+          <CardContent className="pt-8 pb-8">
             <CalculatorResults results={displayResults} />
           </CardContent>
         </Card>
