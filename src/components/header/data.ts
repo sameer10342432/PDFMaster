@@ -8,6 +8,7 @@ export const headerContent = {
     { href: '/tools', label: 'Tools' },
     { href: '/dashboard', label: 'Dashboard' },
     { href: '/favorites', label: 'Favorites' },
+    { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
   ],
 };
