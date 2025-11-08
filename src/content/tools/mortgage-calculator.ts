@@ -4,7 +4,7 @@ export const MORTGAGE_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Mortgage Calculator',
   description: 'Calculate your monthly mortgage payment.',
   slug: 'mortgage-calculator',
-  icon: 'Icon',
+  icon: '🏠',
   category: 'Financial',
   article: {
     title: 'Understanding Mortgages',
