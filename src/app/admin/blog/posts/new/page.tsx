@@ -174,15 +174,62 @@ export default function NewBlogPostPage() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Featured Image URL
+                  Featured Image
                 </label>
-                <input
-                  type="url"
-                  value={formData.featuredImage}
-                  onChange={(e) => setFormData({ ...formData, featuredImage: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="https://example.com/image.jpg"
-                />
+                <div className="space-y-3">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={async (e) => {
+                      const file = e.target.files?.[0];
+                      if (file) {
+                        const formData = new FormData();
+                        formData.append('image', file);
+                        try {
+                          const response = await fetch('/api/upload/image', {
+                            method: 'POST',
+                            body: formData,
+                          });
+                          if (response.ok) {
+                            const data = await response.json();
+                            setFormData(prev => ({ ...prev, featuredImage: data.url }));
+                          } else {
+                            alert('Failed to upload image');
+                          }
+                        } catch (error) {
+                          console.error('Error uploading image:', error);
+                          alert('Failed to upload image');
+                        }
+                      }
+                    }}
+                    className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                  />
+                  
+                  <div className="flex items-center">
+                    <div className="flex-1 border-t border-gray-300"></div>
+                    <span className="px-3 text-sm text-gray-500">OR</span>
+                    <div className="flex-1 border-t border-gray-300"></div>
+                  </div>
+                  
+                  <input
+                    type="url"
+                    value={formData.featuredImage}
+                    onChange={(e) => setFormData({ ...formData, featuredImage: e.target.value })}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Or paste image URL: https://example.com/image.jpg"
+                  />
+                  
+                  {formData.featuredImage && (
+                    <div className="mt-3">
+                      <p className="text-sm text-gray-600 mb-2">Preview:</p>
+                      <img
+                        src={formData.featuredImage}
+                        alt="Featured image preview"
+                        className="max-w-full h-auto rounded-lg border border-gray-300 max-h-64"
+                      />
+                    </div>
+                  )}
+                </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">

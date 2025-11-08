@@ -189,3 +189,33 @@
     Files Created: 3 new files
     Files Modified: 2 blog post pages
     Total Blocks Supported: Unlimited (tested up to 50+)
+
+[x] 13. FEATURED IMAGE UPLOAD FUNCTIONALITY - November 8, 2025:
+    📸 Added image upload option for featured images:
+    
+    ✅ Upload from Computer:
+        - Click "Choose File" button
+        - Select image from computer
+        - Automatic upload to server
+        - Image saved to public/uploads/blog/
+    
+    ✅ OR Paste URL:
+        - "OR" divider between options
+        - Paste any image URL
+        - Both options work seamlessly
+    
+    ✅ Image Preview:
+        - Instant preview after upload/paste
+        - Shows how image will look
+        - Max height 256px for preview
+        - Rounded borders, clean design
+    
+    ✅ Updated Files:
+        - src/app/admin/blog/posts/new/page.tsx
+        - src/app/admin/blog/posts/[id]/page.tsx
+    
+    User Experience:
+    ✅ Flexible - Upload OR paste URL
+    ✅ Visual feedback with preview
+    ✅ Clean, intuitive interface
+    ✅ Works for both new and existing posts
