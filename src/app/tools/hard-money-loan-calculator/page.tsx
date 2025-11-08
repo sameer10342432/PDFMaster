@@ -1,28 +1,23 @@
-"use client";
+'use client';
 
-import { useHardMoneyLoanCalculator } from "@/hooks/hard-money-loan-calculator/useHardMoneyLoanCalculator";
-import { CalculatorForm } from "@/components/hard-money-loan-calculator/CalculatorForm";
-import { Results } from "@/components/hard-money-loan-calculator/Results";
+import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
+import { HARD_MONEY_LOAN_CALCULATOR_CONTENT } from '@/content/tools/hard-money-loan-calculator';
+import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
-export default function HardMoneyLoanCalculatorPage() {
-  const { form, monthlyPayment, totalInterest, totalPointsCost, totalLoanCost, apr, handleFormChange } = useHardMoneyLoanCalculator();
-
+const HardMoneyLoanCalculatorPage = () => {
   return (
-    <div className="container mx-auto p-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <CalculatorForm form={form} />
-        </div>
-        <div>
-          <Results
-            monthlyPayment={monthlyPayment}
-            totalInterest={totalInterest}
-            totalPointsCost={totalPointsCost}
-            totalLoanCost={totalLoanCost}
-            apr={apr}
-          />
-        </div>
-      </div>
-    </div>
+    <CalculatorLayout content={HARD_MONEY_LOAN_CALCULATOR_CONTENT}>
+      <EnhancedCalculator
+        title={HARD_MONEY_LOAN_CALCULATOR_CONTENT.title}
+        slug="hard-money-loan-calculator"
+        category="Investing"
+        description={HARD_MONEY_LOAN_CALCULATOR_CONTENT.description}
+        inputs={HARD_MONEY_LOAN_CALCULATOR_CONTENT.calculator.fields}
+        results={HARD_MONEY_LOAN_CALCULATOR_CONTENT.calculator.results}
+        calculation={HARD_MONEY_LOAN_CALCULATOR_CONTENT.calculator.calculate}
+      />
+    </CalculatorLayout>
   );
-}
+};
+
+export default HardMoneyLoanCalculatorPage;

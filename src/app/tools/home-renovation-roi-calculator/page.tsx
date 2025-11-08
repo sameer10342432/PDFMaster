@@ -1,25 +1,22 @@
-
 'use client';
 
-import { useHomeRenovationRoiCalculator } from '@/hooks/home-renovation-roi-calculator/useHomeRenovationRoiCalculator';
-import { CalculatorForm } from '@/components/home-renovation-roi-calculator/CalculatorForm';
-import { Results } from '@/components/home-renovation-roi-calculator/Results';
+import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
+import { HOME_RENOVATION_ROI_CALCULATOR_CONTENT } from '@/content/tools/home-renovation-roi-calculator';
+import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
 const HomeRenovationRoiCalculatorPage = () => {
-  const { form, roi } = useHomeRenovationRoiCalculator();
-
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-8">Home Renovation ROI Calculator</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <CalculatorForm form={form} />
-        </div>
-        <div>
-          <Results roi={roi} />
-        </div>
-      </div>
-    </div>
+    <CalculatorLayout content={HOME_RENOVATION_ROI_CALCULATOR_CONTENT}>
+      <EnhancedCalculator
+        title={HOME_RENOVATION_ROI_CALCULATOR_CONTENT.title}
+        slug="home-renovation-roi-calculator"
+        category="Investment"
+        description={HOME_RENOVATION_ROI_CALCULATOR_CONTENT.description}
+        inputs={HOME_RENOVATION_ROI_CALCULATOR_CONTENT.calculator.fields}
+        results={HOME_RENOVATION_ROI_CALCULATOR_CONTENT.calculator.results}
+        calculation={HOME_RENOVATION_ROI_CALCULATOR_CONTENT.calculator.calculate}
+      />
+    </CalculatorLayout>
   );
 };
 
