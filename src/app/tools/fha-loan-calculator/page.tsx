@@ -1,0 +1,29 @@
+'use client'
+import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
+import { FHA_LOAN_CALCULATOR_CONTENT } from '@/content/tools/fha-loan-calculator';
+import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
+
+const FHALoanCalculatorPage = () => {
+  return (
+    <CalculatorLayout content={FHA_LOAN_CALCULATOR_CONTENT}>
+      <EnhancedCalculator
+        title={FHA_LOAN_CALCULATOR_CONTENT.title}
+        slug="fha-loan-calculator"
+        category="Basic Calculators"
+        description={FHA_LOAN_CALCULATOR_CONTENT.description}
+        inputs={FHA_LOAN_CALCULATOR_CONTENT.calculator.fields}
+        results={FHA_LOAN_CALCULATOR_CONTENT.calculator.results}
+        calculation={FHA_LOAN_CALCULATOR_CONTENT.calculator.calculate}
+      />
+    </CalculatorLayout>
+  );
+};
+
+export default FHALoanCalculatorPage;
+
+export function generateMetadata() {
+  return {
+    title: FHA_LOAN_CALCULATOR_CONTENT.metaTitle || FHA_LOAN_CALCULATOR_CONTENT.title,
+    description: FHA_LOAN_CALCULATOR_CONTENT.metaDescription || FHA_LOAN_CALCULATOR_CONTENT.description,
+  };
+}

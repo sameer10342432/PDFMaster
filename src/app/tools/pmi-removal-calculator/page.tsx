@@ -1,0 +1,29 @@
+'use client'
+import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
+import { PMI_REMOVAL_CALCULATOR_CONTENT } from '@/content/tools/pmi-removal-calculator';
+import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
+
+const PMIRemovalCalculatorPage = () => {
+  return (
+    <CalculatorLayout content={PMI_REMOVAL_CALCULATOR_CONTENT}>
+      <EnhancedCalculator
+        title={PMI_REMOVAL_CALCULATOR_CONTENT.title}
+        slug="pmi-removal-calculator"
+        category="Basic Calculators"
+        description={PMI_REMOVAL_CALCULATOR_CONTENT.description}
+        inputs={PMI_REMOVAL_CALCULATOR_CONTENT.calculator.fields}
+        results={PMI_REMOVAL_CALCULATOR_CONTENT.calculator.results}
+        calculation={PMI_REMOVAL_CALCULATOR_CONTENT.calculator.calculate}
+      />
+    </CalculatorLayout>
+  );
+};
+
+export default PMIRemovalCalculatorPage;
+
+export function generateMetadata() {
+  return {
+    title: PMI_REMOVAL_CALCULATOR_CONTENT.metaTitle || PMI_REMOVAL_CALCULATOR_CONTENT.title,
+    description: PMI_REMOVAL_CALCULATOR_CONTENT.metaDescription || PMI_REMOVAL_CALCULATOR_CONTENT.description,
+  };
+}

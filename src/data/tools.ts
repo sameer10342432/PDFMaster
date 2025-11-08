@@ -7,13 +7,48 @@ export interface Tool {
 }
 
 export const allTools: Tool[] = [
-  // Basic Calculators (8 tools)
+  // Basic Calculators (18 tools)
   {
     name: 'Mortgage Calculator',
     description: 'Calculate monthly mortgage payments, interest, and amortization schedules',
     category: 'Basic Calculators',
     icon: '🏠',
     path: '/tools/mortgage-calculator'
+  },
+  {
+    name: 'FHA Loan Calculator',
+    description: 'Calculate FHA loan payments with low down payment (3.5%) and MIP costs',
+    category: 'Basic Calculators',
+    icon: '🏡',
+    path: '/tools/fha-loan-calculator'
+  },
+  {
+    name: 'VA Loan Calculator',
+    description: 'Calculate VA loan payments with zero down for veterans and military',
+    category: 'Basic Calculators',
+    icon: '🎖️',
+    path: '/tools/va-loan-calculator'
+  },
+  {
+    name: 'USDA Loan Calculator',
+    description: 'Calculate USDA rural loan payments with 100% financing',
+    category: 'Basic Calculators',
+    icon: '🌾',
+    path: '/tools/usda-loan-calculator'
+  },
+  {
+    name: 'Jumbo Loan Calculator',
+    description: 'Calculate jumbo mortgage payments for luxury homes above $766,550',
+    category: 'Basic Calculators',
+    icon: '🏰',
+    path: '/tools/jumbo-loan-calculator'
+  },
+  {
+    name: 'FHA 203k Loan Calculator',
+    description: 'Calculate FHA renovation loan combining purchase and rehab costs',
+    category: 'Basic Calculators',
+    icon: '🔧',
+    path: '/tools/fha-203k-loan-calculator'
   },
   {
     name: 'Affordability Calculator',
@@ -28,6 +63,41 @@ export const allTools: Tool[] = [
     category: 'Basic Calculators',
     icon: '💳',
     path: '/tools/down-payment-calculator'
+  },
+  {
+    name: 'PMI Calculator',
+    description: 'Calculate private mortgage insurance costs and monthly payments',
+    category: 'Basic Calculators',
+    icon: '🏦',
+    path: '/tools/pmi-calculator'
+  },
+  {
+    name: 'PMI Removal Calculator',
+    description: 'Find out when you can cancel PMI and how much you will save',
+    category: 'Basic Calculators',
+    icon: '🗑️',
+    path: '/tools/pmi-removal-calculator'
+  },
+  {
+    name: 'FHA MIP Calculator',
+    description: 'Calculate FHA mortgage insurance premium - upfront and annual costs',
+    category: 'Basic Calculators',
+    icon: '🛡️',
+    path: '/tools/fha-mip-calculator'
+  },
+  {
+    name: 'VA Loan Funding Fee Calculator',
+    description: 'Calculate VA funding fee based on loan type and service history',
+    category: 'Basic Calculators',
+    icon: '💵',
+    path: '/tools/va-loan-funding-fee-calculator'
+  },
+  {
+    name: 'FHA vs Conventional Analyzer',
+    description: 'Compare FHA and conventional loans side-by-side to find best option',
+    category: 'Basic Calculators',
+    icon: '⚖️',
+    path: '/tools/fha-vs-conventional-loan-analyzer'
   },
   {
     name: 'Loan Eligibility Checker',
