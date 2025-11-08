@@ -188,8 +188,17 @@ Preferred communication style: Simple, everyday language.
 
 ## Build & Deployment
 
-- Designed for deployment on Vercel (Next.js native platform)
+- **Migrated from Vercel to Replit** (November 8, 2025)
+- Configured for Replit autoscale deployment
+- Development server runs on port 5000 with host 0.0.0.0 for Replit environment
+- Production deployment uses `npm run build` and `npm run start`
+- Database: Replit PostgreSQL (Neon-backed) with schema managed via Drizzle
 - Static asset optimization via next/font
 - Image optimization via next/image
 - No custom server configuration required
-- Port 5000 for both development and production start scripts
+
+### Replit Configuration
+- **Workflow**: `dev` workflow runs `npm run dev` on port 5000
+- **Database**: PostgreSQL schema synced with `npm run db:push`
+- **Deployment Target**: Autoscale (stateless web application)
+- **Environment Variables**: DATABASE_URL (configured), SESSION_SECRET (derived from DATABASE_URL in dev)
