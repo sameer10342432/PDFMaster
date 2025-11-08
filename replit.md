@@ -198,7 +198,9 @@ Preferred communication style: Simple, everyday language.
 - No custom server configuration required
 
 ### Replit Configuration
-- **Workflow**: `dev` workflow runs `npm run dev` on port 5000
+- **Workflow**: `dev-server` workflow runs `npm run dev` on port 5000 with webview output
+- **Next.js Config**: `allowedDevOrigins: ["*.replit.dev"]` configured for Replit iframe compatibility
 - **Database**: PostgreSQL schema synced with `npm run db:push`
 - **Deployment Target**: Autoscale (stateless web application)
-- **Environment Variables**: DATABASE_URL (configured), SESSION_SECRET (derived from DATABASE_URL in dev)
+- **Environment Variables**: DATABASE_URL (configured), SESSION_SECRET (configured)
+- **Host Binding**: 0.0.0.0 for network access in Replit environment
