@@ -22,5 +22,5 @@ export const useCalculator = (inputs: CalculatorInput[], results: CalculatorResu
     setDisplayResults(formattedResults);
   };
 
-  return { values, results: displayResults, handleChange, handleCalculate };
+  return { values, results: displayResults, handleChange, handleCalculate, setValues };
 };

@@ -2,13 +2,15 @@
 'use client'
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
 import { DEBT_TO_INCOME_RATIO_CALCULATOR_CONTENT } from '@/content/tools/debt-to-income-ratio-calculator';
-import { Calculator } from '@/components/calculators/Calculator';
+import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
 const DebtToIncomeRatioCalculatorPage = () => {
   return (
     <CalculatorLayout content={DEBT_TO_INCOME_RATIO_CALCULATOR_CONTENT}>
-      <Calculator
+      <EnhancedCalculator
         title={DEBT_TO_INCOME_RATIO_CALCULATOR_CONTENT.title}
+        slug="debt-to-income-ratio-calculator"
+        category="Real Estate"
         description={DEBT_TO_INCOME_RATIO_CALCULATOR_CONTENT.description}
         inputs={DEBT_TO_INCOME_RATIO_CALCULATOR_CONTENT.calculator.fields}
         results={DEBT_TO_INCOME_RATIO_CALCULATOR_CONTENT.calculator.results}

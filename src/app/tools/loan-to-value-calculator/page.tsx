@@ -2,13 +2,15 @@
 
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
 import { LOAN_TO_VALUE_CALCULATOR_CONTENT } from '@/content/tools/loan-to-value-calculator';
-import { Calculator } from '@/components/calculators/Calculator';
+import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
 const LoanToValueCalculatorPage = () => {
   return (
     <CalculatorLayout content={LOAN_TO_VALUE_CALCULATOR_CONTENT}>
-            <Calculator
+            <EnhancedCalculator
         title={LOAN_TO_VALUE_CALCULATOR_CONTENT.title}
+        slug="loan-to-value-calculator"
+        category="Real Estate"
         description={LOAN_TO_VALUE_CALCULATOR_CONTENT.description}
         inputs={LOAN_TO_VALUE_CALCULATOR_CONTENT.calculator.fields}
         results={LOAN_TO_VALUE_CALCULATOR_CONTENT.calculator.results}

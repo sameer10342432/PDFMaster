@@ -6,6 +6,8 @@ export const headerContent = {
   },
   navLinks: [
     { href: '/tools', label: 'Tools' },
+    { href: '/dashboard', label: 'Dashboard' },
+    { href: '/favorites', label: 'Favorites' },
     { href: '/contact', label: 'Contact' },
   ],
 };

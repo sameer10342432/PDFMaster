@@ -1,13 +1,15 @@
 'use client'
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
 import { MORTGAGE_CALCULATOR_CONTENT } from '@/content/tools/mortgage-calculator';
-import { Calculator } from '@/components/calculators/Calculator';
+import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
 const MortgageCalculatorPage = () => {
   return (
     <CalculatorLayout content={MORTGAGE_CALCULATOR_CONTENT}>
-            <Calculator
+            <EnhancedCalculator
         title={MORTGAGE_CALCULATOR_CONTENT.title}
+        slug="mortgage-calculator"
+        category="Real Estate"
         description={MORTGAGE_CALCULATOR_CONTENT.description}
         inputs={MORTGAGE_CALCULATOR_CONTENT.calculator.fields}
         results={MORTGAGE_CALCULATOR_CONTENT.calculator.results}

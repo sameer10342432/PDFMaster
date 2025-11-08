@@ -17,13 +17,15 @@ const formSchema = z.object({
 
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
 import { PAYBACK_PERIOD_CALCULATOR_CONTENT } from '@/content/tools/payback-period-calculator';
-import { Calculator } from '@/components/calculators/Calculator';
+import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
 const PaybackPeriodCalculatorPage = () => {
   return (
     <CalculatorLayout content={PAYBACK_PERIOD_CALCULATOR_CONTENT}>
-      <Calculator
+      <EnhancedCalculator
         title={PAYBACK_PERIOD_CALCULATOR_CONTENT.title}
+        slug="payback-period-calculator"
+        category="Real Estate"
         description={PAYBACK_PERIOD_CALCULATOR_CONTENT.description}
         inputs={PAYBACK_PERIOD_CALCULATOR_CONTENT.calculator.fields}
         results={PAYBACK_PERIOD_CALCULATOR_CONTENT.calculator.results}
