@@ -20,10 +20,3 @@ const FHA203kLoanCalculatorPage = () => {
 };
 
 export default FHA203kLoanCalculatorPage;
-
-export function generateMetadata() {
-  return {
-    title: FHA_203K_LOAN_CALCULATOR_CONTENT.metaTitle || FHA_203K_LOAN_CALCULATOR_CONTENT.title,
-    description: FHA_203K_LOAN_CALCULATOR_CONTENT.metaDescription || FHA_203K_LOAN_CALCULATOR_CONTENT.description,
-  };
-}

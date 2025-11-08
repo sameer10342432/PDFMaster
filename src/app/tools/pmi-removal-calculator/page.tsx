@@ -20,10 +20,3 @@ const PMIRemovalCalculatorPage = () => {
 };
 
 export default PMIRemovalCalculatorPage;
-
-export function generateMetadata() {
-  return {
-    title: PMI_REMOVAL_CALCULATOR_CONTENT.metaTitle || PMI_REMOVAL_CALCULATOR_CONTENT.title,
-    description: PMI_REMOVAL_CALCULATOR_CONTENT.metaDescription || PMI_REMOVAL_CALCULATOR_CONTENT.description,
-  };
-}

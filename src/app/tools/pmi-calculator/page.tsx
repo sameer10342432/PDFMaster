@@ -20,10 +20,3 @@ const PMICalculatorPage = () => {
 };
 
 export default PMICalculatorPage;
-
-export function generateMetadata() {
-  return {
-    title: PMI_CALCULATOR_CONTENT.metaTitle || PMI_CALCULATOR_CONTENT.title,
-    description: PMI_CALCULATOR_CONTENT.metaDescription || PMI_CALCULATOR_CONTENT.description,
-  };
-}

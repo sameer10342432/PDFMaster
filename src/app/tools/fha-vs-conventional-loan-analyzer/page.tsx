@@ -20,10 +20,3 @@ const FHAvsConventionalAnalyzerPage = () => {
 };
 
 export default FHAvsConventionalAnalyzerPage;
-
-export function generateMetadata() {
-  return {
-    title: FHA_VS_CONVENTIONAL_ANALYZER_CONTENT.metaTitle || FHA_VS_CONVENTIONAL_ANALYZER_CONTENT.title,
-    description: FHA_VS_CONVENTIONAL_ANALYZER_CONTENT.metaDescription || FHA_VS_CONVENTIONAL_ANALYZER_CONTENT.description,
-  };
-}

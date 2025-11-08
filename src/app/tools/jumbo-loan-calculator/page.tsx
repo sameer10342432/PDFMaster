@@ -20,10 +20,3 @@ const JumboLoanCalculatorPage = () => {
 };
 
 export default JumboLoanCalculatorPage;
-
-export function generateMetadata() {
-  return {
-    title: JUMBO_LOAN_CALCULATOR_CONTENT.metaTitle || JUMBO_LOAN_CALCULATOR_CONTENT.title,
-    description: JUMBO_LOAN_CALCULATOR_CONTENT.metaDescription || JUMBO_LOAN_CALCULATOR_CONTENT.description,
-  };
-}

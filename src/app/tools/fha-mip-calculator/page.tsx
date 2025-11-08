@@ -20,10 +20,3 @@ const FHAMIPCalculatorPage = () => {
 };
 
 export default FHAMIPCalculatorPage;
-
-export function generateMetadata() {
-  return {
-    title: FHA_MIP_CALCULATOR_CONTENT.metaTitle || FHA_MIP_CALCULATOR_CONTENT.title,
-    description: FHA_MIP_CALCULATOR_CONTENT.metaDescription || FHA_MIP_CALCULATOR_CONTENT.description,
-  };
-}

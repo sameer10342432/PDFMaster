@@ -20,10 +20,3 @@ const VALoanCalculatorPage = () => {
 };
 
 export default VALoanCalculatorPage;
-
-export function generateMetadata() {
-  return {
-    title: VA_LOAN_CALCULATOR_CONTENT.metaTitle || VA_LOAN_CALCULATOR_CONTENT.title,
-    description: VA_LOAN_CALCULATOR_CONTENT.metaDescription || VA_LOAN_CALCULATOR_CONTENT.description,
-  };
-}

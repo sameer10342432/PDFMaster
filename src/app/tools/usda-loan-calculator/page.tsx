@@ -20,10 +20,3 @@ const USDALoanCalculatorPage = () => {
 };
 
 export default USDALoanCalculatorPage;
-
-export function generateMetadata() {
-  return {
-    title: USDA_LOAN_CALCULATOR_CONTENT.metaTitle || USDA_LOAN_CALCULATOR_CONTENT.title,
-    description: USDA_LOAN_CALCULATOR_CONTENT.metaDescription || USDA_LOAN_CALCULATOR_CONTENT.description,
-  };
-}

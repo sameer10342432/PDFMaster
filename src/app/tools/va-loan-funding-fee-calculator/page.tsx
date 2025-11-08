@@ -20,10 +20,3 @@ const VALoanFundingFeeCalculatorPage = () => {
 };
 
 export default VALoanFundingFeeCalculatorPage;
-
-export function generateMetadata() {
-  return {
-    title: VA_LOAN_FUNDING_FEE_CALCULATOR_CONTENT.metaTitle || VA_LOAN_FUNDING_FEE_CALCULATOR_CONTENT.title,
-    description: VA_LOAN_FUNDING_FEE_CALCULATOR_CONTENT.metaDescription || VA_LOAN_FUNDING_FEE_CALCULATOR_CONTENT.description,
-  };
-}
