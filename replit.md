@@ -73,11 +73,14 @@ Preferred communication style: Simple, everyday language.
 - View counting and publish date tracking
 
 **Calculator Content**: Centralized tools data system
-- **Centralized tools data** in `src/data/tools.ts` - single source of truth for all 122 tools
+- **Centralized tools data** in `src/data/tools.ts` - single source of truth for all 132 tools
 - Complete tool interface with name, description, category, icon, and path
 - Helper functions: `getToolsByCategory()`, `getCategoryCount()`, `getTotalToolsCount()`
-- Organized into 10 categories: Basic Calculators (27), Investment Analysis (39), Property Valuation (6), Rental & Income (20), Market Analysis (6), Financial Planning (13), Risk Assessment (2), Advanced Analytics (5), Additional Tools (2), **Seller Tools (11)**
-- Latest additions (November 10, 2025): Raw Land Investment Calculator, New Construction Budget Calculator, Cost to Build House Estimator, Land Development Cost Calculator, Homestead Exemption Calculator, MACRS Depreciation Calculator, Property Tax Appeal Analyzer, Transfer Tax Calculator, Opportunity Zone Investment Calculator, Eviction Cost & Timeline Estimator
+- Organized into 11 categories: Basic Calculators (27), Investment Analysis (39), Property Valuation (6), Rental & Income (20), Market Analysis (13), Financial Planning (13), Risk Assessment (2), Advanced Analytics (5), **Tax Strategy & Entity Planning (3)**, **Seller Tools (11)**, Additional Tools (2)
+- **Latest additions (November 10, 2025 - 2nd batch)**: 
+  - **Tax Strategy & Entity Planning**: Real Estate Professional (REPs) Status Tax Benefit Calculator, Cost Segregation Benefit Calculator, LLC vs. Sole Proprietorship (Real Estate) Analyzer
+  - **Market Analysis - Location Intelligence**: FEMA Flood Zone Checker (by Address), Crime Rate by Address Analyzer, School Rating by Address, Local Rent Control Law Finder (by City/State), Property History Analyzer (Sales/Price), US ZIP Code Demographics Analyzer, Proximity to Amenities Calculator
+- Previous additions (November 10, 2025 - 1st batch): Raw Land Investment Calculator, New Construction Budget Calculator, Cost to Build House Estimator, Land Development Cost Calculator, Homestead Exemption Calculator, MACRS Depreciation Calculator, Property Tax Appeal Analyzer, Transfer Tax Calculator, Opportunity Zone Investment Calculator, Eviction Cost & Timeline Estimator
 - All tools verified against actual page implementations - no 404 errors
 - Calculator definitions in `src/content/tools/` directory
 - Each calculator exports a content object with title, description, icon, category, slug, article, and calculation logic
@@ -89,12 +92,13 @@ Preferred communication style: Simple, everyday language.
 - Modular calculator architecture with shared components
 - Generic `Calculator` component accepts inputs, results schema, and calculation function
 - Enhanced calculator wrapper adds scenario management, export, share, and insights
-- **122 professional tools and calculators** including mortgage, investment analysis, ROI, tax calculations, property valuation, rental income, market analysis, seller tools, land development, opportunity zones, MACRS depreciation, and more
+- **132 professional tools and calculators** including mortgage, investment analysis, ROI, tax calculations, property valuation, rental income, market analysis, seller tools, land development, opportunity zones, MACRS depreciation, REPs status, cost segregation, entity structuring, location intelligence (flood zones, crime rates, school ratings, rent control, demographics, amenities), and more
 - What-if analysis and sensitivity testing
 - Real-time calculation updates on input change
 - **Centralized tools data** ensures consistency across homepage and tools page
 - Search and filter functionality for easy tool discovery
 - Responsive card-based UI with icons and category badges
+- **Text-based calculator results** supported via `isCurrency: false` (for qualitative assessments, status indicators, recommendations)
 
 **Enhancement Features**:
 - Scenario Manager: Save, compare, and manage multiple calculation scenarios

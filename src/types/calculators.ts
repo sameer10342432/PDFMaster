@@ -10,6 +10,7 @@ export interface CalculatorInput {
 
 export interface CalculatorResult {
   label: string;
+  value?: string | number;
   isCurrency: boolean;
 }
 

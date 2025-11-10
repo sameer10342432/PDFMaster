@@ -1019,6 +1019,80 @@ export const allTools: Tool[] = [
     category: 'Seller Tools',
     icon: '📜',
     path: '/tools/transfer-tax-calculator'
+  },
+  
+  // Tax Strategy & Entity Planning (3 tools)
+  {
+    name: 'Real Estate Professional (REPs) Status Tax Benefit Calculator',
+    description: 'Calculate potential tax benefits of qualifying as a Real Estate Professional under IRS rules and how it affects rental property losses',
+    category: 'Tax Strategy & Entity Planning',
+    icon: '👔',
+    path: '/tools/reps-status-calculator'
+  },
+  {
+    name: 'Cost Segregation Benefit Calculator',
+    description: 'Estimate tax savings from cost segregation studies that accelerate depreciation deductions on commercial and residential rental properties',
+    category: 'Tax Strategy & Entity Planning',
+    icon: '📋',
+    path: '/tools/cost-segregation-calculator'
+  },
+  {
+    name: 'LLC vs. Sole Proprietorship (Real Estate) Analyzer',
+    description: 'Compare LLC and Sole Proprietorship structures for real estate investing - analyze tax implications, liability protection, and administrative costs',
+    category: 'Tax Strategy & Entity Planning',
+    icon: '🏢',
+    path: '/tools/llc-vs-sole-proprietorship-analyzer'
+  },
+  
+  // Market Analysis - Location Intelligence (7 tools)
+  {
+    name: 'FEMA Flood Zone Checker (by Address)',
+    description: 'Check FEMA flood zone designation for any property address to assess flood risk and insurance requirements',
+    category: 'Market Analysis',
+    icon: '🌊',
+    path: '/tools/fema-flood-zone-checker'
+  },
+  {
+    name: 'Crime Rate by Address Analyzer',
+    description: 'Analyze crime statistics and safety metrics for any neighborhood to assess property investment risk and tenant appeal',
+    category: 'Market Analysis',
+    icon: '🚨',
+    path: '/tools/crime-rate-analyzer'
+  },
+  {
+    name: 'School Rating by Address',
+    description: 'Check school quality ratings and rankings for any address to assess family appeal and property value impact',
+    category: 'Market Analysis',
+    icon: '🎓',
+    path: '/tools/school-rating-analyzer'
+  },
+  {
+    name: 'Local Rent Control Law Finder (by City/State)',
+    description: 'Search rent control laws and regulations by location to understand rental property restrictions, rent increase caps, and landlord obligations',
+    category: 'Market Analysis',
+    icon: '⚖️',
+    path: '/tools/rent-control-law-finder'
+  },
+  {
+    name: 'Property History Analyzer (Sales/Price)',
+    description: 'Analyze property sales history, price trends, and transaction patterns to identify opportunities and assess appreciation potential',
+    category: 'Market Analysis',
+    icon: '📈',
+    path: '/tools/property-history-analyzer'
+  },
+  {
+    name: 'US ZIP Code Demographics Analyzer',
+    description: 'Analyze ZIP code demographics including population, income, age, education, and housing data to identify target markets for investment',
+    category: 'Market Analysis',
+    icon: '📊',
+    path: '/tools/zip-code-demographics-analyzer'
+  },
+  {
+    name: 'Proximity to Amenities Calculator',
+    description: 'Evaluate property location score based on proximity to key amenities including transit, schools, shopping, parks, and employment centers',
+    category: 'Market Analysis',
+    icon: '📍',
+    path: '/tools/proximity-to-amenities-calculator'
   }
 ];
 
@@ -1033,6 +1107,7 @@ export const categories = [
   'Risk Assessment',
   'Advanced Analytics',
   'Seller Tools',
+  'Tax Strategy & Entity Planning',
   'Additional Tools'
 ];
 
