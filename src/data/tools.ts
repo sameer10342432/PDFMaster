@@ -942,7 +942,7 @@ export const allTools: Tool[] = [
     path: '/tools/home-inspection-checklist'
   },
 
-  // Seller Tools (11 tools)
+  // Seller Tools (21 tools)
   {
     name: 'Net Proceeds from Home Sale Calculator',
     description: 'Calculate your net proceeds from selling your home after all costs, commissions, and fees',
@@ -1019,6 +1019,76 @@ export const allTools: Tool[] = [
     category: 'Seller Tools',
     icon: '📜',
     path: '/tools/transfer-tax-calculator'
+  },
+  {
+    name: 'Texas Transfer Tax Calculator',
+    description: 'Calculate Texas real estate transfer costs and county recording fees. Texas has no state transfer tax - learn actual closing costs',
+    category: 'Seller Tools',
+    icon: '🏛️',
+    path: '/tools/texas-transfer-tax-calculator'
+  },
+  {
+    name: 'Florida Transfer Tax (Doc Stamps) Calculator',
+    description: 'Calculate Florida documentary stamp tax, intangible tax, and recording fees including Miami-Dade special rates',
+    category: 'Seller Tools',
+    icon: '🌴',
+    path: '/tools/florida-transfer-tax-calculator'
+  },
+  {
+    name: 'New York Transfer Tax Calculator',
+    description: 'Calculate New York State transfer tax, NYC transfer tax, mansion tax, and mortgage recording tax',
+    category: 'Seller Tools',
+    icon: '🗽',
+    path: '/tools/new-york-transfer-tax-calculator'
+  },
+  {
+    name: 'Pennsylvania Transfer Tax Calculator',
+    description: 'Calculate Pennsylvania state (1%) and local (1%) transfer tax including Philadelphia and Pittsburgh special rates',
+    category: 'Seller Tools',
+    icon: '🔔',
+    path: '/tools/pennsylvania-transfer-tax-calculator'
+  },
+  {
+    name: 'Illinois Transfer Tax Calculator',
+    description: 'Calculate Illinois state transfer tax and Chicago city transfer tax including Cook County rates',
+    category: 'Seller Tools',
+    icon: '🌆',
+    path: '/tools/illinois-transfer-tax-calculator'
+  },
+  {
+    name: 'Ohio Transfer Tax Calculator',
+    description: 'Calculate Ohio county conveyance fees by county. Ohio has no state transfer tax - only county fees',
+    category: 'Seller Tools',
+    icon: '🌰',
+    path: '/tools/ohio-transfer-tax-calculator'
+  },
+  {
+    name: 'Georgia Transfer Tax Calculator',
+    description: 'Calculate Georgia state transfer tax (0.1%) and intangible recording tax (0.3%) for mortgages',
+    category: 'Seller Tools',
+    icon: '🍑',
+    path: '/tools/georgia-transfer-tax-calculator'
+  },
+  {
+    name: 'North Carolina Transfer Tax Calculator',
+    description: 'Calculate North Carolina excise tax (0.2%) and recording fees. No county or city transfer taxes in NC',
+    category: 'Seller Tools',
+    icon: '🌲',
+    path: '/tools/north-carolina-transfer-tax-calculator'
+  },
+  {
+    name: 'Michigan Transfer Tax Calculator',
+    description: 'Calculate Michigan state (0.75%) and county (0.11%) transfer tax for combined 0.86% rate',
+    category: 'Seller Tools',
+    icon: '🏞️',
+    path: '/tools/michigan-transfer-tax-calculator'
+  },
+  {
+    name: 'New Jersey Transfer Tax Calculator',
+    description: 'Calculate New Jersey realty transfer fee (1%) and mansion tax (1% over $1M) for properties',
+    category: 'Seller Tools',
+    icon: '🌊',
+    path: '/tools/new-jersey-transfer-tax-calculator'
   },
   
   // Tax Strategy & Entity Planning (3 tools)

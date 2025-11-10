@@ -73,11 +73,15 @@ Preferred communication style: Simple, everyday language.
 - View counting and publish date tracking
 
 **Calculator Content**: Centralized tools data system
-- **Centralized tools data** in `src/data/tools.ts` - single source of truth for all 162 tools
+- **Centralized tools data** in `src/data/tools.ts` - single source of truth for all 172 tools
 - Complete tool interface with name, description, category, icon, and path
 - Helper functions: `getToolsByCategory()`, `getCategoryCount()`, `getTotalToolsCount()`
-- Organized into 11 categories: Basic Calculators (31), Investment Analysis (39), Property Valuation (6), Rental & Income (20), Market Analysis (16), Financial Planning (13), Risk Assessment (2), Advanced Analytics (5), **Tax Strategy & Entity Planning (3)**, **Seller Tools (11)**, Additional Tools (9)
-- **Latest additions (November 10, 2025 - 3rd batch - 10 new tools)**:
+- Organized into 11 categories: Basic Calculators (31), Investment Analysis (39), Property Valuation (6), Rental & Income (20), Market Analysis (16), Financial Planning (13), Risk Assessment (2), Advanced Analytics (5), **Tax Strategy & Entity Planning (3)**, **Seller Tools (21)**, Additional Tools (9)
+- **Latest additions (November 10, 2025 - 4th batch - 10 new state-specific transfer tax calculators)**:
+  - **Seller Tools - State Transfer Tax Calculators**: Texas Transfer Tax Calculator, Florida Transfer Tax (Doc Stamps) Calculator, New York Transfer Tax Calculator, Pennsylvania Transfer Tax Calculator, Illinois Transfer Tax Calculator, Ohio Transfer Tax Calculator, Georgia Transfer Tax Calculator, North Carolina Transfer Tax Calculator, Michigan Transfer Tax Calculator, New Jersey Transfer Tax Calculator
+  - Each calculator features comprehensive articles on state-specific rates, exemptions, who pays, recording fees, and detailed cost breakdowns
+  - Covers major US states with varying transfer tax structures (from 0% in Texas to 2-4% in PA/NY)
+- **Previous additions (November 10, 2025 - 3rd batch)**:
   - **Market Analysis**: Local Property Tax Rate Finder (by County), Natural Disaster Risk Score (by Address), Environmental Hazard Checker
   - **Additional Tools - Closing Costs & Fees**: Title Insurance Cost Estimator, Home Appraisal Fee Estimator, Survey Cost Estimator, Legal Fee Estimator (Real Estate)
   - **Additional Tools - AI-Powered**: AI Property Listing Description Generator, AI Real Estate Blog Post Idea Generator, AI Renovation Idea Generator (by Photo)
@@ -96,7 +100,7 @@ Preferred communication style: Simple, everyday language.
 - Modular calculator architecture with shared components
 - Generic `Calculator` component accepts inputs, results schema, and calculation function
 - Enhanced calculator wrapper adds scenario management, export, share, and insights
-- **132 professional tools and calculators** including mortgage, investment analysis, ROI, tax calculations, property valuation, rental income, market analysis, seller tools, land development, opportunity zones, MACRS depreciation, REPs status, cost segregation, entity structuring, location intelligence (flood zones, crime rates, school ratings, rent control, demographics, amenities), and more
+- **172 professional tools and calculators** including mortgage, investment analysis, ROI, tax calculations, property valuation, rental income, market analysis, seller tools (now with 10 state-specific transfer tax calculators), land development, opportunity zones, MACRS depreciation, REPs status, cost segregation, entity structuring, location intelligence (flood zones, crime rates, school ratings, rent control, demographics, amenities), and more
 - What-if analysis and sensitivity testing
 - Real-time calculation updates on input change
 - **Centralized tools data** ensures consistency across homepage and tools page
