@@ -195,35 +195,35 @@ export const allTools: Tool[] = [
     description: 'Calculate DTI ratio specifically for FHA loan qualification',
     category: 'Basic Calculators',
     icon: '🏦',
-    path: '/tools/dti-calculator-fha-loans'
+    path: '/tools/dti-calculator-for-fha-loans'
   },
   {
     name: 'DTI Calculator for VA Loans',
     description: 'Calculate debt-to-income ratio for VA loans with flexible 41% DTI allowance',
     category: 'Basic Calculators',
     icon: '🎖️',
-    path: '/tools/dti-calculator-va-loans'
+    path: '/tools/dti-calculator-for-va-loans'
   },
   {
     name: 'DTI Calculator for Conventional Loans',
     description: 'Calculate DTI ratio for conventional loans with 43% standard limit',
     category: 'Basic Calculators',
     icon: '🏦',
-    path: '/tools/dti-calculator-conventional-loans'
+    path: '/tools/dti-calculator-for-conventional-loans'
   },
   {
     name: 'Front-End DTI Calculator',
     description: 'Calculate front-end debt-to-income ratio (housing ratio) - target 28% or lower',
     category: 'Basic Calculators',
     icon: '🏡',
-    path: '/tools/frontend-dti-calculator'
+    path: '/tools/front-end-dti-calculator'
   },
   {
     name: 'Back-End DTI Calculator',
     description: 'Calculate back-end debt-to-income ratio (total debt ratio) - target 43% or lower',
     category: 'Basic Calculators',
     icon: '📊',
-    path: '/tools/backend-dti-calculator'
+    path: '/tools/back-end-dti-calculator'
   },
 
   // Investment Analysis (39 tools)
