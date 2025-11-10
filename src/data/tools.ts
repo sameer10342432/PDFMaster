@@ -226,7 +226,7 @@ export const allTools: Tool[] = [
     path: '/tools/backend-dti-calculator'
   },
 
-  // Investment Analysis (36 tools)
+  // Investment Analysis (39 tools)
   {
     name: 'BRRRR Calculator',
     description: 'Analyze Buy, Rehab, Rent, Refinance, and Repeat (BRRRR) deals',
@@ -479,6 +479,27 @@ export const allTools: Tool[] = [
     icon: '🔑',
     path: '/tools/lease-option-calculator'
   },
+  {
+    name: 'Raw Land Investment Calculator',
+    description: 'Calculate ROI, holding costs, and profit potential for raw land investments',
+    category: 'Investment Analysis',
+    icon: '🏞️',
+    path: '/tools/raw-land-investment-calculator'
+  },
+  {
+    name: 'Land Development Cost Calculator',
+    description: 'Calculate subdivision, infrastructure, and development costs for raw land projects',
+    category: 'Investment Analysis',
+    icon: '🚧',
+    path: '/tools/land-development-cost-calculator'
+  },
+  {
+    name: 'Opportunity Zone (OZ) Investment Calculator',
+    description: 'Calculate tax benefits from Qualified Opportunity Zone investments and deferrals',
+    category: 'Investment Analysis',
+    icon: '🎯',
+    path: '/tools/opportunity-zone-calculator'
+  },
 
   // Property Valuation (6 tools)
   {
@@ -524,7 +545,7 @@ export const allTools: Tool[] = [
     path: '/tools/property-comparison'
   },
 
-  // Rental & Income (19 tools)
+  // Rental & Income (20 tools)
   {
     name: 'Rental Price Estimator',
     description: 'Estimate optimal rental prices for your property',
@@ -658,6 +679,13 @@ export const allTools: Tool[] = [
     icon: '💼',
     path: '/tools/airbnb-arbitrage-calculator'
   },
+  {
+    name: 'Eviction Cost & Timeline Estimator',
+    description: 'Estimate eviction costs, legal fees, and timeline for tenant removal by state',
+    category: 'Rental & Income',
+    icon: '⚖️',
+    path: '/tools/eviction-cost-calculator'
+  },
 
   // Market Analysis (6 tools)
   {
@@ -703,7 +731,7 @@ export const allTools: Tool[] = [
     path: '/tools/zoning-compliance-checker'
   },
 
-  // Financial Planning (10 tools)
+  // Financial Planning (13 tools)
   {
     name: 'Closing Costs Calculator',
     description: 'Calculate all closing costs for property purchases',
@@ -823,6 +851,27 @@ export const allTools: Tool[] = [
     icon: '⚖️',
     path: '/tools/heloc-vs-cashout-refinance-calculator'
   },
+  {
+    name: 'Homestead Exemption Calculator',
+    description: 'Calculate property tax savings from homestead exemptions across different states',
+    category: 'Financial Planning',
+    icon: '🏠',
+    path: '/tools/homestead-exemption-calculator'
+  },
+  {
+    name: 'MACRS Depreciation Calculator',
+    description: 'Calculate Modified Accelerated Cost Recovery System depreciation for rental property',
+    category: 'Financial Planning',
+    icon: '📉',
+    path: '/tools/macrs-depreciation-calculator'
+  },
+  {
+    name: 'Property Tax Appeal Analyzer',
+    description: 'Determine if appealing your property tax assessment will save you money',
+    category: 'Financial Planning',
+    icon: '⚖️',
+    path: '/tools/property-tax-appeal-analyzer'
+  },
 
   // Risk Assessment (2 tools)
   {
@@ -840,7 +889,7 @@ export const allTools: Tool[] = [
     path: '/tools/renovation-cost-estimator'
   },
 
-  // Advanced Analytics (3 tools)
+  // Advanced Analytics (5 tools)
   {
     name: 'Property Investment Metrics Dashboard',
     description: 'Comprehensive dashboard for investment property metrics',
@@ -862,6 +911,20 @@ export const allTools: Tool[] = [
     icon: '⚖️',
     path: '/tools/investment-property-comparison-tool'
   },
+  {
+    name: 'New Construction Budget Calculator',
+    description: 'Estimate total construction costs including materials, labor, permits, and contingency',
+    category: 'Advanced Analytics',
+    icon: '🏗️',
+    path: '/tools/new-construction-budget-calculator'
+  },
+  {
+    name: 'Cost to Build a House Estimator',
+    description: 'Estimate home construction costs by quality level, size, and regional factors',
+    category: 'Advanced Analytics',
+    icon: '🏡',
+    path: '/tools/cost-to-build-house-estimator'
+  },
 
   // Additional Tools (2 tools)
   {
@@ -879,7 +942,7 @@ export const allTools: Tool[] = [
     path: '/tools/home-inspection-checklist'
   },
 
-  // Seller Tools (10 tools)
+  // Seller Tools (11 tools)
   {
     name: 'Net Proceeds from Home Sale Calculator',
     description: 'Calculate your net proceeds from selling your home after all costs, commissions, and fees',
@@ -949,6 +1012,13 @@ export const allTools: Tool[] = [
     category: 'Seller Tools',
     icon: '🤝',
     path: '/tools/real-estate-agent-commission-split-calculator'
+  },
+  {
+    name: 'State-Specific Transfer Tax Calculator',
+    description: 'Calculate real estate transfer taxes and recording fees by state',
+    category: 'Seller Tools',
+    icon: '📜',
+    path: '/tools/transfer-tax-calculator'
   }
 ];
 

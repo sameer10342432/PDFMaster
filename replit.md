@@ -1,6 +1,6 @@
 # Overview
 
-Property Tools is a comprehensive Next.js web application that provides real estate professionals, investors, and homebuyers with a suite of interactive calculators and educational content. The platform offers **112 professional tools and calculators** covering mortgage analysis, investment property evaluation, tax calculations, seller-focused tools, and various real estate investment strategies. Built with modern web technologies, it features a robust admin panel for content management, centralized tools data system, client-side calculation storage, and enhanced user experiences through scenario comparison, export capabilities, and smart insights.
+Property Tools is a comprehensive Next.js web application that provides real estate professionals, investors, and homebuyers with a suite of interactive calculators and educational content. The platform offers **122 professional tools and calculators** covering mortgage analysis, investment property evaluation, tax calculations, seller-focused tools, land development, opportunity zones, and various real estate investment strategies. Built with modern web technologies, it features a robust admin panel for content management, centralized tools data system, client-side calculation storage, and enhanced user experiences through scenario comparison, export capabilities, and smart insights.
 
 # User Preferences
 
@@ -73,10 +73,11 @@ Preferred communication style: Simple, everyday language.
 - View counting and publish date tracking
 
 **Calculator Content**: Centralized tools data system
-- **Centralized tools data** in `src/data/tools.ts` - single source of truth for all 112 tools
+- **Centralized tools data** in `src/data/tools.ts` - single source of truth for all 122 tools
 - Complete tool interface with name, description, category, icon, and path
 - Helper functions: `getToolsByCategory()`, `getCategoryCount()`, `getTotalToolsCount()`
-- Organized into 10 categories: Basic Calculators (8), Investment Analysis (26), Property Valuation (6), Rental & Income (9), Market Analysis (6), Financial Planning (10), Risk Assessment (2), Advanced Analytics (3), Additional Tools (2), **Seller Tools (10)**
+- Organized into 10 categories: Basic Calculators (27), Investment Analysis (39), Property Valuation (6), Rental & Income (20), Market Analysis (6), Financial Planning (13), Risk Assessment (2), Advanced Analytics (5), Additional Tools (2), **Seller Tools (11)**
+- Latest additions (November 10, 2025): Raw Land Investment Calculator, New Construction Budget Calculator, Cost to Build House Estimator, Land Development Cost Calculator, Homestead Exemption Calculator, MACRS Depreciation Calculator, Property Tax Appeal Analyzer, Transfer Tax Calculator, Opportunity Zone Investment Calculator, Eviction Cost & Timeline Estimator
 - All tools verified against actual page implementations - no 404 errors
 - Calculator definitions in `src/content/tools/` directory
 - Each calculator exports a content object with title, description, icon, category, slug, article, and calculation logic
@@ -88,7 +89,7 @@ Preferred communication style: Simple, everyday language.
 - Modular calculator architecture with shared components
 - Generic `Calculator` component accepts inputs, results schema, and calculation function
 - Enhanced calculator wrapper adds scenario management, export, share, and insights
-- **112 professional tools and calculators** including mortgage, investment analysis, ROI, tax calculations, property valuation, rental income, market analysis, seller tools, and more
+- **122 professional tools and calculators** including mortgage, investment analysis, ROI, tax calculations, property valuation, rental income, market analysis, seller tools, land development, opportunity zones, MACRS depreciation, and more
 - What-if analysis and sensitivity testing
 - Real-time calculation updates on input change
 - **Centralized tools data** ensures consistency across homepage and tools page
