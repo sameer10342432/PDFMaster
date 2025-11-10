@@ -203,8 +203,8 @@ Preferred communication style: Simple, everyday language.
 - No custom server configuration required
 
 ### Replit Configuration
-- **Workflow**: `Next.js Dev Server` workflow runs `npm run dev` on port 5000 with webview output
-- **Next.js Config**: `allowedDevOrigins: ["https://*.replit.dev"]` configured for Replit iframe compatibility (protocol required)
+- **Workflow**: `dev` workflow runs `npm run dev` on port 5000 with webview output
+- **Next.js Config**: `allowedDevOrigins: ["https://*.replit.dev", "http://127.0.0.1:5000"]` configured for Replit iframe compatibility
 - **Database**: PostgreSQL database created and schema synced with `npm run db:push`
 - **Deployment Target**: Autoscale (stateless web application)
 - **Environment Variables**: DATABASE_URL (configured), SESSION_SECRET (configured)
@@ -212,8 +212,9 @@ Preferred communication style: Simple, everyday language.
 - **Status**: ✅ Fully operational - app renders correctly and runs without errors
 
 ### Migration Notes
-- Fixed cross-origin asset loading by updating `allowedDevOrigins` to include protocol (`https://`)
-- All dependencies installed successfully
-- Database schema pushed without data loss
+- Fixed cross-origin asset loading by updating `allowedDevOrigins` to include both `https://*.replit.dev` and `http://127.0.0.1:5000`
+- All dependencies installed successfully via npm
+- Database schema pushed successfully without data loss
 - No security vulnerabilities introduced during migration
+- Workflow configured and running without errors
 - Ready for production deployment when needed
