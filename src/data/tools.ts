@@ -226,7 +226,7 @@ export const allTools: Tool[] = [
     path: '/tools/backend-dti-calculator'
   },
 
-  // Investment Analysis (26 tools)
+  // Investment Analysis (36 tools)
   {
     name: 'BRRRR Calculator',
     description: 'Analyze Buy, Rehab, Rent, Refinance, and Repeat (BRRRR) deals',
@@ -408,6 +408,76 @@ export const allTools: Tool[] = [
     category: 'Investment Analysis',
     icon: '🏠',
     path: '/tools/house-flip-analyzer'
+  },
+  {
+    name: 'Airbnb Host Fee Calculator',
+    description: 'Calculate Airbnb host service fees, guest fees, and your actual net income after all platform charges',
+    category: 'Investment Analysis',
+    icon: '🏡',
+    path: '/tools/airbnb-host-fee-calculator'
+  },
+  {
+    name: 'Multi-Family Property Calculator (5+ Units)',
+    description: 'Analyze multi-family apartment buildings with 5+ units including NOI, cap rate, cash flow, and ROI calculations',
+    category: 'Investment Analysis',
+    icon: '🏢',
+    path: '/tools/multi-family-property-calculator'
+  },
+  {
+    name: 'Commercial Property ROI Calculator',
+    description: 'Calculate return on investment for commercial properties including office buildings, retail centers, and industrial warehouses',
+    category: 'Investment Analysis',
+    icon: '🏬',
+    path: '/tools/commercial-property-roi-calculator'
+  },
+  {
+    name: 'Self-Storage Facility ROI Calculator',
+    description: 'Calculate ROI for self-storage facilities including occupancy rates, rental income per unit, and operating expenses',
+    category: 'Investment Analysis',
+    icon: '🏪',
+    path: '/tools/self-storage-facility-roi-calculator'
+  },
+  {
+    name: 'Mobile Home Park Investment Calculator',
+    description: 'Analyze mobile home park investments including lot rent, occupancy rates, infrastructure costs, and NOI calculations',
+    category: 'Investment Analysis',
+    icon: '🏕️',
+    path: '/tools/mobile-home-park-investment-calculator'
+  },
+  {
+    name: 'ADU ROI Calculator',
+    description: 'Calculate return on investment for building an ADU including construction costs, rental income, and property value increase',
+    category: 'Investment Analysis',
+    icon: '🏘️',
+    path: '/tools/adu-roi-calculator'
+  },
+  {
+    name: 'Cost to Build ADU Estimator',
+    description: 'Estimate total costs to build an ADU including design, permits, materials, labor, and site work based on size and type',
+    category: 'Investment Analysis',
+    icon: '💰',
+    path: '/tools/cost-to-build-adu-estimator'
+  },
+  {
+    name: 'Seller Financing Calculator',
+    description: 'Calculate seller financing payments, interest, and cash flow for both buyers and sellers in owner-financed real estate deals',
+    category: 'Investment Analysis',
+    icon: '🤝',
+    path: '/tools/seller-financing-calculator'
+  },
+  {
+    name: '"Subject-To" Deal Analyzer',
+    description: 'Analyze subject-to real estate deals where you acquire property while leaving existing mortgage in place',
+    category: 'Investment Analysis',
+    icon: '📝',
+    path: '/tools/subject-to-deal-analyzer'
+  },
+  {
+    name: 'Lease-Option (Rent-to-Own) Calculator',
+    description: 'Calculate lease-option (rent-to-own) deals including option fees, rent credits, purchase price, and cash flow',
+    category: 'Investment Analysis',
+    icon: '🔑',
+    path: '/tools/lease-option-calculator'
   },
 
   // Property Valuation (6 tools)
