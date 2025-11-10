@@ -151,7 +151,7 @@ export const HOME_APPRAISAL_VALUE_CALCULATOR_CONTENT: CalculatorContent = {
       { label: "Average Price Per Square Foot", isCurrency: true },
       { label: "Estimated Home Value (Comps Method)", isCurrency: true },
       { label: "Condition-Adjusted Value", isCurrency: true },
-      { label: "Estimated Value Range", isString: true },
+      { label: "Estimated Value Range", isCurrency: false },
     ],
     calculate: (data: any) => {
       const homeSquareFeet = Number(data.homeSquareFeet) || 0;

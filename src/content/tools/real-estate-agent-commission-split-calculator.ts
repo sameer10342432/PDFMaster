@@ -163,7 +163,7 @@ export const REAL_ESTATE_AGENT_COMMISSION_SPLIT_CALCULATOR_CONTENT: CalculatorCo
       { label: "Agent's Final Share (After All Splits)", isCurrency: true },
       { label: "Total Deductions", isCurrency: true },
       { label: "Net Agent Earnings", isCurrency: true },
-      { label: "Effective Commission Rate", isPercentage: true },
+      { label: "Effective Commission Rate", isCurrency: false },
     ],
     calculate: (data: any) => {
       const salePrice = Number(data.salePrice) || 0;

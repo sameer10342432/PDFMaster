@@ -105,10 +105,10 @@ export const BEST_TIME_TO_SELL_ANALYZER_CONTENT: CalculatorContent = {
       },
     ],
     results: [
-      { label: "Market Condition", isString: true },
-      { label: "Seasonal Factor", isString: true },
-      { label: "Timing Score", isNumber: true },
-      { label: "Recommendation", isString: true },
+      { label: "Market Condition", isCurrency: false },
+      { label: "Seasonal Factor", isCurrency: false },
+      { label: "Timing Score", isCurrency: false },
+      { label: "Recommendation", isCurrency: false },
     ],
     calculate: (data: any) => {
       const currentHomeValue = Number(data.currentHomeValue) || 0;

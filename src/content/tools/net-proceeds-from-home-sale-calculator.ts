@@ -81,7 +81,7 @@ export const NET_PROCEEDS_FROM_HOME_SALE_CALCULATOR_CONTENT: CalculatorContent =
       { label: "Total Commission", isCurrency: true },
       { label: "Total Costs and Fees", isCurrency: true },
       { label: "Net Proceeds", isCurrency: true },
-      { label: "Return on Investment", isPercentage: true },
+      { label: "Return on Investment", isCurrency: false },
     ],
     calculate: (data: any) => {
       const salePrice = Number(data.salePrice) || 0;

@@ -175,7 +175,7 @@ export const SELLER_CLOSING_COST_ESTIMATOR_CONTENT: CalculatorContent = {
       { label: "Transfer Tax", isCurrency: true },
       { label: "Other Closing Costs", isCurrency: true },
       { label: "Total Seller Closing Costs", isCurrency: true },
-      { label: "Closing Costs as % of Sale Price", isPercentage: true },
+      { label: "Closing Costs as % of Sale Price", isCurrency: false },
       { label: "Estimated Net Proceeds", isCurrency: true },
     ],
     calculate: (data: any) => {

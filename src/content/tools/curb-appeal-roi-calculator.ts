@@ -106,8 +106,8 @@ export const CURB_APPEAL_ROI_CALCULATOR_CONTENT: CalculatorContent = {
       { label: "Total Investment in Curb Appeal", isCurrency: true },
       { label: "Increase in Home Value", isCurrency: true },
       { label: "Net Gain from Improvements", isCurrency: true },
-      { label: "Curb Appeal ROI", isPercentage: true },
-      { label: "Value Recovered", isPercentage: true },
+      { label: "Curb Appeal ROI", isCurrency: false },
+      { label: "Value Recovered", isCurrency: false },
     ],
     calculate: (data: any) => {
       const homeValueBefore = Number(data.homeValueBefore) || 0;

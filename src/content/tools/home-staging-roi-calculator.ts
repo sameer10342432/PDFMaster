@@ -87,10 +87,10 @@ export const HOME_STAGING_ROI_CALCULATOR_CONTENT: CalculatorContent = {
     ],
     results: [
       { label: "Additional Sale Price from Staging", isCurrency: true },
-      { label: "Time Saved on Market (Days)", isNumber: true },
+      { label: "Time Saved on Market (Days)", isCurrency: false },
       { label: "Carrying Costs Saved", isCurrency: true },
       { label: "Net Benefit from Staging", isCurrency: true },
-      { label: "Staging ROI", isPercentage: true },
+      { label: "Staging ROI", isCurrency: false },
     ],
     calculate: (data: any) => {
       const originalListPrice = Number(data.originalListPrice) || 0;
