@@ -197,6 +197,34 @@ export const allTools: Tool[] = [
     icon: '🏦',
     path: '/tools/dti-calculator-fha-loans'
   },
+  {
+    name: 'DTI Calculator for VA Loans',
+    description: 'Calculate debt-to-income ratio for VA loans with flexible 41% DTI allowance',
+    category: 'Basic Calculators',
+    icon: '🎖️',
+    path: '/tools/dti-calculator-va-loans'
+  },
+  {
+    name: 'DTI Calculator for Conventional Loans',
+    description: 'Calculate DTI ratio for conventional loans with 43% standard limit',
+    category: 'Basic Calculators',
+    icon: '🏦',
+    path: '/tools/dti-calculator-conventional-loans'
+  },
+  {
+    name: 'Front-End DTI Calculator',
+    description: 'Calculate front-end debt-to-income ratio (housing ratio) - target 28% or lower',
+    category: 'Basic Calculators',
+    icon: '🏡',
+    path: '/tools/frontend-dti-calculator'
+  },
+  {
+    name: 'Back-End DTI Calculator',
+    description: 'Calculate back-end debt-to-income ratio (total debt ratio) - target 43% or lower',
+    category: 'Basic Calculators',
+    icon: '📊',
+    path: '/tools/backend-dti-calculator'
+  },
 
   // Investment Analysis (26 tools)
   {
@@ -612,6 +640,48 @@ export const allTools: Tool[] = [
     category: 'Financial Planning',
     icon: '📈',
     path: '/tools/credit-score-improvement-simulator'
+  },
+  {
+    name: 'Rapid Rescore ROI Calculator',
+    description: 'Calculate ROI on rapid credit rescoring - see if boosting score saves money',
+    category: 'Financial Planning',
+    icon: '📈',
+    path: '/tools/rapid-rescore-roi-calculator'
+  },
+  {
+    name: 'Points vs. No-Points Mortgage Calculator',
+    description: 'Compare paying mortgage points upfront vs taking zero-points loan',
+    category: 'Financial Planning',
+    icon: '⚖️',
+    path: '/tools/points-vs-no-points-calculator'
+  },
+  {
+    name: 'Mortgage Discount Points Calculator',
+    description: 'Calculate mortgage discount points cost, rate reduction, and breakeven period',
+    category: 'Financial Planning',
+    icon: '💰',
+    path: '/tools/mortgage-discount-points-calculator'
+  },
+  {
+    name: 'Rate-and-Term Refinance Calculator',
+    description: 'Calculate refinance savings, breakeven period, and monthly payment reduction',
+    category: 'Financial Planning',
+    icon: '🔄',
+    path: '/tools/rate-and-term-refinance-calculator'
+  },
+  {
+    name: 'Cash-Out Refinance Calculator',
+    description: 'Calculate how much cash you can extract from home equity and new payment',
+    category: 'Financial Planning',
+    icon: '💵',
+    path: '/tools/cash-out-refinance-calculator'
+  },
+  {
+    name: 'HELOC vs. Cash-Out Refinance Calculator',
+    description: 'Compare HELOC and cash-out refinance side-by-side to determine best option',
+    category: 'Financial Planning',
+    icon: '⚖️',
+    path: '/tools/heloc-vs-cashout-refinance-calculator'
   },
 
   // Risk Assessment (2 tools)
