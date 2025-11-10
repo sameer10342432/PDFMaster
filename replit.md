@@ -188,7 +188,7 @@ Preferred communication style: Simple, everyday language.
 
 ## Build & Deployment
 
-- **Migrated from Vercel to Replit** (November 8, 2025)
+- **Migrated from Vercel to Replit** (November 10, 2025)
 - Configured for Replit autoscale deployment
 - Development server runs on port 5000 with host 0.0.0.0 for Replit environment
 - Production deployment uses `npm run build` and `npm run start`
@@ -198,9 +198,10 @@ Preferred communication style: Simple, everyday language.
 - No custom server configuration required
 
 ### Replit Configuration
-- **Workflow**: `dev-server` workflow runs `npm run dev` on port 5000 with webview output
+- **Workflow**: `dev` workflow runs `npm run dev` on port 5000 with webview output
 - **Next.js Config**: `allowedDevOrigins: ["*.replit.dev"]` configured for Replit iframe compatibility
-- **Database**: PostgreSQL schema synced with `npm run db:push`
+- **Database**: PostgreSQL schema synced with `npm run db:push`, admin user seeded
 - **Deployment Target**: Autoscale (stateless web application)
 - **Environment Variables**: DATABASE_URL (configured), SESSION_SECRET (configured)
 - **Host Binding**: 0.0.0.0 for network access in Replit environment
+- **Status**: ✅ Fully operational - running without errors
