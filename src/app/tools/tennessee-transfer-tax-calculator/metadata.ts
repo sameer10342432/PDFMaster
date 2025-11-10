@@ -1,0 +1,70 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Tennessee Transfer Tax Calculator - 0.37% Real Property Tax | Property Tools',
+  description: 'Calculate Tennessee real estate transfer tax at $0.37 per $100 (0.37%). Understand who pays, exemptions, affidavit requirements, and state comparisons.',
+  keywords: [
+    'tennessee transfer tax',
+    'tennessee real estate transfer tax',
+    'tennessee property transfer tax',
+    'tennessee closing costs',
+    'tennessee deed recording',
+    'nashville transfer tax',
+    'memphis transfer tax',
+    'knoxville transfer tax',
+    'tennessee buyer closing costs',
+    'tennessee seller closing costs',
+    'tennessee recording fees',
+    'tennessee real property transfer declaration',
+    'tennessee affidavit',
+    'tennessee real estate fees',
+    'tn transfer tax',
+    'davidson county transfer tax',
+  ],
+  authors: [{ name: 'Property Tools' }],
+  creator: 'Property Tools',
+  publisher: 'Property Tools',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://propertytools.com'),
+  alternates: {
+    canonical: '/tools/tennessee-transfer-tax-calculator',
+  },
+  openGraph: {
+    title: 'Tennessee Transfer Tax Calculator - 0.37% Real Property Tax',
+    description: 'Calculate Tennessee real estate transfer tax at 0.37%. Complete guide to who pays, exemptions, and transfer costs in TN.',
+    url: '/tools/tennessee-transfer-tax-calculator',
+    siteName: 'Property Tools',
+    images: [
+      {
+        url: '/og-tennessee-transfer-tax.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Tennessee Transfer Tax Calculator - Property Tools',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tennessee Transfer Tax Calculator - 0.37% Real Property Tax',
+    description: 'Calculate Tennessee transfer tax at 0.37%. Includes who pays, exemptions, and complete cost breakdown.',
+    images: ['/og-tennessee-transfer-tax.jpg'],
+    creator: '@propertytools',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};

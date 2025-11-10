@@ -1,0 +1,70 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Virginia Transfer Tax Calculator - Recordation & Grantor Tax | Property Tools',
+  description: 'Calculate Virginia real estate transfer costs including state recordation tax, grantor tax, and Northern Virginia regional fees. Includes buyer and seller cost breakdown, local taxes, and recording fees.',
+  keywords: [
+    'virginia transfer tax',
+    'virginia real estate transfer tax',
+    'virginia recordation tax',
+    'virginia grantor tax',
+    'northern virginia transfer tax',
+    'virginia closing costs',
+    'virginia deed recording',
+    'virginia property transfer costs',
+    'nvta grantor tax',
+    'wmata capital fee',
+    'virginia real estate fees',
+    'virginia seller closing costs',
+    'virginia buyer closing costs',
+    'virginia state transfer tax',
+    'fairfax county transfer tax',
+    'arlington transfer tax',
+  ],
+  authors: [{ name: 'Property Tools' }],
+  creator: 'Property Tools',
+  publisher: 'Property Tools',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://propertytools.com'),
+  alternates: {
+    canonical: '/tools/virginia-transfer-tax-calculator',
+  },
+  openGraph: {
+    title: 'Virginia Transfer Tax Calculator - Recordation & Grantor Tax',
+    description: 'Calculate Virginia real estate transfer costs including state recordation tax, grantor tax, and Northern Virginia regional fees. Complete cost breakdown for buyers and sellers.',
+    url: '/tools/virginia-transfer-tax-calculator',
+    siteName: 'Property Tools',
+    images: [
+      {
+        url: '/og-virginia-transfer-tax.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Virginia Transfer Tax Calculator - Property Tools',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Virginia Transfer Tax Calculator - Recordation & Grantor Tax',
+    description: 'Calculate Virginia real estate transfer costs including Northern Virginia regional taxes and complete buyer/seller breakdown.',
+    images: ['/og-virginia-transfer-tax.jpg'],
+    creator: '@propertytools',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};

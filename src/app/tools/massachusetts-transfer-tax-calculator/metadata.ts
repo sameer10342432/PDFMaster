@@ -1,0 +1,70 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Massachusetts Transfer Tax Calculator - Deed Excise Tax | Property Tools',
+  description: 'Calculate Massachusetts real estate deed excise tax with standard $2.28 per $500 rate and Barnstable County $2.85 per $500 rate. Includes exemptions, who pays, and state comparisons.',
+  keywords: [
+    'massachusetts transfer tax',
+    'massachusetts deed excise tax',
+    'massachusetts real estate transfer tax',
+    'barnstable county transfer tax',
+    'cape cod transfer tax',
+    'massachusetts closing costs',
+    'massachusetts deed recording',
+    'massachusetts property transfer costs',
+    'ma transfer tax calculator',
+    'massachusetts seller closing costs',
+    'massachusetts recording fees',
+    'boston transfer tax',
+    'worcester transfer tax',
+    'massachusetts real estate fees',
+    'cape cod deed excise tax',
+    'massachusetts property tax',
+  ],
+  authors: [{ name: 'Property Tools' }],
+  creator: 'Property Tools',
+  publisher: 'Property Tools',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://propertytools.com'),
+  alternates: {
+    canonical: '/tools/massachusetts-transfer-tax-calculator',
+  },
+  openGraph: {
+    title: 'Massachusetts Transfer Tax Calculator - Deed Excise Tax',
+    description: 'Calculate Massachusetts real estate deed excise tax with standard and Barnstable County rates. Complete guide to transfer costs, exemptions, and who pays.',
+    url: '/tools/massachusetts-transfer-tax-calculator',
+    siteName: 'Property Tools',
+    images: [
+      {
+        url: '/og-massachusetts-transfer-tax.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Massachusetts Transfer Tax Calculator - Property Tools',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Massachusetts Transfer Tax Calculator - Deed Excise Tax',
+    description: 'Calculate Massachusetts deed excise tax including Barnstable County rates and complete breakdown of transfer costs.',
+    images: ['/og-massachusetts-transfer-tax.jpg'],
+    creator: '@propertytools',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};

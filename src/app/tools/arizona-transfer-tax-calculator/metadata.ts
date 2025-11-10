@@ -1,0 +1,70 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Arizona Transfer Tax Calculator - $0 Transfer Tax State | Property Tools',
+  description: 'Arizona has NO state transfer tax due to Proposition 100. Calculate your minimal $2 recording fee and see massive savings compared to other states. Constitutional prohibition on transfer taxes.',
+  keywords: [
+    'arizona transfer tax',
+    'arizona real estate transfer tax',
+    'arizona property transfer costs',
+    'arizona closing costs',
+    'arizona deed recording',
+    'proposition 100 arizona',
+    'arizona no transfer tax',
+    'phoenix transfer tax',
+    'tucson transfer tax',
+    'scottsdale transfer tax',
+    'arizona seller closing costs',
+    'arizona buyer closing costs',
+    'arizona recording fees',
+    'arizona affidavit of property value',
+    'arizona real estate fees',
+    'zero transfer tax arizona',
+  ],
+  authors: [{ name: 'Property Tools' }],
+  creator: 'Property Tools',
+  publisher: 'Property Tools',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://propertytools.com'),
+  alternates: {
+    canonical: '/tools/arizona-transfer-tax-calculator',
+  },
+  openGraph: {
+    title: 'Arizona Transfer Tax Calculator - $0 Transfer Tax State',
+    description: 'Arizona has NO transfer tax thanks to Proposition 100. Calculate your $2 recording fee and see how much you save vs other states.',
+    url: '/tools/arizona-transfer-tax-calculator',
+    siteName: 'Property Tools',
+    images: [
+      {
+        url: '/og-arizona-transfer-tax.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Arizona Transfer Tax Calculator - Property Tools',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Arizona Transfer Tax Calculator - $0 Transfer Tax State',
+    description: 'Arizona has $0 transfer tax due to constitutional Proposition 100. See your massive savings vs other states.',
+    images: ['/og-arizona-transfer-tax.jpg'],
+    creator: '@propertytools',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
