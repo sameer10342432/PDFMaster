@@ -1093,6 +1093,82 @@ export const allTools: Tool[] = [
     category: 'Market Analysis',
     icon: '📍',
     path: '/tools/proximity-to-amenities-calculator'
+  },
+
+  // Market Analysis - Additional Location Tools (3 tools)
+  {
+    name: 'Local Property Tax Rate Finder (by County)',
+    description: 'Find and compare local property tax rates by county across the United States. Research county, city, and school district tax rates before buying property',
+    category: 'Market Analysis',
+    icon: '🗺️',
+    path: '/tools/local-property-tax-finder'
+  },
+  {
+    name: 'Natural Disaster Risk Score (by Address)',
+    description: 'Assess comprehensive natural disaster risks for any property including flood zones, earthquake risk, wildfire hazard, hurricane exposure, and tornado probability',
+    category: 'Market Analysis',
+    icon: '⚠️',
+    path: '/tools/natural-disaster-risk-score'
+  },
+  {
+    name: 'Environmental Hazard Checker',
+    description: 'Check environmental hazards near properties including EPA Superfund sites, soil contamination, air quality issues, and toxic waste locations',
+    category: 'Market Analysis',
+    icon: '🌿',
+    path: '/tools/environmental-hazard-checker'
+  },
+
+  // Additional Tools - Closing Costs & Fees (4 tools)
+  {
+    name: 'Title Insurance Cost Estimator',
+    description: 'Estimate title insurance costs for home purchase including owner\'s policy, lender\'s policy, and optional endorsements based on purchase price and location',
+    category: 'Additional Tools',
+    icon: '📜',
+    path: '/tools/title-insurance-cost-estimator'
+  },
+  {
+    name: 'Home Appraisal Fee Estimator',
+    description: 'Estimate home appraisal costs based on property type, size, location, and loan program (FHA, VA, conventional, jumbo)',
+    category: 'Additional Tools',
+    icon: '🏠',
+    path: '/tools/home-appraisal-fee-estimator'
+  },
+  {
+    name: 'Survey Cost Estimator',
+    description: 'Estimate property survey costs based on lot size, terrain, survey type (boundary, ALTA, topographic), and access difficulty',
+    category: 'Additional Tools',
+    icon: '📐',
+    path: '/tools/survey-cost-estimator'
+  },
+  {
+    name: 'Legal Fee Estimator (Real Estate)',
+    description: 'Estimate real estate attorney fees for property transactions including purchase, sale, refinance, contract review, and title work',
+    category: 'Additional Tools',
+    icon: '⚖️',
+    path: '/tools/legal-fee-estimator'
+  },
+
+  // Additional Tools - AI-Powered Tools (3 tools)
+  {
+    name: 'AI Property Listing Description Generator',
+    description: 'Generate professional, compelling property listing descriptions with AI assistance. Create engaging MLS listings that highlight features and attract buyers',
+    category: 'Additional Tools',
+    icon: '✨',
+    path: '/tools/ai-property-listing-generator'
+  },
+  {
+    name: 'AI Real Estate Blog Post Idea Generator',
+    description: 'Generate creative real estate blog post ideas and content topics tailored to your market, audience, and expertise using AI assistance',
+    category: 'Additional Tools',
+    icon: '💡',
+    path: '/tools/ai-blog-post-idea-generator'
+  },
+  {
+    name: 'AI Renovation Idea Generator (by Photo)',
+    description: 'Get AI-powered renovation ideas and design suggestions based on room type, style preferences, and budget constraints',
+    category: 'Additional Tools',
+    icon: '🎨',
+    path: '/tools/ai-renovation-idea-generator'
   }
 ];
 

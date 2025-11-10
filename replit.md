@@ -1,6 +1,6 @@
 # Overview
 
-Property Tools is a comprehensive Next.js web application that provides real estate professionals, investors, and homebuyers with a suite of interactive calculators and educational content. The platform offers **122 professional tools and calculators** covering mortgage analysis, investment property evaluation, tax calculations, seller-focused tools, land development, opportunity zones, and various real estate investment strategies. Built with modern web technologies, it features a robust admin panel for content management, centralized tools data system, client-side calculation storage, and enhanced user experiences through scenario comparison, export capabilities, and smart insights.
+Property Tools is a comprehensive Next.js web application that provides real estate professionals, investors, and homebuyers with a suite of interactive calculators and educational content. The platform offers **162 professional tools and calculators** covering mortgage analysis, investment property evaluation, tax calculations, seller-focused tools, land development, opportunity zones, market analysis (location intelligence, disaster risks, environmental hazards), closing cost estimators, and AI-powered content generation tools. Built with modern web technologies, it features a robust admin panel for content management, centralized tools data system, client-side calculation storage, and enhanced user experiences through scenario comparison, export capabilities, and smart insights.
 
 # User Preferences
 
@@ -73,11 +73,15 @@ Preferred communication style: Simple, everyday language.
 - View counting and publish date tracking
 
 **Calculator Content**: Centralized tools data system
-- **Centralized tools data** in `src/data/tools.ts` - single source of truth for all 132 tools
+- **Centralized tools data** in `src/data/tools.ts` - single source of truth for all 162 tools
 - Complete tool interface with name, description, category, icon, and path
 - Helper functions: `getToolsByCategory()`, `getCategoryCount()`, `getTotalToolsCount()`
-- Organized into 11 categories: Basic Calculators (27), Investment Analysis (39), Property Valuation (6), Rental & Income (20), Market Analysis (13), Financial Planning (13), Risk Assessment (2), Advanced Analytics (5), **Tax Strategy & Entity Planning (3)**, **Seller Tools (11)**, Additional Tools (2)
-- **Latest additions (November 10, 2025 - 2nd batch)**: 
+- Organized into 11 categories: Basic Calculators (31), Investment Analysis (39), Property Valuation (6), Rental & Income (20), Market Analysis (16), Financial Planning (13), Risk Assessment (2), Advanced Analytics (5), **Tax Strategy & Entity Planning (3)**, **Seller Tools (11)**, Additional Tools (9)
+- **Latest additions (November 10, 2025 - 3rd batch - 10 new tools)**:
+  - **Market Analysis**: Local Property Tax Rate Finder (by County), Natural Disaster Risk Score (by Address), Environmental Hazard Checker
+  - **Additional Tools - Closing Costs & Fees**: Title Insurance Cost Estimator, Home Appraisal Fee Estimator, Survey Cost Estimator, Legal Fee Estimator (Real Estate)
+  - **Additional Tools - AI-Powered**: AI Property Listing Description Generator, AI Real Estate Blog Post Idea Generator, AI Renovation Idea Generator (by Photo)
+- **Previous additions (November 10, 2025 - 2nd batch)**: 
   - **Tax Strategy & Entity Planning**: Real Estate Professional (REPs) Status Tax Benefit Calculator, Cost Segregation Benefit Calculator, LLC vs. Sole Proprietorship (Real Estate) Analyzer
   - **Market Analysis - Location Intelligence**: FEMA Flood Zone Checker (by Address), Crime Rate by Address Analyzer, School Rating by Address, Local Rent Control Law Finder (by City/State), Property History Analyzer (Sales/Price), US ZIP Code Demographics Analyzer, Proximity to Amenities Calculator
 - Previous additions (November 10, 2025 - 1st batch): Raw Land Investment Calculator, New Construction Budget Calculator, Cost to Build House Estimator, Land Development Cost Calculator, Homestead Exemption Calculator, MACRS Depreciation Calculator, Property Tax Appeal Analyzer, Transfer Tax Calculator, Opportunity Zone Investment Calculator, Eviction Cost & Timeline Estimator
