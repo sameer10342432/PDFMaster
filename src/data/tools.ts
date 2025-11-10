@@ -1090,6 +1090,48 @@ export const allTools: Tool[] = [
     icon: '🌊',
     path: '/tools/new-jersey-transfer-tax-calculator'
   },
+  {
+    name: 'California Transfer Tax Calculator',
+    description: 'Calculate California county and city transfer tax including San Francisco, Oakland, LA rates. Progressive rates up to 6% for luxury properties',
+    category: 'Seller Tools',
+    icon: '🏖️',
+    path: '/tools/california-transfer-tax-calculator'
+  },
+  {
+    name: 'Indiana Transfer Tax Calculator',
+    description: 'Calculate Indiana real estate costs. No state transfer tax - only county recording fees. Learn actual Indiana closing costs',
+    category: 'Seller Tools',
+    icon: '🏁',
+    path: '/tools/indiana-transfer-tax-calculator'
+  },
+  {
+    name: 'Missouri Transfer Tax Calculator',
+    description: 'Calculate Missouri real estate costs. No state transfer tax - only county recording fees for St. Louis, Kansas City, and all MO markets',
+    category: 'Seller Tools',
+    icon: '🎸',
+    path: '/tools/missouri-transfer-tax-calculator'
+  },
+  {
+    name: 'Maryland Transfer Tax Calculator',
+    description: 'Calculate Maryland state (0.5%) and county (1.5%) transfer tax plus recordation tax for Baltimore and all MD counties',
+    category: 'Seller Tools',
+    icon: '🦀',
+    path: '/tools/maryland-transfer-tax-calculator'
+  },
+  {
+    name: 'Wisconsin Transfer Tax Calculator',
+    description: 'Calculate Wisconsin state transfer fee (0.3%) for Milwaukee, Madison, and all WI counties',
+    category: 'Seller Tools',
+    icon: '🧀',
+    path: '/tools/wisconsin-transfer-tax-calculator'
+  },
+  {
+    name: 'Colorado Transfer Tax Calculator',
+    description: 'Calculate Colorado county transfer fees. No state tax but varies by city. Includes Denver, Boulder, Aspen, Vail rates',
+    category: 'Seller Tools',
+    icon: '⛰️',
+    path: '/tools/colorado-transfer-tax-calculator'
+  },
   
   // Tax Strategy & Entity Planning (3 tools)
   {
