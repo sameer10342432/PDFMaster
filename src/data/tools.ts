@@ -1715,6 +1715,76 @@ export const allTools: Tool[] = [
     category: 'Financial Planning',
     icon: '⭐',
     path: '/tools/texas-property-tax-calculator'
+  },
+  {
+    name: 'Preferred Equity vs. Common Equity Analyzer',
+    description: 'Compare preferred equity and common equity returns to determine the best investment structure for your real estate deal',
+    category: 'Investment Analysis',
+    icon: '📊',
+    path: '/tools/preferred-equity-vs-common-equity-analyzer'
+  },
+  {
+    name: 'Mezzanine Debt Calculator',
+    description: 'Calculate returns and analyze mezzanine debt financing for commercial real estate deals including interest rates, fees, and total costs',
+    category: 'Investment Analysis',
+    icon: '🏢',
+    path: '/tools/mezzanine-debt-calculator'
+  },
+  {
+    name: 'Real Estate Note Investing ROI Calculator',
+    description: 'Calculate returns on mortgage note investments including yield, cash flow, and total ROI for performing and non-performing notes',
+    category: 'Investment Analysis',
+    icon: '📝',
+    path: '/tools/real-estate-note-investing-roi-calculator'
+  },
+  {
+    name: 'Performing vs. Non-Performing Note Analyzer',
+    description: 'Compare returns between performing and non-performing mortgage notes to make informed investment decisions',
+    category: 'Investment Analysis',
+    icon: '⚖️',
+    path: '/tools/performing-vs-non-performing-note-analyzer'
+  },
+  {
+    name: 'Discounted Note (Mortgage) Calculator',
+    description: 'Calculate returns when purchasing mortgage notes at a discount, including yield, profit potential, and break-even analysis',
+    category: 'Investment Analysis',
+    icon: '💵',
+    path: '/tools/discounted-note-mortgage-calculator'
+  },
+  {
+    name: 'Seller Financing Amortization Schedule',
+    description: 'Create complete amortization schedules for seller-financed real estate deals including payment breakdowns and interest calculations',
+    category: 'Investment Analysis',
+    icon: '📅',
+    path: '/tools/seller-financing-amortization-schedule'
+  },
+  {
+    name: 'Wraparound Mortgage Profit Calculator',
+    description: 'Calculate profit potential from wraparound mortgages (All-Inclusive Trust Deeds) including interest rate spreads and cash flow analysis',
+    category: 'Investment Analysis',
+    icon: '🔄',
+    path: '/tools/wraparound-mortgage-profit-calculator'
+  },
+  {
+    name: 'Subject-To (Sub-To) Deal Cash Flow Analyzer',
+    description: 'Analyze cash flow and profitability of subject-to real estate deals where you take over existing mortgage payments',
+    category: 'Investment Analysis',
+    icon: '🏘️',
+    path: '/tools/subject-to-deal-cash-flow-analyzer'
+  },
+  {
+    name: 'Lease Option (Rent-to-Own) Investor ROI Calculator',
+    description: 'Calculate returns on lease option investments including option fees, monthly spreads, and total profit potential',
+    category: 'Investment Analysis',
+    icon: '🔑',
+    path: '/tools/lease-option-rent-to-own-investor-roi-calculator'
+  },
+  {
+    name: 'Master Lease Agreement (MLA) Calculator',
+    description: 'Calculate cash flow and profitability from master lease agreements including rent spreads, control benefits, and exit strategies',
+    category: 'Investment Analysis',
+    icon: '📋',
+    path: '/tools/master-lease-agreement-mla-calculator'
   }
 ];
 
