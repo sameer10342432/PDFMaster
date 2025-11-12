@@ -7,7 +7,7 @@ export interface Tool {
 }
 
 export const allTools: Tool[] = [
-  // Basic Calculators (42 tools)
+  // Basic Calculators (50 tools)
   {
     name: 'Mortgage Calculator',
     description: 'Calculate monthly mortgage payments, interest, and amortization schedules',
@@ -294,6 +294,62 @@ export const allTools: Tool[] = [
     category: 'Basic Calculators',
     icon: '💳',
     path: '/tools/seller-concessions-calculator-va'
+  },
+  {
+    name: '5/1 ARM vs. 30-Year Fixed Calculator',
+    description: 'Compare a 5/1 ARM with a 30-year fixed mortgage to find the best loan option',
+    category: 'Basic Calculators',
+    icon: '📊',
+    path: '/tools/5-1-arm-vs-30-year-fixed-calculator'
+  },
+  {
+    name: '7/1 ARM vs. 30-Year Fixed Calculator',
+    description: 'Compare a 7/1 ARM with a 30-year fixed mortgage over your ownership period',
+    category: 'Basic Calculators',
+    icon: '📈',
+    path: '/tools/7-1-arm-vs-30-year-fixed-calculator'
+  },
+  {
+    name: 'Interest-Only Mortgage Calculator',
+    description: 'Calculate interest-only mortgage payments and understand payment shock risks',
+    category: 'Basic Calculators',
+    icon: '💸',
+    path: '/tools/interest-only-mortgage-calculator'
+  },
+  {
+    name: 'Balloon Mortgage Calculator',
+    description: 'Calculate balloon mortgage payments and balloon payment amounts',
+    category: 'Basic Calculators',
+    icon: '🎈',
+    path: '/tools/balloon-mortgage-calculator'
+  },
+  {
+    name: 'Bridge Loan Calculator',
+    description: 'Calculate bridge loan costs and fees for temporary real estate financing',
+    category: 'Basic Calculators',
+    icon: '🌉',
+    path: '/tools/bridge-loan-calculator'
+  },
+  {
+    name: 'Bank Statement Loan Calculator',
+    description: 'Calculate mortgage qualification for self-employed using bank statements',
+    category: 'Basic Calculators',
+    icon: '📄',
+    path: '/tools/bank-statement-loan-calculator'
+  },
+  {
+    name: '1099 Earner Mortgage Qualifier',
+    description: 'Calculate mortgage qualification for 1099 contractors and freelancers',
+    category: 'Basic Calculators',
+    icon: '📋',
+    path: '/tools/1099-earner-mortgage-qualifier'
+  },
+  {
+    name: 'W-2 Earner Mortgage Qualifier',
+    description: 'Calculate mortgage qualification for W-2 employees with salary and bonuses',
+    category: 'Basic Calculators',
+    icon: '💼',
+    path: '/tools/w2-earner-mortgage-qualifier'
   },
 
   // Investment Analysis (39 tools)
