@@ -1001,6 +1001,76 @@ export const allTools: Tool[] = [
     icon: '📋',
     path: '/tools/move-in-move-out-inspection-checklist'
   },
+  {
+    name: 'Preventive Maintenance ROI Calculator',
+    description: 'Calculate ROI on preventive maintenance programs, compare costs vs emergency repairs, and optimize maintenance schedules for maximum savings',
+    category: 'Rental & Income',
+    icon: '🔧',
+    path: '/tools/preventive-maintenance-roi-calculator'
+  },
+  {
+    name: 'CapEx Reserve Calculator',
+    description: 'Calculate capital expenditure reserves for rental properties, plan for major repairs, and ensure adequate funding for property improvements',
+    category: 'Rental & Income',
+    icon: '💰',
+    path: '/tools/capex-reserve-calculator'
+  },
+  {
+    name: '5/10 Rule for Rental Property Maintenance',
+    description: 'Apply the 5/10 maintenance rule to budget property upkeep, estimate annual costs, and plan for repairs and replacements',
+    category: 'Rental & Income',
+    icon: '📐',
+    path: '/tools/5-10-rule-rental-maintenance'
+  },
+  {
+    name: 'Appliance Depreciation Calculator (for Landlords)',
+    description: 'Calculate appliance depreciation for rental properties, track useful life, plan replacements, and optimize tax deductions',
+    category: 'Rental & Income',
+    icon: '🏠',
+    path: '/tools/appliance-depreciation-calculator-landlords'
+  },
+  {
+    name: 'Tenant Buyout Calculator (Rent Stabilized)',
+    description: 'Calculate tenant buyout offers for rent-stabilized apartments, analyze costs vs benefits, and negotiate fair buyout agreements',
+    category: 'Rental & Income',
+    icon: '🤝',
+    path: '/tools/tenant-buyout-calculator-rent-stabilized'
+  },
+  {
+    name: 'Section 8 Housing Rent Calculator (FMR)',
+    description: 'Calculate Section 8 housing rent based on Fair Market Rent, determine payment standards, and optimize rental income for subsidized housing',
+    category: 'Rental & Income',
+    icon: '🏘️',
+    path: '/tools/section-8-housing-rent-calculator'
+  },
+  {
+    name: 'Fair Market Rent (FMR) Finder (by County)',
+    description: 'Find Fair Market Rent rates by county, compare HUD FMR data, and analyze rental pricing for Section 8 and market-rate properties',
+    category: 'Rental & Income',
+    icon: '🗺️',
+    path: '/tools/fair-market-rent-finder-by-county'
+  },
+  {
+    name: 'Rental Vacancy Rate Calculator',
+    description: 'Calculate rental property vacancy rates, analyze market conditions, and optimize pricing strategies to minimize vacant periods',
+    category: 'Rental & Income',
+    icon: '📊',
+    path: '/tools/rental-vacancy-rate-calculator'
+  },
+  {
+    name: 'Rental Unit Breakeven Occupancy Rate',
+    description: 'Calculate breakeven occupancy rate for rental properties, determine minimum occupancy needed for profitability, and optimize pricing',
+    category: 'Rental & Income',
+    icon: '⚖️',
+    path: '/tools/rental-unit-breakeven-occupancy-rate'
+  },
+  {
+    name: 'Lease Renewal Increase Calculator',
+    description: 'Calculate optimal lease renewal rent increases, analyze market rates, tenant retention costs, and maximize rental income while minimizing turnover',
+    category: 'Rental & Income',
+    icon: '📈',
+    path: '/tools/lease-renewal-increase-calculator'
+  },
 
   // Market Analysis (6 tools)
   {
