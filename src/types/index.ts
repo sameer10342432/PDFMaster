@@ -15,6 +15,11 @@ export interface CalculatorContent {
   icon: string;
   category: string;
   slug: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  metaKeywords?: string;
+  ogTitle?: string;
+  ogDescription?: string;
   article: {
     title: string;
     content: string;
