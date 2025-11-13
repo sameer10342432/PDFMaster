@@ -766,8 +766,15 @@ export const allTools: Tool[] = [
     icon: '🎓',
     path: '/tools/student-housing-investment-calculator'
   },
+  {
+    name: 'Ground Lease Calculator',
+    description: 'Calculate ground lease payments, land value analysis, and long-term investment returns for ground lease transactions',
+    category: 'Investment Analysis',
+    icon: '🏗️',
+    path: '/tools/ground-lease-calculator'
+  },
 
-  // Property Valuation (6 tools)
+  // Property Valuation (7 tools)
   {
     name: 'Property Valuation',
     description: 'Get accurate property valuations using multiple methods',
@@ -810,8 +817,15 @@ export const allTools: Tool[] = [
     icon: '⚖️',
     path: '/tools/property-comparison'
   },
+  {
+    name: 'Air Rights Value Estimator',
+    description: 'Estimate the value of air rights, calculate transferable development rights (TDR), and analyze vertical development opportunities',
+    category: 'Property Valuation',
+    icon: '🏙️',
+    path: '/tools/air-rights-value-estimator'
+  },
 
-  // Rental & Income (20 tools)
+  // Rental & Income (25 tools)
   {
     name: 'Rental Price Estimator',
     description: 'Estimate optimal rental prices for your property',
@@ -951,6 +965,41 @@ export const allTools: Tool[] = [
     category: 'Rental & Income',
     icon: '⚖️',
     path: '/tools/eviction-cost-calculator'
+  },
+  {
+    name: "Landlord's Monthly Cash Flow Tracker",
+    description: 'Track monthly rental income and expenses, calculate net cash flow, monitor property performance, and analyze landlord profitability',
+    category: 'Rental & Income',
+    icon: '💰',
+    path: '/tools/landlord-monthly-cash-flow-tracker'
+  },
+  {
+    name: 'Rental Property Expense Tracker',
+    description: 'Track and categorize all rental property expenses, calculate tax deductions, analyze spending by category, and generate annual expense summaries',
+    category: 'Rental & Income',
+    icon: '📊',
+    path: '/tools/rental-property-expense-tracker'
+  },
+  {
+    name: 'Security Deposit Interest Calculator (by State)',
+    description: 'Calculate required security deposit interest by state, determine interest rates, holding requirements, and landlord obligations for tenant deposits',
+    category: 'Rental & Income',
+    icon: '🏦',
+    path: '/tools/security-deposit-interest-calculator'
+  },
+  {
+    name: 'Prorated Rent Calculator',
+    description: 'Calculate prorated rent for partial months, mid-month move-ins/move-outs, daily rent rates, and proportional rent adjustments',
+    category: 'Rental & Income',
+    icon: '📅',
+    path: '/tools/prorated-rent-calculator'
+  },
+  {
+    name: 'Move-In/Move-Out Inspection Checklist Generator',
+    description: 'Generate comprehensive property inspection checklists, document condition, protect security deposits, and prevent tenant disputes',
+    category: 'Rental & Income',
+    icon: '📋',
+    path: '/tools/move-in-move-out-inspection-checklist'
   },
 
   // Market Analysis (6 tools)
@@ -1630,6 +1679,27 @@ export const allTools: Tool[] = [
     category: 'Tax Strategy & Entity Planning',
     icon: '🏢',
     path: '/tools/llc-vs-sole-proprietorship-analyzer'
+  },
+  {
+    name: 'Historic Tax Credit (HTC) Benefit Calculator',
+    description: 'Calculate federal and state historic preservation tax credits, qualified rehabilitation expenditures, and total project benefits',
+    category: 'Tax Strategy & Entity Planning',
+    icon: '🏛️',
+    path: '/tools/historic-tax-credit-calculator'
+  },
+  {
+    name: 'Low-Income Housing Tax Credit (LIHTC) Calculator',
+    description: 'Calculate 9% and 4% LIHTC credits, eligible basis, qualified allocation plan scoring, and affordable housing project returns',
+    category: 'Tax Strategy & Entity Planning',
+    icon: '🏘️',
+    path: '/tools/low-income-housing-tax-credit-calculator'
+  },
+  {
+    name: 'New Markets Tax Credit (NMTC) Calculator',
+    description: 'Calculate NMTC allocation benefits, qualified equity investment, and total credit value for community development projects',
+    category: 'Tax Strategy & Entity Planning',
+    icon: '🏗️',
+    path: '/tools/new-markets-tax-credit-calculator'
   },
   
   // Market Analysis - Location Intelligence (7 tools)
