@@ -4,12 +4,18 @@ Property Tools is a comprehensive Next.js web application offering 172 interacti
 
 ## Recent Changes (November 13, 2025)
 **Successfully migrated from Vercel to Replit:**
-- Installed all npm dependencies (564 packages)
-- Synced database schema using Drizzle Kit
-- Configured development workflow to run on port 5000 with proper host binding (0.0.0.0)
-- Configured deployment settings for production (autoscale with build and start scripts)
-- Verified application runs without errors in Replit environment
-- Environment variables (DATABASE_URL, SESSION_SECRET) are properly configured
+- Installed all npm dependencies (565 packages)
+- Created and synced PostgreSQL database schema using Drizzle Kit
+- Configured Next.js for Replit environment:
+  - Added `allowedDevOrigins` for Replit domains (*.replit.dev, *.repl.co)
+  - Configured server actions with proper allowed origins
+  - Development server runs on port 5000 with 0.0.0.0 host binding
+- Set up secure environment variables:
+  - `DATABASE_URL`: Replit PostgreSQL connection
+  - `SESSION_SECRET`: Dedicated secret for session cookie signing
+  - `OPENAI_API_KEY`: API key for AI-powered calculator features
+- Configured dev-server workflow for automatic web preview
+- Verified application runs without errors or warnings in Replit environment
 
 ## Recent Additions (November 12, 2025)
 Added 10 new advanced real estate finance calculators to the Investment Analysis category:
@@ -73,5 +79,6 @@ Preferred communication style: Simple, everyday language.
 - **Utilities**: bcryptjs, clsx, tailwind-merge.
 
 ## Environment Variables
-- `DATABASE_URL`: PostgreSQL connection string.
-- `SESSION_SECRET`: Secret key for session signing.
+- `DATABASE_URL`: PostgreSQL connection string (Replit-managed).
+- `SESSION_SECRET`: Secret key for session cookie signing.
+- `OPENAI_API_KEY`: OpenAI API key for AI-powered calculator features.
