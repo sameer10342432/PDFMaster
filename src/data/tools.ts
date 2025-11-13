@@ -1855,6 +1855,76 @@ export const allTools: Tool[] = [
     category: 'Investment Analysis',
     icon: '📋',
     path: '/tools/master-lease-agreement-mla-calculator'
+  },
+  {
+    name: 'Senior Living Facility ROI Calculator',
+    description: 'Analyze investment returns for senior living facilities including assisted living, memory care, and independent living communities',
+    category: 'Investment Analysis',
+    icon: '🏥',
+    path: '/tools/senior-living-facility-roi-calculator'
+  },
+  {
+    name: 'Medical Office Building (MOB) Investment Calculator',
+    description: 'Calculate ROI and cash flow for medical office building investments with specialized tenant considerations and healthcare market analysis',
+    category: 'Investment Analysis',
+    icon: '🏥',
+    path: '/tools/medical-office-building-mob-investment-calculator'
+  },
+  {
+    name: 'Data Center Investment Calculator',
+    description: 'Analyze returns on data center investments including power density, connectivity premiums, and technology infrastructure costs',
+    category: 'Investment Analysis',
+    icon: '💾',
+    path: '/tools/data-center-investment-calculator'
+  },
+  {
+    name: 'Car Wash Business ROI Calculator',
+    description: 'Calculate profitability and returns for car wash investments including self-serve, automatic, and express wash formats',
+    category: 'Investment Analysis',
+    icon: '🚗',
+    path: '/tools/car-wash-business-roi-calculator'
+  },
+  {
+    name: 'Laundromat Business ROI Calculator',
+    description: 'Analyze investment returns for laundromat businesses including equipment costs, utility expenses, and revenue projections',
+    category: 'Investment Analysis',
+    icon: '🧺',
+    path: '/tools/laundromat-business-roi-calculator'
+  },
+  {
+    name: 'RV Park/Campground ROI Calculator',
+    description: 'Calculate returns on RV park and campground investments including site development, amenities, and seasonal revenue patterns',
+    category: 'Investment Analysis',
+    icon: '🏕️',
+    path: '/tools/rv-park-campground-roi-calculator'
+  },
+  {
+    name: '1031 Exchange (Starker) Calculator',
+    description: 'Calculate tax deferral benefits and identify suitable replacement properties for 1031 like-kind exchanges',
+    category: 'Investment Analysis',
+    icon: '🔄',
+    path: '/tools/1031-exchange-starker-calculator'
+  },
+  {
+    name: 'Reverse 1031 Exchange Calculator',
+    description: 'Analyze reverse 1031 exchanges where you acquire replacement property before selling relinquished property',
+    category: 'Investment Analysis',
+    icon: '↩️',
+    path: '/tools/reverse-1031-exchange-calculator'
+  },
+  {
+    name: 'Tenant in Common (TIC) Investment Calculator',
+    description: 'Calculate returns and analyze co-ownership investments through Tenant in Common fractional real estate structures',
+    category: 'Investment Analysis',
+    icon: '🤝',
+    path: '/tools/tenant-in-common-tic-investment-calculator'
+  },
+  {
+    name: 'Delaware Statutory Trust (DST) Investment Analyzer',
+    description: 'Analyze Delaware Statutory Trust investments including passive income, 1031 exchange eligibility, and institutional-grade properties',
+    category: 'Investment Analysis',
+    icon: '🏛️',
+    path: '/tools/delaware-statutory-trust-dst-investment-analyzer'
   }
 ];
 
