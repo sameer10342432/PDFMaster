@@ -2769,6 +2769,77 @@ export const allTools: Tool[] = [
     category: 'Home Improvement',
     icon: '🔧',
     path: '/tools/subcontractor-markup-calculator'
+  },
+  // Lifestyle & Housing Calculators (10 tools)
+  {
+    name: 'Commute Cost vs. Housing Cost Trade-off',
+    description: 'Compare the true cost of living closer to work vs. a longer commute with cheaper housing to make an informed housing decision',
+    category: 'Lifestyle & Housing',
+    icon: '🚗',
+    path: '/tools/commute-cost-vs-housing-cost-tradeoff'
+  },
+  {
+    name: 'Remote Work Home Savings Calculator',
+    description: 'Calculate how much money you save by working from home including commute costs, meals, wardrobe, and other expenses',
+    category: 'Lifestyle & Housing',
+    icon: '🏠',
+    path: '/tools/remote-work-home-savings-calculator'
+  },
+  {
+    name: 'Snowbird (Dual Property) Cost Calculator',
+    description: 'Calculate the total cost of owning and maintaining two properties for seasonal living - compare the costs vs. benefits of the snowbird lifestyle',
+    category: 'Lifestyle & Housing',
+    icon: '🦩',
+    path: '/tools/snowbird-dual-property-cost-calculator'
+  },
+  {
+    name: 'Vacation Home (Second Home) Affordability',
+    description: 'Determine if you can afford a vacation home by calculating total costs, potential rental income, and analyzing your financial readiness for a second property',
+    category: 'Lifestyle & Housing',
+    icon: '🏖️',
+    path: '/tools/vacation-home-second-home-affordability'
+  },
+  {
+    name: 'Co-Buying (with Friends/Family) Calculator',
+    description: 'Calculate cost splits, equity shares, and monthly expenses when buying property with friends or family members. Plan fair ownership arrangements',
+    category: 'Lifestyle & Housing',
+    icon: '🤝',
+    path: '/tools/co-buying-with-friends-family-calculator'
+  },
+  {
+    name: 'Joint vs. Separate Property (Marital) Calculator',
+    description: 'Compare the financial implications of holding marital property jointly versus separately. Understand tax benefits, liability, and estate planning considerations',
+    category: 'Lifestyle & Housing',
+    icon: '💑',
+    path: '/tools/joint-vs-separate-property-marital-calculator'
+  },
+  {
+    name: 'Prenuptial Agreement (Real Estate) Tool',
+    description: 'Calculate and plan real estate provisions for prenuptial agreements including property valuation, equity splits, and buyout scenarios',
+    category: 'Lifestyle & Housing',
+    icon: '💍',
+    path: '/tools/prenuptial-agreement-real-estate-tool'
+  },
+  {
+    name: 'Divorce & Real Estate Buyout Calculator',
+    description: 'Calculate fair buyout amounts for real estate division in divorce. Determine equity splits, payment options, and tax implications for both parties',
+    category: 'Lifestyle & Housing',
+    icon: '⚖️',
+    path: '/tools/divorce-real-estate-buyout-calculator'
+  },
+  {
+    name: 'House Hacking (Roommate) Rent Share Calculator',
+    description: 'Calculate fair rent splits for roommates or house hacking scenarios. Factor in room sizes, amenities, and utilities for equitable cost sharing',
+    category: 'Lifestyle & Housing',
+    icon: '🏡',
+    path: '/tools/house-hacking-roommate-rent-share-calculator'
+  },
+  {
+    name: 'Utility Bill Splitter (Roommates)',
+    description: 'Fairly split utility bills among roommates accounting for different usage patterns, room sizes, and special circumstances like home offices or AC usage',
+    category: 'Lifestyle & Housing',
+    icon: '💡',
+    path: '/tools/utility-bill-splitter-roommates'
   }
 ];
 
@@ -2785,7 +2856,8 @@ export const categories = [
   'Seller Tools',
   'Tax Strategy & Entity Planning',
   'Additional Tools',
-  'Home Improvement'
+  'Home Improvement',
+  'Lifestyle & Housing'
 ];
 
 export const getToolsByCategory = (category: string): Tool[] => {
