@@ -32,10 +32,8 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               {pdfTools.slice(0, 5).map((tool) => (
                 <li key={tool.id}>
-                  <Link href={`/tool/${tool.id}`}>
-                    <a className="text-muted-foreground hover:text-foreground transition-colors" data-testid={`link-footer-${tool.id}`}>
-                      {tool.title}
-                    </a>
+                  <Link href={`/tool/${tool.id}`} className="text-muted-foreground hover:text-foreground transition-colors" data-testid={`link-footer-${tool.id}`}>
+                    {tool.title}
                   </Link>
                 </li>
               ))}
@@ -47,10 +45,8 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               {pdfTools.slice(5, 10).map((tool) => (
                 <li key={tool.id}>
-                  <Link href={`/tool/${tool.id}`}>
-                    <a className="text-muted-foreground hover:text-foreground transition-colors" data-testid={`link-footer-${tool.id}`}>
-                      {tool.title}
-                    </a>
+                  <Link href={`/tool/${tool.id}`} className="text-muted-foreground hover:text-foreground transition-colors" data-testid={`link-footer-${tool.id}`}>
+                    {tool.title}
                   </Link>
                 </li>
               ))}
