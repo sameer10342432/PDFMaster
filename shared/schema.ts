@@ -1,10 +1,35 @@
 import { z } from "zod";
 
+// Tool categories for organization
+export const toolCategories = [
+  "Merge & Combine",
+  "Edit Pages",
+  "Compress & Optimize",
+  "Convert",
+  "OCR & Extract",
+  "Repair & Fix",
+  "Security"
+] as const;
+
+export type ToolCategory = typeof toolCategories[number];
+
+// Tool capabilities - indicates backend implementation status
+export const toolCapabilities = [
+  "implemented",      // Fully working backend
+  "coming-soon",     // UI ready, backend pending
+  "requires-service" // Needs external service/API
+] as const;
+
+export type ToolCapability = typeof toolCapabilities[number];
+
 // PDF Tool definitions with SEO metadata
 export const pdfTools = [
   {
     id: "merge-pdf",
     title: "Merge PDF",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["merge", "combine", "join", "unite"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "Merge PDF Files Online Free - Combine Multiple PDFs Into One",
     metaDescription: "Merge multiple PDF files into a single document online for free. Fast, secure, and easy-to-use PDF merger tool. No registration required.",
     description: "Combine multiple PDF files into a single document quickly and easily",
@@ -40,6 +65,9 @@ When combining PDF files, ensure they are properly ordered before merging. Check
   {
     id: "combine-pdf",
     title: "Combine PDF",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["combine", "merge", "join", "unite"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "Combine PDF Documents Online - Free PDF Combiner Tool",
     metaDescription: "Combine PDF documents into one file online for free. Simple, fast, and secure PDF combining tool with no file size limits. Start combining now!",
     description: "Join multiple PDF documents into one cohesive file with ease",
@@ -75,6 +103,9 @@ Our PDF combiner maintains the integrity of your original documents, preserving 
   {
     id: "join-pdf-files",
     title: "Join PDF Files",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["join", "combine", "merge", "unite"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "Join PDF Files Online Free - Fast PDF File Joiner",
     metaDescription: "Join PDF files together online for free. Quick and easy PDF joining tool with drag-and-drop support. No installation or signup needed.",
     description: "Seamlessly join separate PDF files into a unified document",
@@ -110,6 +141,9 @@ When you join PDF files with our tool, the original quality is maintained. All t
   {
     id: "pdf-merger",
     title: "PDF Merger",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["merge", "combine", "join", "consolidate"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "PDF Merger Tool Online Free - Merge PDFs Instantly",
     metaDescription: "Free online PDF merger to combine your documents. Merge unlimited PDFs with our easy-to-use tool. Fast, secure, and completely free forever.",
     description: "Professional PDF merging tool for combining documents efficiently",
@@ -145,6 +179,9 @@ Unlike many online tools, we don't limit file sizes or the number of PDFs you ca
   {
     id: "pdf-combiner",
     title: "PDF Combiner",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["combiner", "merge", "join", "consolidate"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "PDF Combiner Online - Combine PDF Files Free & Secure",
     metaDescription: "Online PDF combiner to merge your documents securely. Combine PDFs for free with no registration. Fast, safe, and easy to use.",
     description: "Advanced PDF combining solution for all your document needs",
@@ -180,6 +217,9 @@ Save time with our efficient combining process. Batch upload multiple files, qui
   {
     id: "append-pdf",
     title: "Append PDF",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["append", "add", "attach", "combine"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "Append PDF Files Online - Add PDFs to Existing Documents",
     metaDescription: "Append PDF files to existing documents online for free. Add pages from multiple PDFs to your main document. Simple and secure PDF appending.",
     description: "Add PDF pages to existing documents with precision",
@@ -215,6 +255,9 @@ Our append tool gives you control over how documents are combined. Add content t
   {
     id: "add-pdf-to-pdf",
     title: "Add PDF to PDF",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["add", "insert", "combine", "append"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "Add PDF to PDF Online - Insert PDFs into Documents Free",
     metaDescription: "Add PDF files to other PDFs online for free. Insert pages from one PDF into another. Easy PDF addition tool with no software required.",
     description: "Insert PDF content into other documents seamlessly",
@@ -254,6 +297,9 @@ This tool is perfect for:
   {
     id: "merge-multiple-pdfs",
     title: "Merge Multiple PDFs",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["merge", "multiple", "bulk", "combine"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "Merge Multiple PDF Files Online - Bulk PDF Merger Free",
     metaDescription: "Merge multiple PDF files at once online for free. Bulk PDF merging tool with unlimited file support. Fast, secure, and easy to use.",
     description: "Bulk merge unlimited PDF files in one operation",
@@ -289,6 +335,9 @@ Designed for professional use, our multiple PDF merger handles business document
   {
     id: "combine-pdf-pages",
     title: "Combine PDF Pages",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["combine", "pages", "merge", "organize"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "Combine PDF Pages Online - Organize Multiple PDFs Free",
     metaDescription: "Combine pages from multiple PDF documents into a single organized file online for free. Simple PDF page combining tool with no registration required.",
     description: "Combine pages from multiple documents into a single organized file",
@@ -328,6 +377,9 @@ Perfect for creating organized document packages for:
   {
     id: "merge-pdf-alternately",
     title: "Merge PDF Alternately",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["merge", "alternate", "interleave", "combine"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "Merge PDF Alternately Online - Interleave PDF Pages Free",
     metaDescription: "Merge PDF files alternately online for free. Interleave pages from multiple PDFs. Perfect for creating combined documents with alternating content.",
     description: "Interleave pages from multiple PDFs in alternating sequence",
@@ -367,6 +419,9 @@ Our tool intelligently handles PDFs with different page counts, ensuring all con
   {
     id: "interleave-pdf",
     title: "Interleave PDF",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["interleave", "merge", "alternate", "mix"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "Interleave PDF Pages Online Free - Mix PDF Documents",
     metaDescription: "Interleave PDF pages from multiple documents online for free. Mix pages from different PDFs in alternating pattern. Simple and secure PDF interleaving.",
     description: "Mix pages from multiple PDF files in alternating patterns",
@@ -406,6 +461,9 @@ Interleaved PDFs maintain the original quality of all source documents. Text rem
   {
     id: "pdf-binder",
     title: "PDF Binder",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["bind", "combine", "organize", "merge"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "PDF Binder Online Free - Bind Multiple PDFs Together",
     metaDescription: "Bind multiple PDF files together online for free. Professional PDF binding tool to create organized document collections. Fast, secure, no registration.",
     description: "Bind multiple PDF documents together into organized collections",
@@ -445,6 +503,9 @@ Your documents are processed securely with encryption during transfer. All files
   {
     id: "merge-pdf-bookmarks",
     title: "Merge PDF with Bookmarks",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["merge", "bookmarks", "navigation", "combine"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "Merge PDF with Bookmarks Online - Preserve Navigation Structure",
     metaDescription: "Merge PDF files while preserving bookmarks and navigation structure online for free. Keep table of contents intact when combining PDFs. Professional PDF merger.",
     description: "Combine PDFs while preserving bookmarks and navigation structure",
@@ -484,6 +545,9 @@ Merged PDFs with proper bookmarks provide superior reading experience. Users can
   {
     id: "combine-pdf-images",
     title: "Combine PDF and Images",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["combine", "images", "merge", "pictures"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "Combine PDF and Images Online Free - Merge PDFs with Pictures",
     metaDescription: "Combine PDF files with images online for free. Merge PDFs and pictures (JPG, PNG) into a single document. Easy PDF and image combining tool.",
     description: "Merge PDF files with images (JPG, PNG) into unified documents",
@@ -523,6 +587,9 @@ Create polished documents that seamlessly blend PDFs and images. All content is 
   {
     id: "merge-pdf-word",
     title: "Merge PDF and Word",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["merge", "word", "combine", "documents"],
+    capability: "implemented" as ToolCapability,
     metaTitle: "Merge PDF and Word Documents Online Free - Combine DOC with PDF",
     metaDescription: "Merge PDF and Word documents online for free. Combine DOC, DOCX files with PDFs into a single document. Fast, secure PDF and Word merger.",
     description: "Combine PDF and Word documents (DOC, DOCX) into single files",
@@ -566,6 +633,9 @@ The merged document maintains professional quality throughout. Fonts are embedde
   {
     id: "split-pdf",
     title: "Split PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["split", "separate", "divide", "extract"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Split PDF Online Free - Separate PDF Pages Instantly",
     metaDescription: "Split PDF files online for free. Extract pages from PDFs, separate documents by page ranges. Fast and secure PDF splitting tool, no registration required.",
     description: "Split PDF files into separate documents or extract specific pages",
@@ -609,6 +679,9 @@ All split PDFs maintain the original quality, formatting, and properties of the 
   {
     id: "pdf-splitter",
     title: "PDF Splitter",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["split", "splitter", "separate", "divide"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "PDF Splitter Tool Online Free - Split PDF Documents Fast",
     metaDescription: "Free online PDF splitter to separate your documents. Split PDFs by page, range, or size. Professional PDF splitting tool with no file limits.",
     description: "Advanced PDF splitting tool for dividing documents efficiently",
@@ -648,6 +721,9 @@ Perfect for businesses handling large PDF documents. Split invoices, contracts, 
   {
     id: "divide-pdf",
     title: "Divide PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["divide", "split", "separate", "parts"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Divide PDF Online Free - Separate PDF into Parts Instantly",
     metaDescription: "Divide PDF files into multiple parts online for free. Separate large PDFs into smaller documents. Easy PDF division tool, no software installation needed.",
     description: "Divide large PDF files into multiple smaller documents",
@@ -691,6 +767,9 @@ Divided PDF files are automatically named with clear numbering (part 1, part 2, 
   {
     id: "break-pdf",
     title: "Break PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["break", "separate", "split", "pages"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Break PDF Online Free - Separate PDF Pages Quickly",
     metaDescription: "Break PDF files into separate pages online for free. Extract and separate individual pages from PDF documents. Fast PDF breaking tool.",
     description: "Break PDF files into individual pages or separate sections",
@@ -734,6 +813,9 @@ Each broken PDF page maintains full quality with all fonts, images, and formatti
   {
     id: "split-pdf-by-pages",
     title: "Split PDF by Pages",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["split", "pages", "divide", "range"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Split PDF by Pages Online Free - Custom Page Range Splitting",
     metaDescription: "Split PDF by specific pages online for free. Extract custom page ranges from PDF documents. Flexible PDF page splitting tool with preview.",
     description: "Split PDFs by specific page numbers or custom page ranges",
@@ -777,6 +859,9 @@ Extract multiple different page ranges in a single operation. Each range becomes
   {
     id: "split-pdf-by-size",
     title: "Split PDF by Size",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["split", "size", "divide", "limit"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Split PDF by Size Online Free - Divide PDFs by File Size",
     metaDescription: "Split PDF files by size online for free. Divide large PDFs into smaller files based on file size limits. Perfect for email attachments and file sharing.",
     description: "Divide PDF files based on file size constraints for easy sharing",
@@ -820,6 +905,9 @@ Size-based splitting doesn't compress or reduce quality. The tool simply divides
   {
     id: "split-pdf-by-bookmarks",
     title: "Split PDF by Bookmarks",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["split", "bookmarks", "divide", "sections"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Split PDF by Bookmarks Online - Divide by Table of Contents",
     metaDescription: "Split PDF files by bookmarks online for free. Automatically divide PDFs into separate files based on bookmark structure. Smart PDF splitting tool.",
     description: "Split PDFs into separate files based on bookmark structure",
@@ -863,6 +951,9 @@ Each split file retains its internal bookmark structure, so subsections within a
   {
     id: "split-pdf-by-text",
     title: "Split PDF by Text",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["split", "text", "divide", "content"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Split PDF by Text Online - Divide PDFs by Text Content",
     metaDescription: "Split PDF files by text content online for free. Find and split PDFs at specific text markers or keywords. Advanced PDF splitting tool.",
     description: "Split PDF documents at specific text markers or keywords",
@@ -910,6 +1001,9 @@ Choose case-sensitive or case-insensitive matching, use partial text matches, or
   {
     id: "split-pdf-in-half",
     title: "Split PDF in Half",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["split", "half", "divide", "two-parts"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Split PDF in Half Online Free - Divide PDF into Two Parts",
     metaDescription: "Split PDF files in half online for free. Divide any PDF document into two equal parts instantly. Simple PDF half-splitting tool.",
     description: "Divide any PDF document into two equal parts instantly",
@@ -953,6 +1047,9 @@ Both halves maintain full quality and formatting from the original document. All
   {
     id: "split-pdf-every-x-pages",
     title: "Split PDF every X Pages",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["split", "interval", "divide", "pages"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Split PDF every X Pages Online - Divide PDFs by Page Intervals",
     metaDescription: "Split PDF every X pages online for free. Divide PDFs into equal chunks by page count. Flexible PDF splitting tool with custom page intervals.",
     description: "Split PDF into multiple files at regular page intervals",
@@ -1000,6 +1097,9 @@ All split files maintain the original page order. Files are numbered sequentiall
   {
     id: "extract-pdf-pages",
     title: "Extract PDF Pages",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["extract", "pages", "pull", "separate"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Extract PDF Pages Online Free - Pull Pages from PDFs",
     metaDescription: "Extract specific pages from PDF files online for free. Pull out individual pages or page ranges from any PDF. Fast PDF page extraction tool.",
     description: "Extract specific pages or page ranges from PDF documents",
@@ -1043,6 +1143,9 @@ The tool preserves the order of your selections, creating a new PDF with pages i
   {
     id: "pdf-page-extractor",
     title: "PDF Page Extractor",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["extract", "extractor", "pages", "pull"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "PDF Page Extractor Tool - Extract and Save PDF Pages Online",
     metaDescription: "Professional PDF page extractor to pull pages from documents online for free. Extract single or multiple pages from any PDF. Advanced extraction tool.",
     description: "Professional tool for extracting pages from PDF documents",
@@ -1090,6 +1193,9 @@ Designed for professional document workflows. Handle large PDFs, extract numerou
   {
     id: "delete-pdf-pages",
     title: "Delete PDF Pages",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["delete", "remove", "pages", "erase"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Delete PDF Pages Online Free - Remove Pages from PDFs",
     metaDescription: "Delete unwanted pages from PDF files online for free. Remove specific pages from PDFs quickly and easily. Secure PDF page deletion tool.",
     description: "Remove unwanted pages from PDF documents easily",
@@ -1133,6 +1239,9 @@ After deletion, remaining pages are automatically renumbered and reorganized. Th
   {
     id: "pdf-page-remover",
     title: "PDF Page Remover",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["remove", "delete", "pages", "remover"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "PDF Page Remover Online - Remove PDF Pages Instantly",
     metaDescription: "Remove pages from PDF files online for free. Professional PDF page removal tool to delete unwanted pages. Fast, secure, no registration required.",
     description: "Professional tool for removing pages from PDF files",
@@ -1180,6 +1289,9 @@ Perfect for creating clean, professional documents. Remove draft pages, eliminat
   {
     id: "extract-specific-pages",
     title: "Extract Specific Pages",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["extract", "specific", "pages", "custom"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Extract Specific Pages from PDF - Custom PDF Page Extraction",
     metaDescription: "Extract specific pages from PDF documents online for free. Custom page selection and extraction tool. Pull exact pages you need from any PDF.",
     description: "Extract custom page selections from PDF documents precisely",
@@ -1235,6 +1347,9 @@ All extracted pages maintain original quality. The resulting PDF is fully compat
   {
     id: "split-pdf-odd-pages",
     title: "Split PDF Odd Pages",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["split", "odd", "pages", "extract"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Split PDF Odd Pages Online Free - Extract Odd Pages from PDF",
     metaDescription: "Split and extract odd pages from PDF files online for free. Separate all odd-numbered pages (1, 3, 5, etc.) into a new PDF. Fast PDF odd page splitter.",
     description: "Extract all odd-numbered pages from PDF documents",
@@ -1278,6 +1393,9 @@ Use alongside the "Split PDF Even Pages" tool to create two separate files—one
   {
     id: "split-pdf-even-pages",
     title: "Split PDF Even Pages",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["split", "even", "pages", "extract"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Split PDF Even Pages Online Free - Extract Even Pages from PDF",
     metaDescription: "Split and extract even pages from PDF files online for free. Separate all even-numbered pages (2, 4, 6, etc.) into a new PDF. Fast PDF even page splitter.",
     description: "Extract all even-numbered pages from PDF documents",
@@ -1321,6 +1439,9 @@ Combine with odd page splitting to completely separate a document into two files
   {
     id: "pdf-breaker",
     title: "PDF Breaker",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["break", "breaker", "separate", "disassemble"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "PDF Breaker Tool Online - Break Apart PDF Documents Free",
     metaDescription: "Break apart PDF documents online for free. Professional PDF breaking tool to disassemble and separate PDFs. Fast, secure, no registration required.",
     description: "Break apart PDF documents into individual components",
@@ -1368,6 +1489,9 @@ All broken components are automatically organized and named systematically. Each
   {
     id: "extract-pdf-attachments",
     title: "Extract PDF Attachments",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["extract", "attachments", "files", "embedded"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Extract PDF Attachments Online Free - Pull Files from PDFs",
     metaDescription: "Extract attachments and embedded files from PDF documents online for free. Pull out all attached files from PDFs. Fast PDF attachment extractor.",
     description: "Extract embedded files and attachments from PDF documents",
@@ -1419,6 +1543,9 @@ PDF attachments are commonly used for:
   {
     id: "extract-pdf-images",
     title: "Extract PDF Images",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["extract", "images", "pictures", "graphics"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Extract Images from PDF Online Free - Pull Pictures from PDFs",
     metaDescription: "Extract all images from PDF files online for free. Pull pictures, photos, and graphics from PDFs. Fast PDF image extraction tool.",
     description: "Extract all images and graphics from PDF documents",
@@ -1470,6 +1597,9 @@ All extracted images are saved with clear organization:
   {
     id: "organize-pdf-pages",
     title: "Organize PDF Pages",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["organize", "arrange", "reorder", "sort"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Organize PDF Pages Online Free - Arrange PDF Page Order",
     metaDescription: "Organize and arrange PDF pages online for free. Reorder, sort, and reorganize PDF documents. Professional PDF page organization tool.",
     description: "Organize and arrange PDF pages in custom order",
@@ -1521,6 +1651,9 @@ Organize multiple aspects at once:
   {
     id: "reorder-pdf-pages",
     title: "Reorder PDF Pages",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["reorder", "arrange", "rearrange", "pages"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Reorder PDF Pages Online Free - Change PDF Page Order",
     metaDescription: "Reorder pages in PDF files online for free. Change and rearrange PDF page sequence. Easy PDF page reordering tool with drag and drop.",
     description: "Reorder and rearrange pages within PDF documents",
@@ -1572,6 +1705,9 @@ Common reordering scenarios:
   {
     id: "sort-pdf-pages",
     title: "Sort PDF Pages",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["sort", "organize", "arrange", "auto"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Sort PDF Pages Online Free - Automatically Arrange PDF Pages",
     metaDescription: "Sort PDF pages online for free. Automatically arrange pages in ascending, descending, or custom order. Smart PDF page sorting tool.",
     description: "Sort PDF pages automatically by various criteria",
@@ -1623,6 +1759,9 @@ Create sophisticated sorting:
   {
     id: "move-pdf-pages",
     title: "Move PDF Pages",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["move", "relocate", "reposition", "pages"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Move PDF Pages Online Free - Relocate Pages in PDFs",
     metaDescription: "Move pages in PDF files online for free. Relocate and reposition PDF pages to different locations. Easy PDF page moving tool.",
     description: "Move and relocate specific pages to different positions",
@@ -1674,6 +1813,9 @@ Moving pages is essential for:
   {
     id: "insert-blank-page",
     title: "Insert Blank Page in PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["insert", "blank", "empty", "page"],
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Insert Blank Page in PDF Online Free - Add Empty Pages to PDFs",
     metaDescription: "Insert blank pages into PDF files online for free. Add empty pages at any position in your PDF. Easy PDF blank page insertion tool.",
     description: "Insert blank pages at any position in PDF documents",
@@ -1721,6 +1863,1689 @@ Blank page insertion is useful for:
 - Meeting page count requirements
 - Adding annotation space`,
       relatedTools: ["organize-pdf-pages", "move-pdf-pages", "reorder-pdf-pages"]
+    }
+  },
+  {
+    id: "add-pages-to-pdf",
+    title: "Add Pages to PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["add", "insert", "pages", "append"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Pages to PDF Online Free - Insert Pages into PDFs",
+    metaDescription: "Add pages to PDF files online for free. Insert pages at any position in your PDF documents. Easy PDF page addition tool with no software required.",
+    description: "Insert additional pages into existing PDF documents at any position",
+    icon: "file-plus",
+    howTo: [
+      "Upload your main PDF document",
+      "Upload the pages you want to add",
+      "Choose the position where pages should be inserted",
+      "Download your PDF with added pages"
+    ],
+    article: {
+      title: "Add Pages to Your PDF Documents",
+      content: `Adding pages to PDF documents allows you to insert additional content anywhere in your file. Perfect for expanding documents, adding new sections, or incorporating updates.
+
+## Insert Pages Anywhere
+
+Add pages at any position in your PDF:
+- Insert at the beginning to add cover pages
+- Add in the middle to insert new sections
+- Append to the end for additional content
+- Insert multiple pages in different positions
+
+## Professional Document Enhancement
+
+Adding pages is essential for:
+- Updating reports with new information
+- Inserting addendum pages to contracts
+- Adding supplementary materials to presentations
+- Building comprehensive documentation incrementally
+
+## Maintain Quality and Format
+
+All added pages integrate seamlessly with your existing PDF. The tool ensures proper page ordering, maintains formatting consistency, and preserves all document properties.`,
+      relatedTools: ["insert-blank-page", "merge-pdf", "append-pdf"]
+    }
+  },
+  {
+    id: "duplicate-pdf-pages",
+    title: "Duplicate PDF Pages",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["duplicate", "copy", "pages", "clone"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Duplicate PDF Pages Online Free - Copy Pages in PDFs",
+    metaDescription: "Duplicate pages in PDF files online for free. Copy and clone specific pages within your PDFs. Easy PDF page duplication tool.",
+    description: "Duplicate and copy specific pages within PDF documents",
+    icon: "copy",
+    howTo: [
+      "Upload your PDF document",
+      "Select which pages to duplicate",
+      "Choose where duplicated pages should be inserted",
+      "Download your PDF with duplicated pages"
+    ],
+    article: {
+      title: "Duplicate PDF Pages Easily",
+      content: `Duplicating PDF pages creates copies of specific pages within your document. Useful for creating repeated content, templates, or maintaining multiple versions of information.
+
+## Flexible Page Duplication
+
+Copy pages with complete control:
+- Duplicate single pages or page ranges
+- Insert copies at specific positions
+- Create multiple duplicates of the same page
+- Maintain all formatting and content
+
+## Common Duplication Scenarios
+
+Page duplication is useful for:
+- Creating template pages for forms
+- Repeating important information sections
+- Building structured documents with repeated layouts
+- Generating multiple copies of signature pages
+
+## Preserve Original Quality
+
+Duplicated pages maintain perfect quality with all fonts, images, links, and formatting preserved. The copies are identical to the originals in every way.`,
+      relatedTools: ["add-pages-to-pdf", "extract-pdf-pages", "organize-pdf-pages"]
+    }
+  },
+  {
+    id: "pdf-page-manager",
+    title: "PDF Page Manager",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["manage", "pages", "organize", "edit"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Page Manager Online Free - Manage PDF Pages Complete Tool",
+    metaDescription: "Comprehensive PDF page manager to organize, edit, and manage PDF pages online for free. All-in-one PDF page management tool.",
+    description: "Comprehensive tool for managing all aspects of PDF pages",
+    icon: "settings",
+    howTo: [
+      "Upload your PDF to manage",
+      "Use visual page manager to organize, add, remove, or duplicate pages",
+      "Apply multiple page operations in one session",
+      "Download your fully managed PDF document"
+    ],
+    article: {
+      title: "Complete PDF Page Management Solution",
+      content: `The PDF Page Manager provides comprehensive tools for all page-related operations in one place. Organize, edit, add, remove, and duplicate pages using an intuitive visual interface.
+
+## All-in-One Page Management
+
+Manage every aspect of your PDF pages:
+- Reorder and organize pages with drag-and-drop
+- Add, insert, or append new pages
+- Delete unwanted pages
+- Duplicate pages as needed
+- Split and merge sections
+
+## Efficient Workflow
+
+Perform multiple operations in one session. Combine page reordering, deletion, duplication, and addition in a single workflow, saving time and ensuring consistent results.
+
+## Professional Page Control
+
+Perfect for document professionals who need complete control over PDF structure. Manage large documents efficiently with visual page thumbnails and batch operations.`,
+      relatedTools: ["organize-pdf-pages", "reorder-pdf-pages", "add-pages-to-pdf"]
+    }
+  },
+  {
+    id: "reverse-pdf-pages",
+    title: "Reverse PDF Pages",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["reverse", "flip", "backward", "pages"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Reverse PDF Pages Online Free - Flip PDF Page Order",
+    metaDescription: "Reverse PDF page order online for free. Flip PDF pages backward from last to first. Quick PDF page reversal tool.",
+    description: "Reverse the order of all pages in a PDF document",
+    icon: "arrow-down-up",
+    howTo: [
+      "Upload your PDF document",
+      "The tool automatically reverses the page order",
+      "Preview the reversed document",
+      "Download your PDF with pages in reverse order"
+    ],
+    article: {
+      title: "Reverse PDF Page Order Instantly",
+      content: `Reversing PDF pages flips the entire document order, placing the last page first and the first page last. Essential for correcting scanning errors or rearranging document flow.
+
+## Automatic Page Reversal
+
+Instantly reverse any PDF:
+- Last page becomes first page
+- First page becomes last page
+- All pages flipped in reverse order
+- One-click operation
+
+## Common Use Cases
+
+Page reversal is needed for:
+- Fixing incorrectly scanned documents
+- Reversing upside-down document stacks
+- Correcting automatic feeder scanning order
+- Changing document flow direction
+
+## Perfect Quality Preservation
+
+All pages maintain their original quality, formatting, and content. Only the order changes—everything else remains identical.`,
+      relatedTools: ["reorder-pdf-pages", "sort-pdf-pages", "organize-pdf-pages"]
+    }
+  },
+  {
+    id: "scan-to-pdf",
+    title: "Scan to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["scan", "convert", "digitize", "document"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Scan to PDF Online Free - Convert Scanned Documents to PDF",
+    metaDescription: "Scan documents to PDF online for free. Convert scanned images to professional PDF documents. Free scan to PDF converter.",
+    description: "Convert scanned documents and images into PDF format",
+    icon: "scan",
+    howTo: [
+      "Upload your scanned images or documents",
+      "Adjust scan quality and page order if needed",
+      "The tool converts scans to PDF format",
+      "Download your scanned PDF document"
+    ],
+    article: {
+      title: "Convert Scanned Documents to PDF",
+      content: `Scanning to PDF creates digital PDF documents from physical papers, photos, or images. Our tool converts your scans into professional, searchable PDF files.
+
+## Multi-Format Scan Support
+
+Convert various scanned formats:
+- JPEG and PNG scans
+- TIFF and BMP images
+- Multi-page scans
+- Photos of documents
+
+## Professional Scan Processing
+
+Our converter optimizes scanned documents:
+- Automatic orientation detection
+- Image enhancement for clarity
+- Page size standardization
+- Professional PDF output
+
+## Create Searchable PDFs
+
+The tool can process text in scans to create searchable PDF documents, making it easy to find information in your digitized papers.`,
+      relatedTools: ["compress-scanned-pdf", "ocr-pdf", "combine-pdf-images"]
+    }
+  },
+  {
+    id: "compress-pdf",
+    title: "Compress PDF",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["compress", "reduce", "size", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress PDF Online Free - Reduce PDF File Size Fast",
+    metaDescription: "Compress PDF files online for free. Reduce PDF file size while maintaining quality. Fast, secure PDF compression tool with no limits.",
+    description: "Compress PDF files to reduce file size while maintaining quality",
+    icon: "file-compress",
+    howTo: [
+      "Upload your PDF file to compress",
+      "Choose compression level (basic, standard, or high)",
+      "The tool compresses your PDF automatically",
+      "Download your compressed, smaller PDF file"
+    ],
+    article: {
+      title: "Compress PDF Files Efficiently",
+      content: `PDF compression reduces file size for easier sharing, faster uploads, and reduced storage needs. Our tool compresses PDFs while preserving visual quality.
+
+## Smart Compression Technology
+
+Intelligent compression optimizes:
+- Image resolution and quality
+- Font embedding
+- Redundant data removal
+- Metadata optimization
+
+## Flexible Compression Levels
+
+Choose the right compression for your needs:
+- Basic compression for minimal size reduction
+- Standard compression for balanced quality and size
+- High compression for maximum size reduction
+- Custom settings for specific requirements
+
+## Maintain Readability
+
+Even with high compression, text remains clear and readable. Images are optimized without visible quality degradation for most viewing scenarios.`,
+      relatedTools: ["reduce-pdf-size", "optimize-pdf", "shrink-pdf"]
+    }
+  },
+  {
+    id: "pdf-compressor",
+    title: "PDF Compressor",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["compressor", "reduce", "size", "shrink"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Compressor Online Free - Professional PDF File Compression",
+    metaDescription: "Professional PDF compressor to reduce file size online for free. Advanced compression algorithms maintain quality. Unlimited PDF compression.",
+    description: "Professional-grade PDF compression tool with advanced algorithms",
+    icon: "archive",
+    howTo: [
+      "Upload one or more PDF files",
+      "Select compression quality settings",
+      "Process files with advanced compression",
+      "Download compressed PDFs individually or as batch"
+    ],
+    article: {
+      title: "Professional PDF Compression",
+      content: `The PDF compressor uses advanced algorithms to achieve maximum file size reduction while preserving document quality. Ideal for professional documents requiring optimal compression.
+
+## Advanced Compression Engine
+
+Professional compression features:
+- Multi-pass optimization
+- Intelligent image downsampling
+- Lossless text compression
+- Adaptive quality settings
+
+## Batch Compression
+
+Compress multiple PDFs simultaneously:
+- Upload unlimited files
+- Apply same settings to all
+- Process files in parallel
+- Download as zip archive
+
+## Quality Control
+
+Fine-tune compression with precision controls. Balance file size against quality requirements for your specific use case.`,
+      relatedTools: ["compress-pdf", "pdf-optimizer", "reduce-pdf-size"]
+    }
+  },
+  {
+    id: "reduce-pdf-size",
+    title: "Reduce PDF Size",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["reduce", "size", "compress", "shrink"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Reduce PDF Size Online Free - Make PDFs Smaller Fast",
+    metaDescription: "Reduce PDF file size online for free. Make PDFs smaller for email and web. Fast PDF size reduction with quality preservation.",
+    description: "Reduce PDF file size for easier sharing and storage",
+    icon: "minimize",
+    howTo: [
+      "Upload your large PDF file",
+      "Choose target file size or reduction percentage",
+      "The tool reduces PDF size automatically",
+      "Download your smaller, optimized PDF"
+    ],
+    article: {
+      title: "Reduce PDF File Size Effectively",
+      content: `Reducing PDF size makes files suitable for email attachments, web uploads, and efficient storage. Our tool achieves significant size reduction while maintaining document usability.
+
+## Target-Based Reduction
+
+Set specific size goals:
+- Reduce to fit email limits (usually 10-25MB)
+- Compress for web optimization
+- Meet file size requirements
+- Percentage-based reduction
+
+## Smart Size Reduction
+
+The tool intelligently reduces size:
+- Optimizes images first (usually largest component)
+- Removes unnecessary metadata
+- Streamlines font embedding
+- Compresses redundant data
+
+## Maintain Document Integrity
+
+Size reduction preserves essential document features. Text remains searchable, links stay functional, and overall layout is maintained.`,
+      relatedTools: ["compress-pdf", "shrink-pdf", "optimize-pdf"]
+    }
+  },
+  {
+    id: "optimize-pdf",
+    title: "Optimize PDF",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["optimize", "enhance", "improve", "quality"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Optimize PDF Online Free - Enhance PDF Performance",
+    metaDescription: "Optimize PDF files online for free. Improve PDF performance, reduce size, and enhance quality. Professional PDF optimization tool.",
+    description: "Optimize PDF files for performance, size, and quality",
+    icon: "zap",
+    howTo: [
+      "Upload your PDF to optimize",
+      "Select optimization goals (speed, size, quality)",
+      "The tool applies optimal settings",
+      "Download your optimized PDF"
+    ],
+    article: {
+      title: "Comprehensive PDF Optimization",
+      content: `PDF optimization improves file performance across multiple dimensions: file size, loading speed, and rendering quality. Our tool provides comprehensive optimization for all PDF types.
+
+## Multi-Dimensional Optimization
+
+Optimize for various goals:
+- Fast web viewing and streaming
+- Reduced file size for storage
+- Enhanced print quality
+- Mobile device compatibility
+
+## Performance Enhancement
+
+Optimization improves:
+- Page loading speed
+- Rendering performance
+- Memory efficiency
+- Download times
+
+## Quality Improvement
+
+Beyond compression, optimization can enhance PDF quality by cleaning up artifacts, improving font rendering, and refining images.`,
+      relatedTools: ["compress-pdf", "pdf-optimizer", "linearize-pdf"]
+    }
+  },
+  {
+    id: "pdf-optimizer",
+    title: "PDF Optimizer",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["optimizer", "enhance", "improve", "compress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Optimizer Tool Online Free - Advanced PDF Optimization",
+    metaDescription: "Advanced PDF optimizer for professional results online for free. Optimize PDFs for web, print, or archival. Complete PDF optimization solution.",
+    description: "Advanced PDF optimization tool for professional results",
+    icon: "sliders",
+    howTo: [
+      "Upload your PDF document",
+      "Configure optimization parameters",
+      "Apply advanced optimization techniques",
+      "Download your professionally optimized PDF"
+    ],
+    article: {
+      title: "Advanced PDF Optimization",
+      content: `The PDF Optimizer provides professional-grade optimization with granular control over every aspect of the process. Perfect for users who need precise optimization settings.
+
+## Granular Control
+
+Fine-tune every optimization aspect:
+- Image compression levels per page
+- Font subset optimization
+- Metadata preservation options
+- Color space conversion
+- Object stream compression
+
+## Use-Case Specific Presets
+
+Optimize for specific scenarios:
+- Web publishing optimization
+- Print-ready optimization
+- Archive-friendly optimization
+- Screen-reading optimization
+
+## Detailed Optimization Reports
+
+View comprehensive reports showing exactly what was optimized, size savings achieved, and quality metrics maintained.`,
+      relatedTools: ["optimize-pdf", "compress-pdf", "pdf-optimizer-remove-unused"]
+    }
+  },
+  {
+    id: "high-compression-pdf",
+    title: "High Compression PDF",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["high", "compression", "maximum", "smallest"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "High Compression PDF Online Free - Maximum File Size Reduction",
+    metaDescription: "High compression PDF tool online for free. Achieve maximum file size reduction. Best for storage and archival when quality is flexible.",
+    description: "Apply maximum compression for smallest possible PDF file size",
+    icon: "compress",
+    howTo: [
+      "Upload your PDF file",
+      "The tool applies maximum compression settings",
+      "Preview quality vs. size trade-offs",
+      "Download your highly compressed PDF"
+    ],
+    article: {
+      title: "Maximum PDF Compression",
+      content: `High compression PDF creates the smallest possible file sizes by applying aggressive compression techniques. Ideal when file size is the primary concern.
+
+## Maximum Size Reduction
+
+Achieve dramatic size reduction:
+- Up to 90% smaller files possible
+- Aggressive image compression
+- Maximum downsampling
+- Streamlined structure
+
+## Best Use Cases
+
+High compression works best for:
+- Archival storage
+- Email attachments with strict limits
+- Low-bandwidth sharing
+- Large document collections
+
+## Quality Considerations
+
+High compression reduces visual quality noticeably. Best for documents where readability matters more than image perfection.`,
+      relatedTools: ["compress-pdf", "basic-compression-pdf", "reduce-pdf-size"]
+    }
+  },
+  {
+    id: "basic-compression-pdf",
+    title: "Basic Compression PDF",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["basic", "compression", "light", "preserve"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Basic PDF Compression Online Free - Light Compression",
+    metaDescription: "Basic PDF compression online for free. Light compression that preserves quality. Ideal for documents where quality is priority.",
+    description: "Apply light compression while preserving maximum quality",
+    icon: "feather",
+    howTo: [
+      "Upload your PDF file",
+      "The tool applies conservative compression",
+      "Quality is maximally preserved",
+      "Download your lightly compressed PDF"
+    ],
+    article: {
+      title: "Light PDF Compression",
+      content: `Basic compression provides modest file size reduction while preserving maximum document quality. Perfect when quality cannot be compromised.
+
+## Quality-First Approach
+
+Conservative compression ensures:
+- Minimal quality loss
+- Maintained image sharpness
+- Preserved text clarity
+- Original colors retained
+
+## Ideal For
+
+Basic compression suits:
+- Professional presentations
+- High-quality photos
+- Design portfolios
+- Documents requiring precision
+
+## Reasonable Size Reduction
+
+While compression is light, you'll still achieve 10-30% size reduction through lossless optimization techniques.`,
+      relatedTools: ["compress-pdf", "high-compression-pdf", "custom-pdf-compression"]
+    }
+  },
+  {
+    id: "custom-pdf-compression",
+    title: "Custom PDF Compression",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["custom", "compression", "manual", "settings"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Custom PDF Compression Online Free - Manual Compression Settings",
+    metaDescription: "Custom PDF compression with manual control online for free. Set your own compression levels and quality. Advanced PDF compression tool.",
+    description: "Custom compression with manual control over all settings",
+    icon: "sliders-horizontal",
+    howTo: [
+      "Upload your PDF file",
+      "Adjust compression sliders for images, quality, and resolution",
+      "Preview size and quality changes in real-time",
+      "Download your custom-compressed PDF"
+    ],
+    article: {
+      title: "Custom PDF Compression Control",
+      content: `Custom compression gives you complete control over compression parameters. Set exact quality levels, choose which elements to compress, and preview results in real-time.
+
+## Complete Control
+
+Customize every aspect:
+- Image quality sliders
+- Resolution settings
+- Color depth options
+- Font embedding control
+- Metadata retention
+
+## Real-Time Preview
+
+See immediate results:
+- Estimated file size
+- Quality preview
+- Comparison with original
+- Size savings percentage
+
+## Save Custom Presets
+
+Create and save your preferred settings for reuse on future documents with similar requirements.`,
+      relatedTools: ["compress-pdf", "pdf-compressor", "pdf-optimizer"]
+    }
+  },
+  {
+    id: "compress-pdf-for-web",
+    title: "Compress PDF for Web",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["web", "online", "compress", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress PDF for Web Online Free - Web-Optimized PDFs",
+    metaDescription: "Compress PDF for web use online for free. Optimize PDFs for fast loading on websites. Web-ready PDF compression tool.",
+    description: "Optimize PDFs specifically for fast web loading and viewing",
+    icon: "globe",
+    howTo: [
+      "Upload your PDF file",
+      "The tool applies web-specific optimization",
+      "PDF is optimized for streaming and fast loading",
+      "Download your web-ready PDF"
+    ],
+    article: {
+      title: "Optimize PDFs for Web Use",
+      content: `Web-optimized PDFs load faster on websites and stream efficiently in browsers. Our tool applies web-specific compression and structure optimization.
+
+## Web-Specific Optimization
+
+Optimizations for web:
+- Linearization for fast web view
+- RGB color space for screens
+- Progressive loading support
+- Reduced file size for faster downloads
+
+## Fast Page Loading
+
+Web optimization enables:
+- First page displays quickly
+- Progressive page rendering
+- Efficient streaming
+- Reduced bandwidth usage
+
+## Browser Compatibility
+
+Optimized PDFs work perfectly across all modern browsers with fast rendering and smooth scrolling.`,
+      relatedTools: ["compress-pdf", "linearize-pdf", "pdf-fast-web-view"]
+    }
+  },
+  {
+    id: "compress-pdf-for-email",
+    title: "Compress PDF for Email",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["email", "compress", "attachment", "reduce"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress PDF for Email Online Free - Email-Ready PDFs",
+    metaDescription: "Compress PDF for email attachments online for free. Reduce PDFs to fit email size limits. Perfect for email-friendly PDF compression.",
+    description: "Compress PDFs to fit email attachment size limits",
+    icon: "mail",
+    howTo: [
+      "Upload your PDF file",
+      "Choose target email size limit (10MB, 25MB, etc.)",
+      "The tool compresses to fit within limit",
+      "Download and attach to your email"
+    ],
+    article: {
+      title: "Compress PDFs for Email Attachments",
+      content: `Email services impose attachment size limits. Our tool compresses PDFs to fit within these limits while maintaining acceptable quality for email recipients.
+
+## Common Email Limits
+
+Compress to fit:
+- Gmail: 25MB limit
+- Outlook: 20MB limit
+- Yahoo: 25MB limit
+- Generic: 10MB safe limit
+
+## Smart Compression for Email
+
+The tool ensures:
+- Fits within size constraints
+- Maintains readability
+- Preserves essential content
+- Quick recipient downloads
+
+## Alternative Options
+
+If compression can't meet limits, the tool suggests alternative sharing methods or further optimization options.`,
+      relatedTools: ["compress-pdf", "reduce-pdf-size", "shrink-pdf"]
+    }
+  },
+  {
+    id: "compress-scanned-pdf",
+    title: "Compress Scanned PDF",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["scanned", "compress", "scan", "reduce"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress Scanned PDF Online Free - Reduce Scan File Size",
+    metaDescription: "Compress scanned PDF files online for free. Reduce large scan file sizes significantly. Specialized compression for scanned documents.",
+    description: "Specialized compression for scanned PDF documents",
+    icon: "scanner",
+    howTo: [
+      "Upload your scanned PDF",
+      "The tool detects scan-specific compression opportunities",
+      "Applies optimized compression for scanned images",
+      "Download your compressed scanned PDF"
+    ],
+    article: {
+      title: "Compress Scanned PDF Documents",
+      content: `Scanned PDFs are typically very large due to high-resolution images. Our specialized tool dramatically reduces scanned PDF sizes while maintaining legibility.
+
+## Scan-Specific Compression
+
+Specialized techniques for scans:
+- Aggressive image compression
+- Black and white optimization
+- Resolution reduction
+- Deskewing and cleanup
+
+## Dramatic Size Reduction
+
+Scanned PDFs can be reduced:
+- Up to 95% smaller
+- From hundreds of MB to just a few
+- Maintains text readability
+- Preserves essential detail
+
+## OCR Enhancement
+
+Optional OCR processing can make scanned text searchable while further optimizing file structure.`,
+      relatedTools: ["compress-pdf", "ocr-pdf", "scan-to-pdf"]
+    }
+  },
+  {
+    id: "pdf-size-reducer",
+    title: "PDF Size Reducer",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["reduce", "size", "smaller", "compress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Size Reducer Online Free - Make PDF Files Smaller",
+    metaDescription: "PDF size reducer online for free. Make PDF files significantly smaller. Efficient PDF file size reduction tool.",
+    description: "Efficiently reduce PDF file sizes with smart optimization",
+    icon: "minimize-2",
+    howTo: [
+      "Upload your PDF file",
+      "Set desired file size or reduction percentage",
+      "The tool reduces size using smart algorithms",
+      "Download your smaller PDF file"
+    ],
+    article: {
+      title: "Reduce PDF File Sizes Efficiently",
+      content: `The PDF size reducer uses intelligent algorithms to achieve maximum size reduction while preserving document usability and essential quality.
+
+## Intelligent Size Reduction
+
+Smart reduction techniques:
+- Prioritize image compression
+- Remove redundant objects
+- Optimize internal structure
+- Streamline fonts
+
+## Flexible Reduction Goals
+
+Set reduction targets:
+- Specific file size (e.g., under 5MB)
+- Percentage reduction (e.g., 50% smaller)
+- Fit to storage limits
+- Match bandwidth constraints
+
+## Efficient Processing
+
+Fast reduction processing handles large files efficiently, providing quick results even for multi-hundred-page documents.`,
+      relatedTools: ["reduce-pdf-size", "shrink-pdf", "compress-pdf"]
+    }
+  },
+  {
+    id: "shrink-pdf",
+    title: "Shrink PDF",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["shrink", "reduce", "compress", "smaller"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Shrink PDF Online Free - Make PDFs Smaller Quickly",
+    metaDescription: "Shrink PDF files online for free. Quickly make PDFs smaller for easy sharing. Fast PDF shrinking tool with no limits.",
+    description: "Quickly shrink PDF files to smaller sizes",
+    icon: "shrink",
+    howTo: [
+      "Upload your PDF file to shrink",
+      "The tool automatically shrinks the file",
+      "Preview the size reduction achieved",
+      "Download your shrunken PDF"
+    ],
+    article: {
+      title: "Shrink PDF Files Quickly",
+      content: `Shrinking PDFs makes them more manageable for sharing, uploading, and storing. Our quick shrink tool applies effective compression in seconds.
+
+## Quick Shrinking
+
+Fast size reduction:
+- Automatic shrinking
+- No configuration needed
+- Instant processing
+- Significant results
+
+## Maintains Usability
+
+Shrunken PDFs remain fully functional:
+- Text stays readable
+- Images maintain clarity
+- Links work properly
+- Documents remain printable
+
+## Perfect for Quick Sharing
+
+Shrink PDFs before sharing via email, messaging, or cloud storage. Reduced files transfer faster and use less space.`,
+      relatedTools: ["compress-pdf", "reduce-pdf-size", "pdf-size-reducer"]
+    }
+  },
+  {
+    id: "pdf-file-compressor",
+    title: "PDF File Compressor",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["file", "compressor", "compress", "reduce"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF File Compressor Online Free - Compress PDF Files",
+    metaDescription: "PDF file compressor online for free. Compress PDF files efficiently with advanced algorithms. Professional compression tool.",
+    description: "Professional PDF file compression with advanced techniques",
+    icon: "file-archive",
+    howTo: [
+      "Upload PDF files to compress",
+      "Choose compression strength",
+      "The tool compresses using advanced algorithms",
+      "Download compressed PDF files"
+    ],
+    article: {
+      title: "Professional PDF File Compression",
+      content: `The PDF file compressor uses sophisticated compression algorithms to reduce file sizes while maintaining document integrity and quality.
+
+## Advanced Compression
+
+Professional techniques:
+- Multi-pass optimization
+- Adaptive compression
+- Content-aware processing
+- Format-specific algorithms
+
+## Batch File Compression
+
+Compress multiple files:
+- Upload several PDFs at once
+- Apply consistent compression
+- Process in parallel
+- Download all at once
+
+## Quality Assurance
+
+Compressed files undergo quality checks to ensure they meet minimum readability and usability standards.`,
+      relatedTools: ["pdf-compressor", "compress-pdf", "optimize-pdf"]
+    }
+  },
+  {
+    id: "optimize-pdf-for-print",
+    title: "Optimize PDF for Print",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["print", "optimize", "printing", "quality"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Optimize PDF for Print Online Free - Print-Ready PDFs",
+    metaDescription: "Optimize PDF for professional printing online for free. Ensure PDFs are print-ready with correct settings. Print optimization tool.",
+    description: "Optimize PDFs for professional printing output",
+    icon: "printer",
+    howTo: [
+      "Upload your PDF file",
+      "Select print specifications (color mode, resolution, bleed)",
+      "The tool optimizes for print production",
+      "Download your print-ready PDF"
+    ],
+    article: {
+      title: "Prepare PDFs for Professional Printing",
+      content: `Print optimization ensures PDFs meet professional printing requirements. Our tool applies print-specific settings for perfect results.
+
+## Print-Specific Settings
+
+Optimize for printing:
+- CMYK color conversion
+- High-resolution images
+- Bleed and crop marks
+- Font embedding
+- ICC color profiles
+
+## Professional Quality
+
+Print optimization ensures:
+- Accurate color reproduction
+- Sharp text and images
+- Proper page dimensions
+- Commercial print compatibility
+
+## Prepress Standards
+
+PDFs are optimized to meet industry prepress standards like PDF/X-1a and PDF/X-4, ensuring compatibility with professional printing equipment.`,
+      relatedTools: ["optimize-pdf", "pdf-optimizer", "compress-pdf"]
+    }
+  },
+  {
+    id: "repair-pdf",
+    title: "Repair PDF",
+    category: "Repair & Fix" as ToolCategory,
+    tags: ["repair", "fix", "recover", "restore"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Repair PDF Online Free - Fix Corrupted PDF Files",
+    metaDescription: "Repair corrupted PDF files online for free. Fix damaged PDFs that won't open. Professional PDF repair tool.",
+    description: "Repair and fix corrupted or damaged PDF files",
+    icon: "wrench",
+    howTo: [
+      "Upload your corrupted PDF file",
+      "The tool analyzes and identifies issues",
+      "Repairs are automatically applied",
+      "Download your repaired PDF"
+    ],
+    article: {
+      title: "Repair Corrupted PDF Files",
+      content: `PDF repair tools fix corrupted files that won't open or display incorrectly. Our tool analyzes and repairs various PDF corruption issues.
+
+## Common PDF Problems
+
+Repair various issues:
+- Files that won't open
+- Missing pages or content
+- Corrupted images
+- Broken formatting
+- Damaged file structure
+
+## Automatic Repair
+
+The tool automatically:
+- Detects corruption type
+- Applies appropriate fixes
+- Reconstructs damaged sections
+- Validates repairs
+
+## Data Recovery
+
+Maximum data recovery from corrupted files. Even severely damaged PDFs can often be partially recovered.`,
+      relatedTools: ["fix-pdf", "repair-corrupt-pdf", "pdf-repair-tool"]
+    }
+  },
+  {
+    id: "fix-pdf",
+    title: "Fix PDF",
+    category: "Repair & Fix" as ToolCategory,
+    tags: ["fix", "repair", "correct", "restore"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Fix PDF Online Free - Repair PDF Problems Fast",
+    metaDescription: "Fix PDF problems online for free. Repair PDF errors and issues quickly. Fast PDF fixing tool for common problems.",
+    description: "Fix common PDF problems and errors quickly",
+    icon: "tool",
+    howTo: [
+      "Upload your problematic PDF",
+      "The tool identifies common issues",
+      "Fixes are applied automatically",
+      "Download your fixed PDF"
+    ],
+    article: {
+      title: "Fix Common PDF Problems",
+      content: `PDF files can develop various problems that prevent proper viewing, printing, or editing. Our fix tool addresses the most common PDF issues.
+
+## Quick Problem Resolution
+
+Fix issues like:
+- Won't open in readers
+- Printing problems
+- Missing fonts
+- Broken links
+- Annotation errors
+
+## Automatic Detection
+
+The tool automatically detects and fixes:
+- Structural errors
+- Compatibility issues
+- Font problems
+- Image rendering issues
+
+## Validation and Testing
+
+Fixed PDFs are validated to ensure they open and function correctly across different PDF readers and platforms.`,
+      relatedTools: ["repair-pdf", "pdf-repair-tool", "recover-pdf-data"]
+    }
+  },
+  {
+    id: "recover-pdf-data",
+    title: "Recover PDF Data",
+    category: "Repair & Fix" as ToolCategory,
+    tags: ["recover", "data", "retrieve", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Recover PDF Data Online Free - Extract Data from Damaged PDFs",
+    metaDescription: "Recover data from damaged PDF files online for free. Extract text and images from corrupted PDFs. PDF data recovery tool.",
+    description: "Recover and extract data from damaged PDF files",
+    icon: "database",
+    howTo: [
+      "Upload your damaged PDF file",
+      "The tool scans for recoverable data",
+      "Extracts text, images, and other content",
+      "Download recovered data as new PDF or separate files"
+    ],
+    article: {
+      title: "Recover Data from Damaged PDFs",
+      content: `When PDFs are damaged, valuable data may still be recoverable. Our recovery tool extracts text, images, and other content from corrupted files.
+
+## Maximum Data Retrieval
+
+Recover various content types:
+- Text content
+- Embedded images
+- Tables and data
+- Metadata information
+
+## Advanced Recovery
+
+Deep scanning techniques:
+- Structural analysis
+- Content reconstruction
+- Partial page recovery
+- Fragment assembly
+
+## Multiple Output Formats
+
+Save recovered data in various formats for maximum usability, including new PDFs, text files, or extracted images.`,
+      relatedTools: ["repair-pdf", "fix-pdf", "repair-corrupt-pdf"]
+    }
+  },
+  {
+    id: "repair-corrupt-pdf",
+    title: "Repair Corrupt PDF",
+    category: "Repair & Fix" as ToolCategory,
+    tags: ["corrupt", "repair", "fix", "damaged"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Repair Corrupt PDF Online Free - Fix Severely Damaged PDFs",
+    metaDescription: "Repair corrupt PDF files online for free. Fix severely damaged and corrupted PDFs. Advanced corruption repair tool.",
+    description: "Repair severely corrupted PDF files with advanced techniques",
+    icon: "shield-alert",
+    howTo: [
+      "Upload your corrupt PDF file",
+      "Advanced analysis identifies corruption extent",
+      "Multiple repair strategies are applied",
+      "Download repaired PDF with maximum content recovered"
+    ],
+    article: {
+      title: "Repair Severely Corrupted PDFs",
+      content: `Severely corrupted PDFs require advanced repair techniques. Our specialized tool handles even badly damaged files with sophisticated recovery algorithms.
+
+## Deep Corruption Repair
+
+Handle severe corruption:
+- Major structural damage
+- Missing file sections
+- Truncated documents
+- Header/footer corruption
+- Cross-reference errors
+
+## Multi-Strategy Approach
+
+The tool tries multiple repair strategies:
+- Structure reconstruction
+- Content salvage
+- Partial recovery
+- Progressive repair
+
+## Success Reporting
+
+Detailed reports show what was recovered, what couldn't be fixed, and the overall success rate of the repair process.`,
+      relatedTools: ["repair-pdf", "fix-pdf", "recover-pdf-data"]
+    }
+  },
+  {
+    id: "pdf-repair-tool",
+    title: "PDF Repair Tool",
+    category: "Repair & Fix" as ToolCategory,
+    tags: ["repair", "tool", "fix", "restore"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Repair Tool Online Free - Complete PDF Fixing Solution",
+    metaDescription: "Complete PDF repair tool online for free. Fix all types of PDF problems and corruption. Professional PDF repair solution.",
+    description: "Comprehensive PDF repair tool for all types of problems",
+    icon: "tool-box",
+    howTo: [
+      "Upload your problematic PDF",
+      "The tool performs comprehensive analysis",
+      "All detected issues are repaired",
+      "Download your fully repaired PDF"
+    ],
+    article: {
+      title: "Comprehensive PDF Repair Solution",
+      content: `The PDF repair tool provides a complete solution for all PDF problems, from minor issues to severe corruption. One tool handles all repair needs.
+
+## All-in-One Repair
+
+Fix everything:
+- File corruption
+- Structural errors
+- Content problems
+- Compatibility issues
+- Rendering errors
+
+## Intelligent Analysis
+
+Comprehensive problem detection:
+- Multi-level scanning
+- Problem prioritization
+- Repair strategy selection
+- Quality validation
+
+## Professional Results
+
+Repaired PDFs work reliably across all platforms and readers, with maximum content preservation and functionality restoration.`,
+      relatedTools: ["repair-pdf", "fix-pdf", "repair-corrupt-pdf"]
+    }
+  },
+  {
+    id: "ocr-pdf",
+    title: "OCR PDF",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["ocr", "text", "recognition", "searchable"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "OCR PDF Online Free - Make PDFs Searchable",
+    metaDescription: "OCR PDF files online for free. Convert scanned PDFs to searchable text. Fast and accurate optical character recognition.",
+    description: "Apply OCR to make scanned PDFs searchable and editable",
+    icon: "scan-text",
+    howTo: [
+      "Upload your scanned PDF",
+      "The tool performs optical character recognition",
+      "Text is extracted and made searchable",
+      "Download your OCR-processed, searchable PDF"
+    ],
+    article: {
+      title: "Make PDFs Searchable with OCR",
+      content: `OCR (Optical Character Recognition) converts scanned images of text into actual searchable text. Our tool makes scanned PDFs fully searchable and text-selectable.
+
+## Accurate Text Recognition
+
+High-quality OCR features:
+- Multi-language support
+- High accuracy rates
+- Font and formatting preservation
+- Table and structure recognition
+
+## Searchable PDFs
+
+OCR-processed PDFs enable:
+- Full-text search
+- Copy and paste text
+- Text editing capabilities
+- Screen reader compatibility
+
+## Maintain Visual Appearance
+
+The original scanned appearance is preserved while adding invisible searchable text layer behind the images.`,
+      relatedTools: ["scanned-pdf-to-text", "pdf-ocr", "searchable-pdf-creator"]
+    }
+  },
+  {
+    id: "scanned-pdf-to-text",
+    title: "Scanned PDF to Text",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["scanned", "text", "convert", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Scanned PDF to Text Online Free - Extract Text from Scans",
+    metaDescription: "Convert scanned PDF to text online for free. Extract text from scanned documents. Fast scanned PDF text extraction.",
+    description: "Extract text from scanned PDF documents",
+    icon: "file-text",
+    howTo: [
+      "Upload your scanned PDF",
+      "OCR extracts text from the scanned images",
+      "Text is formatted and organized",
+      "Download extracted text as TXT or editable format"
+    ],
+    article: {
+      title: "Extract Text from Scanned PDFs",
+      content: `Converting scanned PDFs to text extracts readable, editable text from document images. Perfect for digitizing paper records and making scanned content usable.
+
+## Text Extraction
+
+Extract text with:
+- High accuracy OCR
+- Layout preservation
+- Multi-column support
+- Table data extraction
+
+## Multiple Output Formats
+
+Save extracted text as:
+- Plain text files
+- Word documents
+- Searchable PDFs
+- Formatted documents
+
+## Batch Processing
+
+Process multiple scanned PDFs at once, extracting text from entire document collections efficiently.`,
+      relatedTools: ["ocr-pdf", "pdf-ocr", "image-to-text"]
+    }
+  },
+  {
+    id: "pdf-ocr",
+    title: "PDF OCR",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["ocr", "recognition", "text", "digitize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF OCR Online Free - Optical Character Recognition for PDFs",
+    metaDescription: "PDF OCR online for free. Apply optical character recognition to PDFs. Convert image-based PDFs to searchable text.",
+    description: "Optical character recognition for PDF documents",
+    icon: "eye",
+    howTo: [
+      "Upload your image-based PDF",
+      "Select OCR language and settings",
+      "The tool recognizes and extracts text",
+      "Download your text-enabled PDF"
+    ],
+    article: {
+      title: "PDF Optical Character Recognition",
+      content: `PDF OCR transforms image-based PDFs into text-enabled documents. Scanned documents become searchable, editable, and accessible.
+
+## Advanced OCR Engine
+
+Powerful recognition capabilities:
+- 100+ language support
+- Handwriting recognition
+- Form field detection
+- Mathematical notation
+
+## Quality Output
+
+OCR produces:
+- Accurate text extraction
+- Maintained formatting
+- Preserved layout
+- Searchable content
+
+## Accessibility Enhancement
+
+OCR makes PDFs accessible to screen readers and assistive technologies, improving document usability for all users.`,
+      relatedTools: ["ocr-pdf", "scanned-pdf-to-text", "searchable-pdf-creator"]
+    }
+  },
+  {
+    id: "searchable-pdf-creator",
+    title: "Searchable PDF Creator",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["searchable", "ocr", "create", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Searchable PDF Creator Online Free - Make PDFs Searchable",
+    metaDescription: "Create searchable PDFs online for free. Convert image PDFs to searchable documents. Professional searchable PDF creation.",
+    description: "Create searchable PDFs from scanned documents",
+    icon: "search",
+    howTo: [
+      "Upload your scanned or image-based PDF",
+      "The tool applies OCR to recognize text",
+      "A searchable text layer is added",
+      "Download your searchable PDF"
+    ],
+    article: {
+      title: "Create Fully Searchable PDFs",
+      content: `The Searchable PDF Creator converts image-only PDFs into fully searchable documents. Add invisible text layers that enable search, selection, and accessibility.
+
+## Invisible Text Layers
+
+Creates searchable PDFs with:
+- Hidden text layer behind images
+- Original appearance preserved
+- Full-text search capability
+- Copy-paste functionality
+
+## Perfect for Archives
+
+Ideal for digitizing:
+- Historical documents
+- Paper archives
+- Scanned records
+- Image-based PDFs
+
+## Search and Find
+
+Searchable PDFs allow quick information retrieval using standard PDF search tools, making large document collections manageable.`,
+      relatedTools: ["ocr-pdf", "pdf-ocr", "scanned-pdf-to-text"]
+    }
+  },
+  {
+    id: "ocr-to-word",
+    title: "OCR to Word",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["ocr", "word", "convert", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "OCR to Word Online Free - Convert Scanned PDF to Word",
+    metaDescription: "OCR to Word conversion online for free. Convert scanned PDFs to editable Word documents. Fast and accurate OCR to DOCX.",
+    description: "Convert scanned PDFs to editable Word documents",
+    icon: "file-text-2",
+    howTo: [
+      "Upload your scanned PDF",
+      "OCR extracts text and recognizes formatting",
+      "Text is converted to Word format",
+      "Download your editable Word document"
+    ],
+    article: {
+      title: "Convert Scanned PDFs to Word",
+      content: `OCR to Word conversion extracts text from scanned PDFs and creates editable Word documents. Perfect for making scanned documents fully editable.
+
+## Editable Word Output
+
+Creates Word documents with:
+- Formatted text
+- Preserved layout
+- Tables and lists
+- Editable content
+
+## Format Preservation
+
+The tool attempts to preserve:
+- Headings and styles
+- Paragraphs and spacing
+- Font selections
+- Basic formatting
+
+## Full Editability
+
+Resulting Word documents are fully editable, allowing you to modify, update, and rework the extracted content as needed.`,
+      relatedTools: ["ocr-pdf", "scanned-pdf-to-text", "ocr-to-excel"]
+    }
+  },
+  {
+    id: "ocr-to-excel",
+    title: "OCR to Excel",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["ocr", "excel", "table", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "OCR to Excel Online Free - Extract Tables from PDFs",
+    metaDescription: "OCR to Excel conversion online for free. Extract tables from scanned PDFs to Excel. Convert PDF tables to editable spreadsheets.",
+    description: "Extract tables from scanned PDFs to Excel spreadsheets",
+    icon: "table",
+    howTo: [
+      "Upload your PDF with tables",
+      "The tool identifies and extracts tables",
+      "Tables are converted to Excel format",
+      "Download your Excel spreadsheet"
+    ],
+    article: {
+      title: "Extract Tables to Excel",
+      content: `OCR to Excel extracts table data from PDFs and creates editable Excel spreadsheets. Perfect for digitizing financial reports, data sheets, and tabular information.
+
+## Table Detection
+
+Intelligent table recognition:
+- Automatic table detection
+- Cell boundary recognition
+- Header identification
+- Multi-column tables
+
+## Excel Output
+
+Creates spreadsheets with:
+- Preserved table structure
+- Editable cells
+- Proper rows and columns
+- Formatting maintained
+
+## Data Analysis Ready
+
+Extracted Excel data is ready for sorting, filtering, formulas, and analysis using standard spreadsheet tools.`,
+      relatedTools: ["ocr-pdf", "ocr-to-word", "extract-pdf-pages"]
+    }
+  },
+  {
+    id: "image-to-text",
+    title: "Image to Text",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["image", "text", "ocr", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image to Text Online Free - Extract Text from Images",
+    metaDescription: "Image to text conversion online for free. Extract text from images using OCR. Convert JPG, PNG to text.",
+    description: "Extract text from images using optical character recognition",
+    icon: "image-text",
+    howTo: [
+      "Upload your image file (JPG, PNG, etc.)",
+      "OCR recognizes and extracts text",
+      "Text is formatted and cleaned",
+      "Download extracted text or convert to PDF"
+    ],
+    article: {
+      title: "Extract Text from Images",
+      content: `Image to text conversion uses OCR to extract readable text from photos and images. Convert screenshots, photos of documents, and image files to editable text.
+
+## Multi-Format Support
+
+Extract text from:
+- JPG and JPEG images
+- PNG files
+- Photos of documents
+- Screenshots
+
+## Accurate Recognition
+
+High-quality text extraction:
+- Multi-language support
+- Font recognition
+- Layout preservation
+- Clean text output
+
+## Versatile Output
+
+Save extracted text in various formats or combine multiple images into a searchable PDF document.`,
+      relatedTools: ["ocr-pdf", "scanned-pdf-to-text", "pdf-ocr"]
+    }
+  },
+  {
+    id: "linearize-pdf",
+    title: "Linearize PDF",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["linearize", "optimize", "web", "fast"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Linearize PDF Online Free - Optimize for Fast Web View",
+    metaDescription: "Linearize PDF files online for free. Optimize PDFs for fast web viewing and streaming. PDF linearization tool.",
+    description: "Linearize PDFs for fast web viewing and progressive loading",
+    icon: "fast-forward",
+    howTo: [
+      "Upload your PDF file",
+      "The tool linearizes the PDF structure",
+      "PDF is optimized for streaming",
+      "Download your linearized, fast-loading PDF"
+    ],
+    article: {
+      title: "Linearize PDFs for Web Performance",
+      content: `PDF linearization reorganizes file structure for progressive display in web browsers. First pages load immediately while the rest downloads in the background.
+
+## Fast Web View
+
+Linearization enables:
+- Instant first page display
+- Progressive page loading
+- Efficient streaming
+- Better user experience
+
+## Restructured PDF
+
+Linearization reorganizes:
+- Page ordering
+- Object placement
+- Resource loading
+- Cross-reference tables
+
+## Web Optimization
+
+Linearized PDFs combined with compression create the fastest possible web viewing experience for PDF documents.`,
+      relatedTools: ["compress-pdf-for-web", "pdf-fast-web-view", "optimize-pdf"]
+    }
+  },
+  {
+    id: "pdf-fast-web-view",
+    title: "PDF Fast Web View",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["fast", "web", "view", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Fast Web View Online Free - Optimize for Browser Display",
+    metaDescription: "Optimize PDF for fast web view online for free. Enable fast loading in browsers. PDF fast web view optimization.",
+    description: "Optimize PDFs for fastest possible web browser display",
+    icon: "zap-fast",
+    howTo: [
+      "Upload your PDF file",
+      "The tool applies fast web view optimizations",
+      "PDF is restructured for immediate display",
+      "Download your fast-loading web-ready PDF"
+    ],
+    article: {
+      title: "Enable PDF Fast Web View",
+      content: `Fast Web View optimization ensures PDFs load instantly in web browsers with progressive rendering. Essential for providing excellent user experience with online PDFs.
+
+## Immediate Display
+
+Fast web view provides:
+- Instant first page
+- Progressive loading
+- Smooth scrolling
+- No waiting time
+
+## Combined Optimization
+
+Applies multiple techniques:
+- Linearization
+- Compression
+- Resource optimization
+- Structure streamlining
+
+## Perfect for Online Documents
+
+Ideal for PDFs hosted on websites, shared via links, or viewed primarily in web browsers rather than downloaded.`,
+      relatedTools: ["linearize-pdf", "compress-pdf-for-web", "optimize-pdf"]
+    }
+  },
+  {
+    id: "pdf-optimizer-remove-unused",
+    title: "PDF Optimizer (Remove Unused)",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["optimize", "remove", "unused", "clean"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Optimizer Remove Unused Online Free - Clean PDF Files",
+    metaDescription: "PDF optimizer to remove unused objects online for free. Clean and optimize PDFs by removing redundant data. Advanced PDF cleanup.",
+    description: "Remove unused objects and resources to optimize PDFs",
+    icon: "trash-clean",
+    howTo: [
+      "Upload your PDF file",
+      "The tool scans for unused objects and resources",
+      "Unused elements are safely removed",
+      "Download your cleaned, optimized PDF"
+    ],
+    article: {
+      title: "Remove Unused PDF Objects",
+      content: `PDFs often contain unused objects, deleted content remnants, and redundant resources that bloat file size. Our optimizer removes these unnecessary elements.
+
+## Unused Object Detection
+
+Identifies and removes:
+- Deleted content remnants
+- Unused images and fonts
+- Redundant metadata
+- Orphaned objects
+- Duplicate resources
+
+## Safe Removal
+
+Only truly unused elements are removed:
+- Thorough dependency checking
+- Preserve all visible content
+- Maintain document functionality
+- Validate after cleanup
+
+## Significant Size Reduction
+
+Removing unused objects can reduce file size by 20-50% without any quality loss or visible changes.`,
+      relatedTools: ["pdf-optimizer", "optimize-pdf", "compress-pdf"]
+    }
+  },
+  {
+    id: "downsample-pdf-images",
+    title: "Downsample PDF Images",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["downsample", "images", "reduce", "resolution"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Downsample PDF Images Online Free - Reduce Image Resolution",
+    metaDescription: "Downsample images in PDF files online for free. Reduce image resolution to decrease file size. PDF image downsampling tool.",
+    description: "Reduce image resolution in PDFs to decrease file size",
+    icon: "image-down",
+    howTo: [
+      "Upload your PDF with high-resolution images",
+      "Set target resolution (DPI)",
+      "Images are downsampled to target resolution",
+      "Download your PDF with optimized images"
+    ],
+    article: {
+      title: "Downsample PDF Images for Smaller Files",
+      content: `Image downsampling reduces resolution to decrease file size. High-resolution images often exceed display needs—downsampling optimizes without visible quality loss.
+
+## Resolution Optimization
+
+Common downsampling targets:
+- 150 DPI for screen viewing
+- 300 DPI for general printing
+- 72 DPI for web-only documents
+- Custom DPI for specific needs
+
+## Selective Downsampling
+
+Downsample only images that exceed target resolution, leaving smaller images unchanged for optimal results.
+
+## Balanced Quality
+
+Properly downsampled images maintain visual quality for their intended use while significantly reducing file size.`,
+      relatedTools: ["compress-pdf", "optimize-pdf", "reduce-pdf-size"]
+    }
+  },
+  {
+    id: "pdf-font-subsetter",
+    title: "PDF Font Subsetter",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["font", "subset", "optimize", "reduce"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Font Subsetter Online Free - Optimize Font Embedding",
+    metaDescription: "PDF font subsetting online for free. Optimize font embedding to reduce file size. Professional font subsetting tool.",
+    description: "Optimize font embedding by subsetting to reduce file size",
+    icon: "type",
+    howTo: [
+      "Upload your PDF file",
+      "The tool analyzes embedded fonts",
+      "Fonts are subset to include only used characters",
+      "Download your PDF with optimized fonts"
+    ],
+    article: {
+      title: "Optimize PDF Fonts with Subsetting",
+      content: `Font subsetting embeds only the characters actually used in the document rather than entire fonts. This reduces file size significantly without affecting appearance.
+
+## Font Optimization
+
+Subsetting reduces:
+- Font data size
+- Embedded character sets
+- Overall file size
+- Load times
+
+## Character Preservation
+
+Subset fonts include:
+- All used characters
+- Required glyphs
+- Proper display characters
+- Nothing unnecessary
+
+## Significant Savings
+
+Font subsetting can reduce file size by 30-70% for documents with extensive font embedding, especially with Asian fonts containing thousands of glyphs.`,
+      relatedTools: ["optimize-pdf", "compress-pdf", "pdf-optimizer"]
+    }
+  },
+  {
+    id: "word-to-pdf",
+    title: "Word to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["word", "convert", "pdf", "docx"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Word to PDF Online Free - Convert DOCX to PDF",
+    metaDescription: "Convert Word to PDF online for free. Transform DOCX documents to PDF format. Fast and accurate Word to PDF conversion.",
+    description: "Convert Microsoft Word documents to PDF format",
+    icon: "file-type-word",
+    howTo: [
+      "Upload your Word document (DOC or DOCX)",
+      "The tool converts to PDF format",
+      "All formatting and layout is preserved",
+      "Download your converted PDF file"
+    ],
+    article: {
+      title: "Convert Word Documents to PDF",
+      content: `Converting Word to PDF creates universal, non-editable documents perfect for sharing. Our tool preserves all formatting, fonts, and layout exactly.
+
+## Perfect Conversion
+
+Preserves all Word elements:
+- Text formatting and styles
+- Images and graphics
+- Tables and layouts
+- Headers and footers
+- Page numbering
+
+## Universal Compatibility
+
+PDFs work everywhere:
+- All devices and platforms
+- No Word software needed
+- Consistent appearance
+- Professional sharing format
+
+## Quick and Easy
+
+Simple drag-and-drop conversion creates professional PDFs in seconds, ready to share via email or publish online.`,
+      relatedTools: ["doc-to-pdf", "docx-to-pdf", "merge-pdf-word"]
+    }
+  },
+  {
+    id: "doc-to-pdf",
+    title: "DOC to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["doc", "convert", "pdf", "word"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "DOC to PDF Online Free - Convert DOC Files to PDF",
+    metaDescription: "Convert DOC to PDF online for free. Transform legacy Word documents to PDF. Fast DOC to PDF conversion tool.",
+    description: "Convert legacy DOC files to PDF format",
+    icon: "file-convert",
+    howTo: [
+      "Upload your DOC file",
+      "The tool converts DOC to PDF",
+      "Formatting and content is preserved",
+      "Download your PDF file"
+    ],
+    article: {
+      title: "Convert DOC Files to PDF",
+      content: `DOC to PDF conversion transforms older Word document formats into modern, universal PDFs. Perfect for archiving and sharing legacy documents.
+
+## Legacy Format Support
+
+Handles older Word formats:
+- Classic .doc files
+- Word 97-2003 documents
+- Legacy formatting
+- Older Word versions
+
+## Modern PDF Output
+
+Creates standard PDFs:
+- Universal compatibility
+- Modern features
+- Searchable text
+- Professional appearance
+
+## Archive and Preserve
+
+Converting old DOC files to PDF helps preserve legacy documents in a stable, long-term format.`,
+      relatedTools: ["word-to-pdf", "docx-to-pdf", "merge-pdf-word"]
+    }
+  },
+  {
+    id: "docx-to-pdf",
+    title: "DOCX to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["docx", "convert", "pdf", "word"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "DOCX to PDF Online Free - Convert DOCX Files to PDF",
+    metaDescription: "Convert DOCX to PDF online for free. Transform Word DOCX documents to PDF format. Fast and accurate DOCX to PDF converter.",
+    description: "Convert modern DOCX files to PDF format",
+    icon: "file-transform",
+    howTo: [
+      "Upload your DOCX file",
+      "The tool converts to PDF with high fidelity",
+      "All modern Word features are preserved",
+      "Download your converted PDF"
+    ],
+    article: {
+      title: "Convert DOCX Documents to PDF",
+      content: `DOCX to PDF conversion creates professional PDFs from modern Word documents. Our tool handles all modern Word features and formatting.
+
+## Modern Word Support
+
+Preserves advanced features:
+- Styles and themes
+- SmartArt graphics
+- Charts and diagrams
+- Comments and track changes
+- Complex formatting
+
+## Professional PDFs
+
+Converted PDFs maintain:
+- Exact visual appearance
+- All embedded content
+- Professional quality
+- Universal compatibility
+
+## Share with Confidence
+
+DOCX to PDF ensures recipients see documents exactly as intended, regardless of their software or platform.`,
+      relatedTools: ["word-to-pdf", "doc-to-pdf", "merge-pdf-word"]
     }
   }
 ] as const;
