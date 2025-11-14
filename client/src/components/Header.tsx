@@ -35,25 +35,19 @@ export function Header() {
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-64">
-                <DropdownMenuLabel>Browse All Tools</DropdownMenuLabel>
-                <DropdownMenuSeparator />
+              <DropdownMenuContent align="end" className="w-64 max-h-96 overflow-y-auto">
                 <Link href="/tools">
                   <DropdownMenuItem data-testid="dropdown-item-all-tools">
                     <FileText className="h-4 w-4 mr-2" />
-                    View All Tools
+                    View All Tools ({pdfTools.length})
                   </DropdownMenuItem>
                 </Link>
-                <DropdownMenuSeparator />
-                <DropdownMenuLabel>Tool Articles</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                {pdfTools.map((tool) => (
-                  <Link key={tool.id} href={`/tool/${tool.id}`}>
-                    <DropdownMenuItem data-testid={`dropdown-item-${tool.id}`}>
-                      {tool.title}
-                    </DropdownMenuItem>
-                  </Link>
-                ))}
+                <Link href="/articles">
+                  <DropdownMenuItem data-testid="dropdown-item-all-articles">
+                    <FileText className="h-4 w-4 mr-2" />
+                    Browse Articles
+                  </DropdownMenuItem>
+                </Link>
               </DropdownMenuContent>
             </DropdownMenu>
           </nav>
