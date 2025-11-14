@@ -1,8 +1,22 @@
 # Overview
 
-Property Tools is a comprehensive Next.js web application offering 410 interactive calculators and educational content for real estate professionals, investors, and homebuyers. The platform covers mortgage analysis, investment evaluation, tax calculations, seller tools, land development, opportunity zones, market analysis, closing costs, estate planning, lifestyle & housing, and AI-powered content. It features an admin panel for content management, a centralized tools data system, client-side calculation storage, scenario comparison, export capabilities, and smart insights. The project's ambition is to be a leading resource in real estate analytics and decision-making.
+Property Tools is a comprehensive Next.js web application offering 420 interactive calculators and educational content for real estate professionals, investors, and homebuyers. The platform covers mortgage analysis, investment evaluation, tax calculations, seller tools, land development, opportunity zones, market analysis, closing costs, estate planning, lifestyle & housing, location-specific tools, and AI-powered content. It features an admin panel for content management, a centralized tools data system, client-side calculation storage, scenario comparison, export capabilities, and smart insights. The project's ambition is to be a leading resource in real estate analytics and decision-making.
 
 ## Recent Changes (November 14, 2025)
+
+**Added 10 New Lifestyle, Tax & Location-Specific Calculators:**
+1. **"Forever Home" Cost Calculator** - Calculate lifetime homeownership costs over 20-30 years including mortgage, maintenance, renovations, property taxes, and insurance to plan long-term housing investments
+2. **Cost of Raising a Child (Housing Impact) Calculator** - Analyze housing cost increases from children including extra bedrooms, school district premiums, and family-friendly neighborhood expenses
+3. **Pet Ownership Cost (Rental) Calculator** - Calculate pet-related rental costs including deposits, monthly pet rent, pet-friendly property premiums, and move-out cleaning fees
+4. **Home Office Tax Deduction Calculator** - Calculate home office tax deductions for self-employed using simplified or actual expense methods with IRS-compliant calculations
+5. **Energy Efficient Mortgage (EEM) Calculator** - Analyze Energy Efficient Mortgage benefits comparing financing energy improvements vs. standard mortgages with federal tax credit integration
+6. **California Mello-Roos Tax Estimator** - Estimate Mello-Roos special taxes and Community Facilities District (CFD) assessments for California properties over full bond duration
+7. **Texas "Robin Hood" School Tax Calculator** - Calculate Texas recapture/Robin Hood school finance impacts on property taxes in property-wealthy school districts
+8. **New York City Co-op vs. Condo Analyzer** - Compare NYC co-op and condo ownership analyzing purchase price, monthly costs, flip taxes, board restrictions, and long-term value
+9. **NYC Mansion Tax Calculator** - Calculate New York City Mansion Tax on sales over $1M using progressive rates from 1% to 3.9% with tier breakpoint analysis
+10. **NYC Mortgage Recording Tax Calculator** - Calculate NYC Mortgage Recording Tax (CIRT) at 1.8%-1.925% plus MERS fees for financed property purchases
+
+Each calculator includes comprehensive educational articles (2000+ words each), detailed SEO metadata with metaTitle and metaDescription fields, robust calculation logic with 8-15 input fields and 6-12 result metrics, and integration into the centralized tools system. Total calculator count increased from 410 to 420, expanding Lifestyle & Housing (3 tools), Tax Calculators (5 tools), and Location-Specific Calculators (2 tools) categories.
 
 **Added 10 New High-Density & Specialized Rental Property Calculators:**
 1. **"Bunk Bed" Investment Calculator (High-Density Rentals)** - Analyze high-density rental investments with bunk bed configurations to maximize rental income per square foot
