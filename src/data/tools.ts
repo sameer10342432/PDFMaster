@@ -2627,6 +2627,76 @@ export const allTools: Tool[] = [
     category: 'Additional Tools',
     icon: '🎬',
     path: '/tools/home-theater-installation-cost-estimator'
+  },
+  {
+    name: 'Home Office Conversion ROI Calculator',
+    description: 'Calculate the return on investment for converting a spare room or space into a functional home office',
+    category: 'Home Improvement',
+    icon: '💼',
+    path: '/tools/home-office-conversion-roi-calculator'
+  },
+  {
+    name: 'Garage Conversion (ADU) Cost Calculator',
+    description: 'Estimate the cost of converting your garage into an Accessory Dwelling Unit (ADU) or additional living space',
+    category: 'Home Improvement',
+    icon: '🏘️',
+    path: '/tools/garage-conversion-adu-cost-calculator'
+  },
+  {
+    name: 'Exterior Siding Replacement Cost Calculator',
+    description: 'Calculate the cost of replacing your home\'s siding with different materials including vinyl, fiber cement, wood, and more',
+    category: 'Home Improvement',
+    icon: '🏗️',
+    path: '/tools/exterior-siding-replacement-cost-calculator'
+  },
+  {
+    name: 'Gutter Installation/Replacement Cost Calculator',
+    description: 'Calculate the cost of installing or replacing gutters and downspouts for your home with various material options',
+    category: 'Home Improvement',
+    icon: '🌧️',
+    path: '/tools/gutter-installation-replacement-cost-calculator'
+  },
+  {
+    name: 'Home Demolition Cost Estimator',
+    description: 'Estimate the cost of demolishing a house or structure including permits, labor, and disposal fees',
+    category: 'Home Improvement',
+    icon: '🏚️',
+    path: '/tools/home-demolition-cost-estimator'
+  },
+  {
+    name: 'Architect Fee Calculator',
+    description: 'Calculate architectural fees for residential and commercial projects based on project scope and fee structure',
+    category: 'Home Improvement',
+    icon: '📐',
+    path: '/tools/architect-fee-calculator'
+  },
+  {
+    name: 'Interior Designer Fee Calculator',
+    description: 'Calculate interior designer fees based on project scope, fee structure, and design complexity',
+    category: 'Home Improvement',
+    icon: '🛋️',
+    path: '/tools/interior-designer-fee-calculator'
+  },
+  {
+    name: 'Structural Engineer Fee Estimator',
+    description: 'Calculate structural engineering fees for residential and commercial projects including inspections and calculations',
+    category: 'Home Improvement',
+    icon: '🏗️',
+    path: '/tools/structural-engineer-fee-estimator'
+  },
+  {
+    name: 'General Contractor Fee Calculator',
+    description: 'Calculate general contractor fees and markup for construction projects including overhead and profit margins',
+    category: 'Home Improvement',
+    icon: '👷',
+    path: '/tools/general-contractor-fee-calculator'
+  },
+  {
+    name: 'Subcontractor Markup Calculator',
+    description: 'Calculate appropriate markup on subcontractor labor and materials for general contractors and construction managers',
+    category: 'Home Improvement',
+    icon: '🔧',
+    path: '/tools/subcontractor-markup-calculator'
   }
 ];
 
