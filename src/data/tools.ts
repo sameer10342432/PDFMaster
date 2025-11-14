@@ -822,6 +822,76 @@ export const allTools: Tool[] = [
     icon: '💹',
     path: '/tools/inflation-hedge-real-estate-calculator'
   },
+  {
+    name: '"Bunk Bed" Investment Calculator (High-Density Rentals)',
+    description: 'Analyze high-density rental investments with bunk bed configurations to maximize rental income per square foot',
+    category: 'Investment Analysis',
+    icon: '🛏️',
+    path: '/tools/bunk-bed-investment-calculator'
+  },
+  {
+    name: 'Co-Living Space ROI Calculator',
+    description: 'Calculate the return on investment for co-living properties with private bedrooms and shared common areas',
+    category: 'Investment Analysis',
+    icon: '🏘️',
+    path: '/tools/co-living-space-roi-calculator'
+  },
+  {
+    name: 'Furnished vs. Unfurnished Rental ROI',
+    description: 'Compare the return on investment between furnished and unfurnished rental properties to maximize rental income',
+    category: 'Investment Analysis',
+    icon: '🛋️',
+    path: '/tools/furnished-vs-unfurnished-rental-roi'
+  },
+  {
+    name: 'Corporate Housing Rental Calculator',
+    description: 'Analyze the profitability of corporate housing rentals for business travelers and relocating professionals',
+    category: 'Investment Analysis',
+    icon: '💼',
+    path: '/tools/corporate-housing-rental-calculator'
+  },
+  {
+    name: 'Travel Nurse Housing Investment Analyzer',
+    description: 'Analyze rental property investments targeting travel nurses and medical professionals on temporary assignments',
+    category: 'Investment Analysis',
+    icon: '⚕️',
+    path: '/tools/travel-nurse-housing-investment-analyzer'
+  },
+  {
+    name: 'Military (PCS) Move Rent vs. Buy Calculator',
+    description: 'Help military families decide whether to rent or buy during a PCS (Permanent Change of Station) move',
+    category: 'Basic Calculators',
+    icon: '🎖️',
+    path: '/tools/military-pcs-move-rent-vs-buy-calculator'
+  },
+  {
+    name: 'BAH (Basic Allowance for Housing) vs. Mortgage',
+    description: 'Compare military BAH against mortgage payments to determine affordable home prices and maximize housing benefits',
+    category: 'Basic Calculators',
+    icon: '🏠',
+    path: '/tools/bah-vs-mortgage-calculator'
+  },
+  {
+    name: 'VA Loan Assumption Benefit Calculator',
+    description: 'Calculate the financial benefits of assuming an existing VA loan with a lower interest rate versus getting a new mortgage',
+    category: 'Basic Calculators',
+    icon: '📋',
+    path: '/tools/va-loan-assumption-benefit-calculator'
+  },
+  {
+    name: 'Downsizing Savings Calculator (Retirement)',
+    description: 'Calculate the financial benefits of downsizing your home in retirement to reduce expenses and free up equity',
+    category: 'Basic Calculators',
+    icon: '🏡',
+    path: '/tools/downsizing-savings-calculator'
+  },
+  {
+    name: 'Upsizing Affordability Calculator',
+    description: 'Determine if you can afford to upsize to a larger home and calculate the financial impact on your budget',
+    category: 'Basic Calculators',
+    icon: '🏠',
+    path: '/tools/upsizing-affordability-calculator'
+  },
 
   // FIRE Calculators (4 tools)
   {
