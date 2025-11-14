@@ -1,6 +1,15 @@
 import { Link } from "wouter";
-import { FileText } from "lucide-react";
+import { FileText, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+  DropdownMenuLabel,
+} from "@/components/ui/dropdown-menu";
+import { pdfTools } from "@shared/schema";
 
 export function Header() {
   return (
@@ -18,11 +27,35 @@ export function Header() {
                 Home
               </Button>
             </Link>
-            <Link href="/tools">
-              <Button variant="ghost" data-testid="button-nav-tools">
-                All Tools
-              </Button>
-            </Link>
+            
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="gap-1" data-testid="button-nav-tools-dropdown">
+                  Tools
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-64">
+                <DropdownMenuLabel>Browse All Tools</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <Link href="/tools">
+                  <DropdownMenuItem data-testid="dropdown-item-all-tools">
+                    <FileText className="h-4 w-4 mr-2" />
+                    View All Tools
+                  </DropdownMenuItem>
+                </Link>
+                <DropdownMenuSeparator />
+                <DropdownMenuLabel>Tool Articles</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                {pdfTools.map((tool) => (
+                  <Link key={tool.id} href={`/tool/${tool.id}`}>
+                    <DropdownMenuItem data-testid={`dropdown-item-${tool.id}`}>
+                      {tool.title}
+                    </DropdownMenuItem>
+                  </Link>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
         </div>
       </div>
