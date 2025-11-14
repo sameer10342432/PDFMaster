@@ -2557,6 +2557,76 @@ export const allTools: Tool[] = [
     category: 'Home Improvement',
     icon: '📋',
     path: '/tools/building-permit-fee-estimator'
+  },
+  {
+    name: 'Mold Remediation Cost Estimator',
+    description: 'Calculate the cost of professional mold remediation including inspection, removal, and prevention for residential and commercial properties',
+    category: 'Additional Tools',
+    icon: '🦠',
+    path: '/tools/mold-remediation-cost-estimator'
+  },
+  {
+    name: 'Asbestos Removal Cost Estimator',
+    description: 'Calculate professional asbestos abatement costs including testing, removal, and disposal for homes and commercial buildings',
+    category: 'Additional Tools',
+    icon: '⚠️',
+    path: '/tools/asbestos-removal-cost-estimator'
+  },
+  {
+    name: 'Termite Damage Repair Cost Estimator',
+    description: 'Calculate the cost of repairing termite damage including structural repairs, wood replacement, and prevention treatment',
+    category: 'Additional Tools',
+    icon: '🐜',
+    path: '/tools/termite-damage-repair-cost-estimator'
+  },
+  {
+    name: 'Septic System vs. Sewer Hookup Cost',
+    description: 'Compare the costs of installing a septic system versus connecting to municipal sewer, including installation, maintenance, and long-term expenses',
+    category: 'Additional Tools',
+    icon: '🚽',
+    path: '/tools/septic-system-vs-sewer-hookup-cost'
+  },
+  {
+    name: 'Well Drilling vs. City Water Cost',
+    description: 'Compare the costs of drilling a private well versus connecting to municipal water, including installation, testing, and long-term expenses',
+    category: 'Additional Tools',
+    icon: '💧',
+    path: '/tools/well-drilling-vs-city-water-cost'
+  },
+  {
+    name: 'Driveway Paving Cost Estimator',
+    description: 'Calculate driveway paving costs for asphalt, concrete, pavers, and gravel including installation, materials, and long-term maintenance',
+    category: 'Additional Tools',
+    icon: '🚗',
+    path: '/tools/driveway-paving-cost-estimator'
+  },
+  {
+    name: 'Landscaping Budget Calculator',
+    description: 'Calculate comprehensive landscaping costs including design, plants, hardscaping, irrigation, and maintenance for residential and commercial properties',
+    category: 'Additional Tools',
+    icon: '🌳',
+    path: '/tools/landscaping-budget-calculator'
+  },
+  {
+    name: 'Fence Installation Cost Estimator',
+    description: 'Calculate fence installation costs for wood, vinyl, chain link, and other materials including labor, materials, and gate expenses',
+    category: 'Additional Tools',
+    icon: '🏡',
+    path: '/tools/fence-installation-cost-estimator'
+  },
+  {
+    name: 'Smart Home Conversion Cost Calculator',
+    description: 'Calculate the cost of converting your home to smart technology including lighting, security, climate control, and automation systems',
+    category: 'Additional Tools',
+    icon: '🏠',
+    path: '/tools/smart-home-conversion-cost-calculator'
+  },
+  {
+    name: 'Home Theater Installation Cost Estimator',
+    description: 'Calculate home theater installation costs including projectors, screens, sound systems, seating, and professional setup',
+    category: 'Additional Tools',
+    icon: '🎬',
+    path: '/tools/home-theater-installation-cost-estimator'
   }
 ];
 
