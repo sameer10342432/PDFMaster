@@ -1,8 +1,22 @@
 # Overview
 
-Property Tools is a comprehensive Next.js web application offering 191 interactive calculators and educational content for real estate professionals, investors, and homebuyers. The platform covers mortgage analysis, investment evaluation, tax calculations, seller tools, land development, opportunity zones, market analysis, closing costs, estate planning, and AI-powered content. It features an admin panel for content management, a centralized tools data system, client-side calculation storage, scenario comparison, export capabilities, and smart insights. The project's ambition is to be a leading resource in real estate analytics and decision-making.
+Property Tools is a comprehensive Next.js web application offering 400 interactive calculators and educational content for real estate professionals, investors, and homebuyers. The platform covers mortgage analysis, investment evaluation, tax calculations, seller tools, land development, opportunity zones, market analysis, closing costs, estate planning, lifestyle & housing, and AI-powered content. It features an admin panel for content management, a centralized tools data system, client-side calculation storage, scenario comparison, export capabilities, and smart insights. The project's ambition is to be a leading resource in real estate analytics and decision-making.
 
 ## Recent Changes (November 14, 2025)
+
+**Added 10 New Lifestyle & Housing Calculators:**
+1. **Commute Cost vs. Housing Cost Trade-off Calculator** - Compare true costs of living closer to work vs. longer commute with cheaper housing
+2. **Remote Work Home Savings Calculator** - Calculate savings from working remotely and living in a lower-cost area
+3. **Snowbird (Dual Property) Cost Calculator** - Analyze costs of maintaining two seasonal properties
+4. **Vacation Home (Second Home) Affordability Calculator** - Determine affordability of second homes including all costs and rental income potential
+5. **Co-Buying (with Friends/Family) Calculator** - Calculate ownership splits, costs, and equity for joint property purchases
+6. **Joint vs. Separate Property (Marital) Calculator** - Compare financial implications of joint vs. separate property ownership for couples
+7. **Prenuptial Agreement (Real Estate) Tool** - Plan and document real estate assets in prenuptial agreements
+8. **Divorce & Real Estate Buyout Calculator** - Calculate buyout amounts and refinancing options for property division in divorce
+9. **House Hacking (Roommate) Rent Share Calculator** - Optimize rent collection from roommates to offset mortgage costs
+10. **Utility Bill Splitter (Roommates)** - Calculate fair utility bill splits based on usage patterns and room sizes
+
+Each calculator includes comprehensive educational articles (2000+ words), detailed SEO metadata with proper titles and descriptions, robust calculation logic with multiple input fields and result metrics, and integration into the centralized tools system. Total calculator count increased from 390 to 400 with the new "Lifestyle & Housing" category.
 
 **Added 9 New Estate Planning & Financial Comparison Calculators:**
 1. **Legacy/Estate Planning (Real Estate) Calculator** - Calculate estate taxes, inheritance distribution, and plan for wealth transfer
