@@ -1231,6 +1231,497 @@ Perfect for building specialized documents:
 All extracted pages maintain original quality. The resulting PDF is fully compatible with all readers and maintains all fonts, images, links, and interactive elements from the source document.`,
       relatedTools: ["extract-pdf-pages", "pdf-page-extractor", "split-pdf-by-pages"]
     }
+  },
+  {
+    id: "split-pdf-odd-pages",
+    title: "Split PDF Odd Pages",
+    metaTitle: "Split PDF Odd Pages Online Free - Extract Odd Pages from PDF",
+    metaDescription: "Split and extract odd pages from PDF files online for free. Separate all odd-numbered pages (1, 3, 5, etc.) into a new PDF. Fast PDF odd page splitter.",
+    description: "Extract all odd-numbered pages from PDF documents",
+    icon: "file-odd",
+    howTo: [
+      "Upload your PDF document",
+      "The tool automatically identifies all odd pages (1, 3, 5, 7...)",
+      "Preview odd pages that will be extracted",
+      "Download new PDF containing only odd-numbered pages"
+    ],
+    article: {
+      title: "Split and Extract Odd Pages from PDFs",
+      content: `Extracting odd pages from a PDF creates a new document with only pages 1, 3, 5, 7, and so on. This specialized splitting is useful for specific printing scenarios and document organization tasks.
+
+## Why Extract Odd Pages?
+
+Odd page extraction is essential for:
+- Duplex printing troubleshooting (printing odd pages first)
+- Separating front-facing pages in scanned documents
+- Creating alternate versions of documents
+- Working with specific page sequences
+
+## Automatic Odd Page Detection
+
+The tool automatically identifies all odd-numbered pages in your document:
+- Extracts pages 1, 3, 5, 7, 9, etc.
+- Maintains original page order in output
+- Works with documents of any length
+- Preserves all page content and quality
+
+## Duplex Printing Support
+
+Perfect for manual duplex printing workflows. Print odd pages first, flip the paper stack, then print even pages to create two-sided documents on printers without automatic duplex capability.
+
+## Complement with Even Pages
+
+Use alongside the "Split PDF Even Pages" tool to create two separate files—one with odd pages, one with even—for complete page separation and specialized document processing.`,
+      relatedTools: ["split-pdf-even-pages", "split-pdf", "extract-pdf-pages"]
+    }
+  },
+  {
+    id: "split-pdf-even-pages",
+    title: "Split PDF Even Pages",
+    metaTitle: "Split PDF Even Pages Online Free - Extract Even Pages from PDF",
+    metaDescription: "Split and extract even pages from PDF files online for free. Separate all even-numbered pages (2, 4, 6, etc.) into a new PDF. Fast PDF even page splitter.",
+    description: "Extract all even-numbered pages from PDF documents",
+    icon: "file-even",
+    howTo: [
+      "Upload your PDF document",
+      "The tool automatically identifies all even pages (2, 4, 6, 8...)",
+      "Preview even pages that will be extracted",
+      "Download new PDF containing only even-numbered pages"
+    ],
+    article: {
+      title: "Split and Extract Even Pages from PDFs",
+      content: `Extracting even pages from a PDF creates a new document with only pages 2, 4, 6, 8, and so on. This specialized extraction complements odd page splitting for complete page separation.
+
+## When to Extract Even Pages
+
+Even page extraction is useful for:
+- Second pass of duplex printing workflows
+- Separating back-facing pages in scanned documents
+- Creating complementary document versions
+- Specialized page processing requirements
+
+## Automatic Even Page Selection
+
+The tool automatically identifies all even-numbered pages:
+- Extracts pages 2, 4, 6, 8, 10, etc.
+- Preserves original page sequence
+- Handles any document length
+- Maintains full quality and formatting
+
+## Duplex Printing Workflows
+
+Essential for manual duplex printing. After printing odd pages, use even pages for the reverse side to create professional two-sided documents on any printer.
+
+## Complete Page Separation
+
+Combine with odd page splitting to completely separate a document into two files. Useful for specialized processing, printing workflows, or document reorganization tasks.`,
+      relatedTools: ["split-pdf-odd-pages", "split-pdf", "extract-pdf-pages"]
+    }
+  },
+  {
+    id: "pdf-breaker",
+    title: "PDF Breaker",
+    metaTitle: "PDF Breaker Tool Online - Break Apart PDF Documents Free",
+    metaDescription: "Break apart PDF documents online for free. Professional PDF breaking tool to disassemble and separate PDFs. Fast, secure, no registration required.",
+    description: "Break apart PDF documents into individual components",
+    icon: "hammer",
+    howTo: [
+      "Upload the PDF you want to break apart",
+      "Choose breaking method: by pages, sections, or bookmarks",
+      "Preview how the document will be broken down",
+      "Download all broken PDF components together"
+    ],
+    article: {
+      title: "Professional PDF Breaking and Disassembly",
+      content: `PDF breaking disassembles documents into individual components, whether that's separate pages, sections, or logical divisions. Our professional PDF breaker provides multiple breaking methods for complete document control.
+
+## Comprehensive Breaking Options
+
+Break PDFs using multiple methods:
+- Break into individual single-page PDFs
+- Disassemble by section or chapter
+- Break at bookmark divisions
+- Custom breaking patterns
+
+## Advanced Breaking Features
+
+Professional-grade breaking capabilities:
+- Visual preview before breaking
+- Batch breaking for multiple PDFs
+- Custom naming for broken files
+- Organized output with clear file structure
+
+## Use Cases for PDF Breaking
+
+PDF breaking is ideal for:
+- Creating individual page files for processing
+- Disassembling compiled documents
+- Extracting components from complex PDFs
+- Preparing files for specialized workflows
+
+## Organized Output Management
+
+All broken components are automatically organized and named systematically. Each piece maintains the original quality while being independently accessible for further processing or distribution.`,
+      relatedTools: ["break-pdf", "split-pdf", "divide-pdf"]
+    }
+  },
+  {
+    id: "extract-pdf-attachments",
+    title: "Extract PDF Attachments",
+    metaTitle: "Extract PDF Attachments Online Free - Pull Files from PDFs",
+    metaDescription: "Extract attachments and embedded files from PDF documents online for free. Pull out all attached files from PDFs. Fast PDF attachment extractor.",
+    description: "Extract embedded files and attachments from PDF documents",
+    icon: "paperclip",
+    howTo: [
+      "Upload a PDF containing embedded files or attachments",
+      "The tool scans and lists all embedded attachments",
+      "Select which attachments to extract or extract all",
+      "Download extracted files individually or as a zip archive"
+    ],
+    article: {
+      title: "Extract Attachments and Embedded Files from PDFs",
+      content: `PDFs can contain embedded files and attachments like Excel spreadsheets, Word documents, images, or other files. Our extraction tool finds and extracts all embedded content from your PDF documents.
+
+## PDF Attachment Types
+
+Extract various embedded file types:
+- Office documents (Word, Excel, PowerPoint)
+- Images and graphics files
+- Other PDFs embedded within PDFs
+- Any file type that can be attached
+
+## Automatic Attachment Detection
+
+The tool automatically scans your PDF:
+- Identifies all embedded files
+- Lists attachments with names and types
+- Shows file sizes and formats
+- Provides preview when possible
+
+## Batch Extraction
+
+Extract all attachments at once or select specific files:
+- Download individual attachments
+- Get all attachments as a zip archive
+- Selective extraction of needed files
+- Organized folder structure in archive
+
+## Common Attachment Scenarios
+
+PDF attachments are commonly used for:
+- Including source documents with reports
+- Embedding reference materials
+- Attaching data files to presentations
+- Bundling related documents together`,
+      relatedTools: ["extract-pdf-images", "extract-pdf-pages", "pdf-page-extractor"]
+    }
+  },
+  {
+    id: "extract-pdf-images",
+    title: "Extract PDF Images",
+    metaTitle: "Extract Images from PDF Online Free - Pull Pictures from PDFs",
+    metaDescription: "Extract all images from PDF files online for free. Pull pictures, photos, and graphics from PDFs. Fast PDF image extraction tool.",
+    description: "Extract all images and graphics from PDF documents",
+    icon: "image",
+    howTo: [
+      "Upload your PDF document",
+      "The tool scans and identifies all embedded images",
+      "Preview images before extraction",
+      "Download all images as separate files or in a zip archive"
+    ],
+    article: {
+      title: "Extract Images and Graphics from PDF Files",
+      content: `PDF documents often contain valuable images, photos, diagrams, and graphics. Our extraction tool finds and saves all images from your PDFs in their original quality.
+
+## Complete Image Extraction
+
+Extract all types of images:
+- Photos and pictures
+- Diagrams and charts
+- Logos and graphics
+- Icons and illustrations
+
+## Preserve Image Quality
+
+Extracted images maintain original quality:
+- No compression or quality loss
+- Original resolution preserved
+- Native format when possible (JPG, PNG)
+- Metadata retained where applicable
+
+## Smart Image Detection
+
+The tool intelligently identifies all images:
+- Scans entire document thoroughly
+- Finds images in headers and footers
+- Detects images in forms and tables
+- Locates background images
+
+## Organized Output
+
+All extracted images are saved with clear organization:
+- Sequential numbering for easy identification
+- Original filenames preserved when available
+- Grouped by page for reference
+- Downloadable as individual files or zip archive`,
+      relatedTools: ["extract-pdf-attachments", "combine-pdf-images", "extract-pdf-pages"]
+    }
+  },
+  {
+    id: "organize-pdf-pages",
+    title: "Organize PDF Pages",
+    metaTitle: "Organize PDF Pages Online Free - Arrange PDF Page Order",
+    metaDescription: "Organize and arrange PDF pages online for free. Reorder, sort, and reorganize PDF documents. Professional PDF page organization tool.",
+    description: "Organize and arrange PDF pages in custom order",
+    icon: "layout-grid",
+    howTo: [
+      "Upload your PDF document",
+      "View all pages as thumbnails for easy organization",
+      "Drag and drop pages to reorder them",
+      "Download your newly organized PDF"
+    ],
+    article: {
+      title: "Organize and Arrange PDF Pages",
+      content: `PDF page organization gives you complete control over page order. Rearrange, reorder, and reorganize pages to create perfectly structured documents using intuitive visual tools.
+
+## Visual Page Organization
+
+Organize pages with ease:
+- Thumbnail view of all pages
+- Drag and drop to reorder
+- Visual confirmation of changes
+- Real-time preview of organization
+
+## Flexible Organization Methods
+
+Multiple ways to organize pages:
+- Manual drag-and-drop reordering
+- Reverse page order
+- Move specific pages to new positions
+- Custom organization patterns
+
+## Common Organization Tasks
+
+Page organization is essential for:
+- Fixing incorrectly scanned documents
+- Rearranging pages for better flow
+- Organizing combined PDFs logically
+- Preparing documents for printing
+
+## Batch Organization
+
+Organize multiple aspects at once:
+- Reorder several pages simultaneously
+- Apply organization patterns
+- Save organization templates
+- Efficient large document handling`,
+      relatedTools: ["reorder-pdf-pages", "sort-pdf-pages", "move-pdf-pages"]
+    }
+  },
+  {
+    id: "reorder-pdf-pages",
+    title: "Reorder PDF Pages",
+    metaTitle: "Reorder PDF Pages Online Free - Change PDF Page Order",
+    metaDescription: "Reorder pages in PDF files online for free. Change and rearrange PDF page sequence. Easy PDF page reordering tool with drag and drop.",
+    description: "Reorder and rearrange pages within PDF documents",
+    icon: "arrows-up-down",
+    howTo: [
+      "Upload the PDF with pages to reorder",
+      "Use drag-and-drop to rearrange page sequence",
+      "Apply quick reordering options (reverse, rotate sections)",
+      "Download your reordered PDF document"
+    ],
+    article: {
+      title: "Reorder and Rearrange PDF Pages",
+      content: `Reordering PDF pages lets you change the sequence of pages within a document. Whether fixing scanning errors or reorganizing content, our tool makes page reordering simple and intuitive.
+
+## Easy Page Reordering
+
+Reorder pages using simple methods:
+- Drag and drop pages to new positions
+- Swap pages with click-to-select
+- Move pages forward or backward
+- Reverse entire document or sections
+
+## Quick Reordering Actions
+
+Speed up reordering with shortcuts:
+- Reverse all pages instantly
+- Move page to start or end
+- Swap adjacent pages quickly
+- Apply common reordering patterns
+
+## Visual Reordering Interface
+
+See your changes in real-time:
+- Clear page thumbnails
+- Current page numbers displayed
+- Preview final order before saving
+- Undo unwanted changes
+
+## Why Reorder PDF Pages?
+
+Common reordering scenarios:
+- Fixing page order after scanning
+- Reorganizing presentation slides
+- Correcting document assembly errors
+- Creating custom page sequences`,
+      relatedTools: ["organize-pdf-pages", "sort-pdf-pages", "move-pdf-pages"]
+    }
+  },
+  {
+    id: "sort-pdf-pages",
+    title: "Sort PDF Pages",
+    metaTitle: "Sort PDF Pages Online Free - Automatically Arrange PDF Pages",
+    metaDescription: "Sort PDF pages online for free. Automatically arrange pages in ascending, descending, or custom order. Smart PDF page sorting tool.",
+    description: "Sort PDF pages automatically by various criteria",
+    icon: "sort",
+    howTo: [
+      "Upload your PDF document",
+      "Choose sorting method: reverse, alphabetical, by size, or custom",
+      "Preview the sorted page order",
+      "Download your sorted PDF document"
+    ],
+    article: {
+      title: "Sort PDF Pages Automatically",
+      content: `PDF page sorting automatically arranges pages according to specific criteria. From simple reverse sorting to complex custom patterns, our tool provides powerful sorting capabilities.
+
+## Multiple Sorting Methods
+
+Sort pages using various criteria:
+- Reverse page order (last to first)
+- Alphabetical by page content
+- By page size or orientation
+- Custom sorting patterns
+
+## Smart Sorting Algorithms
+
+Intelligent sorting features:
+- Automatic page analysis
+- Content-aware sorting options
+- Preserve related pages together
+- Handle mixed orientations
+
+## Reverse Sort
+
+Quickly reverse entire document:
+- Flip page order instantly
+- Last page becomes first
+- Useful for incorrectly scanned documents
+- One-click reversal
+
+## Custom Sort Patterns
+
+Create sophisticated sorting:
+- Define custom page sequences
+- Apply sorting to sections
+- Combine multiple sorting rules
+- Save sorting templates for reuse`,
+      relatedTools: ["organize-pdf-pages", "reorder-pdf-pages", "move-pdf-pages"]
+    }
+  },
+  {
+    id: "move-pdf-pages",
+    title: "Move PDF Pages",
+    metaTitle: "Move PDF Pages Online Free - Relocate Pages in PDFs",
+    metaDescription: "Move pages in PDF files online for free. Relocate and reposition PDF pages to different locations. Easy PDF page moving tool.",
+    description: "Move and relocate specific pages to different positions",
+    icon: "move",
+    howTo: [
+      "Upload your PDF document",
+      "Select the page(s) you want to move",
+      "Choose the new position or destination",
+      "Download your PDF with moved pages"
+    ],
+    article: {
+      title: "Move PDF Pages to Different Positions",
+      content: `Moving PDF pages lets you relocate specific pages to different positions within the document. Perfect for correcting page placement errors or reorganizing document structure.
+
+## Precise Page Movement
+
+Move pages exactly where needed:
+- Select specific pages to move
+- Choose exact destination position
+- Move single or multiple pages at once
+- Visual confirmation of movement
+
+## Flexible Movement Options
+
+Multiple ways to move pages:
+- Move to specific page number
+- Move to start or end of document
+- Insert pages at any position
+- Swap pages with others
+
+## Batch Page Moving
+
+Move multiple pages efficiently:
+- Select several pages to move together
+- Maintain selected pages in sequence
+- Move non-consecutive pages
+- Apply moves to page ranges
+
+## Common Page Moving Tasks
+
+Moving pages is essential for:
+- Correcting scanning order errors
+- Relocating misplaced pages
+- Inserting pages at specific positions
+- Creating custom document arrangements`,
+      relatedTools: ["reorder-pdf-pages", "organize-pdf-pages", "sort-pdf-pages"]
+    }
+  },
+  {
+    id: "insert-blank-page",
+    title: "Insert Blank Page in PDF",
+    metaTitle: "Insert Blank Page in PDF Online Free - Add Empty Pages to PDFs",
+    metaDescription: "Insert blank pages into PDF files online for free. Add empty pages at any position in your PDF. Easy PDF blank page insertion tool.",
+    description: "Insert blank pages at any position in PDF documents",
+    icon: "file-plus-2",
+    howTo: [
+      "Upload your PDF document",
+      "Choose where to insert blank page(s) (page number or position)",
+      "Select number of blank pages to insert",
+      "Download your PDF with inserted blank pages"
+    ],
+    article: {
+      title: "Insert Blank Pages into PDF Documents",
+      content: `Inserting blank pages into PDFs adds empty pages at specific positions. Useful for annotations, notes, printing requirements, or document formatting needs.
+
+## Flexible Blank Page Insertion
+
+Insert blank pages anywhere:
+- At the beginning of document
+- At the end of document
+- Between specific pages
+- At multiple positions simultaneously
+
+## Multiple Blank Pages
+
+Insert as many blank pages as needed:
+- Single blank page insertion
+- Multiple consecutive blank pages
+- Blank pages at different positions
+- Custom spacing with blank pages
+
+## Matching Page Properties
+
+Blank pages match your document:
+- Same page size as document
+- Matching orientation (portrait/landscape)
+- Consistent page dimensions
+- Professional appearance
+
+## Common Use Cases
+
+Blank page insertion is useful for:
+- Adding space for handwritten notes
+- Creating sections in documents
+- Preparing for duplex printing
+- Meeting page count requirements
+- Adding annotation space`,
+      relatedTools: ["organize-pdf-pages", "move-pdf-pages", "reorder-pdf-pages"]
+    }
   }
 ] as const;
 
