@@ -1,8 +1,24 @@
 # Overview
 
-Property Tools is a comprehensive Next.js web application offering 172 interactive calculators and educational content for real estate professionals, investors, and homebuyers. The platform covers mortgage analysis, investment evaluation, tax calculations, seller tools, land development, opportunity zones, market analysis, closing costs, and AI-powered content. It features an admin panel for content management, a centralized tools data system, client-side calculation storage, scenario comparison, export capabilities, and smart insights. The project's ambition is to be a leading resource in real estate analytics and decision-making.
+Property Tools is a comprehensive Next.js web application offering 182 interactive calculators and educational content for real estate professionals, investors, and homebuyers. The platform covers mortgage analysis, investment evaluation, tax calculations, seller tools, land development, opportunity zones, market analysis, closing costs, and AI-powered content. It features an admin panel for content management, a centralized tools data system, client-side calculation storage, scenario comparison, export capabilities, and smart insights. The project's ambition is to be a leading resource in real estate analytics and decision-making.
 
 ## Recent Changes (November 14, 2025)
+
+**Added 10 New Homebuyer & Financial Planning Calculators:**
+1. **Home Inspection Repair Credit Calculator** - Calculate repair credits and negotiate concessions based on inspection findings
+2. **203k Loan Renovation Budget Tracker** - Track and manage FHA 203k loan renovation budgets with detailed cost breakdowns
+3. **Renovation Punch List Generator** - Create and track renovation tasks with cost estimates and timeline management
+4. **Home Warranty vs. Repair Fund Calculator** - Compare costs of home warranties versus building your own repair fund
+5. **Property DOM vs. Renovation Analyzer** - Analyze whether renovations will reduce days on market and maximize sale price
+6. **House Poor Calculator (Mortgage vs. Lifestyle)** - Determine if housing costs are limiting lifestyle and financial flexibility
+7. **Real Estate as % of Net Worth Calculator** - Analyze real estate holdings as percentage of total net worth and portfolio diversification
+8. **Buy vs. Rent Advanced Calculator** - Comprehensive analysis including investment opportunity costs and tax benefits
+9. **Buy Now vs. Wait Calculator** - Analyze whether to buy real estate now or wait based on price and interest rate forecasts
+10. **Retirement Savings with Real Estate Calculator** - Plan retirement strategy incorporating real estate equity and rental income
+
+Each calculator includes comprehensive educational articles, detailed SEO metadata with proper titles and descriptions, robust calculation logic, and advanced features.
+
+## Migration Completed (November 14, 2025)
 **Successfully completed migration from Vercel to Replit:**
 - Installed all npm dependencies (565 packages)
 - Created and synced PostgreSQL database schema using Drizzle Kit
