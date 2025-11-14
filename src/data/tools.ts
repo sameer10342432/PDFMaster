@@ -780,6 +780,78 @@ export const allTools: Tool[] = [
     icon: '🏗️',
     path: '/tools/ground-lease-calculator'
   },
+  {
+    name: 'Home Equity to Invest Calculator',
+    description: 'Analyze the potential returns and risks of using home equity to invest in stocks, real estate, or other assets',
+    category: 'Investment Analysis',
+    icon: '🏡',
+    path: '/tools/home-equity-to-invest-calculator'
+  },
+  {
+    name: '401k vs. Real Estate Investment Analyzer',
+    description: 'Compare retirement savings potential between 401k investing and real estate property investments',
+    category: 'Investment Analysis',
+    icon: '📊',
+    path: '/tools/401k-vs-real-estate-analyzer'
+  },
+  {
+    name: 'Stocks vs. Real Estate (Historical) Analyzer',
+    description: 'Compare historical returns between stock market investments and real estate properties over different time periods',
+    category: 'Investment Analysis',
+    icon: '📈',
+    path: '/tools/stocks-vs-real-estate-historical-analyzer'
+  },
+  {
+    name: 'REIT vs. Direct Ownership Calculator',
+    description: 'Compare returns, liquidity, and effort between REIT investments and directly owning rental properties',
+    category: 'Investment Analysis',
+    icon: '🏢',
+    path: '/tools/reit-vs-direct-ownership-calculator'
+  },
+  {
+    name: 'Real Estate Portfolio Diversification Score',
+    description: 'Assess your real estate portfolio risk and diversification across property types, locations, and tenant classes',
+    category: 'Investment Analysis',
+    icon: '📊',
+    path: '/tools/real-estate-portfolio-diversification-score'
+  },
+  {
+    name: 'Inflation Hedge Calculator (Real Estate)',
+    description: 'Calculate how real estate protects your wealth against inflation compared to cash and bonds',
+    category: 'Investment Analysis',
+    icon: '💹',
+    path: '/tools/inflation-hedge-real-estate-calculator'
+  },
+
+  // FIRE Calculators (4 tools)
+  {
+    name: 'FIRE with Real Estate Calculator',
+    description: 'Calculate when you can achieve Financial Independence and Retire Early using rental property income',
+    category: 'FIRE Calculators',
+    icon: '🔥',
+    path: '/tools/fire-with-real-estate-calculator'
+  },
+  {
+    name: 'Coast FIRE with Real Estate Calculator',
+    description: 'Calculate when your rental properties will grow enough to support retirement without additional contributions',
+    category: 'FIRE Calculators',
+    icon: '🏖️',
+    path: '/tools/coast-fire-real-estate-calculator'
+  },
+  {
+    name: 'Barista FIRE with Real Estate Calculator',
+    description: 'Calculate how rental income combined with part-time work can achieve early semi-retirement',
+    category: 'FIRE Calculators',
+    icon: '☕',
+    path: '/tools/barista-fire-real-estate-calculator'
+  },
+  {
+    name: 'Fat FIRE with Real Estate Calculator',
+    description: 'Calculate path to luxury retirement with high-end rental properties and premium lifestyle expenses',
+    category: 'FIRE Calculators',
+    icon: '💎',
+    path: '/tools/fat-fire-real-estate-calculator'
+  },
 
   // Property Valuation (7 tools)
   {
