@@ -2415,6 +2415,85 @@ export const allTools: Tool[] = [
     category: 'Investment Analysis',
     icon: '🏛️',
     path: '/tools/delaware-statutory-trust-dst-investment-analyzer'
+  },
+
+  // Home Improvement & Renovation (11 tools)
+  {
+    name: 'Window Replacement ROI Calculator',
+    description: 'Calculate the return on investment for window replacement including energy savings, home value increase, and payback period',
+    category: 'Home Improvement',
+    icon: '🪟',
+    path: '/tools/window-replacement-roi-calculator'
+  },
+  {
+    name: 'Roof Replacement ROI Calculator',
+    description: 'Calculate the return on investment for roof replacement including home value increase, insurance savings, and resale impact',
+    category: 'Home Improvement',
+    icon: '🏠',
+    path: '/tools/roof-replacement-roi-calculator'
+  },
+  {
+    name: 'HVAC Replacement ROI Calculator',
+    description: 'Calculate the return on investment for HVAC replacement including energy savings, comfort improvements, and home value increase',
+    category: 'Home Improvement',
+    icon: '❄️',
+    path: '/tools/hvac-replacement-roi-calculator'
+  },
+  {
+    name: 'Solar Panel Installation ROI Calculator',
+    description: 'Calculate the return on investment for solar panel installation including energy savings, tax credits, home value increase, and payback period',
+    category: 'Home Improvement',
+    icon: '☀️',
+    path: '/tools/solar-panel-installation-roi-calculator'
+  },
+  {
+    name: 'Home Addition (Sq. Ft.) ROI Calculator',
+    description: 'Calculate the return on investment for home additions including cost per square foot, home value increase, and resale impact',
+    category: 'Home Improvement',
+    icon: '🏗️',
+    path: '/tools/home-addition-sq-ft-roi-calculator'
+  },
+  {
+    name: 'Paint Job Cost Estimator',
+    description: 'Estimate professional painting costs for interior and exterior projects including labor, materials, and preparation work',
+    category: 'Home Improvement',
+    icon: '🎨',
+    path: '/tools/paint-job-cost-estimator'
+  },
+  {
+    name: 'Flooring Cost Estimator (Hardwood vs Carpet vs LVP)',
+    description: 'Compare costs for hardwood, carpet, and luxury vinyl plank (LVP) flooring including materials, installation, and long-term value',
+    category: 'Home Improvement',
+    icon: '🪵',
+    path: '/tools/flooring-cost-estimator-hardwood-carpet-lvp'
+  },
+  {
+    name: 'Kitchen Countertop Cost Estimator',
+    description: 'Estimate kitchen countertop costs for granite, quartz, marble, laminate, and other materials including installation',
+    category: 'Home Improvement',
+    icon: '🍳',
+    path: '/tools/kitchen-countertop-cost-estimator'
+  },
+  {
+    name: 'Cabinet Refinishing vs Replacement Calculator',
+    description: 'Compare the cost and return on investment of cabinet refinishing versus full cabinet replacement for kitchen and bathroom renovations',
+    category: 'Home Improvement',
+    icon: '🚪',
+    path: '/tools/cabinet-refinishing-vs-replacement-calculator'
+  },
+  {
+    name: 'DIY vs Pro Contractor Cost Calculator',
+    description: 'Calculate the cost comparison between DIY and hiring a professional contractor including materials, labor, time value, and quality considerations',
+    category: 'Home Improvement',
+    icon: '🔨',
+    path: '/tools/diy-vs-pro-contractor-cost-calculator'
+  },
+  {
+    name: 'Building Permit Fee Estimator',
+    description: 'Estimate building permit fees for construction, renovation, and home improvement projects based on project value and location',
+    category: 'Home Improvement',
+    icon: '📋',
+    path: '/tools/building-permit-fee-estimator'
   }
 ];
 
@@ -2430,7 +2509,8 @@ export const categories = [
   'Advanced Analytics',
   'Seller Tools',
   'Tax Strategy & Entity Planning',
-  'Additional Tools'
+  'Additional Tools',
+  'Home Improvement'
 ];
 
 export const getToolsByCategory = (category: string): Tool[] => {
