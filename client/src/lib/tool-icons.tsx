@@ -28,7 +28,10 @@ import {
   Combine, Sliders, ReplaceAll, Upload, Aperture, Link,
   Images, Table, Table2, DatabaseZap, FileCheck, FormInput,
   FileSearch, Receipt, FileCode2, Brackets, TableProperties,
-  GitCompare, FileDiff, ScanSearch,
+  GitCompare, FileDiff, ScanSearch, Scale, Columns, Scan,
+  BookText, Calculator, Languages, Wand2, Award, FileBarChart2,
+  Layers3, Accessibility, ScrollText, MessageSquareText, Gauge as GaugeIcon,
+  ScanEye, ShieldPlus, ClipboardCheck, Sparkles as SparklesIcon,
   type LucideIcon
 } from "lucide-react";
 
