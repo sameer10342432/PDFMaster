@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
-import { pdfTools } from "@shared/schema";
+import { pdfTools, toolEmojis } from "@shared/schema";
 import { Download, ArrowRight, CheckCircle2, FileText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -141,8 +141,15 @@ export default function ToolPage() {
           <section className="py-12 md:py-16 bg-gradient-to-b from-primary/5 to-background">
             <div className="container mx-auto max-w-3xl px-4">
               <div className="text-center space-y-4">
+                <div className="flex justify-center mb-4">
+                  <div className="rounded-lg bg-primary/10 p-4 inline-block">
+                    <span className="text-6xl" role="img" aria-label={tool.title}>
+                      {toolEmojis[tool.id] || "📄"}
+                    </span>
+                  </div>
+                </div>
                 <Badge variant="secondary" className="mb-2">
-                  PDF Tool
+                  {tool.category}
                 </Badge>
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
                   {tool.title}
@@ -225,13 +232,16 @@ export default function ToolPage() {
                   {tool.article.relatedTools.map((relatedId) => {
                     const relatedTool = pdfTools.find(t => t.id === relatedId);
                     if (!relatedTool) return null;
+                    const emoji = toolEmojis[relatedId] || "📄";
                     
                     return (
                       <Link key={relatedId} href={`/tool/${relatedId}`}>
                         <Card className="p-6 hover-elevate active-elevate-2 cursor-pointer h-full">
                           <div className="flex items-center gap-3">
-                            <div className="rounded-lg bg-primary/10 p-2">
-                              <FileText className="h-5 w-5 text-primary" />
+                            <div className="rounded-lg bg-primary/10 p-2 flex items-center justify-center">
+                              <span className="text-2xl" role="img" aria-label={relatedTool.title}>
+                                {emoji}
+                              </span>
                             </div>
                             <div className="flex-1">
                               <p className="font-semibold text-sm">{relatedTool.title}</p>

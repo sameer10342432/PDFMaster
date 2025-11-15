@@ -6,8 +6,8 @@ import { Footer } from "@/components/Footer";
 import { Input } from "@/components/ui/input";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { pdfTools, toolCategories } from "@shared/schema";
-import { Search, FileText, ChevronRight } from "lucide-react";
+import { pdfTools, toolCategories, toolEmojis } from "@shared/schema";
+import { Search, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Articles() {
@@ -104,29 +104,36 @@ export default function Articles() {
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {filteredTools.map((tool) => (
-                      <Link key={tool.id} href={`/tool/${tool.id}`}>
-                        <Card className="hover-elevate cursor-pointer h-full" data-testid={`card-article-${tool.id}`}>
-                          <CardHeader className="gap-2">
-                            <div className="flex items-start justify-between gap-2">
-                              <FileText className="h-6 w-6 text-primary flex-shrink-0" />
-                              <Badge variant="secondary" className="text-xs">
-                                {tool.category}
-                              </Badge>
-                            </div>
-                            <CardTitle className="text-lg leading-tight">
-                              {tool.article.title}
-                            </CardTitle>
-                            <CardDescription className="line-clamp-2">
-                              {tool.description}
-                            </CardDescription>
-                            <div className="flex items-center gap-1 text-sm text-primary pt-2">
-                              Read Article <ChevronRight className="h-4 w-4" />
-                            </div>
-                          </CardHeader>
-                        </Card>
-                      </Link>
-                    ))}
+                    {filteredTools.map((tool) => {
+                      const emoji = toolEmojis[tool.id] || "📄";
+                      return (
+                        <Link key={tool.id} href={`/tool/${tool.id}`}>
+                          <Card className="hover-elevate cursor-pointer h-full" data-testid={`card-article-${tool.id}`}>
+                            <CardHeader className="gap-2">
+                              <div className="flex items-start justify-between gap-2">
+                                <div className="rounded-lg bg-primary/10 p-2">
+                                  <span className="text-3xl" role="img" aria-label={tool.title}>
+                                    {emoji}
+                                  </span>
+                                </div>
+                                <Badge variant="secondary" className="text-xs">
+                                  {tool.category}
+                                </Badge>
+                              </div>
+                              <CardTitle className="text-lg leading-tight">
+                                {tool.article.title}
+                              </CardTitle>
+                              <CardDescription className="line-clamp-2">
+                                {tool.description}
+                              </CardDescription>
+                              <div className="flex items-center gap-1 text-sm text-primary pt-2">
+                                Read Article <ChevronRight className="h-4 w-4" />
+                              </div>
+                            </CardHeader>
+                          </Card>
+                        </Link>
+                      );
+                    })}
                   </div>
                 </>
               ) : (
