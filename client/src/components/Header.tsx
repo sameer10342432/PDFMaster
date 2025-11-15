@@ -1,11 +1,13 @@
 import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
-import { FileText, ChevronDown } from "lucide-react";
+import { FileText, ChevronDown, BookOpen, Newspaper } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import type { PDFTool } from "@shared/schema";
@@ -14,6 +16,8 @@ export function Header() {
   const { data: tools = [] } = useQuery<PDFTool[]>({
     queryKey: ['/api/tools'],
   });
+
+  const popularTools = tools.slice(0, 8);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -38,7 +42,7 @@ export function Header() {
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-64 max-h-96 overflow-y-auto">
+              <DropdownMenuContent align="end" className="w-80 max-h-[32rem] overflow-y-auto">
                 <Link href="/tools">
                   <DropdownMenuItem data-testid="dropdown-item-all-tools">
                     <FileText className="h-4 w-4 mr-2" />
@@ -47,8 +51,39 @@ export function Header() {
                 </Link>
                 <Link href="/articles">
                   <DropdownMenuItem data-testid="dropdown-item-all-articles">
+                    <Newspaper className="h-4 w-4 mr-2" />
+                    Browse All Articles
+                  </DropdownMenuItem>
+                </Link>
+                
+                <DropdownMenuSeparator />
+                
+                <DropdownMenuLabel className="text-xs text-muted-foreground">
+                  Popular Tools with Articles
+                </DropdownMenuLabel>
+                
+                {popularTools.map((tool) => (
+                  <Link key={tool.id} href={`/tool/${tool.id}`}>
+                    <DropdownMenuItem data-testid={`dropdown-item-tool-${tool.id}`}>
+                      <div className="flex items-start gap-2 w-full">
+                        <BookOpen className="h-4 w-4 mt-0.5 text-primary shrink-0" />
+                        <div className="flex flex-col gap-0.5 flex-1 min-w-0">
+                          <span className="font-medium text-sm">{tool.title}</span>
+                          <span className="text-xs text-muted-foreground truncate">
+                            {tool.description}
+                          </span>
+                        </div>
+                      </div>
+                    </DropdownMenuItem>
+                  </Link>
+                ))}
+                
+                <DropdownMenuSeparator />
+                
+                <Link href="/tools">
+                  <DropdownMenuItem className="text-primary" data-testid="dropdown-item-view-more">
                     <FileText className="h-4 w-4 mr-2" />
-                    Browse Articles
+                    View All {tools.length} Tools
                   </DropdownMenuItem>
                 </Link>
               </DropdownMenuContent>
