@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
-import { FileText, ChevronDown, BookOpen, Newspaper } from "lucide-react";
+import { FileText, ChevronDown, Newspaper } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -10,6 +10,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { getToolIcon } from "@/lib/tool-icons";
 import type { PDFTool } from "@shared/schema";
 
 export function Header() {
@@ -17,7 +18,7 @@ export function Header() {
     queryKey: ['/api/tools'],
   });
 
-  const toolsWithArticles = tools.filter(tool => tool.article);
+  const toolsWithArticles = tools.filter(tool => tool.article && tool.article.title && tool.article.content);
   const popularTools = toolsWithArticles.slice(0, 8);
 
   return (
@@ -63,21 +64,24 @@ export function Header() {
                   Popular Tools with Articles
                 </DropdownMenuLabel>
                 
-                {popularTools.map((tool) => (
-                  <Link key={tool.id} href={`/tool/${tool.id}`}>
-                    <DropdownMenuItem data-testid={`dropdown-item-tool-${tool.id}`}>
-                      <div className="flex items-start gap-2 w-full">
-                        <BookOpen className="h-4 w-4 mt-0.5 text-primary shrink-0" />
-                        <div className="flex flex-col gap-0.5 flex-1 min-w-0">
-                          <span className="font-medium text-sm">{tool.title}</span>
-                          <span className="text-xs text-muted-foreground truncate">
-                            {tool.description}
-                          </span>
+                {popularTools.map((tool) => {
+                  const ToolIconComponent = getToolIcon(tool.id);
+                  return (
+                    <Link key={tool.id} href={`/tool/${tool.id}`}>
+                      <DropdownMenuItem data-testid={`dropdown-item-tool-${tool.id}`}>
+                        <div className="flex items-start gap-2 w-full">
+                          <ToolIconComponent className="h-4 w-4 mt-0.5 text-primary shrink-0" />
+                          <div className="flex flex-col gap-0.5 flex-1 min-w-0">
+                            <span className="font-medium text-sm">{tool.title}</span>
+                            <span className="text-xs text-muted-foreground truncate">
+                              {tool.description}
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </DropdownMenuItem>
-                  </Link>
-                ))}
+                      </DropdownMenuItem>
+                    </Link>
+                  );
+                })}
                 
                 <DropdownMenuSeparator />
                 
