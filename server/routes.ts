@@ -1,7 +1,8 @@
-import type { Express } from "express";
+import type { Express} from "express";
 import { createServer, type Server } from "http";
 import multer from "multer";
 import { PDFDocument } from "pdf-lib";
+import { pdfTools, toolCategories } from "@shared/schema";
 
 const upload = multer({ 
   storage: multer.memoryStorage(),
@@ -16,6 +17,40 @@ const upload = multer({
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  app.get('/api/tools', async (_req, res) => {
+    try {
+      res.json(pdfTools);
+    } catch (error) {
+      console.error('Error fetching tools:', error);
+      res.status(500).json({ error: 'Failed to fetch tools' });
+    }
+  });
+
+  app.get('/api/tools/:id', async (req, res) => {
+    try {
+      const { id } = req.params;
+      const tool = pdfTools.find(t => t.id === id);
+      
+      if (!tool) {
+        return res.status(404).json({ error: 'Tool not found' });
+      }
+      
+      res.json(tool);
+    } catch (error) {
+      console.error('Error fetching tool:', error);
+      res.status(500).json({ error: 'Failed to fetch tool' });
+    }
+  });
+
+  app.get('/api/categories', async (_req, res) => {
+    try {
+      res.json(toolCategories);
+    } catch (error) {
+      console.error('Error fetching categories:', error);
+      res.status(500).json({ error: 'Failed to fetch categories' });
+    }
+  });
+
   app.post('/api/process-pdf', upload.array('files', 100), async (req, res) => {
     try {
       const files = req.files as Express.Multer.File[];
