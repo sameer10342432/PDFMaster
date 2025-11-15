@@ -26,6 +26,9 @@ import {
   MoveRight, BadgeAlert, BadgeInfo, Info, Minimize,  Maximize,
   ChartLine, SquareDashed, RadioTower, TextCursorInput,
   Combine, Sliders, ReplaceAll, Upload, Aperture, Link,
+  Images, Table, Table2, DatabaseZap, FileCheck, FormInput,
+  FileSearch, Receipt, FileCode2, Brackets, TableProperties,
+  GitCompare, FileDiff, ScanSearch,
   type LucideIcon
 } from "lucide-react";
 
@@ -345,7 +348,6 @@ export const toolIcons: Record<string, LucideIcon> = {
   "flatten-pdf-comments": MessageSquare,
   "flatten-pdf-layers": Layers,
   "sanitize-pdf": ShieldCheck,
-  "linearize-pdf": TrendingUp,
 
   // Redact & Security
   "redact-pdf": EyeOff,
@@ -388,8 +390,6 @@ export const toolIcons: Record<string, LucideIcon> = {
   "pdf-to-images": ImageIcon,
   "images-to-pdf": ImagePlus,
   "pdf-to-text": FileText,
-  "pdf-to-html": Code,
-  "pdf-to-xml": FileCode,
   "pdf-to-json": FileJson,
   "pdf-to-svg": Image,
   "pdf-to-eps": FileOutput,
@@ -459,6 +459,58 @@ export const toolIcons: Record<string, LucideIcon> = {
 
   // PDF Converter (generic)
   "pdf-converter": Shuffle,
+
+  // Watermark & Stamp Tools (New)
+  "pdf-underlay": Layers,
+  "pdf-stamp-datetime": CalendarClock,
+  "pdf-stamp-username": UserCheck,
+  "pdf-bates-numbering-advanced": Hash,
+
+  // Data Extraction Tools (New)
+  "extract-text-from-pdf": TextCursorInput,
+  "pdf-text-extractor": FileText,
+  "extract-images-from-pdf": Image,
+  "pdf-image-extractor": Images,
+  "extract-tables-from-pdf": Table,
+  "pdf-table-extractor": Table2,
+  "extract-data-from-pdf": Database,
+  "pdf-data-extractor": DatabaseZap,
+  "extract-fonts-from-pdf": Type,
+
+  // PDF Converter Tools (New)
+  "pdf-to-excel-converter": FileSpreadsheet,
+  "pdf-to-csv-converter": FileCode,
+
+  // PDF Form Tools (New)
+  "fill-pdf-forms": FileInput,
+  "pdf-form-filler": FileCheck,
+  "create-fillable-pdf": FilePlus2,
+  "pdf-form-creator": FormInput,
+  "extract-pdf-form-data": FileOutput,
+  "read-pdf-form-data": FileSearch,
+  "flatten-pdf-form": Lock,
+  "pdf-form-data-to-csv": FileSpreadsheet,
+  "pdf-form-data-to-xml": FileCode,
+  "pdf-form-data-to-json": Braces,
+  "pdf-form-filler-csv": FileInput,
+  "pdf-form-filler-json": FileJson,
+  "pdf-form-data-export-csv": TableProperties,
+  "pdf-form-data-export-json": Package,
+
+  // Invoice & Business Tools (New)
+  "pdf-zugferd-invoice-extractor": Receipt,
+  "pdf-to-ubl-xml": FileCode2,
+
+  // PDF Viewer Tools (New)
+  "pdf-viewer": Eye,
+  "pdf-reader": BookOpen,
+  "open-pdf": FolderOpen,
+  "read-pdf-online": Globe,
+
+  // PDF Analysis Tools (New)
+  "compare-pdf": GitCompare,
+  "pdf-comparer": FileDiff,
+  "pdf-difference-checker": ScanSearch,
 
   // Default icon for any unmapped tools
   default: FileText,
