@@ -10436,6 +10436,901 @@ Deskewing maintains content quality while correcting alignment for perfect resul
 Automatically straighten all pages in a document or process multiple PDFs for consistent, professional results.`,
       relatedTools: ["auto-crop-pdf-margins", "crop-pdf", "organize-pdf-pages"]
     }
+  },
+  {
+    id: "pdf-booklet-maker",
+    title: "PDF Booklet Maker",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["booklet", "impose", "print", "binding"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Booklet Maker Online Free - Create Print-Ready Booklets",
+    metaDescription: "Create print-ready PDF booklets online for free. Impose PDF pages for booklet printing with perfect binding. Professional booklet maker tool.",
+    description: "Create professionally imposed PDF booklets ready for printing and binding",
+    icon: "book-open",
+    howTo: [
+      "Upload your PDF document",
+      "Select booklet size and orientation",
+      "Choose binding edge (left or right)",
+      "Download your print-ready booklet PDF"
+    ],
+    article: {
+      title: "How to Create PDF Booklets for Professional Printing",
+      content: `Transform standard PDFs into print-ready booklets with proper page imposition. Perfect for creating brochures, manuals, zines, and professional documents that need booklet-style binding.
+
+## What is PDF Booklet Imposition?
+
+Booklet imposition rearranges your PDF pages so they print correctly when folded and bound. Pages are reordered and positioned so that when the printed sheets are folded in half and stapled, the pages appear in the correct sequence.
+
+## Benefits of PDF Booklet Maker
+
+Create professional booklets easily:
+- Save on printing costs with DIY booklets
+- Perfect page alignment for folding
+- Professional-quality results
+- Compatible with any printer
+- No special software needed
+
+## Common Booklet Uses
+
+Our booklet maker is perfect for:
+- Event programs and brochures
+- Training manuals and guides
+- Product catalogs
+- Church bulletins
+- Conference materials
+- Educational handouts
+- Marketing materials
+
+## Booklet Printing Tips
+
+For best results when printing booklets:
+- Use duplex (double-sided) printing
+- Print in landscape mode for most booklets
+- Choose appropriate paper weight (24lb recommended)
+- Ensure proper margin settings
+- Test with a single sheet first
+
+## Professional Binding Options
+
+After creating your booklet PDF:
+- Saddle stitch (staple) binding for thin booklets
+- Perfect binding for thicker documents
+- Coil or comb binding for lay-flat booklets
+- Professional print shop finishing`,
+      relatedTools: ["organize-pdf-pages", "reorder-pdf-pages", "add-pages-to-pdf"]
+    }
+  },
+  {
+    id: "pdf-color-changer",
+    title: "PDF Color Changer",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["color", "change", "modify", "theme"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Color Changer Online Free - Change PDF Colors Instantly",
+    metaDescription: "Change PDF colors online for free. Modify text colors, background colors, and graphics in your PDF documents. Easy-to-use PDF color editor.",
+    description: "Modify and customize colors in your PDF documents with precision",
+    icon: "palette",
+    howTo: [
+      "Upload your PDF file",
+      "Select colors you want to change",
+      "Choose new replacement colors",
+      "Download your recolored PDF"
+    ],
+    article: {
+      title: "Change PDF Colors for Perfect Branding and Accessibility",
+      content: `Modify colors in PDF documents to match brand guidelines, improve readability, or meet accessibility requirements. Our PDF color changer makes color modifications simple and precise.
+
+## Why Change PDF Colors?
+
+Color modification is essential for:
+- Matching corporate brand colors
+- Improving accessibility and contrast
+- Preparing documents for grayscale printing
+- Updating outdated color schemes
+- Creating themed document variations
+
+## Common Color Changes
+
+Popular color modification tasks:
+- Convert colored text to black for printing
+- Change accent colors to match branding
+- Adjust background colors for better readability
+- Update logo colors in PDF templates
+- Create high-contrast versions for accessibility
+
+## Accessibility and WCAG Compliance
+
+Proper color contrast is crucial for:
+- Meeting WCAG 2.1 accessibility standards
+- Ensuring readability for colorblind users
+- Improving document usability
+- Legal compliance in government documents
+- Better user experience for all readers
+
+## Preserve Document Quality
+
+Our color changer maintains:
+- Original text sharpness
+- Image quality and resolution
+- Document layout and formatting
+- Fonts and typography
+- Links and interactive elements
+
+## Batch Color Processing
+
+Change colors across:
+- Multiple pages at once
+- Entire documents
+- Specific sections
+- Selected color ranges
+- Text, graphics, or backgrounds separately`,
+      relatedTools: ["pdf-to-grayscale", "invert-pdf-colors", "pdf-editor"]
+    }
+  },
+  {
+    id: "pdf-font-finder",
+    title: "PDF Font Finder",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["font", "finder", "identify", "typography"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Font Finder Online Free - Identify Fonts in PDF Documents",
+    metaDescription: "Find and identify fonts used in PDF documents online for free. Extract font information, analyze typography, and discover font names in PDFs.",
+    description: "Identify and analyze all fonts used in your PDF documents",
+    icon: "type",
+    howTo: [
+      "Upload your PDF document",
+      "Tool scans and analyzes all fonts",
+      "View complete list of fonts used",
+      "Export font information report"
+    ],
+    article: {
+      title: "Find and Identify Fonts in PDF Documents",
+      content: `Discover which fonts are used in any PDF document. Essential for designers, developers, and anyone working with PDF typography who needs to identify or replicate font choices.
+
+## Why Find PDF Fonts?
+
+Font identification is crucial for:
+- Matching typography in new designs
+- Ensuring font licensing compliance
+- Troubleshooting printing issues
+- Replicating design aesthetics
+- Document recreation and editing
+
+## What You'll Discover
+
+Our font finder reveals:
+- Font family names
+- Font weights and styles
+- Embedded vs. referenced fonts
+- Font encoding information
+- Subset and full font details
+- Font licensing metadata
+
+## Common Use Cases
+
+Professional applications:
+- Design template matching
+- Brand guideline compliance
+- Legal document verification
+- Print production preparation
+- Font licensing audits
+- Web design inspiration
+
+## Embedded vs. Referenced Fonts
+
+Understanding font embedding:
+- Embedded fonts travel with the PDF
+- Referenced fonts require local installation
+- Subset fonts include only used characters
+- Full fonts contain complete character sets
+- Licensing implications of font embedding
+
+## Font Compliance and Licensing
+
+Important considerations:
+- Verify font usage rights
+- Check commercial license requirements
+- Ensure embedding permissions
+- Avoid font copyright violations
+- Document font sources for legal compliance
+
+## Typography Analysis
+
+Analyze PDF typography:
+- Font pairing combinations
+- Size and spacing metrics
+- Color and styling choices
+- Hierarchy and structure
+- Accessibility considerations`,
+      relatedTools: ["pdf-metadata-editor", "edit-pdf-text", "pdf-editor"]
+    }
+  },
+  {
+    id: "pdf-link-checker",
+    title: "PDF Link Checker",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["link", "checker", "verify", "validation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Link Checker Online Free - Verify PDF Hyperlinks",
+    metaDescription: "Check PDF links online for free. Verify and validate all hyperlinks in your PDF documents. Find broken links and ensure PDF quality.",
+    description: "Scan and verify all hyperlinks in your PDF documents for validity",
+    icon: "link-2",
+    howTo: [
+      "Upload your PDF document",
+      "Tool scans all links automatically",
+      "Review link validation results",
+      "Download report of broken links"
+    ],
+    article: {
+      title: "Check and Verify PDF Hyperlinks for Quality Assurance",
+      content: `Ensure all hyperlinks in your PDF documents are working correctly. Essential for quality assurance, professional publishing, and maintaining document integrity.
+
+## Why Check PDF Links?
+
+Link verification is important for:
+- Professional document quality
+- User experience and navigation
+- SEO and web presence
+- Legal and compliance documents
+- Academic and research papers
+- Marketing and sales materials
+
+## What Gets Checked
+
+Our link checker verifies:
+- External web URLs
+- Internal page references
+- Email addresses
+- File attachments
+- Anchor links within document
+- Cross-reference links
+
+## Common Link Issues
+
+Identify problems such as:
+- 404 broken links
+- Redirect chains
+- HTTPS security issues
+- Malformed URLs
+- Dead email addresses
+- Missing internal references
+
+## Quality Assurance Benefits
+
+Professional document validation:
+- Maintain credibility and professionalism
+- Prevent user frustration
+- Ensure accessibility compliance
+- Verify citation accuracy
+- Protect brand reputation
+
+## Link Types Supported
+
+Check various link formats:
+- HTTP and HTTPS URLs
+- FTP file links
+- Email mailto links
+- Internal page jumps
+- Named destinations
+- Attached file references
+
+## Batch Link Checking
+
+Efficiently verify:
+- Hundreds of links at once
+- Multiple PDF documents
+- Entire document libraries
+- Regular scheduled checks
+- Version comparison analysis
+
+## Reporting and Documentation
+
+Receive detailed reports showing:
+- Total links found
+- Working vs. broken links
+- Link destinations and types
+- Error codes and messages
+- Recommendations for fixes
+- Export data for tracking`,
+      relatedTools: ["pdf-link-editor", "add-hyperlink-to-pdf", "edit-pdf"]
+    }
+  },
+  {
+    id: "pdf-bookmark-creator",
+    title: "PDF Bookmark Creator",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["bookmark", "toc", "navigation", "outline"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Bookmark Creator Online Free - Add Bookmarks to PDF",
+    metaDescription: "Create PDF bookmarks and table of contents online for free. Add navigation bookmarks to PDF documents. Easy PDF outline creator.",
+    description: "Add navigation bookmarks and table of contents to your PDF documents",
+    icon: "bookmark",
+    howTo: [
+      "Upload your PDF document",
+      "Define bookmark structure and titles",
+      "Assign page destinations",
+      "Download PDF with bookmarks added"
+    ],
+    article: {
+      title: "Create PDF Bookmarks for Better Document Navigation",
+      content: `Add bookmarks to PDF documents for easy navigation through long documents. Essential for manuals, reports, ebooks, and any PDF that benefits from structured navigation.
+
+## Benefits of PDF Bookmarks
+
+Bookmarks enhance documents by:
+- Enabling quick navigation to specific sections
+- Creating professional table of contents
+- Improving user experience
+- Making documents more accessible
+- Organizing lengthy content logically
+
+## When to Add Bookmarks
+
+Bookmarks are essential for:
+- Technical manuals and documentation
+- Academic theses and dissertations
+- Legal contracts and agreements
+- Annual reports and financial documents
+- Training materials and handbooks
+- Ebooks and digital publications
+
+## Bookmark Structure
+
+Create hierarchical navigation:
+- Main chapter bookmarks
+- Section and subsection bookmarks
+- Multi-level nested structures
+- Automatic page number references
+- Customizable bookmark titles
+
+## Professional Applications
+
+Business and professional uses:
+- Corporate reports with quick navigation
+- Product catalogs with category bookmarks
+- Training manuals with topic bookmarks
+- Legal documents with section bookmarks
+- Research papers with chapter bookmarks
+
+## Accessibility Compliance
+
+Bookmarks improve accessibility:
+- Screen reader navigation support
+- WCAG compliance requirement
+- Keyboard navigation enhancement
+- PDF/UA (Universal Accessibility) standard
+- Section 508 compliance
+
+## Automatic Bookmark Generation
+
+Create bookmarks from:
+- Existing heading styles
+- Page labels
+- Table of contents
+- Document structure
+- Custom rules and patterns
+
+## Bookmark Customization
+
+Customize appearance and behavior:
+- Bookmark titles and naming
+- Hierarchy and nesting levels
+- Expand/collapse default states
+- Icon and styling options
+- Destination page views`,
+      relatedTools: ["pdf-page-labeler", "organize-pdf-pages", "merge-pdf-bookmarks"]
+    }
+  },
+  {
+    id: "unlock-pdf",
+    title: "Unlock PDF (Remove Password)",
+    category: "Security" as ToolCategory,
+    tags: ["unlock", "password", "remove", "decrypt"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Unlock PDF Online Free - Remove PDF Password Protection",
+    metaDescription: "Unlock password-protected PDF files online for free. Remove PDF passwords and decrypt protected documents. Fast and secure PDF unlocking.",
+    description: "Remove password protection from PDF files you own",
+    icon: "unlock",
+    howTo: [
+      "Upload your password-protected PDF",
+      "Enter the owner password",
+      "Tool removes password protection",
+      "Download your unlocked PDF"
+    ],
+    article: {
+      title: "Unlock PDF Files and Remove Password Protection",
+      content: `Remove password protection from PDF files you own or have permission to unlock. Essential when you've forgotten passwords or need to work with protected documents.
+
+## Why Unlock PDFs?
+
+Common reasons to remove passwords:
+- Forgotten document passwords
+- Easier file sharing and collaboration
+- Removing unnecessary restrictions
+- Enabling printing and editing
+- Simplifying document workflows
+- Legacy document access
+
+## Password Types in PDFs
+
+PDFs can have two password types:
+- User password (open password) - prevents opening the PDF
+- Owner password (permissions password) - restricts editing, printing, copying
+- Both passwords can be set independently
+- Different security implications
+
+## Legal Considerations
+
+Important legal points:
+- Only unlock PDFs you own or have permission to decrypt
+- Respect copyright and intellectual property
+- Don't circumvent security for unauthorized access
+- Consider data privacy implications
+- Follow organizational security policies
+
+## When to Keep Password Protection
+
+Maintain security for:
+- Confidential business documents
+- Personal financial information
+- Legal contracts and agreements
+- Health and medical records
+- Sensitive client data
+
+## After Unlocking
+
+Once unlocked, you can:
+- Edit text and content
+- Print documents freely
+- Copy and extract text
+- Merge with other PDFs
+- Add annotations and comments
+- Fill and save forms
+
+## Security Best Practices
+
+After removing passwords:
+- Store documents securely
+- Use encrypted file storage
+- Control access through permissions
+- Consider alternative security methods
+- Back up important documents
+- Review security regularly
+
+## Alternative Security Methods
+
+Consider these options:
+- File-level encryption
+- Secure cloud storage
+- Access control lists
+- Digital rights management
+- Watermarking
+- Secure sharing platforms`,
+      relatedTools: ["protect-pdf", "encrypt-pdf", "pdf-security"]
+    }
+  },
+  {
+    id: "protect-pdf",
+    title: "Protect PDF (Add Password)",
+    category: "Security" as ToolCategory,
+    tags: ["protect", "password", "encrypt", "secure"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Protect PDF with Password Online Free - Encrypt PDF Documents",
+    metaDescription: "Password protect PDF files online for free. Encrypt and secure your PDF documents with passwords. Easy PDF protection tool.",
+    description: "Add password protection and encrypt your PDF documents for security",
+    icon: "lock",
+    howTo: [
+      "Upload your PDF document",
+      "Set a strong password",
+      "Choose permission settings",
+      "Download your protected PDF"
+    ],
+    article: {
+      title: "Protect PDF Documents with Password Encryption",
+      content: `Secure your PDF documents with password protection and encryption. Essential for protecting sensitive information, confidential documents, and controlling document access.
+
+## Why Protect PDFs with Passwords?
+
+Password protection is crucial for:
+- Confidential business documents
+- Financial and legal files
+- Personal information protection
+- Client data security
+- Intellectual property protection
+- Compliance requirements
+
+## Types of PDF Protection
+
+Two levels of security:
+- User password (Document Open) - prevents unauthorized opening
+- Owner password (Permissions) - controls editing, printing, copying
+- Set one or both for layered security
+- Different passwords for different purposes
+
+## Encryption Standards
+
+Modern PDF encryption:
+- AES 256-bit encryption (strongest)
+- AES 128-bit encryption (balanced)
+- RC4 128-bit (legacy compatibility)
+- PDF 2.0 encryption standards
+- Industry-standard security
+
+## Permission Controls
+
+Restrict specific actions:
+- Prevent printing
+- Disable copying text
+- Block editing and modifications
+- Restrict annotation and comments
+- Control form field filling
+- Prevent page extraction
+
+## Best Practices for PDF Security
+
+Create strong protection:
+- Use strong, unique passwords
+- Minimum 12 characters recommended
+- Mix letters, numbers, symbols
+- Avoid personal information
+- Different passwords for different files
+- Store passwords securely
+
+## Password Management
+
+Secure password handling:
+- Use password managers
+- Never share passwords via email
+- Separate user and owner passwords
+- Document password locations
+- Regular password updates
+- Secure password recovery methods
+
+## Compliance and Regulations
+
+Meet security requirements:
+- HIPAA for healthcare documents
+- GDPR for personal data
+- SOX for financial records
+- FERPA for educational records
+- PCI DSS for payment information
+- Industry-specific regulations
+
+## When to Password Protect
+
+Protect these document types:
+- Contracts and agreements
+- Financial statements
+- Medical records
+- Tax documents
+- Confidential reports
+- Personal identification documents
+- Intellectual property`,
+      relatedTools: ["unlock-pdf", "encrypt-pdf", "pdf-security"]
+    }
+  },
+  {
+    id: "pdf-annotation-remover",
+    title: "PDF Annotation Remover",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["annotation", "remove", "comments", "clean"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Remove PDF Annotations Online Free - Delete PDF Comments",
+    metaDescription: "Remove annotations from PDF files online for free. Delete comments, highlights, and markup from PDFs. Clean PDF annotation remover.",
+    description: "Remove comments, highlights, and all annotations from PDF documents",
+    icon: "eraser",
+    howTo: [
+      "Upload your annotated PDF",
+      "Select annotation types to remove",
+      "Tool removes all selected annotations",
+      "Download your clean PDF"
+    ],
+    article: {
+      title: "Remove PDF Annotations and Comments for Clean Documents",
+      content: `Strip all annotations, comments, and markup from PDF documents. Perfect for creating final versions, removing review feedback, or preparing documents for distribution.
+
+## What Are PDF Annotations?
+
+Annotations include:
+- Text comments and notes
+- Highlighting and underlining
+- Sticky notes and pop-ups
+- Drawings and shapes
+- Stamps and watermarks
+- Markup and redaction
+- Attachments and files
+
+## Why Remove Annotations?
+
+Common reasons to clean PDFs:
+- Creating final document versions
+- Removing internal review comments
+- Preparing for client delivery
+- Cleaning up legacy documents
+- Professional presentation
+- Privacy and confidentiality
+
+## Selective Annotation Removal
+
+Remove specific types:
+- All comments at once
+- Only highlights
+- Specific annotation authors
+- Date-range based removal
+- Page-specific cleanup
+- Type-selective deletion
+
+## Professional Use Cases
+
+Business applications:
+- Finalizing reviewed documents
+- Preparing legal filings
+- Creating distribution copies
+- Cleaning archived documents
+- Publishing final versions
+- Client deliverable preparation
+
+## Privacy and Confidentiality
+
+Protect sensitive information:
+- Remove internal discussion notes
+- Delete confidential comments
+- Clean proprietary feedback
+- Strip metadata from annotations
+- Ensure no tracked changes remain
+- Verify complete removal
+
+## Annotation vs. Content
+
+Understanding the difference:
+- Annotations are overlays, not part of content
+- Can be removed without affecting text
+- Separate from document structure
+- Reversible in most cases
+- Different from embedded content
+
+## Before Removal Best Practices
+
+Preparation steps:
+- Save original annotated version
+- Review all comments for action items
+- Verify annotations are preserved elsewhere
+- Check for embedded responses
+- Document removal process
+- Create backup copies
+
+## After Removal Verification
+
+Ensure clean documents:
+- Open in multiple PDF readers
+- Check all pages thoroughly
+- Verify no hidden annotations
+- Test printing output
+- Confirm metadata is clean
+- Validate file size reduction`,
+      relatedTools: ["flatten-pdf", "remove-pdf-metadata", "sanitize-pdf"]
+    }
+  },
+  {
+    id: "pdf-page-labeler",
+    title: "PDF Page Labeler",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["label", "numbering", "pages", "organize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Page Labeler Online Free - Add Custom Page Labels to PDFs",
+    metaDescription: "Add custom page labels and numbering to PDF documents online for free. Create professional page labeling schemes for your PDFs.",
+    description: "Add custom page labels and numbering schemes to your PDF documents",
+    icon: "hash",
+    howTo: [
+      "Upload your PDF document",
+      "Define page labeling scheme",
+      "Assign labels to page ranges",
+      "Download PDF with custom labels"
+    ],
+    article: {
+      title: "Create Professional PDF Page Labeling Schemes",
+      content: `Add custom page labels to PDFs for professional document organization. Perfect for documents with front matter, appendices, or complex numbering requirements.
+
+## What Are PDF Page Labels?
+
+Page labels define how pages are numbered:
+- Display labels (i, ii, iii, 1, 2, 3, A, B, C)
+- Different from physical page indices
+- Shown in PDF reader navigation
+- Support multiple numbering schemes
+- Professional document structure
+
+## Benefits of Page Labeling
+
+Professional advantages:
+- Match printed document numbering
+- Support academic formatting standards
+- Organize complex documents logically
+- Improve navigation and usability
+- Meet publication requirements
+- Professional appearance
+
+## Common Labeling Schemes
+
+Standard numbering formats:
+- Roman numerals (i, ii, iii) for front matter
+- Arabic numbers (1, 2, 3) for main content
+- Letters (A, B, C) for appendices
+- Custom prefixes (A-1, B-1)
+- Mixed schemes in one document
+
+## Document Types Using Labels
+
+Professional applications:
+- Academic theses and dissertations
+- Books and ebooks
+- Technical manuals
+- Legal documents
+- Annual reports
+- Conference proceedings
+- Grant proposals
+
+## Academic Document Standards
+
+Meet formatting requirements:
+- APA, MLA, Chicago style guidelines
+- University thesis requirements
+- Journal publication standards
+- Dissertation formatting rules
+- Professional publication standards
+
+## Page Label Components
+
+Customize labeling with:
+- Numbering style (Arabic, Roman, letters)
+- Starting number
+- Prefix text
+- Suffix text
+- Multiple ranges
+- Continuation options
+
+## Complex Numbering Examples
+
+Real-world scenarios:
+- Front matter: i-x (Roman)
+- Main content: 1-250 (Arabic)
+- Appendix A: A-1 to A-20
+- Appendix B: B-1 to B-15
+- Index: I-1 to I-5
+
+## Navigation Benefits
+
+Enhanced user experience:
+- Accurate page references
+- Logical document flow
+- Match table of contents
+- Cross-reference accuracy
+- Better accessibility`,
+      relatedTools: ["pdf-bookmark-creator", "organize-pdf-pages", "add-pages-to-pdf"]
+    }
+  },
+  {
+    id: "pdf-javascript-remover",
+    title: "PDF JavaScript Remover",
+    category: "Security" as ToolCategory,
+    tags: ["javascript", "remove", "security", "clean"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Remove JavaScript from PDF Online Free - Clean PDF Scripts",
+    metaDescription: "Remove JavaScript from PDF files online for free. Clean embedded scripts and enhance PDF security. Safe PDF JavaScript removal.",
+    description: "Remove embedded JavaScript code from PDF files for enhanced security",
+    icon: "shield-off",
+    howTo: [
+      "Upload your PDF document",
+      "Tool scans for embedded JavaScript",
+      "Removes all JavaScript code safely",
+      "Download your clean, secure PDF"
+    ],
+    article: {
+      title: "Remove JavaScript from PDFs for Security and Compatibility",
+      content: `Strip JavaScript code from PDF documents to improve security, compatibility, and reliability. Essential for creating safe, universally compatible PDF files.
+
+## Why Remove JavaScript from PDFs?
+
+Important security and compatibility reasons:
+- Eliminate potential security vulnerabilities
+- Prevent malicious code execution
+- Improve PDF compatibility
+- Meet security policy requirements
+- Ensure reliable document behavior
+- Simplify PDF processing
+
+## Security Risks of PDF JavaScript
+
+JavaScript in PDFs can:
+- Execute malicious code
+- Access system resources
+- Modify document content
+- Trigger phishing attacks
+- Bypass security restrictions
+- Create privacy concerns
+
+## What Gets Removed
+
+Our tool removes:
+- Document-level JavaScript
+- Page-level scripts
+- Form field scripts
+- Action triggers
+- Custom functions
+- Event handlers
+- Embedded code libraries
+
+## Compatibility Issues
+
+JavaScript can cause problems:
+- Different behavior across PDF readers
+- Mobile device incompatibility
+- Print server issues
+- Archive system rejections
+- Government submission failures
+- Long-term preservation concerns
+
+## When to Remove JavaScript
+
+Remove scripts for:
+- Long-term document archiving
+- Government form submissions
+- Legal document filing
+- Cross-platform compatibility
+- Security compliance
+- Email attachment safety
+
+## PDF/A Compliance
+
+JavaScript removal required for:
+- PDF/A archival format
+- ISO 19005 compliance
+- Legal records retention
+- Historical documentation
+- Regulatory submissions
+- Permanent archives
+
+## Impact on PDF Forms
+
+Understanding form changes:
+- Interactive form features may be lost
+- Auto-calculation removed
+- Validation rules disabled
+- Dynamic behavior eliminated
+- Static form fields remain
+- Manual completion required
+
+## After JavaScript Removal
+
+Your PDF becomes:
+- More secure and safe
+- Universally compatible
+- Easier to process
+- Simpler to archive
+- Lighter file size
+- More reliable
+
+## Alternative Solutions
+
+Instead of JavaScript:
+- Server-side form processing
+- Web form submissions
+- Static PDF forms
+- Separate validation tools
+- Manual calculation
+- Simplified workflows
+
+## Security Best Practices
+
+Enhance PDF security:
+- Remove unnecessary scripts
+- Scan for embedded content
+- Verify PDF sources
+- Use trusted PDF creators
+- Keep software updated
+- Follow security policies`,
+      relatedTools: ["pdf-action-remover", "sanitize-pdf", "remove-pdf-metadata"]
+    }
   }
 ] as const;
 
