@@ -74,7 +74,7 @@ export default function Home() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                {pdfTools.map((tool) => (
+                {pdfTools.slice(0, 12).map((tool) => (
                   <ToolCard
                     key={tool.id}
                     id={tool.id}

@@ -4,16 +4,28 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ToolCard } from "@/components/ToolCard";
 import { Input } from "@/components/ui/input";
-import { pdfTools } from "@shared/schema";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { pdfTools, toolCategories } from "@shared/schema";
 import { Search } from "lucide-react";
 
 export default function Tools() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [activeCategory, setActiveCategory] = useState<string>("all");
 
-  const filteredTools = pdfTools.filter(tool =>
-    tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    tool.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredTools = pdfTools.filter(tool => {
+    const matchesSearch = tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      tool.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      tool.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const matchesCategory = activeCategory === "all" || tool.category === activeCategory;
+    
+    return matchesSearch && matchesCategory;
+  });
+
+  const toolsByCategory = toolCategories.reduce((acc, category) => {
+    acc[category] = pdfTools.filter(tool => tool.category === category);
+    return acc;
+  }, {} as Record<string, typeof pdfTools>);
 
   return (
     <>
@@ -58,31 +70,55 @@ export default function Tools() {
 
           <section className="py-12 md:py-16">
             <div className="container mx-auto max-w-7xl px-4">
-              {filteredTools.length > 0 ? (
-                <>
-                  <div className="mb-8">
-                    <p className="text-sm text-muted-foreground">
-                      Showing {filteredTools.length} {filteredTools.length === 1 ? 'tool' : 'tools'}
-                    </p>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    {filteredTools.map((tool) => (
-                      <ToolCard
-                        key={tool.id}
-                        id={tool.id}
-                        title={tool.title}
-                        description={tool.description}
-                        icon={tool.icon}
-                      />
-                    ))}
-                  </div>
-                </>
-              ) : (
-                <div className="text-center py-12">
-                  <p className="text-muted-foreground">No tools found matching your search.</p>
-                </div>
-              )}
+              <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
+                <TabsList className="flex flex-wrap h-auto gap-2 mb-8 justify-start bg-transparent">
+                  <TabsTrigger 
+                    value="all"
+                    className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                    data-testid="tab-all"
+                  >
+                    All Tools ({pdfTools.length})
+                  </TabsTrigger>
+                  {toolCategories.map((category) => (
+                    <TabsTrigger 
+                      key={category}
+                      value={category}
+                      className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                      data-testid={`tab-${category.toLowerCase().replace(/\s+/g, '-')}`}
+                    >
+                      {category} ({toolsByCategory[category]?.length || 0})
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+
+                <TabsContent value={activeCategory} className="mt-0">
+                  {filteredTools.length > 0 ? (
+                    <>
+                      <div className="mb-8">
+                        <p className="text-sm text-muted-foreground">
+                          Showing {filteredTools.length} {filteredTools.length === 1 ? 'tool' : 'tools'}
+                        </p>
+                      </div>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                        {filteredTools.map((tool) => (
+                          <ToolCard
+                            key={tool.id}
+                            id={tool.id}
+                            title={tool.title}
+                            description={tool.description}
+                            icon={tool.icon}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    <div className="text-center py-12">
+                      <p className="text-muted-foreground">No tools found matching your search.</p>
+                    </div>
+                  )}
+                </TabsContent>
+              </Tabs>
             </div>
           </section>
         </main>
