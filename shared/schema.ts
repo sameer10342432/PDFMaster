@@ -291,7 +291,55 @@ export const toolEmojis: Record<string, string> = {
   "invert-pdf-colors": "🎨",
   "pdf-color-inverter": "🖌️",
   "auto-crop-pdf-margins": "✂️",
-  "auto-deskew-pdf": "📏"
+  "auto-deskew-pdf": "📏",
+
+  // Signature and certification tools
+  "sign-pdf": "✍️",
+  "pdf-signer": "🖊️",
+  "esign-pdf": "📝",
+  "add-signature-to-pdf": "✒️",
+  "request-pdf-signature": "📧",
+  "pdf-signature-tool": "🔏",
+  "validate-pdf-signature": "✅",
+  "certify-pdf": "🎓",
+  "pdf-locker": "🔐",
+  "pdf-digital-signature-validator": "🔍",
+  "add-timestamp-to-pdf": "⏰",
+  "pdf-certificate-adder": "🏆",
+  "pdf-signature-remover": "🗑️",
+
+  // Watermark tools
+  "watermark-pdf": "💧",
+  "pdf-watermarker": "🏷️",
+  "add-text-watermark": "📝",
+  "add-image-watermark": "🖼️",
+  "add-tiled-watermark": "🔲",
+  "remove-watermark-from-pdf": "🧹",
+  "pdf-watermark-remover": "❌",
+  "pdf-watermark-pdf": "💦",
+  "pdf-overlay": "📑",
+
+  // Stamp tools
+  "stamp-pdf": "📮",
+  "pdf-stamper": "⚡",
+  "add-confidential-stamp": "🔒",
+  "add-draft-stamp": "📄",
+  "custom-pdf-stamp": "🎨",
+
+  // Page numbers, headers, and footers
+  "add-page-numbers": "🔢",
+  "pdf-page-numbering": "📊",
+  "add-bates-numbering": "🔐",
+  "add-header-to-pdf": "⬆️",
+  "add-footer-to-pdf": "⬇️",
+  "add-bates-stamp": "🏷️",
+  "add-header-and-footer": "📑",
+  "add-page-numbers-start-at-x": "🔢",
+  "add-page-numbers-roman": "Ⅰ",
+  "add-header-date-time": "📅",
+  "add-footer-page-x-of-y": "📃",
+  "remove-pdf-header": "🗑️",
+  "remove-pdf-footer": "❌"
 };
 
 // PDF Tool definitions with SEO metadata
@@ -13770,6 +13818,1909 @@ Security assurance:
 - Trusted security
 - Complete confidence`,
       relatedTools: ["pdf-security", "protect-pdf", "encrypt-pdf"]
+    }
+  },
+
+  // Signature Tools
+  {
+    id: "sign-pdf",
+    title: "Sign PDF",
+    category: "Security" as ToolCategory,
+    tags: ["sign", "signature", "esign", "digital"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Sign PDF Online Free - Add Digital Signature to PDF Documents",
+    metaDescription: "Sign PDF documents online for free. Add your digital signature to PDFs securely. Fast, easy, and legally binding electronic signatures.",
+    description: "Add your digital signature to PDF documents securely and legally",
+    icon: "pen-tool",
+    howTo: [
+      "Upload your PDF document",
+      "Draw, type, or upload your signature",
+      "Position the signature on the document",
+      "Download your signed PDF"
+    ],
+    article: {
+      title: "Sign PDF Documents Digitally",
+      content: `Digital signatures provide a secure and legally binding way to sign PDF documents electronically. Our tool makes it easy to add your signature to any PDF without printing.
+
+## Types of Signatures
+
+Choose your signing method:
+- Draw your signature with mouse or touchscreen
+- Type your name and select a signature font
+- Upload an image of your handwritten signature
+- Use a stored signature for quick signing
+
+## Legal Validity
+
+Digital signatures created with our tool are legally binding in most jurisdictions, meeting requirements for electronic signature laws like eSign Act and ESIGN.
+
+## Secure Signing
+
+All signatures are applied securely with encryption to prevent tampering. The signed document maintains integrity and authenticity.`,
+      relatedTools: ["esign-pdf", "add-signature-to-pdf", "certify-pdf"]
+    }
+  },
+  {
+    id: "pdf-signer",
+    title: "PDF Signer",
+    category: "Security" as ToolCategory,
+    tags: ["signer", "sign", "signature", "electronic"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Signer Tool - Professional PDF Signing Solution Free",
+    metaDescription: "Professional PDF signer tool for electronic signatures. Sign PDF documents securely online. Free, fast, and legally compliant PDF signing.",
+    description: "Professional PDF signing tool for business documents",
+    icon: "edit-3",
+    howTo: [
+      "Upload PDF to sign",
+      "Create or select your signature",
+      "Add signature fields and initial fields",
+      "Download professionally signed PDF"
+    ],
+    article: {
+      title: "Professional PDF Signing",
+      content: `Our PDF signer provides professional signing capabilities for business documents, contracts, and legal paperwork with full security and compliance.
+
+## Business Signing
+
+Perfect for:
+- Contracts and agreements
+- HR documents
+- Financial paperwork
+- Legal documents
+- Purchase orders
+- Client proposals
+
+## Multiple Signatures
+
+Add multiple signature fields for different signers, create initial boxes, and add date fields for comprehensive document signing.
+
+## Compliance Ready
+
+Meets industry standards for electronic signatures including ESIGN, UETA, and eIDAS regulations for legal validity worldwide.`,
+      relatedTools: ["sign-pdf", "certify-pdf", "validate-pdf-signature"]
+    }
+  },
+  {
+    id: "esign-pdf",
+    title: "eSign PDF",
+    category: "Security" as ToolCategory,
+    tags: ["esign", "electronic", "signature", "sign"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "eSign PDF Documents Online - Electronic Signature Tool Free",
+    metaDescription: "eSign PDF documents with electronic signatures online for free. Quick, secure, and legally binding PDF electronic signing.",
+    description: "Electronic signature solution for PDF documents",
+    icon: "file-signature",
+    howTo: [
+      "Upload your PDF",
+      "Create your electronic signature",
+      "Place signature on document",
+      "Download eSigned PDF"
+    ],
+    article: {
+      title: "Electronic PDF Signatures",
+      content: `Electronic signatures (eSignatures) provide a modern, paperless way to sign documents. Fast, secure, and legally recognized worldwide.
+
+## eSignature Benefits
+
+Advantages of electronic signing:
+- Instant document signing
+- No printing or scanning
+- Reduced paper waste
+- Faster turnaround times
+- Lower costs
+- Environmental benefits
+
+## Legally Binding
+
+eSignatures are legally binding and recognized under laws including ESIGN Act, UETA, and eIDAS, making them valid for most business and legal documents.
+
+## Remote Signing
+
+Perfect for remote work, allowing documents to be signed from anywhere, on any device, without physical presence.`,
+      relatedTools: ["sign-pdf", "pdf-signature-tool", "request-pdf-signature"]
+    }
+  },
+  {
+    id: "add-signature-to-pdf",
+    title: "Add Signature to PDF",
+    category: "Security" as ToolCategory,
+    tags: ["add", "signature", "insert", "sign"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Signature to PDF Free - Insert Signatures into PDF Files",
+    metaDescription: "Add signature to PDF files online for free. Insert your signature anywhere in PDF documents. Simple signature addition tool.",
+    description: "Insert signatures into PDF documents at any location",
+    icon: "plus-circle",
+    howTo: [
+      "Upload PDF document",
+      "Create or upload your signature",
+      "Click to place signature anywhere on page",
+      "Download PDF with added signature"
+    ],
+    article: {
+      title: "Add Signatures to PDF Documents",
+      content: `Adding signatures to PDFs is essential for authorizing documents, approving forms, and validating paperwork. Our tool makes it simple to add signatures anywhere on your PDF.
+
+## Flexible Placement
+
+Place signatures precisely:
+- Bottom of pages for sign-off
+- Specific signature lines
+- Multiple pages for initials
+- Custom locations as needed
+
+## Signature Options
+
+Multiple ways to add your signature:
+- Hand-drawn signatures
+- Typed signatures with fonts
+- Uploaded signature images
+- Saved signatures for reuse
+
+## Professional Results
+
+Added signatures appear professional and are sized appropriately for the document, maintaining quality at any zoom level.`,
+      relatedTools: ["sign-pdf", "esign-pdf", "pdf-signer"]
+    }
+  },
+  {
+    id: "request-pdf-signature",
+    title: "Request PDF Signature",
+    category: "Security" as ToolCategory,
+    tags: ["request", "signature", "workflow", "send"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Request PDF Signature Online - Send PDFs for Signing Free",
+    metaDescription: "Request PDF signatures online for free. Send documents for signing via email. Track signature requests and get documents signed faster.",
+    description: "Send PDF documents to others for signature collection",
+    icon: "send",
+    howTo: [
+      "Upload PDF document",
+      "Add signature fields where needed",
+      "Enter recipient email addresses",
+      "Track signature status and receive signed document"
+    ],
+    article: {
+      title: "Request Signatures on PDF Documents",
+      content: `Requesting signatures allows you to send documents to others for signing, making it easy to collect signatures from clients, partners, or team members remotely.
+
+## Signature Workflows
+
+Streamline document signing:
+- Send to one or multiple signers
+- Set signing order (sequential signing)
+- Add deadline reminders
+- Track signature status
+- Receive notifications when signed
+
+## Use Cases
+
+Perfect for:
+- Client contracts
+- Employment agreements
+- NDAs and legal documents
+- Approval workflows
+- Vendor agreements
+- Partnership documents
+
+## Professional Process
+
+Create professional signature workflows with automated reminders, tracking, and instant notification when documents are fully signed.`,
+      relatedTools: ["esign-pdf", "sign-pdf", "pdf-signature-tool"]
+    }
+  },
+  {
+    id: "pdf-signature-tool",
+    title: "PDF Signature Tool",
+    category: "Security" as ToolCategory,
+    tags: ["signature", "tool", "complete", "signing"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Signature Tool - Complete Signing Solution Free Online",
+    metaDescription: "Complete PDF signature tool with all signing features. Add, request, validate signatures on PDF documents online for free.",
+    description: "Comprehensive PDF signature solution with all features",
+    icon: "tool",
+    howTo: [
+      "Upload your PDF",
+      "Choose signing mode (sign yourself, request signatures, or validate)",
+      "Complete the signature workflow",
+      "Download or send signed document"
+    ],
+    article: {
+      title: "Complete PDF Signature Solution",
+      content: `Our comprehensive signature tool provides everything needed for PDF signing - from creating signatures to requesting them from others to validating existing signatures.
+
+## All-in-One Features
+
+Complete signature capabilities:
+- Self-signing documents
+- Requesting signatures
+- Multi-party signing
+- Signature validation
+- Certificate management
+- Timestamp addition
+
+## Workflow Management
+
+Manage complex signing workflows:
+- Sequential signing
+- Parallel signing
+- Conditional signing
+- Approval chains
+- Custom workflows
+
+## Enterprise Features
+
+Business-ready capabilities:
+- Audit trails
+- Legal compliance
+- Brand customization
+- Template management
+- Bulk signing`,
+      relatedTools: ["sign-pdf", "validate-pdf-signature", "certify-pdf"]
+    }
+  },
+  {
+    id: "validate-pdf-signature",
+    title: "Validate PDF Signature",
+    category: "Security" as ToolCategory,
+    tags: ["validate", "verify", "signature", "check"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Validate PDF Signature Online - Verify Digital Signatures Free",
+    metaDescription: "Validate PDF signatures online for free. Verify digital signature authenticity and certificate validity. Instant signature validation.",
+    description: "Verify the authenticity and validity of PDF signatures",
+    icon: "shield-check",
+    howTo: [
+      "Upload signed PDF",
+      "View signature validation results",
+      "Check certificate details and validity",
+      "Verify document has not been modified"
+    ],
+    article: {
+      title: "Validate PDF Digital Signatures",
+      content: `Signature validation ensures that signed PDF documents are authentic, haven't been tampered with, and were signed by the stated party. Essential for legal and business documents.
+
+## Validation Checks
+
+Comprehensive verification:
+- Signature authenticity
+- Certificate validity
+- Document integrity
+- Timestamp verification
+- Signer identity
+- Tamper detection
+
+## Trust Verification
+
+Check signature trust:
+- Certificate authority validation
+- Trust chain verification
+- Expiration checking
+- Revocation status
+- Trusted certificate lists
+
+## Legal Assurance
+
+Validation provides legal assurance that documents are authentic and unmodified, critical for contracts, agreements, and legal filings.`,
+      relatedTools: ["pdf-digital-signature-validator", "certify-pdf", "sign-pdf"]
+    }
+  },
+  {
+    id: "certify-pdf",
+    title: "Certify PDF",
+    category: "Security" as ToolCategory,
+    tags: ["certify", "certificate", "secure", "authenticate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Certify PDF Documents Online - Add Digital Certificate Free",
+    metaDescription: "Certify PDF documents with digital certificates online for free. Add certification signatures for document authenticity. Professional PDF certification.",
+    description: "Add certification signatures to PDF documents for authenticity",
+    icon: "award",
+    howTo: [
+      "Upload PDF to certify",
+      "Select or upload digital certificate",
+      "Set certification level and permissions",
+      "Download certified PDF"
+    ],
+    article: {
+      title: "Certify PDF Documents",
+      content: `PDF certification adds a special type of digital signature that authenticates the document source and locks it against unauthorized changes, providing the highest level of document integrity.
+
+## Certification Levels
+
+Choose protection level:
+- No changes allowed
+- Form filling allowed
+- Form filling and commenting allowed
+- Custom permission sets
+
+## Document Integrity
+
+Certification ensures:
+- Author authentication
+- Document integrity
+- Change detection
+- Version control
+- Audit capability
+
+## Professional Use
+
+Essential for:
+- Official documents
+- Legal filings
+- Certified copies
+- Authenticated records
+- Compliance documents
+- Published materials`,
+      relatedTools: ["sign-pdf", "validate-pdf-signature", "pdf-certificate-adder"]
+    }
+  },
+  {
+    id: "pdf-locker",
+    title: "PDF Locker",
+    category: "Security" as ToolCategory,
+    tags: ["lock", "secure", "protect", "restrict"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Locker - Lock PDF Files with Signature Protection Free",
+    metaDescription: "Lock PDF files after signing to prevent modifications. Secure signed PDFs with protection. Free PDF locking tool online.",
+    description: "Lock PDF documents after signing to prevent modifications",
+    icon: "lock",
+    howTo: [
+      "Upload signed PDF",
+      "Set lock permissions",
+      "Apply document protection",
+      "Download locked PDF"
+    ],
+    article: {
+      title: "Lock PDFs After Signing",
+      content: `Locking PDFs after signing prevents any modifications to signed documents, ensuring the integrity of signatures and document content remains unchanged.
+
+## Lock Features
+
+Protection capabilities:
+- Prevent editing after signing
+- Disable form field changes
+- Block comment addition
+- Restrict annotations
+- Maintain signature integrity
+
+## Signature Protection
+
+Protect signed documents:
+- Lock upon signing
+- Prevent signature removal
+- Maintain authenticity
+- Ensure legal validity
+- Preserve document state
+
+## Compliance
+
+Locking signed documents helps meet compliance requirements for document retention, audit trails, and legal validity.`,
+      relatedTools: ["certify-pdf", "protect-pdf", "sign-pdf"]
+    }
+  },
+  {
+    id: "pdf-digital-signature-validator",
+    title: "PDF Digital Signature Validator",
+    category: "Security" as ToolCategory,
+    tags: ["validator", "digital", "signature", "verify"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Digital Signature Validator - Verify Signatures Online Free",
+    metaDescription: "Validate digital signatures on PDF files online for free. Comprehensive signature verification tool. Check certificate and signature validity.",
+    description: "Comprehensive digital signature validation and verification",
+    icon: "check-circle",
+    howTo: [
+      "Upload PDF with digital signatures",
+      "Review comprehensive validation report",
+      "Check certificate chain and validity",
+      "Verify each signature status"
+    ],
+    article: {
+      title: "Digital Signature Validation",
+      content: `Comprehensive validation of digital signatures provides detailed information about signature authenticity, certificate validity, and document integrity.
+
+## Detailed Validation
+
+Complete verification:
+- All signatures checked
+- Certificate chain validation
+- Timestamp verification
+- Revocation checking
+- Trust anchor verification
+- Detailed reports
+
+## Signature Properties
+
+View signature details:
+- Signer information
+- Signing time
+- Certificate issuer
+- Validity period
+- Signature algorithm
+- Document coverage
+
+## Compliance Verification
+
+Ensure signatures meet:
+- Legal requirements
+- Industry standards
+- Regulatory compliance
+- Internal policies
+- Security specifications`,
+      relatedTools: ["validate-pdf-signature", "certify-pdf", "pdf-signature-tool"]
+    }
+  },
+  {
+    id: "add-timestamp-to-pdf",
+    title: "Add Timestamp to PDF",
+    category: "Security" as ToolCategory,
+    tags: ["timestamp", "time", "date", "certification"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Timestamp to PDF - Trusted Timestamp Service Free Online",
+    metaDescription: "Add trusted timestamps to PDF documents online for free. Certify document time with RFC 3161 timestamps. Legal timestamp service.",
+    description: "Add trusted timestamps to PDF documents for time certification",
+    icon: "clock",
+    howTo: [
+      "Upload PDF document",
+      "Select timestamp authority",
+      "Apply timestamp to document",
+      "Download timestamped PDF"
+    ],
+    article: {
+      title: "Add Trusted Timestamps to PDFs",
+      content: `Timestamps provide cryptographic proof of when a document existed, essential for legal documents, contracts, and compliance requirements.
+
+## Timestamp Benefits
+
+Why use timestamps:
+- Prove document age
+- Legal time proof
+- Non-repudiation
+- Compliance requirements
+- Audit trails
+- Long-term validity
+
+## Trusted Time
+
+Timestamps are issued by trusted Time Stamp Authorities (TSAs) using RFC 3161 protocol, providing legally recognized time certification.
+
+## Long-Term Validation
+
+Timestamped documents remain valid long-term, even after signing certificates expire, ensuring continued document authenticity.`,
+      relatedTools: ["certify-pdf", "sign-pdf", "pdf-certificate-adder"]
+    }
+  },
+  {
+    id: "pdf-certificate-adder",
+    title: "PDF Certificate Adder",
+    category: "Security" as ToolCategory,
+    tags: ["certificate", "add", "digital", "security"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Certificate to PDF - Digital Certificate Tool Free Online",
+    metaDescription: "Add digital certificates to PDF files online for free. Attach certificates for authentication and security. Professional certificate management.",
+    description: "Attach digital certificates to PDF documents",
+    icon: "file-badge",
+    howTo: [
+      "Upload PDF document",
+      "Upload or select digital certificate",
+      "Configure certificate settings",
+      "Download PDF with added certificate"
+    ],
+    article: {
+      title: "Add Certificates to PDF Documents",
+      content: `Adding digital certificates to PDFs enables signature creation, document encryption, and authentication. Essential for secure document workflows.
+
+## Certificate Types
+
+Different certificate uses:
+- Signing certificates
+- Encryption certificates
+- Authentication certificates
+- Time-stamping certificates
+- Document certificates
+
+## Certificate Management
+
+Manage certificates:
+- Import certificates
+- Store securely
+- View certificate details
+- Check validity
+- Revoke if needed
+
+## Enterprise Security
+
+Certificate-based security provides enterprise-level document protection and authentication for sensitive documents.`,
+      relatedTools: ["certify-pdf", "sign-pdf", "add-timestamp-to-pdf"]
+    }
+  },
+  {
+    id: "pdf-signature-remover",
+    title: "PDF Signature Remover",
+    category: "Security" as ToolCategory,
+    tags: ["remove", "signature", "delete", "clear"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Remove Signature from PDF - Delete PDF Signatures Free Online",
+    metaDescription: "Remove signatures from PDF files online for free. Delete digital signatures and signature fields from PDFs. Clean signature removal tool.",
+    description: "Remove signatures and signature fields from PDF documents",
+    icon: "trash-2",
+    howTo: [
+      "Upload PDF with signatures",
+      "Select signatures to remove",
+      "Remove signatures or signature fields",
+      "Download PDF without signatures"
+    ],
+    article: {
+      title: "Remove PDF Signatures",
+      content: `Signature removal allows you to delete signatures from PDFs when needed for document reuse, template creation, or correction purposes.
+
+## Removal Options
+
+What can be removed:
+- Digital signatures
+- Signature fields
+- Initial fields
+- Signature images
+- Signature metadata
+- Certification
+
+## Use Cases
+
+When to remove signatures:
+- Creating templates from signed documents
+- Correcting signature errors
+- Reusing documents
+- Removing outdated signatures
+- Document cleanup
+
+## Clean Removal
+
+Signatures are removed completely without leaving artifacts or traces, resulting in a clean document ready for new signatures if needed.`,
+      relatedTools: ["sign-pdf", "pdf-signer", "esign-pdf"]
+    }
+  },
+
+  // Watermark Tools
+  {
+    id: "watermark-pdf",
+    title: "Watermark PDF",
+    category: "Security" as ToolCategory,
+    tags: ["watermark", "protect", "brand", "copyright"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Watermark PDF Online Free - Add Watermarks to PDF Documents",
+    metaDescription: "Add watermarks to PDF files online for free. Text or image watermarks for copyright protection and branding. Professional PDF watermarking tool.",
+    description: "Add text or image watermarks to PDF documents for protection and branding",
+    icon: "droplet",
+    howTo: [
+      "Upload your PDF",
+      "Choose watermark type (text or image)",
+      "Customize watermark appearance and position",
+      "Download watermarked PDF"
+    ],
+    article: {
+      title: "Add Watermarks to PDF Documents",
+      content: `Watermarks protect PDFs from unauthorized use, add branding, indicate document status, or mark confidentiality. Essential for copyright protection and professional document management.
+
+## Watermark Types
+
+Choose watermark style:
+- Text watermarks with custom fonts
+- Image/logo watermarks
+- Diagonal watermarks
+- Tiled watermarks
+- Transparent watermarks
+
+## Customization
+
+Full control over appearance:
+- Position and rotation
+- Opacity and transparency
+- Size and scaling
+- Color and font
+- Layer positioning (over or under content)
+
+## Protection Uses
+
+Watermarks for:
+- Copyright protection
+- Brand identification
+- Confidentiality marking
+- Draft indication
+- Ownership claims
+- Usage restrictions`,
+      relatedTools: ["add-text-watermark", "add-image-watermark", "pdf-watermarker"]
+    }
+  },
+  {
+    id: "pdf-watermarker",
+    title: "PDF Watermarker",
+    category: "Security" as ToolCategory,
+    tags: ["watermarker", "watermark", "tool", "brand"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Watermarker Tool - Professional Watermarking Solution Free",
+    metaDescription: "Professional PDF watermarker for adding custom watermarks to documents. Batch watermarking, templates, and advanced options. Free online tool.",
+    description: "Professional watermarking tool with advanced options and batch processing",
+    icon: "layers",
+    howTo: [
+      "Upload single or multiple PDFs",
+      "Create or select watermark template",
+      "Configure advanced watermark settings",
+      "Download watermarked documents"
+    ],
+    article: {
+      title: "Professional PDF Watermarking",
+      content: `Professional watermarking tool with advanced features for businesses needing consistent, branded watermarks across documents.
+
+## Advanced Features
+
+Professional capabilities:
+- Batch watermarking
+- Watermark templates
+- Variable watermarks (dynamic text)
+- Page range selection
+- Multiple watermark layers
+
+## Template Management
+
+Save and reuse:
+- Create watermark templates
+- Store brand watermarks
+- Quick apply saved watermarks
+- Consistent branding
+
+## Business Applications
+
+Perfect for:
+- Corporate documents
+- Marketing materials
+- Legal documents
+- Proposals and quotes
+- Training materials
+- Published content`,
+      relatedTools: ["watermark-pdf", "add-text-watermark", "custom-pdf-stamp"]
+    }
+  },
+  {
+    id: "add-text-watermark",
+    title: "Add Text Watermark",
+    category: "Security" as ToolCategory,
+    tags: ["text", "watermark", "add", "label"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Text Watermark to PDF - Custom Text Watermarks Free",
+    metaDescription: "Add text watermarks to PDF files online for free. Custom text, fonts, colors, and positioning. Professional text watermarking tool.",
+    description: "Add custom text watermarks to PDF documents",
+    icon: "type",
+    howTo: [
+      "Upload PDF file",
+      "Enter watermark text",
+      "Customize font, size, color, and opacity",
+      "Download PDF with text watermark"
+    ],
+    article: {
+      title: "Add Text Watermarks to PDFs",
+      content: `Text watermarks are perfect for adding copyright notices, confidentiality labels, company names, or document status to PDFs.
+
+## Text Customization
+
+Full text control:
+- Custom text content
+- Font selection
+- Size and scaling
+- Color selection
+- Rotation angle
+- Opacity levels
+
+## Common Text Watermarks
+
+Popular uses:
+- "CONFIDENTIAL"
+- "DRAFT"
+- Copyright notices
+- Company names
+- "FOR REVIEW ONLY"
+- Date and time stamps
+
+## Professional Appearance
+
+Carefully position and style text watermarks to be visible but not intrusive, protecting documents while maintaining professional appearance.`,
+      relatedTools: ["watermark-pdf", "pdf-watermarker", "add-header-to-pdf"]
+    }
+  },
+  {
+    id: "add-image-watermark",
+    title: "Add Image Watermark",
+    category: "Security" as ToolCategory,
+    tags: ["image", "watermark", "logo", "brand"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Image Watermark to PDF - Logo Watermark Tool Free",
+    metaDescription: "Add image watermarks to PDF files online for free. Upload logos or images as watermarks. Professional image watermarking for branding.",
+    description: "Add image or logo watermarks to PDF documents",
+    icon: "image",
+    howTo: [
+      "Upload your PDF",
+      "Upload watermark image or logo",
+      "Position and resize watermark",
+      "Download watermarked PDF"
+    ],
+    article: {
+      title: "Add Image Watermarks to PDFs",
+      content: `Image watermarks let you add company logos, brand marks, or custom graphics to PDFs for professional branding and copyright protection.
+
+## Image Requirements
+
+Supported formats:
+- PNG (with transparency)
+- JPG/JPEG
+- SVG graphics
+- GIF images
+- BMP files
+
+## Logo Watermarks
+
+Perfect for:
+- Company logos
+- Brand marks
+- Certification badges
+- Quality seals
+- Copyright symbols
+- Custom graphics
+
+## Transparency Support
+
+PNG images with transparency create professional watermarks that integrate seamlessly with document content without blocking readability.`,
+      relatedTools: ["watermark-pdf", "pdf-watermarker", "add-text-watermark"]
+    }
+  },
+  {
+    id: "add-tiled-watermark",
+    title: "Add Tiled Watermark",
+    category: "Security" as ToolCategory,
+    tags: ["tiled", "watermark", "pattern", "repeat"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Tiled Watermark to PDF - Repeating Watermark Pattern Free",
+    metaDescription: "Add tiled watermarks to PDF files online for free. Repeating watermark patterns for maximum protection. Professional tiled watermarking.",
+    description: "Add repeating tiled watermarks across entire PDF pages",
+    icon: "grid",
+    howTo: [
+      "Upload PDF document",
+      "Create watermark text or upload image",
+      "Configure tile spacing and rotation",
+      "Download PDF with tiled watermark"
+    ],
+    article: {
+      title: "Add Tiled Watermarks to PDFs",
+      content: `Tiled watermarks repeat across the entire page, providing comprehensive protection against unauthorized use and making watermark removal much more difficult.
+
+## Tiling Patterns
+
+Pattern options:
+- Diagonal tiling
+- Grid pattern
+- Scattered placement
+- Custom spacing
+- Overlapping tiles
+
+## Enhanced Protection
+
+Tiled watermarks offer:
+- Maximum coverage
+- Difficult to remove
+- Strong visual deterrent
+- Consistent protection
+- Copyright enforcement
+
+## Professional Use
+
+Ideal for:
+- High-value content
+- Copyright protection
+- Sensitive documents
+- Published materials
+- Digital products
+- Archival documents`,
+      relatedTools: ["watermark-pdf", "pdf-watermarker", "add-text-watermark"]
+    }
+  },
+  {
+    id: "remove-watermark-from-pdf",
+    title: "Remove Watermark from PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["remove", "watermark", "delete", "clean"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Remove Watermark from PDF Free - Delete PDF Watermarks Online",
+    metaDescription: "Remove watermarks from PDF files online for free. Delete text and image watermarks from PDFs. Clean watermark removal tool.",
+    description: "Remove watermarks from PDF documents",
+    icon: "eraser",
+    howTo: [
+      "Upload watermarked PDF",
+      "Select watermarks to remove",
+      "Process watermark removal",
+      "Download clean PDF"
+    ],
+    article: {
+      title: "Remove Watermarks from PDFs",
+      content: `Remove unwanted watermarks from PDFs when you have the right to do so, cleaning up documents for professional use or template creation.
+
+## What Can Be Removed
+
+Removable watermarks:
+- Text watermarks
+- Image watermarks
+- Logo watermarks
+- Tiled watermarks
+- Transparent overlays
+
+## Legitimate Uses
+
+Valid reasons to remove:
+- Your own watermarks
+- Purchased content
+- Licensed documents
+- Template creation
+- Document cleanup
+
+## Clean Results
+
+Watermarks are removed without damaging underlying content, preserving document quality and readability.`,
+      relatedTools: ["pdf-watermark-remover", "watermark-pdf", "pdf-editor"]
+    }
+  },
+  {
+    id: "pdf-watermark-remover",
+    title: "PDF Watermark Remover",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["watermark", "remover", "delete", "clean"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Watermark Remover - Remove All Watermarks Free Online",
+    metaDescription: "Professional PDF watermark remover tool. Remove all types of watermarks from PDFs online for free. Batch watermark removal supported.",
+    description: "Professional tool for removing all types of watermarks from PDFs",
+    icon: "x-circle",
+    howTo: [
+      "Upload PDF with watermarks",
+      "Auto-detect or manually select watermarks",
+      "Remove all or selected watermarks",
+      "Download watermark-free PDF"
+    ],
+    article: {
+      title: "Professional Watermark Removal",
+      content: `Advanced watermark removal tool with automatic detection and batch processing for efficient watermark removal from PDF documents.
+
+## Advanced Detection
+
+Smart watermark finding:
+- Automatic watermark detection
+- Pattern recognition
+- Batch selection
+- Preview before removal
+- Selective removal
+
+## Batch Processing
+
+Remove watermarks from:
+- Multiple pages at once
+- Multiple documents
+- All watermarks automatically
+- Specific watermark types
+- Selected watermarks only
+
+## Quality Preservation
+
+Removal process preserves:
+- Original content quality
+- Text readability
+- Image quality
+- Document structure
+- Formatting integrity`,
+      relatedTools: ["remove-watermark-from-pdf", "pdf-editor", "sanitize-pdf"]
+    }
+  },
+  {
+    id: "pdf-watermark-pdf",
+    title: "PDF Watermark (using PDF)",
+    category: "Security" as ToolCategory,
+    tags: ["watermark", "pdf", "overlay", "merge"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Watermark PDF with PDF - Use PDF as Watermark Free Online",
+    metaDescription: "Use PDF as watermark for other PDFs online for free. Overlay entire PDF pages as watermarks. Advanced PDF watermarking tool.",
+    description: "Use an entire PDF as a watermark for another PDF",
+    icon: "file-text",
+    howTo: [
+      "Upload main PDF document",
+      "Upload PDF to use as watermark",
+      "Configure overlay settings and opacity",
+      "Download watermarked PDF"
+    ],
+    article: {
+      title: "Use PDF as Watermark",
+      content: `Advanced watermarking technique that uses an entire PDF as a watermark, perfect for adding complex designs, forms, or multi-element watermarks to documents.
+
+## PDF Watermark Benefits
+
+Advantages:
+- Complex watermark designs
+- Multiple elements at once
+- Preserve watermark formatting
+- Consistent across pages
+- Professional results
+
+## Use Cases
+
+Perfect for:
+- Form overlays
+- Letterhead addition
+- Complex branding
+- Template application
+- Certified copies
+- Official markings
+
+## Advanced Control
+
+Control watermark:
+- Opacity levels
+- Layer positioning
+- Page ranges
+- Scaling options
+- Alignment settings`,
+      relatedTools: ["watermark-pdf", "pdf-overlay", "merge-pdf"]
+    }
+  },
+  {
+    id: "pdf-overlay",
+    title: "PDF Overlay (Page on Page)",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["overlay", "combine", "layer", "merge"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Overlay - Overlay PDF Pages Online Free",
+    metaDescription: "Overlay PDF pages on other PDFs online for free. Combine PDF pages by layering them. Professional PDF overlay tool.",
+    description: "Overlay PDF pages on top of other PDF pages",
+    icon: "layers-2",
+    howTo: [
+      "Upload background PDF",
+      "Upload overlay PDF",
+      "Configure overlay settings and positioning",
+      "Download combined PDF"
+    ],
+    article: {
+      title: "Overlay PDF Pages",
+      content: `PDF overlay combines pages from two PDFs by layering them on top of each other, perfect for adding letterheads, forms, or designs to existing documents.
+
+## Overlay Applications
+
+Common uses:
+- Add letterhead to documents
+- Apply form templates
+- Combine signatures with documents
+- Add backgrounds
+- Create composite documents
+
+## Positioning Control
+
+Control overlay:
+- Center alignment
+- Custom positioning
+- Scaling options
+- Rotation angles
+- Opacity levels
+
+## Professional Results
+
+Create professional documents by overlaying company letterheads, forms, or designs onto existing content seamlessly.`,
+      relatedTools: ["pdf-watermark-pdf", "watermark-pdf", "merge-pdf"]
+    }
+  },
+
+  // Stamp Tools
+  {
+    id: "stamp-pdf",
+    title: "Stamp PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["stamp", "mark", "label", "annotate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Stamp PDF Online Free - Add Stamps to PDF Documents",
+    metaDescription: "Add stamps to PDF files online for free. Custom stamps, approved stamps, confidential stamps. Professional PDF stamping tool.",
+    description: "Add stamps to PDF documents for approval, marking, or labeling",
+    icon: "stamp",
+    howTo: [
+      "Upload PDF document",
+      "Select or create stamp",
+      "Position stamp on document",
+      "Download stamped PDF"
+    ],
+    article: {
+      title: "Add Stamps to PDF Documents",
+      content: `PDF stamps provide quick visual indication of document status, approval, or classification. Essential for document workflows and business processes.
+
+## Stamp Types
+
+Common stamps:
+- Approved/Rejected
+- Confidential
+- Draft
+- Final
+- Reviewed
+- Urgent
+- Custom text stamps
+
+## Stamp Customization
+
+Customize appearance:
+- Text and message
+- Color selection
+- Size and shape
+- Date and time
+- User name
+- Custom graphics
+
+## Business Workflows
+
+Stamps improve:
+- Document approval processes
+- Status indication
+- Workflow management
+- Document tracking
+- Quality control
+- Compliance marking`,
+      relatedTools: ["pdf-stamper", "add-confidential-stamp", "add-draft-stamp"]
+    }
+  },
+  {
+    id: "pdf-stamper",
+    title: "PDF Stamper",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["stamper", "stamp", "tool", "mark"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Stamper Tool - Professional PDF Stamping Free Online",
+    metaDescription: "Professional PDF stamper for adding stamps to documents. Custom stamps, batch stamping, templates. Free PDF stamping tool.",
+    description: "Professional PDF stamping tool with templates and batch processing",
+    icon: "bookmark",
+    howTo: [
+      "Upload single or multiple PDFs",
+      "Create or select stamp template",
+      "Configure stamp settings and placement",
+      "Download stamped documents"
+    ],
+    article: {
+      title: "Professional PDF Stamping",
+      content: `Professional stamping tool with advanced features for businesses needing consistent, efficient document stamping across workflows.
+
+## Advanced Features
+
+Professional capabilities:
+- Batch stamping
+- Stamp templates
+- Dynamic stamps (date, time, user)
+- Page range selection
+- Multiple stamp layers
+
+## Template Library
+
+Pre-made stamps:
+- Approved stamps
+- Rejected stamps
+- Confidential stamps
+- Draft stamps
+- Urgent stamps
+- Custom templates
+
+## Efficiency Features
+
+Save time with:
+- Quick apply stamps
+- Stamp positioning presets
+- Batch processing
+- Template management
+- Automated stamping`,
+      relatedTools: ["stamp-pdf", "custom-pdf-stamp", "watermark-pdf"]
+    }
+  },
+  {
+    id: "add-confidential-stamp",
+    title: "Add 'Confidential' Stamp",
+    category: "Security" as ToolCategory,
+    tags: ["confidential", "stamp", "security", "mark"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Confidential Stamp to PDF - Mark PDFs Confidential Free",
+    metaDescription: "Add confidential stamp to PDF files online for free. Mark documents as confidential with professional stamps. Secure labeling tool.",
+    description: "Add confidential stamps to PDF documents for security marking",
+    icon: "shield-alert",
+    howTo: [
+      "Upload PDF to mark as confidential",
+      "Select confidential stamp style",
+      "Position stamp on pages",
+      "Download confidentially marked PDF"
+    ],
+    article: {
+      title: "Mark PDFs as Confidential",
+      content: `Confidential stamps clearly mark sensitive documents, helping prevent unauthorized distribution and indicating handling requirements.
+
+## Confidential Marking
+
+Stamp variations:
+- CONFIDENTIAL
+- STRICTLY CONFIDENTIAL
+- COMPANY CONFIDENTIAL
+- HIGHLY CONFIDENTIAL
+- CONFIDENTIAL - DO NOT DISTRIBUTE
+
+## Security Benefits
+
+Confidential stamps:
+- Indicate sensitivity
+- Prevent unauthorized sharing
+- Ensure proper handling
+- Meet compliance requirements
+- Provide visual warnings
+
+## Professional Standards
+
+Confidential markings meet business and legal requirements for document classification and information protection.`,
+      relatedTools: ["stamp-pdf", "pdf-stamper", "protect-pdf"]
+    }
+  },
+  {
+    id: "add-draft-stamp",
+    title: "Add 'Draft' Stamp",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["draft", "stamp", "mark", "status"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Draft Stamp to PDF - Mark PDFs as Draft Free Online",
+    metaDescription: "Add draft stamp to PDF files online for free. Mark documents as draft versions. Professional draft labeling tool.",
+    description: "Add draft stamps to PDF documents to indicate preliminary status",
+    icon: "file-edit",
+    howTo: [
+      "Upload PDF draft document",
+      "Select draft stamp style",
+      "Position stamp on pages",
+      "Download draft-marked PDF"
+    ],
+    article: {
+      title: "Mark PDFs as Draft",
+      content: `Draft stamps clearly indicate that documents are not final, preventing confusion and ensuring recipients know they're viewing preliminary versions.
+
+## Draft Variations
+
+Stamp options:
+- DRAFT
+- DRAFT COPY
+- PRELIMINARY DRAFT
+- WORKING DRAFT
+- DRAFT - FOR REVIEW
+
+## Version Control
+
+Draft stamps help:
+- Prevent distribution of non-final documents
+- Indicate review status
+- Manage document versions
+- Avoid confusion
+- Control workflow
+
+## Professional Communication
+
+Clear draft marking ensures stakeholders understand document status and prevents premature distribution of unfinished work.`,
+      relatedTools: ["stamp-pdf", "pdf-stamper", "watermark-pdf"]
+    }
+  },
+  {
+    id: "custom-pdf-stamp",
+    title: "Custom PDF Stamp",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["custom", "stamp", "create", "personalized"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Custom PDF Stamp - Create Personalized Stamps Free Online",
+    metaDescription: "Create custom PDF stamps online for free. Design personalized stamps with text, colors, and shapes. Professional custom stamp maker.",
+    description: "Create custom personalized stamps for PDF documents",
+    icon: "edit",
+    howTo: [
+      "Design your custom stamp",
+      "Configure text, colors, and appearance",
+      "Upload PDF and apply custom stamp",
+      "Download stamped PDF"
+    ],
+    article: {
+      title: "Create Custom PDF Stamps",
+      content: `Custom stamps let you create personalized stamps for your specific needs, matching your branding and workflow requirements.
+
+## Customization Options
+
+Design elements:
+- Custom text content
+- Font selection
+- Color schemes
+- Shapes and borders
+- Graphics and icons
+- Size and opacity
+
+## Business Branding
+
+Custom stamps for:
+- Company-specific stamps
+- Department stamps
+- Project stamps
+- Quality control stamps
+- Process stamps
+- Approval stamps
+
+## Save and Reuse
+
+Create stamp templates:
+- Save custom designs
+- Reuse across documents
+- Build stamp library
+- Consistent branding
+- Efficient stamping`,
+      relatedTools: ["pdf-stamper", "stamp-pdf", "watermark-pdf"]
+    }
+  },
+
+  // Page Numbers, Headers, and Footers
+  {
+    id: "add-page-numbers",
+    title: "Add Page Numbers",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["page", "numbers", "numbering", "pagination"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Page Numbers to PDF Free - PDF Page Numbering Online",
+    metaDescription: "Add page numbers to PDF files online for free. Automatic page numbering with custom formatting. Professional PDF page numbering tool.",
+    description: "Add page numbers to PDF documents with custom formatting",
+    icon: "hash",
+    howTo: [
+      "Upload PDF document",
+      "Choose number format and position",
+      "Configure starting number and range",
+      "Download PDF with page numbers"
+    ],
+    article: {
+      title: "Add Page Numbers to PDFs",
+      content: `Page numbers make documents easier to navigate and reference, essential for professional documents, reports, and lengthy publications.
+
+## Number Formats
+
+Formatting options:
+- Arabic numerals (1, 2, 3)
+- Roman numerals (I, II, III)
+- Alphabetic (A, B, C)
+- Custom text with numbers
+- Chapter-section numbering
+
+## Positioning
+
+Place numbers:
+- Bottom center
+- Bottom left/right
+- Top center
+- Top left/right
+- Custom positions
+
+## Advanced Options
+
+Control numbering:
+- Start at specific number
+- Page ranges
+- Different formats per section
+- Skip certain pages
+- Prefix/suffix text`,
+      relatedTools: ["pdf-page-numbering", "add-footer-page-x-of-y", "add-header-and-footer"]
+    }
+  },
+  {
+    id: "pdf-page-numbering",
+    title: "PDF Page Numbering",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["page", "numbering", "numbers", "pagination"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Page Numbering Tool - Advanced Pagination Free Online",
+    metaDescription: "Professional PDF page numbering with advanced options. Custom formats, multiple sections, Bates numbering. Free online tool.",
+    description: "Professional page numbering tool with advanced formatting options",
+    icon: "list-ordered",
+    howTo: [
+      "Upload PDF",
+      "Configure numbering scheme",
+      "Set formatting and positioning",
+      "Download numbered PDF"
+    ],
+    article: {
+      title: "Professional PDF Page Numbering",
+      content: `Advanced page numbering tool with professional features for complex documents requiring sophisticated pagination schemes.
+
+## Multi-Section Numbering
+
+Complex numbering:
+- Different formats per section
+- Restart numbering at chapters
+- Continuous numbering
+- Independent front/back matter
+- Custom section markers
+
+## Format Templates
+
+Pre-defined formats:
+- Page X of Y
+- Page X
+- Section-Page
+- Chapter-Page
+- Custom templates
+
+## Professional Documents
+
+Perfect for:
+- Books and manuscripts
+- Legal documents
+- Academic papers
+- Reports
+- Manuals
+- Technical documentation`,
+      relatedTools: ["add-page-numbers", "add-bates-numbering", "add-header-and-footer"]
+    }
+  },
+  {
+    id: "add-bates-numbering",
+    title: "Add Bates Numbering",
+    category: "Security" as ToolCategory,
+    tags: ["bates", "numbering", "legal", "identification"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Bates Numbering to PDF - Legal Document Numbering Free",
+    metaDescription: "Add Bates numbering to PDF files online for free. Professional legal document numbering system. Automatic Bates stamp tool.",
+    description: "Add Bates numbering to PDF documents for legal identification",
+    icon: "file-check",
+    howTo: [
+      "Upload PDF for Bates numbering",
+      "Configure Bates number format and starting number",
+      "Select position and appearance",
+      "Download Bates-numbered PDF"
+    ],
+    article: {
+      title: "Bates Numbering for Legal Documents",
+      content: `Bates numbering provides unique identification for each page in legal documents, essential for document management in legal proceedings and discovery.
+
+## Bates Standards
+
+Legal numbering:
+- Sequential numbering
+- Unique identifiers
+- Prefix/suffix codes
+- Date stamps
+- Page identification
+- Document tracking
+
+## Legal Requirements
+
+Meets legal standards:
+- Court requirements
+- Discovery compliance
+- Document production
+- Evidence marking
+- Audit trails
+
+## Format Options
+
+Customizable Bates:
+- Number of digits
+- Prefix text
+- Suffix text
+- Leading zeros
+- Starting number
+- Date inclusion`,
+      relatedTools: ["add-bates-stamp", "pdf-page-numbering", "certify-pdf"]
+    }
+  },
+  {
+    id: "add-header-to-pdf",
+    title: "Add Header to PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["header", "add", "top", "title"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Header to PDF Free - Insert PDF Headers Online",
+    metaDescription: "Add headers to PDF files online for free. Custom text headers with formatting. Professional PDF header tool.",
+    description: "Add headers to PDF documents with custom text and formatting",
+    icon: "arrow-up",
+    howTo: [
+      "Upload PDF document",
+      "Enter header text",
+      "Configure formatting and position",
+      "Download PDF with headers"
+    ],
+    article: {
+      title: "Add Headers to PDF Documents",
+      content: `Headers provide consistent information at the top of each page, perfect for document titles, company names, dates, or page identification.
+
+## Header Content
+
+Common header elements:
+- Document title
+- Company name
+- Author name
+- Date
+- Department
+- Project name
+- Custom text
+
+## Formatting Options
+
+Customize headers:
+- Font and size
+- Alignment (left, center, right)
+- Color
+- Margins
+- Page ranges
+- Different first page
+
+## Professional Presentation
+
+Headers give documents a professional, organized appearance and make it easy to identify documents at a glance.`,
+      relatedTools: ["add-footer-to-pdf", "add-header-and-footer", "add-header-date-time"]
+    }
+  },
+  {
+    id: "add-footer-to-pdf",
+    title: "Add Footer to PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["footer", "add", "bottom", "page"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Footer to PDF Free - Insert PDF Footers Online",
+    metaDescription: "Add footers to PDF files online for free. Custom text footers with page numbers. Professional PDF footer tool.",
+    description: "Add footers to PDF documents with custom text and page numbers",
+    icon: "arrow-down",
+    howTo: [
+      "Upload PDF document",
+      "Enter footer text and format",
+      "Configure positioning and appearance",
+      "Download PDF with footers"
+    ],
+    article: {
+      title: "Add Footers to PDF Documents",
+      content: `Footers provide consistent information at the bottom of each page, commonly used for page numbers, copyright notices, or contact information.
+
+## Footer Content
+
+Common footer elements:
+- Page numbers
+- Copyright notices
+- Company contact info
+- Document version
+- Date
+- Confidentiality notices
+- Custom text
+
+## Page Numbering
+
+Footer page numbers:
+- Page X
+- Page X of Y
+- Roman numerals
+- Custom format
+- Section numbering
+
+## Professional Use
+
+Footers are essential for:
+- Business documents
+- Reports
+- Manuals
+- Contracts
+- Publications
+- Training materials`,
+      relatedTools: ["add-header-to-pdf", "add-page-numbers", "add-footer-page-x-of-y"]
+    }
+  },
+  {
+    id: "add-bates-stamp",
+    title: "Add Bates Stamp",
+    category: "Security" as ToolCategory,
+    tags: ["bates", "stamp", "legal", "numbering"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Bates Stamp to PDF - Legal Bates Stamping Free Online",
+    metaDescription: "Add Bates stamps to PDF files online for free. Professional legal document stamping with unique identifiers. Automatic Bates stamping.",
+    description: "Add Bates stamps to PDF documents for legal document management",
+    icon: "file-badge",
+    howTo: [
+      "Upload PDF for Bates stamping",
+      "Configure Bates stamp format",
+      "Select stamp position",
+      "Download Bates-stamped PDF"
+    ],
+    article: {
+      title: "Bates Stamping for Legal Documents",
+      content: `Bates stamps combine Bates numbering with additional information like dates and document codes for comprehensive legal document identification.
+
+## Stamp Components
+
+Bates stamp elements:
+- Sequential number
+- Prefix code
+- Date stamp
+- Document identifier
+- Page count
+- Custom text
+
+## Legal Compliance
+
+Meet requirements:
+- Court documentation
+- Discovery production
+- Evidence management
+- Document tracking
+- Chain of custody
+
+## Production Stamping
+
+Essential for:
+- Litigation support
+- Document production
+- Discovery responses
+- Evidence organization
+- Legal proceedings`,
+      relatedTools: ["add-bates-numbering", "stamp-pdf", "certify-pdf"]
+    }
+  },
+  {
+    id: "add-header-and-footer",
+    title: "Add Header and Footer",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["header", "footer", "both", "complete"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Header and Footer to PDF - Complete Headers & Footers Free",
+    metaDescription: "Add headers and footers to PDF files online for free. Complete header and footer tool with page numbers. Professional PDF formatting.",
+    description: "Add both headers and footers to PDF documents simultaneously",
+    icon: "align-vertical-space-around",
+    howTo: [
+      "Upload PDF document",
+      "Configure header content and formatting",
+      "Configure footer content and formatting",
+      "Download PDF with headers and footers"
+    ],
+    article: {
+      title: "Add Complete Headers and Footers",
+      content: `Add both headers and footers in one operation for complete professional document formatting with consistent page layout.
+
+## Combined Formatting
+
+Header and footer together:
+- Document title in header
+- Page numbers in footer
+- Date in header
+- Copyright in footer
+- Consistent styling
+- Professional layout
+
+## Template Options
+
+Pre-made templates:
+- Business document format
+- Academic paper format
+- Report format
+- Manual format
+- Custom templates
+
+## Efficiency
+
+Add both header and footer:
+- In single operation
+- With consistent styling
+- Matching fonts and colors
+- Coordinated positioning
+- Professional results`,
+      relatedTools: ["add-header-to-pdf", "add-footer-to-pdf", "pdf-page-numbering"]
+    }
+  },
+  {
+    id: "add-page-numbers-start-at-x",
+    title: "Add Page Numbers (Start at X)",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["page", "numbers", "custom", "start"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Page Numbers Starting at X - Custom Start Number Free",
+    metaDescription: "Add page numbers to PDF starting at custom number online for free. Control starting page number. Flexible PDF page numbering.",
+    description: "Add page numbers starting at a custom number instead of 1",
+    icon: "circle-dot",
+    howTo: [
+      "Upload PDF document",
+      "Specify starting page number",
+      "Configure number format and position",
+      "Download numbered PDF"
+    ],
+    article: {
+      title: "Custom Starting Page Numbers",
+      content: `Start page numbering at any number, perfect for document sections, chapters, or when continuing numbering from previous documents.
+
+## Custom Starting
+
+Use cases:
+- Chapter documents (start at chapter page)
+- Continued documents (pick up where left off)
+- Section numbering
+- Multi-volume works
+- Appendices
+- Supplements
+
+## Flexible Numbering
+
+Options:
+- Start at any number
+- Positive or negative numbers
+- Skip initial pages
+- Multiple sections
+- Independent numbering
+
+## Professional Documents
+
+Essential for:
+- Multi-part reports
+- Book chapters
+- Legal document sets
+- Continued publications
+- Document series`,
+      relatedTools: ["add-page-numbers", "pdf-page-numbering", "add-page-numbers-roman"]
+    }
+  },
+  {
+    id: "add-page-numbers-roman",
+    title: "Add Page Numbers (Roman)",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["page", "numbers", "roman", "numerals"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Roman Page Numbers to PDF - Roman Numerals Free Online",
+    metaDescription: "Add Roman numeral page numbers to PDF files online for free. Professional Roman numeral formatting. Academic document numbering.",
+    description: "Add Roman numeral page numbers to PDF documents",
+    icon: "type",
+    howTo: [
+      "Upload PDF document",
+      "Select Roman numeral format (I, II, III or i, ii, iii)",
+      "Configure position and appearance",
+      "Download PDF with Roman numerals"
+    ],
+    article: {
+      title: "Roman Numeral Page Numbers",
+      content: `Roman numerals are traditional for front matter in books, academic papers, and formal documents, providing elegant classical numbering.
+
+## Roman Numeral Formats
+
+Format options:
+- Uppercase (I, II, III, IV, V)
+- Lowercase (i, ii, iii, iv, v)
+- Large cap variants
+- Position options
+- Custom styling
+
+## Traditional Use
+
+Common applications:
+- Book front matter (preface, introduction)
+- Academic paper preliminaries
+- Table of contents
+- Forewords and prologues
+- Acknowledgments
+- Appendix numbering
+
+## Professional Standards
+
+Roman numerals meet:
+- Academic formatting standards
+- Publishing conventions
+- Traditional typesetting
+- Classical presentation
+- Formal document requirements`,
+      relatedTools: ["add-page-numbers", "pdf-page-numbering", "add-page-numbers-start-at-x"]
+    }
+  },
+  {
+    id: "add-header-date-time",
+    title: "Add Header (Date, Time)",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["header", "date", "time", "timestamp"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Date Time Header to PDF - Timestamp Headers Free Online",
+    metaDescription: "Add date and time headers to PDF files online for free. Automatic timestamp headers. Professional PDF date headers.",
+    description: "Add headers with automatic date and time stamps to PDFs",
+    icon: "calendar-clock",
+    howTo: [
+      "Upload PDF document",
+      "Select date and time format",
+      "Configure header position and appearance",
+      "Download PDF with date/time headers"
+    ],
+    article: {
+      title: "Add Date and Time Headers",
+      content: `Date and time headers automatically stamp documents with creation or modification dates, essential for version control and record keeping.
+
+## Date Formats
+
+Format options:
+- MM/DD/YYYY
+- DD/MM/YYYY
+- YYYY-MM-DD
+- Month DD, YYYY
+- Custom date formats
+- ISO 8601 standard
+
+## Time Formats
+
+Time options:
+- 12-hour (AM/PM)
+- 24-hour format
+- Include seconds
+- Time zones
+- Custom formats
+
+## Automatic Stamping
+
+Headers show:
+- Document creation date
+- Current date
+- Last modified date
+- Custom date
+- Time stamps
+- Version dates`,
+      relatedTools: ["add-header-to-pdf", "add-timestamp-to-pdf", "add-header-and-footer"]
+    }
+  },
+  {
+    id: "add-footer-page-x-of-y",
+    title: "Add Footer (Page X of Y)",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["footer", "page", "count", "total"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Page X of Y Footer to PDF - Total Page Count Free Online",
+    metaDescription: "Add 'Page X of Y' footers to PDF files online for free. Show current and total page numbers. Professional PDF footers.",
+    description: "Add footers showing current page number and total page count",
+    icon: "file-stack",
+    howTo: [
+      "Upload PDF document",
+      "Select 'Page X of Y' footer format",
+      "Configure position and styling",
+      "Download PDF with page count footers"
+    ],
+    article: {
+      title: "Page X of Y Footers",
+      content: `'Page X of Y' footers show both the current page and total pages, helping readers track their progress through the document.
+
+## Format Variations
+
+Display options:
+- "Page X of Y"
+- "X / Y"
+- "Page X of Y pages"
+- "X out of Y"
+- Custom text
+- Multiple languages
+
+## Reader Benefits
+
+Helps readers:
+- Know document length
+- Track reading progress
+- Reference specific pages
+- Estimate remaining content
+- Navigate efficiently
+
+## Professional Use
+
+Essential for:
+- Reports and proposals
+- Presentations
+- Forms and applications
+- Manuals
+- Training materials
+- Any multi-page document`,
+      relatedTools: ["add-footer-to-pdf", "add-page-numbers", "add-header-and-footer"]
+    }
+  },
+  {
+    id: "remove-pdf-header",
+    title: "Remove PDF Header",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["remove", "header", "delete", "clean"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Remove Header from PDF Free - Delete PDF Headers Online",
+    metaDescription: "Remove headers from PDF files online for free. Delete PDF headers and clean up documents. Professional header removal tool.",
+    description: "Remove headers from PDF documents",
+    icon: "minus-circle",
+    howTo: [
+      "Upload PDF with headers",
+      "Preview and select headers to remove",
+      "Remove headers from pages",
+      "Download PDF without headers"
+    ],
+    article: {
+      title: "Remove Headers from PDFs",
+      content: `Remove unwanted headers from PDF documents to clean up files, create templates, or prepare documents for new headers.
+
+## Removal Options
+
+What can be removed:
+- Text headers
+- Image headers
+- Page numbers in headers
+- Date stamps
+- All header content
+- Selective removal
+
+## Clean Removal
+
+Headers are removed:
+- Without affecting content
+- Preserving page layout
+- Maintaining quality
+- No artifacts
+- Clean results
+
+## Use Cases
+
+Remove headers for:
+- Template creation
+- Document reuse
+- Rebranding
+- Format changes
+- Clean copies
+- Personal use`,
+      relatedTools: ["remove-pdf-footer", "add-header-to-pdf", "pdf-editor"]
+    }
+  },
+  {
+    id: "remove-pdf-footer",
+    title: "Remove PDF Footer",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["remove", "footer", "delete", "clean"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Remove Footer from PDF Free - Delete PDF Footers Online",
+    metaDescription: "Remove footers from PDF files online for free. Delete PDF footers and page numbers. Professional footer removal tool.",
+    description: "Remove footers from PDF documents",
+    icon: "x-square",
+    howTo: [
+      "Upload PDF with footers",
+      "Preview and select footers to remove",
+      "Remove footers from pages",
+      "Download PDF without footers"
+    ],
+    article: {
+      title: "Remove Footers from PDFs",
+      content: `Remove unwanted footers from PDF documents to eliminate page numbers, copyright notices, or other footer content when needed.
+
+## Removal Types
+
+Remove:
+- Page numbers
+- Copyright notices
+- Contact information
+- All footer text
+- Custom footers
+- Selective removal
+
+## Quality Preservation
+
+Footer removal:
+- Preserves content
+- Maintains layout
+- No content damage
+- Clean results
+- Professional quality
+
+## Common Uses
+
+Remove footers for:
+- Creating templates
+- Rebranding documents
+- Personal copies
+- Format updates
+- Clean versions
+- Reuse preparation`,
+      relatedTools: ["remove-pdf-header", "add-footer-to-pdf", "pdf-editor"]
     }
   }
 ] as const;
