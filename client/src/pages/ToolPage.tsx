@@ -1,23 +1,56 @@
 import { useState } from "react";
 import { useRoute, Link } from "wouter";
+import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FileUploadZone } from "@/components/FileUploadZone";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
-import { pdfTools, toolEmojis } from "@shared/schema";
+import { Separator } from "@/components/ui/separator";
+import { toolEmojis } from "@shared/schema";
+import type { PDFTool } from "@shared/schema";
 import { Download, ArrowRight, CheckCircle2, FileText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export default function ToolPage() {
   const [, params] = useRoute("/tool/:id");
-  const tool = pdfTools.find(t => t.id === params?.id);
   const [files, setFiles] = useState<File[]>([]);
   const [isProcessing, setIsProcessing] = useState(false);
   const { toast } = useToast();
+
+  const { data: tool, isLoading: toolLoading } = useQuery<PDFTool>({
+    queryKey: params?.id ? ['/api/tools', params.id] : [],
+    enabled: !!params?.id,
+  });
+
+  const { data: allTools = [] } = useQuery<PDFTool[]>({
+    queryKey: ['/api/tools'],
+  });
+
+  const isLoading = toolLoading;
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">
+          <section className="py-12 md:py-16 bg-gradient-to-b from-primary/5 to-background">
+            <div className="container mx-auto max-w-3xl px-4">
+              <div className="text-center space-y-4">
+                <Skeleton className="h-16 w-16 rounded-lg mx-auto" />
+                <Skeleton className="h-8 w-48 mx-auto" />
+                <Skeleton className="h-12 w-full max-w-2xl mx-auto" />
+              </div>
+            </div>
+          </section>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   if (!tool) {
     return (
@@ -230,7 +263,7 @@ export default function ToolPage() {
                 <h3 className="text-xl font-semibold">Related Tools</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {tool.article.relatedTools.map((relatedId) => {
-                    const relatedTool = pdfTools.find(t => t.id === relatedId);
+                    const relatedTool = allTools.find(t => t.id === relatedId);
                     if (!relatedTool) return null;
                     const emoji = toolEmojis[relatedId] || "📄";
                     

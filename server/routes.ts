@@ -51,6 +51,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.get('/api/categories/:category/tools', async (req, res) => {
+    try {
+      const { category } = req.params;
+      const filteredTools = pdfTools.filter(tool => tool.category === category);
+      res.json(filteredTools);
+    } catch (error) {
+      console.error('Error fetching tools by category:', error);
+      res.status(500).json({ error: 'Failed to fetch tools by category' });
+    }
+  });
+
   app.post('/api/process-pdf', upload.array('files', 100), async (req, res) => {
     try {
       const files = req.files as Express.Multer.File[];

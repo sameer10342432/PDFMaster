@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useQuery } from "@tanstack/react-query";
 import { FileText, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -6,12 +7,14 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-  DropdownMenuSeparator,
-  DropdownMenuLabel,
 } from "@/components/ui/dropdown-menu";
-import { pdfTools } from "@shared/schema";
+import type { PDFTool } from "@shared/schema";
 
 export function Header() {
+  const { data: tools = [] } = useQuery<PDFTool[]>({
+    queryKey: ['/api/tools'],
+  });
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto max-w-7xl px-4">
@@ -39,7 +42,7 @@ export function Header() {
                 <Link href="/tools">
                   <DropdownMenuItem data-testid="dropdown-item-all-tools">
                     <FileText className="h-4 w-4 mr-2" />
-                    View All Tools ({pdfTools.length})
+                    View All Tools ({tools.length})
                   </DropdownMenuItem>
                 </Link>
                 <Link href="/articles">

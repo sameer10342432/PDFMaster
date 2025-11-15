@@ -1,13 +1,21 @@
 import { Helmet } from "react-helmet";
 import { Link } from "wouter";
+import { useQuery } from "@tanstack/react-query";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ToolCard } from "@/components/ToolCard";
 import { Button } from "@/components/ui/button";
-import { pdfTools } from "@shared/schema";
+import { Skeleton } from "@/components/ui/skeleton";
+import type { PDFTool } from "@shared/schema";
 import { Shield, Zap, Lock, Users, ArrowRight } from "lucide-react";
 
 export default function Home() {
+  const { data: tools = [], isLoading } = useQuery<PDFTool[]>({
+    queryKey: ['/api/tools'],
+  });
+
+  const popularTools = tools.slice(0, 12);
+
   return (
     <>
       <Helmet>
@@ -74,15 +82,26 @@ export default function Home() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                {pdfTools.slice(0, 12).map((tool) => (
-                  <ToolCard
-                    key={tool.id}
-                    id={tool.id}
-                    title={tool.title}
-                    description={tool.description}
-                    icon={tool.icon}
-                  />
-                ))}
+                {isLoading ? (
+                  Array.from({ length: 12 }).map((_, i) => (
+                    <div key={i} className="space-y-4 p-6">
+                      <Skeleton className="h-12 w-12 rounded-lg" />
+                      <Skeleton className="h-6 w-3/4" />
+                      <Skeleton className="h-4 w-full" />
+                      <Skeleton className="h-4 w-5/6" />
+                    </div>
+                  ))
+                ) : (
+                  popularTools.map((tool) => (
+                    <ToolCard
+                      key={tool.id}
+                      id={tool.id}
+                      title={tool.title}
+                      description={tool.description}
+                      icon={tool.icon}
+                    />
+                  ))
+                )}
               </div>
 
               <div className="text-center mt-12">

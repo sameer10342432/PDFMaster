@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "wouter";
+import { useQuery } from "@tanstack/react-query";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Input } from "@/components/ui/input";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { pdfTools, toolCategories, toolEmojis } from "@shared/schema";
+import { Skeleton } from "@/components/ui/skeleton";
+import { toolEmojis } from "@shared/schema";
+import type { PDFTool } from "@shared/schema";
 import { Search, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -14,16 +17,26 @@ export default function Articles() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  const filteredTools = pdfTools.filter(tool =>
+  const { data: tools = [], isLoading: toolsLoading } = useQuery<PDFTool[]>({
+    queryKey: ['/api/tools'],
+  });
+
+  const { data: categories = [], isLoading: categoriesLoading } = useQuery<string[]>({
+    queryKey: ['/api/categories'],
+  });
+
+  const isLoading = toolsLoading || categoriesLoading;
+
+  const filteredTools = tools.filter(tool =>
     (tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
      tool.article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
      tool.description.toLowerCase().includes(searchQuery.toLowerCase())) &&
     (!selectedCategory || tool.category === selectedCategory)
   );
 
-  const categoryCounts = toolCategories.map(category => ({
+  const categoryCounts = categories.map(category => ({
     category,
-    count: pdfTools.filter(tool => tool.category === category).length
+    count: tools.filter(tool => tool.category === category).length
   }));
 
   return (
@@ -70,32 +83,49 @@ export default function Articles() {
           <section className="py-8">
             <div className="container mx-auto max-w-7xl px-4">
               <div className="flex gap-2 flex-wrap justify-center mb-8">
-                <Button
-                  variant={selectedCategory === null ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setSelectedCategory(null)}
-                  data-testid="button-category-all"
-                >
-                  All Articles ({pdfTools.length})
-                </Button>
-                {categoryCounts.map(({ category, count }) => (
-                  <Button
-                    key={category}
-                    variant={selectedCategory === category ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setSelectedCategory(category)}
-                    data-testid={`button-category-${category.toLowerCase().replace(/\s+/g, '-')}`}
-                  >
-                    {category} ({count})
-                  </Button>
-                ))}
+                {isLoading ? (
+                  <Skeleton className="h-9 w-32" />
+                ) : (
+                  <>
+                    <Button
+                      variant={selectedCategory === null ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => setSelectedCategory(null)}
+                      data-testid="button-category-all"
+                    >
+                      All Articles ({tools.length})
+                    </Button>
+                    {categoryCounts.map(({ category, count }) => (
+                      <Button
+                        key={category}
+                        variant={selectedCategory === category ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => setSelectedCategory(category)}
+                        data-testid={`button-category-${category.toLowerCase().replace(/\s+/g, '-')}`}
+                      >
+                        {category} ({count})
+                      </Button>
+                    ))}
+                  </>
+                )}
               </div>
             </div>
           </section>
 
           <section className="py-4 md:py-8">
             <div className="container mx-auto max-w-7xl px-4">
-              {filteredTools.length > 0 ? (
+              {isLoading ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {Array.from({ length: 9 }).map((_, i) => (
+                    <div key={i} className="space-y-4 p-6">
+                      <Skeleton className="h-16 w-16 rounded-lg" />
+                      <Skeleton className="h-6 w-3/4" />
+                      <Skeleton className="h-4 w-full" />
+                      <Skeleton className="h-4 w-5/6" />
+                    </div>
+                  ))}
+                </div>
+              ) : filteredTools.length > 0 ? (
                 <>
                   <div className="mb-8">
                     <p className="text-sm text-muted-foreground">
