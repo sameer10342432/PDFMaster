@@ -5,11 +5,12 @@
 This is a free online PDF manipulation platform that provides users with various tools to merge, combine, join, and process PDF files. The application is built as a full-stack web application with a React frontend and Express backend, focusing on simplicity, security, and user privacy. All PDF processing happens without requiring user registration, emphasizing a frictionless user experience.
 
 **Current Status (November 2025):**
-- **160 total PDF tools** including 84 conversion tools
-- All tools feature proper emoji icons for visual appeal
-- Complete SEO metadata (meta titles and descriptions) for all tools
+- **200 total PDF tools** including 124+ conversion tools
+- All tools feature proper SEO metadata (meta titles and descriptions)
 - Comprehensive how-to articles with use cases and related tool recommendations
+- Enhanced navigation with dropdown menus showcasing popular tools
 - Responsive design with search and category filtering
+- Recent additions include advanced conversion tools (PDF/A, XML, CSV, CAD formats), OCR tools, editing tools, and specialized converters
 
 ## User Preferences
 
