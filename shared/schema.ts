@@ -103,7 +103,47 @@ export const toolEmojis: Record<string, string> = {
   "pdf-font-subsetter": "🔤",
   "word-to-pdf": "📝",
   "doc-to-pdf": "📃",
-  "docx-to-pdf": "📄"
+  "docx-to-pdf": "📄",
+  "powerpoint-to-pdf": "📊",
+  "ppt-to-pdf": "🎞️",
+  "pptx-to-pdf": "🎬",
+  "excel-to-pdf": "📈",
+  "xls-to-pdf": "📉",
+  "xlsx-to-pdf": "📊",
+  "jpg-to-pdf": "🖼️",
+  "png-to-pdf": "🌅",
+  "bmp-to-pdf": "🎨",
+  "gif-to-pdf": "🎭",
+  "tiff-to-pdf": "📸",
+  "heic-to-pdf": "📷",
+  "webp-to-pdf": "🌐",
+  "svg-to-pdf": "🎯",
+  "images-to-pdf": "🖼️",
+  "html-to-pdf": "🌍",
+  "url-to-pdf": "🔗",
+  "webpage-to-pdf": "📄",
+  "txt-to-pdf": "📝",
+  "rtf-to-pdf": "📃",
+  "odt-to-pdf": "📄",
+  "ods-to-pdf": "📊",
+  "odp-to-pdf": "🎨",
+  "csv-to-pdf": "📋",
+  "epub-to-pdf": "📚",
+  "mobi-to-pdf": "📖",
+  "djvu-to-pdf": "📜",
+  "xml-to-pdf": "⚙️",
+  "markdown-to-pdf": "📝",
+  "md-to-pdf": "📄",
+  "create-pdf": "✨",
+  "pdf-creator": "🔨",
+  "pub-to-pdf": "📰",
+  "vsd-to-pdf": "📐",
+  "mpp-to-pdf": "📊",
+  "pages-to-pdf": "📄",
+  "numbers-to-pdf": "🔢",
+  "keynote-to-pdf": "🎤",
+  "email-to-pdf": "📧",
+  "msg-to-pdf": "💌"
 };
 
 // PDF Tool definitions with SEO metadata
@@ -3630,6 +3670,1868 @@ Converted PDFs maintain:
 
 DOCX to PDF ensures recipients see documents exactly as intended, regardless of their software or platform.`,
       relatedTools: ["word-to-pdf", "doc-to-pdf", "merge-pdf-word"]
+    }
+  },
+  {
+    id: "powerpoint-to-pdf",
+    title: "PowerPoint to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["powerpoint", "convert", "pdf", "pptx", "presentation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PowerPoint to PDF Online Free - Convert PPT to PDF",
+    metaDescription: "Convert PowerPoint presentations to PDF online for free. Transform PPT and PPTX files to PDF format. Fast and accurate PowerPoint to PDF converter.",
+    description: "Convert PowerPoint presentations to PDF format",
+    icon: "presentation",
+    howTo: [
+      "Upload your PowerPoint file (PPT or PPTX)",
+      "The tool converts your presentation to PDF",
+      "All slides, animations, and formatting preserved",
+      "Download your PDF presentation"
+    ],
+    article: {
+      title: "Convert PowerPoint Presentations to PDF",
+      content: `Converting PowerPoint to PDF creates universal presentations that can be viewed on any device without PowerPoint software. Perfect for sharing presentations while maintaining visual fidelity.
+
+## Why Convert PowerPoint to PDF?
+
+PowerPoint to PDF conversion offers several advantages:
+- Share presentations with anyone, regardless of software
+- Preserve slide layouts and formatting exactly
+- Prevent accidental editing of your content
+- Create printable handouts from slides
+- Reduce file size for email sharing
+
+## Professional Results
+
+Our converter maintains all essential elements:
+- Slide layouts and designs
+- Text formatting and fonts
+- Images and graphics
+- Charts and diagrams
+- Slide transitions (as static slides)
+
+## Universal Compatibility
+
+PDF presentations work everywhere:
+- Any device or platform
+- No PowerPoint required
+- Consistent appearance
+- Easy sharing via email or web`,
+      relatedTools: ["ppt-to-pdf", "pptx-to-pdf", "word-to-pdf"]
+    }
+  },
+  {
+    id: "ppt-to-pdf",
+    title: "PPT to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["ppt", "convert", "pdf", "powerpoint"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PPT to PDF Online Free - Convert PPT Files to PDF",
+    metaDescription: "Convert PPT to PDF online for free. Transform legacy PowerPoint files to PDF format. Fast PPT to PDF conversion tool.",
+    description: "Convert legacy PPT files to PDF format",
+    icon: "file-slideshow",
+    howTo: [
+      "Upload your PPT file",
+      "The tool converts to PDF",
+      "All slides are preserved",
+      "Download your PDF file"
+    ],
+    article: {
+      title: "Convert PPT Files to PDF",
+      content: `PPT to PDF conversion transforms older PowerPoint formats into universal PDFs. Perfect for archiving and sharing legacy presentations.
+
+## Legacy Format Support
+
+Handles older PowerPoint formats:
+- Classic .ppt files
+- PowerPoint 97-2003 presentations
+- Legacy formatting
+- Older version compatibility
+
+## Modern PDF Output
+
+Creates standard PDFs with:
+- Universal compatibility
+- All slides preserved
+- Professional appearance
+- Easy sharing`,
+      relatedTools: ["powerpoint-to-pdf", "pptx-to-pdf", "doc-to-pdf"]
+    }
+  },
+  {
+    id: "pptx-to-pdf",
+    title: "PPTX to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["pptx", "convert", "pdf", "powerpoint"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PPTX to PDF Online Free - Convert PPTX Files to PDF",
+    metaDescription: "Convert PPTX to PDF online for free. Transform PowerPoint PPTX presentations to PDF format. Fast and accurate PPTX to PDF converter.",
+    description: "Convert modern PPTX files to PDF format",
+    icon: "slides",
+    howTo: [
+      "Upload your PPTX file",
+      "The tool converts to high-quality PDF",
+      "All modern PowerPoint features preserved",
+      "Download your PDF presentation"
+    ],
+    article: {
+      title: "Convert PPTX Presentations to PDF",
+      content: `PPTX to PDF conversion creates professional PDFs from modern PowerPoint presentations. All visual elements and formatting maintained perfectly.
+
+## Modern PowerPoint Support
+
+Preserves advanced features:
+- Themes and styles
+- SmartArt graphics
+- Charts and tables
+- Custom animations (as slides)
+- Complex layouts
+
+## Professional PDFs
+
+Converted PDFs maintain:
+- Exact slide appearance
+- All embedded content
+- High-quality graphics
+- Universal compatibility`,
+      relatedTools: ["powerpoint-to-pdf", "ppt-to-pdf", "word-to-pdf"]
+    }
+  },
+  {
+    id: "excel-to-pdf",
+    title: "Excel to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["excel", "convert", "pdf", "xlsx", "spreadsheet"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Excel to PDF Online Free - Convert XLS to PDF",
+    metaDescription: "Convert Excel to PDF online for free. Transform XLS and XLSX spreadsheets to PDF format. Fast and accurate Excel to PDF converter.",
+    description: "Convert Excel spreadsheets to PDF format",
+    icon: "table",
+    howTo: [
+      "Upload your Excel file (XLS or XLSX)",
+      "The tool converts your spreadsheet to PDF",
+      "All data, formatting, and charts preserved",
+      "Download your PDF document"
+    ],
+    article: {
+      title: "Convert Excel Spreadsheets to PDF",
+      content: `Converting Excel to PDF creates professional, non-editable documents from your spreadsheets. Perfect for sharing financial reports, data tables, and analysis while preserving formatting.
+
+## Why Convert Excel to PDF?
+
+Excel to PDF conversion provides:
+- Share data with non-Excel users
+- Preserve exact cell formatting
+- Prevent accidental data changes
+- Create printable reports
+- Ensure consistent display across devices
+
+## Complete Data Preservation
+
+Our converter maintains:
+- Cell data and formulas (as values)
+- Formatting and colors
+- Charts and graphs
+- Images and objects
+- Multiple worksheets
+
+## Professional Documents
+
+Create professional PDF reports from your Excel data that look exactly as intended on any device or platform.`,
+      relatedTools: ["xls-to-pdf", "xlsx-to-pdf", "csv-to-pdf"]
+    }
+  },
+  {
+    id: "xls-to-pdf",
+    title: "XLS to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["xls", "convert", "pdf", "excel"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "XLS to PDF Online Free - Convert XLS Files to PDF",
+    metaDescription: "Convert XLS to PDF online for free. Transform legacy Excel files to PDF format. Fast XLS to PDF conversion tool.",
+    description: "Convert legacy XLS files to PDF format",
+    icon: "file-spreadsheet",
+    howTo: [
+      "Upload your XLS file",
+      "The tool converts to PDF",
+      "All data and formatting preserved",
+      "Download your PDF file"
+    ],
+    article: {
+      title: "Convert XLS Files to PDF",
+      content: `XLS to PDF conversion transforms older Excel formats into universal PDFs. Perfect for archiving and sharing legacy spreadsheets.
+
+## Legacy Format Support
+
+Handles older Excel formats:
+- Classic .xls files
+- Excel 97-2003 workbooks
+- Legacy formatting
+- Older version compatibility
+
+## Professional PDF Output
+
+Creates standard PDFs with:
+- All data preserved
+- Charts and formatting maintained
+- Universal compatibility
+- Easy sharing`,
+      relatedTools: ["excel-to-pdf", "xlsx-to-pdf", "csv-to-pdf"]
+    }
+  },
+  {
+    id: "xlsx-to-pdf",
+    title: "XLSX to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["xlsx", "convert", "pdf", "excel"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "XLSX to PDF Online Free - Convert XLSX Files to PDF",
+    metaDescription: "Convert XLSX to PDF online for free. Transform Excel XLSX spreadsheets to PDF format. Fast and accurate XLSX to PDF converter.",
+    description: "Convert modern XLSX files to PDF format",
+    icon: "file-chart",
+    howTo: [
+      "Upload your XLSX file",
+      "The tool converts to high-quality PDF",
+      "All modern Excel features preserved",
+      "Download your PDF document"
+    ],
+    article: {
+      title: "Convert XLSX Spreadsheets to PDF",
+      content: `XLSX to PDF conversion creates professional PDFs from modern Excel workbooks. All data, charts, and formatting maintained perfectly.
+
+## Modern Excel Support
+
+Preserves advanced features:
+- Conditional formatting
+- Pivot tables (as values)
+- Complex formulas (as results)
+- Charts and sparklines
+- Multiple worksheets
+
+## High-Quality Output
+
+Converted PDFs maintain:
+- Exact cell appearance
+- All embedded charts
+- Professional formatting
+- Universal compatibility`,
+      relatedTools: ["excel-to-pdf", "xls-to-pdf", "csv-to-pdf"]
+    }
+  },
+  {
+    id: "jpg-to-pdf",
+    title: "JPG to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["jpg", "jpeg", "image", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JPG to PDF Online Free - Convert JPEG Images to PDF",
+    metaDescription: "Convert JPG to PDF online for free. Transform JPEG images into PDF documents. Fast and easy JPG to PDF converter.",
+    description: "Convert JPG images to PDF format",
+    icon: "image",
+    howTo: [
+      "Upload your JPG/JPEG images",
+      "Arrange images in your preferred order",
+      "The tool creates a PDF document",
+      "Download your PDF with all images"
+    ],
+    article: {
+      title: "Convert JPG Images to PDF",
+      content: `Converting JPG to PDF transforms your images into professional documents. Perfect for creating photo albums, documentation, or compilations from JPEG images.
+
+## Image to Document Conversion
+
+JPG to PDF is useful for:
+- Creating photo albums and galleries
+- Compiling scanned documents
+- Building image-based reports
+- Sharing multiple images as one file
+- Archiving photographs
+
+## Multiple Images Support
+
+Upload multiple JPGs:
+- Combine many images into one PDF
+- Arrange images in custom order
+- Each image becomes a page
+- Maintain original quality
+
+## Professional Results
+
+Created PDFs maintain:
+- Original image quality
+- Proper page sizing
+- Easy sharing and printing
+- Universal compatibility`,
+      relatedTools: ["png-to-pdf", "images-to-pdf", "tiff-to-pdf"]
+    }
+  },
+  {
+    id: "png-to-pdf",
+    title: "PNG to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["png", "image", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PNG to PDF Online Free - Convert PNG Images to PDF",
+    metaDescription: "Convert PNG to PDF online for free. Transform PNG images into PDF documents. Fast and easy PNG to PDF converter.",
+    description: "Convert PNG images to PDF format",
+    icon: "file-image",
+    howTo: [
+      "Upload your PNG images",
+      "Organize images in desired sequence",
+      "The tool generates a PDF",
+      "Download your PDF document"
+    ],
+    article: {
+      title: "Convert PNG Images to PDF",
+      content: `PNG to PDF conversion creates documents from your transparent or high-quality PNG images. Perfect for screenshots, graphics, and illustrations.
+
+## PNG Image Conversion
+
+Perfect for converting:
+- Screenshots and captures
+- Transparent graphics
+- Logo and icon collections
+- Design mockups
+- Illustrations and diagrams
+
+## Transparency Handling
+
+Our converter:
+- Preserves transparency when possible
+- Handles transparent backgrounds
+- Maintains image quality
+- Supports high-resolution PNGs
+
+## Multiple Files Support
+
+Combine multiple PNGs:
+- Create multi-page PDFs
+- Arrange in custom order
+- Maintain image quality
+- Easy document creation`,
+      relatedTools: ["jpg-to-pdf", "images-to-pdf", "webp-to-pdf"]
+    }
+  },
+  {
+    id: "bmp-to-pdf",
+    title: "BMP to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["bmp", "bitmap", "image", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "BMP to PDF Online Free - Convert BMP Images to PDF",
+    metaDescription: "Convert BMP to PDF online for free. Transform bitmap images into PDF documents. Fast BMP to PDF converter.",
+    description: "Convert BMP bitmap images to PDF format",
+    icon: "palette",
+    howTo: [
+      "Upload your BMP files",
+      "Arrange in preferred order",
+      "Convert to PDF",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert BMP Files to PDF",
+      content: `BMP to PDF conversion transforms bitmap images into universal PDF documents. Perfect for archiving and sharing uncompressed images.
+
+## Bitmap Format Support
+
+Convert BMP images:
+- Uncompressed bitmaps
+- High-quality images
+- Legacy format support
+- Windows bitmap files
+
+## Quality Preservation
+
+Maintains:
+- Original image quality
+- Color accuracy
+- Image dimensions
+- Professional appearance`,
+      relatedTools: ["jpg-to-pdf", "png-to-pdf", "tiff-to-pdf"]
+    }
+  },
+  {
+    id: "gif-to-pdf",
+    title: "GIF to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["gif", "image", "convert", "pdf", "animation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "GIF to PDF Online Free - Convert GIF Images to PDF",
+    metaDescription: "Convert GIF to PDF online for free. Transform GIF images into PDF documents. Handles both static and animated GIFs.",
+    description: "Convert GIF images to PDF format",
+    icon: "film",
+    howTo: [
+      "Upload your GIF files",
+      "Animated GIFs show each frame as a page",
+      "Static GIFs convert directly",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert GIF Images to PDF",
+      content: `GIF to PDF conversion creates documents from your GIF images. Animated GIFs are converted with each frame becoming a separate page.
+
+## GIF Format Support
+
+Handles both:
+- Static GIF images
+- Animated GIF files
+- Multiple GIF uploads
+- Frame extraction from animations
+
+## Animation Handling
+
+For animated GIFs:
+- Each frame becomes a PDF page
+- Maintains frame order
+- Preserves all animation frames
+- Creates multi-page documents
+
+## Flexible Usage
+
+Perfect for:
+- Converting static graphics
+- Archiving animated content
+- Creating frame-by-frame documentation
+- Sharing GIF content as PDF`,
+      relatedTools: ["jpg-to-pdf", "png-to-pdf", "images-to-pdf"]
+    }
+  },
+  {
+    id: "tiff-to-pdf",
+    title: "TIFF to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["tiff", "tif", "image", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "TIFF to PDF Online Free - Convert TIFF Images to PDF",
+    metaDescription: "Convert TIFF to PDF online for free. Transform TIFF images into PDF documents. Supports multi-page TIFF files.",
+    description: "Convert TIFF images to PDF format",
+    icon: "scan",
+    howTo: [
+      "Upload your TIFF files",
+      "Multi-page TIFFs are handled automatically",
+      "The tool creates a PDF",
+      "Download your converted PDF"
+    ],
+    article: {
+      title: "Convert TIFF Images to PDF",
+      content: `TIFF to PDF conversion transforms high-quality TIFF images into universal PDFs. Perfect for scanned documents and professional photography.
+
+## TIFF Format Support
+
+Handles various TIFF types:
+- Single-page TIFF images
+- Multi-page TIFF documents
+- Compressed and uncompressed
+- High-resolution scans
+
+## Multi-Page TIFF Handling
+
+Automatically processes:
+- All pages in multi-page TIFFs
+- Maintains page order
+- Preserves image quality
+- Creates organized PDFs
+
+## Professional Quality
+
+Perfect for:
+- Scanned document conversion
+- Professional photography
+- Medical imaging
+- Technical drawings
+- High-resolution archives`,
+      relatedTools: ["jpg-to-pdf", "png-to-pdf", "bmp-to-pdf"]
+    }
+  },
+  {
+    id: "heic-to-pdf",
+    title: "HEIC to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["heic", "heif", "image", "convert", "pdf", "iphone"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HEIC to PDF Online Free - Convert iPhone Photos to PDF",
+    metaDescription: "Convert HEIC to PDF online for free. Transform iPhone HEIC images into PDF documents. Fast HEIC to PDF converter.",
+    description: "Convert HEIC/HEIF images to PDF format",
+    icon: "smartphone",
+    howTo: [
+      "Upload your HEIC files (iPhone photos)",
+      "The tool converts HEIC to PDF",
+      "All images processed automatically",
+      "Download your PDF document"
+    ],
+    article: {
+      title: "Convert HEIC Files to PDF",
+      content: `HEIC to PDF conversion transforms iPhone and modern device photos into universal PDFs. Perfect for sharing iOS photos with anyone on any platform.
+
+## HEIC/HEIF Support
+
+Handles modern image formats:
+- HEIC files from iPhones
+- HEIF format images
+- High-efficiency images
+- iOS photo format
+
+## Universal Compatibility
+
+Convert HEIC to PDF for:
+- Sharing with non-iOS users
+- Universal device compatibility
+- Email and web sharing
+- Archive and documentation
+
+## Quality Preservation
+
+Maintains:
+- Original photo quality
+- Color accuracy
+- Image metadata
+- Professional appearance`,
+      relatedTools: ["jpg-to-pdf", "png-to-pdf", "images-to-pdf"]
+    }
+  },
+  {
+    id: "webp-to-pdf",
+    title: "WebP to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["webp", "image", "convert", "pdf", "web"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "WebP to PDF Online Free - Convert WebP Images to PDF",
+    metaDescription: "Convert WebP to PDF online for free. Transform WebP images into PDF documents. Fast WebP to PDF converter.",
+    description: "Convert WebP images to PDF format",
+    icon: "globe",
+    howTo: [
+      "Upload your WebP files",
+      "The tool converts to PDF",
+      "All WebP features preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert WebP Images to PDF",
+      content: `WebP to PDF conversion transforms modern web images into universal PDFs. Perfect for archiving and sharing web graphics.
+
+## WebP Format Support
+
+Handles modern web images:
+- WebP format files
+- Compressed web images
+- Google's WebP format
+- Modern web graphics
+
+## Web Image Conversion
+
+Perfect for:
+- Archiving web content
+- Sharing web graphics
+- Creating documentation
+- Universal compatibility
+
+## Quality Preservation
+
+Maintains:
+- Image quality
+- Color accuracy
+- Proper conversion
+- Professional output`,
+      relatedTools: ["png-to-pdf", "jpg-to-pdf", "svg-to-pdf"]
+    }
+  },
+  {
+    id: "svg-to-pdf",
+    title: "SVG to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["svg", "vector", "image", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "SVG to PDF Online Free - Convert SVG Graphics to PDF",
+    metaDescription: "Convert SVG to PDF online for free. Transform scalable vector graphics into PDF documents. Fast SVG to PDF converter.",
+    description: "Convert SVG vector graphics to PDF format",
+    icon: "vector",
+    howTo: [
+      "Upload your SVG files",
+      "The tool converts vectors to PDF",
+      "Quality maintained at any size",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert SVG Graphics to PDF",
+      content: `SVG to PDF conversion transforms scalable vector graphics into universal PDFs. Perfect for logos, icons, and illustrations.
+
+## Vector Graphics Support
+
+Handles SVG files:
+- Scalable vector graphics
+- Logo and icon files
+- Illustrations and diagrams
+- Web graphics
+
+## Quality at Any Size
+
+Vector conversion maintains:
+- Infinite scalability
+- Sharp at any resolution
+- No quality loss
+- Professional appearance
+
+## Perfect For
+
+Ideal for converting:
+- Company logos
+- Icon collections
+- Technical diagrams
+- Design files
+- Illustrations`,
+      relatedTools: ["png-to-pdf", "webp-to-pdf", "images-to-pdf"]
+    }
+  },
+  {
+    id: "images-to-pdf",
+    title: "Images to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["images", "convert", "pdf", "multiple", "photos"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Images to PDF Online Free - Convert Multiple Images to PDF",
+    metaDescription: "Convert multiple images to PDF online for free. Combine JPG, PNG, and other images into one PDF. Fast image to PDF converter.",
+    description: "Convert multiple images to PDF format",
+    icon: "images",
+    howTo: [
+      "Upload multiple images (JPG, PNG, BMP, etc.)",
+      "Arrange images in desired order",
+      "Choose layout options (one image per page, multiple per page)",
+      "Download your PDF with all images"
+    ],
+    article: {
+      title: "Convert Multiple Images to PDF",
+      content: `Images to PDF conversion combines multiple photos and graphics into a single PDF document. Perfect for creating photo albums, documentation, and compilations.
+
+## Multiple Format Support
+
+Accepts various image formats:
+- JPG and JPEG images
+- PNG graphics
+- BMP bitmaps
+- GIF files
+- TIFF images
+- And many more
+
+## Flexible Layout Options
+
+Customize your PDF:
+- One image per page
+- Multiple images per page
+- Custom page sizes
+- Auto-fit or custom sizing
+- Maintain aspect ratios
+
+## Practical Applications
+
+Perfect for:
+- Photo albums and galleries
+- Scanned document compilation
+- Product catalogs
+- Portfolio creation
+- Visual reports
+- Image archives`,
+      relatedTools: ["jpg-to-pdf", "png-to-pdf", "tiff-to-pdf"]
+    }
+  },
+  {
+    id: "html-to-pdf",
+    title: "HTML to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["html", "web", "convert", "pdf", "webpage"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HTML to PDF Online Free - Convert HTML Pages to PDF",
+    metaDescription: "Convert HTML to PDF online for free. Transform HTML files into PDF documents. Fast HTML to PDF converter with CSS support.",
+    description: "Convert HTML files to PDF format",
+    icon: "code",
+    howTo: [
+      "Upload your HTML file or paste HTML code",
+      "The tool renders and converts to PDF",
+      "CSS styling is preserved",
+      "Download your PDF document"
+    ],
+    article: {
+      title: "Convert HTML to PDF",
+      content: `HTML to PDF conversion transforms web pages into printable documents. Perfect for archiving web content, creating reports, and documentation.
+
+## HTML Conversion Features
+
+Supports full HTML:
+- Complete HTML documents
+- CSS styling and layouts
+- Images and media
+- Tables and forms
+- Modern HTML5
+
+## Styling Preservation
+
+Maintains all styling:
+- CSS styles and classes
+- Fonts and colors
+- Layouts and positioning
+- Responsive designs
+- Custom styling
+
+## Practical Uses
+
+Perfect for:
+- Archiving web content
+- Creating documentation
+- Email templates to PDF
+- Reports and invoices
+- Web page printing`,
+      relatedTools: ["url-to-pdf", "webpage-to-pdf", "markdown-to-pdf"]
+    }
+  },
+  {
+    id: "url-to-pdf",
+    title: "URL to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["url", "web", "convert", "pdf", "webpage"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "URL to PDF Online Free - Convert Web Pages to PDF",
+    metaDescription: "Convert any URL to PDF online for free. Transform web pages into PDF documents. Fast URL to PDF converter.",
+    description: "Convert web URLs to PDF format",
+    icon: "link-2",
+    howTo: [
+      "Enter the URL of the webpage",
+      "The tool fetches and renders the page",
+      "Webpage is converted to PDF",
+      "Download your PDF document"
+    ],
+    article: {
+      title: "Convert URLs to PDF",
+      content: `URL to PDF conversion captures web pages and saves them as PDF documents. Perfect for archiving websites, saving articles, and creating offline copies.
+
+## Webpage Capture
+
+Captures complete webpages:
+- Full page content
+- Styling and layouts
+- Images and graphics
+- Text and formatting
+- Modern web pages
+
+## Archiving Websites
+
+Perfect for:
+- Saving articles and blogs
+- Archiving important pages
+- Creating offline copies
+- Documentation from web
+- Research material preservation
+
+## Complete Capture
+
+Saves everything:
+- All visible content
+- Page styling
+- Images and media
+- Formatted text
+- Professional appearance`,
+      relatedTools: ["webpage-to-pdf", "html-to-pdf", "markdown-to-pdf"]
+    }
+  },
+  {
+    id: "webpage-to-pdf",
+    title: "Webpage to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["webpage", "web", "convert", "pdf", "site"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Webpage to PDF Online Free - Save Websites as PDF",
+    metaDescription: "Convert webpages to PDF online for free. Save any website as a PDF document. Fast webpage to PDF converter.",
+    description: "Convert webpages to PDF format",
+    icon: "browser",
+    howTo: [
+      "Enter webpage URL or upload HTML",
+      "Choose capture options (full page or visible area)",
+      "The tool converts to PDF",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert Webpages to PDF",
+      content: `Webpage to PDF conversion captures complete websites and saves them as professional PDF documents. Archive important content and create offline copies.
+
+## Complete Page Capture
+
+Captures webpages with:
+- Full content and styling
+- Images and graphics
+- Responsive layouts
+- Modern web features
+- Professional formatting
+
+## Flexible Options
+
+Choose how to capture:
+- Full page capture
+- Visible area only
+- Specific page sections
+- Custom page sizes
+- Print-friendly versions
+
+## Perfect For
+
+Ideal for:
+- Web archiving
+- Offline reading
+- Documentation
+- Research materials
+- Content preservation`,
+      relatedTools: ["url-to-pdf", "html-to-pdf", "markdown-to-pdf"]
+    }
+  },
+  {
+    id: "txt-to-pdf",
+    title: "TXT to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["txt", "text", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "TXT to PDF Online Free - Convert Text Files to PDF",
+    metaDescription: "Convert TXT to PDF online for free. Transform plain text files into formatted PDF documents. Fast TXT to PDF converter.",
+    description: "Convert text files to PDF format",
+    icon: "file-text-2",
+    howTo: [
+      "Upload your TXT file or paste text",
+      "Choose formatting options (font, size, spacing)",
+      "The tool creates a formatted PDF",
+      "Download your PDF document"
+    ],
+    article: {
+      title: "Convert Text Files to PDF",
+      content: `TXT to PDF conversion transforms plain text into professional PDF documents. Add formatting and structure to your text files.
+
+## Text to Document
+
+Convert text files to:
+- Professional PDFs
+- Formatted documents
+- Easy-to-share files
+- Universal format
+
+## Formatting Options
+
+Customize your PDF:
+- Font selection
+- Font size and spacing
+- Page margins
+- Text alignment
+- Line spacing
+
+## Practical Uses
+
+Perfect for:
+- Note conversion
+- Code documentation
+- Log file archiving
+- Plain text preservation
+- Document creation`,
+      relatedTools: ["rtf-to-pdf", "markdown-to-pdf", "html-to-pdf"]
+    }
+  },
+  {
+    id: "rtf-to-pdf",
+    title: "RTF to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["rtf", "rich-text", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "RTF to PDF Online Free - Convert RTF Files to PDF",
+    metaDescription: "Convert RTF to PDF online for free. Transform rich text format files into PDF documents. Fast RTF to PDF converter.",
+    description: "Convert RTF rich text files to PDF format",
+    icon: "file-rich-text",
+    howTo: [
+      "Upload your RTF file",
+      "The tool preserves all formatting",
+      "RTF is converted to PDF",
+      "Download your formatted PDF"
+    ],
+    article: {
+      title: "Convert RTF Files to PDF",
+      content: `RTF to PDF conversion transforms rich text format files into universal PDFs while preserving all formatting and styling.
+
+## Rich Text Support
+
+Preserves RTF features:
+- Text formatting
+- Fonts and styles
+- Colors and highlighting
+- Tables and lists
+- Images and objects
+
+## Formatting Preservation
+
+Maintains all:
+- Bold and italic text
+- Font sizes and families
+- Paragraph formatting
+- Document structure
+- Visual appearance
+
+## Universal Compatibility
+
+Create PDFs that:
+- Work on any device
+- Maintain formatting
+- Easy to share
+- Professional appearance`,
+      relatedTools: ["txt-to-pdf", "doc-to-pdf", "odt-to-pdf"]
+    }
+  },
+  {
+    id: "odt-to-pdf",
+    title: "ODT to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["odt", "opendocument", "convert", "pdf", "libreoffice"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "ODT to PDF Online Free - Convert ODT Files to PDF",
+    metaDescription: "Convert ODT to PDF online for free. Transform OpenDocument text files into PDF format. Fast ODT to PDF converter.",
+    description: "Convert OpenDocument text files to PDF format",
+    icon: "file-doc",
+    howTo: [
+      "Upload your ODT file",
+      "The tool converts to PDF",
+      "All formatting preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert ODT Files to PDF",
+      content: `ODT to PDF conversion transforms OpenDocument text files into universal PDFs. Perfect for sharing LibreOffice and OpenOffice documents.
+
+## OpenDocument Support
+
+Handles ODT files from:
+- LibreOffice Writer
+- OpenOffice Writer
+- Other ODF-compatible software
+- Cross-platform documents
+
+## Complete Conversion
+
+Preserves all:
+- Text and formatting
+- Images and tables
+- Styles and layouts
+- Headers and footers
+- Document structure
+
+## Share Universally
+
+Create PDFs for:
+- Universal compatibility
+- Easy sharing
+- Professional appearance
+- Any platform`,
+      relatedTools: ["docx-to-pdf", "rtf-to-pdf", "txt-to-pdf"]
+    }
+  },
+  {
+    id: "ods-to-pdf",
+    title: "ODS to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["ods", "spreadsheet", "convert", "pdf", "libreoffice"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "ODS to PDF Online Free - Convert ODS Files to PDF",
+    metaDescription: "Convert ODS to PDF online for free. Transform OpenDocument spreadsheets into PDF format. Fast ODS to PDF converter.",
+    description: "Convert OpenDocument spreadsheets to PDF format",
+    icon: "file-spreadsheet",
+    howTo: [
+      "Upload your ODS file",
+      "The tool converts spreadsheet to PDF",
+      "All sheets and formatting preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert ODS Spreadsheets to PDF",
+      content: `ODS to PDF conversion transforms OpenDocument spreadsheets into universal PDFs. Share LibreOffice Calc documents with anyone.
+
+## Spreadsheet Support
+
+Handles ODS files from:
+- LibreOffice Calc
+- OpenOffice Calc
+- Other ODF spreadsheet apps
+- Cross-platform sheets
+
+## Data Preservation
+
+Maintains all:
+- Cell data and formulas
+- Charts and graphs
+- Formatting and styles
+- Multiple sheets
+- Professional layout
+
+## Professional Output
+
+Create PDFs with:
+- All data preserved
+- Professional appearance
+- Universal compatibility
+- Easy sharing`,
+      relatedTools: ["xlsx-to-pdf", "csv-to-pdf", "odt-to-pdf"]
+    }
+  },
+  {
+    id: "odp-to-pdf",
+    title: "ODP to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["odp", "presentation", "convert", "pdf", "libreoffice"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "ODP to PDF Online Free - Convert ODP Files to PDF",
+    metaDescription: "Convert ODP to PDF online for free. Transform OpenDocument presentations into PDF format. Fast ODP to PDF converter.",
+    description: "Convert OpenDocument presentations to PDF format",
+    icon: "file-presentation",
+    howTo: [
+      "Upload your ODP file",
+      "The tool converts presentation to PDF",
+      "All slides preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert ODP Presentations to PDF",
+      content: `ODP to PDF conversion transforms OpenDocument presentations into universal PDFs. Share LibreOffice Impress presentations with anyone.
+
+## Presentation Support
+
+Handles ODP files from:
+- LibreOffice Impress
+- OpenOffice Impress
+- Other ODF presentation software
+- Cross-platform presentations
+
+## Slide Preservation
+
+Maintains all:
+- Slide content and layouts
+- Images and graphics
+- Text formatting
+- Slide transitions (as pages)
+- Professional appearance
+
+## Universal Sharing
+
+Create PDFs for:
+- Any device or platform
+- No special software needed
+- Professional sharing
+- Easy distribution`,
+      relatedTools: ["pptx-to-pdf", "odp-to-pdf", "odt-to-pdf"]
+    }
+  },
+  {
+    id: "csv-to-pdf",
+    title: "CSV to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["csv", "data", "convert", "pdf", "table"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSV to PDF Online Free - Convert CSV Data to PDF",
+    metaDescription: "Convert CSV to PDF online for free. Transform CSV data into formatted PDF tables. Fast CSV to PDF converter.",
+    description: "Convert CSV data files to PDF format",
+    icon: "table-cells",
+    howTo: [
+      "Upload your CSV file",
+      "The tool formats data as table",
+      "CSV is converted to PDF",
+      "Download your PDF table"
+    ],
+    article: {
+      title: "Convert CSV Data to PDF",
+      content: `CSV to PDF conversion transforms comma-separated data into formatted PDF tables. Perfect for sharing data in a readable format.
+
+## Data to Table
+
+Converts CSV data to:
+- Formatted tables
+- Professional PDFs
+- Easy-to-read documents
+- Printable reports
+
+## Formatting Options
+
+Customize your table:
+- Column widths
+- Header styling
+- Font and sizes
+- Borders and colors
+- Page orientation
+
+## Perfect For
+
+Ideal for:
+- Data reports
+- Export documentation
+- Database exports
+- Contact lists
+- Inventory lists`,
+      relatedTools: ["xlsx-to-pdf", "ods-to-pdf", "txt-to-pdf"]
+    }
+  },
+  {
+    id: "epub-to-pdf",
+    title: "EPUB to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["epub", "ebook", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "EPUB to PDF Online Free - Convert EPUB eBooks to PDF",
+    metaDescription: "Convert EPUB to PDF online for free. Transform eBooks into PDF format. Fast EPUB to PDF converter.",
+    description: "Convert EPUB eBooks to PDF format",
+    icon: "book-open",
+    howTo: [
+      "Upload your EPUB file",
+      "The tool converts eBook to PDF",
+      "All content and formatting preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert EPUB eBooks to PDF",
+      content: `EPUB to PDF conversion transforms eBooks into universal PDF format. Read your eBooks on any device and platform.
+
+## eBook Conversion
+
+Converts EPUB to:
+- Universal PDF format
+- Any device compatibility
+- Printable documents
+- Professional format
+
+## Content Preservation
+
+Maintains all:
+- Text and chapters
+- Images and graphics
+- Formatting and styles
+- Table of contents
+- Book structure
+
+## Universal Reading
+
+Create PDFs for:
+- Any PDF reader
+- Desktop and mobile
+- Print and digital
+- Easy sharing`,
+      relatedTools: ["mobi-to-pdf", "djvu-to-pdf", "txt-to-pdf"]
+    }
+  },
+  {
+    id: "mobi-to-pdf",
+    title: "MOBI to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["mobi", "ebook", "kindle", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MOBI to PDF Online Free - Convert Kindle Books to PDF",
+    metaDescription: "Convert MOBI to PDF online for free. Transform Kindle eBooks into PDF format. Fast MOBI to PDF converter.",
+    description: "Convert MOBI Kindle files to PDF format",
+    icon: "book",
+    howTo: [
+      "Upload your MOBI file",
+      "The tool converts to PDF",
+      "All content preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert MOBI Files to PDF",
+      content: `MOBI to PDF conversion transforms Kindle eBooks into universal PDFs. Read your Kindle books on any device.
+
+## Kindle Book Support
+
+Converts MOBI files:
+- Kindle eBook format
+- Amazon book files
+- eBook content
+- Digital books
+
+## Complete Conversion
+
+Preserves all:
+- Book text and chapters
+- Images and formatting
+- Table of contents
+- Book structure
+- Reading experience
+
+## Read Anywhere
+
+Create PDFs for:
+- Any device
+- Universal readers
+- Desktop and mobile
+- Easy sharing`,
+      relatedTools: ["epub-to-pdf", "djvu-to-pdf", "txt-to-pdf"]
+    }
+  },
+  {
+    id: "djvu-to-pdf",
+    title: "DJVU to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["djvu", "document", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "DJVU to PDF Online Free - Convert DJVU Files to PDF",
+    metaDescription: "Convert DJVU to PDF online for free. Transform DJVU documents into PDF format. Fast DJVU to PDF converter.",
+    description: "Convert DJVU documents to PDF format",
+    icon: "file-archive",
+    howTo: [
+      "Upload your DJVU file",
+      "The tool converts to PDF",
+      "All pages and content preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert DJVU Files to PDF",
+      content: `DJVU to PDF conversion transforms specialized document format into universal PDFs. Perfect for accessing DJVU archives in standard format.
+
+## DJVU Format Support
+
+Handles DJVU files:
+- Scanned documents
+- Digital libraries
+- Archive materials
+- Image-based documents
+
+## Quality Conversion
+
+Preserves all:
+- Document pages
+- Image quality
+- Text layers (if present)
+- Page structure
+- Visual fidelity
+
+## Universal Access
+
+Create PDFs for:
+- Standard PDF readers
+- Universal compatibility
+- Easy sharing
+- Better accessibility`,
+      relatedTools: ["epub-to-pdf", "mobi-to-pdf", "tiff-to-pdf"]
+    }
+  },
+  {
+    id: "xml-to-pdf",
+    title: "XML to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["xml", "data", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "XML to PDF Online Free - Convert XML Data to PDF",
+    metaDescription: "Convert XML to PDF online for free. Transform XML data into formatted PDF documents. Fast XML to PDF converter.",
+    description: "Convert XML data to PDF format",
+    icon: "code-xml",
+    howTo: [
+      "Upload your XML file",
+      "Choose formatting template",
+      "The tool converts to PDF",
+      "Download your formatted PDF"
+    ],
+    article: {
+      title: "Convert XML Data to PDF",
+      content: `XML to PDF conversion transforms structured data into readable PDF documents. Perfect for creating reports and documentation from XML data.
+
+## XML Data Conversion
+
+Converts XML to:
+- Formatted PDFs
+- Readable documents
+- Professional reports
+- Structured output
+
+## Formatting Options
+
+Create PDFs with:
+- Custom templates
+- Data tables
+- Hierarchical structure
+- Professional layout
+- Custom styling
+
+## Practical Uses
+
+Perfect for:
+- Data reports
+- Configuration documentation
+- Database exports
+- API responses
+- Structured data`,
+      relatedTools: ["csv-to-pdf", "html-to-pdf", "txt-to-pdf"]
+    }
+  },
+  {
+    id: "markdown-to-pdf",
+    title: "Markdown to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["markdown", "md", "convert", "pdf", "documentation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Markdown to PDF Online Free - Convert MD Files to PDF",
+    metaDescription: "Convert Markdown to PDF online for free. Transform MD files into formatted PDF documents. Fast Markdown to PDF converter.",
+    description: "Convert Markdown files to PDF format",
+    icon: "markdown",
+    howTo: [
+      "Upload your Markdown file or paste content",
+      "The tool renders Markdown to formatted PDF",
+      "All formatting and syntax preserved",
+      "Download your professional PDF"
+    ],
+    article: {
+      title: "Convert Markdown to PDF",
+      content: `Markdown to PDF conversion transforms plain text documentation into professional PDFs. Perfect for creating documentation, README files, and technical guides.
+
+## Markdown Support
+
+Handles all Markdown:
+- Headings and text formatting
+- Lists and tables
+- Code blocks and syntax highlighting
+- Links and images
+- GitHub Flavored Markdown
+
+## Professional Formatting
+
+Creates beautiful PDFs with:
+- Proper heading hierarchy
+- Formatted code blocks
+- Professional typography
+- Clean layouts
+- Consistent styling
+
+## Perfect For
+
+Ideal for:
+- Documentation conversion
+- README to PDF
+- Technical guides
+- Blog post archiving
+- Note taking`,
+      relatedTools: ["md-to-pdf", "html-to-pdf", "txt-to-pdf"]
+    }
+  },
+  {
+    id: "md-to-pdf",
+    title: "MD to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["md", "markdown", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MD to PDF Online Free - Convert MD Files to PDF",
+    metaDescription: "Convert MD to PDF online for free. Transform Markdown files into PDF documents. Fast MD to PDF converter.",
+    description: "Convert MD markdown files to PDF format",
+    icon: "file-code",
+    howTo: [
+      "Upload your MD file",
+      "Markdown is rendered to PDF",
+      "All syntax converted to formatting",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert MD Files to PDF",
+      content: `MD to PDF conversion creates professional documents from Markdown files. Share your documentation in universal PDF format.
+
+## Markdown Rendering
+
+Converts MD syntax to:
+- Formatted text
+- Professional headings
+- Tables and lists
+- Code blocks
+- Rich documents
+
+## Syntax Support
+
+Handles all Markdown:
+- Basic syntax
+- Extended syntax
+- Code highlighting
+- Tables and lists
+- Links and images
+
+## Universal Sharing
+
+Create PDFs for:
+- Easy sharing
+- Professional appearance
+- Any platform
+- Print and digital`,
+      relatedTools: ["markdown-to-pdf", "html-to-pdf", "txt-to-pdf"]
+    }
+  },
+  {
+    id: "create-pdf",
+    title: "Create PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["create", "make", "generate", "pdf", "new"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Create PDF Online Free - Make PDF Documents from Scratch",
+    metaDescription: "Create PDF files online for free. Make new PDF documents from text, images, or templates. Easy PDF creator tool.",
+    description: "Create new PDF documents from scratch",
+    icon: "file-plus-2",
+    howTo: [
+      "Choose to create from text, images, or blank pages",
+      "Add your content and format as needed",
+      "Customize appearance and layout",
+      "Download your newly created PDF"
+    ],
+    article: {
+      title: "Create PDF Documents Online",
+      content: `Create PDF files from scratch with our easy-to-use online tool. Build professional PDFs from text, images, or start with a blank canvas.
+
+## Multiple Creation Methods
+
+Create PDFs from:
+- Plain text input
+- Images and photos
+- Blank pages
+- Templates
+- Custom content
+
+## Flexible Customization
+
+Customize your PDF:
+- Page size and orientation
+- Fonts and formatting
+- Images and graphics
+- Colors and styling
+- Professional layouts
+
+## Professional Results
+
+Create PDFs for:
+- Documents and forms
+- Reports and presentations
+- Flyers and brochures
+- Invoices and receipts
+- Any purpose`,
+      relatedTools: ["pdf-creator", "images-to-pdf", "txt-to-pdf"]
+    }
+  },
+  {
+    id: "pdf-creator",
+    title: "PDF Creator",
+    category: "Convert" as ToolCategory,
+    tags: ["create", "creator", "make", "pdf", "generate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Creator Online Free - Professional PDF Creation Tool",
+    metaDescription: "Professional PDF creator to make PDF documents online for free. Create PDFs from multiple sources with advanced features.",
+    description: "Professional tool for creating PDF documents",
+    icon: "wand",
+    howTo: [
+      "Select source type (text, images, files, etc.)",
+      "Add and arrange your content",
+      "Apply formatting and styling",
+      "Generate and download your PDF"
+    ],
+    article: {
+      title: "Professional PDF Creation Tool",
+      content: `The PDF Creator provides advanced features for building professional PDF documents from various sources. Create complex, multi-page PDFs with ease.
+
+## Advanced Creation
+
+Create PDFs with:
+- Multiple content types
+- Advanced formatting
+- Custom layouts
+- Professional styling
+- Complex documents
+
+## Rich Features
+
+Build PDFs with:
+- Text and images
+- Tables and forms
+- Headers and footers
+- Page numbers
+- Custom fonts
+
+## Professional Output
+
+Perfect for:
+- Business documents
+- Marketing materials
+- Reports and proposals
+- Forms and contracts
+- Any professional need`,
+      relatedTools: ["create-pdf", "merge-pdf", "images-to-pdf"]
+    }
+  },
+  {
+    id: "pub-to-pdf",
+    title: "PUB to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["pub", "publisher", "convert", "pdf", "microsoft"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PUB to PDF Online Free - Convert Publisher Files to PDF",
+    metaDescription: "Convert PUB to PDF online for free. Transform Microsoft Publisher files into PDF format. Fast PUB to PDF converter.",
+    description: "Convert Microsoft Publisher files to PDF format",
+    icon: "file-publication",
+    howTo: [
+      "Upload your PUB file",
+      "The tool converts to PDF",
+      "All layouts and designs preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert Publisher Files to PDF",
+      content: `PUB to PDF conversion transforms Microsoft Publisher documents into universal PDFs. Share your designs and layouts with anyone.
+
+## Publisher Support
+
+Handles PUB files:
+- Microsoft Publisher documents
+- Layout and design files
+- Brochures and flyers
+- Marketing materials
+- Publications
+
+## Design Preservation
+
+Maintains all:
+- Layouts and designs
+- Fonts and colors
+- Images and graphics
+- Professional appearance
+- Visual fidelity
+
+## Universal Sharing
+
+Create PDFs for:
+- Easy sharing
+- Any platform
+- No Publisher needed
+- Professional distribution`,
+      relatedTools: ["docx-to-pdf", "pptx-to-pdf", "create-pdf"]
+    }
+  },
+  {
+    id: "vsd-to-pdf",
+    title: "VSD to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["vsd", "visio", "diagram", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "VSD to PDF Online Free - Convert Visio Diagrams to PDF",
+    metaDescription: "Convert VSD to PDF online for free. Transform Microsoft Visio diagrams into PDF format. Fast VSD to PDF converter.",
+    description: "Convert Microsoft Visio diagrams to PDF format",
+    icon: "diagram",
+    howTo: [
+      "Upload your VSD file",
+      "The tool converts diagram to PDF",
+      "All shapes and connections preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert Visio Diagrams to PDF",
+      content: `VSD to PDF conversion transforms Microsoft Visio diagrams into universal PDFs. Share your flowcharts and diagrams with anyone.
+
+## Visio Support
+
+Handles VSD files:
+- Microsoft Visio diagrams
+- Flowcharts and processes
+- Network diagrams
+- Floor plans
+- Technical drawings
+
+## Complete Conversion
+
+Preserves all:
+- Shapes and connectors
+- Text and labels
+- Colors and formatting
+- Layers and pages
+- Professional quality
+
+## Easy Sharing
+
+Create PDFs for:
+- Universal viewing
+- No Visio required
+- Easy distribution
+- Professional sharing`,
+      relatedTools: ["svg-to-pdf", "create-pdf", "images-to-pdf"]
+    }
+  },
+  {
+    id: "mpp-to-pdf",
+    title: "MPP to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["mpp", "project", "convert", "pdf", "microsoft"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MPP to PDF Online Free - Convert MS Project Files to PDF",
+    metaDescription: "Convert MPP to PDF online for free. Transform Microsoft Project files into PDF format. Fast MPP to PDF converter.",
+    description: "Convert Microsoft Project files to PDF format",
+    icon: "gantt-chart",
+    howTo: [
+      "Upload your MPP file",
+      "The tool converts project to PDF",
+      "Gantt charts and tasks preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert Microsoft Project to PDF",
+      content: `MPP to PDF conversion transforms Microsoft Project plans into universal PDFs. Share your project timelines and Gantt charts with stakeholders.
+
+## Project File Support
+
+Handles MPP files:
+- Microsoft Project files
+- Project plans and timelines
+- Gantt charts
+- Task schedules
+- Resource allocations
+
+## Data Preservation
+
+Maintains all:
+- Tasks and milestones
+- Gantt chart views
+- Resource information
+- Timeline data
+- Professional layout
+
+## Stakeholder Sharing
+
+Create PDFs for:
+- Easy sharing
+- No Project needed
+- Client presentations
+- Team distribution`,
+      relatedTools: ["xlsx-to-pdf", "vsd-to-pdf", "create-pdf"]
+    }
+  },
+  {
+    id: "pages-to-pdf",
+    title: "Pages to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["pages", "apple", "mac", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Pages to PDF Online Free - Convert Apple Pages to PDF",
+    metaDescription: "Convert Pages to PDF online for free. Transform Apple Pages documents into PDF format. Fast Pages to PDF converter.",
+    description: "Convert Apple Pages documents to PDF format",
+    icon: "file-type-pages",
+    howTo: [
+      "Upload your Pages file",
+      "The tool converts to PDF",
+      "All formatting preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert Apple Pages to PDF",
+      content: `Pages to PDF conversion transforms Apple Pages documents into universal PDFs. Share your Mac documents with anyone on any platform.
+
+## Pages Support
+
+Handles Pages files:
+- Apple Pages documents
+- Mac word processing
+- iOS Pages files
+- iCloud documents
+- Modern and legacy formats
+
+## Complete Conversion
+
+Preserves all:
+- Text and formatting
+- Images and graphics
+- Tables and charts
+- Layouts and styles
+- Professional appearance
+
+## Cross-Platform Sharing
+
+Create PDFs for:
+- Windows users
+- Android devices
+- Universal access
+- Easy sharing`,
+      relatedTools: ["docx-to-pdf", "numbers-to-pdf", "keynote-to-pdf"]
+    }
+  },
+  {
+    id: "numbers-to-pdf",
+    title: "Numbers to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["numbers", "apple", "spreadsheet", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Numbers to PDF Online Free - Convert Apple Numbers to PDF",
+    metaDescription: "Convert Numbers to PDF online for free. Transform Apple Numbers spreadsheets into PDF format. Fast Numbers to PDF converter.",
+    description: "Convert Apple Numbers spreadsheets to PDF format",
+    icon: "file-type-numbers",
+    howTo: [
+      "Upload your Numbers file",
+      "The tool converts spreadsheet to PDF",
+      "All sheets and data preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert Apple Numbers to PDF",
+      content: `Numbers to PDF conversion transforms Apple Numbers spreadsheets into universal PDFs. Share your Mac spreadsheets with anyone.
+
+## Numbers Support
+
+Handles Numbers files:
+- Apple Numbers spreadsheets
+- Mac spreadsheet files
+- iOS Numbers files
+- iCloud sheets
+- Multiple sheet support
+
+## Data Preservation
+
+Maintains all:
+- Cell data and formulas
+- Charts and graphs
+- Formatting and styles
+- Multiple sheets
+- Professional layout
+
+## Universal Sharing
+
+Create PDFs for:
+- Cross-platform access
+- Windows and Android
+- Easy distribution
+- Professional sharing`,
+      relatedTools: ["xlsx-to-pdf", "pages-to-pdf", "keynote-to-pdf"]
+    }
+  },
+  {
+    id: "keynote-to-pdf",
+    title: "Keynote to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["keynote", "apple", "presentation", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Keynote to PDF Online Free - Convert Apple Keynote to PDF",
+    metaDescription: "Convert Keynote to PDF online for free. Transform Apple Keynote presentations into PDF format. Fast Keynote to PDF converter.",
+    description: "Convert Apple Keynote presentations to PDF format",
+    icon: "file-type-keynote",
+    howTo: [
+      "Upload your Keynote file",
+      "The tool converts presentation to PDF",
+      "All slides preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert Apple Keynote to PDF",
+      content: `Keynote to PDF conversion transforms Apple Keynote presentations into universal PDFs. Share your Mac presentations with anyone.
+
+## Keynote Support
+
+Handles Keynote files:
+- Apple Keynote presentations
+- Mac presentation files
+- iOS Keynote files
+- iCloud presentations
+- Modern features
+
+## Slide Preservation
+
+Maintains all:
+- Slide content and layouts
+- Images and graphics
+- Text formatting
+- Animations (as slides)
+- Professional design
+
+## Cross-Platform Sharing
+
+Create PDFs for:
+- Any platform
+- Universal viewing
+- Easy distribution
+- Professional sharing`,
+      relatedTools: ["pptx-to-pdf", "pages-to-pdf", "numbers-to-pdf"]
+    }
+  },
+  {
+    id: "email-to-pdf",
+    title: "Email to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["email", "message", "convert", "pdf", "eml"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Email to PDF Online Free - Convert Email Messages to PDF",
+    metaDescription: "Convert emails to PDF online for free. Transform email messages into PDF documents. Fast email to PDF converter.",
+    description: "Convert email messages to PDF format",
+    icon: "mail",
+    howTo: [
+      "Upload your email file (EML, MSG, etc.)",
+      "The tool converts message to PDF",
+      "All content and attachments preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert Emails to PDF",
+      content: `Email to PDF conversion transforms email messages into professional PDFs. Perfect for archiving important communications and preserving email records.
+
+## Email Format Support
+
+Handles various formats:
+- EML files
+- MSG files (Outlook)
+- Email exports
+- HTML emails
+- Plain text emails
+
+## Complete Conversion
+
+Preserves all:
+- Email headers and metadata
+- Message body and formatting
+- Embedded images
+- Attachment information
+- Professional layout
+
+## Perfect For
+
+Ideal for:
+- Email archiving
+- Legal documentation
+- Record keeping
+- Client communications
+- Important correspondence`,
+      relatedTools: ["msg-to-pdf", "html-to-pdf", "txt-to-pdf"]
+    }
+  },
+  {
+    id: "msg-to-pdf",
+    title: "MSG to PDF",
+    category: "Convert" as ToolCategory,
+    tags: ["msg", "outlook", "email", "convert", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MSG to PDF Online Free - Convert Outlook Messages to PDF",
+    metaDescription: "Convert MSG to PDF online for free. Transform Outlook email messages into PDF format. Fast MSG to PDF converter.",
+    description: "Convert Outlook MSG files to PDF format",
+    icon: "mail-open",
+    howTo: [
+      "Upload your MSG file",
+      "The tool converts Outlook message to PDF",
+      "All content preserved",
+      "Download your PDF"
+    ],
+    article: {
+      title: "Convert Outlook Messages to PDF",
+      content: `MSG to PDF conversion transforms Outlook email messages into universal PDFs. Archive and share your Outlook emails in standard format.
+
+## Outlook Support
+
+Handles MSG files:
+- Microsoft Outlook messages
+- Email exports from Outlook
+- Saved email files
+- Complete messages
+- Rich formatting
+
+## Message Preservation
+
+Maintains all:
+- Email headers (From, To, Subject, Date)
+- Message body and content
+- HTML formatting
+- Embedded images
+- Professional layout
+
+## Email Archiving
+
+Create PDFs for:
+- Long-term archiving
+- Legal documentation
+- Easy sharing
+- Record preservation`,
+      relatedTools: ["email-to-pdf", "html-to-pdf", "txt-to-pdf"]
     }
   }
 ] as const;
