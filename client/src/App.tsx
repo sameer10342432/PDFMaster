@@ -7,6 +7,9 @@ import Home from "@/pages/Home";
 import Tools from "@/pages/Tools";
 import ToolPage from "@/pages/ToolPage";
 import Articles from "@/pages/Articles";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfService from "@/pages/TermsOfService";
+import ContactUs from "@/pages/ContactUs";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -16,6 +19,9 @@ function Router() {
       <Route path="/tools" component={Tools} />
       <Route path="/articles" component={Articles} />
       <Route path="/tool/:id" component={ToolPage} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms-of-service" component={TermsOfService} />
+      <Route path="/contact" component={ContactUs} />
       <Route component={NotFound} />
     </Switch>
   );
