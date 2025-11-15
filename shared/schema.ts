@@ -249,7 +249,49 @@ export const toolEmojis: Record<string, string> = {
   "edit-pdf": "📝",
   "add-text-to-pdf": "✍️",
   "pdf-to-mp3": "🎵",
-  "pdf-to-png-transparent": "🎨"
+  "pdf-to-png-transparent": "🎨",
+  
+  // New editing and annotation tools
+  "add-image-to-pdf": "🖼️",
+  "replace-image-in-pdf": "🔄",
+  "add-shapes-to-pdf": "⬛",
+  "draw-on-pdf": "✏️",
+  "pdf-annotator": "📝",
+  "annotate-pdf": "✍️",
+  "highlight-pdf-text": "🖍️",
+  "underline-pdf-text": "📏",
+  "strikethrough-pdf-text": "➖",
+  "pdf-marker": "🖊️",
+  "add-comments-to-pdf": "💬",
+  "pdf-commenter": "📣",
+  "flatten-pdf": "📊",
+  "flatten-pdf-comments": "💭",
+  "flatten-pdf-layers": "📑",
+  "add-hyperlink-to-pdf": "🔗",
+  "pdf-link-editor": "🔗",
+  "edit-pdf-metadata": "ℹ️",
+  "pdf-metadata-editor": "⚙️",
+  "change-pdf-metadata": "📋",
+  "redact-pdf": "⬛",
+  "pdf-redactor": "🔒",
+  "blackout-pdf": "⬛",
+  "sanitize-pdf": "🧹",
+  "remove-pdf-metadata": "🗑️",
+  "crop-pdf": "✂️",
+  "pdf-cropper": "🔪",
+  "crop-pdf-margins": "📐",
+  "resize-pdf": "📏",
+  "pdf-resizer": "📐",
+  "change-pdf-page-size": "📄",
+  "pdf-to-a4": "📃",
+  "pdf-to-letter": "📄",
+  "change-pdf-layout": "📋",
+  "n-up-pdf": "📊",
+  "pdf-page-inverter": "🔄",
+  "invert-pdf-colors": "🎨",
+  "pdf-color-inverter": "🖌️",
+  "auto-crop-pdf-margins": "✂️",
+  "auto-deskew-pdf": "📏"
 };
 
 // PDF Tool definitions with SEO metadata
@@ -8559,6 +8601,1840 @@ Change names, addresses, prices, or any text content in contracts, forms, and do
 
 Text editing maintains original fonts, sizes, and styling for professional results.`,
       relatedTools: ["pdf-editor", "edit-pdf", "add-text-to-pdf"]
+    }
+  },
+  {
+    id: "add-image-to-pdf",
+    title: "Add Image to PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["add", "image", "picture", "photo", "insert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Image to PDF Online Free - Insert Images in PDF Documents",
+    metaDescription: "Add images to PDF files online free. Insert photos, pictures, and graphics into your PDFs. Easy image insertion tool with drag-and-drop support.",
+    description: "Insert images and graphics into PDF documents at any position",
+    icon: "image-plus",
+    howTo: [
+      "Upload your PDF document",
+      "Select the image you want to add",
+      "Position the image where you want it",
+      "Download your PDF with the added image"
+    ],
+    article: {
+      title: "Add Images to PDF Documents",
+      content: `Add images to your PDF documents to enhance presentations, illustrate points, or insert logos and signatures. Our tool makes image insertion simple and precise.
+
+## Flexible Image Insertion
+
+Add images anywhere in your PDF:
+- Insert on specific pages
+- Position images precisely
+- Resize images as needed
+- Maintain image quality
+
+## Multiple Image Formats
+
+Support for all common image formats including JPG, PNG, GIF, BMP, and more. Add logos, signatures, photos, or any graphic content.
+
+## Professional Results
+
+Images integrate seamlessly with your PDF content. Control positioning, sizing, and layering for professional-looking documents.
+
+## Common Use Cases
+
+Perfect for:
+- Adding company logos
+- Inserting signatures
+- Including charts and graphs
+- Enhancing presentations`,
+      relatedTools: ["replace-image-in-pdf", "edit-pdf", "pdf-editor"]
+    }
+  },
+  {
+    id: "replace-image-in-pdf",
+    title: "Replace Image in PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["replace", "image", "swap", "update", "change"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Replace Image in PDF Online Free - Swap Images in PDF Files",
+    metaDescription: "Replace images in PDF files online free. Swap and update images in your PDFs. Easy image replacement tool with quality preservation.",
+    description: "Replace existing images in PDFs with new images",
+    icon: "image",
+    howTo: [
+      "Upload your PDF document",
+      "Select the image you want to replace",
+      "Choose the new image to insert",
+      "Download your updated PDF"
+    ],
+    article: {
+      title: "Replace Images in PDF Documents",
+      content: `Update outdated images, fix mistakes, or refresh content by replacing images in your PDFs. Maintain document layout while updating visual content.
+
+## Easy Image Replacement
+
+Replace images with just a few clicks:
+- Select existing image to replace
+- Upload new replacement image
+- Automatic size matching
+- Preserve document layout
+
+## Update Visual Content
+
+Perfect for updating:
+- Outdated product photos
+- Old company logos
+- Incorrect diagrams
+- Low-quality images
+
+## Maintain Quality
+
+Replacement images maintain high quality and integrate seamlessly with your document. All formatting and positioning stay intact.`,
+      relatedTools: ["add-image-to-pdf", "edit-pdf", "pdf-editor"]
+    }
+  },
+  {
+    id: "add-shapes-to-pdf",
+    title: "Add Shapes to PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["shapes", "draw", "rectangle", "circle", "line"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Shapes to PDF Online Free - Draw Rectangles, Circles, Lines",
+    metaDescription: "Add shapes to PDF files online free. Draw rectangles, circles, arrows, and lines on PDFs. Easy shape drawing tool for annotations.",
+    description: "Draw shapes like rectangles, circles, and lines on PDFs",
+    icon: "square",
+    howTo: [
+      "Upload your PDF document",
+      "Select shape tool (rectangle, circle, arrow, line)",
+      "Draw shapes on your document",
+      "Download your annotated PDF"
+    ],
+    article: {
+      title: "Add Shapes to PDF Documents",
+      content: `Add geometric shapes to PDFs for annotations, highlights, diagrams, or visual emphasis. Perfect for marking up documents or creating visual guides.
+
+## Multiple Shape Tools
+
+Draw various shapes:
+- Rectangles and squares
+- Circles and ellipses
+- Arrows and lines
+- Custom polygons
+
+## Customizable Appearance
+
+Customize your shapes:
+- Choose colors and opacity
+- Adjust border thickness
+- Fill or outline mode
+- Layer management
+
+## Annotation and Markup
+
+Use shapes for:
+- Highlighting important sections
+- Creating diagrams
+- Visual emphasis
+- Document markup`,
+      relatedTools: ["draw-on-pdf", "pdf-annotator", "annotate-pdf"]
+    }
+  },
+  {
+    id: "draw-on-pdf",
+    title: "Draw on PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["draw", "sketch", "freehand", "annotate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Draw on PDF Online Free - Freehand Drawing on PDF Files",
+    metaDescription: "Draw on PDF files online free. Freehand sketching and drawing tool for PDFs. Add signatures, notes, and annotations with your mouse or touchscreen.",
+    description: "Freehand drawing and sketching directly on PDF documents",
+    icon: "pen-tool",
+    howTo: [
+      "Upload your PDF document",
+      "Select drawing tool and color",
+      "Draw freehand on the document",
+      "Download your annotated PDF"
+    ],
+    article: {
+      title: "Draw Freehand on PDF Documents",
+      content: `Draw directly on PDFs with freehand sketching tools. Perfect for signatures, annotations, notes, or creative markup.
+
+## Freehand Drawing
+
+Natural drawing experience:
+- Smooth pen tool
+- Multiple colors available
+- Adjustable thickness
+- Touch and mouse support
+
+## Add Signatures
+
+Draw signatures directly:
+- Sign documents digitally
+- Add initials
+- Create custom marks
+- Save signature for reuse
+
+## Annotation Freedom
+
+Use freehand drawing for:
+- Personal notes
+- Creative markup
+- Diagram annotations
+- Teaching materials`,
+      relatedTools: ["add-shapes-to-pdf", "pdf-annotator", "pdf-marker"]
+    }
+  },
+  {
+    id: "pdf-annotator",
+    title: "PDF Annotator",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["annotate", "markup", "comment", "review"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Annotator Online Free - Annotate and Markup PDFs",
+    metaDescription: "Professional PDF annotator tool online free. Add annotations, comments, highlights, and markup to PDFs. Complete annotation solution.",
+    description: "Complete annotation solution for marking up PDFs",
+    icon: "message-square",
+    howTo: [
+      "Upload your PDF to annotate",
+      "Use annotation tools (highlight, comment, shapes)",
+      "Add your annotations and markup",
+      "Download annotated PDF"
+    ],
+    article: {
+      title: "Professional PDF Annotation Tool",
+      content: `Comprehensive PDF annotation tool with highlighting, commenting, shapes, and more. Perfect for document review, collaboration, and feedback.
+
+## Complete Annotation Tools
+
+Everything you need:
+- Text highlighting
+- Comment boxes
+- Sticky notes
+- Shapes and arrows
+- Freehand drawing
+
+## Document Review
+
+Perfect for reviewing:
+- Legal documents
+- Academic papers
+- Business proposals
+- Design mockups
+
+## Collaborative Markup
+
+Add annotations for team collaboration, client feedback, or personal notes. Export annotated PDFs for sharing.`,
+      relatedTools: ["annotate-pdf", "highlight-pdf-text", "add-comments-to-pdf"]
+    }
+  },
+  {
+    id: "annotate-pdf",
+    title: "Annotate PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["annotate", "markup", "notes", "comments"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Annotate PDF Online Free - Add Annotations to PDF Documents",
+    metaDescription: "Annotate PDF files online free. Add notes, comments, highlights, and markup. Easy PDF annotation tool for reviews and feedback.",
+    description: "Add annotations, notes, and markup to PDF documents",
+    icon: "sticky-note",
+    howTo: [
+      "Upload your PDF document",
+      "Select annotation type",
+      "Add annotations where needed",
+      "Download annotated PDF"
+    ],
+    article: {
+      title: "Annotate PDF Documents Online",
+      content: `Add annotations to PDFs for review, feedback, or personal notes. Comprehensive tools for marking up documents professionally.
+
+## Annotation Types
+
+Add various annotations:
+- Text comments
+- Sticky notes
+- Highlights
+- Underlines
+- Strikethroughs
+
+## Review and Feedback
+
+Perfect for:
+- Document review
+- Proofreading
+- Student feedback
+- Collaborative editing
+
+## Professional Markup
+
+Create professional annotations with customizable colors, fonts, and styles for clear communication.`,
+      relatedTools: ["pdf-annotator", "add-comments-to-pdf", "highlight-pdf-text"]
+    }
+  },
+  {
+    id: "highlight-pdf-text",
+    title: "Highlight PDF Text",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["highlight", "mark", "emphasize", "annotate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Highlight PDF Text Online Free - Highlight Text in PDFs",
+    metaDescription: "Highlight text in PDF files online free. Mark important passages with customizable colors. Easy PDF text highlighting tool.",
+    description: "Highlight important text passages in PDF documents",
+    icon: "highlighter",
+    howTo: [
+      "Upload your PDF document",
+      "Select text to highlight",
+      "Choose highlight color",
+      "Download highlighted PDF"
+    ],
+    article: {
+      title: "Highlight Text in PDF Documents",
+      content: `Highlight important text in PDFs to emphasize key points, mark passages for review, or organize information visually.
+
+## Multiple Highlight Colors
+
+Choose from various colors:
+- Yellow for general highlights
+- Green for approved sections
+- Red for important items
+- Blue for references
+- Custom colors available
+
+## Easy Text Selection
+
+Simple highlighting process:
+- Select text with cursor
+- Choose color
+- Apply highlight
+- Continue marking up
+
+## Study and Review
+
+Perfect for:
+- Academic study
+- Document review
+- Research papers
+- Reading comprehension`,
+      relatedTools: ["underline-pdf-text", "strikethrough-pdf-text", "pdf-marker"]
+    }
+  },
+  {
+    id: "underline-pdf-text",
+    title: "Underline PDF Text",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["underline", "mark", "emphasize", "annotate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Underline PDF Text Online Free - Add Underlines to PDF",
+    metaDescription: "Underline text in PDF files online free. Add underlines to emphasize important text. Easy PDF text underlining tool.",
+    description: "Add underlines to text in PDF documents for emphasis",
+    icon: "underline",
+    howTo: [
+      "Upload your PDF document",
+      "Select text to underline",
+      "Choose underline style and color",
+      "Download PDF with underlines"
+    ],
+    article: {
+      title: "Underline Text in PDF Documents",
+      content: `Add underlines to PDF text for emphasis, marking key terms, or creating visual hierarchy in your documents.
+
+## Customizable Underlines
+
+Various underline options:
+- Single line
+- Double line
+- Dotted or dashed
+- Custom colors
+- Adjustable thickness
+
+## Professional Markup
+
+Use underlines for:
+- Emphasizing key terms
+- Legal document markup
+- Academic annotations
+- Editorial review
+
+## Combine with Other Tools
+
+Combine underlines with highlights, comments, and other annotations for comprehensive document markup.`,
+      relatedTools: ["highlight-pdf-text", "strikethrough-pdf-text", "pdf-marker"]
+    }
+  },
+  {
+    id: "strikethrough-pdf-text",
+    title: "Strikethrough PDF Text",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["strikethrough", "cross-out", "delete", "annotate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Strikethrough PDF Text Online Free - Cross Out Text in PDFs",
+    metaDescription: "Add strikethrough to PDF text online free. Cross out and mark deleted text in PDFs. Easy PDF strikethrough annotation tool.",
+    description: "Add strikethrough marks to text in PDF documents",
+    icon: "strikethrough",
+    howTo: [
+      "Upload your PDF document",
+      "Select text to strikethrough",
+      "Apply strikethrough formatting",
+      "Download marked PDF"
+    ],
+    article: {
+      title: "Strikethrough Text in PDF Documents",
+      content: `Add strikethrough formatting to PDF text to indicate deletions, mark obsolete information, or show editorial changes.
+
+## Mark Deletions
+
+Strikethrough is perfect for:
+- Showing editorial changes
+- Marking deleted text
+- Indicating corrections
+- Contract revisions
+
+## Professional Editing
+
+Maintain document history while showing changes. Strikethrough text remains readable but clearly marked as deleted.
+
+## Editorial Workflow
+
+Essential for:
+- Document review
+- Legal contracts
+- Academic editing
+- Collaborative writing`,
+      relatedTools: ["highlight-pdf-text", "underline-pdf-text", "pdf-marker"]
+    }
+  },
+  {
+    id: "pdf-marker",
+    title: "PDF Marker",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["marker", "highlight", "annotate", "markup"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Marker Online Free - Mark and Highlight PDFs",
+    metaDescription: "Mark PDF documents online free. Highlight, underline, and annotate PDFs with marker tools. Complete PDF marking solution.",
+    description: "Mark and highlight PDFs with comprehensive marking tools",
+    icon: "pen",
+    howTo: [
+      "Upload your PDF document",
+      "Select marking tool",
+      "Mark important sections",
+      "Download marked PDF"
+    ],
+    article: {
+      title: "Mark PDF Documents",
+      content: `Comprehensive PDF marking tool with highlights, underlines, and annotations. Mark up documents for review, study, or collaboration.
+
+## All Marking Tools
+
+Complete marking solution:
+- Highlight text
+- Underline passages
+- Strikethrough text
+- Add notes
+- Draw shapes
+
+## Color-Coded Marking
+
+Use different colors to categorize marks:
+- Different colors for different topics
+- Priority marking
+- Category organization
+- Visual coding system
+
+## Efficient Markup
+
+Quick and efficient document marking for productive review and study sessions.`,
+      relatedTools: ["highlight-pdf-text", "annotate-pdf", "pdf-annotator"]
+    }
+  },
+  {
+    id: "add-comments-to-pdf",
+    title: "Add Comments to PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["comments", "notes", "feedback", "annotate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Comments to PDF Online Free - PDF Comment Tool",
+    metaDescription: "Add comments to PDF files online free. Insert notes, feedback, and annotations. Easy PDF commenting tool for collaboration.",
+    description: "Add comment boxes and notes to PDF documents",
+    icon: "message-circle",
+    howTo: [
+      "Upload your PDF document",
+      "Click where you want to add comment",
+      "Type your comment or note",
+      "Download PDF with comments"
+    ],
+    article: {
+      title: "Add Comments to PDF Documents",
+      content: `Add comments and notes to PDFs for feedback, collaboration, or personal annotations. Perfect for document review and team collaboration.
+
+## Comment Types
+
+Add various comment styles:
+- Pop-up notes
+- Text boxes
+- Sticky notes
+- Callouts
+- Thread replies
+
+## Collaborative Review
+
+Perfect for:
+- Team document review
+- Client feedback
+- Peer review
+- Editorial comments
+
+## Organized Feedback
+
+Keep all feedback organized in comment threads. Easy to review and address all comments systematically.`,
+      relatedTools: ["pdf-commenter", "annotate-pdf", "pdf-annotator"]
+    }
+  },
+  {
+    id: "pdf-commenter",
+    title: "PDF Commenter",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["comment", "feedback", "review", "annotate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Commenter Online Free - Professional PDF Commenting Tool",
+    metaDescription: "Professional PDF commenting tool online free. Add comments, feedback, and review notes to PDFs. Complete commenting solution.",
+    description: "Professional commenting tool for PDF document review",
+    icon: "message-square-text",
+    howTo: [
+      "Upload your PDF to review",
+      "Add comments throughout document",
+      "Organize feedback by category",
+      "Download commented PDF"
+    ],
+    article: {
+      title: "Professional PDF Commenting",
+      content: `Professional PDF commenting tool for document review, feedback, and collaboration. Organize comments efficiently and provide clear feedback.
+
+## Advanced Commenting
+
+Professional features:
+- Threaded comments
+- Comment categories
+- Priority marking
+- Author attribution
+- Timestamp tracking
+
+## Review Management
+
+Manage document reviews effectively:
+- Track all comments
+- Filter by author or type
+- Address feedback systematically
+- Export comment summaries
+
+## Collaboration Ready
+
+Perfect for team collaboration, client reviews, and professional document feedback.`,
+      relatedTools: ["add-comments-to-pdf", "annotate-pdf", "pdf-annotator"]
+    }
+  },
+  {
+    id: "flatten-pdf",
+    title: "Flatten PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["flatten", "merge", "layers", "finalize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Flatten PDF Online Free - Merge PDF Layers and Annotations",
+    metaDescription: "Flatten PDF files online free. Merge all layers, annotations, and form fields into the document. Create non-editable final PDFs.",
+    description: "Flatten PDF layers and annotations into the document",
+    icon: "layers",
+    howTo: [
+      "Upload your PDF document",
+      "Choose what to flatten (annotations, forms, layers)",
+      "Process the flattening",
+      "Download flattened PDF"
+    ],
+    article: {
+      title: "Flatten PDF Documents",
+      content: `Flatten PDFs to merge all layers, annotations, and form fields into the base document. Creates a final, non-editable version perfect for distribution.
+
+## What Gets Flattened
+
+Flatten various elements:
+- Form fields
+- Annotations and comments
+- Stamps and signatures
+- Layers and objects
+- Markup and drawings
+
+## Final Document Version
+
+Perfect for:
+- Final document distribution
+- Preventing further edits
+- Archival purposes
+- Print-ready files
+
+## Preserve Appearance
+
+Flattening preserves the visual appearance while making elements non-editable, ensuring your document looks exactly as intended.`,
+      relatedTools: ["flatten-pdf-comments", "flatten-pdf-layers", "pdf-editor"]
+    }
+  },
+  {
+    id: "flatten-pdf-comments",
+    title: "Flatten PDF Comments",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["flatten", "comments", "merge", "annotations"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Flatten PDF Comments Online Free - Merge Comments into PDF",
+    metaDescription: "Flatten PDF comments online free. Merge annotations and comments permanently into the document. Create final reviewed PDFs.",
+    description: "Merge comments and annotations permanently into PDF",
+    icon: "layers",
+    howTo: [
+      "Upload PDF with comments",
+      "Review comments to flatten",
+      "Apply flattening to comments",
+      "Download PDF with merged comments"
+    ],
+    article: {
+      title: "Flatten PDF Comments and Annotations",
+      content: `Flatten comments and annotations to merge them permanently into your PDF document. Perfect for creating final versions after review process.
+
+## Merge Comments
+
+Flatten all comment types:
+- Text annotations
+- Sticky notes
+- Markup comments
+- Review feedback
+- Editorial notes
+
+## Final Review Version
+
+Create final documents after review:
+- Incorporate all feedback
+- Non-editable comments
+- Clean final version
+- Ready for distribution
+
+## Professional Finalization
+
+Perfect for completing the review cycle and creating distribution-ready documents.`,
+      relatedTools: ["flatten-pdf", "flatten-pdf-layers", "pdf-editor"]
+    }
+  },
+  {
+    id: "flatten-pdf-layers",
+    title: "Flatten PDF Layers",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["flatten", "layers", "merge", "simplify"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Flatten PDF Layers Online Free - Merge All PDF Layers",
+    metaDescription: "Flatten PDF layers online free. Merge all layers into a single layer. Simplify complex PDFs and reduce file size.",
+    description: "Merge all PDF layers into a single flattened layer",
+    icon: "layers",
+    howTo: [
+      "Upload PDF with multiple layers",
+      "Select layers to flatten",
+      "Process layer flattening",
+      "Download simplified PDF"
+    ],
+    article: {
+      title: "Flatten PDF Layers",
+      content: `Flatten PDF layers to merge multiple layers into one, simplifying complex documents and ensuring consistent appearance across all viewers.
+
+## Layer Simplification
+
+Flatten complex PDFs:
+- Multiple design layers
+- Optional content groups
+- Hidden layers
+- Overlay layers
+
+## Benefits of Flattening
+
+Advantages include:
+- Smaller file size
+- Faster loading
+- Consistent appearance
+- Simpler structure
+
+## Design Finalization
+
+Perfect for finalizing design documents and ensuring they appear the same for all recipients.`,
+      relatedTools: ["flatten-pdf", "flatten-pdf-comments", "pdf-editor"]
+    }
+  },
+  {
+    id: "add-hyperlink-to-pdf",
+    title: "Add Hyperlink to PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["hyperlink", "link", "url", "website"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Hyperlink to PDF Online Free - Insert Links in PDF Files",
+    metaDescription: "Add hyperlinks to PDF files online free. Insert clickable links to websites, emails, or other pages. Easy PDF link insertion tool.",
+    description: "Insert clickable hyperlinks into PDF documents",
+    icon: "link",
+    howTo: [
+      "Upload your PDF document",
+      "Select text or area for hyperlink",
+      "Enter the URL or destination",
+      "Download PDF with hyperlinks"
+    ],
+    article: {
+      title: "Add Hyperlinks to PDF Documents",
+      content: `Add clickable hyperlinks to PDFs to connect to websites, email addresses, other documents, or specific pages within the same PDF.
+
+## Link Types
+
+Add various link types:
+- Web URLs
+- Email addresses
+- Internal page links
+- Document references
+- File attachments
+
+## Interactive PDFs
+
+Create interactive documents:
+- Table of contents links
+- Reference citations
+- External resources
+- Contact information
+- Navigation links
+
+## Professional Enhancement
+
+Add hyperlinks to create more useful, interactive PDFs perfect for digital distribution and online use.`,
+      relatedTools: ["pdf-link-editor", "edit-pdf", "pdf-editor"]
+    }
+  },
+  {
+    id: "pdf-link-editor",
+    title: "PDF Link Editor",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["link", "edit", "hyperlink", "url", "modify"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Link Editor Online Free - Edit Links in PDF Documents",
+    metaDescription: "Edit PDF links online free. Modify, update, or remove hyperlinks in PDFs. Complete PDF link management tool.",
+    description: "Edit, modify, or remove hyperlinks in PDF documents",
+    icon: "link-2",
+    howTo: [
+      "Upload your PDF document",
+      "Select link to edit",
+      "Update URL or link properties",
+      "Download updated PDF"
+    ],
+    article: {
+      title: "Edit PDF Links and Hyperlinks",
+      content: `Edit existing hyperlinks in PDFs to update URLs, fix broken links, or modify link properties. Complete link management for PDF documents.
+
+## Link Management
+
+Manage all PDF links:
+- Update URLs
+- Fix broken links
+- Remove unwanted links
+- Change link appearance
+- Modify destinations
+
+## Bulk Link Editing
+
+Edit multiple links:
+- Find and replace URLs
+- Update domain changes
+- Batch link removal
+- Link validation
+
+## Maintain Interactive PDFs
+
+Keep your interactive PDFs up-to-date by managing links effectively and ensuring all links work correctly.`,
+      relatedTools: ["add-hyperlink-to-pdf", "edit-pdf", "pdf-editor"]
+    }
+  },
+  {
+    id: "edit-pdf-metadata",
+    title: "Edit PDF Metadata",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["metadata", "properties", "info", "edit"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Edit PDF Metadata Online Free - Change PDF Properties",
+    metaDescription: "Edit PDF metadata online free. Change title, author, subject, keywords, and other PDF properties. Easy metadata editing tool.",
+    description: "Edit PDF metadata including title, author, and properties",
+    icon: "info",
+    howTo: [
+      "Upload your PDF document",
+      "View current metadata",
+      "Edit fields (title, author, subject, keywords)",
+      "Download PDF with updated metadata"
+    ],
+    article: {
+      title: "Edit PDF Metadata and Properties",
+      content: `Edit PDF metadata to update document information, improve searchability, and maintain proper document attribution.
+
+## Metadata Fields
+
+Edit all metadata fields:
+- Document title
+- Author name
+- Subject description
+- Keywords
+- Creation date
+- Modification date
+- Application info
+
+## Professional Documentation
+
+Proper metadata is important for:
+- Document organization
+- Search optimization
+- Professional appearance
+- Copyright information
+- Version tracking
+
+## Batch Metadata Editing
+
+Update metadata across multiple PDFs for consistent documentation and organization.`,
+      relatedTools: ["pdf-metadata-editor", "change-pdf-metadata", "edit-pdf"]
+    }
+  },
+  {
+    id: "pdf-metadata-editor",
+    title: "PDF Metadata Editor",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["metadata", "properties", "editor", "info"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Metadata Editor Online Free - Professional Metadata Tool",
+    metaDescription: "Professional PDF metadata editor online free. Edit all PDF properties and metadata fields. Complete metadata management tool.",
+    description: "Professional tool for editing all PDF metadata fields",
+    icon: "settings",
+    howTo: [
+      "Upload your PDF document",
+      "Access metadata editor",
+      "Edit all metadata fields",
+      "Download updated PDF"
+    ],
+    article: {
+      title: "Professional PDF Metadata Editor",
+      content: `Comprehensive PDF metadata editor with advanced features for managing all document properties and metadata fields.
+
+## Advanced Metadata
+
+Edit advanced fields:
+- Custom properties
+- XMP metadata
+- Document security settings
+- PDF version info
+- Bookmark data
+
+## Template Management
+
+Create metadata templates:
+- Save common metadata sets
+- Apply templates to multiple files
+- Consistent documentation
+- Efficient workflow
+
+## Complete Control
+
+Professional metadata management for organizations that need precise control over document properties and information.`,
+      relatedTools: ["edit-pdf-metadata", "change-pdf-metadata", "remove-pdf-metadata"]
+    }
+  },
+  {
+    id: "change-pdf-metadata",
+    title: "Change PDF Metadata",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["change", "metadata", "properties", "update"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Change PDF Metadata Online Free - Update PDF Properties",
+    metaDescription: "Change PDF metadata online free. Update PDF properties, title, author, and keywords. Simple metadata modification tool.",
+    description: "Change and update PDF metadata and properties quickly",
+    icon: "edit-3",
+    howTo: [
+      "Upload your PDF document",
+      "Select metadata fields to change",
+      "Enter new values",
+      "Download PDF with changed metadata"
+    ],
+    article: {
+      title: "Change PDF Metadata Quickly",
+      content: `Quickly change PDF metadata to update document information, correct errors, or refresh outdated properties.
+
+## Quick Updates
+
+Change metadata fast:
+- Update author information
+- Modify document title
+- Change keywords
+- Update descriptions
+
+## Correction and Updates
+
+Fix metadata issues:
+- Correct spelling errors
+- Update contact info
+- Refresh outdated data
+- Standardize formatting
+
+## Simple Interface
+
+Easy-to-use interface for quick metadata changes without complex settings or configurations.`,
+      relatedTools: ["edit-pdf-metadata", "pdf-metadata-editor", "remove-pdf-metadata"]
+    }
+  },
+  {
+    id: "redact-pdf",
+    title: "Redact PDF",
+    category: "Security" as ToolCategory,
+    tags: ["redact", "censor", "hide", "privacy", "security"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Redact PDF Online Free - Remove Sensitive Information from PDFs",
+    metaDescription: "Redact PDF files online free. Permanently remove sensitive information from PDFs. Secure PDF redaction tool with complete privacy.",
+    description: "Permanently remove sensitive information from PDFs",
+    icon: "shield",
+    howTo: [
+      "Upload your PDF document",
+      "Select text or areas to redact",
+      "Apply permanent redactions",
+      "Download redacted PDF"
+    ],
+    article: {
+      title: "Redact PDF Documents Securely",
+      content: `Permanently remove sensitive information from PDFs with secure redaction. Unlike simple blackout, redaction completely removes data.
+
+## Permanent Removal
+
+True redaction means:
+- Complete data removal
+- Not just visual hiding
+- Cannot be undone or revealed
+- Secure and final
+
+## What to Redact
+
+Common redaction needs:
+- Personal information (SSN, addresses)
+- Financial data
+- Confidential information
+- Legal privilege information
+- Medical records
+
+## Legal Compliance
+
+Essential for:
+- GDPR compliance
+- HIPAA requirements
+- Legal discovery
+- Freedom of Information Act requests
+
+## Security Features
+
+Complete security with permanent removal, no traces left in document metadata or structure.`,
+      relatedTools: ["pdf-redactor", "blackout-pdf", "sanitize-pdf"]
+    }
+  },
+  {
+    id: "pdf-redactor",
+    title: "PDF Redactor",
+    category: "Security" as ToolCategory,
+    tags: ["redact", "remove", "privacy", "security"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Redactor Online Free - Professional PDF Redaction Tool",
+    metaDescription: "Professional PDF redactor online free. Remove sensitive data permanently from PDFs. Advanced redaction features for compliance and privacy.",
+    description: "Professional redaction tool for sensitive documents",
+    icon: "shield-check",
+    howTo: [
+      "Upload PDF to redact",
+      "Use advanced redaction tools",
+      "Apply redactions permanently",
+      "Download secure redacted PDF"
+    ],
+    article: {
+      title: "Professional PDF Redaction",
+      content: `Professional-grade PDF redaction tool with advanced features for secure information removal and compliance requirements.
+
+## Advanced Redaction
+
+Professional features:
+- Pattern-based redaction (SSN, credit cards)
+- Batch redaction
+- Metadata cleaning
+- Full text search and redact
+- Multiple redaction layers
+
+## Compliance Ready
+
+Meet regulatory requirements:
+- Legal redaction standards
+- Healthcare compliance
+- Financial regulations
+- Government standards
+
+## Verification Tools
+
+Verify redactions are complete:
+- Redaction reports
+- Metadata verification
+- Hidden data detection
+- Quality assurance
+
+## Enterprise Security
+
+Professional-grade security for organizations handling sensitive documents.`,
+      relatedTools: ["redact-pdf", "blackout-pdf", "sanitize-pdf"]
+    }
+  },
+  {
+    id: "blackout-pdf",
+    title: "Blackout PDF",
+    category: "Security" as ToolCategory,
+    tags: ["blackout", "censor", "hide", "privacy"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Blackout PDF Online Free - Hide Sensitive Text in PDFs",
+    metaDescription: "Blackout PDF text online free. Cover sensitive information with black boxes. Quick PDF blackout tool for privacy.",
+    description: "Cover sensitive information with permanent black boxes",
+    icon: "square",
+    howTo: [
+      "Upload your PDF document",
+      "Select areas to blackout",
+      "Apply black boxes over sensitive info",
+      "Download blacked-out PDF"
+    ],
+    article: {
+      title: "Blackout Sensitive PDF Information",
+      content: `Cover sensitive information in PDFs with permanent black boxes. Quick and easy way to hide confidential data before sharing.
+
+## Visual Censoring
+
+Black out information:
+- Text passages
+- Images and photos
+- Personal data
+- Confidential sections
+
+## Permanent Blackout
+
+Applied blackouts are permanent and cannot be removed, ensuring sensitive information stays hidden.
+
+## Quick Privacy
+
+Fast way to protect privacy when sharing documents. Perfect for quick censoring before distribution.
+
+## Flexible Selection
+
+Select any area to blackout - text, images, or entire sections with precision tools.`,
+      relatedTools: ["redact-pdf", "pdf-redactor", "sanitize-pdf"]
+    }
+  },
+  {
+    id: "sanitize-pdf",
+    title: "Sanitize PDF",
+    category: "Security" as ToolCategory,
+    tags: ["sanitize", "clean", "remove", "privacy", "metadata"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Sanitize PDF Online Free - Remove Hidden Data from PDFs",
+    metaDescription: "Sanitize PDF files online free. Remove hidden data, metadata, and sensitive information. Complete PDF cleaning tool.",
+    description: "Remove all hidden data and metadata from PDFs",
+    icon: "trash",
+    howTo: [
+      "Upload your PDF document",
+      "Select what to remove (metadata, comments, hidden data)",
+      "Process sanitization",
+      "Download clean PDF"
+    ],
+    article: {
+      title: "Sanitize PDF Files Completely",
+      content: `Remove all hidden data, metadata, comments, and sensitive information from PDFs. Create clean documents safe for public distribution.
+
+## Complete Cleaning
+
+Remove everything hidden:
+- All metadata
+- Comments and annotations
+- Hidden text and objects
+- Form data
+- Revision history
+- Embedded files
+
+## Privacy Protection
+
+Protect privacy by removing:
+- Author information
+- Edit history
+- File paths
+- System information
+- User data
+
+## Safe Distribution
+
+Create PDFs safe for public sharing with no hidden information that could compromise privacy or security.
+
+## Compliance
+
+Meet privacy standards and regulations by removing all potentially sensitive metadata and hidden content.`,
+      relatedTools: ["redact-pdf", "remove-pdf-metadata", "pdf-redactor"]
+    }
+  },
+  {
+    id: "remove-pdf-metadata",
+    title: "Remove PDF Metadata",
+    category: "Security" as ToolCategory,
+    tags: ["remove", "metadata", "privacy", "clean"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Remove PDF Metadata Online Free - Delete PDF Properties",
+    metaDescription: "Remove PDF metadata online free. Delete author, title, keywords, and all properties. Clean PDFs for privacy.",
+    description: "Remove all metadata and properties from PDF files",
+    icon: "x-circle",
+    howTo: [
+      "Upload your PDF document",
+      "Choose metadata to remove",
+      "Process removal",
+      "Download clean PDF"
+    ],
+    article: {
+      title: "Remove PDF Metadata for Privacy",
+      content: `Remove all metadata from PDFs to protect privacy and remove identifying information before sharing documents publicly.
+
+## Metadata Removal
+
+Delete all metadata:
+- Author and creator
+- Title and subject
+- Keywords
+- Dates and timestamps
+- Software information
+- Custom properties
+
+## Privacy First
+
+Protect your privacy:
+- Remove personal info
+- Delete company data
+- Clear edit history
+- Anonymous documents
+
+## Clean Documents
+
+Create metadata-free PDFs perfect for public distribution, submissions, or anonymous sharing.
+
+## Selective Removal
+
+Choose what to remove - delete all metadata or keep certain fields while removing others.`,
+      relatedTools: ["sanitize-pdf", "edit-pdf-metadata", "pdf-metadata-editor"]
+    }
+  },
+  {
+    id: "crop-pdf",
+    title: "Crop PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["crop", "trim", "cut", "resize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Crop PDF Online Free - Trim PDF Pages and Margins",
+    metaDescription: "Crop PDF files online free. Trim pages, remove margins, and adjust page size. Easy PDF cropping tool with precision control.",
+    description: "Crop and trim PDF pages to remove unwanted margins",
+    icon: "crop",
+    howTo: [
+      "Upload your PDF document",
+      "Select crop area on page",
+      "Apply crop to pages",
+      "Download cropped PDF"
+    ],
+    article: {
+      title: "Crop PDF Pages and Margins",
+      content: `Crop PDF pages to remove unwanted margins, focus on specific content, or adjust page dimensions for better presentation.
+
+## Precision Cropping
+
+Crop with accuracy:
+- Visual crop selection
+- Exact dimensions
+- Margin removal
+- Custom crop areas
+
+## Flexible Application
+
+Apply cropping:
+- To all pages
+- To specific pages
+- Different crops per page
+- Batch cropping
+
+## Common Uses
+
+Crop PDFs for:
+- Removing excessive margins
+- Focusing on content
+- Creating uniform pages
+- Preparing for printing
+
+## Quality Preservation
+
+Cropping maintains content quality while adjusting page dimensions to your exact requirements.`,
+      relatedTools: ["pdf-cropper", "crop-pdf-margins", "resize-pdf"]
+    }
+  },
+  {
+    id: "pdf-cropper",
+    title: "PDF Cropper",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["crop", "trim", "tool", "margins"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Cropper Online Free - Professional PDF Cropping Tool",
+    metaDescription: "Professional PDF cropper online free. Crop pages, trim margins, adjust dimensions. Advanced PDF cropping features.",
+    description: "Professional cropping tool with advanced features",
+    icon: "scissors",
+    howTo: [
+      "Upload your PDF document",
+      "Use cropping tools",
+      "Preview cropped result",
+      "Download cropped PDF"
+    ],
+    article: {
+      title: "Professional PDF Cropping Tool",
+      content: `Advanced PDF cropping tool with professional features for precise page trimming and margin adjustment.
+
+## Advanced Features
+
+Professional cropping:
+- Multiple crop presets
+- Custom aspect ratios
+- Precise measurements
+- Visual guides and rulers
+- Batch processing
+
+## Smart Cropping
+
+Intelligent features:
+- Auto-detect margins
+- Content-aware cropping
+- Preserve important areas
+- Consistent cropping across pages
+
+## Professional Results
+
+Create professionally cropped PDFs with precise control over dimensions and margins for print or digital use.`,
+      relatedTools: ["crop-pdf", "auto-crop-pdf-margins", "resize-pdf"]
+    }
+  },
+  {
+    id: "crop-pdf-margins",
+    title: "Crop PDF Margins",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["crop", "margins", "trim", "whitespace"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Crop PDF Margins Online Free - Remove PDF White Space",
+    metaDescription: "Crop PDF margins online free. Remove excessive white space and trim margins. Clean PDF margin cropping tool.",
+    description: "Remove excessive margins and whitespace from PDFs",
+    icon: "maximize",
+    howTo: [
+      "Upload your PDF document",
+      "Set margin crop amounts",
+      "Apply margin cropping",
+      "Download trimmed PDF"
+    ],
+    article: {
+      title: "Crop PDF Margins and Whitespace",
+      content: `Remove excessive margins and whitespace from PDFs to maximize content area and improve page utilization.
+
+## Margin Removal
+
+Trim margins effectively:
+- Top margin removal
+- Bottom margin removal
+- Left and right margins
+- Custom margin amounts
+
+## Benefits
+
+Cropping margins helps:
+- Maximize content space
+- Improve readability
+- Reduce page count
+- Better screen viewing
+- Optimize for mobile
+
+## Consistent Trimming
+
+Apply consistent margin crops across all pages for uniform appearance and professional results.`,
+      relatedTools: ["crop-pdf", "auto-crop-pdf-margins", "pdf-cropper"]
+    }
+  },
+  {
+    id: "resize-pdf",
+    title: "Resize PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["resize", "scale", "dimensions", "size"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Resize PDF Online Free - Change PDF Page Size and Dimensions",
+    metaDescription: "Resize PDF files online free. Change page dimensions, scale content, adjust size. Easy PDF resizing tool.",
+    description: "Resize PDF pages and adjust dimensions",
+    icon: "move-diagonal",
+    howTo: [
+      "Upload your PDF document",
+      "Select new page size or dimensions",
+      "Choose scaling options",
+      "Download resized PDF"
+    ],
+    article: {
+      title: "Resize PDF Pages and Dimensions",
+      content: `Resize PDF pages to different dimensions, scale content, or convert between page sizes for various purposes.
+
+## Flexible Resizing
+
+Resize pages to:
+- Standard paper sizes
+- Custom dimensions
+- Percentage scaling
+- Fit specific requirements
+
+## Scaling Options
+
+Control content scaling:
+- Fit to page
+- Maintain aspect ratio
+- Stretch to fill
+- Center content
+
+## Common Resizing
+
+Popular resize operations:
+- Letter to A4
+- A4 to Letter
+- Legal size adjustments
+- Custom page sizes
+
+## Quality Maintained
+
+Resizing preserves content quality with intelligent scaling algorithms for professional results.`,
+      relatedTools: ["pdf-resizer", "change-pdf-page-size", "crop-pdf"]
+    }
+  },
+  {
+    id: "pdf-resizer",
+    title: "PDF Resizer",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["resize", "scale", "tool", "dimensions"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Resizer Online Free - Professional PDF Resizing Tool",
+    metaDescription: "Professional PDF resizer online free. Advanced page resizing with custom dimensions and scaling. Complete PDF size control.",
+    description: "Professional tool for resizing PDF pages with precision",
+    icon: "maximize-2",
+    howTo: [
+      "Upload your PDF document",
+      "Use advanced resizing options",
+      "Preview resized pages",
+      "Download resized PDF"
+    ],
+    article: {
+      title: "Professional PDF Resizer",
+      content: `Advanced PDF resizing tool with professional features for precise page dimension control and content scaling.
+
+## Advanced Resizing
+
+Professional features:
+- Exact dimension input
+- Multiple unit support (inches, mm, points)
+- Aspect ratio lock
+- Batch resizing
+- Preview before applying
+
+## Smart Scaling
+
+Intelligent content handling:
+- Content-aware resizing
+- Text clarity preservation
+- Image quality optimization
+- Layout integrity
+
+## Professional Control
+
+Complete control over page dimensions for professional document preparation and optimization.`,
+      relatedTools: ["resize-pdf", "change-pdf-page-size", "pdf-to-a4"]
+    }
+  },
+  {
+    id: "change-pdf-page-size",
+    title: "Change PDF Page Size",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["page-size", "dimensions", "resize", "paper"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Change PDF Page Size Online Free - Convert PDF Paper Sizes",
+    metaDescription: "Change PDF page size online free. Convert between Letter, A4, Legal, and custom sizes. Easy page size conversion.",
+    description: "Change PDF page size to different paper formats",
+    icon: "file-text",
+    howTo: [
+      "Upload your PDF document",
+      "Select target page size",
+      "Choose content fitting method",
+      "Download converted PDF"
+    ],
+    article: {
+      title: "Change PDF Page Size",
+      content: `Change PDF page size to convert between different paper formats like Letter, A4, Legal, or custom sizes.
+
+## Standard Sizes
+
+Convert to standard formats:
+- Letter (8.5 x 11 inches)
+- A4 (210 x 297 mm)
+- Legal (8.5 x 14 inches)
+- Tabloid, A3, A5, and more
+
+## International Support
+
+Support for:
+- US paper sizes
+- ISO A-series
+- ISO B-series
+- Custom dimensions
+
+## Content Fitting
+
+Smart content fitting:
+- Scale to fit
+- Center on page
+- Maintain margins
+- Preserve aspect ratio
+
+## Use Cases
+
+Perfect for:
+- International document exchange
+- Print preparation
+- Format standardization
+- Regional requirements`,
+      relatedTools: ["pdf-to-a4", "pdf-to-letter", "resize-pdf"]
+    }
+  },
+  {
+    id: "pdf-to-a4",
+    title: "PDF to A4",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["a4", "page-size", "convert", "resize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to A4 Size Online Free - Resize PDF to A4",
+    metaDescription: "Convert PDF to A4 size online free. Resize any PDF to standard A4 dimensions (210 x 297mm). Quick A4 conversion tool.",
+    description: "Convert PDF pages to A4 size (210 x 297mm)",
+    icon: "file",
+    howTo: [
+      "Upload your PDF document",
+      "Select A4 conversion",
+      "Choose scaling preference",
+      "Download A4-sized PDF"
+    ],
+    article: {
+      title: "Convert PDF to A4 Size",
+      content: `Convert any PDF to standard A4 size (210 x 297mm), the most common international paper format.
+
+## A4 Standard
+
+A4 size is:
+- 210 x 297 mm
+- 8.27 x 11.69 inches
+- Most common international format
+- ISO 216 standard
+
+## Smart Conversion
+
+Intelligent conversion:
+- Scale content to fit
+- Maintain readability
+- Preserve quality
+- Center content
+
+## Use Cases
+
+Convert to A4 for:
+- International business
+- European printing
+- Standard filing
+- Regulatory compliance
+
+## Quality Assurance
+
+Conversion maintains document quality while ensuring perfect A4 dimensions for professional results.`,
+      relatedTools: ["pdf-to-letter", "change-pdf-page-size", "resize-pdf"]
+    }
+  },
+  {
+    id: "pdf-to-letter",
+    title: "PDF to Letter",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["letter", "page-size", "convert", "resize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to Letter Size Online Free - Resize PDF to Letter",
+    metaDescription: "Convert PDF to Letter size online free. Resize any PDF to US Letter dimensions (8.5 x 11 inches). Quick Letter conversion.",
+    description: "Convert PDF pages to Letter size (8.5 x 11 inches)",
+    icon: "file-text",
+    howTo: [
+      "Upload your PDF document",
+      "Select Letter size conversion",
+      "Choose fitting method",
+      "Download Letter-sized PDF"
+    ],
+    article: {
+      title: "Convert PDF to Letter Size",
+      content: `Convert any PDF to standard US Letter size (8.5 x 11 inches), the most common paper format in North America.
+
+## Letter Standard
+
+Letter size is:
+- 8.5 x 11 inches
+- 215.9 x 279.4 mm
+- Most common US format
+- ANSI standard
+
+## Perfect for US
+
+Convert to Letter for:
+- US business documents
+- North American printing
+- Standard US filing
+- Local requirements
+
+## Quality Conversion
+
+Smart scaling and fitting ensure your content looks great on Letter-sized pages while maintaining quality.`,
+      relatedTools: ["pdf-to-a4", "change-pdf-page-size", "resize-pdf"]
+    }
+  },
+  {
+    id: "change-pdf-layout",
+    title: "Change PDF Layout",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["layout", "arrangement", "format", "orientation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Change PDF Layout Online Free - Modify PDF Page Arrangement",
+    metaDescription: "Change PDF layout online free. Switch between portrait/landscape, adjust orientation, modify page arrangement. Easy layout changes.",
+    description: "Change PDF page layout and arrangement",
+    icon: "layout",
+    howTo: [
+      "Upload your PDF document",
+      "Select new layout option",
+      "Apply layout changes",
+      "Download reformatted PDF"
+    ],
+    article: {
+      title: "Change PDF Page Layout",
+      content: `Change PDF page layout to adjust orientation, arrangement, and formatting for different viewing and printing needs.
+
+## Layout Options
+
+Change layouts to:
+- Portrait or landscape
+- Single or two-page view
+- Book layout
+- Facing pages
+- Continuous scroll
+
+## Orientation Changes
+
+Adjust orientation:
+- Portrait to landscape
+- Landscape to portrait
+- Mixed orientation
+- Auto-rotate pages
+
+## Professional Formatting
+
+Perfect for:
+- Print preparation
+- Digital viewing optimization
+- Presentation formats
+- Publishing requirements
+
+## Flexible Changes
+
+Apply layout changes to all pages or selected pages for complete control over document presentation.`,
+      relatedTools: ["n-up-pdf", "resize-pdf", "change-pdf-page-size"]
+    }
+  },
+  {
+    id: "n-up-pdf",
+    title: "N-up PDF (2-up, 4-up)",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["n-up", "2-up", "4-up", "layout", "pages-per-sheet"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "N-up PDF Online Free - Multiple Pages Per Sheet (2-up, 4-up)",
+    metaDescription: "Create N-up PDF layouts online free. Print multiple pages per sheet (2-up, 4-up, 6-up). Save paper with efficient PDF layouts.",
+    description: "Arrange multiple PDF pages on a single sheet (2-up, 4-up, etc.)",
+    icon: "grid-3x3",
+    howTo: [
+      "Upload your PDF document",
+      "Select layout (2-up, 4-up, 6-up, etc.)",
+      "Choose page order and orientation",
+      "Download N-up PDF"
+    ],
+    article: {
+      title: "Create N-up PDF Layouts",
+      content: `Arrange multiple PDF pages on single sheets to save paper, create handouts, or view documents more efficiently.
+
+## Layout Options
+
+Common N-up layouts:
+- 2-up: Two pages per sheet
+- 4-up: Four pages per sheet
+- 6-up: Six pages per sheet
+- 9-up: Nine pages per sheet
+- Custom layouts
+
+## Paper Saving
+
+Benefits of N-up:
+- Reduce paper usage
+- Lower printing costs
+- Compact handouts
+- Efficient storage
+- Eco-friendly
+
+## Page Ordering
+
+Control page arrangement:
+- Left-to-right, top-to-bottom
+- Reading order control
+- Custom arrangements
+- Book-style folding
+
+## Professional Handouts
+
+Perfect for creating professional handouts, study materials, and efficient document viewing.`,
+      relatedTools: ["change-pdf-layout", "resize-pdf", "crop-pdf"]
+    }
+  },
+  {
+    id: "pdf-page-inverter",
+    title: "PDF Page Inverter",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["invert", "flip", "reverse", "rotate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Invert PDF Pages Online Free - Flip PDF Pages Upside Down",
+    metaDescription: "Invert PDF pages online free. Flip pages upside down or rotate 180 degrees. Quick PDF page inversion tool.",
+    description: "Invert and flip PDF pages upside down",
+    icon: "flip-vertical",
+    howTo: [
+      "Upload your PDF document",
+      "Select pages to invert",
+      "Apply inversion (180-degree rotation)",
+      "Download inverted PDF"
+    ],
+    article: {
+      title: "Invert PDF Pages",
+      content: `Invert PDF pages by rotating them 180 degrees to flip them upside down. Fix scanning errors or adjust page orientation.
+
+## Page Inversion
+
+Invert pages to:
+- Fix upside-down scans
+- Correct orientation errors
+- Flip specific pages
+- Adjust reading direction
+
+## Selective Inversion
+
+Invert specific pages:
+- All pages
+- Selected pages only
+- Even or odd pages
+- Page ranges
+
+## Fix Scanning Errors
+
+Common uses:
+- Correcting scan orientation
+- Fixing duplex scanning
+- Adjusting mixed documents
+- Preparing for binding
+
+## Quick Rotation
+
+Fast 180-degree rotation to flip pages upside down while maintaining content quality.`,
+      relatedTools: ["invert-pdf-colors", "reverse-pdf-pages", "organize-pdf-pages"]
+    }
+  },
+  {
+    id: "invert-pdf-colors",
+    title: "Invert PDF Colors",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["invert", "colors", "negative", "contrast"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Invert PDF Colors Online Free - Create Negative PDF",
+    metaDescription: "Invert PDF colors online free. Create negative images, improve readability, reduce eye strain. Color inversion tool for PDFs.",
+    description: "Invert colors in PDF to create negative effect",
+    icon: "palette",
+    howTo: [
+      "Upload your PDF document",
+      "Select color inversion option",
+      "Apply color inversion",
+      "Download color-inverted PDF"
+    ],
+    article: {
+      title: "Invert PDF Colors",
+      content: `Invert PDF colors to create negative images, improve readability, reduce eye strain, or prepare documents for special printing.
+
+## Color Inversion
+
+Inversion effects:
+- Full color inversion
+- Grayscale inversion
+- Selective color inversion
+- Preserve specific colors
+
+## Benefits
+
+Color inversion helps:
+- Reduce eye strain
+- Dark mode reading
+- Better night viewing
+- High contrast needs
+- Special accessibility
+
+## Use Cases
+
+Perfect for:
+- Night reading
+- Accessibility enhancement
+- Special effects
+- Printing negatives
+- Visual emphasis
+
+## Quality Preservation
+
+Color inversion maintains document quality while creating professional negative effects.`,
+      relatedTools: ["pdf-color-inverter", "pdf-to-grayscale", "pdf-to-black-white"]
+    }
+  },
+  {
+    id: "pdf-color-inverter",
+    title: "PDF Color Inverter",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["color", "invert", "negative", "tool"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Color Inverter Online Free - Professional Color Inversion Tool",
+    metaDescription: "Professional PDF color inverter online free. Advanced color inversion with customization options. Complete color control.",
+    description: "Professional tool for inverting PDF colors with advanced options",
+    icon: "palette",
+    howTo: [
+      "Upload your PDF document",
+      "Choose inversion method",
+      "Customize inversion settings",
+      "Download inverted PDF"
+    ],
+    article: {
+      title: "Professional PDF Color Inversion",
+      content: `Advanced PDF color inversion tool with professional features for precise color control and customization.
+
+## Advanced Inversion
+
+Professional features:
+- Full inversion
+- Partial inversion
+- Color channel control
+- Selective preservation
+- Custom color mapping
+
+## Accessibility
+
+Improve accessibility:
+- High contrast modes
+- Custom color schemes
+- Readability enhancement
+- Visual impairment support
+
+## Professional Control
+
+Precise control over color inversion for specialized needs and professional applications.`,
+      relatedTools: ["invert-pdf-colors", "pdf-to-grayscale", "edit-pdf"]
+    }
+  },
+  {
+    id: "auto-crop-pdf-margins",
+    title: "Auto-Crop PDF Margins",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["auto-crop", "margins", "trim", "automatic"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Auto-Crop PDF Margins Online Free - Automatic Margin Removal",
+    metaDescription: "Auto-crop PDF margins online free. Automatically detect and remove excessive margins. Smart PDF cropping tool.",
+    description: "Automatically detect and remove excessive margins from PDFs",
+    icon: "scan",
+    howTo: [
+      "Upload your PDF document",
+      "Tool automatically detects margins",
+      "Review detected crop areas",
+      "Download auto-cropped PDF"
+    ],
+    article: {
+      title: "Automatically Crop PDF Margins",
+      content: `Automatically detect and remove excessive margins from PDFs using intelligent content detection. Save time with smart cropping.
+
+## Automatic Detection
+
+Smart margin detection:
+- Content boundary analysis
+- Whitespace detection
+- Consistent cropping
+- Multi-page analysis
+
+## Benefits
+
+Auto-cropping helps:
+- Save time
+- Consistent results
+- Maximize content space
+- Remove unwanted margins
+- Professional appearance
+
+## Intelligent Processing
+
+Advanced algorithms ensure important content is preserved while removing only excessive whitespace.
+
+## Batch Processing
+
+Automatically crop multiple PDFs or all pages in a document with consistent, professional results.`,
+      relatedTools: ["crop-pdf-margins", "crop-pdf", "pdf-cropper"]
+    }
+  },
+  {
+    id: "auto-deskew-pdf",
+    title: "Auto-Deskew PDF (Straighten)",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["deskew", "straighten", "rotate", "align"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Auto-Deskew PDF Online Free - Straighten Crooked PDF Pages",
+    metaDescription: "Auto-deskew PDF files online free. Automatically straighten crooked scanned pages. Smart PDF alignment tool.",
+    description: "Automatically straighten and align crooked PDF pages",
+    icon: "align-center",
+    howTo: [
+      "Upload your PDF document",
+      "Tool automatically detects skew",
+      "Pages are straightened automatically",
+      "Download deskewed PDF"
+    ],
+    article: {
+      title: "Auto-Deskew and Straighten PDFs",
+      content: `Automatically detect and correct skewed pages in PDFs. Perfect for fixing crooked scans and ensuring professional-looking documents.
+
+## Automatic Correction
+
+Smart deskewing:
+- Automatic skew detection
+- Precise rotation correction
+- Content-based alignment
+- Batch processing
+
+## Fix Scanning Issues
+
+Correct common problems:
+- Crooked scanner feed
+- Misaligned documents
+- Camera photo skew
+- Rotation errors
+
+## Professional Results
+
+Automatically straightened pages look professional and are easier to read. Perfect for scanned documents and photo PDFs.
+
+## Quality Preservation
+
+Deskewing maintains content quality while correcting alignment for perfect results.
+
+## Batch Processing
+
+Automatically straighten all pages in a document or process multiple PDFs for consistent, professional results.`,
+      relatedTools: ["auto-crop-pdf-margins", "crop-pdf", "organize-pdf-pages"]
     }
   }
 ] as const;
