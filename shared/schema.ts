@@ -7388,6 +7388,1146 @@ Stack transparent PNGs over other images or backgrounds without ugly white boxes
 Maintain sharp edges and smooth transparency with high-quality PNG conversion. No jagged edges or artifacts around transparent areas.`,
       relatedTools: ["pdf-to-png", "pdf-to-jpg", "pdf-to-image"]
     }
+  },
+  {
+    id: "pdf-to-pdf-a",
+    title: "PDF to PDF/A",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "pdf-a", "archive", "convert", "standard"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to PDF/A Converter - Convert to Archival PDF Format Free",
+    metaDescription: "Convert PDF to PDF/A online free. Create archival-compliant PDFs for long-term storage. ISO standard PDF/A conversion tool.",
+    description: "Convert PDFs to PDF/A archival format for long-term preservation",
+    icon: "archive",
+    howTo: [
+      "Upload your PDF document",
+      "Select PDF/A compliance level",
+      "Document is converted to archival standard",
+      "Download PDF/A file"
+    ],
+    article: {
+      title: "Convert PDF to PDF/A Archival Format",
+      content: `PDF/A is the ISO standard for archival documents, ensuring your files remain accessible and viewable for decades to come.
+
+## Long-Term Preservation
+
+PDF/A embeds all fonts and resources, ensuring documents look exactly the same even after years of storage, regardless of software changes.
+
+## Legal Compliance
+
+Many industries require PDF/A for legal documents, contracts, and official records. Convert to PDF/A to meet regulatory requirements.
+
+## Complete Self-Containment
+
+PDF/A files are completely self-contained with all fonts, images, and resources embedded, eliminating dependencies on external files.
+
+## Multiple Compliance Levels
+
+Choose from PDF/A-1, PDF/A-2, or PDF/A-3 based on your archival requirements and feature needs.`,
+      relatedTools: ["pdf-converter", "optimize-pdf", "compress-pdf"]
+    }
+  },
+  {
+    id: "pdf-to-xml",
+    title: "PDF to XML",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "xml", "data", "convert", "structured"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to XML Converter - Extract PDF Data to XML Format Free",
+    metaDescription: "Convert PDF to XML online free. Extract structured data from PDFs in XML format. Perfect for data integration and processing.",
+    description: "Convert PDF documents to structured XML format",
+    icon: "file-code",
+    howTo: [
+      "Upload your PDF file",
+      "Text and structure are extracted",
+      "XML file is generated",
+      "Download structured XML data"
+    ],
+    article: {
+      title: "Convert PDF to XML for Data Processing",
+      content: `PDF to XML conversion extracts document content into structured, machine-readable XML format perfect for system integration and data processing.
+
+## Structured Data Export
+
+Convert PDF content into hierarchical XML structure that preserves document organization, making it easy to parse and process programmatically.
+
+## System Integration
+
+XML is a universal data format supported by all major platforms and programming languages, making PDF data easy to integrate into any system.
+
+## Data Transformation
+
+Use XSLT and other XML tools to transform extracted data into any format you need. Perfect for converting PDF data to databases or other systems.
+
+## Automated Processing
+
+Extract data from invoices, forms, and reports as XML for automated processing in enterprise systems and workflows.`,
+      relatedTools: ["pdf-to-json", "pdf-to-csv", "pdf-to-html"]
+    }
+  },
+  {
+    id: "pdf-to-csv",
+    title: "PDF to CSV",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "csv", "excel", "spreadsheet", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to CSV Converter - Extract PDF Tables to CSV Online Free",
+    metaDescription: "Convert PDF to CSV online free. Extract tables from PDF to CSV format. Perfect for Excel and data analysis. Fast and accurate.",
+    description: "Extract tables from PDF documents to CSV format",
+    icon: "table",
+    howTo: [
+      "Upload PDF with tables",
+      "Tables are automatically detected",
+      "CSV files are generated",
+      "Download CSV data for Excel"
+    ],
+    article: {
+      title: "Convert PDF Tables to CSV",
+      content: `PDF to CSV conversion extracts tabular data from PDFs into comma-separated format that opens directly in Excel, Google Sheets, and all spreadsheet applications.
+
+## Table Extraction
+
+Automatically detect and extract tables from PDF documents, converting them to clean CSV format ready for analysis.
+
+## Excel Compatible
+
+CSV files open directly in Microsoft Excel, Google Sheets, LibreOffice Calc, and all spreadsheet software without any conversion needed.
+
+## Data Analysis Ready
+
+Import extracted CSV data into analytics tools, databases, or business intelligence platforms for immediate analysis and reporting.
+
+## Multiple Tables
+
+Extract multiple tables from a single PDF, each saved as a separate CSV file for easy organization and processing.`,
+      relatedTools: ["pdf-to-excel", "pdf-to-xlsx", "pdf-to-json"]
+    }
+  },
+  {
+    id: "pdf-to-black-white",
+    title: "PDF to Black and White",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["pdf", "black-white", "monochrome", "optimize", "compress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Black and White - Convert Color PDF to Monochrome Free",
+    metaDescription: "Convert color PDF to black and white online free. Create monochrome PDFs for printing. Reduce file size with B&W conversion.",
+    description: "Convert color PDFs to pure black and white for maximum compression",
+    icon: "moon",
+    howTo: [
+      "Upload your color PDF",
+      "Colors convert to black and white",
+      "File size dramatically reduced",
+      "Download monochrome PDF"
+    ],
+    article: {
+      title: "Convert PDF to Black and White",
+      content: `Converting PDFs to pure black and white (monochrome) creates the smallest possible file sizes and is perfect for text documents and simple graphics.
+
+## Maximum File Size Reduction
+
+Black and white PDFs are significantly smaller than grayscale or color PDFs, making them perfect for email and online sharing.
+
+## Text Document Optimization
+
+Perfect for converting text-heavy documents like contracts, reports, and manuscripts where color isn't necessary.
+
+## Lowest Printing Cost
+
+Black and white printing is the most economical option. Convert documents to B&W before printing to minimize costs.
+
+## High Contrast
+
+Pure black and white provides maximum contrast and readability, perfect for photocopying and faxing.`,
+      relatedTools: ["pdf-to-grayscale", "compress-pdf", "optimize-pdf"]
+    }
+  },
+  {
+    id: "pdf-converter",
+    title: "PDF Converter",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "convert", "transform", "universal", "all-in-one"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Converter - Universal PDF Conversion Tool Online Free",
+    metaDescription: "Free PDF converter for all formats. Convert PDF to Word, Excel, images, and more. Convert files to PDF. All-in-one conversion tool.",
+    description: "Universal PDF converter for all conversion needs",
+    icon: "repeat",
+    howTo: [
+      "Upload your file (PDF or other format)",
+      "Select output format",
+      "Conversion is processed automatically",
+      "Download converted file"
+    ],
+    article: {
+      title: "Universal PDF Converter",
+      content: `Our universal PDF converter handles all your conversion needs - convert PDFs to other formats or convert any file to PDF.
+
+## To PDF Conversion
+
+Convert Word, Excel, PowerPoint, images, and 100+ file types to PDF format with perfect quality preservation.
+
+## From PDF Conversion
+
+Export PDFs to Word, Excel, PowerPoint, images, HTML, text, and dozens of other formats for editing and sharing.
+
+## Batch Processing
+
+Convert multiple files at once, saving time when working with large document collections.
+
+## Quality Preservation
+
+Advanced conversion algorithms ensure maximum quality retention, preserving fonts, images, layouts, and formatting.`,
+      relatedTools: ["word-to-pdf", "pdf-to-word", "pdf-to-excel"]
+    }
+  },
+  {
+    id: "pdf-to-md",
+    title: "PDF to MD",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "md", "markdown", "convert", "text"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to MD Converter - Convert PDF to Markdown MD Free",
+    metaDescription: "Convert PDF to MD (Markdown) online free. Extract content as Markdown for documentation and blogs. Fast PDF to MD conversion.",
+    description: "Convert PDF files to MD (Markdown) format",
+    icon: "hash",
+    howTo: [
+      "Upload PDF document",
+      "Content extracted as Markdown",
+      "MD file generated",
+      "Download for documentation"
+    ],
+    article: {
+      title: "Convert PDF to MD (Markdown)",
+      content: `PDF to MD conversion creates clean Markdown files perfect for technical documentation, README files, and content publishing platforms.
+
+## Documentation Ready
+
+Extract PDF content as Markdown for software documentation, API guides, and technical manuals.
+
+## Blog Publishing
+
+Convert PDF articles to Markdown for publishing on Medium, Dev.to, GitHub Pages, and static site generators.
+
+## Version Control Friendly
+
+Markdown is plain text, making it perfect for Git and other version control systems. Track changes easily.
+
+## Cross-Platform
+
+Markdown works everywhere - GitHub, GitLab, Notion, Obsidian, and hundreds of other tools and platforms.`,
+      relatedTools: ["pdf-to-markdown", "pdf-to-html", "pdf-to-text"]
+    }
+  },
+  {
+    id: "pdf-to-dwg",
+    title: "PDF to DWG",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "dwg", "autocad", "cad", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to DWG Converter - Convert PDF to AutoCAD DWG Free",
+    metaDescription: "Convert PDF to DWG online free. Transform PDF drawings to AutoCAD format. Edit architectural and engineering PDFs in CAD software.",
+    description: "Convert PDF drawings to AutoCAD DWG format",
+    icon: "drafting-compass",
+    howTo: [
+      "Upload PDF with CAD drawing",
+      "Vector graphics extracted",
+      "DWG file generated",
+      "Download for AutoCAD"
+    ],
+    article: {
+      title: "Convert PDF to DWG for AutoCAD",
+      content: `PDF to DWG conversion transforms PDF drawings into editable AutoCAD format, allowing full editing of architectural and engineering drawings.
+
+## CAD Editing
+
+Edit converted drawings in AutoCAD, BricsCAD, or any CAD software that supports DWG format.
+
+## Vector Preservation
+
+Maintains vector quality from PDF, ensuring lines, curves, and shapes remain crisp and scalable in AutoCAD.
+
+## Layer Recovery
+
+Intelligent conversion attempts to preserve or reconstruct drawing layers for easier editing and organization.
+
+## Professional Workflow
+
+Perfect for architects and engineers who receive PDF drawings and need to edit them in CAD software.`,
+      relatedTools: ["pdf-to-dxf", "pdf-to-svg", "cad-to-pdf"]
+    }
+  },
+  {
+    id: "pdf-to-dxf",
+    title: "PDF to DXF",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "dxf", "cad", "autocad", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to DXF Converter - Convert PDF to CAD DXF Format Free",
+    metaDescription: "Convert PDF to DXF online free. Transform PDF to CAD exchange format. Compatible with all CAD software. Fast and accurate.",
+    description: "Convert PDF files to DXF CAD exchange format",
+    icon: "file-vector",
+    howTo: [
+      "Upload PDF drawing",
+      "Vector data extracted",
+      "DXF file created",
+      "Download for CAD software"
+    ],
+    article: {
+      title: "Convert PDF to DXF CAD Format",
+      content: `PDF to DXF conversion creates universal CAD files that work with AutoCAD, SolidWorks, QCAD, and virtually all CAD applications.
+
+## Universal CAD Format
+
+DXF is supported by all major CAD software, making it perfect for sharing drawings across different platforms and applications.
+
+## Editable Drawings
+
+Convert PDF drawings to fully editable DXF format for modification in any CAD program.
+
+## Precision Maintained
+
+Vector conversion preserves precision and accuracy critical for engineering and manufacturing applications.
+
+## Cross-Platform Compatibility
+
+DXF files work on Windows, Mac, and Linux across hundreds of CAD, design, and manufacturing applications.`,
+      relatedTools: ["pdf-to-dwg", "dxf-to-pdf", "pdf-to-svg"]
+    }
+  },
+  {
+    id: "pdf-to-xps",
+    title: "PDF to XPS",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "xps", "microsoft", "convert", "document"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to XPS Converter - Convert PDF to Microsoft XPS Free",
+    metaDescription: "Convert PDF to XPS online free. Transform PDFs to Microsoft XPS document format. Windows compatible fixed-layout format.",
+    description: "Convert PDF documents to Microsoft XPS format",
+    icon: "file-type",
+    howTo: [
+      "Upload PDF file",
+      "Document converted to XPS",
+      "XPS file generated",
+      "Download for Windows viewing"
+    ],
+    article: {
+      title: "Convert PDF to XPS Format",
+      content: `PDF to XPS conversion creates Microsoft's fixed-layout document format, ideal for Windows environments and print workflows.
+
+## Windows Integration
+
+XPS is natively supported in Windows, making it perfect for Windows-based document workflows and printing.
+
+## Fixed Layout
+
+Like PDF, XPS preserves exact document layout, fonts, and formatting across all viewing platforms.
+
+## Print Ready
+
+XPS is designed for high-fidelity printing with advanced print control and color management features.
+
+## Digital Signatures
+
+XPS supports digital signatures and rights management for secure document distribution.`,
+      relatedTools: ["xps-to-pdf", "pdf-to-postscript", "pdf-converter"]
+    }
+  },
+  {
+    id: "pdf-to-postscript",
+    title: "PDF to PostScript",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "postscript", "ps", "print", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to PostScript Converter - Convert PDF to PS Format Free",
+    metaDescription: "Convert PDF to PostScript online free. Create PS files for professional printing. High-quality PDF to PS conversion.",
+    description: "Convert PDF to PostScript (PS) format for professional printing",
+    icon: "printer",
+    howTo: [
+      "Upload PDF document",
+      "PostScript file generated",
+      "PS file optimized for printing",
+      "Download for print services"
+    ],
+    article: {
+      title: "Convert PDF to PostScript",
+      content: `PDF to PostScript conversion creates PS files for professional printing services, commercial presses, and PostScript printers.
+
+## Professional Printing
+
+PostScript is the industry standard for professional printing, prepress, and commercial printing services.
+
+## High-Quality Output
+
+PostScript ensures highest quality printing with precise color control and typography.
+
+## Print Service Compatible
+
+Most commercial print shops and service bureaus accept PostScript files for professional output.
+
+## Advanced Features
+
+PostScript supports advanced printing features like color separations, spot colors, and custom inks.`,
+      relatedTools: ["pdf-to-eps", "postscript-to-pdf", "pdf-to-xps"]
+    }
+  },
+  {
+    id: "pdf-to-eps",
+    title: "PDF to EPS",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "eps", "vector", "graphics", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to EPS Converter - Convert PDF to Vector EPS Free",
+    metaDescription: "Convert PDF to EPS online free. Create vector EPS graphics from PDFs. Perfect for illustrations and professional design work.",
+    description: "Convert PDF pages to EPS vector graphics",
+    icon: "vector",
+    howTo: [
+      "Upload PDF document",
+      "Select pages to convert",
+      "EPS files generated",
+      "Download vector graphics"
+    ],
+    article: {
+      title: "Convert PDF to EPS Vector Format",
+      content: `PDF to EPS conversion creates Encapsulated PostScript files perfect for professional graphic design, illustrations, and publishing.
+
+## Vector Graphics
+
+EPS maintains vector quality, allowing infinite scaling without quality loss. Perfect for logos and illustrations.
+
+## Design Software Compatible
+
+EPS files work in Adobe Illustrator, CorelDRAW, Affinity Designer, and all professional design applications.
+
+## Print Publishing
+
+EPS is the standard format for magazine and book publishing, ensuring highest quality output.
+
+## Editable Paths
+
+Convert PDF graphics to editable vector paths that can be modified in any vector editing software.`,
+      relatedTools: ["eps-to-pdf", "pdf-to-svg", "pdf-to-postscript"]
+    }
+  },
+  {
+    id: "pdf-to-wpd",
+    title: "PDF to WPD",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "wpd", "wordperfect", "convert", "document"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to WPD Converter - Convert PDF to WordPerfect Free",
+    metaDescription: "Convert PDF to WPD online free. Transform PDFs to WordPerfect document format. Edit PDFs in WordPerfect Office.",
+    description: "Convert PDF documents to WordPerfect WPD format",
+    icon: "file-edit",
+    howTo: [
+      "Upload PDF file",
+      "Content extracted and converted",
+      "WPD file generated",
+      "Download for WordPerfect"
+    ],
+    article: {
+      title: "Convert PDF to WordPerfect WPD",
+      content: `PDF to WPD conversion transforms PDFs into WordPerfect documents for editing in WordPerfect Office, still widely used in legal and government sectors.
+
+## Legal Industry Standard
+
+WordPerfect remains the standard word processor in many law firms and legal departments. Convert PDFs for legal document editing.
+
+## Government Use
+
+Many government agencies still use WordPerfect. Convert PDF documents for official government use.
+
+## Full Editing
+
+Edit converted documents in WordPerfect with full formatting control and advanced document features.
+
+## Legacy Document Support
+
+Access and edit older documents that require WordPerfect format compatibility.`,
+      relatedTools: ["pdf-to-word", "pdf-to-docx", "pdf-to-odt"]
+    }
+  },
+  {
+    id: "pdf-to-keynote",
+    title: "PDF to Keynote",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "keynote", "apple", "presentation", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Keynote Converter - Convert PDF to Apple Keynote Free",
+    metaDescription: "Convert PDF to Keynote online free. Transform PDFs into Apple Keynote presentations. Edit slides on Mac and iPad.",
+    description: "Convert PDF documents to Apple Keynote presentations",
+    icon: "presentation",
+    howTo: [
+      "Upload PDF file",
+      "Pages convert to slides",
+      "Keynote file created",
+      "Download for Mac/iPad"
+    ],
+    article: {
+      title: "Convert PDF to Apple Keynote",
+      content: `PDF to Keynote conversion transforms documents into beautiful Apple Keynote presentations that you can edit on Mac, iPad, and iPhone.
+
+## Mac Presentation Software
+
+Keynote is Apple's professional presentation software, known for stunning designs and smooth animations.
+
+## Editable Slides
+
+Convert PDF pages to editable Keynote slides for easy modification and customization.
+
+## Apple Ecosystem
+
+Work seamlessly across Mac, iPad, and iPhone with iCloud synchronization.
+
+## Beautiful Templates
+
+Apply Keynote's gorgeous templates and themes to your converted content for professional presentations.`,
+      relatedTools: ["pdf-to-powerpoint", "pdf-to-pptx", "keynote-to-pdf"]
+    }
+  },
+  {
+    id: "pdf-to-pages",
+    title: "PDF to Pages",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "pages", "apple", "document", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Pages Converter - Convert PDF to Apple Pages Free",
+    metaDescription: "Convert PDF to Pages online free. Transform PDFs to Apple Pages documents. Edit on Mac, iPad, and iPhone.",
+    description: "Convert PDF files to Apple Pages documents",
+    icon: "file-text",
+    howTo: [
+      "Upload PDF document",
+      "Content extracted and formatted",
+      "Pages file generated",
+      "Download for Mac/iPad"
+    ],
+    article: {
+      title: "Convert PDF to Apple Pages",
+      content: `PDF to Pages conversion creates editable Apple Pages documents that work beautifully across Mac, iPad, and iPhone with iCloud sync.
+
+## Apple Word Processing
+
+Pages is Apple's elegant word processor with powerful layout and design capabilities.
+
+## Full Editing
+
+Convert PDFs to fully editable Pages documents with text, images, tables, and formatting preserved.
+
+## Cross-Device Editing
+
+Edit on Mac, work on iPad, review on iPhone - all with seamless iCloud synchronization.
+
+## Professional Templates
+
+Apply Pages' beautiful templates to your converted content for polished, professional documents.`,
+      relatedTools: ["pdf-to-word", "pdf-to-docx", "pages-to-pdf"]
+    }
+  },
+  {
+    id: "pdf-to-numbers",
+    title: "PDF to Numbers",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "numbers", "apple", "spreadsheet", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Numbers Converter - Convert PDF to Apple Numbers Free",
+    metaDescription: "Convert PDF to Numbers online free. Extract PDF tables to Apple Numbers spreadsheets. Edit data on Mac and iPad.",
+    description: "Convert PDF tables to Apple Numbers spreadsheets",
+    icon: "calculator",
+    howTo: [
+      "Upload PDF with tables",
+      "Tables extracted and converted",
+      "Numbers file created",
+      "Download for Mac/iPad"
+    ],
+    article: {
+      title: "Convert PDF to Apple Numbers",
+      content: `PDF to Numbers conversion extracts tables and data from PDFs into Apple Numbers spreadsheets for analysis and editing on Mac and iPad.
+
+## Apple Spreadsheets
+
+Numbers is Apple's powerful and intuitive spreadsheet application with beautiful charts and interactive canvases.
+
+## Data Extraction
+
+Automatically extract tables and numerical data from PDFs for analysis in Numbers.
+
+## iCloud Integration
+
+Work across all your Apple devices with automatic iCloud synchronization and backup.
+
+## Beautiful Charts
+
+Create stunning visualizations from your extracted data using Numbers' advanced charting capabilities.`,
+      relatedTools: ["pdf-to-excel", "pdf-to-csv", "numbers-to-pdf"]
+    }
+  },
+  {
+    id: "pdf-to-odt-ocr",
+    title: "PDF to ODT (OCR)",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["pdf", "odt", "ocr", "scan", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to ODT OCR - Convert Scanned PDF to OpenDocument Text",
+    metaDescription: "Convert scanned PDF to ODT with OCR online free. Extract text from images and scans to LibreOffice Writer format. Accurate OCR technology.",
+    description: "Convert scanned PDFs to ODT with OCR text recognition",
+    icon: "scan",
+    howTo: [
+      "Upload scanned PDF or image-based PDF",
+      "OCR recognizes text in images",
+      "Editable ODT file created",
+      "Download for LibreOffice"
+    ],
+    article: {
+      title: "OCR PDF to OpenDocument ODT",
+      content: `Convert scanned PDFs and image-based documents to editable ODT format using advanced OCR (Optical Character Recognition) technology.
+
+## Scan to Editable Document
+
+Transform scanned documents, photos of paper, and image PDFs into fully editable OpenDocument Text files for LibreOffice Writer.
+
+## Accurate Text Recognition
+
+Advanced OCR engine recognizes text with high accuracy across multiple languages, fonts, and document types.
+
+## Open Format Editing
+
+Edit extracted text in LibreOffice Writer, a free and powerful word processor supporting the open ODF standard.
+
+## Preserve Formatting
+
+OCR attempts to preserve original formatting, including paragraphs, columns, and basic styling for easier editing.`,
+      relatedTools: ["pdf-ocr", "pdf-to-docx-ocr", "pdf-to-searchable"]
+    }
+  },
+  {
+    id: "pdf-to-docx-ocr",
+    title: "PDF to DOCX (OCR)",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["pdf", "docx", "ocr", "scan", "word"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to DOCX OCR - Convert Scanned PDF to Word with OCR",
+    metaDescription: "Convert scanned PDF to DOCX with OCR online free. Extract text from scanned documents to editable Word format. High-accuracy OCR.",
+    description: "Convert scanned PDFs to editable DOCX with OCR",
+    icon: "scan-text",
+    howTo: [
+      "Upload scanned PDF document",
+      "OCR extracts text from images",
+      "Editable Word file generated",
+      "Download DOCX for editing"
+    ],
+    article: {
+      title: "OCR PDF to Word DOCX",
+      content: `Convert scanned PDFs, photos of documents, and image-based PDFs to editable Microsoft Word format using powerful OCR technology.
+
+## Scanned Document Conversion
+
+Turn paper documents, scans, and photos into fully editable Word documents ready for modification.
+
+## Multi-Language OCR
+
+Supports 100+ languages with high accuracy, recognizing various fonts, handwriting styles, and document layouts.
+
+## Business Ready
+
+Perfect for digitizing business documents, contracts, invoices, and forms into editable Word format.
+
+## Format Preservation
+
+Advanced OCR engine preserves tables, columns, formatting, and document structure for minimal post-processing.`,
+      relatedTools: ["pdf-to-word", "pdf-ocr", "scanned-pdf-to-text"]
+    }
+  },
+  {
+    id: "pdf-to-searchable",
+    title: "PDF to Searchable PDF (OCR)",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["pdf", "ocr", "searchable", "scan", "text"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Create Searchable PDF with OCR - Make PDF Searchable Free",
+    metaDescription: "Convert scanned PDF to searchable PDF online free. Add OCR text layer to image PDFs. Make scanned documents searchable and selectable.",
+    description: "Add OCR text layer to make scanned PDFs searchable",
+    icon: "search",
+    howTo: [
+      "Upload scanned or image-based PDF",
+      "OCR recognizes all text in images",
+      "Searchable text layer added",
+      "Download searchable PDF"
+    ],
+    article: {
+      title: "Make PDF Searchable with OCR",
+      content: `Convert scanned PDFs and image-based documents into searchable PDFs by adding an invisible OCR text layer behind the images.
+
+## Search Scanned Documents
+
+Make scanned documents fully searchable and text-selectable while preserving the original image appearance.
+
+## Best of Both Worlds
+
+Keep original document appearance intact while adding searchable, copyable text functionality underneath.
+
+## Archive Digitization
+
+Perfect for digitizing document archives, making old scanned files searchable and accessible.
+
+## Professional Output
+
+Create searchable PDFs that look identical to originals but with added text search, copy, and screen reader accessibility.`,
+      relatedTools: ["pdf-ocr", "scanned-pdf-to-text", "pdf-to-text-ocr"]
+    }
+  },
+  {
+    id: "pdf-to-txt-ocr",
+    title: "PDF to TXT (OCR)",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["pdf", "txt", "ocr", "scan", "text"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to TXT OCR - Extract Text from Scanned PDF Free",
+    metaDescription: "Extract text from scanned PDF to TXT online free. OCR technology converts images to plain text. Accurate text recognition.",
+    description: "Extract text from scanned PDFs using OCR technology",
+    icon: "file-scan",
+    howTo: [
+      "Upload scanned PDF",
+      "OCR reads text from images",
+      "Plain text file created",
+      "Download TXT file"
+    ],
+    article: {
+      title: "OCR PDF to Plain Text",
+      content: `Extract text from scanned PDFs, photos, and image documents using OCR (Optical Character Recognition) to create plain text files.
+
+## Extract from Scans
+
+Convert scanned documents, photos of paper, and image-based PDFs into editable, searchable plain text.
+
+## Text Analysis
+
+Use extracted text for content analysis, keyword research, translation, or data mining without manual retyping.
+
+## Universal Format
+
+Plain text works everywhere - in any text editor, programming environment, or analysis tool.
+
+## Bulk Digitization
+
+Digitize document archives by converting scanned files to searchable, editable text format.`,
+      relatedTools: ["pdf-ocr", "pdf-to-text", "image-to-text"]
+    }
+  },
+  {
+    id: "pdf-to-epub-ocr",
+    title: "PDF to EPUB (OCR)",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["pdf", "epub", "ocr", "ebook", "scan"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to EPUB OCR - Convert Scanned PDF to eBook with OCR",
+    metaDescription: "Convert scanned PDF to EPUB with OCR online free. Transform scanned books to eBook format. Read on Kindle and e-readers.",
+    description: "Convert scanned PDFs to EPUB eBooks using OCR",
+    icon: "book-open-text",
+    howTo: [
+      "Upload scanned PDF book",
+      "OCR extracts text from pages",
+      "Reflowable EPUB created",
+      "Download for e-readers"
+    ],
+    article: {
+      title: "OCR Scanned Books to EPUB",
+      content: `Convert scanned books and documents to EPUB eBook format using OCR, perfect for reading on Kindle, tablets, and e-readers.
+
+## Digitize Books
+
+Transform scanned books, old documents, and photocopied materials into modern eBook format.
+
+## E-Reader Compatible
+
+Read converted books on Kindle, Nook, Kobo, iPad, and all major e-reading devices and apps.
+
+## Reflowable Text
+
+Unlike PDFs, EPUB adapts to screen size with adjustable fonts for comfortable reading on any device.
+
+## Build Your Library
+
+Digitize your personal book collection for convenient access across all your devices.`,
+      relatedTools: ["pdf-to-epub", "pdf-ocr", "scanned-pdf-to-text"]
+    }
+  },
+  {
+    id: "pdf-to-speech",
+    title: "PDF to Speech",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "speech", "audio", "read-aloud", "tts"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Speech - Read PDF Aloud with Text-to-Speech Free",
+    metaDescription: "Convert PDF to speech online free. Listen to PDF documents read aloud. Natural text-to-speech voices. Perfect for accessibility.",
+    description: "Read PDF documents aloud with natural text-to-speech voices",
+    icon: "mic",
+    howTo: [
+      "Upload PDF document",
+      "Select voice and reading speed",
+      "Listen to document read aloud",
+      "Download audio if desired"
+    ],
+    article: {
+      title: "Read PDF Documents Aloud",
+      content: `PDF to speech technology reads your documents aloud using natural-sounding voices, perfect for accessibility, multitasking, and learning.
+
+## Listen While You Work
+
+Have documents read to you while driving, exercising, cooking, or doing other activities.
+
+## Accessibility Tool
+
+Essential for visually impaired users and those with reading difficulties like dyslexia.
+
+## Natural Voices
+
+Modern text-to-speech creates natural-sounding speech in multiple languages and accents.
+
+## Learning Aid
+
+Hear pronunciation of technical terms, foreign words, and complex passages for better comprehension.`,
+      relatedTools: ["pdf-to-mp3", "pdf-to-audio", "text-to-speech"]
+    }
+  },
+  {
+    id: "pdf-to-single-page-html",
+    title: "PDF to Single Page HTML",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "html", "web", "single-page", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Single Page HTML - Convert PDF to One HTML File Free",
+    metaDescription: "Convert PDF to single page HTML online free. Create standalone HTML file from PDF. Perfect for web publishing and sharing.",
+    description: "Convert PDF to a single standalone HTML file",
+    icon: "file-code",
+    howTo: [
+      "Upload PDF document",
+      "All pages merged into one HTML",
+      "Standalone file with embedded resources",
+      "Download self-contained HTML"
+    ],
+    article: {
+      title: "Convert PDF to Single Page HTML",
+      content: `Create a single, self-contained HTML file from your PDF with all images and resources embedded for easy sharing and publishing.
+
+## Standalone File
+
+One HTML file contains everything - no separate image folders or CSS files needed.
+
+## Easy Sharing
+
+Share a single file via email, cloud storage, or web. Recipients just open in any browser.
+
+## Continuous Scrolling
+
+All PDF pages combined into one continuous HTML document for seamless reading.
+
+## Embedded Resources
+
+Images, fonts, and styles all embedded in the HTML file for complete portability.`,
+      relatedTools: ["pdf-to-html", "pdf-to-multi-page-html", "pdf-to-web"]
+    }
+  },
+  {
+    id: "pdf-to-multi-page-html",
+    title: "PDF to Multi-Page HTML",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "html", "web", "multi-page", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Multi-Page HTML - Convert PDF to HTML Website Free",
+    metaDescription: "Convert PDF to multi-page HTML website online free. Create navigable HTML site from PDF. Each page becomes separate HTML file.",
+    description: "Convert PDF to multiple linked HTML pages",
+    icon: "layout-grid",
+    howTo: [
+      "Upload PDF document",
+      "Each page converts to HTML file",
+      "Navigation links added",
+      "Download HTML website"
+    ],
+    article: {
+      title: "Convert PDF to Multi-Page HTML Website",
+      content: `Transform PDF documents into complete HTML websites with each page as a separate HTML file and automatic navigation.
+
+## Complete Website
+
+Each PDF page becomes an HTML page with automatic navigation between pages.
+
+## Easy Navigation
+
+Forward/back buttons and page links automatically added for easy browsing.
+
+## Web Publishing
+
+Upload to any web host to publish your PDF content as a professional website.
+
+## SEO Optimized
+
+Each page is separately indexable by search engines for better discoverability.`,
+      relatedTools: ["pdf-to-html", "pdf-to-single-page-html", "pdf-to-web"]
+    }
+  },
+  {
+    id: "pdf-to-tiff-multipage",
+    title: "PDF to TIFF (Multipage)",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "tiff", "multipage", "image", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Multipage TIFF - Convert PDF to TIFF with All Pages Free",
+    metaDescription: "Convert PDF to multipage TIFF online free. Keep all pages in one TIFF file. Perfect for faxing and document archiving.",
+    description: "Convert PDF to multipage TIFF format for archiving",
+    icon: "layers",
+    howTo: [
+      "Upload PDF document",
+      "All pages saved in one TIFF",
+      "Multipage TIFF file created",
+      "Download for archiving or faxing"
+    ],
+    article: {
+      title: "Convert PDF to Multipage TIFF",
+      content: `Create multipage TIFF files from PDFs, keeping all pages in a single file perfect for faxing, archiving, and professional imaging.
+
+## Single File Archive
+
+Store entire documents in one TIFF file with all pages preserved.
+
+## Fax Compatible
+
+TIFF is the standard format for faxing. Convert PDFs to TIFF for reliable fax transmission.
+
+## Medical Imaging
+
+Widely used in medical imaging and healthcare for document archiving and DICOM compatibility.
+
+## Professional Scanning
+
+Industry standard for document scanning, archiving, and high-quality image storage.`,
+      relatedTools: ["pdf-to-tiff", "pdf-to-image", "tiff-to-pdf"]
+    }
+  },
+  {
+    id: "pdf-to-word-layout",
+    title: "PDF to Word (Keep Layout)",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "word", "layout", "preserve", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Word Keep Layout - Convert PDF to DOCX Preserve Formatting",
+    metaDescription: "Convert PDF to Word keeping exact layout online free. Preserve formatting, spacing, and design. Accurate PDF to DOCX conversion.",
+    description: "Convert PDF to Word preserving exact layout and formatting",
+    icon: "layout-template",
+    howTo: [
+      "Upload PDF document",
+      "Layout and formatting preserved",
+      "Word document with exact design",
+      "Download DOCX file"
+    ],
+    article: {
+      title: "PDF to Word - Preserve Layout",
+      content: `Convert PDFs to Word while maintaining exact layout, spacing, and visual formatting using text boxes and positioned elements.
+
+## Exact Layout Match
+
+Preserves precise positioning, spacing, and visual appearance of the original PDF.
+
+## Design Preservation
+
+Maintains columns, text boxes, headers, footers, and complex layouts perfectly.
+
+## Minor Edits
+
+Perfect when you need to make small text changes while keeping the overall design intact.
+
+## Professional Documents
+
+Ideal for forms, certificates, flyers, and designed documents where layout is critical.`,
+      relatedTools: ["pdf-to-word", "pdf-to-word-flow", "pdf-to-docx"]
+    }
+  },
+  {
+    id: "pdf-to-word-flowing",
+    title: "PDF to Word (Flowing Text)",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "word", "editable", "reflow", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Word Flowing Text - Convert PDF to Fully Editable DOCX",
+    metaDescription: "Convert PDF to Word with flowing text online free. Fully editable Word documents. Perfect for content editing and rewriting.",
+    description: "Convert PDF to Word with fully editable flowing text",
+    icon: "text-select",
+    howTo: [
+      "Upload PDF document",
+      "Text extracted as flowing content",
+      "Fully editable Word file",
+      "Download for easy editing"
+    ],
+    article: {
+      title: "PDF to Word - Flowing Text",
+      content: `Convert PDFs to Word with flowing, fully editable text perfect for content editing, rewriting, and major document modifications.
+
+## Maximum Editability
+
+Text flows naturally in Word, making it easy to add, remove, or rewrite content extensively.
+
+## Content Editing
+
+Perfect for rewriting, expanding, or completely reorganizing document content.
+
+## No Layout Constraints
+
+Text flows freely without fixed positioning, making editing and formatting changes simple.
+
+## Collaborative Editing
+
+Ideal for documents that will be collaboratively edited and extensively modified.`,
+      relatedTools: ["pdf-to-word", "pdf-to-word-layout", "pdf-to-docx"]
+    }
+  },
+  {
+    id: "pdf-to-ppt-editable",
+    title: "PDF to PowerPoint (Editable)",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "powerpoint", "editable", "presentation", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to PowerPoint Editable - Convert PDF to Editable PPTX Free",
+    metaDescription: "Convert PDF to editable PowerPoint online free. Create fully editable presentations from PDFs. Modify text, images, and layouts.",
+    description: "Convert PDF to fully editable PowerPoint presentation",
+    icon: "presentation",
+    howTo: [
+      "Upload PDF document",
+      "Content converted to editable slides",
+      "PowerPoint file with editable elements",
+      "Download PPTX for editing"
+    ],
+    article: {
+      title: "PDF to Editable PowerPoint",
+      content: `Convert PDFs to PowerPoint with fully editable text, images, and objects for complete presentation customization.
+
+## Full Editing Control
+
+Modify text, move images, change layouts, and customize every element of your presentation.
+
+## Presentation Ready
+
+Convert reports and documents into professional PowerPoint presentations for meetings and pitches.
+
+## Reusable Content
+
+Extract content from PDFs to reuse in your own presentations with custom branding and design.
+
+## Collaboration
+
+Share editable PowerPoint files for team collaboration and presentation refinement.`,
+      relatedTools: ["pdf-to-powerpoint", "pdf-to-ppt-images", "pdf-to-pptx"]
+    }
+  },
+  {
+    id: "pdf-to-ppt-images",
+    title: "PDF to PowerPoint (as Images)",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "powerpoint", "images", "slides", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to PowerPoint as Images - Convert PDF Pages to PPT Slides",
+    metaDescription: "Convert PDF to PowerPoint as images online free. Each page becomes a slide image. Preserve exact PDF appearance in presentations.",
+    description: "Convert PDF pages to PowerPoint slides as images",
+    icon: "image",
+    howTo: [
+      "Upload PDF document",
+      "Each page converts to image slide",
+      "PowerPoint with image slides",
+      "Download PPTX file"
+    ],
+    article: {
+      title: "PDF to PowerPoint as Images",
+      content: `Convert PDF pages to PowerPoint slides as images, preserving exact appearance and layout without editable text.
+
+## Exact Appearance
+
+Pages appear exactly as in the original PDF with no layout shifts or formatting changes.
+
+## Quick Conversion
+
+Fast conversion process that maintains perfect visual fidelity of complex layouts.
+
+## Presentation Integration
+
+Insert PDF content as slides in existing presentations for reporting and documentation.
+
+## Protected Content
+
+Content appears as images, preventing accidental editing while allowing presentation use.`,
+      relatedTools: ["pdf-to-powerpoint", "pdf-to-ppt-editable", "pdf-to-images"]
+    }
+  },
+  {
+    id: "pdf-editor",
+    title: "PDF Editor",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["editor", "edit", "pdf", "modify", "annotate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Editor Online Free - Edit PDF Files, Text, and Images",
+    metaDescription: "Free online PDF editor. Edit text, images, add annotations, fill forms. Complete PDF editing tool with no software required.",
+    description: "Complete PDF editing solution for all editing needs",
+    icon: "edit-3",
+    howTo: [
+      "Upload PDF to edit",
+      "Use editing tools to modify content",
+      "Add text, images, annotations",
+      "Download edited PDF"
+    ],
+    article: {
+      title: "Complete PDF Editor",
+      content: `Professional PDF editor with comprehensive tools for editing text, images, annotations, forms, and more - all in your browser.
+
+## All Editing Tools
+
+Edit text, replace images, add annotations, fill forms, add signatures - everything in one place.
+
+## No Software Needed
+
+Edit PDFs directly in your browser without installing Adobe Acrobat or other software.
+
+## Professional Results
+
+Create professional-quality edited PDFs with preserved formatting and quality.
+
+## Form Filling
+
+Fill out PDF forms digitally, add signatures, and complete documents without printing.`,
+      relatedTools: ["edit-pdf", "add-text-to-pdf", "edit-pdf-text"]
+    }
+  },
+  {
+    id: "edit-pdf-text",
+    title: "Edit PDF Text",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["edit", "text", "pdf", "modify", "update"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Edit PDF Text Online Free - Modify Text in PDF Documents",
+    metaDescription: "Edit text in PDF files online free. Change, update, and modify text content in PDFs. Easy PDF text editing tool.",
+    description: "Edit and modify text content in existing PDFs",
+    icon: "text",
+    howTo: [
+      "Upload PDF to edit",
+      "Click on text to modify",
+      "Edit text content directly",
+      "Download updated PDF"
+    ],
+    article: {
+      title: "Edit Text in PDF Documents",
+      content: `Directly edit text in PDF documents - fix typos, update information, change content without recreating the entire file.
+
+## Direct Text Editing
+
+Click on any text in your PDF to edit it directly, just like editing a Word document.
+
+## Fix Typos Quickly
+
+Correct spelling mistakes, update dates, fix errors without recreating the PDF.
+
+## Update Information
+
+Change names, addresses, prices, or any text content in contracts, forms, and documents.
+
+## Preserve Formatting
+
+Text editing maintains original fonts, sizes, and styling for professional results.`,
+      relatedTools: ["pdf-editor", "edit-pdf", "add-text-to-pdf"]
+    }
   }
 ] as const;
 
