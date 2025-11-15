@@ -6972,6 +6972,422 @@ Unlike PDFs, EPUB adapts text flow to different screen sizes, making it perfect 
 EPUB supports adjustable font sizes, bookmarks, highlighting, and other features that enhance the digital reading experience.`,
       relatedTools: ["epub-to-pdf", "pdf-to-mobi", "pdf-to-txt"]
     }
+  },
+  {
+    id: "pdf-to-mobi",
+    title: "PDF to MOBI",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "mobi", "ebook", "kindle", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to MOBI Converter - Convert PDF to Kindle Format Online Free",
+    metaDescription: "Convert PDF to MOBI online free. Transform PDFs into Kindle-compatible eBooks. Fast and secure PDF to MOBI conversion for your e-reader.",
+    description: "Convert PDF documents to MOBI format for Kindle devices",
+    icon: "book",
+    howTo: [
+      "Upload your PDF file",
+      "Select conversion quality settings",
+      "MOBI file is generated automatically",
+      "Download and transfer to your Kindle"
+    ],
+    article: {
+      title: "Convert PDF to MOBI for Kindle Reading",
+      content: `Converting PDF to MOBI makes your documents readable on Kindle devices with improved text flow and formatting. Perfect for reading books, reports, and documents on your favorite e-reader.
+
+## Kindle Compatibility
+
+MOBI is the native format for older Kindle devices, ensuring optimal reading experience with proper text reflow and font adjustment capabilities.
+
+## Enhanced Reading Experience
+
+Unlike static PDFs, MOBI files adapt to different screen sizes, allow font customization, and support bookmarks and highlights for a better reading experience.
+
+## Perfect for E-Books
+
+Convert your PDF books, manuals, and documents to MOBI format to enjoy them on Kindle devices with adjustable brightness, font sizes, and reading comfort features.
+
+## File Size Optimization
+
+MOBI conversion often results in smaller file sizes compared to PDFs, making it easier to store and transfer large collections of books and documents.`,
+      relatedTools: ["pdf-to-epub", "pdf-to-azw", "pdf-to-txt"]
+    }
+  },
+  {
+    id: "pdf-to-html",
+    title: "PDF to HTML",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "html", "web", "convert", "webpage"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to HTML Converter - Convert PDF to Web Pages Online Free",
+    metaDescription: "Convert PDF to HTML online free. Transform PDF documents into responsive web pages. Preserve formatting and create accessible web content from PDFs.",
+    description: "Convert PDF files to HTML web pages with preserved formatting",
+    icon: "code",
+    howTo: [
+      "Upload your PDF document",
+      "Choose HTML output format (single or multi-page)",
+      "Conversion preserves text and images",
+      "Download HTML files ready for web publishing"
+    ],
+    article: {
+      title: "Convert PDF to HTML Web Pages",
+      content: `PDF to HTML conversion transforms your documents into web-ready content that can be published online, indexed by search engines, and accessed on any device.
+
+## Web Publishing Made Easy
+
+Convert PDF documents to HTML for easy publishing on websites, blogs, and online platforms. The resulting HTML is clean, semantic, and ready to use.
+
+## SEO-Friendly Content
+
+HTML pages are fully indexed by search engines, making your content discoverable. Perfect for converting PDF reports, manuals, and documentation into searchable web content.
+
+## Responsive and Accessible
+
+Unlike PDFs, HTML content adapts to all screen sizes and is fully accessible to screen readers, ensuring your content reaches the widest possible audience.
+
+## Preserve Formatting
+
+Our converter maintains the original document structure, including headings, paragraphs, lists, tables, and images, ensuring your content looks professional online.
+
+## Edit and Customize
+
+Once converted to HTML, you can easily edit the content, update styling, add interactive elements, and integrate with your existing website design.`,
+      relatedTools: ["html-to-pdf", "pdf-to-xml", "pdf-to-markdown"]
+    }
+  },
+  {
+    id: "pdf-to-json",
+    title: "PDF to JSON",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "json", "data", "convert", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to JSON Converter - Extract PDF Data to JSON Format Free",
+    metaDescription: "Convert PDF to JSON online free. Extract structured data from PDF documents. Perfect for data analysis and application integration.",
+    description: "Extract structured data from PDFs as JSON",
+    icon: "braces",
+    howTo: [
+      "Upload your PDF document",
+      "Data and text are extracted",
+      "Structured JSON is generated",
+      "Download JSON file for your application"
+    ],
+    article: {
+      title: "Extract PDF Data as JSON",
+      content: `PDF to JSON conversion extracts text and data from PDF documents into a structured, machine-readable format perfect for applications, databases, and data analysis.
+
+## Structured Data Extraction
+
+Extract text, tables, and metadata from PDFs into well-organized JSON format that can be easily parsed and processed by applications and scripts.
+
+## Application Integration
+
+JSON format is universally supported by modern applications, making it easy to integrate PDF data into web apps, mobile apps, and backend systems.
+
+## Data Analysis Ready
+
+Convert PDF reports and documents to JSON for easy analysis using Python, JavaScript, R, or any data analysis tool. Perfect for business intelligence and reporting.
+
+## Automated Workflows
+
+Use JSON output in automated workflows, APIs, and data pipelines. Extract invoice data, form submissions, or report metrics for automated processing.
+
+## Database Import
+
+Imported JSON data can be directly loaded into MongoDB, PostgreSQL, MySQL, and other modern databases for storage and querying.`,
+      relatedTools: ["pdf-to-xml", "pdf-to-csv", "pdf-to-text"]
+    }
+  },
+  {
+    id: "pdf-to-markdown",
+    title: "PDF to Markdown",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "markdown", "md", "convert", "text"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Markdown Converter - Convert PDF to MD Format Online Free",
+    metaDescription: "Convert PDF to Markdown online free. Transform PDF documents into Markdown format for GitHub, documentation, and blogs. Clean, editable text.",
+    description: "Convert PDF documents to Markdown format for easy editing",
+    icon: "file-text",
+    howTo: [
+      "Upload your PDF file",
+      "Text and structure are extracted",
+      "Markdown file is generated",
+      "Download MD file for editing"
+    ],
+    article: {
+      title: "Convert PDF to Markdown for Easy Editing",
+      content: `PDF to Markdown conversion transforms your documents into clean, editable text format perfect for GitHub, documentation sites, blogs, and content management systems.
+
+## Developer-Friendly Format
+
+Markdown is the preferred format for technical documentation, README files, and developer blogs. Convert PDFs to Markdown for version control and collaboration.
+
+## GitHub Ready
+
+Upload converted Markdown files directly to GitHub repositories. Perfect for creating documentation, wikis, and project README files from PDF sources.
+
+## Easy Editing
+
+Markdown is simple text format that's easy to edit in any text editor. No special software required to update or modify your content.
+
+## Static Site Generators
+
+Use converted Markdown with Jekyll, Hugo, Gatsby, and other static site generators to create beautiful documentation websites and blogs.
+
+## Content Reusability
+
+Extract content from PDFs as Markdown to reuse in multiple formats. Convert once, publish everywhere - blogs, docs, wikis, and more.`,
+      relatedTools: ["markdown-to-pdf", "pdf-to-html", "pdf-to-text"]
+    }
+  },
+  {
+    id: "pdf-to-text",
+    title: "PDF to Text",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["pdf", "text", "txt", "extract", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Text Converter - Extract Text from PDF Online Free",
+    metaDescription: "Extract text from PDF online free. Convert PDF to plain text format. Fast and accurate PDF text extraction. No registration required.",
+    description: "Extract plain text content from PDF documents",
+    icon: "type",
+    howTo: [
+      "Upload your PDF document",
+      "Text is automatically extracted",
+      "Plain text file is generated",
+      "Download TXT file with all content"
+    ],
+    article: {
+      title: "Extract Text from PDF Documents",
+      content: `PDF to Text conversion extracts all readable text content from PDF files, creating clean plain text files perfect for analysis, editing, and data processing.
+
+## Pure Text Extraction
+
+Extract text without any formatting, images, or layout elements. Get clean, readable content that's perfect for text analysis and processing.
+
+## Content Analysis
+
+Use extracted text for keyword analysis, sentiment analysis, plagiarism checking, or any text processing task. Perfect for research and content analysis.
+
+## Copy and Paste
+
+Quickly extract text from PDFs when you need to quote, cite, or reuse content in other documents. No manual selection and copying required.
+
+## Searchable Content
+
+Convert scanned PDFs or image-based PDFs to searchable text using OCR technology. Make any PDF content searchable and indexable.
+
+## Data Processing
+
+Feed extracted text into natural language processing tools, translation services, or text analysis software for automated processing.`,
+      relatedTools: ["pdf-ocr", "pdf-to-word", "pdf-to-markdown"]
+    }
+  },
+  {
+    id: "pdf-to-grayscale",
+    title: "PDF to Grayscale",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["pdf", "grayscale", "black-white", "optimize", "compress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Grayscale Converter - Convert Color PDF to Black & White Free",
+    metaDescription: "Convert color PDF to grayscale online free. Reduce file size and optimize for printing. Professional black and white PDF conversion.",
+    description: "Convert color PDFs to grayscale to reduce file size",
+    icon: "contrast",
+    howTo: [
+      "Upload your color PDF",
+      "Colors are converted to grayscale",
+      "File size is reduced",
+      "Download optimized grayscale PDF"
+    ],
+    article: {
+      title: "Convert PDF to Grayscale for Printing and Optimization",
+      content: `Converting PDFs to grayscale reduces file size, saves printing costs, and creates professional-looking black and white documents.
+
+## Reduce File Size
+
+Grayscale PDFs are significantly smaller than color PDFs, making them easier to email, share, and store. Perfect for large document archives.
+
+## Professional Printing
+
+Convert to grayscale for professional black and white printing. Ensures consistent results when printing on non-color printers.
+
+## Cost Savings
+
+Black and white printing is much cheaper than color printing. Convert documents to grayscale before printing to save on toner and printing costs.
+
+## Archival Quality
+
+Grayscale documents often provide better archival quality and are easier to read when printed or displayed on certain screens.
+
+## Consistent Appearance
+
+Grayscale conversion ensures documents look the same whether viewed on screen or printed, eliminating color calibration issues.`,
+      relatedTools: ["compress-pdf", "optimize-pdf", "pdf-to-black-white"]
+    }
+  },
+  {
+    id: "edit-pdf",
+    title: "Edit PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["edit", "modify", "pdf", "text", "images"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Edit PDF Online Free - PDF Editor Tool for Text and Images",
+    metaDescription: "Edit PDF files online free. Modify text, add images, and update content in your PDFs. Easy-to-use PDF editor with no software required.",
+    description: "Edit PDF content including text, images, and formatting",
+    icon: "edit",
+    howTo: [
+      "Upload the PDF you want to edit",
+      "Click on text or images to modify",
+      "Make your changes and adjustments",
+      "Download your edited PDF"
+    ],
+    article: {
+      title: "Edit PDF Files Online",
+      content: `Our online PDF editor lets you modify text, update images, and change formatting in your PDF documents without installing any software.
+
+## Comprehensive Editing
+
+Edit text content, replace images, update links, modify formatting, and make any changes you need directly in the browser.
+
+## No Software Required
+
+Edit PDFs online without Adobe Acrobat or other expensive software. Works on Windows, Mac, Linux, and mobile devices.
+
+## Preserve Formatting
+
+Make changes while maintaining the original document layout, fonts, and styling. Your edited PDF will look professional and polished.
+
+## Quick Updates
+
+Quickly fix typos, update information, correct errors, or add new content to existing PDFs without recreating the entire document.
+
+## Collaboration Ready
+
+Edit PDFs for team review, client presentations, or final approvals. Make last-minute changes before sending or publishing documents.`,
+      relatedTools: ["add-text-to-pdf", "edit-pdf-text", "pdf-editor"]
+    }
+  },
+  {
+    id: "add-text-to-pdf",
+    title: "Add Text to PDF",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["add", "text", "edit", "pdf", "annotate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Text to PDF Online Free - Insert Text in PDF Documents",
+    metaDescription: "Add text to PDF files online free. Insert text anywhere in your PDF documents. Easy text addition with font customization. No registration needed.",
+    description: "Add text annotations and content to existing PDFs",
+    icon: "text-cursor-input",
+    howTo: [
+      "Upload your PDF document",
+      "Click where you want to add text",
+      "Type your text and customize font",
+      "Download PDF with added text"
+    ],
+    article: {
+      title: "Add Text to PDF Documents Online",
+      content: `Add text to any PDF document online - perfect for filling forms, adding comments, inserting signatures, or completing templates without printing.
+
+## Fill PDF Forms
+
+Easily fill out PDF forms by adding text directly into form fields. No need to print, fill by hand, and scan documents.
+
+## Add Annotations
+
+Insert comments, notes, explanations, or instructions anywhere in your PDF. Perfect for reviewing documents or providing feedback.
+
+## Custom Fonts and Styling
+
+Choose from multiple fonts, adjust text size, change colors, and apply formatting to make your text match the document style.
+
+## Professional Results
+
+Add text that looks natural and integrated with the original document. Perfect for creating professional documents and forms.
+
+## Save Time
+
+Eliminate the print-fill-scan workflow. Add text digitally and share completed documents instantly via email or cloud storage.`,
+      relatedTools: ["edit-pdf", "pdf-editor", "edit-pdf-text"]
+    }
+  },
+  {
+    id: "pdf-to-mp3",
+    title: "PDF to MP3",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "mp3", "audio", "speech", "text-to-speech"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to MP3 Converter - Convert PDF to Audio Speech Online Free",
+    metaDescription: "Convert PDF to MP3 audio online free. Text-to-speech PDF conversion for listening on the go. Transform documents into spoken audio.",
+    description: "Convert PDF text to MP3 audio using text-to-speech",
+    icon: "volume-2",
+    howTo: [
+      "Upload your PDF document",
+      "Select voice and language settings",
+      "Text is converted to speech",
+      "Download MP3 audio file"
+    ],
+    article: {
+      title: "Convert PDF to MP3 Audio",
+      content: `PDF to MP3 conversion uses text-to-speech technology to transform your documents into audio files you can listen to anywhere, anytime.
+
+## Listen on the Go
+
+Convert documents to MP3 and listen while driving, exercising, commuting, or doing other activities. Perfect for multitasking and learning.
+
+## Accessibility
+
+Audio conversion makes documents accessible to visually impaired users and those who prefer auditory learning over reading.
+
+## Natural Voice Quality
+
+Modern text-to-speech engines produce natural-sounding voices in multiple languages and accents for comfortable listening.
+
+## Audiobook Creation
+
+Transform books, articles, and reports into personal audiobooks. Great for consuming long-form content when you cannot read.
+
+## Study and Learning
+
+Convert textbooks, study materials, and educational PDFs to audio for easier revision and learning on the move.`,
+      relatedTools: ["pdf-to-speech", "pdf-to-text", "pdf-ocr"]
+    }
+  },
+  {
+    id: "pdf-to-png-transparent",
+    title: "PDF to PNG (Transparent)",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "png", "transparent", "image", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to PNG with Transparency - Convert PDF to Transparent PNG Free",
+    metaDescription: "Convert PDF to PNG with transparency online free. Create transparent background PNG images from PDFs. Perfect for graphics and design work.",
+    description: "Convert PDF pages to PNG images with transparent backgrounds",
+    icon: "image",
+    howTo: [
+      "Upload your PDF file",
+      "Select pages to convert",
+      "Transparent PNG files are generated",
+      "Download individual PNG images"
+    ],
+    article: {
+      title: "Convert PDF to PNG with Transparent Background",
+      content: `PDF to PNG with transparency conversion creates images with transparent backgrounds perfect for graphic design, presentations, and web use.
+
+## Transparent Backgrounds
+
+Remove white or colored backgrounds from PDF pages, creating clean PNG images with transparency that blend seamlessly into any design.
+
+## Graphic Design Ready
+
+Use transparent PNGs in Photoshop, Illustrator, Canva, or any design software. Perfect for creating logos, icons, and graphics from PDF sources.
+
+## Web Graphics
+
+Create web-ready graphics with transparent backgrounds for websites, social media, and digital marketing materials.
+
+## Layering and Compositing
+
+Stack transparent PNGs over other images or backgrounds without ugly white boxes. Perfect for presentations and design projects.
+
+## High Quality Output
+
+Maintain sharp edges and smooth transparency with high-quality PNG conversion. No jagged edges or artifacts around transparent areas.`,
+      relatedTools: ["pdf-to-png", "pdf-to-jpg", "pdf-to-image"]
+    }
   }
 ] as const;
 
