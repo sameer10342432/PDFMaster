@@ -8,7 +8,12 @@ export const toolCategories = [
   "Convert",
   "OCR & Extract",
   "Repair & Fix",
-  "Security"
+  "Security",
+  "Watermark & Stamp",
+  "Forms",
+  "Viewer",
+  "Analysis",
+  "Data Extraction"
 ] as const;
 
 export type ToolCategory = typeof toolCategories[number];
@@ -15402,6 +15407,2073 @@ Remove footers for:
 - Clean versions
 - Reuse preparation`,
       relatedTools: ["remove-pdf-header", "add-footer-to-pdf", "pdf-editor"]
+    }
+  },
+  {
+    id: "pdf-underlay",
+    title: "PDF Underlay",
+    category: "Watermark & Stamp" as ToolCategory,
+    tags: ["underlay", "background", "behind", "layer"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Underlay Online Free - Add Background Layer to PDF",
+    metaDescription: "Add underlay to PDF files online for free. Place images or text behind PDF content as background layer. Professional PDF underlay tool.",
+    description: "Add images or text as background layer behind PDF content",
+    icon: "layers",
+    howTo: [
+      "Upload your PDF document",
+      "Choose underlay content (image or text)",
+      "Position and configure underlay settings",
+      "Download PDF with underlay applied"
+    ],
+    article: {
+      title: "Add Underlay to PDF Documents",
+      content: `PDF underlay adds content behind your document's existing text and images, creating professional backgrounds or subtle branding without obscuring the main content.
+
+## What is PDF Underlay?
+
+Unlike watermarks that appear on top of content, underlay appears behind the document content. This makes it perfect for:
+- Adding company logos as subtle backgrounds
+- Creating branded letterhead templates
+- Adding decorative backgrounds without interfering with readability
+- Placing draft or confidential markers behind text
+
+## Underlay vs Watermark
+
+While watermarks appear over content and can sometimes obscure text, underlays sit behind everything making them ideal for backgrounds that shouldn't interfere with document readability. Underlays are particularly useful for creating professional templates where branding needs to be visible but not distracting.
+
+## Professional Applications
+
+Use PDF underlay for:
+- Corporate letterhead templates
+- Branded document backgrounds
+- Security backgrounds for certificates
+- Decorative elements for presentations
+- Subtle branding without content obstruction`,
+      relatedTools: ["pdf-watermark", "pdf-overlay", "pdf-stamp"]
+    }
+  },
+  {
+    id: "pdf-stamp-datetime",
+    title: "PDF Stamp (Dynamic Date/Time)",
+    category: "Watermark & Stamp" as ToolCategory,
+    tags: ["stamp", "date", "time", "dynamic", "timestamp"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Date Time Stamp to PDF - Dynamic PDF Timestamp Online",
+    metaDescription: "Add dynamic date and time stamps to PDF documents online for free. Automatic timestamp insertion for PDFs. Professional date stamping tool.",
+    description: "Add dynamic date and time stamps to PDF documents automatically",
+    icon: "calendar-clock",
+    howTo: [
+      "Upload your PDF file",
+      "Choose date/time format and position",
+      "Configure timestamp settings",
+      "Download PDF with date/time stamp"
+    ],
+    article: {
+      title: "Add Dynamic Date Time Stamps to PDFs",
+      content: `Dynamic date and time stamping automatically adds current timestamps to PDF documents, essential for record-keeping, legal documentation, and version control.
+
+## Dynamic Timestamp Features
+
+Our tool provides:
+- Automatic current date/time insertion
+- Multiple date format options (MM/DD/YYYY, DD/MM/YYYY, ISO format)
+- Time zone support
+- Custom timestamp formatting
+- Position control for stamp placement
+- Font and size customization
+
+## Common Use Cases
+
+Date/time stamps are essential for:
+- Legal documents requiring execution timestamps
+- Financial records and invoices
+- Meeting minutes and reports
+- Document version control
+- Compliance and audit trails
+- Time-sensitive communications
+
+## Professional Documentation
+
+Automatic timestamping ensures accuracy and eliminates manual date entry errors. Perfect for businesses that need to maintain precise records of when documents were created or processed. The dynamic nature means you always get the current date/time when processing documents.`,
+      relatedTools: ["pdf-stamp-username", "pdf-stamp", "pdf-bates-numbering"]
+    }
+  },
+  {
+    id: "pdf-stamp-username",
+    title: "PDF Stamp (User Name)",
+    category: "Watermark & Stamp" as ToolCategory,
+    tags: ["stamp", "username", "user", "identity"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Username Stamp to PDF - PDF User Identity Stamping",
+    metaDescription: "Add username stamps to PDF documents online for free. Automatically stamp PDFs with user identity. Professional user stamping tool.",
+    description: "Add user name stamps to PDF documents for identification",
+    icon: "user-check",
+    howTo: [
+      "Upload your PDF document",
+      "Configure username stamp settings",
+      "Choose stamp position and style",
+      "Download PDF with username stamp"
+    ],
+    article: {
+      title: "Add Username Stamps to PDF Documents",
+      content: `Username stamping adds user identity information to PDF documents, essential for accountability, document tracking, and multi-user workflows.
+
+## Identity Stamping Features
+
+Add professional user stamps with:
+- Current user name display
+- Custom user information fields
+- Position and style control
+- Font customization
+- Multiple page stamping
+- Batch processing support
+
+## Why Use Username Stamps?
+
+Username stamps provide:
+- Document accountability and tracking
+- Clear ownership identification
+- Audit trail creation
+- Multi-user workflow support
+- Review and approval tracking
+- Version control by user
+
+## Professional Workflows
+
+Essential for:
+- Corporate document management systems
+- Legal document workflows
+- Financial approval processes
+- Healthcare record management
+- Educational institution documents
+- Government compliance requirements`,
+      relatedTools: ["pdf-stamp-datetime", "pdf-stamp", "pdf-digital-signature"]
+    }
+  },
+  {
+    id: "pdf-bates-numbering-advanced",
+    title: "PDF Bates Numbering (Advanced)",
+    category: "Watermark & Stamp" as ToolCategory,
+    tags: ["bates", "numbering", "legal", "stamping", "sequential"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Advanced Bates Numbering for PDF - Legal PDF Stamping",
+    metaDescription: "Add advanced Bates numbering to PDF documents online for free. Professional legal stamping with custom prefixes and numbering. Bates stamp PDFs.",
+    description: "Add advanced Bates numbering to PDF documents for legal workflows",
+    icon: "hash",
+    howTo: [
+      "Upload PDF documents for Bates stamping",
+      "Configure prefix, starting number, and format",
+      "Set position and appearance options",
+      "Download Bates-numbered PDFs"
+    ],
+    article: {
+      title: "Advanced Bates Numbering for Legal Documents",
+      content: `Bates numbering (also called Bates stamping) adds unique sequential identifiers to PDF documents, essential for legal discovery, document management, and evidence tracking.
+
+## Advanced Bates Features
+
+Our tool provides:
+- Custom prefix and suffix support
+- Configurable starting numbers
+- Leading zero padding
+- Multiple format options
+- Position control
+- Font and size customization
+- Multi-document sequential numbering
+- Batch processing capabilities
+
+## Legal Applications
+
+Bates numbering is critical for:
+- Legal discovery processes
+- Evidence documentation
+- Court filing requirements
+- Document set organization
+- Chain of custody tracking
+- Litigation support
+- Regulatory compliance
+
+## Professional Standards
+
+Follow industry standards with:
+- Sequential numbering across document sets
+- Unique identifier generation
+- Consistent formatting throughout
+- Clear visibility without content obstruction
+- Audit-ready documentation`,
+      relatedTools: ["pdf-stamp-datetime", "pdf-page-numbering", "pdf-legal-tools"]
+    }
+  },
+  {
+    id: "extract-text-from-pdf",
+    title: "Extract Text from PDF",
+    category: "Data Extraction" as ToolCategory,
+    tags: ["extract", "text", "content", "copy"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract Text from PDF Free - Copy Text from PDF Online",
+    metaDescription: "Extract text from PDF documents online for free. Copy and export text content from PDFs. Simple PDF text extraction tool.",
+    description: "Extract and copy text content from PDF documents",
+    icon: "text-cursor-input",
+    howTo: [
+      "Upload your PDF file",
+      "Preview extracted text content",
+      "Select text portions if needed",
+      "Download or copy extracted text"
+    ],
+    article: {
+      title: "Extract Text from PDF Documents",
+      content: `Text extraction from PDFs allows you to retrieve and reuse content from PDF documents, essential for data analysis, content reuse, and document processing workflows.
+
+## Text Extraction Capabilities
+
+Extract:
+- All text from entire documents
+- Specific pages or page ranges
+- Formatted text with layout preservation
+- Plain text without formatting
+- Text from scanned PDFs (with OCR)
+- Multi-column text content
+
+## Common Use Cases
+
+Text extraction is useful for:
+- Content reuse and repurposing
+- Data analysis and processing
+- Creating editable documents from PDFs
+- Research and citation work
+- Accessibility improvements
+- Content migration projects
+
+## Quality Preservation
+
+Our extraction tool:
+- Maintains text accuracy
+- Preserves character encoding
+- Handles multiple languages
+- Processes complex layouts
+- Retains paragraph structure
+- Supports special characters`,
+      relatedTools: ["pdf-text-extractor", "pdf-to-word", "ocr-pdf"]
+    }
+  },
+  {
+    id: "pdf-text-extractor",
+    title: "PDF Text Extractor",
+    category: "Data Extraction" as ToolCategory,
+    tags: ["extractor", "text", "content", "export"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Text Extractor Online - Extract Text from PDF Files",
+    metaDescription: "Professional PDF text extractor tool online for free. Extract text content from PDF files quickly and accurately. No installation required.",
+    description: "Professional tool for extracting text content from PDF files",
+    icon: "file-text",
+    howTo: [
+      "Upload PDF document",
+      "Choose extraction options",
+      "Process text extraction",
+      "Download extracted text file"
+    ],
+    article: {
+      title: "Professional PDF Text Extraction",
+      content: `The PDF Text Extractor provides professional-grade text extraction capabilities for business and personal use, handling complex documents with ease.
+
+## Professional Features
+
+Advanced extraction with:
+- Layout-aware text extraction
+- Table structure preservation
+- Multi-column detection
+- Header and footer identification
+- Formatting options
+- Batch processing support
+
+## Business Applications
+
+Perfect for:
+- Document digitization projects
+- Data mining from PDFs
+- Content management systems
+- Research and analysis
+- Legal document processing
+- Financial data extraction
+
+## High Accuracy
+
+Ensures:
+- Accurate text recognition
+- Proper character encoding
+- Language support worldwide
+- Complex layout handling
+- Special character preservation
+- Formatting retention options`,
+      relatedTools: ["extract-text-from-pdf", "extract-data-from-pdf", "pdf-to-text"]
+    }
+  },
+  {
+    id: "extract-images-from-pdf",
+    title: "Extract Images from PDF",
+    category: "Data Extraction" as ToolCategory,
+    tags: ["extract", "images", "pictures", "graphics"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract Images from PDF Free - Get Pictures from PDF Online",
+    metaDescription: "Extract images from PDF documents online for free. Download all pictures and graphics from PDF files. Professional image extraction tool.",
+    description: "Extract and save images from PDF documents",
+    icon: "image",
+    howTo: [
+      "Upload PDF with images",
+      "Preview available images",
+      "Select images to extract",
+      "Download extracted images"
+    ],
+    article: {
+      title: "Extract Images from PDF Documents",
+      content: `Image extraction from PDFs allows you to retrieve photos, graphics, and illustrations embedded in PDF documents for reuse, analysis, or archival purposes.
+
+## Image Extraction Features
+
+Extract:
+- All images from PDF documents
+- High-resolution versions
+- Original quality preservation
+- Multiple image formats (JPG, PNG)
+- Embedded graphics and photos
+- Vector graphics (when possible)
+
+## Common Applications
+
+Use image extraction for:
+- Content reuse and repurposing
+- Design and creative projects
+- Image archival and organization
+- Marketing material creation
+- Website content preparation
+- Document analysis
+
+## Quality Guarantee
+
+Our tool ensures:
+- Original resolution maintained
+- No quality loss during extraction
+- Correct color profile preservation
+- Transparent image support
+- Batch processing capability
+- Format options for output`,
+      relatedTools: ["pdf-image-extractor", "pdf-to-images", "compress-images"]
+    }
+  },
+  {
+    id: "pdf-image-extractor",
+    title: "PDF Image Extractor",
+    category: "Data Extraction" as ToolCategory,
+    tags: ["extractor", "images", "graphics", "photos"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Image Extractor - Extract All Images from PDF Online",
+    metaDescription: "Professional PDF image extractor online for free. Extract all images and graphics from PDF documents. Fast and easy image extraction.",
+    description: "Professional tool for extracting all images from PDF files",
+    icon: "images",
+    howTo: [
+      "Upload your PDF document",
+      "Process image extraction",
+      "Preview extracted images",
+      "Download all images as ZIP"
+    ],
+    article: {
+      title: "Professional PDF Image Extraction",
+      content: `The PDF Image Extractor provides comprehensive image extraction capabilities, perfect for professionals needing to retrieve high-quality images from PDF documents.
+
+## Advanced Features
+
+Professional extraction with:
+- Bulk image extraction
+- Quality settings control
+- Format conversion options
+- Resolution preservation
+- Metadata retention
+- ZIP archive download
+
+## Professional Uses
+
+Essential for:
+- Publishing and media workflows
+- Marketing content extraction
+- Design resource libraries
+- Image database creation
+- Archive digitization
+- Content management
+
+## Superior Quality
+
+Guarantees:
+- Maximum quality preservation
+- Original format support
+- Color accuracy
+- Transparent backgrounds
+- Vector graphic handling
+- Efficient processing`,
+      relatedTools: ["extract-images-from-pdf", "pdf-to-jpg", "image-compressor"]
+    }
+  },
+  {
+    id: "extract-tables-from-pdf",
+    title: "Extract Tables from PDF",
+    category: "Data Extraction" as ToolCategory,
+    tags: ["extract", "tables", "data", "grid"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract Tables from PDF - PDF Table Extraction Online Free",
+    metaDescription: "Extract tables from PDF documents online for free. Convert PDF tables to Excel or CSV. Accurate table data extraction tool.",
+    description: "Extract tabular data from PDF documents",
+    icon: "table",
+    howTo: [
+      "Upload PDF containing tables",
+      "Identify tables to extract",
+      "Choose output format (Excel/CSV)",
+      "Download extracted table data"
+    ],
+    article: {
+      title: "Extract Tables from PDF Documents",
+      content: `Table extraction from PDFs converts tabular data into editable formats, essential for data analysis, reporting, and spreadsheet workflows.
+
+## Table Detection
+
+Automatically:
+- Detects table structures
+- Identifies rows and columns
+- Preserves cell relationships
+- Handles merged cells
+- Recognizes headers
+- Processes multi-page tables
+
+## Output Formats
+
+Export tables to:
+- Microsoft Excel (XLSX)
+- CSV files
+- JSON structured data
+- HTML tables
+- Google Sheets compatible
+- Database-ready formats
+
+## Business Intelligence
+
+Perfect for:
+- Financial report analysis
+- Data migration projects
+- Research data extraction
+- Invoice processing
+- Budget analysis
+- Statistical research`,
+      relatedTools: ["pdf-table-extractor", "pdf-to-excel", "pdf-to-csv"]
+    }
+  },
+  {
+    id: "pdf-table-extractor",
+    title: "PDF Table Extractor",
+    category: "Data Extraction" as ToolCategory,
+    tags: ["extractor", "tables", "data", "spreadsheet"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Table Extractor - Convert PDF Tables to Excel Online",
+    metaDescription: "Professional PDF table extractor online for free. Extract and convert tables from PDF to Excel or CSV. Accurate table data conversion.",
+    description: "Professional tool for extracting tables from PDF to Excel/CSV",
+    icon: "table-2",
+    howTo: [
+      "Upload PDF with tables",
+      "Select tables to extract",
+      "Configure extraction settings",
+      "Export to Excel or CSV"
+    ],
+    article: {
+      title: "Professional PDF Table Extraction",
+      content: `The PDF Table Extractor provides enterprise-grade table extraction with intelligent detection and accurate conversion to editable formats.
+
+## Advanced Detection
+
+Smart features:
+- AI-powered table detection
+- Complex layout handling
+- Multi-page table support
+- Nested table recognition
+- Header row identification
+- Data type detection
+
+## Enterprise Quality
+
+Professional capabilities:
+- High accuracy extraction
+- Formula preservation options
+- Formatting retention
+- Batch processing
+- Large file support
+- Quality validation
+
+## Data Analysis Ready
+
+Extracted tables are:
+- Immediately editable
+- Analysis-ready
+- Import-compatible
+- Structure-preserved
+- Clean and formatted
+- Error-checked`,
+      relatedTools: ["extract-tables-from-pdf", "pdf-to-excel-converter", "extract-data-from-pdf"]
+    }
+  },
+  {
+    id: "pdf-to-excel-converter",
+    title: "PDF to Excel Converter",
+    category: "Convert" as ToolCategory,
+    tags: ["convert", "excel", "spreadsheet", "xlsx"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Excel Converter Free - Convert PDF to XLSX Online",
+    metaDescription: "Convert PDF to Excel online for free. Transform PDF documents into editable Excel spreadsheets. Fast and accurate PDF to XLSX conversion.",
+    description: "Convert PDF documents to Excel spreadsheets",
+    icon: "file-spreadsheet",
+    howTo: [
+      "Upload PDF document",
+      "Choose conversion settings",
+      "Process PDF to Excel conversion",
+      "Download Excel file"
+    ],
+    article: {
+      title: "Convert PDF to Excel Spreadsheets",
+      content: `PDF to Excel conversion transforms your PDF documents into fully editable Excel spreadsheets, perfect for data analysis and manipulation.
+
+## Conversion Features
+
+Professional conversion with:
+- Table structure recognition
+- Data type preservation
+- Formula handling
+- Multiple sheet support
+- Formatting retention
+- Cell structure maintenance
+
+## Business Benefits
+
+Convert PDFs for:
+- Financial analysis
+- Budget planning
+- Data manipulation
+- Report generation
+- Statistical analysis
+- Database import
+
+## Accuracy Guaranteed
+
+Ensures:
+- Precise data conversion
+- Layout preservation
+- Format compatibility
+- Clean results
+- Editable output
+- Excel formula support`,
+      relatedTools: ["pdf-to-csv-converter", "extract-tables-from-pdf", "pdf-to-word"]
+    }
+  },
+  {
+    id: "pdf-to-csv-converter",
+    title: "PDF to CSV Converter",
+    category: "Convert" as ToolCategory,
+    tags: ["convert", "csv", "data", "export"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to CSV Converter Free - Convert PDF to CSV Online",
+    metaDescription: "Convert PDF to CSV online for free. Transform PDF tables into CSV format for easy data import. Simple PDF to CSV conversion tool.",
+    description: "Convert PDF documents to CSV format",
+    icon: "file-code",
+    howTo: [
+      "Upload PDF file",
+      "Select data to convert",
+      "Configure CSV settings",
+      "Download CSV file"
+    ],
+    article: {
+      title: "Convert PDF to CSV Format",
+      content: `PDF to CSV conversion creates comma-separated value files from PDFs, perfect for database imports, data analysis, and spreadsheet applications.
+
+## CSV Conversion
+
+Features include:
+- Automatic delimiter detection
+- Custom separator options
+- Header row handling
+- Quote character settings
+- Encoding options
+- Multi-table support
+
+## Universal Compatibility
+
+CSV files work with:
+- Excel and Google Sheets
+- Database systems
+- Statistical software
+- CRM systems
+- Analytics platforms
+- Custom applications
+
+## Data Processing
+
+Ideal for:
+- Database imports
+- Data migration
+- Analytics pipelines
+- Batch processing
+- Integration workflows
+- Archive exports`,
+      relatedTools: ["pdf-to-excel-converter", "extract-data-from-pdf", "pdf-to-json"]
+    }
+  },
+  {
+    id: "extract-data-from-pdf",
+    title: "Extract Data from PDF",
+    category: "Data Extraction" as ToolCategory,
+    tags: ["extract", "data", "content", "information"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract Data from PDF - PDF Data Extraction Tool Online",
+    metaDescription: "Extract structured data from PDF documents online for free. Get text, tables, and information from PDFs. Professional data extraction tool.",
+    description: "Extract structured data and information from PDF documents",
+    icon: "database",
+    howTo: [
+      "Upload PDF document",
+      "Identify data to extract",
+      "Choose extraction format",
+      "Download extracted data"
+    ],
+    article: {
+      title: "Extract Structured Data from PDFs",
+      content: `Comprehensive data extraction retrieves all types of content from PDFs including text, tables, images, and metadata for analysis and reuse.
+
+## Complete Data Extraction
+
+Extract:
+- Text content
+- Tabular data
+- Images and graphics
+- Form field data
+- Metadata information
+- Embedded files
+
+## Structured Output
+
+Data exported as:
+- JSON format
+- XML structure
+- CSV files
+- Excel spreadsheets
+- Plain text
+- Custom formats
+
+## Enterprise Applications
+
+Use for:
+- Document processing automation
+- Data mining projects
+- Content management
+- Business intelligence
+- Compliance reporting
+- Archive digitization`,
+      relatedTools: ["pdf-data-extractor", "extract-text-from-pdf", "extract-tables-from-pdf"]
+    }
+  },
+  {
+    id: "pdf-data-extractor",
+    title: "PDF Data Extractor",
+    category: "Data Extraction" as ToolCategory,
+    tags: ["extractor", "data", "mining", "information"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Data Extractor - Extract All Data from PDF Files",
+    metaDescription: "Professional PDF data extractor online for free. Extract text, tables, images, and metadata from PDFs. Comprehensive data extraction tool.",
+    description: "Professional tool for comprehensive PDF data extraction",
+    icon: "database-zap",
+    howTo: [
+      "Upload PDF files",
+      "Select data types to extract",
+      "Configure extraction options",
+      "Download extracted data"
+    ],
+    article: {
+      title: "Professional PDF Data Extraction",
+      content: `The PDF Data Extractor provides enterprise-level data extraction with intelligent parsing and multiple output format support.
+
+## Advanced Extraction
+
+Comprehensive features:
+- Multi-format output
+- Batch processing
+- Smart data recognition
+- Structure preservation
+- Metadata extraction
+- Custom field detection
+
+## Business Intelligence
+
+Perfect for:
+- Automated data processing
+- Document management systems
+- Business process automation
+- Research data collection
+- Compliance and audit
+- Knowledge management
+
+## Reliable Results
+
+Guarantees:
+- High accuracy extraction
+- Consistent formatting
+- Data validation
+- Error handling
+- Quality assurance
+- Scalable processing`,
+      relatedTools: ["extract-data-from-pdf", "pdf-to-json", "pdf-to-xml"]
+    }
+  },
+  {
+    id: "fill-pdf-forms",
+    title: "Fill PDF Forms",
+    category: "Forms" as ToolCategory,
+    tags: ["fill", "form", "complete", "input"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Fill PDF Forms Online Free - Complete PDF Forms Instantly",
+    metaDescription: "Fill PDF forms online for free. Complete fillable PDFs quickly and easily. Professional PDF form filling tool with no software required.",
+    description: "Fill and complete PDF forms online",
+    icon: "file-input",
+    howTo: [
+      "Upload fillable PDF form",
+      "Enter form data in fields",
+      "Review completed form",
+      "Download filled PDF"
+    ],
+    article: {
+      title: "Fill PDF Forms Online",
+      content: `PDF form filling makes it easy to complete interactive forms without printing, saving time and enabling digital workflows.
+
+## Form Filling Features
+
+Complete forms with:
+- Text field input
+- Checkbox selection
+- Radio button choices
+- Dropdown selections
+- Date pickers
+- Digital signatures
+
+## Workflow Benefits
+
+Digital form filling:
+- Eliminates printing needs
+- Speeds up completion
+- Reduces errors
+- Enables immediate submission
+- Supports remote work
+- Maintains quality
+
+## Professional Use
+
+Perfect for:
+- Job applications
+- Government forms
+- Legal documents
+- Medical paperwork
+- Educational forms
+- Business contracts`,
+      relatedTools: ["pdf-form-filler", "create-fillable-pdf", "extract-pdf-form-data"]
+    }
+  },
+  {
+    id: "pdf-form-filler",
+    title: "PDF Form Filler",
+    category: "Forms" as ToolCategory,
+    tags: ["filler", "form", "complete", "populate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Form Filler Online - Fill PDF Forms Automatically",
+    metaDescription: "Professional PDF form filler online for free. Automatically fill PDF forms with data. Advanced form completion tool.",
+    description: "Professional tool for filling PDF forms automatically",
+    icon: "file-check",
+    howTo: [
+      "Upload PDF form",
+      "Import data or fill manually",
+      "Preview filled form",
+      "Save completed PDF"
+    ],
+    article: {
+      title: "Professional PDF Form Filling",
+      content: `The PDF Form Filler provides advanced form completion features including data import, batch processing, and template support.
+
+## Advanced Features
+
+Professional capabilities:
+- Bulk form filling
+- Data import from CSV/JSON
+- Template saving
+- Auto-fill support
+- Validation rules
+- Multi-form processing
+
+## Business Automation
+
+Streamline:
+- Batch form processing
+- Data-driven completion
+- Workflow automation
+- Template management
+- Quality control
+- Archive creation
+
+## Time-Saving Tools
+
+Benefits include:
+- Rapid form completion
+- Consistent data entry
+- Error reduction
+- Workflow efficiency
+- Scalable processing
+- Professional output`,
+      relatedTools: ["fill-pdf-forms", "pdf-form-filler-csv", "flatten-pdf-form"]
+    }
+  },
+  {
+    id: "create-fillable-pdf",
+    title: "Create Fillable PDF",
+    category: "Forms" as ToolCategory,
+    tags: ["create", "fillable", "form", "interactive"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Create Fillable PDF Forms Online - PDF Form Creator Free",
+    metaDescription: "Create fillable PDF forms online for free. Design interactive PDF forms with text fields, checkboxes, and more. Professional form creation tool.",
+    description: "Create interactive fillable PDF forms",
+    icon: "file-plus-2",
+    howTo: [
+      "Upload existing PDF or start new",
+      "Add form fields (text, checkbox, etc.)",
+      "Configure field properties",
+      "Download fillable PDF form"
+    ],
+    article: {
+      title: "Create Interactive Fillable PDF Forms",
+      content: `Creating fillable PDF forms transforms static documents into interactive forms that can be completed electronically, improving efficiency and reducing errors.
+
+## Form Field Types
+
+Add various fields:
+- Text input boxes
+- Checkboxes
+- Radio buttons
+- Dropdown menus
+- Date selectors
+- Signature fields
+
+## Professional Forms
+
+Create forms for:
+- Applications and registrations
+- Surveys and questionnaires
+- Order forms
+- Contact information
+- Feedback collection
+- Data gathering
+
+## Form Features
+
+Advanced options:
+- Field validation
+- Required fields
+- Default values
+- Calculations
+- Conditional logic
+- Tab order control`,
+      relatedTools: ["pdf-form-creator", "fill-pdf-forms", "pdf-form-editor"]
+    }
+  },
+  {
+    id: "pdf-form-creator",
+    title: "PDF Form Creator",
+    category: "Forms" as ToolCategory,
+    tags: ["creator", "form", "builder", "design"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Form Creator Online - Build Custom PDF Forms Free",
+    metaDescription: "Professional PDF form creator online for free. Build and design custom fillable PDF forms. Easy-to-use form creation tool.",
+    description: "Professional tool for creating custom PDF forms",
+    icon: "form-input",
+    howTo: [
+      "Start with template or blank PDF",
+      "Design form layout",
+      "Add and configure form fields",
+      "Export interactive PDF form"
+    ],
+    article: {
+      title: "Professional PDF Form Creation",
+      content: `The PDF Form Creator provides comprehensive tools for designing professional interactive forms with advanced features and customization options.
+
+## Design Tools
+
+Professional features:
+- Visual form designer
+- Field library
+- Layout tools
+- Styling options
+- Template gallery
+- Preview mode
+
+## Enterprise Forms
+
+Build forms for:
+- Business processes
+- HR applications
+- Customer intake
+- Service requests
+- Registration systems
+- Data collection
+
+## Advanced Options
+
+Includes:
+- JavaScript actions
+- Field calculations
+- Data validation
+- Conditional fields
+- Multi-page forms
+- Form submission setup`,
+      relatedTools: ["create-fillable-pdf", "pdf-form-editor", "fill-pdf-forms"]
+    }
+  },
+  {
+    id: "extract-pdf-form-data",
+    title: "Extract PDF Form Data",
+    category: "Forms" as ToolCategory,
+    tags: ["extract", "form", "data", "export"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract PDF Form Data - Export Form Fields to CSV/JSON",
+    metaDescription: "Extract data from filled PDF forms online for free. Export PDF form fields to CSV, JSON, or Excel. Professional form data extraction.",
+    description: "Extract data from filled PDF forms",
+    icon: "file-output",
+    howTo: [
+      "Upload filled PDF form",
+      "Select fields to extract",
+      "Choose export format",
+      "Download extracted data"
+    ],
+    article: {
+      title: "Extract Data from PDF Forms",
+      content: `PDF form data extraction retrieves completed form information for analysis, database import, and workflow automation.
+
+## Data Extraction
+
+Extract:
+- All form field values
+- Selected field data
+- Metadata information
+- Checkbox states
+- Dropdown selections
+- Signature information
+
+## Export Formats
+
+Data exported as:
+- CSV files
+- JSON format
+- Excel spreadsheets
+- XML structure
+- Database-ready
+- Custom formats
+
+## Business Applications
+
+Use for:
+- Data aggregation
+- Analytics and reporting
+- Database updates
+- CRM integration
+- Workflow automation
+- Archive processing`,
+      relatedTools: ["pdf-to-json", "pdf-form-data-to-csv", "read-pdf-form-data"]
+    }
+  },
+  {
+    id: "pdf-to-json",
+    title: "PDF to JSON",
+    category: "Convert" as ToolCategory,
+    tags: ["convert", "json", "data", "structured"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to JSON Converter - Convert PDF to JSON Format Online",
+    metaDescription: "Convert PDF to JSON format online for free. Transform PDF data into structured JSON. Professional PDF to JSON conversion tool.",
+    description: "Convert PDF content to JSON format",
+    icon: "braces",
+    howTo: [
+      "Upload PDF document",
+      "Configure JSON structure",
+      "Process conversion",
+      "Download JSON file"
+    ],
+    article: {
+      title: "Convert PDF to JSON Format",
+      content: `PDF to JSON conversion creates structured data from PDFs, perfect for APIs, web applications, and data processing workflows.
+
+## Structured Output
+
+JSON includes:
+- Text content
+- Form field data
+- Table structures
+- Metadata
+- Page information
+- Document hierarchy
+
+## Developer-Friendly
+
+Features for developers:
+- Clean JSON structure
+- Nested data support
+- Array formatting
+- Unicode support
+- Pretty printing
+- Minified options
+
+## Integration Ready
+
+Perfect for:
+- API development
+- Web applications
+- Data pipelines
+- Mobile apps
+- Cloud services
+- Database imports`,
+      relatedTools: ["pdf-to-xml", "pdf-form-data-to-json", "extract-data-from-pdf"]
+    }
+  },
+  {
+    id: "pdf-to-xml",
+    title: "PDF to XML",
+    category: "Convert" as ToolCategory,
+    tags: ["convert", "xml", "data", "structured"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to XML Converter - Convert PDF to XML Format Online",
+    metaDescription: "Convert PDF to XML format online for free. Transform PDF documents into structured XML. Professional PDF to XML conversion.",
+    description: "Convert PDF documents to XML format",
+    icon: "code-xml",
+    howTo: [
+      "Upload PDF file",
+      "Select XML schema options",
+      "Process conversion",
+      "Download XML file"
+    ],
+    article: {
+      title: "Convert PDF to XML Format",
+      content: `PDF to XML conversion creates structured, machine-readable data from PDFs, essential for enterprise systems and data exchange.
+
+## XML Structure
+
+Converts to:
+- Hierarchical XML
+- Custom schemas
+- Standard formats
+- Tagged content
+- Metadata nodes
+- Nested elements
+
+## Enterprise Integration
+
+XML output for:
+- ERP systems
+- Content management
+- Data exchange
+- B2B integration
+- Workflow systems
+- Archive standards
+
+## Compliance Support
+
+Supports:
+- Industry standards
+- Custom schemas
+- Validation rules
+- Namespace handling
+- UTF-8 encoding
+- Well-formed XML`,
+      relatedTools: ["pdf-to-json", "pdf-to-ubl-xml", "extract-data-from-pdf"]
+    }
+  },
+  {
+    id: "read-pdf-form-data",
+    title: "Read PDF Form Data",
+    category: "Forms" as ToolCategory,
+    tags: ["read", "form", "data", "view"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Read PDF Form Data Online - View PDF Form Fields Free",
+    metaDescription: "Read and view PDF form data online for free. Display filled form field values. Professional PDF form data viewer.",
+    description: "Read and view data from filled PDF forms",
+    icon: "file-search",
+    howTo: [
+      "Upload filled PDF form",
+      "View form field data",
+      "Search and filter fields",
+      "Export if needed"
+    ],
+    article: {
+      title: "Read and View PDF Form Data",
+      content: `PDF form data reading allows you to view, analyze, and verify information entered in fillable PDF forms without opening in specialized software.
+
+## Data Viewing
+
+Display:
+- All form fields
+- Field values
+- Field types
+- Validation status
+- Required fields
+- Completion status
+
+## Analysis Features
+
+Tools include:
+- Field search
+- Data filtering
+- Comparison views
+- Validation checking
+- Export options
+- Batch viewing
+
+## Verification Use
+
+Perfect for:
+- Form review
+- Data validation
+- Quality control
+- Audit processes
+- Approval workflows
+- Record checking`,
+      relatedTools: ["extract-pdf-form-data", "pdf-form-viewer", "fill-pdf-forms"]
+    }
+  },
+  {
+    id: "flatten-pdf-form",
+    title: "Flatten PDF Form",
+    category: "Forms" as ToolCategory,
+    tags: ["flatten", "form", "lock", "finalize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Flatten PDF Form Online - Lock PDF Form Fields Free",
+    metaDescription: "Flatten PDF forms online for free. Convert fillable forms to static PDFs. Lock form fields to prevent editing.",
+    description: "Flatten PDF forms to make fields non-editable",
+    icon: "lock",
+    howTo: [
+      "Upload fillable PDF form",
+      "Review form content",
+      "Flatten all form fields",
+      "Download flattened PDF"
+    ],
+    article: {
+      title: "Flatten PDF Forms",
+      content: `Form flattening converts fillable PDF forms into static documents where field data becomes permanent, preventing further editing.
+
+## Why Flatten Forms?
+
+Flattening is essential for:
+- Final document archival
+- Preventing tampering
+- Ensuring data integrity
+- Creating print-ready versions
+- Legal document finalization
+- Secure distribution
+
+## Flattening Process
+
+Conversion includes:
+- Field data becomes text
+- Interactive elements removed
+- Formatting preserved
+- Layout maintained
+- File size optimized
+- Universal compatibility
+
+## Professional Use
+
+Required for:
+- Archived records
+- Submitted applications
+- Legal filings
+- Official documentation
+- Audit trails
+- Compliance records`,
+      relatedTools: ["fill-pdf-forms", "pdf-form-filler", "lock-pdf"]
+    }
+  },
+  {
+    id: "extract-fonts-from-pdf",
+    title: "Extract Fonts from PDF",
+    category: "Data Extraction" as ToolCategory,
+    tags: ["extract", "fonts", "typeface", "typography"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract Fonts from PDF - Get Font Files from PDF Online",
+    metaDescription: "Extract embedded fonts from PDF documents online for free. Download font files used in PDFs. Professional font extraction tool.",
+    description: "Extract embedded fonts from PDF documents",
+    icon: "type",
+    howTo: [
+      "Upload PDF with embedded fonts",
+      "Scan for font files",
+      "Select fonts to extract",
+      "Download font files"
+    ],
+    article: {
+      title: "Extract Embedded Fonts from PDFs",
+      content: `Font extraction retrieves embedded typefaces from PDF documents, useful for design work, font identification, and document recreation.
+
+## Font Detection
+
+Identifies:
+- TrueType fonts
+- OpenType fonts
+- Type 1 fonts
+- Font subsets
+- Font variations
+- Custom fonts
+
+## Extraction Features
+
+Provides:
+- Complete font files
+- Font metadata
+- Character sets
+- Font licensing info
+- Multiple format support
+- Batch extraction
+
+## Creative Uses
+
+Extract fonts for:
+- Design projects
+- Brand consistency
+- Font identification
+- Document recreation
+- Typography analysis
+- Archive preservation`,
+      relatedTools: ["pdf-font-info", "pdf-to-text", "extract-data-from-pdf"]
+    }
+  },
+  {
+    id: "pdf-zugferd-invoice-extractor",
+    title: "PDF ZUGFeRD Invoice Extractor",
+    category: "Data Extraction" as ToolCategory,
+    tags: ["zugferd", "invoice", "extract", "e-invoice"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract ZUGFeRD Invoice Data - PDF Invoice Extractor",
+    metaDescription: "Extract ZUGFeRD invoice data from PDF documents online for free. Get structured e-invoice data. Professional ZUGFeRD extraction tool.",
+    description: "Extract structured invoice data from ZUGFeRD PDFs",
+    icon: "receipt",
+    howTo: [
+      "Upload ZUGFeRD PDF invoice",
+      "Extract embedded XML data",
+      "View structured invoice data",
+      "Export to desired format"
+    ],
+    article: {
+      title: "Extract ZUGFeRD Invoice Data",
+      content: `ZUGFeRD (Zentraler User Guide Forum elektronische Rechnung Deutschland) invoice extraction retrieves structured e-invoice data embedded in PDF documents.
+
+## ZUGFeRD Standard
+
+Supports:
+- ZUGFeRD versions
+- Embedded XML data
+- Invoice metadata
+- Line item details
+- Tax information
+- Payment terms
+
+## Data Extraction
+
+Retrieves:
+- Supplier information
+- Buyer details
+- Invoice totals
+- Line items
+- Tax breakdowns
+- Payment details
+
+## Business Benefits
+
+Essential for:
+- Automated invoice processing
+- Accounting system integration
+- ERP data import
+- Compliance requirements
+- Audit trails
+- Process automation`,
+      relatedTools: ["pdf-to-ubl-xml", "extract-pdf-form-data", "pdf-invoice-parser"]
+    }
+  },
+  {
+    id: "pdf-to-ubl-xml",
+    title: "PDF to UBL XML",
+    category: "Convert" as ToolCategory,
+    tags: ["convert", "ubl", "xml", "e-invoice"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to UBL XML Converter - Convert Invoices to UBL Format",
+    metaDescription: "Convert PDF invoices to UBL XML format online for free. Transform PDFs to Universal Business Language. Professional e-invoice conversion.",
+    description: "Convert PDF invoices to UBL XML format",
+    icon: "file-code-2",
+    howTo: [
+      "Upload PDF invoice",
+      "Map invoice fields",
+      "Generate UBL XML",
+      "Download UBL file"
+    ],
+    article: {
+      title: "Convert PDF to UBL XML Format",
+      content: `UBL (Universal Business Language) XML conversion transforms PDF invoices into standardized e-invoice format for B2B integration and compliance.
+
+## UBL Standard
+
+Creates:
+- UBL Invoice format
+- UBL Credit Note
+- Standard schemas
+- Validated XML
+- Compliant structure
+- International format
+
+## E-Invoice Support
+
+Enables:
+- B2B integration
+- EDI replacement
+- Automated processing
+- System integration
+- Compliance requirements
+- International trade
+
+## Business Integration
+
+Perfect for:
+- ERP systems
+- Accounting software
+- E-procurement
+- Supply chain
+- Payment systems
+- Compliance reporting`,
+      relatedTools: ["pdf-to-xml", "pdf-zugferd-invoice-extractor", "invoice-data-extraction"]
+    }
+  },
+  {
+    id: "pdf-form-data-to-csv",
+    title: "PDF Form Data to CSV",
+    category: "Forms" as ToolCategory,
+    tags: ["form", "csv", "export", "data"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Export PDF Form Data to CSV - Convert Form Fields to CSV",
+    metaDescription: "Export PDF form data to CSV format online for free. Convert form field values to CSV spreadsheets. Professional form data export tool.",
+    description: "Export PDF form field data to CSV format",
+    icon: "file-spreadsheet",
+    howTo: [
+      "Upload filled PDF forms",
+      "Select fields to export",
+      "Configure CSV options",
+      "Download CSV file"
+    ],
+    article: {
+      title: "Export PDF Form Data to CSV",
+      content: `Exporting PDF form data to CSV creates spreadsheet-compatible files for analysis, database import, and reporting workflows.
+
+## CSV Export Features
+
+Export with:
+- Field name headers
+- Multiple form support
+- Custom delimiters
+- Quote handling
+- Encoding options
+- Batch processing
+
+## Data Analysis
+
+CSV files for:
+- Excel analysis
+- Database imports
+- Statistical software
+- CRM updates
+- Reporting tools
+- Data visualization
+
+## Workflow Integration
+
+Perfect for:
+- Batch form processing
+- Survey data collection
+- Registration processing
+- Application reviews
+- Data aggregation
+- Analytics pipelines`,
+      relatedTools: ["pdf-form-data-export-csv", "extract-pdf-form-data", "pdf-to-csv-converter"]
+    }
+  },
+  {
+    id: "pdf-form-data-to-xml",
+    title: "PDF Form Data to XML",
+    category: "Forms" as ToolCategory,
+    tags: ["form", "xml", "export", "data"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Export PDF Form Data to XML - Convert Forms to XML Format",
+    metaDescription: "Export PDF form data to XML format online for free. Convert form fields to structured XML. Professional form XML export tool.",
+    description: "Export PDF form field data to XML format",
+    icon: "file-code",
+    howTo: [
+      "Upload PDF forms",
+      "Select XML schema",
+      "Export form data",
+      "Download XML file"
+    ],
+    article: {
+      title: "Export PDF Form Data to XML",
+      content: `XML export from PDF forms creates structured data files ideal for enterprise systems, web services, and automated workflows.
+
+## XML Export
+
+Features include:
+- Custom schema support
+- Hierarchical structure
+- Namespace handling
+- Validation options
+- Multi-form processing
+- Batch export
+
+## System Integration
+
+XML for:
+- Enterprise systems
+- Web services
+- Data exchange
+- Workflow automation
+- B2B integration
+- Content management
+
+## Standards Compliance
+
+Supports:
+- Industry schemas
+- Custom formats
+- Validation rules
+- Well-formed XML
+- UTF-8 encoding
+- Documentation`,
+      relatedTools: ["pdf-form-data-to-json", "pdf-to-xml", "extract-pdf-form-data"]
+    }
+  },
+  {
+    id: "pdf-form-data-to-json",
+    title: "PDF Form Data to JSON",
+    category: "Forms" as ToolCategory,
+    tags: ["form", "json", "export", "data"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Export PDF Form Data to JSON - Convert Forms to JSON Format",
+    metaDescription: "Export PDF form data to JSON format online for free. Convert form fields to JSON structure. Developer-friendly form data export.",
+    description: "Export PDF form field data to JSON format",
+    icon: "brackets",
+    howTo: [
+      "Upload filled PDF forms",
+      "Configure JSON structure",
+      "Export form data",
+      "Download JSON file"
+    ],
+    article: {
+      title: "Export PDF Form Data to JSON",
+      content: `JSON export from PDF forms creates developer-friendly structured data perfect for web applications, APIs, and modern data workflows.
+
+## JSON Features
+
+Export with:
+- Clean structure
+- Nested objects
+- Array support
+- Type preservation
+- Pretty printing
+- Minified options
+
+## Developer Tools
+
+JSON for:
+- API endpoints
+- Web applications
+- Mobile apps
+- JavaScript processing
+- Cloud functions
+- Database imports
+
+## Modern Workflows
+
+Perfect for:
+- Serverless functions
+- React/Vue apps
+- Node.js backends
+- REST APIs
+- NoSQL databases
+- Cloud storage`,
+      relatedTools: ["pdf-to-json", "pdf-form-data-to-xml", "extract-pdf-form-data"]
+    }
+  },
+  {
+    id: "pdf-form-filler-csv",
+    title: "PDF Form Filler (from CSV)",
+    category: "Forms" as ToolCategory,
+    tags: ["fill", "form", "csv", "import", "bulk"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Fill PDF Forms from CSV - Bulk PDF Form Filling Tool",
+    metaDescription: "Fill PDF forms from CSV data online for free. Bulk fill multiple forms automatically. Professional CSV to PDF form tool.",
+    description: "Automatically fill PDF forms using CSV data",
+    icon: "file-import",
+    howTo: [
+      "Upload blank PDF form template",
+      "Upload CSV data file",
+      "Map CSV columns to form fields",
+      "Generate filled PDF forms"
+    ],
+    article: {
+      title: "Fill PDF Forms from CSV Data",
+      content: `Automated form filling from CSV data enables bulk processing of forms, perfect for mass mailings, certificates, and repetitive form workflows.
+
+## Bulk Processing
+
+Features include:
+- Multiple form generation
+- Field mapping
+- Data validation
+- Template support
+- Batch processing
+- Error handling
+
+## Business Automation
+
+Automate:
+- Certificate generation
+- Invoice creation
+- Application processing
+- Label printing
+- Mass mailings
+- Report generation
+
+## Time Savings
+
+Benefits of CSV filling:
+- Process hundreds of forms
+- Eliminate manual entry
+- Reduce errors
+- Consistent formatting
+- Scalable solution
+- Professional output`,
+      relatedTools: ["pdf-form-filler-json", "pdf-form-filler", "pdf-form-data-export-csv"]
+    }
+  },
+  {
+    id: "pdf-form-filler-json",
+    title: "PDF Form Filler (from JSON)",
+    category: "Forms" as ToolCategory,
+    tags: ["fill", "form", "json", "import", "automated"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Fill PDF Forms from JSON - Automated Form Filling Tool",
+    metaDescription: "Fill PDF forms from JSON data online for free. Automated PDF form population from JSON. Developer-friendly form filling.",
+    description: "Automatically fill PDF forms using JSON data",
+    icon: "file-json",
+    howTo: [
+      "Upload PDF form template",
+      "Provide JSON data",
+      "Map JSON fields to form",
+      "Download filled PDFs"
+    ],
+    article: {
+      title: "Fill PDF Forms from JSON Data",
+      content: `JSON-based form filling integrates PDF generation into modern web applications and APIs, enabling automated document creation from structured data.
+
+## API Integration
+
+Features for developers:
+- JSON payload support
+- Nested data handling
+- Array processing
+- Dynamic field mapping
+- Batch generation
+- REST API compatibility
+
+## Application Integration
+
+Perfect for:
+- Web applications
+- API endpoints
+- Microservices
+- Serverless functions
+- Database exports
+- Automated workflows
+
+## Development Benefits
+
+Advantages:
+- Clean integration
+- Type safety
+- Flexible structure
+- Easy debugging
+- Version control
+- Documentation friendly`,
+      relatedTools: ["pdf-form-filler-csv", "pdf-form-filler", "pdf-to-json"]
+    }
+  },
+  {
+    id: "pdf-form-data-export-csv",
+    title: "PDF Form Data Export (to CSV)",
+    category: "Forms" as ToolCategory,
+    tags: ["export", "form", "csv", "data"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Export PDF Forms to CSV - Batch Form Data Export Tool",
+    metaDescription: "Export multiple PDF forms to CSV online for free. Batch extract form data to spreadsheet. Professional form data export tool.",
+    description: "Export data from multiple PDF forms to CSV",
+    icon: "table-properties",
+    howTo: [
+      "Upload multiple filled PDF forms",
+      "Select fields to export",
+      "Configure CSV settings",
+      "Download aggregated CSV"
+    ],
+    article: {
+      title: "Batch Export PDF Form Data to CSV",
+      content: `Batch CSV export aggregates data from multiple PDF forms into a single spreadsheet, perfect for survey analysis, application processing, and data collection.
+
+## Batch Export
+
+Aggregate data from:
+- Multiple forms
+- Same template
+- Different sources
+- Various dates
+- Bulk uploads
+- Archive collections
+
+## Data Aggregation
+
+Creates:
+- Single CSV file
+- Consolidated data
+- Normalized format
+- Consistent structure
+- Analysis-ready
+- Import-compatible
+
+## Business Applications
+
+Essential for:
+- Survey results
+- Application reviews
+- Registration processing
+- Feedback analysis
+- Data consolidation
+- Reporting workflows`,
+      relatedTools: ["pdf-form-data-to-csv", "extract-pdf-form-data", "pdf-to-csv-converter"]
+    }
+  },
+  {
+    id: "pdf-form-data-export-json",
+    title: "PDF Form Data Export (to JSON)",
+    category: "Forms" as ToolCategory,
+    tags: ["export", "form", "json", "data"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Export PDF Forms to JSON - Batch Form JSON Export Tool",
+    metaDescription: "Export multiple PDF forms to JSON online for free. Batch extract form data as JSON. Developer-friendly form export tool.",
+    description: "Export data from multiple PDF forms to JSON",
+    icon: "package",
+    howTo: [
+      "Upload filled PDF forms",
+      "Configure JSON structure",
+      "Export aggregated data",
+      "Download JSON file"
+    ],
+    article: {
+      title: "Batch Export PDF Form Data to JSON",
+      content: `Batch JSON export creates structured data collections from multiple PDF forms, ideal for API integration and modern data processing workflows.
+
+## Structured Export
+
+Features include:
+- Array of objects
+- Nested structures
+- Type preservation
+- Consistent schema
+- Pretty formatting
+- Validation support
+
+## Developer Integration
+
+JSON for:
+- API consumption
+- Database import
+- Application processing
+- Cloud functions
+- Analytics platforms
+- Data pipelines
+
+## Modern Workflows
+
+Perfect for:
+- SaaS applications
+- Data analytics
+- Business intelligence
+- Automated processing
+- Integration platforms
+- Cloud services`,
+      relatedTools: ["pdf-form-data-to-json", "pdf-to-json", "extract-pdf-form-data"]
+    }
+  },
+  {
+    id: "pdf-viewer",
+    title: "PDF Viewer",
+    category: "Viewer" as ToolCategory,
+    tags: ["view", "read", "open", "display"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Free PDF Viewer Online - View PDF Files in Browser",
+    metaDescription: "Free online PDF viewer. View and read PDF documents in your browser. No download required. Fast and secure PDF viewing.",
+    description: "View and read PDF documents online",
+    icon: "eye",
+    howTo: [
+      "Upload or drag PDF file",
+      "View document in browser",
+      "Navigate through pages",
+      "Use zoom and search features"
+    ],
+    article: {
+      title: "View PDF Documents Online",
+      content: `Our free PDF viewer allows you to open and read PDF documents directly in your web browser without installing software.
+
+## Viewing Features
+
+Includes:
+- Page navigation
+- Zoom controls
+- Search functionality
+- Full-screen mode
+- Thumbnail preview
+- Bookmarks support
+
+## Browser-Based
+
+No installation needed:
+- Works in any browser
+- No plugins required
+- Mobile compatible
+- Tablet friendly
+- Desktop optimized
+- Cross-platform
+
+## Secure Viewing
+
+Your privacy matters:
+- Client-side processing
+- No server storage
+- Encrypted transfer
+- Automatic deletion
+- Private browsing
+- Secure access`,
+      relatedTools: ["pdf-reader", "open-pdf", "read-pdf-online"]
+    }
+  },
+  {
+    id: "pdf-reader",
+    title: "PDF Reader",
+    category: "Viewer" as ToolCategory,
+    tags: ["read", "view", "open", "document"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Free PDF Reader Online - Read PDF Files in Browser",
+    metaDescription: "Free online PDF reader for viewing documents. Read PDFs online without software. Fast, simple, and secure PDF reading.",
+    description: "Read PDF documents online with ease",
+    icon: "book-open",
+    howTo: [
+      "Open PDF file",
+      "Read document content",
+      "Navigate pages",
+      "Use reading tools"
+    ],
+    article: {
+      title: "Read PDF Documents Online",
+      content: `The PDF reader provides a comfortable reading experience for PDF documents with features designed for easy navigation and content access.
+
+## Reading Tools
+
+Features include:
+- Text selection
+- Copy text
+- Print support
+- Page rotation
+- Continuous scrolling
+- Night mode
+
+## Document Navigation
+
+Easy navigation with:
+- Page thumbnails
+- Bookmarks panel
+- Search function
+- Goto page
+- Previous/next
+- Keyboard shortcuts
+
+## Comfortable Reading
+
+Optimized for:
+- Long documents
+- Reports and books
+- Research papers
+- Manuals
+- Magazines
+- Any PDF content`,
+      relatedTools: ["pdf-viewer", "open-pdf", "read-pdf-online"]
+    }
+  },
+  {
+    id: "open-pdf",
+    title: "Open PDF",
+    category: "Viewer" as ToolCategory,
+    tags: ["open", "view", "access", "load"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Open PDF Files Online Free - Quick PDF Opener",
+    metaDescription: "Open PDF files online instantly. Quick and easy PDF opener in browser. No software installation needed. View PDFs fast.",
+    description: "Quickly open and access PDF files online",
+    icon: "folder-open",
+    howTo: [
+      "Click to upload PDF",
+      "Document opens instantly",
+      "View and interact",
+      "Access all pages"
+    ],
+    article: {
+      title: "Open PDF Files Instantly",
+      content: `Quick PDF opening lets you access documents immediately without waiting for software to load or install.
+
+## Fast Access
+
+Features:
+- Instant loading
+- Quick preview
+- Rapid navigation
+- Fast rendering
+- Efficient display
+- Optimized performance
+
+## Universal Access
+
+Open PDFs from:
+- Local computer
+- Email attachments
+- Cloud storage
+- Downloads folder
+- USB drives
+- Network shares
+
+## No Barriers
+
+Benefits include:
+- No software needed
+- No installation
+- No registration
+- No payment
+- No limits
+- No restrictions`,
+      relatedTools: ["pdf-viewer", "pdf-reader", "read-pdf-online"]
+    }
+  },
+  {
+    id: "read-pdf-online",
+    title: "Read PDF Online",
+    category: "Viewer" as ToolCategory,
+    tags: ["read", "online", "web", "browser"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Read PDF Online Free - Web-Based PDF Reader",
+    metaDescription: "Read PDF documents online for free. Web-based PDF reader with full features. No download required. Read PDFs anywhere.",
+    description: "Read PDF documents online in your web browser",
+    icon: "globe",
+    howTo: [
+      "Upload PDF to web reader",
+      "Read in browser",
+      "Use online tools",
+      "Access from anywhere"
+    ],
+    article: {
+      title: "Read PDFs Online Anywhere",
+      content: `Web-based PDF reading provides access to documents from any device with an internet connection, perfect for mobile and remote work.
+
+## Web-Based Reading
+
+Advantages:
+- Access anywhere
+- Any device
+- No installation
+- Cloud-free option
+- Instant availability
+- Cross-platform
+
+## Mobile Friendly
+
+Optimized for:
+- Smartphones
+- Tablets
+- Laptops
+- Desktops
+- Touch screens
+- Small displays
+
+## Remote Work
+
+Perfect for:
+- Working remotely
+- Travel access
+- Multiple devices
+- Shared computers
+- Public terminals
+- Guest systems`,
+      relatedTools: ["pdf-viewer", "pdf-reader", "open-pdf"]
+    }
+  },
+  {
+    id: "compare-pdf",
+    title: "Compare PDF",
+    category: "Analysis" as ToolCategory,
+    tags: ["compare", "diff", "difference", "analysis"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compare PDF Files Online - Find Differences Between PDFs",
+    metaDescription: "Compare PDF files online for free. Find differences between PDF versions. Professional PDF comparison tool with visual diff.",
+    description: "Compare two PDF files to find differences",
+    icon: "git-compare",
+    howTo: [
+      "Upload two PDF versions",
+      "Run comparison analysis",
+      "View highlighted differences",
+      "Download comparison report"
+    ],
+    article: {
+      title: "Compare PDF Documents",
+      content: `PDF comparison identifies differences between document versions, essential for contract review, version control, and quality assurance.
+
+## Comparison Types
+
+Detect:
+- Text changes
+- Added content
+- Deleted content
+- Modified text
+- Layout changes
+- Image differences
+
+## Visual Highlighting
+
+See differences with:
+- Color-coded changes
+- Side-by-side view
+- Overlay comparison
+- Change summary
+- Difference count
+- Change locations
+
+## Professional Use
+
+Essential for:
+- Contract reviews
+- Legal documents
+- Version control
+- Quality assurance
+- Compliance checking
+- Audit processes`,
+      relatedTools: ["pdf-comparer", "pdf-difference-checker", "pdf-diff"]
+    }
+  },
+  {
+    id: "pdf-comparer",
+    title: "PDF Comparer",
+    category: "Analysis" as ToolCategory,
+    tags: ["comparer", "compare", "diff", "analyze"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Comparer Tool - Compare Document Versions Online",
+    metaDescription: "Professional PDF comparer online for free. Compare document versions and find changes. Advanced PDF comparison features.",
+    description: "Professional tool for comparing PDF document versions",
+    icon: "file-diff",
+    howTo: [
+      "Upload original and revised PDFs",
+      "Configure comparison settings",
+      "Analyze differences",
+      "Export comparison results"
+    ],
+    article: {
+      title: "Professional PDF Comparison",
+      content: `The PDF comparer provides enterprise-grade document comparison with advanced features for detailed analysis and reporting.
+
+## Advanced Features
+
+Professional tools:
+- Intelligent text comparison
+- Image comparison
+- Metadata analysis
+- Structure comparison
+- Format detection
+- Detailed reporting
+
+## Comparison Reports
+
+Generate:
+- Summary of changes
+- Detailed change log
+- Visual diff document
+- Statistics report
+- Export options
+- Shareable results
+
+## Enterprise Use
+
+Perfect for:
+- Document management
+- Compliance verification
+- Change tracking
+- Version management
+- Quality control
+- Legal review`,
+      relatedTools: ["compare-pdf", "pdf-difference-checker", "version-control"]
+    }
+  },
+  {
+    id: "pdf-difference-checker",
+    title: "PDF Difference Checker",
+    category: "Analysis" as ToolCategory,
+    tags: ["difference", "checker", "compare", "verify"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Difference Checker - Check Changes Between PDFs",
+    metaDescription: "Check differences between PDF documents online for free. Verify changes and modifications. Accurate PDF difference checking tool.",
+    description: "Check and verify differences between PDF documents",
+    icon: "scan-search",
+    howTo: [
+      "Upload both PDF versions",
+      "Start difference check",
+      "Review detected changes",
+      "Verify modifications"
+    ],
+    article: {
+      title: "Check PDF Differences Accurately",
+      content: `PDF difference checking verifies changes between document versions with precision, crucial for contract verification and document validation.
+
+## Difference Detection
+
+Identifies:
+- Text modifications
+- Paragraph changes
+- Word-level differences
+- Formatting changes
+- Addition/deletion
+- Content movements
+
+## Verification Tools
+
+Features include:
+- Change validation
+- Accuracy verification
+- False positive filtering
+- Contextual analysis
+- Smart matching
+- Reliable results
+
+## Critical Applications
+
+Essential for:
+- Contract verification
+- Legal document review
+- Regulatory compliance
+- Audit requirements
+- Change validation
+- Quality assurance`,
+      relatedTools: ["compare-pdf", "pdf-comparer", "document-verification"]
     }
   }
 ] as const;
