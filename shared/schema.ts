@@ -13,7 +13,11 @@ export const toolCategories = [
   "Forms",
   "Viewer",
   "Analysis",
-  "Data Extraction"
+  "Data Extraction",
+  "Comparison",
+  "Standards & Compliance",
+  "Accessibility",
+  "Print Production"
 ] as const;
 
 export type ToolCategory = typeof toolCategories[number];
@@ -17474,6 +17478,2086 @@ Essential for:
 - Change validation
 - Quality assurance`,
       relatedTools: ["compare-pdf", "pdf-comparer", "document-verification"]
+    }
+  },
+  {
+    id: "compare-pdf-text",
+    title: "Compare PDF Text",
+    category: "Comparison" as ToolCategory,
+    tags: ["compare", "text", "diff", "analyze"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compare PDF Text Online - Text Comparison Tool Free",
+    metaDescription: "Compare text between two PDF documents online for free. Find text differences, changes, and modifications in PDF files. Fast and accurate text comparison.",
+    description: "Compare text content between two PDF documents to identify changes",
+    icon: "file-diff",
+    howTo: [
+      "Upload two PDF documents to compare",
+      "Select text comparison mode",
+      "Review highlighted differences",
+      "Export comparison report"
+    ],
+    article: {
+      title: "Compare Text in PDF Documents",
+      content: `Text comparison between PDF documents helps identify changes, modifications, and differences in document content. Essential for contract review, version control, and document verification.
+
+## Why Compare PDF Text?
+
+Text comparison is crucial for:
+- Contract review and verification
+- Document version control
+- Legal document analysis
+- Content change tracking
+- Quality assurance processes
+- Compliance verification
+
+## Advanced Text Comparison Features
+
+Our tool offers sophisticated text analysis:
+- Word-by-word comparison
+- Paragraph-level diff viewing
+- Change highlighting with colors
+- Added/removed content tracking
+- Contextual change display
+- Export detailed reports
+
+## Professional Applications
+
+Perfect for professionals who need:
+- Legal document verification
+- Contract change tracking
+- Academic paper revision comparison
+- Policy document updates
+- Technical documentation versions
+- Regulatory compliance checks`,
+      relatedTools: ["compare-pdf-visual", "pdf-difference-checker", "compare-pdf"]
+    }
+  },
+  {
+    id: "compare-pdf-visual",
+    title: "Compare PDF Visual",
+    category: "Comparison" as ToolCategory,
+    tags: ["compare", "visual", "images", "layout"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compare PDF Visual - Visual Document Comparison Free",
+    metaDescription: "Visual comparison of PDF documents online. Compare layout, images, and formatting changes. Side-by-side PDF visual comparison tool.",
+    description: "Visually compare PDF documents including layout and images",
+    icon: "git-compare",
+    howTo: [
+      "Upload both PDF versions",
+      "Select visual comparison mode",
+      "View side-by-side differences",
+      "Identify layout and image changes"
+    ],
+    article: {
+      title: "Visual PDF Document Comparison",
+      content: `Visual PDF comparison goes beyond text to identify changes in layout, formatting, images, and overall document appearance. Essential for design review and quality control.
+
+## Visual Comparison Benefits
+
+Identify visual changes including:
+- Layout modifications
+- Image differences
+- Formatting changes
+- Color variations
+- Font styling updates
+- Position shifts
+
+## Advanced Visual Analysis
+
+Our visual comparison features:
+- Side-by-side view
+- Overlay comparison mode
+- Image diff highlighting
+- Layout change detection
+- Formatting difference alerts
+- Comprehensive visual reports
+
+## Professional Use Cases
+
+Perfect for:
+- Design review and approval
+- Marketing material verification
+- Brand guideline compliance
+- Print production quality check
+- Publishing final review
+- Document appearance validation`,
+      relatedTools: ["compare-pdf-text", "compare-pdf-side-by-side", "compare-pdf-overlay"]
+    }
+  },
+  {
+    id: "pdf-analyzer",
+    title: "PDF Analyzer",
+    category: "Analysis" as ToolCategory,
+    tags: ["analyze", "inspect", "review", "audit"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Analyzer Online - Analyze PDF Documents Free",
+    metaDescription: "Analyze PDF documents online for free. Get detailed information about PDF structure, content, metadata, and properties. Comprehensive PDF analysis tool.",
+    description: "Comprehensive PDF document analysis and inspection tool",
+    icon: "scan-search",
+    howTo: [
+      "Upload your PDF document",
+      "Run comprehensive analysis",
+      "Review detailed report",
+      "Export analysis results"
+    ],
+    article: {
+      title: "Comprehensive PDF Document Analysis",
+      content: `PDF analysis provides deep insights into document structure, content, security, and technical properties. Essential for quality assurance and document validation.
+
+## What PDF Analysis Reveals
+
+Comprehensive analysis includes:
+- Document structure overview
+- Content type breakdown
+- Embedded resources inventory
+- Security settings review
+- Metadata examination
+- Technical specifications
+
+## Advanced Analysis Features
+
+Our analyzer provides:
+- Detailed structure mapping
+- Font usage analysis
+- Image quality assessment
+- Embedded file detection
+- JavaScript presence check
+- Standards compliance review
+
+## Professional Applications
+
+Critical for:
+- Quality assurance processes
+- Document validation workflows
+- Security audits
+- Archival preparation
+- Publishing requirements
+- Compliance verification`,
+      relatedTools: ["get-pdf-info", "pdf-metadata-editor", "pdf-validator"]
+    }
+  },
+  {
+    id: "get-pdf-info",
+    title: "Get PDF Info",
+    category: "Analysis" as ToolCategory,
+    tags: ["info", "metadata", "properties", "details"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Get PDF Info Online - Extract PDF Information Free",
+    metaDescription: "Get detailed PDF file information online for free. Extract metadata, properties, and technical details from PDF documents instantly.",
+    description: "Extract detailed information and metadata from PDF files",
+    icon: "badge-info",
+    howTo: [
+      "Upload your PDF file",
+      "View instant information display",
+      "Review all document properties",
+      "Copy or export information"
+    ],
+    article: {
+      title: "Extract PDF Document Information",
+      content: `Getting PDF information reveals essential document properties, metadata, and technical details needed for document management and verification.
+
+## Essential PDF Information
+
+Extract complete details:
+- File size and pages
+- Creation and modification dates
+- Author and title information
+- PDF version and format
+- Security settings
+- Embedded resources
+
+## Metadata Extraction
+
+Access comprehensive metadata:
+- Document properties
+- Creator application
+- Keywords and subject
+- Custom metadata fields
+- XMP metadata
+- Document ID
+
+## Professional Benefits
+
+Valuable for:
+- Document management systems
+- Digital asset organization
+- Compliance documentation
+- Archive preparation
+- Rights management
+- Quality control processes`,
+      relatedTools: ["pdf-analyzer", "count-pdf-pages", "pdf-metadata-editor"]
+    }
+  },
+  {
+    id: "count-pdf-pages",
+    title: "Count PDF Pages",
+    category: "Analysis" as ToolCategory,
+    tags: ["count", "pages", "number", "total"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Count PDF Pages Online - PDF Page Counter Free",
+    metaDescription: "Count pages in PDF documents online for free. Fast PDF page counting tool. Get instant page count for single or multiple PDFs.",
+    description: "Quickly count the number of pages in PDF documents",
+    icon: "hash",
+    howTo: [
+      "Upload one or multiple PDF files",
+      "Get instant page count",
+      "View total pages across all files",
+      "Export page count report"
+    ],
+    article: {
+      title: "Count Pages in PDF Documents",
+      content: `Counting PDF pages is essential for document planning, printing cost estimation, and project management. Our free tool provides instant, accurate page counts.
+
+## Why Count PDF Pages?
+
+Page counting helps with:
+- Printing cost estimation
+- Project scope planning
+- Document size verification
+- Archival organization
+- Batch processing planning
+- Resource allocation
+
+## Batch Page Counting
+
+Process multiple PDFs:
+- Upload unlimited files
+- Get individual counts
+- See total page summary
+- Export comprehensive report
+- Fast processing speed
+- Accurate results
+
+## Professional Applications
+
+Essential for:
+- Print shops and publishers
+- Document management teams
+- Project managers
+- Administrative staff
+- Archival services
+- Publishing workflows`,
+      relatedTools: ["pdf-page-counter", "get-pdf-info", "pdf-analyzer"]
+    }
+  },
+  {
+    id: "pdf-word-counter",
+    title: "PDF Word Counter",
+    category: "Analysis" as ToolCategory,
+    tags: ["word", "count", "text", "statistics"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Word Counter Online - Count Words in PDF Free",
+    metaDescription: "Count words in PDF documents online for free. Accurate word counting tool for PDFs. Get word count, character count, and text statistics instantly.",
+    description: "Count words and analyze text statistics in PDF documents",
+    icon: "text-cursor-input",
+    howTo: [
+      "Upload your PDF document",
+      "View instant word count",
+      "See detailed text statistics",
+      "Export statistics report"
+    ],
+    article: {
+      title: "Count Words in PDF Documents",
+      content: `Word counting in PDF documents is essential for writers, editors, and content creators who need accurate text statistics for their work.
+
+## Word Count Statistics
+
+Get comprehensive statistics:
+- Total word count
+- Character count (with/without spaces)
+- Paragraph count
+- Sentence count
+- Average words per sentence
+- Reading time estimate
+
+## Professional Writing Tools
+
+Features for writers:
+- Accurate word counting
+- Multi-language support
+- Special character handling
+- Table text inclusion options
+- Header/footer exclusion
+- Footnote counting options
+
+## Essential For
+
+Perfect for:
+- Academic writers
+- Content creators
+- Editors and proofreaders
+- Legal professionals
+- Publishing houses
+- Translation services`,
+      relatedTools: ["pdf-character-counter", "extract-text-from-pdf", "pdf-text-extractor"]
+    }
+  },
+  {
+    id: "pdf-character-counter",
+    title: "PDF Character Counter",
+    category: "Analysis" as ToolCategory,
+    tags: ["character", "count", "text", "analysis"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Character Counter - Count Characters in PDF Free",
+    metaDescription: "Count characters in PDF documents online for free. Get accurate character count with and without spaces. Fast PDF character counting tool.",
+    description: "Count characters and analyze text in PDF documents",
+    icon: "type",
+    howTo: [
+      "Upload your PDF file",
+      "Get instant character count",
+      "View detailed character statistics",
+      "Export character analysis"
+    ],
+    article: {
+      title: "Character Counting in PDF Documents",
+      content: `Character counting provides precise text measurement for PDFs, essential for content planning, translation estimation, and compliance with character limits.
+
+## Character Count Details
+
+Comprehensive counting:
+- Total characters with spaces
+- Total characters without spaces
+- Alphanumeric character count
+- Special character count
+- Unicode character analysis
+- Line break counting
+
+## Advanced Text Analysis
+
+Additional features:
+- Character frequency analysis
+- Space and punctuation statistics
+- Language-specific character counting
+- UTF-8 character support
+- Custom character set filtering
+- Detailed breakdown reports
+
+## Professional Uses
+
+Essential for:
+- Translation cost estimation
+- Social media content planning
+- SMS message preparation
+- Typography and design
+- Content migration planning
+- Compliance verification`,
+      relatedTools: ["pdf-word-counter", "extract-text-from-pdf", "pdf-text-analysis"]
+    }
+  },
+  {
+    id: "detect-pdf-fonts",
+    title: "Detect PDF Fonts",
+    category: "Analysis" as ToolCategory,
+    tags: ["fonts", "detect", "typography", "embedded"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Detect PDF Fonts Online - PDF Font Analyzer Free",
+    metaDescription: "Detect and identify fonts used in PDF documents online for free. Complete font analysis including embedded and system fonts. Fast PDF font detection.",
+    description: "Identify and analyze all fonts used in PDF documents",
+    icon: "type",
+    howTo: [
+      "Upload your PDF document",
+      "Run font detection analysis",
+      "View complete font list",
+      "Check embedding status"
+    ],
+    article: {
+      title: "Detect and Analyze PDF Fonts",
+      content: `Font detection in PDF documents reveals all typefaces used, their embedding status, and potential issues that could affect document rendering and printing.
+
+## Font Detection Features
+
+Identify complete font details:
+- Font family names
+- Font styles and weights
+- Embedding status
+- Font type (TrueType, OpenType, etc.)
+- Subset vs. full embedding
+- Font file sizes
+
+## Why Detect Fonts?
+
+Font analysis helps with:
+- Print production preparation
+- Document portability verification
+- Brand compliance checking
+- Archival validation
+- Font licensing review
+- Rendering troubleshooting
+
+## Professional Applications
+
+Critical for:
+- Graphic designers
+- Print production teams
+- Publishers and typesetters
+- Brand managers
+- Archival specialists
+- PDF/A conversion workflows`,
+      relatedTools: ["pdf-analyzer", "get-pdf-info", "pdf-font-replacer"]
+    }
+  },
+  {
+    id: "check-pdf-a-compliance",
+    title: "Check PDF/A Compliance",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["pdf-a", "compliance", "standard", "validation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Check PDF/A Compliance Online - PDF/A Validator Free",
+    metaDescription: "Check PDF/A compliance online for free. Validate PDF documents against PDF/A standards. Identify compliance issues and get detailed reports.",
+    description: "Validate PDF documents against PDF/A archival standards",
+    icon: "shield-check",
+    howTo: [
+      "Upload your PDF document",
+      "Select PDF/A standard version",
+      "Run compliance check",
+      "Review detailed compliance report"
+    ],
+    article: {
+      title: "PDF/A Compliance Checking",
+      content: `PDF/A compliance ensures documents meet archival standards for long-term preservation. Our validation tool checks against all PDF/A conformance levels.
+
+## PDF/A Standard Versions
+
+Validate against all versions:
+- PDF/A-1 (a and b conformance)
+- PDF/A-2 (a, b, and u conformance)
+- PDF/A-3 (a, b, and u conformance)
+- PDF/A-4 (latest standard)
+- Detailed conformance checking
+- Comprehensive error reporting
+
+## Compliance Requirements
+
+Checks include:
+- Font embedding verification
+- Color space validation
+- Metadata requirements
+- Content restrictions
+- Encryption prohibitions
+- Feature compatibility
+
+## Archival Importance
+
+Essential for:
+- Government records
+- Legal documents
+- Corporate archives
+- Academic publishing
+- Medical records
+- Historical preservation`,
+      relatedTools: ["validate-pdf-a", "pdf-a-validator", "pdf-to-pdf-a-1a"]
+    }
+  },
+  {
+    id: "validate-pdf-a",
+    title: "Validate PDF/A",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["validate", "pdf-a", "standard", "verify"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Validate PDF/A Documents Online - Free PDF/A Validation",
+    metaDescription: "Validate PDF/A documents online for free. Comprehensive PDF/A validation tool with detailed error reports. Ensure archival compliance.",
+    description: "Comprehensive PDF/A validation with detailed error reporting",
+    icon: "check-circle",
+    howTo: [
+      "Upload PDF document for validation",
+      "Choose PDF/A conformance level",
+      "Execute validation process",
+      "Get detailed validation report"
+    ],
+    article: {
+      title: "Comprehensive PDF/A Validation",
+      content: `PDF/A validation ensures documents fully comply with archival standards, identifying every issue that could compromise long-term accessibility and preservation.
+
+## Validation Process
+
+Thorough checking of:
+- All PDF/A requirements
+- Conformance level compliance
+- Metadata completeness
+- Font embedding status
+- Color management
+- Content restrictions
+
+## Detailed Error Reporting
+
+Validation provides:
+- Specific error descriptions
+- Location of non-compliant elements
+- Severity classifications
+- Remediation suggestions
+- Compliance percentage
+- Pass/fail determination
+
+## Archival Applications
+
+Critical for:
+- Digital preservation
+- Long-term archiving
+- Regulatory compliance
+- Legal document storage
+- Academic repositories
+- Corporate record-keeping`,
+      relatedTools: ["check-pdf-a-compliance", "pdf-a-validator", "pdf-to-pdf-a"]
+    }
+  },
+  {
+    id: "pdf-previewer",
+    title: "PDF Previewer",
+    category: "Viewer" as ToolCategory,
+    tags: ["preview", "view", "display", "quick"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Previewer Online - Quick PDF Preview Free",
+    metaDescription: "Preview PDF files online without downloading. Quick PDF previewer with zoom, page navigation, and search. Fast, secure PDF preview tool.",
+    description: "Quick preview of PDF documents with essential viewing features",
+    icon: "eye",
+    howTo: [
+      "Upload or drag PDF file",
+      "Instantly preview document",
+      "Navigate pages easily",
+      "Zoom and search as needed"
+    ],
+    article: {
+      title: "Quick PDF Document Preview",
+      content: `PDF previewing lets you quickly view documents without full PDF reader software. Perfect for rapid document review and verification.
+
+## Preview Features
+
+Essential viewing tools:
+- Instant document rendering
+- Page-by-page navigation
+- Zoom in and out
+- Full-screen mode
+- Search within document
+- Print preview
+
+## Fast Performance
+
+Optimized for speed:
+- Quick loading times
+- Smooth page transitions
+- Responsive zoom
+- Efficient rendering
+- Large file support
+- Browser-based viewing
+
+## Practical Uses
+
+Perfect for:
+- Quick document review
+- Email attachment preview
+- File verification
+- Content checking
+- Mobile viewing
+- Remote document access`,
+      relatedTools: ["pdf-viewer", "pdf-reader", "open-pdf"]
+    }
+  },
+  {
+    id: "pdf-page-counter",
+    title: "PDF Page Counter",
+    category: "Analysis" as ToolCategory,
+    tags: ["pages", "count", "total", "number"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Page Counter - Count Pages in PDF Files Free",
+    metaDescription: "Count pages in PDF files online for free. Fast batch PDF page counter. Get accurate page counts for multiple PDFs instantly.",
+    description: "Fast and accurate page counting for single or multiple PDFs",
+    icon: "list-ordered",
+    howTo: [
+      "Upload PDF files",
+      "Get instant page counts",
+      "View summary statistics",
+      "Download count report"
+    ],
+    article: {
+      title: "Efficient PDF Page Counting",
+      content: `Accurate page counting is essential for document management, printing, and project planning. Our tool provides instant results for any number of PDFs.
+
+## Batch Processing
+
+Handle multiple files:
+- Upload unlimited PDFs
+- Process simultaneously
+- Individual file counts
+- Total page summary
+- Export detailed report
+- Fast processing
+
+## Counting Accuracy
+
+Reliable results for:
+- Standard PDF pages
+- Rotated pages
+- Mixed page sizes
+- Large documents
+- Scanned PDFs
+- Complex layouts
+
+## Business Applications
+
+Essential for:
+- Print cost estimation
+- Document management
+- Project planning
+- Archival organization
+- Resource allocation
+- Workflow optimization`,
+      relatedTools: ["count-pdf-pages", "get-pdf-info", "pdf-analyzer"]
+    }
+  },
+  {
+    id: "compare-pdf-side-by-side",
+    title: "Compare PDF (Side-by-Side)",
+    category: "Comparison" as ToolCategory,
+    tags: ["compare", "side-by-side", "parallel", "view"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compare PDF Side-by-Side Online - Parallel PDF Comparison",
+    metaDescription: "Compare PDF documents side-by-side online for free. Parallel view for easy document comparison. Identify differences visually.",
+    description: "View and compare two PDF documents side-by-side in parallel",
+    icon: "git-compare",
+    howTo: [
+      "Upload two PDF documents",
+      "View side-by-side comparison",
+      "Scroll pages in sync",
+      "Identify visual differences"
+    ],
+    article: {
+      title: "Side-by-Side PDF Comparison",
+      content: `Side-by-side comparison presents two PDF documents in parallel view, making it easy to spot differences in layout, content, and formatting.
+
+## Parallel View Benefits
+
+Enhanced comparison with:
+- Synchronized scrolling
+- Page-by-page alignment
+- Visual difference spotting
+- Layout comparison
+- Formatting review
+- Content verification
+
+## Interactive Features
+
+Professional tools include:
+- Zoom synchronization
+- Independent page navigation
+- Split-screen adjustment
+- Highlight differences
+- Full-screen mode
+- Print comparison view
+
+## Professional Uses
+
+Perfect for:
+- Contract revisions review
+- Design version comparison
+- Document quality control
+- Publishing proof checking
+- Legal document verification
+- Academic paper review`,
+      relatedTools: ["compare-pdf-overlay", "compare-pdf-visual", "compare-pdf-text"]
+    }
+  },
+  {
+    id: "compare-pdf-overlay",
+    title: "Compare PDF (Overlay)",
+    category: "Comparison" as ToolCategory,
+    tags: ["compare", "overlay", "blend", "differences"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compare PDF Overlay Online - Overlay PDF Comparison Free",
+    metaDescription: "Compare PDFs with overlay mode online for free. Blend two documents to spot differences. Advanced overlay PDF comparison tool.",
+    description: "Compare PDFs using overlay mode to highlight differences",
+    icon: "layers",
+    howTo: [
+      "Upload two PDF versions",
+      "Select overlay comparison mode",
+      "Adjust overlay transparency",
+      "Identify highlighted differences"
+    ],
+    article: {
+      title: "Overlay PDF Comparison Method",
+      content: `Overlay comparison blends two PDF documents together, making changes immediately visible through color highlighting and transparency adjustments.
+
+## Overlay Comparison Advantages
+
+Visual difference detection:
+- Color-coded changes
+- Adjustable transparency
+- Immediate visual feedback
+- Pixel-level accuracy
+- Layout shift detection
+- Format change highlighting
+
+## Advanced Controls
+
+Customize comparison:
+- Transparency slider
+- Color scheme selection
+- Difference intensity
+- Page alignment tools
+- Zoom and pan
+- Export comparison view
+
+## Professional Applications
+
+Ideal for:
+- Graphic design review
+- Print production checking
+- Marketing material verification
+- Technical drawing comparison
+- Architectural plan review
+- Brand compliance checking`,
+      relatedTools: ["compare-pdf-side-by-side", "compare-pdf-visual", "pdf-difference-checker"]
+    }
+  },
+  {
+    id: "pdf-a-validator",
+    title: "PDF/A Validator",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["pdf-a", "validate", "standard", "archive"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF/A Validator Tool - Validate Archival PDFs Free",
+    metaDescription: "Validate PDF/A archival documents online for free. Professional PDF/A validation with detailed compliance reports. Support for all PDF/A versions.",
+    description: "Professional PDF/A validation for all conformance levels",
+    icon: "shield-check",
+    howTo: [
+      "Upload PDF document",
+      "Select target PDF/A version",
+      "Run validation check",
+      "Review compliance report"
+    ],
+    article: {
+      title: "Professional PDF/A Validation",
+      content: `PDF/A validation ensures documents meet strict archival standards for long-term preservation, accessibility, and regulatory compliance.
+
+## Complete Standard Support
+
+Validate all PDF/A versions:
+- PDF/A-1a and PDF/A-1b
+- PDF/A-2a, 2b, and 2u
+- PDF/A-3a, 3b, and 3u
+- PDF/A-4 (latest)
+- Multi-version checking
+- Comprehensive reporting
+
+## Validation Requirements
+
+Check all aspects:
+- Font embedding
+- Color spaces
+- Metadata requirements
+- Content restrictions
+- Transparency usage
+- Feature compliance
+
+## Compliance Benefits
+
+Essential for:
+- Legal document archives
+- Government records
+- Medical documentation
+- Academic publishing
+- Corporate governance
+- Historical preservation`,
+      relatedTools: ["validate-pdf-a", "check-pdf-a-compliance", "pdf-to-pdf-a"]
+    }
+  },
+  {
+    id: "pdf-to-pdf-a-1a",
+    title: "PDF to PDF/A-1a",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["convert", "pdf-a", "1a", "archive"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to PDF/A-1a Online Free - Archival Conversion",
+    metaDescription: "Convert PDF to PDF/A-1a format online for free. Create fully compliant archival PDFs. Level A accessibility and long-term preservation.",
+    description: "Convert PDF documents to PDF/A-1a archival format",
+    icon: "archive",
+    howTo: [
+      "Upload your PDF document",
+      "Select PDF/A-1a conversion",
+      "Process conversion",
+      "Download PDF/A-1a compliant file"
+    ],
+    article: {
+      title: "Convert to PDF/A-1a Format",
+      content: `PDF/A-1a provides the highest level of archival compliance with full accessibility support, ensuring documents remain accessible for decades.
+
+## PDF/A-1a Features
+
+Level A compliance includes:
+- Complete structure tagging
+- Reading order definition
+- Alternative text for images
+- Language specification
+- Full accessibility support
+- Maximum archival durability
+
+## Conversion Process
+
+Automated conversion:
+- Font embedding
+- Color space conversion
+- Metadata creation
+- Structure tagging
+- Accessibility enhancement
+- Compliance verification
+
+## Archival Excellence
+
+Perfect for:
+- Government archives
+- Legal document storage
+- Medical records
+- Academic repositories
+- Cultural heritage
+- Regulatory compliance`,
+      relatedTools: ["pdf-to-pdf-a-1b", "pdf-to-pdf-a-2a", "validate-pdf-a"]
+    }
+  },
+  {
+    id: "pdf-to-pdf-a-1b",
+    title: "PDF to PDF/A-1b",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["convert", "pdf-a", "1b", "archive"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to PDF/A-1b Online Free - Basic Archival",
+    metaDescription: "Convert PDF to PDF/A-1b format online for free. Basic archival compliance for long-term preservation. Fast PDF/A-1b conversion tool.",
+    description: "Convert PDF documents to PDF/A-1b basic archival format",
+    icon: "archive",
+    howTo: [
+      "Upload PDF file",
+      "Choose PDF/A-1b conversion",
+      "Start conversion process",
+      "Download archival PDF"
+    ],
+    article: {
+      title: "PDF/A-1b Basic Archival Format",
+      content: `PDF/A-1b provides basic archival compliance for long-term preservation without the accessibility requirements of Level A, suitable for most archival needs.
+
+## PDF/A-1b Requirements
+
+Basic compliance includes:
+- Font embedding
+- Device-independent color
+- Self-contained content
+- Metadata preservation
+- No encryption
+- Feature restrictions
+
+## Conversion Benefits
+
+Streamlined archival:
+- Faster conversion
+- Smaller file sizes
+- Wide compatibility
+- Reliable preservation
+- Standards compliance
+- Quality maintenance
+
+## Common Applications
+
+Ideal for:
+- Business archives
+- Corporate records
+- Technical documentation
+- Financial records
+- Standard correspondence
+- General document archival`,
+      relatedTools: ["pdf-to-pdf-a-1a", "pdf-to-pdf-a-2b", "validate-pdf-a"]
+    }
+  },
+  {
+    id: "pdf-to-pdf-a-2a",
+    title: "PDF to PDF/A-2a",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["convert", "pdf-a", "2a", "archive"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to PDF/A-2a Online Free - Modern Archival",
+    metaDescription: "Convert PDF to PDF/A-2a format online for free. Modern archival standard with accessibility. Advanced PDF/A-2a conversion tool.",
+    description: "Convert PDF to PDF/A-2a with modern features and accessibility",
+    icon: "archive",
+    howTo: [
+      "Upload your PDF",
+      "Select PDF/A-2a format",
+      "Process conversion",
+      "Download compliant document"
+    ],
+    article: {
+      title: "PDF/A-2a Modern Archival Format",
+      content: `PDF/A-2a combines modern PDF features with full accessibility support, offering advanced archival capabilities while maintaining long-term preservation.
+
+## PDF/A-2a Enhancements
+
+Advanced features include:
+- JPEG 2000 compression
+- Transparency support
+- Layers support
+- Digital signatures
+- Full accessibility
+- Embedded files
+
+## Modern Archival
+
+Benefits over PDF/A-1:
+- Better compression
+- Richer content support
+- Digital signature support
+- OpenType font support
+- Collection support
+- Enhanced metadata
+
+## Professional Archiving
+
+Perfect for:
+- Modern archives
+- Digital libraries
+- Publishing houses
+- Research institutions
+- Government agencies
+- Corporate compliance`,
+      relatedTools: ["pdf-to-pdf-a-2b", "pdf-to-pdf-a-2u", "validate-pdf-a"]
+    }
+  },
+  {
+    id: "pdf-to-pdf-a-2b",
+    title: "PDF to PDF/A-2b",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["convert", "pdf-a", "2b", "archive"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to PDF/A-2b Online Free - Modern Archive",
+    metaDescription: "Convert PDF to PDF/A-2b format online for free. Modern archival standard with enhanced features. Fast PDF/A-2b conversion.",
+    description: "Convert PDF to PDF/A-2b modern archival format",
+    icon: "archive",
+    howTo: [
+      "Upload PDF document",
+      "Choose PDF/A-2b option",
+      "Convert to archival format",
+      "Save PDF/A-2b file"
+    ],
+    article: {
+      title: "PDF/A-2b Enhanced Archival",
+      content: `PDF/A-2b provides modern archival features without accessibility requirements, perfect for technical documents and general long-term preservation needs.
+
+## PDF/A-2 Advantages
+
+Modern capabilities:
+- JPEG 2000 support
+- Transparency allowed
+- Layer preservation
+- Better compression
+- OpenType fonts
+- Digital signatures
+
+## Efficient Archival
+
+Optimized for:
+- Smaller file sizes
+- Better image quality
+- Rich content support
+- Technical documents
+- Complex layouts
+- Modern workflows
+
+## Business Applications
+
+Ideal for:
+- Engineering documents
+- CAD/technical drawings
+- Marketing materials
+- Photography archives
+- Design portfolios
+- Product documentation`,
+      relatedTools: ["pdf-to-pdf-a-2a", "pdf-to-pdf-a-2u", "pdf-to-pdf-a-3b"]
+    }
+  },
+  {
+    id: "pdf-to-pdf-a-2u",
+    title: "PDF to PDF/A-2u",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["convert", "pdf-a", "2u", "unicode"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to PDF/A-2u Online - Unicode Archival Free",
+    metaDescription: "Convert PDF to PDF/A-2u format online for free. Unicode text mapping for archival compliance. Advanced text preservation.",
+    description: "Convert PDF to PDF/A-2u with Unicode text mapping",
+    icon: "archive",
+    howTo: [
+      "Upload your PDF file",
+      "Select PDF/A-2u conversion",
+      "Process with Unicode mapping",
+      "Download compliant PDF"
+    ],
+    article: {
+      title: "PDF/A-2u Unicode Archival Format",
+      content: `PDF/A-2u ensures text in archived documents can be reliably extracted and searched through Unicode character mapping, essential for text preservation.
+
+## Unicode Compliance
+
+Text preservation features:
+- Unicode character mapping
+- Text extraction guarantee
+- Search reliability
+- Copy-paste accuracy
+- Character accessibility
+- Language support
+
+## PDF/A-2u Benefits
+
+Combines features of:
+- PDF/A-2b visual fidelity
+- Unicode text mapping
+- Modern PDF features
+- Long-term preservation
+- Enhanced searchability
+- Text accessibility
+
+## Critical Applications
+
+Essential for:
+- Text-heavy archives
+- Research documents
+- Legal contracts
+- Academic papers
+- Technical manuals
+- Searchable archives`,
+      relatedTools: ["pdf-to-pdf-a-2a", "pdf-to-pdf-a-2b", "pdf-to-pdf-a-3u"]
+    }
+  },
+  {
+    id: "pdf-to-pdf-a-3a",
+    title: "PDF to PDF/A-3a",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["convert", "pdf-a", "3a", "attachments"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to PDF/A-3a Online - Archival with Attachments",
+    metaDescription: "Convert PDF to PDF/A-3a format online for free. Archival standard with embedded file support and accessibility. Modern PDF/A-3a conversion.",
+    description: "Convert PDF to PDF/A-3a with embedded file support",
+    icon: "archive",
+    howTo: [
+      "Upload PDF document",
+      "Select PDF/A-3a format",
+      "Include embedded files",
+      "Download archival package"
+    ],
+    article: {
+      title: "PDF/A-3a with Embedded Files",
+      content: `PDF/A-3a combines full accessibility with the ability to embed any file type, creating comprehensive archival packages perfect for complex documentation.
+
+## PDF/A-3 Innovation
+
+Unique capabilities:
+- Embed any file format
+- Full accessibility (Level A)
+- Source file inclusion
+- Data file attachment
+- Complete documentation
+- Future-proof archival
+
+## Embedded File Support
+
+Attach and preserve:
+- Source documents
+- Spreadsheet data
+- CAD files
+- XML data
+- Invoices (ZUGFeRD)
+- Supporting files
+
+## Advanced Archiving
+
+Perfect for:
+- E-invoicing systems
+- Engineering packages
+- Complete documentation sets
+- Regulatory submissions
+- Comprehensive archives
+- Multi-format preservation`,
+      relatedTools: ["pdf-to-pdf-a-3b", "pdf-to-pdf-a-3u", "validate-pdf-a"]
+    }
+  },
+  {
+    id: "pdf-to-pdf-a-3b",
+    title: "PDF to PDF/A-3b",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["convert", "pdf-a", "3b", "attachments"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to PDF/A-3b Online - Archive with Files",
+    metaDescription: "Convert PDF to PDF/A-3b format online for free. Embed files in archival PDFs. Modern PDF/A-3b conversion with attachment support.",
+    description: "Convert PDF to PDF/A-3b archival format with attachments",
+    icon: "archive",
+    howTo: [
+      "Upload your PDF",
+      "Choose PDF/A-3b conversion",
+      "Add files to embed",
+      "Create archival package"
+    ],
+    article: {
+      title: "PDF/A-3b Archival Packages",
+      content: `PDF/A-3b enables embedding of any file type within archival PDFs, creating self-contained document packages ideal for complex business workflows.
+
+## Attachment Advantages
+
+Embed diverse files:
+- Excel spreadsheets
+- Word documents
+- CAD drawings
+- XML data files
+- Images and media
+- Any format needed
+
+## E-Business Applications
+
+Revolutionizes:
+- Electronic invoicing
+- Procurement documents
+- Supply chain papers
+- Financial reporting
+- Healthcare records
+- Engineering deliverables
+
+## Workflow Benefits
+
+Streamlines:
+- Document packaging
+- Data portability
+- Compliance verification
+- Archive completeness
+- Single-file distribution
+- Future accessibility`,
+      relatedTools: ["pdf-to-pdf-a-3a", "pdf-to-pdf-a-3u", "pdf-to-pdf-a-2b"]
+    }
+  },
+  {
+    id: "pdf-to-pdf-a-3u",
+    title: "PDF to PDF/A-3u",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["convert", "pdf-a", "3u", "unicode"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to PDF/A-3u Online - Unicode Archive Free",
+    metaDescription: "Convert PDF to PDF/A-3u format online for free. Unicode archival with embedded file support. Complete PDF/A-3u conversion tool.",
+    description: "Convert PDF to PDF/A-3u with Unicode and attachment support",
+    icon: "archive",
+    howTo: [
+      "Upload PDF file",
+      "Select PDF/A-3u option",
+      "Process with Unicode mapping",
+      "Download archive with embeddings"
+    ],
+    article: {
+      title: "PDF/A-3u Complete Archival Solution",
+      content: `PDF/A-3u combines Unicode text mapping with embedded file support, providing the most versatile archival format for complex, text-centric documents.
+
+## Comprehensive Features
+
+Complete archival package:
+- Unicode text mapping
+- Embedded file support
+- Text extraction guarantee
+- Searchable content
+- File attachments
+- Long-term preservation
+
+## Text and Data
+
+Preserve both:
+- Reliable text extraction
+- Associated data files
+- Source documents
+- Structured data
+- Supporting materials
+- Complete context
+
+## Enterprise Archival
+
+Ideal for:
+- Legal document systems
+- Research archives
+- Government records
+- Financial documentation
+- Healthcare systems
+- Compliance repositories`,
+      relatedTools: ["pdf-to-pdf-a-3a", "pdf-to-pdf-a-3b", "pdf-to-pdf-a-2u"]
+    }
+  },
+  {
+    id: "pdf-x-validator",
+    title: "PDF/X Validator",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["pdf-x", "validate", "print", "prepress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF/X Validator - Validate Print PDFs Free Online",
+    metaDescription: "Validate PDF/X print-ready documents online for free. Check compliance with PDF/X-1a, PDF/X-3, PDF/X-4 standards. Professional prepress validation.",
+    description: "Validate PDF documents against PDF/X print standards",
+    icon: "printer",
+    howTo: [
+      "Upload PDF document",
+      "Select PDF/X standard version",
+      "Run validation check",
+      "Review print compliance report"
+    ],
+    article: {
+      title: "PDF/X Print Standard Validation",
+      content: `PDF/X validation ensures documents meet strict print production standards, preventing costly errors and ensuring reliable, high-quality output.
+
+## PDF/X Standards
+
+Validate all versions:
+- PDF/X-1a (CMYK blind exchange)
+- PDF/X-3 (color-managed workflow)
+- PDF/X-4 (modern prepress)
+- PDF/X-5 (external references)
+- Complete compliance checking
+- Detailed error reporting
+
+## Print Requirements
+
+Validation checks:
+- Color space compliance
+- Font embedding
+- Bleed and trim boxes
+- Image resolution
+- Transparency handling
+- Output intent
+
+## Prepress Benefits
+
+Essential for:
+- Commercial printing
+- Publishing houses
+- Design agencies
+- Print service providers
+- Quality assurance
+- Production workflows`,
+      relatedTools: ["pdf-to-pdf-x-1a", "pdf-to-pdf-x-3", "pdf-to-pdf-x-4"]
+    }
+  },
+  {
+    id: "pdf-to-pdf-x-1a",
+    title: "PDF to PDF/X-1a",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["convert", "pdf-x", "1a", "print"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to PDF/X-1a Online - Print Ready PDFs Free",
+    metaDescription: "Convert PDF to PDF/X-1a format online for free. Create print-ready PDFs for commercial printing. CMYK conversion and compliance.",
+    description: "Convert PDF to PDF/X-1a for commercial print production",
+    icon: "printer",
+    howTo: [
+      "Upload your PDF",
+      "Select PDF/X-1a conversion",
+      "Choose output profile",
+      "Download print-ready file"
+    ],
+    article: {
+      title: "PDF/X-1a Commercial Print Format",
+      content: `PDF/X-1a is the gold standard for commercial printing, ensuring reliable CMYK output without color management complications or transparency issues.
+
+## PDF/X-1a Features
+
+Print-ready requirements:
+- CMYK color only
+- All fonts embedded
+- No transparency
+- Defined bleed/trim
+- Output intent included
+- Reliable exchange format
+
+## Conversion Process
+
+Automated preparation:
+- RGB to CMYK conversion
+- Font embedding verification
+- Transparency flattening
+- Trim box creation
+- Output profile inclusion
+- Compliance validation
+
+## Print Production
+
+Perfect for:
+- Magazine publishing
+- Newspaper printing
+- Commercial catalogs
+- Marketing materials
+- Packaging design
+- Traditional offset printing`,
+      relatedTools: ["pdf-to-pdf-x-3", "pdf-x-validator", "pdf-to-pdf-x-4"]
+    }
+  },
+  {
+    id: "pdf-to-pdf-x-3",
+    title: "PDF to PDF/X-3",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["convert", "pdf-x", "3", "print"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to PDF/X-3 Online - Color Managed Printing",
+    metaDescription: "Convert PDF to PDF/X-3 format online for free. Color-managed print workflow support. Professional PDF/X-3 conversion tool.",
+    description: "Convert PDF to PDF/X-3 for color-managed print workflows",
+    icon: "printer",
+    howTo: [
+      "Upload PDF document",
+      "Choose PDF/X-3 format",
+      "Configure color management",
+      "Create print-ready PDF"
+    ],
+    article: {
+      title: "PDF/X-3 Color-Managed Printing",
+      content: `PDF/X-3 enables sophisticated color-managed print workflows, supporting RGB and other color spaces while maintaining print reliability through ICC profiles.
+
+## PDF/X-3 Advantages
+
+Advanced features:
+- RGB color support
+- CMYK compatibility
+- ICC profile embedding
+- Color management
+- Calibrated workflows
+- Device independence
+
+## Color Management
+
+Professional workflow:
+- Source profile embedding
+- Output intent specification
+- ICC-based conversion
+- Proof simulation
+- Gamut mapping
+- Color accuracy
+
+## Modern Printing
+
+Ideal for:
+- Digital printing
+- Color-critical work
+- Photography printing
+- Art reproduction
+- Brand color matching
+- High-quality output`,
+      relatedTools: ["pdf-to-pdf-x-1a", "pdf-to-pdf-x-4", "pdf-x-validator"]
+    }
+  },
+  {
+    id: "pdf-to-pdf-x-4",
+    title: "PDF to PDF/X-4",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["convert", "pdf-x", "4", "modern"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to PDF/X-4 Online - Modern Print Standard",
+    metaDescription: "Convert PDF to PDF/X-4 format online for free. Modern print standard with transparency support. Advanced PDF/X-4 conversion.",
+    description: "Convert PDF to PDF/X-4 modern print production standard",
+    icon: "printer",
+    howTo: [
+      "Upload your PDF",
+      "Select PDF/X-4 conversion",
+      "Preserve transparency",
+      "Generate modern print file"
+    ],
+    article: {
+      title: "PDF/X-4 Modern Print Production",
+      content: `PDF/X-4 represents the future of print production, supporting modern PDF features like transparency and layers while ensuring reliable output.
+
+## PDF/X-4 Innovation
+
+Modern capabilities:
+- Native transparency
+- Layer preservation
+- Live blending modes
+- Rich content support
+- Advanced imaging
+- Improved efficiency
+
+## Production Benefits
+
+Enhanced workflow:
+- No flattening required
+- Better quality output
+- Smaller file sizes
+- Faster processing
+- Flexible editing
+- Future-proof format
+
+## Digital Printing
+
+Perfect for:
+- Modern digital presses
+- Variable data printing
+- Short-run production
+- On-demand printing
+- Complex designs
+- Advanced graphics`,
+      relatedTools: ["pdf-to-pdf-x-3", "pdf-to-pdf-x-1a", "pdf-x-validator"]
+    }
+  },
+  {
+    id: "pdf-to-pdf-e",
+    title: "PDF to PDF/E (Engineering)",
+    category: "Standards & Compliance" as ToolCategory,
+    tags: ["convert", "pdf-e", "engineering", "technical"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to PDF/E Online - Engineering Documents Free",
+    metaDescription: "Convert PDF to PDF/E engineering format online for free. Technical document standard with 3D support. Professional PDF/E conversion.",
+    description: "Convert PDF to PDF/E for engineering and technical documents",
+    icon: "cog",
+    howTo: [
+      "Upload technical PDF",
+      "Choose PDF/E conversion",
+      "Preserve engineering data",
+      "Create compliant document"
+    ],
+    article: {
+      title: "PDF/E Engineering Document Standard",
+      content: `PDF/E is specifically designed for engineering documents, supporting technical content like 3D CAD models, geospatial data, and complex technical drawings.
+
+## Engineering Features
+
+Specialized support:
+- 3D CAD data
+- Geospatial information
+- Technical annotations
+- Layer preservation
+- Measurement data
+- Engineering metadata
+
+## Technical Compliance
+
+Standard requirements:
+- Font embedding
+- Self-contained content
+- Metadata requirements
+- Archival durability
+- Technical fidelity
+- Exchange reliability
+
+## Engineering Applications
+
+Essential for:
+- CAD documentation
+- Construction drawings
+- Manufacturing specs
+- Infrastructure projects
+- Aerospace engineering
+- Technical archives`,
+      relatedTools: ["pdf-to-pdf-a", "validate-pdf-e", "cad-to-pdf"]
+    }
+  },
+  {
+    id: "pdf-to-pdf-ua",
+    title: "PDF to PDF/UA (Accessibility)",
+    category: "Accessibility" as ToolCategory,
+    tags: ["convert", "pdf-ua", "accessibility", "wcag"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to PDF/UA Online - Accessible PDFs Free",
+    metaDescription: "Convert PDF to PDF/UA accessible format online for free. Create WCAG compliant, accessible PDFs. Screen reader compatible documents.",
+    description: "Convert PDF to PDF/UA for universal accessibility",
+    icon: "accessibility",
+    howTo: [
+      "Upload PDF document",
+      "Select PDF/UA conversion",
+      "Add accessibility features",
+      "Create accessible PDF"
+    ],
+    article: {
+      title: "PDF/UA Universal Accessibility Standard",
+      content: `PDF/UA ensures documents are fully accessible to people with disabilities, meeting WCAG guidelines and providing equal access to information.
+
+## Accessibility Features
+
+Complete support for:
+- Screen readers
+- Assistive technologies
+- Keyboard navigation
+- Alternative text
+- Reading order
+- Semantic structure
+
+## PDF/UA Requirements
+
+Compliance includes:
+- Proper document tagging
+- Alternative descriptions
+- Logical reading order
+- Language specification
+- Meaningful structure
+- No access barriers
+
+## Legal Compliance
+
+Required for:
+- Government documents
+- Educational materials
+- Public sector content
+- Corporate accessibility
+- ADA compliance
+- WCAG conformance`,
+      relatedTools: ["pdf-accessibility-checker", "pdf-tagger", "add-alt-text-pdf"]
+    }
+  },
+  {
+    id: "pdf-accessibility-checker",
+    title: "PDF Accessibility Checker",
+    category: "Accessibility" as ToolCategory,
+    tags: ["accessibility", "checker", "wcag", "validation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Accessibility Checker - Check PDF Accessibility Free",
+    metaDescription: "Check PDF accessibility online for free. Validate WCAG compliance and screen reader compatibility. Complete accessibility audit tool.",
+    description: "Check PDF documents for accessibility compliance and issues",
+    icon: "shield-check",
+    howTo: [
+      "Upload PDF to check",
+      "Run accessibility analysis",
+      "Review detailed report",
+      "Get remediation guidance"
+    ],
+    article: {
+      title: "PDF Accessibility Compliance Checking",
+      content: `Accessibility checking identifies barriers that prevent people with disabilities from accessing PDF content, ensuring documents meet legal and ethical requirements.
+
+## Accessibility Audit
+
+Comprehensive checking:
+- Document structure
+- Alternative text presence
+- Reading order verification
+- Color contrast
+- Form field labels
+- Link descriptions
+
+## Standards Validation
+
+Verify compliance with:
+- PDF/UA standard
+- WCAG 2.1 guidelines
+- Section 508
+- ADA requirements
+- EN 301 549
+- State regulations
+
+## Remediation Guidance
+
+Detailed reporting:
+- Issue identification
+- Severity classification
+- Specific locations
+- Fix recommendations
+- Best practices
+- Compliance roadmap`,
+      relatedTools: ["pdf-to-pdf-ua", "pdf-tagger", "add-alt-text-pdf"]
+    }
+  },
+  {
+    id: "pdf-tagger",
+    title: "PDF Tagger (Add accessibility)",
+    category: "Accessibility" as ToolCategory,
+    tags: ["tag", "accessibility", "structure", "semantic"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Tagger - Add Accessibility Tags to PDFs Free",
+    metaDescription: "Add accessibility tags to PDF documents online for free. Create tagged PDFs for screen readers. Professional PDF tagging tool.",
+    description: "Add semantic tags to PDFs for accessibility and structure",
+    icon: "tags",
+    howTo: [
+      "Upload untagged PDF",
+      "Auto-generate tag structure",
+      "Review and adjust tags",
+      "Save tagged PDF"
+    ],
+    article: {
+      title: "Add Accessibility Tags to PDFs",
+      content: `PDF tagging adds semantic structure that enables screen readers and assistive technologies to properly interpret and navigate document content.
+
+## Tag Structure
+
+Create proper hierarchy:
+- Headings (H1-H6)
+- Paragraphs
+- Lists (ordered/unordered)
+- Tables with headers
+- Figures and images
+- Links and references
+
+## Automated Tagging
+
+Intelligent recognition:
+- Document structure analysis
+- Heading detection
+- Reading order determination
+- Table identification
+- List recognition
+- Artifact classification
+
+## Accessibility Benefits
+
+Tagged PDFs enable:
+- Screen reader navigation
+- Content reflow
+- Logical reading order
+- Assistive technology support
+- Better search
+- Content extraction`,
+      relatedTools: ["pdf-read-order-editor", "add-alt-text-pdf", "pdf-accessibility-checker"]
+    }
+  },
+  {
+    id: "pdf-read-order-editor",
+    title: "PDF Read Order Editor",
+    category: "Accessibility" as ToolCategory,
+    tags: ["reading", "order", "accessibility", "structure"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Read Order Editor - Fix PDF Reading Order Free",
+    metaDescription: "Edit PDF reading order online for free. Fix reading sequence for screen readers. Ensure logical content flow in PDFs.",
+    description: "Edit and optimize PDF reading order for accessibility",
+    icon: "list-ordered",
+    howTo: [
+      "Upload tagged PDF",
+      "View current reading order",
+      "Reorder content elements",
+      "Save corrected PDF"
+    ],
+    article: {
+      title: "Edit PDF Reading Order",
+      content: `Reading order determines how screen readers and assistive technologies present PDF content. Correct reading order ensures logical content flow for all users.
+
+## Reading Order Importance
+
+Critical for:
+- Screen reader users
+- Content accessibility
+- Logical flow
+- User comprehension
+- Navigation ease
+- Information hierarchy
+
+## Visual Editor
+
+Interactive tools:
+- Drag-and-drop reordering
+- Visual content tree
+- Page structure view
+- Element highlighting
+- Preview mode
+- Validation tools
+
+## Common Issues
+
+Fix problems like:
+- Sidebar read before main content
+- Multi-column confusion
+- Header/footer interruptions
+- Table reading sequence
+- Complex layout order
+- Decorative elements`,
+      relatedTools: ["pdf-tagger", "pdf-accessibility-checker", "pdf-structure-editor"]
+    }
+  },
+  {
+    id: "add-alt-text-pdf",
+    title: "PDF Alt-Text Editor",
+    category: "Accessibility" as ToolCategory,
+    tags: ["alt-text", "alternative", "images", "accessibility"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Alt Text to PDF Images - PDF Alt-Text Editor Free",
+    metaDescription: "Add alternative text to PDF images online for free. Make PDFs accessible with proper image descriptions. Easy alt-text editing tool.",
+    description: "Add and edit alternative text for images in PDFs",
+    icon: "image-plus",
+    howTo: [
+      "Upload PDF with images",
+      "Identify images needing alt text",
+      "Add descriptive alternative text",
+      "Save accessible PDF"
+    ],
+    article: {
+      title: "Add Alternative Text to PDF Images",
+      content: `Alternative text provides text descriptions of images for screen reader users, making visual content accessible to people who cannot see images.
+
+## Alt Text Requirements
+
+Effective descriptions:
+- Concise yet descriptive
+- Convey image purpose
+- Describe important details
+- Context-appropriate
+- Avoid redundancy
+- Follow best practices
+
+## Image Types
+
+Handle all images:
+- Photos and illustrations
+- Charts and graphs
+- Diagrams and flowcharts
+- Icons and logos
+- Decorative images
+- Complex infographics
+
+## Accessibility Impact
+
+Alt text enables:
+- Screen reader access
+- Image content understanding
+- Equal information access
+- Better user experience
+- WCAG compliance
+- Universal design`,
+      relatedTools: ["pdf-tagger", "pdf-accessibility-checker", "pdf-image-editor"]
+    }
+  },
+  {
+    id: "pdf-language-setter",
+    title: "PDF Language Setter",
+    category: "Accessibility" as ToolCategory,
+    tags: ["language", "accessibility", "metadata", "localization"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Set PDF Language - PDF Language Metadata Editor Free",
+    metaDescription: "Set language metadata in PDF documents online for free. Specify document language for accessibility. Multi-language PDF support.",
+    description: "Set document language and regional language tags in PDFs",
+    icon: "globe",
+    howTo: [
+      "Upload PDF document",
+      "Select primary language",
+      "Mark language changes in text",
+      "Save with language metadata"
+    ],
+    article: {
+      title: "Set PDF Language for Accessibility",
+      content: `Language metadata helps screen readers pronounce text correctly and enables proper text-to-speech conversion, critical for multilingual document accessibility.
+
+## Language Settings
+
+Configure properly:
+- Primary document language
+- Language changes within text
+- Regional language variants
+- Multi-language documents
+- Language-specific formatting
+- Pronunciation rules
+
+## Accessibility Benefits
+
+Proper language tags enable:
+- Correct text-to-speech
+- Accurate pronunciation
+- Language-specific features
+- Proper hyphenation
+- Spell-checking
+- Search optimization
+
+## Multilingual Support
+
+Handle documents with:
+- Multiple languages
+- Language transitions
+- Quoted foreign text
+- Technical terms
+- Proper names
+- Mixed content`,
+      relatedTools: ["pdf-metadata-editor", "pdf-accessibility-checker", "pdf-tagger"]
+    }
+  },
+  {
+    id: "pdf-to-tagged-pdf",
+    title: "PDF to Tagged PDF",
+    category: "Accessibility" as ToolCategory,
+    tags: ["tagged", "accessibility", "structure", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert PDF to Tagged PDF Online - Add Structure Free",
+    metaDescription: "Convert PDF to tagged PDF online for free. Add accessibility structure automatically. Create screen reader compatible PDFs.",
+    description: "Convert untagged PDFs to tagged PDFs with structure",
+    icon: "tags",
+    howTo: [
+      "Upload untagged PDF",
+      "Auto-detect structure",
+      "Review tag hierarchy",
+      "Download tagged PDF"
+    ],
+    article: {
+      title: "Convert to Tagged PDF Format",
+      content: `Converting to tagged PDF adds the semantic structure necessary for accessibility, enabling screen readers and assistive technologies to properly navigate content.
+
+## Tagging Process
+
+Automatic structure:
+- Content analysis
+- Heading detection
+- Paragraph identification
+- List recognition
+- Table structure
+- Reading order
+
+## Structure Elements
+
+Add all necessary tags:
+- Document hierarchy
+- Semantic elements
+- Alternative text placeholders
+- Language attributes
+- Artifact identification
+- Metadata tags
+
+## Accessibility Transformation
+
+Enable features like:
+- Screen reader navigation
+- Content reflow for mobile
+- Assistive technology support
+- Logical reading order
+- Better usability
+- Standards compliance`,
+      relatedTools: ["pdf-tagger", "pdf-accessibility-checker", "pdf-to-pdf-ua"]
+    }
+  },
+  {
+    id: "pdf-color-separations-viewer",
+    title: "PDF Color Separations Viewer",
+    category: "Print Production" as ToolCategory,
+    tags: ["separations", "color", "cmyk", "prepress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Color Separations Viewer - Preview Print Separations",
+    metaDescription: "View PDF color separations online for free. Preview CMYK plates and spot colors. Professional prepress separation viewer.",
+    description: "View and analyze color separations in PDF documents",
+    icon: "layers",
+    howTo: [
+      "Upload print-ready PDF",
+      "View color separations",
+      "Inspect individual plates",
+      "Check spot colors"
+    ],
+    article: {
+      title: "View PDF Color Separations",
+      content: `Color separation viewing shows individual color plates that will be printed, essential for prepress checking and print quality assurance.
+
+## Separation Display
+
+View all plates:
+- Cyan plate
+- Magenta plate
+- Yellow plate
+- Black (K) plate
+- Spot color plates
+- Registration marks
+
+## Prepress Checking
+
+Verify critical elements:
+- Plate content accuracy
+- Spot color usage
+- Overprint settings
+- Knockout areas
+- Trapping
+- Registration
+
+## Print Production
+
+Essential for:
+- Offset printing prep
+- Quality control
+- Plate making
+- Print proofing
+- Color verification
+- Production planning`,
+      relatedTools: ["pdf-ink-coverage-calculator", "pdf-overprint-preview", "pdf-to-pdf-x-1a"]
+    }
+  },
+  {
+    id: "pdf-ink-coverage-calculator",
+    title: "PDF Ink Coverage Calculator",
+    category: "Print Production" as ToolCategory,
+    tags: ["ink", "coverage", "cost", "printing"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Ink Coverage Calculator - Estimate Print Costs Free",
+    metaDescription: "Calculate PDF ink coverage online for free. Estimate printing costs and ink usage. Professional ink coverage analysis tool.",
+    description: "Calculate ink coverage and estimate printing costs for PDFs",
+    icon: "droplet",
+    howTo: [
+      "Upload PDF document",
+      "Analyze ink coverage",
+      "View coverage percentages",
+      "Estimate printing costs"
+    ],
+    article: {
+      title: "Calculate PDF Ink Coverage",
+      content: `Ink coverage calculation determines how much ink will be used in printing, helping estimate costs and optimize documents for efficient production.
+
+## Coverage Analysis
+
+Calculate for each color:
+- Cyan ink percentage
+- Magenta ink percentage
+- Yellow ink percentage
+- Black ink percentage
+- Spot color usage
+- Total area coverage (TAC)
+
+## Cost Estimation
+
+Calculate printing costs:
+- Per-page ink usage
+- Total document cost
+- Color vs. black-white pages
+- High-coverage pages
+- Optimization opportunities
+- Budget planning
+
+## Print Optimization
+
+Reduce costs by:
+- Identifying heavy coverage
+- Suggesting alternatives
+- Color optimization
+- Design recommendations
+- Efficient ink usage
+- Cost-effective printing`,
+      relatedTools: ["pdf-color-separations-viewer", "compress-pdf", "optimize-pdf-for-print"]
+    }
+  },
+  {
+    id: "pdf-transparency-flattener",
+    title: "PDF Transparency Flattener",
+    category: "Print Production" as ToolCategory,
+    tags: ["transparency", "flatten", "prepress", "print"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Transparency Flattener - Flatten PDF for Print Free",
+    metaDescription: "Flatten transparency in PDF documents online for free. Prepare PDFs for reliable printing. Professional transparency flattening tool.",
+    description: "Flatten transparency in PDFs for reliable print output",
+    icon: "layers",
+    howTo: [
+      "Upload PDF with transparency",
+      "Choose flattening quality",
+      "Flatten transparency",
+      "Download print-ready PDF"
+    ],
+    article: {
+      title: "Flatten PDF Transparency for Printing",
+      content: `Transparency flattening converts transparent effects into opaque objects, ensuring reliable output on printing equipment that doesn't support live transparency.
+
+## Flattening Process
+
+Convert transparency:
+- Blend modes to pixels
+- Opacity to solid colors
+- Drop shadows flattened
+- Complex effects rasterized
+- Vector preservation
+- Quality optimization
+
+## Quality Settings
+
+Balance quality and file size:
+- High-resolution rasterization
+- Vector preservation where possible
+- Text quality protection
+- Line art crispness
+- Image quality
+- File size control
+
+## Print Compatibility
+
+Ensure compatibility with:
+- Older RIPs
+- Traditional offset presses
+- PDF/X-1a standard
+- Legacy workflows
+- Print service requirements
+- Predictable output`,
+      relatedTools: ["pdf-to-pdf-x-1a", "flatten-pdf", "pdf-rasterizer"]
+    }
+  },
+  {
+    id: "pdf-overprint-preview",
+    title: "PDF Overprint Preview",
+    category: "Print Production" as ToolCategory,
+    tags: ["overprint", "preview", "print", "color"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Overprint Preview - Simulate Print Output Free",
+    metaDescription: "Preview PDF overprint settings online for free. Simulate final print appearance. Professional overprint preview tool.",
+    description: "Preview how overprint settings will appear when printed",
+    icon: "eye",
+    howTo: [
+      "Upload PDF with overprints",
+      "Enable overprint preview",
+      "Compare normal vs. overprint view",
+      "Verify print appearance"
+    ],
+    article: {
+      title: "Preview PDF Overprint Settings",
+      content: `Overprint preview simulates how colors will interact when printed, revealing issues that only become apparent on press and preventing costly reprinting.
+
+## Overprint Simulation
+
+Preview accurately:
+- Overprint effects
+- Knockout areas
+- Color mixing
+- Black overprint
+- Spot color interaction
+- Trapping results
+
+## Common Issues
+
+Identify problems:
+- Unintended knockouts
+- Missing overprints
+- Color blocking
+- White gaps
+- Registration problems
+- Design flaws
+
+## Print Quality
+
+Ensure correct:
+- Rich black appearance
+- Shadow detail
+- Color accuracy
+- Trapping effectiveness
+- Final print match
+- Professional results`,
+      relatedTools: ["pdf-color-separations-viewer", "pdf-to-pdf-x", "prepress-check"]
+    }
+  },
+  {
+    id: "pdf-hairline-fixer",
+    title: "PDF Hairline Fixer",
+    category: "Print Production" as ToolCategory,
+    tags: ["hairline", "fix", "print", "stroke"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Hairline Fixer - Fix Thin Lines for Print Free",
+    metaDescription: "Fix hairline strokes in PDF documents online for free. Prevent printing issues with thin lines. Professional hairline repair tool.",
+    description: "Fix hairline strokes and very thin lines for reliable printing",
+    icon: "pencil",
+    howTo: [
+      "Upload PDF with hairlines",
+      "Detect thin line issues",
+      "Set minimum stroke width",
+      "Fix and download PDF"
+    ],
+    article: {
+      title: "Fix PDF Hairline Printing Issues",
+      content: `Hairline strokes (very thin lines, often 0-width) can disappear or print unpredictably. Fixing them ensures reliable output and professional print quality.
+
+## Hairline Problems
+
+Common issues:
+- Invisible on press
+- Inconsistent rendering
+- RIP errors
+- Missing details
+- Broken lines
+- Quality problems
+
+## Detection and Repair
+
+Automatic fixing:
+- Identify zero-width strokes
+- Detect very thin lines
+- Set minimum widths
+- Preserve design intent
+- Maintain visual appearance
+- Ensure printability
+
+## Print Reliability
+
+Achieve consistent:
+- Line visibility
+- Stroke reproduction
+- Design fidelity
+- Professional quality
+- Press reliability
+- Client satisfaction`,
+      relatedTools: ["pdf-to-pdf-x", "prepress-checker", "pdf-line-weight-editor"]
     }
   }
 ] as const;

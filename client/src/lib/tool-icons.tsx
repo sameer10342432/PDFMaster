@@ -512,6 +512,58 @@ export const toolIcons: Record<string, LucideIcon> = {
   "pdf-comparer": FileDiff,
   "pdf-difference-checker": ScanSearch,
 
+  // Comparison Tools (40 New Tools)
+  "compare-pdf-text": FileDiff,
+  "compare-pdf-visual": GitCompare,
+  "pdf-analyzer": ScanSearch,
+  "get-pdf-info": BadgeInfo,
+  "count-pdf-pages": Hash,
+  "pdf-word-counter": TextCursorInput,
+  "pdf-character-counter": Type,
+  "detect-pdf-fonts": Type,
+  "check-pdf-a-compliance": ShieldCheck,
+  "validate-pdf-a": CheckCircle,
+  "pdf-previewer": Eye,
+  "pdf-page-counter": ListOrdered,
+  "compare-pdf-side-by-side": GitCompare,
+  "compare-pdf-overlay": Layers,
+  "pdf-a-validator": ShieldCheck,
+  
+  // PDF/A Conversion Tools
+  "pdf-to-pdf-a-1a": Archive,
+  "pdf-to-pdf-a-1b": Archive,
+  "pdf-to-pdf-a-2a": Archive,
+  "pdf-to-pdf-a-2b": Archive,
+  "pdf-to-pdf-a-2u": Archive,
+  "pdf-to-pdf-a-3a": Archive,
+  "pdf-to-pdf-a-3b": Archive,
+  "pdf-to-pdf-a-3u": Archive,
+  
+  // PDF/X Tools
+  "pdf-x-validator": Printer,
+  "pdf-to-pdf-x-1a": Printer,
+  "pdf-to-pdf-x-3": Printer,
+  "pdf-to-pdf-x-4": Printer,
+  
+  // Other Standards
+  "pdf-to-pdf-e": Settings,
+  "pdf-to-pdf-ua": UserCheck,
+  
+  // Accessibility Tools
+  "pdf-accessibility-checker": ShieldCheck,
+  "pdf-tagger": Tags,
+  "pdf-read-order-editor": ListOrdered,
+  "add-alt-text-pdf": ImagePlus,
+  "pdf-language-setter": Globe,
+  "pdf-to-tagged-pdf": Tags,
+  
+  // Print Production Tools
+  "pdf-color-separations-viewer": Layers,
+  "pdf-ink-coverage-calculator": Droplet,
+  "pdf-transparency-flattener": Layers,
+  "pdf-overprint-preview": Eye,
+  "pdf-hairline-fixer": Pencil,
+
   // Default icon for any unmapped tools
   default: FileText,
 };
