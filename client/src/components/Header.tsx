@@ -17,7 +17,8 @@ export function Header() {
     queryKey: ['/api/tools'],
   });
 
-  const popularTools = tools.slice(0, 8);
+  const toolsWithArticles = tools.filter(tool => tool.article);
+  const popularTools = toolsWithArticles.slice(0, 8);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">

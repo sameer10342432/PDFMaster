@@ -10,7 +10,7 @@ import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { toolEmojis } from "@shared/schema";
+import { getToolIcon } from "@/lib/tool-icons";
 import type { PDFTool } from "@shared/schema";
 import { Download, ArrowRight, CheckCircle2, FileText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -176,9 +176,10 @@ export default function ToolPage() {
               <div className="text-center space-y-4">
                 <div className="flex justify-center mb-4">
                   <div className="rounded-lg bg-primary/10 p-4 inline-block">
-                    <span className="text-6xl" role="img" aria-label={tool.title}>
-                      {toolEmojis[tool.id] || "📄"}
-                    </span>
+                    {(() => {
+                      const IconComponent = getToolIcon(tool.id);
+                      return <IconComponent className="w-14 h-14 text-primary" aria-label={tool.title} />;
+                    })()}
                   </div>
                 </div>
                 <Badge variant="secondary" className="mb-2">
@@ -265,16 +266,14 @@ export default function ToolPage() {
                   {tool.article.relatedTools.map((relatedId) => {
                     const relatedTool = allTools.find(t => t.id === relatedId);
                     if (!relatedTool) return null;
-                    const emoji = toolEmojis[relatedId] || "📄";
+                    const RelatedIconComponent = getToolIcon(relatedId);
                     
                     return (
                       <Link key={relatedId} href={`/tool/${relatedId}`}>
                         <Card className="p-6 hover-elevate active-elevate-2 cursor-pointer h-full">
                           <div className="flex items-center gap-3">
                             <div className="rounded-lg bg-primary/10 p-2 flex items-center justify-center">
-                              <span className="text-2xl" role="img" aria-label={relatedTool.title}>
-                                {emoji}
-                              </span>
+                              <RelatedIconComponent className="w-5 h-5 text-primary" aria-label={relatedTool.title} />
                             </div>
                             <div className="flex-1">
                               <p className="font-semibold text-sm">{relatedTool.title}</p>

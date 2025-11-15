@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import { toolEmojis } from "@shared/schema";
+import { getToolIcon } from "@/lib/tool-icons";
 import type { PDFTool } from "@shared/schema";
 import { Search, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -135,16 +135,14 @@ export default function Articles() {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredTools.map((tool) => {
-                      const emoji = toolEmojis[tool.id] || "📄";
+                      const ArticleIconComponent = getToolIcon(tool.id);
                       return (
                         <Link key={tool.id} href={`/tool/${tool.id}`}>
                           <Card className="hover-elevate cursor-pointer h-full" data-testid={`card-article-${tool.id}`}>
                             <CardHeader className="gap-2">
                               <div className="flex items-start justify-between gap-2">
                                 <div className="rounded-lg bg-primary/10 p-2">
-                                  <span className="text-3xl" role="img" aria-label={tool.title}>
-                                    {emoji}
-                                  </span>
+                                  <ArticleIconComponent className="w-7 h-7 text-primary" aria-label={tool.title} />
                                 </div>
                                 <Badge variant="secondary" className="text-xs">
                                   {tool.category}
