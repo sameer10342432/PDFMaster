@@ -6,11 +6,11 @@ import { Footer } from "@/components/Footer";
 import { ToolCard } from "@/components/ToolCard";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import type { PDFTool } from "@shared/schema";
+import type { Tool } from "@shared/schema";
 import { Shield, Zap, Lock, Users, ArrowRight } from "lucide-react";
 
 export default function Home() {
-  const { data: tools = [], isLoading } = useQuery<PDFTool[]>({
+  const { data: tools = [], isLoading } = useQuery<Tool[]>({
     queryKey: ['/api/tools'],
   });
 

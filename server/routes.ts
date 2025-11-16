@@ -2,7 +2,7 @@ import type { Express} from "express";
 import { createServer, type Server } from "http";
 import multer from "multer";
 import { PDFDocument } from "pdf-lib";
-import { pdfTools, toolCategories } from "@shared/schema";
+import { allTools, toolCategories } from "@shared/schema";
 
 const upload = multer({ 
   storage: multer.memoryStorage(),
@@ -19,7 +19,7 @@ const upload = multer({
 export async function registerRoutes(app: Express): Promise<Server> {
   app.get('/api/tools', async (_req, res) => {
     try {
-      res.json(pdfTools);
+      res.json(allTools);
     } catch (error) {
       console.error('Error fetching tools:', error);
       res.status(500).json({ error: 'Failed to fetch tools' });
@@ -29,7 +29,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get('/api/tools/:id', async (req, res) => {
     try {
       const { id } = req.params;
-      const tool = pdfTools.find(t => t.id === id);
+      const tool = allTools.find(t => t.id === id);
       
       if (!tool) {
         return res.status(404).json({ error: 'Tool not found' });
@@ -54,7 +54,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get('/api/categories/:category/tools', async (req, res) => {
     try {
       const { category } = req.params;
-      const filteredTools = pdfTools.filter(tool => tool.category === category);
+      const filteredTools = allTools.filter(tool => tool.category === category);
       res.json(filteredTools);
     } catch (error) {
       console.error('Error fetching tools by category:', error);

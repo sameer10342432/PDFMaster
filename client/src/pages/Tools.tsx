@@ -7,14 +7,14 @@ import { ToolCard } from "@/components/ToolCard";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import type { PDFTool } from "@shared/schema";
+import type { Tool } from "@shared/schema";
 import { Search } from "lucide-react";
 
 export default function Tools() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<string>("all");
 
-  const { data: tools = [], isLoading: toolsLoading } = useQuery<PDFTool[]>({
+  const { data: tools = [], isLoading: toolsLoading } = useQuery<Tool[]>({
     queryKey: ['/api/tools'],
   });
 
@@ -37,7 +37,7 @@ export default function Tools() {
   const toolsByCategory = categories.reduce((acc, category) => {
     acc[category] = tools.filter(tool => tool.category === category);
     return acc;
-  }, {} as Record<string, PDFTool[]>);
+  }, {} as Record<string, Tool[]>);
 
   return (
     <>

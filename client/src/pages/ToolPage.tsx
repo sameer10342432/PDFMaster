@@ -11,7 +11,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { getToolIcon } from "@/lib/tool-icons";
-import type { PDFTool } from "@shared/schema";
+import type { Tool } from "@shared/schema";
 import { Download, ArrowRight, CheckCircle2, FileText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -21,12 +21,12 @@ export default function ToolPage() {
   const [isProcessing, setIsProcessing] = useState(false);
   const { toast } = useToast();
 
-  const { data: tool, isLoading: toolLoading } = useQuery<PDFTool>({
+  const { data: tool, isLoading: toolLoading } = useQuery<Tool>({
     queryKey: params?.id ? ['/api/tools', params.id] : [],
     enabled: !!params?.id,
   });
 
-  const { data: allTools = [] } = useQuery<PDFTool[]>({
+  const { data: allTools = [] } = useQuery<Tool[]>({
     queryKey: ['/api/tools'],
   });
 
