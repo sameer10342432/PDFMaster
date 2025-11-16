@@ -19,10 +19,10 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Free PDF Tools Online - Merge, Combine, Join PDFs Instantly</title>
-        <meta name="description" content="Free online PDF tools to merge, combine, join, and manipulate PDF files. Fast, secure, and easy to use. No registration required." />
-        <meta property="og:title" content="Free PDF Tools Online - Merge, Combine, Join PDFs" />
-        <meta property="og:description" content="Professional PDF tools for all your document needs. Merge, combine, and join PDFs instantly." />
+        <title>Free PDF & Image Tools Online - 480+ Tools for All Your Needs</title>
+        <meta name="description" content="Free online PDF and image tools. Merge PDFs, compress images, convert formats, and more. 480+ professional tools. Fast, secure, and easy to use. No registration required." />
+        <meta property="og:title" content="Free PDF & Image Tools Online - 480+ Professional Tools" />
+        <meta property="og:description" content="Professional PDF and image tools for all your document and image needs. Merge, convert, compress, and edit. 480+ tools available." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={typeof window !== 'undefined' ? window.location.href : ''} />
         <meta property="og:image" content={typeof window !== 'undefined' ? `${window.location.origin}/favicon.png` : ''} />
@@ -36,10 +36,10 @@ export default function Home() {
             <div className="container mx-auto max-w-7xl px-4">
               <div className="text-center space-y-6 max-w-3xl mx-auto">
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                  Free PDF Tools Online
+                  Free PDF & Image Tools Online
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Professional-grade PDF tools for merging, combining, and joining documents. 
+                  Professional-grade PDF and image tools for merging, combining, converting, compressing, and editing. 
                   Fast, secure, and completely free. No registration required.
                 </p>
                 <div className="flex items-center justify-center gap-4 flex-wrap text-sm">
@@ -74,10 +74,10 @@ export default function Home() {
             <div className="container mx-auto max-w-7xl px-4">
               <div className="text-center mb-12 space-y-4">
                 <h2 className="text-3xl md:text-4xl font-semibold">
-                  All 400+ PDF Tools
+                  All 480+ PDF & Image Tools
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Choose from our comprehensive collection of {tools.length} professional PDF tools with colorful icons
+                  Choose from our comprehensive collection of {tools.length} professional PDF and image tools with colorful icons
                 </p>
               </div>
 
@@ -110,7 +110,7 @@ export default function Home() {
             <div className="container mx-auto max-w-7xl px-4">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-                  Why Choose Our PDF Tools?
+                  Why Choose Our PDF & Image Tools?
                 </h2>
               </div>
 
