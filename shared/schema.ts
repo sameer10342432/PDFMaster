@@ -57,6 +57,18 @@ export const toolCategories = [
   "Archive Extraction",
   "Archive Creation",
   "Archive Conversion",
+  "SEO Tools",
+  "Domain & Network Tools",
+  "Color Tools",
+  "CSS Generators",
+  "Unit Converters",
+  "Time & Date Tools",
+  "Calculators",
+  "Productivity Tools",
+  "Sharing & URL Tools",
+  "Text Analysis",
+  "Content Generators",
+  "Social Media Tools",
   "Archive Management",
   "Web Tools",
   "Editor Tools"
@@ -32879,6 +32891,3289 @@ Screenshot for:
       relatedTools: ["webpage-capture", "site-screenshot", "page-capture"]
     }
   }
+,
+  // Website Tools
+  {
+    id: "website-to-pdf",
+    title: "Website to PDF",
+    category: "Web Tools" as ToolCategory,
+    tags: ["website", "web", "pdf", "convert", "save"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Convert Website to PDF Online Free - Save Webpage as PDF",
+    metaDescription: "Convert any website to PDF format online. Save webpages as PDF documents instantly. Free, fast, and easy-to-use website to PDF converter.",
+    description: "Convert websites to PDF documents with one click",
+    icon: "file-text",
+    howTo: [
+      "Enter the website URL you want to convert",
+      "Click 'Convert to PDF' button",
+      "Wait for the conversion to complete",
+      "Download your PDF file"
+    ],
+    article: {
+      title: "How to Convert Website to PDF Online",
+      content: `Converting websites to PDF format allows you to save web content for offline viewing, archiving, or sharing. Our free online tool makes this process simple and fast.
+
+## Why Convert Websites to PDF?
+
+Website to PDF conversion helps you:
+- Save important web content for offline access
+- Archive websites before they change or disappear
+- Create professional reports from online content
+- Share web content in a universal format
+
+## Features of Our Website to PDF Converter
+
+Our tool captures the entire webpage including text, images, and formatting. The conversion maintains the original layout and styling, creating a professional-looking PDF document.
+
+## Best Practices
+
+For best results, ensure the webpage has fully loaded before converting. Our tool automatically handles responsive layouts and modern web technologies like JavaScript and CSS.`,
+      relatedTools: ["website-to-jpg", "website-source-code-viewer", "screenshot-website"]
+    }
+  },
+  {
+    id: "website-to-jpg",
+    title: "Website to JPG",
+    category: "Web Tools" as ToolCategory,
+    tags: ["website", "web", "jpg", "image", "screenshot"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Convert Website to JPG Online - Capture Webpage as Image",
+    metaDescription: "Convert websites to JPG images online. Take full-page screenshots and save as JPG. Free website to image converter.",
+    description: "Capture websites as JPG images",
+    icon: "image",
+    howTo: [
+      "Enter the website URL",
+      "Select image quality and dimensions",
+      "Click 'Capture as JPG'",
+      "Download your JPG image"
+    ],
+    article: {
+      title: "Convert Websites to JPG Images",
+      content: `Capture any website as a JPG image for easy sharing, presentations, or archival purposes.
+
+## Screenshot Options
+
+Choose from:
+- Full-page capture
+- Viewport screenshots
+- Custom dimensions
+- Mobile or desktop view
+
+## Use Cases
+
+Perfect for:
+- Creating website mockups
+- Documentation and tutorials
+- Portfolio presentations
+- Visual archives`,
+      relatedTools: ["website-to-pdf", "screenshot-website", "website-seo-analyzer"]
+    }
+  },
+  {
+    id: "website-source-code-viewer",
+    title: "Website Source Code Viewer",
+    category: "Web Tools" as ToolCategory,
+    tags: ["source", "code", "html", "view", "inspect"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "View Website Source Code Online - HTML Source Viewer",
+    metaDescription: "View and analyze website source code online. Inspect HTML, CSS, and JavaScript. Free website source code viewer tool.",
+    description: "View and analyze website HTML source code",
+    icon: "code",
+    howTo: [
+      "Enter the website URL",
+      "Click 'View Source Code'",
+      "Browse formatted HTML, CSS, and JavaScript",
+      "Copy or download the source code"
+    ],
+    article: {
+      title: "View and Analyze Website Source Code",
+      content: `Our website source code viewer lets you inspect the HTML, CSS, and JavaScript of any website. Perfect for developers, designers, and learners.
+
+## Features
+
+- Syntax highlighting
+- Formatted code view
+- Download source files
+- Inspect all page resources
+
+## Learning and Development
+
+Use this tool to:
+- Learn from other websites
+- Debug web pages
+- Analyze competitors
+- Study web design techniques`,
+      relatedTools: ["website-to-pdf", "http-header-viewer", "redirect-checker"]
+    }
+  },
+  // SEO Tools
+  {
+    id: "website-seo-analyzer",
+    title: "Website SEO Analyzer",
+    category: "SEO Tools" as ToolCategory,
+    tags: ["seo", "analyze", "optimization", "audit"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Free SEO Analyzer - Website SEO Audit Tool Online",
+    metaDescription: "Analyze website SEO performance for free. Get detailed SEO audit reports with actionable insights. Improve your search engine rankings.",
+    description: "Analyze website SEO performance and get optimization recommendations",
+    icon: "search",
+    howTo: [
+      "Enter your website URL",
+      "Click 'Analyze SEO'",
+      "Review comprehensive SEO metrics",
+      "Implement recommended improvements"
+    ],
+    article: {
+      title: "Complete Website SEO Analysis",
+      content: `Our SEO analyzer provides comprehensive insights into your website's search engine optimization. Get actionable recommendations to improve rankings.
+
+## What We Analyze
+
+- Meta tags and descriptions
+- Heading structure (H1-H6)
+- Content quality and keywords
+- Page speed and mobile friendliness
+- Internal and external links
+- Image optimization
+
+## SEO Metrics
+
+We evaluate:
+- On-page SEO factors
+- Technical SEO elements
+- Content optimization
+- User experience signals
+
+## Improve Your Rankings
+
+Use our recommendations to:
+- Fix SEO issues
+- Optimize content
+- Improve site structure
+- Enhance user experience`,
+      relatedTools: ["keyword-density-checker", "meta-tag-generator", "domain-authority-checker"]
+    }
+  },
+  {
+    id: "keyword-density-checker",
+    title: "Keyword Density Checker",
+    category: "SEO Tools" as ToolCategory,
+    tags: ["keyword", "density", "seo", "analyze"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Keyword Density Checker - Analyze Keyword Usage in Content",
+    metaDescription: "Check keyword density in your content. Optimize SEO with proper keyword distribution. Free keyword analyzer tool.",
+    description: "Analyze keyword density and frequency in your content",
+    icon: "percent",
+    howTo: [
+      "Paste your content or enter URL",
+      "Click 'Check Keyword Density'",
+      "View keyword frequency analysis",
+      "Optimize content based on results"
+    ],
+    article: {
+      title: "Understanding Keyword Density for SEO",
+      content: `Keyword density affects how search engines understand your content. Our tool helps you find the perfect balance for better SEO results.
+
+## What is Keyword Density?
+
+Keyword density is the percentage of times a keyword appears compared to total words. Ideal density is typically 1-2% for primary keywords.
+
+## Analysis Features
+
+Our tool shows:
+- Single and multi-word keywords
+- Keyword frequency counts
+- Density percentages
+- Related phrase variations
+
+## SEO Best Practices
+
+- Avoid keyword stuffing
+- Use natural language
+- Include keyword variations
+- Focus on content quality`,
+      relatedTools: ["website-seo-analyzer", "readability-checker", "text-analyzer"]
+    }
+  },
+  {
+    id: "meta-tag-generator",
+    title: "Meta Tag Generator",
+    category: "SEO Tools" as ToolCategory,
+    tags: ["meta", "tags", "seo", "generator"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Meta Tag Generator - Create SEO Meta Tags for Your Website",
+    metaDescription: "Generate SEO-optimized meta tags for your website. Create title tags, meta descriptions, and Open Graph tags. Free meta tag generator.",
+    description: "Generate SEO-friendly meta tags for your website",
+    icon: "tag",
+    howTo: [
+      "Enter page title and description",
+      "Add keywords and author information",
+      "Generate meta tags",
+      "Copy and paste into your HTML"
+    ],
+    article: {
+      title: "Create Perfect Meta Tags for SEO",
+      content: `Meta tags are crucial for SEO and social media sharing. Our generator creates optimized tags that improve search visibility and click-through rates.
+
+## Essential Meta Tags
+
+We generate:
+- Title tags (optimal length)
+- Meta descriptions
+- Meta keywords
+- Canonical URLs
+- Open Graph tags
+- Twitter Card tags
+
+## SEO Impact
+
+Good meta tags:
+- Improve search rankings
+- Increase click-through rates
+- Enhance social shares
+- Define page content
+
+## Best Practices
+
+- Keep titles under 60 characters
+- Write compelling descriptions
+- Use relevant keywords
+- Include branding`,
+      relatedTools: ["open-graph-generator", "twitter-card-generator", "robots-txt-generator"]
+    }
+  },
+  {
+    id: "robots-txt-generator",
+    title: "Robots.txt Generator",
+    category: "SEO Tools" as ToolCategory,
+    tags: ["robots", "txt", "seo", "crawler"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Robots.txt Generator - Create Robots.txt File for SEO",
+    metaDescription: "Generate robots.txt file for your website. Control search engine crawlers. Free robots.txt generator tool.",
+    description: "Generate robots.txt file to control search engine crawlers",
+    icon: "bot",
+    howTo: [
+      "Select user-agent (search engine bot)",
+      "Define allowed and disallowed paths",
+      "Add sitemap URL",
+      "Download or copy robots.txt file"
+    ],
+    article: {
+      title: "Create Robots.txt for Better SEO Control",
+      content: `A robots.txt file tells search engines which pages to crawl or ignore. Proper configuration improves SEO efficiency and protects sensitive content.
+
+## What is Robots.txt?
+
+Robots.txt is a text file that instructs web crawlers which pages or sections of your site to access. It's essential for SEO management.
+
+## Common Directives
+
+- User-agent: Target specific bots
+- Disallow: Block access to paths
+- Allow: Permit specific paths
+- Sitemap: Provide sitemap location
+
+## SEO Benefits
+
+- Control crawl budget
+- Protect private pages
+- Improve indexing efficiency
+- Guide search engines`,
+      relatedTools: ["sitemap-xml-generator", "meta-tag-generator", "website-seo-analyzer"]
+    }
+  },
+  {
+    id: "sitemap-xml-generator",
+    title: "Sitemap.xml Generator",
+    category: "SEO Tools" as ToolCategory,
+    tags: ["sitemap", "xml", "seo", "generator"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "XML Sitemap Generator - Create Sitemap for SEO",
+    metaDescription: "Generate XML sitemap for your website. Improve search engine indexing. Free sitemap generator tool.",
+    description: "Generate XML sitemap for better search engine indexing",
+    icon: "sitemap",
+    howTo: [
+      "Enter your website URL",
+      "Configure sitemap settings",
+      "Generate XML sitemap",
+      "Download and upload to your website"
+    ],
+    article: {
+      title: "Create XML Sitemaps for Better SEO",
+      content: `XML sitemaps help search engines discover and index your website pages. Our generator creates compliant sitemaps automatically.
+
+## What is an XML Sitemap?
+
+An XML sitemap lists all important pages on your website, helping search engines crawl and index them efficiently.
+
+## Sitemap Features
+
+Include:
+- All website URLs
+- Last modification dates
+- Update frequency
+- Priority levels
+
+## SEO Advantages
+
+- Faster indexing
+- Better crawl coverage
+- Improved rankings
+- Content discovery`,
+      relatedTools: ["robots-txt-generator", "website-seo-analyzer", "domain-authority-checker"]
+    }
+  },
+  // Domain & Network Tools
+  {
+    id: "domain-authority-checker",
+    title: "Domain Authority Checker",
+    category: "Domain & Network Tools" as ToolCategory,
+    tags: ["domain", "authority", "seo", "metrics"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Domain Authority Checker - Check DA Score Free",
+    metaDescription: "Check domain authority score of any website. Analyze DA, PA, and other SEO metrics. Free domain authority checker.",
+    description: "Check domain authority and page authority scores",
+    icon: "award",
+    howTo: [
+      "Enter domain name",
+      "Click 'Check Authority'",
+      "View DA/PA scores and metrics",
+      "Compare with competitors"
+    ],
+    article: {
+      title: "Understanding Domain Authority",
+      content: `Domain Authority (DA) predicts how well a website will rank in search engines. Use our tool to track and improve your site's authority.
+
+## What is Domain Authority?
+
+DA is a score (0-100) that predicts search engine ranking potential. Higher scores indicate greater ranking ability.
+
+## Metrics We Check
+
+- Domain Authority (DA)
+- Page Authority (PA)
+- Spam score
+- Backlink profile
+- Trust metrics
+
+## Improving Authority
+
+- Build quality backlinks
+- Create valuable content
+- Improve technical SEO
+- Remove toxic links`,
+      relatedTools: ["page-authority-checker", "backlink-checker", "website-seo-analyzer"]
+    }
+  },
+  {
+    id: "page-authority-checker",
+    title: "Page Authority Checker",
+    category: "Domain & Network Tools" as ToolCategory,
+    tags: ["page", "authority", "seo", "metrics"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Page Authority Checker - Check PA Score Online",
+    metaDescription: "Check page authority score for any webpage. Analyze PA and ranking potential. Free page authority checker tool.",
+    description: "Check page authority score for individual pages",
+    icon: "file-check",
+    howTo: [
+      "Enter page URL",
+      "Click 'Check Page Authority'",
+      "View PA score and insights",
+      "Optimize based on recommendations"
+    ],
+    article: {
+      title: "Page Authority Analysis",
+      content: `Page Authority measures the ranking strength of individual pages. Our checker helps you identify high-performing pages and optimization opportunities.
+
+## PA vs DA
+
+While DA measures entire domain strength, PA focuses on individual page ranking potential.
+
+## Page Optimization
+
+Improve PA by:
+- Getting quality backlinks
+- Optimizing on-page SEO
+- Improving content quality
+- Enhancing user experience`,
+      relatedTools: ["domain-authority-checker", "backlink-checker", "website-seo-analyzer"]
+    }
+  },
+  {
+    id: "backlink-checker",
+    title: "Backlink Checker",
+    category: "Domain & Network Tools" as ToolCategory,
+    tags: ["backlink", "link", "seo", "analysis"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Backlink Checker - Analyze Backlinks for Free",
+    metaDescription: "Check backlinks pointing to your website. Analyze link quality and SEO value. Free backlink checker tool.",
+    description: "Analyze backlinks pointing to your website",
+    icon: "link",
+    howTo: [
+      "Enter your domain or URL",
+      "Click 'Check Backlinks'",
+      "View backlink profile and metrics",
+      "Identify and disavow toxic links"
+    ],
+    article: {
+      title: "Backlink Analysis for Better SEO",
+      content: `Backlinks are crucial for SEO success. Our checker helps you monitor your link profile and identify opportunities for improvement.
+
+## Backlink Metrics
+
+We analyze:
+- Total backlinks
+- Referring domains
+- Link quality scores
+- Anchor text distribution
+- DoFollow vs NoFollow ratio
+
+## Link Building Strategy
+
+- Focus on quality over quantity
+- Diversify anchor text
+- Earn natural links
+- Monitor competitor backlinks`,
+      relatedTools: ["domain-authority-checker", "broken-link-checker", "website-seo-analyzer"]
+    }
+  },
+  {
+    id: "broken-link-checker",
+    title: "Broken Link Checker",
+    category: "Domain & Network Tools" as ToolCategory,
+    tags: ["broken", "link", "checker", "404"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Broken Link Checker - Find and Fix Dead Links",
+    metaDescription: "Find broken links on your website. Check for 404 errors and fix dead links. Free broken link checker tool.",
+    description: "Find and fix broken links on your website",
+    icon: "link-off",
+    howTo: [
+      "Enter your website URL",
+      "Click 'Check for Broken Links'",
+      "Review list of broken links",
+      "Fix or remove dead links"
+    ],
+    article: {
+      title: "Find and Fix Broken Links",
+      content: `Broken links hurt user experience and SEO. Our tool scans your entire website to identify and help fix dead links.
+
+## Why Check Broken Links?
+
+Broken links:
+- Create poor user experience
+- Waste crawl budget
+- Reduce SEO performance
+- Damage credibility
+
+## Link Issues We Find
+
+- 404 errors
+- Redirect loops
+- Slow loading links
+- Timeout errors
+
+## Best Practices
+
+- Regular link audits
+- Fix or redirect broken URLs
+- Update external links
+- Monitor link health`,
+      relatedTools: ["redirect-checker", "website-speed-test", "website-seo-analyzer"]
+    }
+  },
+  {
+    id: "website-speed-test",
+    title: "Website Speed Test",
+    category: "Domain & Network Tools" as ToolCategory,
+    tags: ["speed", "performance", "test", "pagespeed"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Website Speed Test - Check Page Load Time",
+    metaDescription: "Test website loading speed and performance. Get detailed speed analysis and optimization tips. Free website speed test tool.",
+    description: "Test your website loading speed and performance",
+    icon: "zap",
+    howTo: [
+      "Enter website URL",
+      "Click 'Test Speed'",
+      "View performance metrics",
+      "Implement optimization suggestions"
+    ],
+    article: {
+      title: "Website Speed Testing and Optimization",
+      content: `Page speed is crucial for user experience and SEO. Our tool measures loading performance and provides actionable optimization recommendations.
+
+## Performance Metrics
+
+We measure:
+- Page load time
+- Time to first byte (TTFB)
+- First contentful paint
+- Largest contentful paint
+- Total page size
+
+## Speed Optimization
+
+Improve speed by:
+- Optimizing images
+- Minifying CSS/JavaScript
+- Enabling compression
+- Using CDN
+- Reducing server response time
+
+## Why Speed Matters
+
+- Better user experience
+- Higher SEO rankings
+- Increased conversions
+- Lower bounce rates`,
+      relatedTools: ["ping-tool", "http-header-viewer", "website-seo-analyzer"]
+    }
+  },
+  {
+    id: "ping-tool",
+    title: "Ping Tool",
+    category: "Domain & Network Tools" as ToolCategory,
+    tags: ["ping", "network", "latency", "connection"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Ping Tool Online - Test Server Response Time",
+    metaDescription: "Ping any server or website online. Check server response time and availability. Free online ping tool.",
+    description: "Check server response time and availability",
+    icon: "activity",
+    howTo: [
+      "Enter hostname or IP address",
+      "Click 'Ping'",
+      "View response time and status",
+      "Monitor connection quality"
+    ],
+    article: {
+      title: "Network Ping Testing",
+      content: `Ping is essential for testing network connectivity and server response times. Our tool helps diagnose network issues quickly.
+
+## What is Ping?
+
+Ping measures the round-trip time for packets sent to a server. It's measured in milliseconds (ms).
+
+## Network Diagnostics
+
+Use ping to:
+- Test server availability
+- Measure network latency
+- Diagnose connection issues
+- Monitor uptime
+
+## Understanding Results
+
+- Low ping (<50ms): Excellent
+- Medium ping (50-100ms): Good
+- High ping (>100ms): May cause delays`,
+      relatedTools: ["whois-lookup", "dns-lookup", "ip-address-lookup"]
+    }
+  },
+  {
+    id: "whois-lookup",
+    title: "Whois Lookup",
+    category: "Domain & Network Tools" as ToolCategory,
+    tags: ["whois", "domain", "lookup", "registration"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Whois Lookup - Domain Registration Information",
+    metaDescription: "Perform WHOIS lookup to find domain registration details. Check domain ownership, registrar, and expiration date.",
+    description: "Lookup domain registration and ownership information",
+    icon: "search",
+    howTo: [
+      "Enter domain name",
+      "Click 'Whois Lookup'",
+      "View registration details",
+      "Check expiration and ownership"
+    ],
+    article: {
+      title: "Domain WHOIS Information",
+      content: `WHOIS lookup reveals domain registration details including owner, registrar, and expiration date.
+
+## Information Available
+
+- Registrant contact
+- Domain registrar
+- Registration date
+- Expiration date
+- Name servers
+- Domain status
+
+## Use Cases
+
+- Check domain availability
+- Verify ownership
+- Contact domain owners
+- Monitor domain renewals`,
+      relatedTools: ["dns-lookup", "domain-authority-checker", "ip-address-lookup"]
+    }
+  },
+  {
+    id: "dns-lookup",
+    title: "DNS Lookup",
+    category: "Domain & Network Tools" as ToolCategory,
+    tags: ["dns", "lookup", "nameserver", "records"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "DNS Lookup Tool - Check DNS Records Online",
+    metaDescription: "Perform DNS lookup to check domain name server records. View A, MX, CNAME, TXT records and more.",
+    description: "Lookup DNS records for any domain",
+    icon: "server",
+    howTo: [
+      "Enter domain name",
+      "Select record type (A, MX, CNAME, etc.)",
+      "Click 'Lookup DNS'",
+      "View DNS records"
+    ],
+    article: {
+      title: "DNS Record Lookup and Analysis",
+      content: `DNS records control how your domain operates. Our tool helps you view and verify all DNS record types.
+
+## DNS Record Types
+
+- A Records (IPv4 addresses)
+- AAAA Records (IPv6 addresses)
+- MX Records (mail servers)
+- CNAME Records (aliases)
+- TXT Records (text data)
+- NS Records (name servers)
+
+## DNS Troubleshooting
+
+Use DNS lookup to:
+- Verify domain configuration
+- Diagnose email issues
+- Check propagation
+- Validate nameservers`,
+      relatedTools: ["whois-lookup", "ip-address-lookup", "ping-tool"]
+    }
+  },
+  {
+    id: "ip-address-lookup",
+    title: "IP Address Lookup",
+    category: "Domain & Network Tools" as ToolCategory,
+    tags: ["ip", "address", "lookup", "geolocation"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "IP Address Lookup - Find IP Location and Details",
+    metaDescription: "Lookup IP address information including location, ISP, and hostname. Free IP address lookup tool.",
+    description: "Find IP address location and detailed information",
+    icon: "map-pin",
+    howTo: [
+      "Enter IP address or domain",
+      "Click 'Lookup IP'",
+      "View IP location and details",
+      "Check ISP and hosting information"
+    ],
+    article: {
+      title: "IP Address Information Lookup",
+      content: `IP lookup reveals geographic location, ISP, and other details about any IP address.
+
+## Information Revealed
+
+- Geographic location (city, country)
+- ISP and organization
+- Hostname and domain
+- IP type (IPv4/IPv6)
+- Time zone
+
+## Use Cases
+
+- Identify website visitors
+- Trace email sources
+- Check server locations
+- Verify IP ownership`,
+      relatedTools: ["what-is-my-ip", "dns-lookup", "whois-lookup"]
+    }
+  },
+  {
+    id: "what-is-my-ip",
+    title: "What is My IP",
+    category: "Domain & Network Tools" as ToolCategory,
+    tags: ["ip", "address", "my", "public"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "What is My IP Address - Find Your Public IP",
+    metaDescription: "Find your public IP address instantly. Check IPv4 and IPv6 addresses. Simple and fast IP checker.",
+    description: "Find your public IP address instantly",
+    icon: "wifi",
+    howTo: [
+      "Visit the tool page",
+      "Your IP address is displayed automatically",
+      "View IPv4 and IPv6 information",
+      "Check additional network details"
+    ],
+    article: {
+      title: "Find Your Public IP Address",
+      content: `Your public IP address identifies your internet connection. Use our tool to quickly find your current IP.
+
+## Public vs Private IP
+
+- Public IP: Visible to the internet
+- Private IP: Used within local networks
+
+## Why Check Your IP?
+
+- Troubleshoot connections
+- Configure network settings
+- Set up remote access
+- Verify VPN connections`,
+      relatedTools: ["ip-address-lookup", "dns-lookup", "ping-tool"]
+    }
+  },
+  {
+    id: "http-header-viewer",
+    title: "HTTP Header Viewer",
+    category: "Domain & Network Tools" as ToolCategory,
+    tags: ["http", "headers", "response", "request"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "HTTP Header Viewer - Analyze HTTP Response Headers",
+    metaDescription: "View and analyze HTTP response headers. Check status codes, caching, and security headers. Free HTTP header tool.",
+    description: "View and analyze HTTP request and response headers",
+    icon: "file-code",
+    howTo: [
+      "Enter website URL",
+      "Click 'View Headers'",
+      "Analyze request/response headers",
+      "Check status codes and caching"
+    ],
+    article: {
+      title: "HTTP Header Analysis",
+      content: `HTTP headers contain important information about web requests and responses. Our tool helps you analyze headers for debugging and optimization.
+
+## Important Headers
+
+- Status codes (200, 404, etc.)
+- Cache-Control
+- Content-Type
+- Security headers
+- Compression settings
+
+## Use Cases
+
+- Debug website issues
+- Check caching configuration
+- Verify security headers
+- Optimize performance`,
+      relatedTools: ["redirect-checker", "website-speed-test", "website-seo-analyzer"]
+    }
+  },
+  {
+    id: "redirect-checker",
+    title: "Redirect Checker",
+    category: "Domain & Network Tools" as ToolCategory,
+    tags: ["redirect", "301", "302", "checker"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Redirect Checker - Check URL Redirects and Chains",
+    metaDescription: "Check URL redirects and redirect chains. Analyze 301, 302 redirects and fix redirect issues. Free redirect checker tool.",
+    description: "Check URL redirects and identify redirect chains",
+    icon: "corner-up-right",
+    howTo: [
+      "Enter URL to check",
+      "Click 'Check Redirects'",
+      "View redirect chain",
+      "Identify and fix issues"
+    ],
+    article: {
+      title: "URL Redirect Analysis",
+      content: `Redirects are essential for SEO and user experience. Our tool traces redirect chains and identifies issues.
+
+## Redirect Types
+
+- 301 (Permanent)
+- 302 (Temporary)
+- 307 (Temporary, preserves method)
+- Meta refresh
+
+## Common Issues
+
+- Redirect loops
+- Too many redirects
+- Mixed redirect types
+- Slow redirects
+
+## Best Practices
+
+- Minimize redirect chains
+- Use 301 for permanent moves
+- Avoid redirect loops
+- Update internal links`,
+      relatedTools: ["broken-link-checker", "http-header-viewer", "website-seo-analyzer"]
+    }
+  },
+  // Color Tools
+  {
+    id: "color-picker-screen",
+    title: "Color Picker (from screen)",
+    category: "Color Tools" as ToolCategory,
+    tags: ["color", "picker", "screen", "eyedropper"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Screen Color Picker - Pick Colors from Screen",
+    metaDescription: "Pick colors from your screen with eyedropper tool. Get HEX, RGB values instantly. Free color picker.",
+    description: "Pick colors from anywhere on your screen",
+    icon: "pipette",
+    howTo: [
+      "Click 'Activate Eyedropper'",
+      "Hover over any color on screen",
+      "Click to select color",
+      "Copy color code (HEX, RGB, HSL)"
+    ],
+    article: {
+      title: "Pick Colors from Your Screen",
+      content: `Our eyedropper tool lets you extract colors from anywhere on your screen - perfect for designers and developers.
+
+## Supported Formats
+
+Get colors in:
+- HEX (#FF5733)
+- RGB (255, 87, 51)
+- HSL (12, 100%, 60%)
+- CMYK values
+
+## Use Cases
+
+- Match website colors
+- Extract brand colors
+- Design inspiration
+- Color palette creation`,
+      relatedTools: ["color-picker-image", "hex-to-rgb-converter", "color-palette-generator"]
+    }
+  },
+  {
+    id: "color-picker-image",
+    title: "Color Picker (from image)",
+    category: "Color Tools" as ToolCategory,
+    tags: ["color", "picker", "image", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image Color Picker - Extract Colors from Images",
+    metaDescription: "Pick colors from images. Extract color palette from any image. Free image color picker tool.",
+    description: "Extract color palette from images",
+    icon: "image",
+    howTo: [
+      "Upload or paste image",
+      "Click on any color in the image",
+      "View color codes in multiple formats",
+      "Build color palette from image"
+    ],
+    article: {
+      title: "Extract Colors from Images",
+      content: `Extract beautiful color palettes from any image. Perfect for creating cohesive designs based on photos or artwork.
+
+## Features
+
+- Click to pick individual colors
+- Auto-generate color palette
+- Dominant color detection
+- Multiple color format export
+
+## Design Applications
+
+- Create brand palettes
+- Match design to photos
+- Inspiration from artwork
+- Consistent color schemes`,
+      relatedTools: ["color-picker-screen", "color-palette-generator", "gradient-generator"]
+    }
+  },
+  {
+    id: "hex-to-rgb-converter",
+    title: "Color Converter (HEX to RGB)",
+    category: "Color Tools" as ToolCategory,
+    tags: ["color", "converter", "hex", "rgb"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HEX to RGB Converter - Convert Color Codes Online",
+    metaDescription: "Convert HEX color codes to RGB format. Fast and accurate color conversion tool. Free HEX to RGB converter.",
+    description: "Convert HEX color codes to RGB values",
+    icon: "palette",
+    howTo: [
+      "Enter HEX color code (#FF5733)",
+      "Click 'Convert'",
+      "Get RGB values",
+      "Copy converted color code"
+    ],
+    article: {
+      title: "HEX to RGB Color Conversion",
+      content: `Convert between HEX and RGB color formats instantly. Essential tool for web designers and developers.
+
+## Color Formats
+
+- HEX: #FF5733
+- RGB: rgb(255, 87, 51)
+- Percentage: rgb(100%, 34%, 20%)
+
+## When to Use
+
+- CSS styling
+- Design tools
+- Programming
+- Color specifications`,
+      relatedTools: ["rgb-to-hex-converter", "hex-to-hsl-converter", "rgb-to-cmyk-converter"]
+    }
+  },
+  {
+    id: "rgb-to-hex-converter",
+    title: "Color Converter (RGB to HEX)",
+    category: "Color Tools" as ToolCategory,
+    tags: ["color", "converter", "rgb", "hex"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "RGB to HEX Converter - Convert RGB to HEX Color",
+    metaDescription: "Convert RGB color values to HEX format. Simple RGB to HEX color converter. Free online tool.",
+    description: "Convert RGB color values to HEX codes",
+    icon: "palette",
+    howTo: [
+      "Enter RGB values (R, G, B)",
+      "Click 'Convert'",
+      "Get HEX color code",
+      "Use in your designs"
+    ],
+    article: {
+      title: "RGB to HEX Color Conversion",
+      content: `Easily convert RGB color values to HEX format for web development and design projects.
+
+## Understanding RGB
+
+RGB uses three values (0-255) for:
+- Red channel
+- Green channel
+- Blue channel
+
+## HEX Format
+
+HEX uses six characters:
+- First two: Red
+- Middle two: Green
+- Last two: Blue`,
+      relatedTools: ["hex-to-rgb-converter", "color-picker-screen", "gradient-generator"]
+    }
+  },
+  {
+    id: "hex-to-hsl-converter",
+    title: "Color Converter (HEX to HSL)",
+    category: "Color Tools" as ToolCategory,
+    tags: ["color", "converter", "hex", "hsl"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HEX to HSL Converter - Convert HEX to HSL Color",
+    metaDescription: "Convert HEX color codes to HSL format. Free HEX to HSL color converter online.",
+    description: "Convert HEX color codes to HSL values",
+    icon: "palette",
+    howTo: [
+      "Enter HEX color code",
+      "Click 'Convert to HSL'",
+      "Get HSL values",
+      "Use in CSS or design"
+    ],
+    article: {
+      title: "HEX to HSL Conversion",
+      content: `Convert HEX colors to HSL (Hue, Saturation, Lightness) format for easier color manipulation.
+
+## HSL Advantages
+
+- Intuitive color adjustments
+- Easy lightness control
+- Simple saturation changes
+- Better for animations
+
+## HSL Values
+
+- Hue: 0-360 degrees
+- Saturation: 0-100%
+- Lightness: 0-100%`,
+      relatedTools: ["hex-to-rgb-converter", "rgb-to-cmyk-converter", "gradient-generator"]
+    }
+  },
+  {
+    id: "rgb-to-cmyk-converter",
+    title: "Color Converter (RGB to CMYK)",
+    category: "Color Tools" as ToolCategory,
+    tags: ["color", "converter", "rgb", "cmyk", "print"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "RGB to CMYK Converter - Convert Screen to Print Colors",
+    metaDescription: "Convert RGB colors to CMYK for printing. Accurate RGB to CMYK color converter. Free online tool.",
+    description: "Convert RGB colors to CMYK for printing",
+    icon: "printer",
+    howTo: [
+      "Enter RGB color values",
+      "Click 'Convert to CMYK'",
+      "Get CMYK percentages",
+      "Use for print projects"
+    ],
+    article: {
+      title: "RGB to CMYK Conversion for Print",
+      content: `Convert screen colors (RGB) to print colors (CMYK) for accurate printing results.
+
+## RGB vs CMYK
+
+- RGB: Screen colors (additive)
+- CMYK: Print colors (subtractive)
+
+## CMYK Values
+
+- Cyan: 0-100%
+- Magenta: 0-100%
+- Yellow: 0-100%
+- Key (Black): 0-100%
+
+## Print Considerations
+
+- Colors may appear darker
+- Screen preview isn't exact
+- Test prints recommended`,
+      relatedTools: ["hex-to-rgb-converter", "color-picker-image", "color-palette-generator"]
+    }
+  },
+  {
+    id: "color-palette-generator",
+    title: "Color Palette Generator",
+    category: "Color Tools" as ToolCategory,
+    tags: ["color", "palette", "generator", "scheme"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Color Palette Generator - Create Color Schemes Online",
+    metaDescription: "Generate beautiful color palettes and schemes. Create complementary, analogous, and triadic colors. Free palette generator.",
+    description: "Generate harmonious color palettes and schemes",
+    icon: "palette",
+    howTo: [
+      "Select base color",
+      "Choose color scheme type",
+      "Generate palette",
+      "Export colors in various formats"
+    ],
+    article: {
+      title: "Create Beautiful Color Palettes",
+      content: `Generate harmonious color palettes using color theory principles. Perfect for web design, branding, and art projects.
+
+## Color Schemes
+
+- Complementary
+- Analogous
+- Triadic
+- Tetradic
+- Monochromatic
+- Split-complementary
+
+## Export Formats
+
+- HEX codes
+- RGB values
+- CSS variables
+- JSON data
+- Image file`,
+      relatedTools: ["gradient-generator", "color-picker-image", "hex-to-rgb-converter"]
+    }
+  },
+  {
+    id: "gradient-generator",
+    title: "Gradient Generator",
+    category: "Color Tools" as ToolCategory,
+    tags: ["gradient", "css", "generator", "color"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSS Gradient Generator - Create Beautiful Gradients",
+    metaDescription: "Generate CSS gradients online. Create linear and radial gradients. Free gradient generator with CSS code.",
+    description: "Create CSS gradients with visual editor",
+    icon: "gradient",
+    howTo: [
+      "Select gradient type (linear/radial)",
+      "Choose colors and stops",
+      "Adjust angle or position",
+      "Copy CSS code"
+    ],
+    article: {
+      title: "CSS Gradient Generator Tool",
+      content: `Create stunning CSS gradients with our visual editor. Generate linear, radial, and conic gradients instantly.
+
+## Gradient Types
+
+- Linear gradients
+- Radial gradients
+- Conic gradients
+- Repeating patterns
+
+## Customization
+
+- Multiple color stops
+- Angle adjustment
+- Position control
+- Opacity settings
+
+## CSS Output
+
+Get ready-to-use CSS code for:
+- Background gradients
+- Text gradients
+- Border gradients`,
+      relatedTools: ["css-gradient-generator", "color-palette-generator", "hex-to-rgb-converter"]
+    }
+  },
+  // CSS Generators
+  {
+    id: "css-box-shadow-generator",
+    title: "CSS Box-Shadow Generator",
+    category: "CSS Generators" as ToolCategory,
+    tags: ["css", "box-shadow", "generator", "shadow"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSS Box Shadow Generator - Create Box Shadows Online",
+    metaDescription: "Generate CSS box-shadow code with visual editor. Create beautiful shadows for your website. Free box shadow generator.",
+    description: "Generate CSS box-shadow code with visual preview",
+    icon: "box",
+    howTo: [
+      "Adjust shadow properties (offset, blur, spread)",
+      "Choose shadow color and opacity",
+      "Preview shadow in real-time",
+      "Copy CSS code"
+    ],
+    article: {
+      title: "Create CSS Box Shadows",
+      content: `Generate perfect box shadows with our visual editor. Create depth and dimension in your web designs.
+
+## Shadow Properties
+
+- Horizontal offset
+- Vertical offset
+- Blur radius
+- Spread radius
+- Color and opacity
+- Inset option
+
+## Multiple Shadows
+
+Layer multiple shadows for:
+- Complex effects
+- Neon glows
+- 3D appearances
+- Depth perception`,
+      relatedTools: ["css-border-radius-generator", "css-gradient-generator", "color-picker-screen"]
+    }
+  },
+  {
+    id: "css-border-radius-generator",
+    title: "CSS Border-Radius Generator",
+    category: "CSS Generators" as ToolCategory,
+    tags: ["css", "border-radius", "generator", "rounded"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSS Border Radius Generator - Create Rounded Corners",
+    metaDescription: "Generate CSS border-radius code online. Create rounded corners with visual editor. Free border radius generator.",
+    description: "Generate CSS border-radius for rounded corners",
+    icon: "square-rounded",
+    howTo: [
+      "Adjust corner radius values",
+      "Preview shape changes",
+      "Fine-tune individual corners",
+      "Copy CSS code"
+    ],
+    article: {
+      title: "CSS Border Radius Generator",
+      content: `Create perfect rounded corners with our visual border-radius generator. Design custom shapes easily.
+
+## Border Radius Options
+
+- Uniform radius (all corners)
+- Individual corner control
+- Elliptical corners
+- Complex organic shapes
+
+## CSS Output
+
+Get code for:
+- Simple rounded corners
+- Pill shapes
+- Custom border shapes
+- Circular elements`,
+      relatedTools: ["css-box-shadow-generator", "css-gradient-generator", "gradient-generator"]
+    }
+  },
+  {
+    id: "css-gradient-generator",
+    title: "CSS Gradient Generator",
+    category: "CSS Generators" as ToolCategory,
+    tags: ["css", "gradient", "generator", "background"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSS Gradient Generator - Create Gradient Backgrounds",
+    metaDescription: "Generate CSS gradient code with visual editor. Create linear, radial gradients. Free CSS gradient generator.",
+    description: "Create CSS gradient backgrounds with code generator",
+    icon: "gradient",
+    howTo: [
+      "Select gradient type",
+      "Add and arrange color stops",
+      "Adjust gradient direction",
+      "Copy CSS background code"
+    ],
+    article: {
+      title: "CSS Background Gradient Generator",
+      content: `Design stunning gradient backgrounds with our CSS generator. Perfect for modern web design.
+
+## Features
+
+- Multiple gradient types
+- Unlimited color stops
+- Angle controls
+- Live preview
+- Cross-browser CSS
+
+## Applications
+
+- Hero sections
+- Buttons and cards
+- Background patterns
+- Text effects`,
+      relatedTools: ["gradient-generator", "color-palette-generator", "css-box-shadow-generator"]
+    }
+  },
+  // Unit Converters
+  {
+    id: "length-converter",
+    title: "Unit Converter (Length)",
+    category: "Unit Converters" as ToolCategory,
+    tags: ["converter", "length", "distance", "unit"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Length Converter - Convert Distance Units Online",
+    metaDescription: "Convert length and distance units online. Convert meters, feet, miles, kilometers and more. Free length converter.",
+    description: "Convert between different length and distance units",
+    icon: "ruler",
+    howTo: [
+      "Enter value to convert",
+      "Select input unit (meters, feet, etc.)",
+      "Select output unit",
+      "View converted result"
+    ],
+    article: {
+      title: "Length and Distance Conversion",
+      content: `Convert between metric and imperial length units easily. Perfect for international projects and measurements.
+
+## Supported Units
+
+Metric:
+- Millimeters, Centimeters
+- Meters, Kilometers
+
+Imperial:
+- Inches, Feet
+- Yards, Miles
+
+Nautical:
+- Nautical miles
+
+## Common Conversions
+
+- 1 meter = 3.28 feet
+- 1 kilometer = 0.62 miles
+- 1 inch = 2.54 centimeters`,
+      relatedTools: ["weight-converter", "temperature-converter", "data-converter"]
+    }
+  },
+  {
+    id: "weight-converter",
+    title: "Unit Converter (Weight)",
+    category: "Unit Converters" as ToolCategory,
+    tags: ["converter", "weight", "mass", "unit"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Weight Converter - Convert Mass Units Online",
+    metaDescription: "Convert weight and mass units online. Convert kilograms, pounds, ounces and more. Free weight converter.",
+    description: "Convert between different weight and mass units",
+    icon: "scale",
+    howTo: [
+      "Enter weight value",
+      "Select from unit (kg, lbs, etc.)",
+      "Select to unit",
+      "Get instant conversion"
+    ],
+    article: {
+      title: "Weight and Mass Unit Conversion",
+      content: `Convert between metric and imperial weight units for cooking, shipping, and science.
+
+## Weight Units
+
+Metric:
+- Milligrams, Grams
+- Kilograms, Tonnes
+
+Imperial:
+- Ounces, Pounds
+- Stones, Tons
+
+## Common Conversions
+
+- 1 kilogram = 2.20 pounds
+- 1 pound = 16 ounces
+- 1 ounce = 28.35 grams`,
+      relatedTools: ["length-converter", "temperature-converter", "bmi-calculator"]
+    }
+  },
+  {
+    id: "temperature-converter",
+    title: "Unit Converter (Temperature)",
+    category: "Unit Converters" as ToolCategory,
+    tags: ["converter", "temperature", "celsius", "fahrenheit"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Temperature Converter - Convert Celsius, Fahrenheit, Kelvin",
+    metaDescription: "Convert temperature units online. Convert between Celsius, Fahrenheit, and Kelvin. Free temperature converter.",
+    description: "Convert between Celsius, Fahrenheit, and Kelvin",
+    icon: "thermometer",
+    howTo: [
+      "Enter temperature value",
+      "Select current scale (°C, °F, K)",
+      "Select target scale",
+      "View converted temperature"
+    ],
+    article: {
+      title: "Temperature Unit Conversion",
+      content: `Convert between Celsius, Fahrenheit, and Kelvin temperature scales instantly.
+
+## Temperature Scales
+
+- Celsius (°C): Metric standard
+- Fahrenheit (°F): US standard
+- Kelvin (K): Scientific scale
+
+## Conversion Formulas
+
+- °F = (°C × 9/5) + 32
+- °C = (°F - 32) × 5/9
+- K = °C + 273.15
+
+## Common References
+
+- Water freezes: 0°C, 32°F, 273K
+- Body temp: 37°C, 98.6°F, 310K
+- Water boils: 100°C, 212°F, 373K`,
+      relatedTools: ["length-converter", "weight-converter", "scientific-calculator"]
+    }
+  },
+  {
+    id: "data-converter",
+    title: "Unit Converter (Data)",
+    category: "Unit Converters" as ToolCategory,
+    tags: ["converter", "data", "bytes", "storage"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Data Size Converter - Convert Bytes, KB, MB, GB, TB",
+    metaDescription: "Convert data storage units online. Convert bytes, kilobytes, megabytes, gigabytes. Free data converter.",
+    description: "Convert between data storage units",
+    icon: "hard-drive",
+    howTo: [
+      "Enter data size value",
+      "Select from unit (Bytes, KB, MB, etc.)",
+      "Select to unit",
+      "Get converted value"
+    ],
+    article: {
+      title: "Data Storage Unit Conversion",
+      content: `Convert between different data storage units for file sizes and storage capacity.
+
+## Data Units
+
+- Bytes (B)
+- Kilobytes (KB) = 1,024 B
+- Megabytes (MB) = 1,024 KB
+- Gigabytes (GB) = 1,024 MB
+- Terabytes (TB) = 1,024 GB
+- Petabytes (PB) = 1,024 TB
+
+## Binary vs Decimal
+
+- Binary: 1 KB = 1,024 bytes
+- Decimal: 1 KB = 1,000 bytes
+
+## Use Cases
+
+- File size calculations
+- Storage planning
+- Download estimates`,
+      relatedTools: ["length-converter", "website-speed-test", "compress-pdf"]
+    }
+  },
+  {
+    id: "timezone-converter",
+    title: "Time Zone Converter",
+    category: "Time & Date Tools" as ToolCategory,
+    tags: ["timezone", "converter", "time", "zone"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Time Zone Converter - Convert Time Between Time Zones",
+    metaDescription: "Convert time between different time zones. Find meeting times across time zones. Free timezone converter.",
+    description: "Convert time between different time zones",
+    icon: "globe",
+    howTo: [
+      "Enter time to convert",
+      "Select from time zone",
+      "Select to time zone",
+      "View converted time"
+    ],
+    article: {
+      title: "Time Zone Conversion Tool",
+      content: `Convert time between time zones for scheduling meetings, calls, and events across the globe.
+
+## Features
+
+- Real-time conversions
+- Daylight saving time aware
+- All world time zones
+- Meeting planner
+
+## Common Time Zones
+
+- UTC/GMT
+- EST/EDT (New York)
+- PST/PDT (Los Angeles)
+- CET/CEST (Paris)
+- JST (Tokyo)
+- AEST/AEDT (Sydney)
+
+## Use Cases
+
+- Schedule international meetings
+- Plan travel
+- Coordinate remote teams`,
+      relatedTools: ["world-clock", "date-calculator", "age-calculator"]
+    }
+  },
+  // Time & Date Tools
+  {
+    id: "age-calculator",
+    title: "Age Calculator",
+    category: "Time & Date Tools" as ToolCategory,
+    tags: ["age", "calculator", "date", "birthday"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Age Calculator - Calculate Your Exact Age Online",
+    metaDescription: "Calculate your exact age in years, months, days, hours. Find age difference between dates. Free age calculator.",
+    description: "Calculate exact age from birth date",
+    icon: "calendar",
+    howTo: [
+      "Enter birth date",
+      "Select calculation date (default: today)",
+      "Click 'Calculate Age'",
+      "View age in years, months, days"
+    ],
+    article: {
+      title: "Calculate Your Exact Age",
+      content: `Calculate your precise age in years, months, days, hours, and even seconds.
+
+## What We Calculate
+
+- Years, months, days
+- Total days lived
+- Hours and minutes
+- Next birthday countdown
+
+## Additional Features
+
+- Age at specific date
+- Age difference calculator
+- Zodiac sign finder
+- Leap years counted`,
+      relatedTools: ["date-calculator", "world-clock", "timezone-converter"]
+    }
+  },
+  {
+    id: "date-calculator",
+    title: "Date Calculator",
+    category: "Time & Date Tools" as ToolCategory,
+    tags: ["date", "calculator", "difference", "duration"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Date Calculator - Calculate Date Difference and Duration",
+    metaDescription: "Calculate difference between dates. Add or subtract days from dates. Free date calculator tool.",
+    description: "Calculate date differences and add/subtract days",
+    icon: "calendar-days",
+    howTo: [
+      "Enter start and end dates",
+      "Or add/subtract days from a date",
+      "Click 'Calculate'",
+      "View duration in various units"
+    ],
+    article: {
+      title: "Date Calculation and Duration",
+      content: `Calculate the difference between dates or add/subtract days from any date.
+
+## Calculations
+
+- Date difference
+- Add days to date
+- Subtract days from date
+- Business days counter
+- Week counter
+
+## Results Format
+
+- Years, months, days
+- Total days
+- Working days
+- Weeks and months`,
+      relatedTools: ["age-calculator", "world-clock", "timezone-converter"]
+    }
+  },
+  {
+    id: "world-clock",
+    title: "World Clock",
+    category: "Time & Date Tools" as ToolCategory,
+    tags: ["clock", "time", "world", "timezone"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "World Clock - Check Time in Different Time Zones",
+    metaDescription: "View current time in cities worldwide. World clock with multiple time zones. Free world time tool.",
+    description: "View current time in multiple time zones",
+    icon: "clock",
+    howTo: [
+      "View default major cities",
+      "Add custom cities",
+      "Compare time zones",
+      "See UTC offset and date"
+    ],
+    article: {
+      title: "World Time Zone Clock",
+      content: `View current time across multiple cities and time zones simultaneously.
+
+## Features
+
+- Real-time updates
+- Major world cities
+- Add custom locations
+- UTC/GMT display
+- Date and time
+
+## Use Cases
+
+- Schedule meetings
+- Check business hours
+- Plan international calls
+- Coordinate with remote teams`,
+      relatedTools: ["timezone-converter", "date-calculator", "stopwatch"]
+    }
+  },
+  {
+    id: "stopwatch-tool",
+    title: "Stopwatch",
+    category: "Time & Date Tools" as ToolCategory,
+    tags: ["stopwatch", "timer", "time", "measure"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Stopwatch - Accurate Time Measurement Tool",
+    metaDescription: "Free online stopwatch with lap times. Measure time accurately. Simple and precise stopwatch tool.",
+    description: "Measure time intervals with precision",
+    icon: "timer",
+    howTo: [
+      "Click 'Start' to begin timing",
+      "Click 'Lap' to record intervals",
+      "Click 'Stop' to pause",
+      "Click 'Reset' to clear"
+    ],
+    article: {
+      title: "Online Stopwatch Tool",
+      content: `Accurate online stopwatch for timing events, workouts, cooking, and more.
+
+## Features
+
+- Start/Stop/Reset
+- Lap time recording
+- Millisecond precision
+- Multiple lap times
+- Time history
+
+## Use Cases
+
+- Sports timing
+- Cooking
+- Productivity tracking
+- Workout intervals`,
+      relatedTools: ["timer-tool", "world-clock", "date-calculator"]
+    }
+  },
+  {
+    id: "timer-tool",
+    title: "Timer",
+    category: "Time & Date Tools" as ToolCategory,
+    tags: ["timer", "countdown", "alarm", "reminder"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Timer - Countdown Timer with Alarm",
+    metaDescription: "Set countdown timer online. Timer with alarm notification. Free online timer tool.",
+    description: "Set countdown timers with alarm notifications",
+    icon: "clock-alert",
+    howTo: [
+      "Set hours, minutes, seconds",
+      "Click 'Start Timer'",
+      "Timer counts down",
+      "Alarm sounds when complete"
+    ],
+    article: {
+      title: "Online Countdown Timer",
+      content: `Set custom countdown timers with audio alerts for productivity, cooking, and time management.
+
+## Timer Features
+
+- Custom duration
+- Audio alarm
+- Visual countdown
+- Pause/Resume
+- Multiple timers
+
+## Applications
+
+- Pomodoro technique
+- Cooking timer
+- Break reminders
+- Meeting duration`,
+      relatedTools: ["stopwatch-tool", "world-clock", "productivity-tools"]
+    }
+  },
+  // Calculators
+  {
+    id: "online-calculator",
+    title: "Online Calculator",
+    category: "Calculators" as ToolCategory,
+    tags: ["calculator", "math", "arithmetic", "basic"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Calculator - Free Basic Calculator Tool",
+    metaDescription: "Free online calculator for basic math operations. Simple and fast calculator with memory functions.",
+    description: "Basic online calculator for everyday calculations",
+    icon: "calculator",
+    howTo: [
+      "Click numbers and operators",
+      "Or type on your keyboard",
+      "Press = or Enter for result",
+      "Use C to clear"
+    ],
+    article: {
+      title: "Basic Online Calculator",
+      content: `Simple yet powerful online calculator for all your basic math needs.
+
+## Operations
+
+- Addition (+)
+- Subtraction (-)
+- Multiplication (×)
+- Division (÷)
+- Percentage (%)
+- Square root
+
+## Features
+
+- Keyboard support
+- Memory functions (M+, M-, MR, MC)
+- Clear and delete
+- Decimal calculations`,
+      relatedTools: ["scientific-calculator", "percentage-calculator", "unit-converter"]
+    }
+  },
+  {
+    id: "scientific-calculator",
+    title: "Scientific Calculator",
+    category: "Calculators" as ToolCategory,
+    tags: ["calculator", "scientific", "advanced", "math"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Scientific Calculator Online - Advanced Math Calculator",
+    metaDescription: "Free scientific calculator online. Trigonometry, logarithms, exponents. Advanced math calculator tool.",
+    description: "Advanced scientific calculator for complex calculations",
+    icon: "function-square",
+    howTo: [
+      "Use advanced functions (sin, cos, log, etc.)",
+      "Calculate powers and roots",
+      "Work with pi and e constants",
+      "Access scientific notation"
+    ],
+    article: {
+      title: "Scientific Calculator Tool",
+      content: `Advanced calculator with scientific functions for mathematics, engineering, and science.
+
+## Functions
+
+Trigonometry:
+- sin, cos, tan
+- asin, acos, atan
+- Degrees/Radians
+
+Logarithms:
+- log (base 10)
+- ln (natural log)
+- Custom base
+
+Powers & Roots:
+- x², x³, xʸ
+- √, ∛
+- eˣ, 10ˣ
+
+## Constants
+
+- π (pi)
+- e (Euler's number)`,
+      relatedTools: ["online-calculator", "percentage-calculator", "unit-converter"]
+    }
+  },
+  {
+    id: "bmi-calculator",
+    title: "BMI Calculator",
+    category: "Calculators" as ToolCategory,
+    tags: ["bmi", "health", "calculator", "weight"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "BMI Calculator - Calculate Body Mass Index",
+    metaDescription: "Calculate your BMI (Body Mass Index) online. Check if you're underweight, normal, or overweight. Free BMI calculator.",
+    description: "Calculate Body Mass Index from height and weight",
+    icon: "heart-pulse",
+    howTo: [
+      "Enter your weight",
+      "Enter your height",
+      "Select metric or imperial units",
+      "View BMI and health category"
+    ],
+    article: {
+      title: "BMI Calculator and Health Guide",
+      content: `Calculate your Body Mass Index to assess healthy weight ranges for your height.
+
+## BMI Categories
+
+- Underweight: < 18.5
+- Normal weight: 18.5 - 24.9
+- Overweight: 25 - 29.9
+- Obese: ≥ 30
+
+## BMI Formula
+
+- Metric: weight(kg) / height(m)²
+- Imperial: [weight(lb) / height(in)²] × 703
+
+## Health Note
+
+BMI is a screening tool, not a diagnostic. Consult healthcare professionals for personalized advice.`,
+      relatedTools: ["weight-converter", "age-calculator", "online-calculator"]
+    }
+  },
+  {
+    id: "loan-calculator",
+    title: "Loan Calculator",
+    category: "Calculators" as ToolCategory,
+    tags: ["loan", "calculator", "finance", "interest"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Loan Calculator - Calculate Loan Payments and Interest",
+    metaDescription: "Calculate loan payments, interest, and amortization schedule. Free loan calculator for mortgages, auto loans, personal loans.",
+    description: "Calculate loan payments and total interest",
+    icon: "landmark",
+    howTo: [
+      "Enter loan amount",
+      "Set interest rate",
+      "Choose loan term",
+      "View monthly payment and total interest"
+    ],
+    article: {
+      title: "Loan Payment Calculator",
+      content: `Calculate monthly payments and total interest for any loan. Plan your finances with accurate projections.
+
+## Calculations
+
+- Monthly payment amount
+- Total interest paid
+- Total amount paid
+- Amortization schedule
+- Payoff date
+
+## Loan Types
+
+- Personal loans
+- Auto loans
+- Student loans
+- Business loans
+
+## Factors Affecting Payment
+
+- Loan principal
+- Interest rate
+- Loan term
+- Payment frequency`,
+      relatedTools: ["mortgage-calculator", "percentage-calculator", "discount-calculator"]
+    }
+  },
+  {
+    id: "mortgage-calculator",
+    title: "Mortgage Calculator",
+    category: "Calculators" as ToolCategory,
+    tags: ["mortgage", "calculator", "home", "loan"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Mortgage Calculator - Calculate Home Loan Payments",
+    metaDescription: "Calculate mortgage payments including principal, interest, taxes, and insurance. Free mortgage calculator.",
+    description: "Calculate mortgage payments including taxes and insurance",
+    icon: "home",
+    howTo: [
+      "Enter home price",
+      "Set down payment",
+      "Enter interest rate and term",
+      "Add property tax and insurance",
+      "View total monthly payment"
+    ],
+    article: {
+      title: "Mortgage Payment Calculator",
+      content: `Calculate your total monthly mortgage payment including principal, interest, property taxes, and insurance (PITI).
+
+## Payment Components
+
+- Principal & Interest
+- Property taxes
+- Home insurance
+- PMI (if applicable)
+- HOA fees (optional)
+
+## Calculations
+
+- Monthly payment
+- Total interest over term
+- Amortization schedule
+- Equity buildup
+
+## Planning Tips
+
+- 20% down payment avoids PMI
+- Consider property tax rates
+- Factor in all costs`,
+      relatedTools: ["loan-calculator", "percentage-calculator", "discount-calculator"]
+    }
+  },
+  {
+    id: "percentage-calculator",
+    title: "Percentage Calculator",
+    category: "Calculators" as ToolCategory,
+    tags: ["percentage", "calculator", "percent", "math"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Percentage Calculator - Calculate Percentages Online",
+    metaDescription: "Calculate percentages, percentage increase/decrease, and percentage of numbers. Free percentage calculator.",
+    description: "Calculate percentages and percentage changes",
+    icon: "percent",
+    howTo: [
+      "Choose calculation type",
+      "Enter values",
+      "View percentage result",
+      "Get step-by-step solution"
+    ],
+    article: {
+      title: "Percentage Calculator Tool",
+      content: `Calculate percentages easily for discounts, tips, taxes, and more.
+
+## Calculation Types
+
+- What is X% of Y?
+- X is what % of Y?
+- X is Y% of what?
+- Percentage increase/decrease
+- Percentage change
+
+## Common Uses
+
+- Calculate discounts
+- Figure tips
+- Determine tax amounts
+- Compare values
+- Track changes
+
+## Formulas
+
+- Percentage: (part/whole) × 100
+- Increase: [(new-old)/old] × 100`,
+      relatedTools: ["discount-calculator", "sales-tax-calculator", "online-calculator"]
+    }
+  },
+  {
+    id: "sales-tax-calculator",
+    title: "Sales Tax Calculator",
+    category: "Calculators" as ToolCategory,
+    tags: ["tax", "calculator", "sales", "vat"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Sales Tax Calculator - Calculate Tax on Purchases",
+    metaDescription: "Calculate sales tax and total price including tax. Add or remove tax from price. Free sales tax calculator.",
+    description: "Calculate sales tax and total price",
+    icon: "receipt",
+    howTo: [
+      "Enter item price",
+      "Set tax rate (%)",
+      "View tax amount",
+      "See total price with tax"
+    ],
+    article: {
+      title: "Sales Tax Calculator",
+      content: `Quickly calculate sales tax amounts and total prices for purchases.
+
+## Calculations
+
+- Add tax to price
+- Remove tax from total
+- Find tax rate
+- Calculate tax amount
+
+## Tax Types
+
+- Sales tax
+- VAT (Value Added Tax)
+- GST (Goods & Services Tax)
+- Use tax
+
+## Business Use
+
+- Price quotes
+- Invoice preparation
+- Receipt generation
+- Tax reporting`,
+      relatedTools: ["percentage-calculator", "discount-calculator", "online-calculator"]
+    }
+  },
+  {
+    id: "discount-calculator",
+    title: "Discount Calculator",
+    category: "Calculators" as ToolCategory,
+    tags: ["discount", "calculator", "sale", "savings"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Discount Calculator - Calculate Sale Price and Savings",
+    metaDescription: "Calculate discounted prices and savings. Find final price after discount. Free discount calculator.",
+    description: "Calculate discounted prices and savings amount",
+    icon: "tag",
+    howTo: [
+      "Enter original price",
+      "Set discount percentage",
+      "View savings amount",
+      "See final discounted price"
+    ],
+    article: {
+      title: "Calculate Discounts and Savings",
+      content: `Calculate sale prices and how much you save with discounts.
+
+## Calculations
+
+- Final sale price
+- Amount saved
+- Discount percentage
+- Multiple discounts
+
+## Shopping Helper
+
+- Compare deals
+- Calculate coupons
+- Stack discounts
+- Budget planning
+
+## Discount Types
+
+- Percentage off
+- Dollar amount off
+- Buy one get one
+- Clearance sales`,
+      relatedTools: ["percentage-calculator", "sales-tax-calculator", "online-calculator"]
+    }
+  },
+  // Productivity Tools
+  {
+    id: "online-notepad",
+    title: "Online Notepad",
+    category: "Productivity Tools" as ToolCategory,
+    tags: ["notepad", "text", "editor", "notes"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Notepad - Simple Text Editor in Browser",
+    metaDescription: "Free online notepad for quick notes and text editing. Save notes to browser or download as file. Simple text editor.",
+    description: "Simple online text editor for quick notes",
+    icon: "file-edit",
+    howTo: [
+      "Start typing your notes",
+      "Auto-saves to browser storage",
+      "Download as .txt file",
+      "Clear or create new note"
+    ],
+    article: {
+      title: "Online Notepad Tool",
+      content: `Quick and simple online notepad for jotting down ideas, notes, and text without installation.
+
+## Features
+
+- Instant access
+- Auto-save to browser
+- Download as file
+- Character/word count
+- No registration needed
+
+## Use Cases
+
+- Quick notes
+- Draft emails
+- Copy/paste workspace
+- Temporary text storage
+- Code snippets`,
+      relatedTools: ["online-whiteboard", "text-summarizer", "markdown-editor"]
+    }
+  },
+  {
+    id: "online-whiteboard",
+    title: "Online Whiteboard",
+    category: "Productivity Tools" as ToolCategory,
+    tags: ["whiteboard", "draw", "collaborate", "sketch"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Whiteboard - Free Digital Drawing Board",
+    metaDescription: "Free online whiteboard for drawing, sketching, and brainstorming. Digital whiteboard tool with drawing tools.",
+    description: "Digital whiteboard for drawing and brainstorming",
+    icon: "pencil",
+    howTo: [
+      "Select drawing tool (pen, highlighter, eraser)",
+      "Choose colors",
+      "Draw on canvas",
+      "Save or export as image"
+    ],
+    article: {
+      title: "Digital Whiteboard Tool",
+      content: `Free online whiteboard for visual brainstorming, drawing, and collaborative planning.
+
+## Drawing Tools
+
+- Pen and pencil
+- Highlighter
+- Shapes (circle, rectangle, line)
+- Text tool
+- Eraser
+
+## Features
+
+- Infinite canvas
+- Color palette
+- Undo/Redo
+- Export as image
+- Clear canvas
+
+## Applications
+
+- Brainstorming
+- Teaching/Tutoring
+- Sketching ideas
+- Visual planning`,
+      relatedTools: ["online-notepad", "image-editor", "screenshot-website"]
+    }
+  },
+  {
+    id: "online-poll-maker",
+    title: "Online Poll Maker",
+    category: "Productivity Tools" as ToolCategory,
+    tags: ["poll", "survey", "vote", "questionnaire"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Poll Maker - Create Free Polls and Surveys",
+    metaDescription: "Create online polls and surveys for free. Get instant results. Simple poll maker tool.",
+    description: "Create online polls and collect votes",
+    icon: "clipboard-list",
+    howTo: [
+      "Enter your poll question",
+      "Add answer options",
+      "Generate poll link",
+      "Share and collect votes"
+    ],
+    article: {
+      title: "Create Online Polls",
+      content: `Create polls and surveys to gather opinions and feedback from your audience.
+
+## Poll Types
+
+- Multiple choice
+- Yes/No questions
+- Rating scales
+- Ranking questions
+
+## Features
+
+- Real-time results
+- Shareable links
+- Vote tracking
+- Results visualization
+- Anonymous voting option
+
+## Use Cases
+
+- Team decisions
+- Event planning
+- Customer feedback
+- Quick surveys`,
+      relatedTools: ["online-survey-maker", "form-builder", "share-link"]
+    }
+  },
+  {
+    id: "online-survey-maker",
+    title: "Online Survey Maker",
+    category: "Productivity Tools" as ToolCategory,
+    tags: ["survey", "form", "questionnaire", "feedback"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Survey Maker - Create Surveys for Free",
+    metaDescription: "Create online surveys and questionnaires. Collect responses and analyze results. Free survey maker.",
+    description: "Create comprehensive surveys and questionnaires",
+    icon: "file-question",
+    howTo: [
+      "Add survey questions",
+      "Choose question types",
+      "Customize survey design",
+      "Share survey link",
+      "Analyze responses"
+    ],
+    article: {
+      title: "Survey Creation Tool",
+      content: `Design professional surveys to collect detailed feedback and data.
+
+## Question Types
+
+- Multiple choice
+- Text responses
+- Rating scales
+- Checkboxes
+- Dropdown menus
+- Matrix questions
+
+## Features
+
+- Logic branching
+- Custom themes
+- Response limits
+- Data export
+- Analytics dashboard
+
+## Applications
+
+- Customer satisfaction
+- Market research
+- Employee feedback
+- Event registration`,
+      relatedTools: ["online-poll-maker", "form-builder", "data-analyzer"]
+    }
+  },
+  {
+    id: "random-name-picker",
+    title: "Random Name Picker",
+    category: "Productivity Tools" as ToolCategory,
+    tags: ["random", "picker", "name", "selector"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Random Name Picker - Pick Names Randomly from List",
+    metaDescription: "Pick random names from a list. Fair random selection tool for contests, giveaways, classroom. Free name picker.",
+    description: "Pick random names from a list fairly",
+    icon: "user-check",
+    howTo: [
+      "Enter list of names (one per line)",
+      "Click 'Pick Random Name'",
+      "View selected name",
+      "Remove picked names or keep them"
+    ],
+    article: {
+      title: "Random Name Selection Tool",
+      content: `Fairly select random names for contests, giveaways, classroom activities, and team selection.
+
+## Features
+
+- True random selection
+- Remove picked names
+- Pick multiple winners
+- Save name lists
+- Export results
+
+## Use Cases
+
+- Giveaway winners
+- Classroom selection
+- Team formation
+- Prize drawings
+- Random assignments`,
+      relatedTools: ["dice-roller", "coin-flipper", "random-generator"]
+    }
+  },
+  {
+    id: "dice-roller",
+    title: "Dice Roller",
+    category: "Productivity Tools" as ToolCategory,
+    tags: ["dice", "roller", "random", "game"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Dice Roller Online - Roll Virtual Dice",
+    metaDescription: "Roll virtual dice online. Multiple dice types (D4, D6, D8, D10, D12, D20). Free online dice roller.",
+    description: "Roll virtual dice for games and decisions",
+    icon: "dice-5",
+    howTo: [
+      "Select dice type (D6, D20, etc.)",
+      "Choose number of dice",
+      "Click 'Roll'",
+      "View results and sum"
+    ],
+    article: {
+      title: "Virtual Dice Roller",
+      content: `Roll dice online for games, probability exercises, and random number generation.
+
+## Dice Types
+
+- D4 (4-sided)
+- D6 (6-sided, standard)
+- D8 (8-sided)
+- D10 (10-sided)
+- D12 (12-sided)
+- D20 (20-sided)
+- D100 (percentile)
+
+## Features
+
+- Multiple dice rolls
+- Roll history
+- Sum calculation
+- Custom dice combinations
+
+## Use Cases
+
+- Board games
+- RPG games
+- Random decisions
+- Probability demos`,
+      relatedTools: ["coin-flipper", "random-name-picker", "random-number-generator"]
+    }
+  },
+  {
+    id: "coin-flipper",
+    title: "Coin Flipper",
+    category: "Productivity Tools" as ToolCategory,
+    tags: ["coin", "flip", "random", "heads", "tails"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Coin Flipper Online - Flip Virtual Coin",
+    metaDescription: "Flip a virtual coin online. Get heads or tails randomly. Simple coin flip tool for quick decisions.",
+    description: "Flip a virtual coin for quick decisions",
+    icon: "coins",
+    howTo: [
+      "Click 'Flip Coin'",
+      "Watch coin animation",
+      "Get Heads or Tails result",
+      "Flip again as needed"
+    ],
+    article: {
+      title: "Virtual Coin Flip Tool",
+      content: `Flip a virtual coin for 50/50 decisions, games, or probability demonstrations.
+
+## Features
+
+- Animated flip
+- True random results
+- Flip history
+- Statistics tracker
+- Multiple flips
+
+## Applications
+
+- Quick decisions
+- Sports coin toss
+- Probability teaching
+- Fair choices
+- Game start selection`,
+      relatedTools: ["dice-roller", "random-name-picker", "random-number-generator"]
+    }
+  },
+  // Sharing & URL Tools
+  {
+    id: "online-clipboard",
+    title: "Online Clipboard",
+    category: "Sharing & URL Tools" as ToolCategory,
+    tags: ["clipboard", "copy", "paste", "share"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Clipboard - Share Text Between Devices",
+    metaDescription: "Share text and clipboard content between devices. Online clipboard for easy copy-paste across computers.",
+    description: "Share clipboard content across devices",
+    icon: "clipboard",
+    howTo: [
+      "Paste or type your text",
+      "Get unique sharing link",
+      "Access from any device",
+      "Content auto-expires after 24 hours"
+    ],
+    article: {
+      title: "Online Clipboard Sharing",
+      content: `Easily share text and clipboard content between your devices or with others.
+
+## Features
+
+- Cross-device access
+- Secure links
+- Auto-expiration
+- No registration
+- Password protection option
+
+## Use Cases
+
+- Transfer text between devices
+- Share code snippets
+- Quick text sharing
+- Cross-platform clipboard`,
+      relatedTools: ["share-text-online", "url-shortener", "qr-code-generator"]
+    }
+  },
+  {
+    id: "share-text-online",
+    title: "Share Text Online",
+    category: "Sharing & URL Tools" as ToolCategory,
+    tags: ["share", "text", "paste", "bin"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Share Text Online - Create Shareable Text Links",
+    metaDescription: "Share text online with unique links. Create paste bins and share content easily. Free text sharing tool.",
+    description: "Create shareable links for text content",
+    icon: "share-2",
+    howTo: [
+      "Paste your text or code",
+      "Set expiration time (optional)",
+      "Get shareable link",
+      "Share link with others"
+    ],
+    article: {
+      title: "Text Sharing Tool",
+      content: `Share text, code, and notes via simple links. Perfect for collaboration and quick sharing.
+
+## Features
+
+- Instant link generation
+- Syntax highlighting for code
+- Custom expiration
+- View count tracking
+- Download option
+
+## Applications
+
+- Code sharing
+- Collaboration
+- Bug reports
+- Documentation snippets
+- Quick notes sharing`,
+      relatedTools: ["online-clipboard", "share-files-online", "url-shortener"]
+    }
+  },
+  {
+    id: "share-files-online",
+    title: "Share Files Online (Temp)",
+    category: "Sharing & URL Tools" as ToolCategory,
+    tags: ["share", "files", "upload", "transfer"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Share Files Online - Temporary File Sharing",
+    metaDescription: "Share files online temporarily. Fast file sharing with download links. Free temporary file sharing.",
+    description: "Share files temporarily with download links",
+    icon: "upload",
+    howTo: [
+      "Upload your file",
+      "Set expiration time",
+      "Get download link",
+      "Share link for downloads"
+    ],
+    article: {
+      title: "Temporary File Sharing",
+      content: `Share files quickly with temporary download links. No registration required.
+
+## Features
+
+- Fast uploads
+- Temporary storage
+- Download tracking
+- Password protection
+- Auto-deletion
+
+## File Types
+
+- Documents
+- Images
+- Archives
+- Videos
+- Any file type
+
+## Security
+
+- Encrypted transfer
+- Automatic deletion
+- Optional passwords
+- Limited download counts`,
+      relatedTools: ["online-clipboard", "share-text-online", "url-shortener"]
+    }
+  },
+  {
+    id: "url-shortener",
+    title: "URL Shortener",
+    category: "Sharing & URL Tools" as ToolCategory,
+    tags: ["url", "shortener", "link", "tiny"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "URL Shortener - Create Short Links Online",
+    metaDescription: "Shorten long URLs into short links. Track clicks and manage links. Free URL shortener tool.",
+    description: "Shorten long URLs into compact links",
+    icon: "link",
+    howTo: [
+      "Paste long URL",
+      "Click 'Shorten'",
+      "Get short link",
+      "Copy and share"
+    ],
+    article: {
+      title: "URL Link Shortener",
+      content: `Create short, memorable links from long URLs. Perfect for social media, marketing, and clean sharing.
+
+## Features
+
+- Instant shortening
+- Custom aliases
+- Click tracking
+- QR code generation
+- Link management
+
+## Benefits
+
+- Clean, shareable links
+- Social media friendly
+- Track engagement
+- Easy to remember
+- Professional appearance
+
+## Use Cases
+
+- Social media posts
+- Email campaigns
+- Print materials
+- SMS messages`,
+      relatedTools: ["qr-code-generator", "share-text-online", "link-tracker"]
+    }
+  },
+  // Text Analysis Tools
+  {
+    id: "readability-checker",
+    title: "Readability Checker",
+    category: "Text Analysis" as ToolCategory,
+    tags: ["readability", "text", "analysis", "grade"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Readability Checker - Analyze Text Reading Level",
+    metaDescription: "Check text readability and reading level. Flesch-Kincaid score and grade level analysis. Free readability tool.",
+    description: "Analyze text readability and reading level",
+    icon: "book-open-check",
+    howTo: [
+      "Paste your text content",
+      "Click 'Check Readability'",
+      "View readability scores",
+      "Get improvement suggestions"
+    ],
+    article: {
+      title: "Text Readability Analysis",
+      content: `Analyze your text's readability to ensure it reaches your target audience effectively.
+
+## Readability Metrics
+
+- Flesch Reading Ease
+- Flesch-Kincaid Grade Level
+- SMOG Index
+- Coleman-Liau Index
+- Average sentence length
+- Average word length
+
+## Score Interpretation
+
+- 90-100: Very easy (5th grade)
+- 80-90: Easy (6th grade)
+- 70-80: Fairly easy (7th grade)
+- 60-70: Standard (8th-9th grade)
+- 50-60: Fairly difficult (10th-12th grade)
+
+## Improvement Tips
+
+- Shorten sentences
+- Use simpler words
+- Break up paragraphs
+- Remove jargon`,
+      relatedTools: ["grammar-checker", "spell-checker", "text-analyzer"]
+    }
+  },
+  {
+    id: "plagiarism-checker",
+    title: "Plagiarism Checker",
+    category: "Text Analysis" as ToolCategory,
+    tags: ["plagiarism", "checker", "originality", "duplicate"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Plagiarism Checker - Check Content Originality",
+    metaDescription: "Check text for plagiarism and duplicate content. Free plagiarism detection tool for students and writers.",
+    description: "Check content for plagiarism and originality",
+    icon: "file-search",
+    howTo: [
+      "Paste text to check",
+      "Click 'Check Plagiarism'",
+      "Review similarity report",
+      "View matched sources"
+    ],
+    article: {
+      title: "Plagiarism Detection Tool",
+      content: `Detect copied content and ensure originality of your writing. Essential for academic and professional work.
+
+## What We Check
+
+- Web content matches
+- Published documents
+- Academic papers
+- Paraphrased content
+
+## Results
+
+- Plagiarism percentage
+- Matched sources
+- Highlighted duplicates
+- Originality score
+
+## Use Cases
+
+- Academic papers
+- Blog content
+- Article writing
+- SEO content`,
+      relatedTools: ["grammar-checker", "text-comparison", "readability-checker"]
+    }
+  },
+  {
+    id: "grammar-checker",
+    title: "Grammar Checker",
+    category: "Text Analysis" as ToolCategory,
+    tags: ["grammar", "checker", "spelling", "writing"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Grammar Checker - Fix Grammar and Spelling Errors",
+    metaDescription: "Check grammar, spelling, and punctuation. Free grammar checker tool with suggestions.",
+    description: "Check and fix grammar and spelling errors",
+    icon: "spell-check",
+    howTo: [
+      "Paste or type your text",
+      "Click 'Check Grammar'",
+      "Review errors and suggestions",
+      "Apply corrections"
+    ],
+    article: {
+      title: "Grammar and Spell Checker",
+      content: `Improve your writing with comprehensive grammar and spelling checks.
+
+## Error Detection
+
+- Grammar mistakes
+- Spelling errors
+- Punctuation issues
+- Style suggestions
+- Word choice
+
+## Features
+
+- Real-time checking
+- Detailed explanations
+- Correction suggestions
+- Writing style tips
+
+## Benefits
+
+- Professional writing
+- Error-free content
+- Better communication
+- Improved clarity`,
+      relatedTools: ["spell-checker", "readability-checker", "text-formatter"]
+    }
+  },
+  {
+    id: "spell-checker",
+    title: "Spell Checker",
+    category: "Text Analysis" as ToolCategory,
+    tags: ["spell", "checker", "spelling", "typo"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Spell Checker - Check Spelling Online Free",
+    metaDescription: "Check spelling errors online. Free spell checker with corrections. Find and fix typos instantly.",
+    description: "Check spelling errors and typos",
+    icon: "a-large-small",
+    howTo: [
+      "Enter text to check",
+      "Click 'Check Spelling'",
+      "Review misspelled words",
+      "Accept corrections"
+    ],
+    article: {
+      title: "Online Spell Checker",
+      content: `Quickly find and fix spelling errors in your text.
+
+## Features
+
+- Instant spell check
+- Dictionary suggestions
+- Custom dictionary
+- Multiple languages
+- Typo detection
+
+## Error Types
+
+- Misspelled words
+- Typos
+- Wrong homophones
+- Contextual errors`,
+      relatedTools: ["grammar-checker", "text-formatter", "readability-checker"]
+    }
+  },
+  {
+    id: "article-spinner",
+    title: "Article Spinner",
+    category: "Text Analysis" as ToolCapability,
+    tags: ["spinner", "rewrite", "paraphrase", "article"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Article Spinner - Rewrite Content Automatically",
+    metaDescription: "Spin and rewrite articles automatically. Generate unique content variations. Free article spinner tool.",
+    description: "Rewrite articles with different wording",
+    icon: "refresh-cw",
+    howTo: [
+      "Paste article text",
+      "Select spinning level",
+      "Click 'Spin Article'",
+      "Get rewritten versions"
+    ],
+    article: {
+      title: "Article Spinning Tool",
+      content: `Automatically rewrite content while maintaining meaning. Create unique versions of articles.
+
+## Spinning Levels
+
+- Light (basic synonyms)
+- Medium (sentence restructuring)
+- Heavy (complete rewrite)
+
+## Features
+
+- Synonym replacement
+- Sentence restructuring
+- Paragraph reordering
+- Multiple versions
+
+## Use Cases
+
+- Content creation
+- SEO purposes
+- Social media posts
+- Email variations
+
+Note: Always review spun content for quality and accuracy.`,
+      relatedTools: ["paraphrasing-tool", "text-summarizer", "grammar-checker"]
+    }
+  },
+  {
+    id: "paraphrasing-tool",
+    title: "Paraphrasing Tool",
+    category: "Text Analysis" as ToolCategory,
+    tags: ["paraphrase", "rewrite", "rephrase", "text"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Paraphrasing Tool - Rephrase Text Online",
+    metaDescription: "Paraphrase and rephrase text online. Rewrite sentences while keeping meaning. Free paraphrasing tool.",
+    description: "Rephrase text while keeping original meaning",
+    icon: "file-pen-line",
+    howTo: [
+      "Paste text to paraphrase",
+      "Choose paraphrasing mode",
+      "Click 'Paraphrase'",
+      "Review and use rephrased text"
+    ],
+    article: {
+      title: "Text Paraphrasing Tool",
+      content: `Rephrase sentences and paragraphs while preserving original meaning.
+
+## Paraphrasing Modes
+
+- Standard (balanced)
+- Fluent (smooth flow)
+- Creative (unique wording)
+- Formal (professional tone)
+
+## Benefits
+
+- Avoid plagiarism
+- Improve clarity
+- Vary sentence structure
+- Enhance readability
+
+## Applications
+
+- Academic writing
+- Content creation
+- Essay writing
+- Professional documents`,
+      relatedTools: ["article-spinner", "text-summarizer", "grammar-checker"]
+    }
+  },
+  {
+    id: "text-summarizer",
+    title: "Text Summarizer",
+    category: "Text Analysis" as ToolCategory,
+    tags: ["summarizer", "summary", "text", "condense"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Text Summarizer - Summarize Text Online Free",
+    metaDescription: "Summarize long text automatically. Extract key points and create summaries. Free text summarization tool.",
+    description: "Automatically summarize long text into key points",
+    icon: "list",
+    howTo: [
+      "Paste long text or article",
+      "Choose summary length",
+      "Click 'Summarize'",
+      "Get condensed version"
+    ],
+    article: {
+      title: "Automatic Text Summarization",
+      content: `Quickly summarize long articles, documents, and text into concise key points.
+
+## Summary Types
+
+- Extractive (key sentences)
+- Abstractive (paraphrased)
+- Bullet points
+- Paragraph summary
+
+## Length Options
+
+- Very short (few sentences)
+- Short (paragraph)
+- Medium (multiple paragraphs)
+- Custom length
+
+## Use Cases
+
+- Research papers
+- Long articles
+- Reports
+- Meeting notes
+- Book summaries`,
+      relatedTools: ["paraphrasing-tool", "readability-checker", "word-counter"]
+    }
+  },
+  // Content Generators
+  {
+    id: "word-cloud-generator",
+    title: "Word Cloud Generator",
+    category: "Content Generators" as ToolCategory,
+    tags: ["word", "cloud", "generator", "visualization"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Word Cloud Generator - Create Word Clouds Online",
+    metaDescription: "Generate word clouds from text. Visualize word frequency. Free word cloud maker tool.",
+    description: "Create visual word clouds from text",
+    icon: "cloud",
+    howTo: [
+      "Paste your text content",
+      "Customize colors and fonts",
+      "Click 'Generate Word Cloud'",
+      "Download as image"
+    ],
+    article: {
+      title: "Create Word Cloud Visualizations",
+      content: `Generate beautiful word clouds that visualize word frequency in your text.
+
+## Customization
+
+- Color schemes
+- Font styles
+- Word orientation
+- Shape masks
+- Size ranges
+
+## Applications
+
+- Text analysis
+- Presentations
+- Marketing materials
+- Social media content
+- Data visualization`,
+      relatedTools: ["text-analyzer", "data-visualizer", "image-generator"]
+    }
+  },
+  {
+    id: "signature-generator",
+    title: "Signature Generator",
+    category: "Content Generators" as ToolCategory,
+    tags: ["signature", "generator", "handwritten", "sign"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Signature Generator - Create Digital Signatures",
+    metaDescription: "Generate digital signatures online. Create handwritten-style signatures. Free signature maker tool.",
+    description: "Create digital handwritten signatures",
+    icon: "signature",
+    howTo: [
+      "Type your name",
+      "Choose signature style",
+      "Customize font and color",
+      "Download signature image"
+    ],
+    article: {
+      title: "Digital Signature Generator",
+      content: `Create professional digital signatures for documents, emails, and online use.
+
+## Signature Styles
+
+- Handwritten cursive
+- Modern calligraphy
+- Classic script
+- Contemporary
+- Minimalist
+
+## Export Options
+
+- PNG (transparent)
+- JPG
+- SVG (vector)
+- Various sizes
+
+## Use Cases
+
+- Email signatures
+- PDF documents
+- Digital forms
+- Professional branding`,
+      relatedTools: ["logo-generator", "watermark-generator", "font-generator"]
+    }
+  },
+  {
+    id: "email-validator",
+    title: "Email Validator",
+    category: "Content Generators" as ToolCategory,
+    tags: ["email", "validator", "verify", "check"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Email Validator - Verify Email Address Online",
+    metaDescription: "Validate and verify email addresses. Check email syntax and domain. Free email validation tool.",
+    description: "Validate and verify email addresses",
+    icon: "mail-check",
+    howTo: [
+      "Enter email address",
+      "Click 'Validate Email'",
+      "View validation results",
+      "Check syntax and domain status"
+    ],
+    article: {
+      title: "Email Address Validation",
+      content: `Verify email addresses to ensure they're valid and deliverable before sending.
+
+## Validation Checks
+
+- Syntax validation
+- Domain verification
+- MX record check
+- Disposable email detection
+- Role account detection
+
+## Benefits
+
+- Reduce bounce rates
+- Clean email lists
+- Improve deliverability
+- Prevent fake signups
+
+## Bulk Validation
+
+- Upload email lists
+- Batch verification
+- Export results
+- API integration`,
+      relatedTools: ["domain-checker", "dns-lookup", "mx-record-checker"]
+    }
+  },
+  {
+    id: "random-word-generator",
+    title: "Random Word Generator",
+    category: "Content Generators" as ToolCategory,
+    tags: ["random", "word", "generator", "vocabulary"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Random Word Generator - Generate Random Words Online",
+    metaDescription: "Generate random words for games, writing prompts, and brainstorming. Free random word generator tool.",
+    description: "Generate random words for various purposes",
+    icon: "shuffle",
+    howTo: [
+      "Select number of words",
+      "Choose word type (nouns, verbs, etc.)",
+      "Click 'Generate'",
+      "Use words or generate new ones"
+    ],
+    article: {
+      title: "Random Word Generator Tool",
+      content: `Generate random words for creative writing, games, brainstorming, and learning.
+
+## Word Types
+
+- Nouns
+- Verbs
+- Adjectives
+- Adverbs
+- All types mixed
+
+## Features
+
+- Multiple word generation
+- Filter by length
+- Save favorites
+- Copy to clipboard
+
+## Use Cases
+
+- Writing prompts
+- Vocabulary building
+- Creative exercises
+- Game word lists
+- Brainstorming sessions`,
+      relatedTools: ["random-paragraph-generator", "lorem-ipsum-generator", "name-generator"]
+    }
+  },
+  {
+    id: "random-paragraph-generator",
+    title: "Random Paragraph Generator",
+    category: "Content Generators" as ToolCategory,
+    tags: ["random", "paragraph", "generator", "text"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Random Paragraph Generator - Generate Text Paragraphs",
+    metaDescription: "Generate random paragraphs of text. Lorem ipsum and realistic content generator. Free paragraph tool.",
+    description: "Generate random paragraphs of text",
+    icon: "text",
+    howTo: [
+      "Select number of paragraphs",
+      "Choose paragraph style",
+      "Click 'Generate'",
+      "Copy generated text"
+    ],
+    article: {
+      title: "Random Paragraph Generation",
+      content: `Generate random paragraphs for placeholder text, testing, and content mockups.
+
+## Paragraph Types
+
+- Lorem Ipsum (classic)
+- Realistic content
+- Technical text
+- Creative writing
+- Business text
+
+## Customization
+
+- Paragraph count
+- Paragraph length
+- Sentence structure
+- Word complexity
+
+## Applications
+
+- Website mockups
+- Design testing
+- Content placeholders
+- Writing practice`,
+      relatedTools: ["lorem-ipsum-generator", "random-word-generator", "text-generator"]
+    }
+  },
+  {
+    id: "barcode-generator",
+    title: "Barcode Generator",
+    category: "Content Generators" as ToolCategory,
+    tags: ["barcode", "generator", "code", "upc"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Barcode Generator - Create Barcodes Online Free",
+    metaDescription: "Generate barcodes online. Create UPC, EAN, Code 128, QR codes. Free barcode generator tool.",
+    description: "Generate various types of barcodes",
+    icon: "barcode",
+    howTo: [
+      "Enter barcode data",
+      "Select barcode type",
+      "Customize size and format",
+      "Download barcode image"
+    ],
+    article: {
+      title: "Barcode Generation Tool",
+      content: `Create professional barcodes for products, inventory, and identification.
+
+## Barcode Types
+
+- UPC-A, UPC-E
+- EAN-13, EAN-8
+- Code 39, Code 128
+- ITF-14
+- QR Code
+- Data Matrix
+
+## Customization
+
+- Size adjustment
+- Color options
+- Text visibility
+- Format (PNG, SVG)
+
+## Use Cases
+
+- Product labeling
+- Inventory management
+- Asset tracking
+- Retail products
+- Document tracking`,
+      relatedTools: ["qr-code-generator", "barcode-reader", "label-generator"]
+    }
+  },
+  // Social Media & Web Tools
+  {
+    id: "barcode-reader",
+    title: "Barcode Reader",
+    category: "Social Media Tools" as ToolCategory,
+    tags: ["barcode", "reader", "scanner", "decode"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Barcode Reader - Scan and Decode Barcodes Online",
+    metaDescription: "Read and decode barcodes from images. Upload barcode image to extract data. Free barcode scanner.",
+    description: "Read and decode barcodes from images",
+    icon: "scan",
+    howTo: [
+      "Upload barcode image",
+      "Click 'Read Barcode'",
+      "View decoded data",
+      "Copy barcode information"
+    ],
+    article: {
+      title: "Barcode Scanner Tool",
+      content: `Decode barcodes from images to extract product information and data.
+
+## Supported Formats
+
+- UPC, EAN
+- Code 39, Code 128
+- QR Code
+- Data Matrix
+- PDF417
+
+## Features
+
+- Image upload
+- Webcam scanning
+- Batch processing
+- Data export
+
+## Applications
+
+- Product lookup
+- Inventory checking
+- Price comparison
+- Data extraction`,
+      relatedTools: ["qr-code-reader", "barcode-generator", "image-text-extractor"]
+    }
+  },
+  {
+    id: "rss-feed-reader",
+    title: "RSS Feed Reader",
+    category: "Social Media Tools" as ToolCategory,
+    tags: ["rss", "feed", "reader", "news"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "RSS Feed Reader - Read RSS Feeds Online",
+    metaDescription: "Read and subscribe to RSS feeds online. Stay updated with your favorite websites. Free RSS reader.",
+    description: "Read and manage RSS feeds online",
+    icon: "rss",
+    howTo: [
+      "Enter RSS feed URL",
+      "Click 'Subscribe'",
+      "Read latest articles",
+      "Organize feeds into folders"
+    ],
+    article: {
+      title: "RSS Feed Reader Tool",
+      content: `Stay updated with your favorite websites and blogs through RSS feeds.
+
+## Features
+
+- Subscribe to feeds
+- Organize by category
+- Mark as read/unread
+- Save articles
+- Search content
+
+## Benefits
+
+- Centralized news
+- No email subscriptions
+- Control what you read
+- Privacy friendly`,
+      relatedTools: ["news-aggregator", "article-reader", "bookmark-manager"]
+    }
+  },
+  {
+    id: "twitter-card-generator",
+    title: "Twitter Card Generator",
+    category: "Social Media Tools" as ToolCategory,
+    tags: ["twitter", "card", "social", "meta"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Twitter Card Generator - Create Twitter Card Meta Tags",
+    metaDescription: "Generate Twitter Card meta tags for better social sharing. Preview how links appear on Twitter.",
+    description: "Generate Twitter Card meta tags",
+    icon: "twitter",
+    howTo: [
+      "Enter page details",
+      "Upload preview image",
+      "Generate Twitter Card tags",
+      "Add to your website HTML"
+    ],
+    article: {
+      title: "Twitter Card Meta Tag Generator",
+      content: `Create Twitter Cards to control how your content appears when shared on Twitter.
+
+## Card Types
+
+- Summary Card
+- Summary with Large Image
+- App Card
+- Player Card
+
+## Required Tags
+
+- twitter:card
+- twitter:title
+- twitter:description
+- twitter:image
+
+## Benefits
+
+- Better click-through rates
+- Professional appearance
+- Increased engagement
+- Brand visibility`,
+      relatedTools: ["open-graph-generator", "meta-tag-generator", "social-preview"]
+    }
+  },
+  {
+    id: "open-graph-generator",
+    title: "Open Graph Generator",
+    category: "Social Media Tools" as ToolCategory,
+    tags: ["open", "graph", "og", "meta", "social"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Open Graph Generator - Create OG Meta Tags",
+    metaDescription: "Generate Open Graph meta tags for Facebook, LinkedIn, and social media. Preview social shares.",
+    description: "Generate Open Graph meta tags for social sharing",
+    icon: "share-2",
+    howTo: [
+      "Enter page information",
+      "Upload social image",
+      "Generate OG tags",
+      "Copy to your HTML"
+    ],
+    article: {
+      title: "Open Graph Meta Tag Generator",
+      content: `Create Open Graph tags to control how your content appears on Facebook, LinkedIn, and other social platforms.
+
+## Essential Tags
+
+- og:title
+- og:description
+- og:image
+- og:url
+- og:type
+
+## Image Guidelines
+
+- Recommended: 1200×630px
+- Minimum: 600×315px
+- Aspect ratio: 1.91:1
+- Format: JPG or PNG
+
+## Platform Support
+
+- Facebook
+- LinkedIn
+- Pinterest
+- WhatsApp
+- Slack`,
+      relatedTools: ["twitter-card-generator", "meta-tag-generator", "social-share-preview"]
+    }
+  },
+  {
+    id: "youtube-thumbnail-downloader",
+    title: "YouTube Thumbnail Downloader",
+    category: "Social Media Tools" as ToolCategory,
+    tags: ["youtube", "thumbnail", "download", "image"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "YouTube Thumbnail Downloader - Download Video Thumbnails",
+    metaDescription: "Download YouTube video thumbnails in high quality. Get thumbnail images from any YouTube video.",
+    description: "Download thumbnails from YouTube videos",
+    icon: "youtube",
+    howTo: [
+      "Paste YouTube video URL",
+      "Click 'Get Thumbnail'",
+      "Choose quality (HD, SD)",
+      "Download thumbnail image"
+    ],
+    article: {
+      title: "Download YouTube Thumbnails",
+      content: `Extract and download thumbnail images from any YouTube video in various qualities.
+
+## Available Qualities
+
+- Maximum resolution (1280×720)
+- High quality (480×360)
+- Medium quality (320×180)
+- Standard definition (120×90)
+
+## Use Cases
+
+- Content research
+- Competitive analysis
+- Design inspiration
+- Social media posts
+
+## Features
+
+- Multiple quality options
+- Instant download
+- No YouTube login needed
+- Preview before download`,
+      relatedTools: ["youtube-tag-extractor", "video-downloader", "image-downloader"]
+    }
+  },
+  {
+    id: "youtube-tag-extractor",
+    title: "YouTube Tag Extractor",
+    category: "Social Media Tools" as ToolCategory,
+    tags: ["youtube", "tags", "extractor", "seo"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "YouTube Tag Extractor - Extract Video Tags and Keywords",
+    metaDescription: "Extract tags from YouTube videos. Analyze competitor video tags. Free YouTube tag extractor tool.",
+    description: "Extract tags and keywords from YouTube videos",
+    icon: "tags",
+    howTo: [
+      "Paste YouTube video URL",
+      "Click 'Extract Tags'",
+      "View all video tags",
+      "Copy tags for your videos"
+    ],
+    article: {
+      title: "Extract YouTube Video Tags",
+      content: `Discover tags used by any YouTube video to improve your own video SEO and discoverability.
+
+## What You Get
+
+- All video tags
+- Tag count
+- Related keywords
+- Copy-ready format
+
+## Benefits
+
+- Competitor research
+- SEO optimization
+- Tag inspiration
+- Better rankings
+
+## YouTube SEO Tips
+
+- Use relevant tags
+- Include long-tail keywords
+- Mix broad and specific tags
+- Limit to 10-15 quality tags`,
+      relatedTools: ["youtube-thumbnail-downloader", "keyword-generator", "seo-analyzer"]
+    }
+  },
+  {
+    id: "credit-card-validator",
+    title: "Credit Card Validator",
+    category: "Social Media Tools" as ToolCategory,
+    tags: ["credit", "card", "validator", "luhn"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Credit Card Validator - Validate Card Numbers with Luhn Algorithm",
+    metaDescription: "Validate credit card numbers using Luhn algorithm. Check card number format. Free card validator tool.",
+    description: "Validate credit card numbers using Luhn algorithm",
+    icon: "credit-card",
+    howTo: [
+      "Enter credit card number",
+      "Click 'Validate'",
+      "View validation result",
+      "See card type (Visa, Mastercard, etc.)"
+    ],
+    article: {
+      title: "Credit Card Number Validation",
+      content: `Validate credit card numbers to check format correctness using the Luhn algorithm. For testing purposes only.
+
+## Validation Process
+
+Uses Luhn algorithm to verify:
+- Correct number length
+- Valid check digit
+- Proper format
+- Card type identification
+
+## Detected Card Types
+
+- Visa
+- Mastercard
+- American Express
+- Discover
+- JCB
+- Diners Club
+
+## Important Notes
+
+- Format validation only
+- Does not verify actual card
+- No real card data stored
+- For testing/development use
+
+## Security
+
+This tool only validates the mathematical format of card numbers and does not store, transmit, or verify real card details.`,
+      relatedTools: ["number-validator", "data-validator", "form-validator"]
+    }
+  },
 ] as const;
 
 export type NewTool = typeof newTools[number];

@@ -19,10 +19,10 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Free PDF, Audio & Video Tools Online - 693+ Tools for All Your Needs</title>
-        <meta name="description" content="Free online PDF, audio, video, and archive tools. Merge PDFs, convert audio, edit videos, compress files, extract archives, and more. 693+ professional tools. Fast, secure, and easy to use. No registration required." />
-        <meta property="og:title" content="Free PDF, Audio & Video Tools Online - 693+ Professional Tools" />
-        <meta property="og:description" content="Professional PDF, audio, video, and archive tools for all your media needs. Convert, edit, compress, merge, enhance, and manage files. 693+ tools available." />
+        <title>Free PDF, Audio & Video Tools Online - 770+ Tools for All Your Needs</title>
+        <meta name="description" content="Free online PDF, audio, video, web, SEO, color, calculator, and productivity tools. 770+ professional tools including website converters, SEO analyzers, color generators, unit converters, and more. Fast, secure, and easy to use. No registration required." />
+        <meta property="og:title" content="Free PDF, Audio & Video Tools Online - 770+ Professional Tools" />
+        <meta property="og:description" content="Professional PDF, audio, video, web, SEO, and productivity tools for all your needs. Convert, edit, compress, merge, analyze websites, optimize SEO, and more. 770+ tools available." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={typeof window !== 'undefined' ? window.location.href : ''} />
         <meta property="og:image" content={typeof window !== 'undefined' ? `${window.location.origin}/favicon.png` : ''} />
@@ -36,11 +36,11 @@ export default function Home() {
             <div className="container mx-auto max-w-7xl px-4">
               <div className="text-center space-y-6 max-w-3xl mx-auto">
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                  Free PDF, Audio & Video Tools Online
+                  Free PDF, Audio, Video, Web & SEO Tools Online
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Professional-grade PDF, audio, and video tools for converting, editing, compressing, and merging. 
-                  Fast, secure, and completely free. No registration required.
+                  Professional-grade tools for PDF, audio, video, websites, SEO, colors, calculators, and more. 
+                  Convert, edit, compress, analyze, and optimize. Fast, secure, and completely free. No registration required.
                 </p>
                 <div className="flex items-center justify-center gap-4 flex-wrap text-sm">
                   <div className="flex items-center gap-2 text-muted-foreground">
@@ -74,10 +74,10 @@ export default function Home() {
             <div className="container mx-auto max-w-7xl px-4">
               <div className="text-center mb-12 space-y-4">
                 <h2 className="text-3xl md:text-4xl font-semibold">
-                  All {tools.length}+ PDF, Audio & Video Tools
+                  All {tools.length}+ Professional Tools
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Choose from our comprehensive collection of {tools.length} professional tools for PDF, audio, and video including conversion, editing, compression, merging, and more
+                  Choose from our comprehensive collection of {tools.length} professional tools including PDF, audio, video, website, SEO, color, calculator, productivity, and text analysis tools
                 </p>
               </div>
 
@@ -110,7 +110,7 @@ export default function Home() {
             <div className="container mx-auto max-w-7xl px-4">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-                  Why Choose Our PDF, Audio & Video Tools?
+                  Why Choose Our Tools?
                 </h2>
               </div>
 
