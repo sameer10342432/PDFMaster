@@ -1,7 +1,8 @@
 import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
-import { FileText, ChevronDown, Newspaper } from "lucide-react";
+import { FileText, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,16 +11,21 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { getToolIcon } from "@/lib/tool-icons";
-import type { PDFTool } from "@shared/schema";
+import type { Tool } from "@shared/schema";
 
 export function Header() {
-  const { data: tools = [] } = useQuery<PDFTool[]>({
+  const { data: tools = [] } = useQuery<Tool[]>({
     queryKey: ['/api/tools'],
   });
 
-  const toolsWithArticles = tools.filter(tool => tool.article && tool.article.title && tool.article.content);
-  const popularTools = toolsWithArticles.slice(0, 8);
+  const { data: categories = [] } = useQuery<string[]>({
+    queryKey: ['/api/categories'],
+  });
+
+  const toolsByCategory = categories.reduce((acc, category) => {
+    acc[category] = tools.filter(tool => tool.category === category);
+    return acc;
+  }, {} as Record<string, Tool[]>);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -48,51 +54,45 @@ export function Header() {
                 <Link href="/tools">
                   <DropdownMenuItem data-testid="dropdown-item-all-tools">
                     <FileText className="h-4 w-4 mr-2" />
-                    View All Tools ({tools.length})
-                  </DropdownMenuItem>
-                </Link>
-                <Link href="/articles">
-                  <DropdownMenuItem data-testid="dropdown-item-all-articles">
-                    <Newspaper className="h-4 w-4 mr-2" />
-                    Browse All Articles
+                    <span className="font-semibold">View All Tools ({tools.length})</span>
                   </DropdownMenuItem>
                 </Link>
                 
                 <DropdownMenuSeparator />
                 
-                <DropdownMenuLabel className="text-xs text-muted-foreground">
-                  Popular Tools with Articles
+                <DropdownMenuLabel className="text-xs text-muted-foreground font-normal">
+                  Browse by Category
                 </DropdownMenuLabel>
                 
-                {popularTools.map((tool) => {
-                  const ToolIconComponent = getToolIcon(tool.id);
-                  return (
-                    <Link key={tool.id} href={`/tool/${tool.id}`}>
-                      <DropdownMenuItem data-testid={`dropdown-item-tool-${tool.id}`}>
-                        <div className="flex items-start gap-2 w-full">
-                          <ToolIconComponent className="h-4 w-4 mt-0.5 text-primary shrink-0" />
-                          <div className="flex flex-col gap-0.5 flex-1 min-w-0">
-                            <span className="font-medium text-sm">{tool.title}</span>
-                            <span className="text-xs text-muted-foreground truncate">
-                              {tool.description}
-                            </span>
-                          </div>
-                        </div>
+                {categories.slice(0, 15).map((category) => (
+                  <Link key={category} href="/tools">
+                    <DropdownMenuItem data-testid={`dropdown-item-category-${category.toLowerCase().replace(/\s+/g, '-')}`}>
+                      <div className="flex items-center justify-between w-full">
+                        <span className="text-sm">{category}</span>
+                        <span className="text-xs text-muted-foreground">
+                          {toolsByCategory[category]?.length || 0}
+                        </span>
+                      </div>
+                    </DropdownMenuItem>
+                  </Link>
+                ))}
+                
+                {categories.length > 15 && (
+                  <>
+                    <DropdownMenuSeparator />
+                    <Link href="/tools">
+                      <DropdownMenuItem className="text-primary justify-center" data-testid="dropdown-item-view-all-categories">
+                        <span className="text-sm font-medium">
+                          View All {categories.length} Categories
+                        </span>
                       </DropdownMenuItem>
                     </Link>
-                  );
-                })}
-                
-                <DropdownMenuSeparator />
-                
-                <Link href="/tools">
-                  <DropdownMenuItem className="text-primary" data-testid="dropdown-item-view-more">
-                    <FileText className="h-4 w-4 mr-2" />
-                    View All {tools.length} Tools
-                  </DropdownMenuItem>
-                </Link>
+                  </>
+                )}
               </DropdownMenuContent>
             </DropdownMenu>
+            
+            <ThemeToggle />
           </nav>
         </div>
       </div>

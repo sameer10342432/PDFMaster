@@ -19,10 +19,10 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Free PDF & Image Tools Online - 480+ Tools for All Your Needs</title>
-        <meta name="description" content="Free online PDF and image tools. Merge PDFs, compress images, convert formats, and more. 480+ professional tools. Fast, secure, and easy to use. No registration required." />
-        <meta property="og:title" content="Free PDF & Image Tools Online - 480+ Professional Tools" />
-        <meta property="og:description" content="Professional PDF and image tools for all your document and image needs. Merge, convert, compress, and edit. 480+ tools available." />
+        <title>Free PDF & Image Tools Online - 560+ Tools for All Your Needs</title>
+        <meta name="description" content="Free online PDF and image tools. Merge PDFs, compress images, convert formats, edit photos, and more. 560+ professional tools. Fast, secure, and easy to use. No registration required." />
+        <meta property="og:title" content="Free PDF & Image Tools Online - 560+ Professional Tools" />
+        <meta property="og:description" content="Professional PDF and image tools for all your document and image needs. Merge, convert, compress, edit, and enhance. 560+ tools available." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={typeof window !== 'undefined' ? window.location.href : ''} />
         <meta property="og:image" content={typeof window !== 'undefined' ? `${window.location.origin}/favicon.png` : ''} />
@@ -74,10 +74,10 @@ export default function Home() {
             <div className="container mx-auto max-w-7xl px-4">
               <div className="text-center mb-12 space-y-4">
                 <h2 className="text-3xl md:text-4xl font-semibold">
-                  All 480+ PDF & Image Tools
+                  All 560+ PDF & Image Tools
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Choose from our comprehensive collection of {tools.length} professional PDF and image tools with colorful icons
+                  Choose from our comprehensive collection of {tools.length} professional PDF and image tools including conversion, editing, compression, AI-powered tools, and more
                 </p>
               </div>
 

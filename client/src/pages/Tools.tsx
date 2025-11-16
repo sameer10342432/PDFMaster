@@ -42,10 +42,10 @@ export default function Tools() {
   return (
     <>
       <Helmet>
-        <title>All PDF & Image Tools - 480+ Free Online Utilities</title>
-        <meta name="description" content="Browse all 480+ free PDF and image tools. Merge PDFs, compress images, convert formats, and more. Fast, secure, and easy to use." />
-        <meta property="og:title" content="All PDF & Image Tools - 480+ Free Online Utilities" />
-        <meta property="og:description" content="Complete collection of 480+ free PDF and image tools for all your document and image needs." />
+        <title>All PDF & Image Tools - 560+ Free Online Utilities</title>
+        <meta name="description" content="Browse all 560+ free PDF and image tools. Merge PDFs, compress images, convert formats, edit photos with filters and effects, AI-powered tools, and more. Fast, secure, and easy to use." />
+        <meta property="og:title" content="All PDF & Image Tools - 560+ Free Online Utilities" />
+        <meta property="og:description" content="Complete collection of 560+ free PDF and image tools for all your document and image needs including editing, conversion, compression, and AI enhancements." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={typeof window !== 'undefined' ? window.location.href : ''} />
         <meta property="og:image" content={typeof window !== 'undefined' ? `${window.location.origin}/favicon.png` : ''} />
@@ -62,7 +62,7 @@ export default function Tools() {
                   All PDF & Image Tools
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Explore our complete collection of 480+ free PDF and image tools
+                  Explore our complete collection of 560+ free PDF and image tools
                 </p>
                 
                 <div className="relative max-w-md mx-auto">
