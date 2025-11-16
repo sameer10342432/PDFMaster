@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
-import { FileText, ChevronDown } from "lucide-react";
+import { FileText, ChevronDown, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import {
@@ -55,6 +55,13 @@ export function Header() {
                   <DropdownMenuItem data-testid="dropdown-item-all-tools">
                     <FileText className="h-4 w-4 mr-2" />
                     <span className="font-semibold">View All Tools ({tools.length})</span>
+                  </DropdownMenuItem>
+                </Link>
+                
+                <Link href="/articles">
+                  <DropdownMenuItem data-testid="dropdown-item-articles">
+                    <BookOpen className="h-4 w-4 mr-2" />
+                    <span className="font-semibold">Articles</span>
                   </DropdownMenuItem>
                 </Link>
                 

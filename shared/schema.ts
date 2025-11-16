@@ -35,7 +35,15 @@ export const toolCategories = [
   "Document Conversion",
   "Text Tools",
   "Data Format Conversion",
-  "eBook Tools"
+  "eBook Tools",
+  "Text Formatting",
+  "Code Formatting",
+  "Text Generators",
+  "Text Manipulation",
+  "Encoding & Decoding",
+  "QR Code Tools",
+  "Audio Tools",
+  "Editor Tools"
 ] as const;
 
 export type ToolCategory = typeof toolCategories[number];
@@ -24877,6 +24885,1626 @@ Convert PDF, DOCX, XLSX, PPTX, ODT, and many more.
 
 Maintains document formatting and structure.`,
       relatedTools: ["pdf-converter", "word-converter", "excel-converter"]
+    }
+  },
+  {
+    id: "html-to-txt",
+    title: "HTML to TXT",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["html", "txt", "text", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HTML to TXT Converter Online Free - Convert HTML to Plain Text",
+    metaDescription: "Convert HTML to plain text online for free. Extract text from HTML files instantly. Fast, secure, no registration required.",
+    description: "Convert HTML files to plain text format",
+    icon: "file-text",
+    howTo: [
+      "Upload your HTML file or paste HTML code",
+      "Select conversion options",
+      "Click 'Convert to TXT'",
+      "Download your plain text file"
+    ],
+    article: {
+      title: "Convert HTML to Plain Text",
+      content: `Extract plain text from HTML files with our free online converter. Perfect for content analysis, email templates, or data extraction.
+
+## Clean Text Extraction
+
+Removes all HTML tags and formatting, leaving only readable text content.
+
+## Preserve Structure
+
+Maintains paragraph breaks and basic text structure from the HTML.`,
+      relatedTools: ["html-to-markdown", "html-minifier", "text-tools"]
+    }
+  },
+  {
+    id: "html-to-markdown",
+    title: "HTML to Markdown",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["html", "markdown", "convert", "md"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HTML to Markdown Converter Online - Convert HTML to MD Free",
+    metaDescription: "Convert HTML to Markdown online for free. Transform HTML code to Markdown format instantly. Simple and secure conversion.",
+    description: "Convert HTML to Markdown format",
+    icon: "code",
+    howTo: [
+      "Paste your HTML code",
+      "Preview the conversion",
+      "Click 'Convert to Markdown'",
+      "Copy or download Markdown output"
+    ],
+    article: {
+      title: "HTML to Markdown Conversion",
+      content: `Convert HTML to Markdown for easier editing and version control. Perfect for documentation, blogs, and content management.
+
+## Clean Conversion
+
+Converts headings, lists, links, images, and more to Markdown syntax.
+
+## Developer Friendly
+
+Great for converting web content to documentation format.`,
+      relatedTools: ["markdown-to-html", "markdown-editor", "code-formatter"]
+    }
+  },
+  {
+    id: "markdown-to-html",
+    title: "Markdown to HTML",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["markdown", "html", "convert", "md"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Markdown to HTML Converter - Convert MD to HTML Online Free",
+    metaDescription: "Convert Markdown to HTML online for free. Transform MD files to HTML code instantly. Fast conversion with preview.",
+    description: "Convert Markdown to HTML format",
+    icon: "code-2",
+    howTo: [
+      "Paste your Markdown text",
+      "Preview HTML output",
+      "Click 'Convert to HTML'",
+      "Download or copy HTML code"
+    ],
+    article: {
+      title: "Markdown to HTML Converter",
+      content: `Convert Markdown to HTML for web publishing and content display. Our tool generates clean, semantic HTML code.
+
+## Standards Compliant
+
+Generates valid HTML5 code from Markdown syntax.
+
+## Preview Available
+
+See the rendered HTML before downloading.`,
+      relatedTools: ["html-to-markdown", "html-beautifier", "markdown-editor"]
+    }
+  },
+  {
+    id: "rtf-to-docx",
+    title: "RTF to DOCX",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["rtf", "docx", "word", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "RTF to DOCX Converter Online Free - Convert RTF to Word",
+    metaDescription: "Convert RTF to DOCX online for free. Transform Rich Text Format to Microsoft Word documents. Fast and secure conversion.",
+    description: "Convert RTF files to Microsoft Word DOCX format",
+    icon: "file-text",
+    howTo: [
+      "Upload your RTF file",
+      "Wait for conversion",
+      "Click 'Download DOCX'",
+      "Open in Microsoft Word"
+    ],
+    article: {
+      title: "Convert RTF to Word DOCX",
+      content: `Convert Rich Text Format files to modern Word DOCX format. Perfect for editing and sharing documents with full formatting.
+
+## Format Preservation
+
+Maintains text formatting, fonts, and styles during conversion.
+
+## Modern Format
+
+DOCX is the standard for modern word processing applications.`,
+      relatedTools: ["docx-to-rtf", "doc-to-docx", "word-converter"]
+    }
+  },
+  {
+    id: "docx-to-rtf",
+    title: "DOCX to RTF",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["docx", "rtf", "word", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "DOCX to RTF Converter Online - Convert Word to RTF Free",
+    metaDescription: "Convert DOCX to RTF online for free. Transform Microsoft Word to Rich Text Format. Compatible with all word processors.",
+    description: "Convert Microsoft Word DOCX to RTF format",
+    icon: "file-type",
+    howTo: [
+      "Upload your DOCX file",
+      "Select conversion settings",
+      "Click 'Convert to RTF'",
+      "Download RTF file"
+    ],
+    article: {
+      title: "DOCX to RTF Conversion",
+      content: `Convert Word documents to RTF for universal compatibility. RTF works with all word processors and text editors.
+
+## Universal Compatibility
+
+RTF files open in virtually any word processing software.
+
+## Preserve Formatting
+
+Maintains basic formatting, fonts, and document structure.`,
+      relatedTools: ["rtf-to-docx", "docx-to-pdf", "document-converter"]
+    }
+  },
+  {
+    id: "rtf-to-txt",
+    title: "RTF to TXT",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["rtf", "txt", "text", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "RTF to TXT Converter - Convert RTF to Plain Text Free",
+    metaDescription: "Convert RTF to TXT online for free. Extract plain text from Rich Text Format files. Fast and simple conversion.",
+    description: "Convert RTF files to plain text format",
+    icon: "align-left",
+    howTo: [
+      "Upload your RTF file",
+      "Convert automatically",
+      "Click 'Download TXT'",
+      "Get plain text file"
+    ],
+    article: {
+      title: "RTF to Plain Text",
+      content: `Extract plain text from RTF files for simple text processing and analysis.
+
+## Clean Text
+
+Removes all formatting and styling, leaving only text content.
+
+## Universal Format
+
+Plain text works everywhere and requires no special software.`,
+      relatedTools: ["txt-to-rtf", "html-to-txt", "text-tools"]
+    }
+  },
+  {
+    id: "txt-to-rtf",
+    title: "TXT to RTF",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["txt", "rtf", "text", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "TXT to RTF Converter - Convert Plain Text to RTF Free",
+    metaDescription: "Convert TXT to RTF online for free. Add formatting capabilities to plain text files. Simple conversion tool.",
+    description: "Convert plain text to RTF format",
+    icon: "file-plus",
+    howTo: [
+      "Upload your TXT file",
+      "Select formatting options",
+      "Click 'Convert to RTF'",
+      "Download formatted RTF"
+    ],
+    article: {
+      title: "Convert Text to RTF",
+      content: `Convert plain text files to RTF format to add formatting capabilities and document structure.
+
+## Add Formatting
+
+RTF allows fonts, colors, and styles that plain text cannot support.
+
+## Cross-Platform
+
+RTF files work on Windows, Mac, and Linux systems.`,
+      relatedTools: ["rtf-to-txt", "text-tools", "document-converter"]
+    }
+  },
+  {
+    id: "pages-to-docx",
+    title: "Pages to DOCX",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["pages", "docx", "apple", "word"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Pages to DOCX Converter - Convert Apple Pages to Word",
+    metaDescription: "Convert Apple Pages to DOCX online for free. Transform Pages documents to Microsoft Word format. Fast conversion.",
+    description: "Convert Apple Pages documents to Word DOCX",
+    icon: "repeat",
+    howTo: [
+      "Upload your Pages file",
+      "Wait for processing",
+      "Download DOCX file",
+      "Open in Microsoft Word"
+    ],
+    article: {
+      title: "Convert Pages to Word",
+      content: `Convert Apple Pages documents to Microsoft Word DOCX format for cross-platform compatibility.
+
+## Mac to Windows
+
+Share documents between Mac and Windows users easily.
+
+## Format Preservation
+
+Maintains layouts, images, and formatting during conversion.`,
+      relatedTools: ["docx-to-pages", "pages-to-pdf", "document-converter"]
+    }
+  },
+  {
+    id: "docx-to-pages",
+    title: "DOCX to Pages",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["docx", "pages", "word", "apple"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "DOCX to Pages Converter - Convert Word to Apple Pages",
+    metaDescription: "Convert DOCX to Pages online for free. Transform Microsoft Word to Apple Pages format. Edit in Pages app.",
+    description: "Convert Word DOCX to Apple Pages format",
+    icon: "shuffle",
+    howTo: [
+      "Upload your DOCX file",
+      "Convert to Pages format",
+      "Download Pages file",
+      "Open in Pages app"
+    ],
+    article: {
+      title: "DOCX to Pages Conversion",
+      content: `Convert Microsoft Word documents to Apple Pages format for editing on Mac and iOS devices.
+
+## Apple Ecosystem
+
+Perfect for Mac and iPad users who prefer Pages.
+
+## Full Editing
+
+Edit converted documents with full Pages features.`,
+      relatedTools: ["pages-to-docx", "pdf-to-pages", "document-converter"]
+    }
+  },
+  {
+    id: "numbers-to-xlsx",
+    title: "Numbers to XLSX",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["numbers", "xlsx", "excel", "spreadsheet"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Numbers to XLSX Converter - Convert Apple Numbers to Excel",
+    metaDescription: "Convert Apple Numbers to XLSX online for free. Transform Numbers spreadsheets to Excel format. Fast conversion.",
+    description: "Convert Apple Numbers to Excel XLSX format",
+    icon: "table",
+    howTo: [
+      "Upload your Numbers file",
+      "Wait for conversion",
+      "Download XLSX file",
+      "Open in Microsoft Excel"
+    ],
+    article: {
+      title: "Convert Numbers to Excel",
+      content: `Convert Apple Numbers spreadsheets to Microsoft Excel XLSX format for wider compatibility.
+
+## Cross-Platform
+
+Share spreadsheets between Mac Numbers and Windows Excel.
+
+## Formula Preservation
+
+Maintains formulas and calculations during conversion.`,
+      relatedTools: ["xlsx-to-numbers", "numbers-to-pdf", "excel-converter"]
+    }
+  },
+  {
+    id: "xlsx-to-numbers",
+    title: "XLSX to Numbers",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["xlsx", "numbers", "excel", "spreadsheet"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "XLSX to Numbers Converter - Convert Excel to Apple Numbers",
+    metaDescription: "Convert XLSX to Numbers online for free. Transform Excel spreadsheets to Apple Numbers format. Easy conversion.",
+    description: "Convert Excel XLSX to Apple Numbers format",
+    icon: "grid-3x3",
+    howTo: [
+      "Upload your XLSX file",
+      "Convert to Numbers format",
+      "Download Numbers file",
+      "Open in Numbers app"
+    ],
+    article: {
+      title: "Excel to Numbers Conversion",
+      content: `Convert Microsoft Excel spreadsheets to Apple Numbers format for editing on Mac and iOS.
+
+## Apple Integration
+
+Work with Excel files in the Apple ecosystem.
+
+## Feature Support
+
+Supports charts, formulas, and data formatting.`,
+      relatedTools: ["numbers-to-xlsx", "csv-to-numbers", "spreadsheet-converter"]
+    }
+  },
+  {
+    id: "keynote-to-pptx",
+    title: "Keynote to PPTX",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["keynote", "pptx", "powerpoint", "presentation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Keynote to PPTX Converter - Convert Apple Keynote to PowerPoint",
+    metaDescription: "Convert Keynote to PPTX online for free. Transform Apple presentations to PowerPoint format. Fast conversion.",
+    description: "Convert Apple Keynote to PowerPoint PPTX",
+    icon: "presentation",
+    howTo: [
+      "Upload your Keynote file",
+      "Wait for processing",
+      "Download PPTX file",
+      "Open in PowerPoint"
+    ],
+    article: {
+      title: "Keynote to PowerPoint Conversion",
+      content: `Convert Apple Keynote presentations to Microsoft PowerPoint PPTX format for universal compatibility.
+
+## Share Presentations
+
+Present on any platform with PowerPoint compatibility.
+
+## Animation Support
+
+Maintains transitions and animations where possible.`,
+      relatedTools: ["pptx-to-keynote", "keynote-to-pdf", "presentation-converter"]
+    }
+  },
+  {
+    id: "pptx-to-keynote",
+    title: "PPTX to Keynote",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["pptx", "keynote", "powerpoint", "presentation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PPTX to Keynote Converter - Convert PowerPoint to Apple Keynote",
+    metaDescription: "Convert PPTX to Keynote online for free. Transform PowerPoint to Apple Keynote format. Edit presentations on Mac.",
+    description: "Convert PowerPoint PPTX to Apple Keynote",
+    icon: "monitor",
+    howTo: [
+      "Upload your PPTX file",
+      "Convert to Keynote format",
+      "Download Keynote file",
+      "Open in Keynote app"
+    ],
+    article: {
+      title: "PowerPoint to Keynote Conversion",
+      content: `Convert Microsoft PowerPoint presentations to Apple Keynote format for stunning Mac presentations.
+
+## Mac Presentations
+
+Create beautiful presentations using Keynote's features.
+
+## Format Compatibility
+
+Maintains layouts, images, and text formatting.`,
+      relatedTools: ["keynote-to-pptx", "pdf-to-keynote", "presentation-converter"]
+    }
+  },
+  {
+    id: "epub-to-azw3",
+    title: "EPUB to AZW3",
+    category: "eBook Tools" as ToolCategory,
+    tags: ["epub", "azw3", "ebook", "kindle"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "EPUB to AZW3 Converter - Convert EPUB to Kindle Format",
+    metaDescription: "Convert EPUB to AZW3 online for free. Transform EPUB ebooks to Kindle format. Read on Kindle devices.",
+    description: "Convert EPUB ebooks to Kindle AZW3 format",
+    icon: "book-open",
+    howTo: [
+      "Upload your EPUB file",
+      "Select conversion options",
+      "Convert to AZW3",
+      "Transfer to Kindle device"
+    ],
+    article: {
+      title: "Convert EPUB to Kindle Format",
+      content: `Convert EPUB ebooks to AZW3 format for reading on Amazon Kindle devices and apps.
+
+## Kindle Compatible
+
+AZW3 works perfectly on all Kindle devices and apps.
+
+## Preserve Formatting
+
+Maintains chapters, images, and text formatting.`,
+      relatedTools: ["azw3-to-epub", "epub-to-mobi", "ebook-converter"]
+    }
+  },
+  {
+    id: "azw3-to-epub",
+    title: "AZW3 to EPUB",
+    category: "eBook Tools" as ToolCategory,
+    tags: ["azw3", "epub", "ebook", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "AZW3 to EPUB Converter - Convert Kindle to EPUB Free",
+    metaDescription: "Convert AZW3 to EPUB online for free. Transform Kindle ebooks to universal EPUB format. Read anywhere.",
+    description: "Convert Kindle AZW3 to EPUB format",
+    icon: "book",
+    howTo: [
+      "Upload your AZW3 file",
+      "Wait for conversion",
+      "Download EPUB file",
+      "Read on any device"
+    ],
+    article: {
+      title: "AZW3 to EPUB Conversion",
+      content: `Convert Kindle AZW3 ebooks to universal EPUB format for reading on any device or e-reader.
+
+## Universal Format
+
+EPUB works on all e-readers and reading apps.
+
+## DRM-Free Only
+
+Converts DRM-free ebooks only. Does not bypass DRM protection.`,
+      relatedTools: ["epub-to-azw3", "mobi-to-epub", "ebook-converter"]
+    }
+  },
+  {
+    id: "pdf-to-cbr",
+    title: "PDF to CBR",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "cbr", "comic", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to CBR Converter - Convert PDF to Comic Book Format",
+    metaDescription: "Convert PDF to CBR online for free. Transform PDF to comic book reader format. Perfect for digital comics.",
+    description: "Convert PDF files to CBR comic book format",
+    icon: "book-open-text",
+    howTo: [
+      "Upload your PDF file",
+      "Convert to CBR format",
+      "Download CBR file",
+      "Read in comic reader app"
+    ],
+    article: {
+      title: "Convert PDF to Comic Book Format",
+      content: `Convert PDF files to CBR format for better comic reading experience on dedicated comic reader applications.
+
+## Comic Reader Support
+
+CBR is optimized for comic book reading apps and software.
+
+## Page Management
+
+Perfect for manga, comics, and graphic novels.`,
+      relatedTools: ["pdf-to-cbz", "cbr-to-pdf", "image-to-pdf"]
+    }
+  },
+  {
+    id: "pdf-to-cbz",
+    title: "PDF to CBZ",
+    category: "Convert" as ToolCategory,
+    tags: ["pdf", "cbz", "comic", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to CBZ Converter - Convert PDF to CBZ Format Free",
+    metaDescription: "Convert PDF to CBZ online for free. Transform PDF to ZIP-based comic format. Easy comic book conversion.",
+    description: "Convert PDF files to CBZ comic book format",
+    icon: "file-archive",
+    howTo: [
+      "Upload your PDF file",
+      "Extract pages to images",
+      "Package as CBZ",
+      "Download CBZ file"
+    ],
+    article: {
+      title: "PDF to CBZ Conversion",
+      content: `Convert PDF files to CBZ format, a ZIP-based comic book archive format for better organization and reading.
+
+## ZIP-Based Format
+
+CBZ is essentially a ZIP file with images, making it easy to manage.
+
+## Wide Support
+
+Compatible with most comic reader applications.`,
+      relatedTools: ["pdf-to-cbr", "cbz-to-pdf", "compress-pdf"]
+    }
+  },
+  {
+    id: "compare-text",
+    title: "Compare Text",
+    category: "Comparison" as ToolCategory,
+    tags: ["compare", "text", "diff", "difference"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compare Text Online - Text Comparison Tool Free",
+    metaDescription: "Compare text online for free. Find differences between two text documents. Fast text comparison tool.",
+    description: "Compare two text documents to find differences",
+    icon: "git-compare",
+    howTo: [
+      "Paste first text in left panel",
+      "Paste second text in right panel",
+      "Click 'Compare'",
+      "View highlighted differences"
+    ],
+    article: {
+      title: "Text Comparison Tool",
+      content: `Compare two text documents side-by-side to identify differences, additions, and deletions.
+
+## Visual Comparison
+
+Highlights differences with color coding for easy identification.
+
+## Line-by-Line
+
+Shows exact changes at the character and line level.`,
+      relatedTools: ["text-difference-checker", "code-diff-checker", "merge-text"]
+    }
+  },
+  {
+    id: "text-difference-checker",
+    title: "Text Difference Checker",
+    category: "Comparison" as ToolCategory,
+    tags: ["diff", "difference", "compare", "check"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Text Difference Checker - Find Text Differences Online Free",
+    metaDescription: "Check text differences online for free. Identify changes between text versions. Simple difference checker.",
+    description: "Check and highlight differences between texts",
+    icon: "diff",
+    howTo: [
+      "Enter original text",
+      "Enter modified text",
+      "Click 'Check Differences'",
+      "Review highlighted changes"
+    ],
+    article: {
+      title: "Find Text Differences",
+      content: `Identify differences between text versions quickly with highlighted changes and detailed comparison.
+
+## Change Detection
+
+Automatically detects additions, deletions, and modifications.
+
+## Version Control
+
+Perfect for comparing document versions and revisions.`,
+      relatedTools: ["compare-text", "code-diff-checker", "text-tools"]
+    }
+  },
+  {
+    id: "json-formatter",
+    title: "JSON Formatter",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["json", "format", "prettify", "beautify"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JSON Formatter Online - Format JSON Data Free",
+    metaDescription: "Format JSON online for free. Beautify and prettify JSON data with proper indentation. Fast JSON formatter.",
+    description: "Format and beautify JSON data",
+    icon: "braces",
+    howTo: [
+      "Paste your JSON code",
+      "Click 'Format JSON'",
+      "View formatted output",
+      "Copy beautified JSON"
+    ],
+    article: {
+      title: "Format JSON Data",
+      content: `Format and beautify JSON data with proper indentation and structure for better readability.
+
+## Proper Indentation
+
+Adds consistent spacing and line breaks for clarity.
+
+## Syntax Highlighting
+
+Makes JSON structure easy to understand at a glance.`,
+      relatedTools: ["json-validator", "json-minifier", "json-beautifier"]
+    }
+  },
+  {
+    id: "json-validator",
+    title: "JSON Validator",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["json", "validate", "check", "verify"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JSON Validator Online - Validate JSON Data Free",
+    metaDescription: "Validate JSON online for free. Check JSON syntax and structure. Find JSON errors instantly.",
+    description: "Validate JSON syntax and structure",
+    icon: "check-circle",
+    howTo: [
+      "Paste your JSON code",
+      "Click 'Validate'",
+      "See validation results",
+      "Fix any errors shown"
+    ],
+    article: {
+      title: "Validate JSON Online",
+      content: `Validate JSON data to ensure correct syntax and structure. Find and fix errors quickly.
+
+## Error Detection
+
+Identifies syntax errors, missing brackets, and invalid formatting.
+
+## Detailed Messages
+
+Shows exact location and description of errors.`,
+      relatedTools: ["json-formatter", "json-beautifier", "code-validator"]
+    }
+  },
+  {
+    id: "json-minifier",
+    title: "JSON Minifier",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["json", "minify", "compress", "compact"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JSON Minifier Online - Minify JSON Code Free",
+    metaDescription: "Minify JSON online for free. Compress JSON data by removing whitespace. Reduce JSON file size.",
+    description: "Minify JSON by removing whitespace",
+    icon: "minimize-2",
+    howTo: [
+      "Paste your formatted JSON",
+      "Click 'Minify JSON'",
+      "Get compressed JSON",
+      "Copy minified code"
+    ],
+    article: {
+      title: "Minify JSON Data",
+      content: `Minify JSON data by removing unnecessary whitespace and line breaks to reduce file size.
+
+## Size Reduction
+
+Removes all extra spaces and line breaks for smaller files.
+
+## API Ready
+
+Perfect for APIs where file size matters.`,
+      relatedTools: ["json-formatter", "json-beautifier", "compress-json"]
+    }
+  },
+  {
+    id: "json-beautifier",
+    title: "JSON Beautifier",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["json", "beautify", "format", "prettify"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JSON Beautifier Online - Beautify JSON Code Free",
+    metaDescription: "Beautify JSON online for free. Make JSON code readable with formatting. Fast JSON beautifier tool.",
+    description: "Beautify and format JSON for readability",
+    icon: "sparkles",
+    howTo: [
+      "Paste minified JSON",
+      "Click 'Beautify'",
+      "View formatted JSON",
+      "Copy beautified code"
+    ],
+    article: {
+      title: "Beautify JSON Code",
+      content: `Transform minified JSON into beautifully formatted, readable code with proper indentation.
+
+## Enhanced Readability
+
+Makes complex JSON structures easy to read and understand.
+
+## Configurable Formatting
+
+Choose indentation size and style preferences.`,
+      relatedTools: ["json-formatter", "json-minifier", "code-beautifier"]
+    }
+  },
+  {
+    id: "xml-formatter",
+    title: "XML Formatter",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["xml", "format", "prettify", "beautify"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "XML Formatter Online - Format XML Data Free",
+    metaDescription: "Format XML online for free. Beautify XML with proper indentation. Fast XML formatting tool.",
+    description: "Format and beautify XML data",
+    icon: "code-xml",
+    howTo: [
+      "Paste your XML code",
+      "Click 'Format XML'",
+      "View formatted output",
+      "Copy beautified XML"
+    ],
+    article: {
+      title: "Format XML Data",
+      content: `Format XML data with proper indentation and structure for better readability and debugging.
+
+## Tree Structure
+
+Displays XML hierarchy clearly with proper nesting.
+
+## Syntax Highlighting
+
+Makes tags and attributes easy to identify.`,
+      relatedTools: ["xml-validator", "xml-minifier", "code-formatter"]
+    }
+  },
+  {
+    id: "xml-validator",
+    title: "XML Validator",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["xml", "validate", "check", "verify"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "XML Validator Online - Validate XML Syntax Free",
+    metaDescription: "Validate XML online for free. Check XML syntax and well-formedness. Find XML errors instantly.",
+    description: "Validate XML syntax and structure",
+    icon: "shield-check",
+    howTo: [
+      "Paste your XML code",
+      "Click 'Validate'",
+      "See validation results",
+      "Fix any errors"
+    ],
+    article: {
+      title: "Validate XML Online",
+      content: `Validate XML to ensure well-formed structure and correct syntax. Find and fix errors quickly.
+
+## Error Detection
+
+Identifies unclosed tags, invalid characters, and structure issues.
+
+## Standards Compliance
+
+Checks against XML specifications and best practices.`,
+      relatedTools: ["xml-formatter", "xml-to-json", "code-validator"]
+    }
+  },
+  {
+    id: "html-minifier",
+    title: "HTML Minifier",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["html", "minify", "compress", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HTML Minifier Online - Minify HTML Code Free",
+    metaDescription: "Minify HTML online for free. Compress HTML by removing whitespace. Optimize HTML for faster loading.",
+    description: "Minify HTML by removing whitespace",
+    icon: "file-code",
+    howTo: [
+      "Paste your HTML code",
+      "Click 'Minify HTML'",
+      "Get compressed HTML",
+      "Copy minified code"
+    ],
+    article: {
+      title: "Minify HTML Code",
+      content: `Minify HTML to reduce file size and improve page load times by removing unnecessary whitespace.
+
+## Size Optimization
+
+Removes spaces, line breaks, and comments for smaller files.
+
+## Faster Loading
+
+Reduces bandwidth usage and improves page speed.`,
+      relatedTools: ["html-beautifier", "css-minifier", "js-minifier"]
+    }
+  },
+  {
+    id: "html-beautifier",
+    title: "HTML Beautifier",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["html", "beautify", "format", "prettify"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HTML Beautifier Online - Beautify HTML Code Free",
+    metaDescription: "Beautify HTML online for free. Format HTML with proper indentation. Make HTML code readable.",
+    description: "Beautify and format HTML for readability",
+    icon: "layout",
+    howTo: [
+      "Paste minified HTML",
+      "Click 'Beautify'",
+      "View formatted HTML",
+      "Copy beautified code"
+    ],
+    article: {
+      title: "Beautify HTML Code",
+      content: `Transform minified HTML into beautifully formatted, readable code with proper indentation and structure.
+
+## Improved Readability
+
+Makes HTML structure clear and easy to understand.
+
+## Consistent Formatting
+
+Applies consistent indentation and formatting rules.`,
+      relatedTools: ["html-minifier", "html-formatter", "code-beautifier"]
+    }
+  },
+  {
+    id: "css-minifier",
+    title: "CSS Minifier",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["css", "minify", "compress", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSS Minifier Online - Minify CSS Code Free",
+    metaDescription: "Minify CSS online for free. Compress CSS by removing whitespace and comments. Optimize CSS files.",
+    description: "Minify CSS by removing whitespace",
+    icon: "paintbrush",
+    howTo: [
+      "Paste your CSS code",
+      "Click 'Minify CSS'",
+      "Get compressed CSS",
+      "Copy minified code"
+    ],
+    article: {
+      title: "Minify CSS Code",
+      content: `Minify CSS to reduce file size and improve website performance by removing unnecessary characters.
+
+## File Size Reduction
+
+Removes whitespace, comments, and unnecessary characters.
+
+## Performance Boost
+
+Smaller CSS files load faster, improving page speed.`,
+      relatedTools: ["css-beautifier", "html-minifier", "js-minifier"]
+    }
+  },
+  {
+    id: "css-beautifier",
+    title: "CSS Beautifier",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["css", "beautify", "format", "prettify"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSS Beautifier Online - Beautify CSS Code Free",
+    metaDescription: "Beautify CSS online for free. Format CSS with proper indentation. Make CSS code readable.",
+    description: "Beautify and format CSS for readability",
+    icon: "palette",
+    howTo: [
+      "Paste minified CSS",
+      "Click 'Beautify'",
+      "View formatted CSS",
+      "Copy beautified code"
+    ],
+    article: {
+      title: "Beautify CSS Code",
+      content: `Transform minified CSS into well-formatted, readable code with proper indentation and organization.
+
+## Better Organization
+
+Organizes selectors and properties for easy navigation.
+
+## Consistent Style
+
+Applies consistent formatting throughout your CSS.`,
+      relatedTools: ["css-minifier", "css-formatter", "code-beautifier"]
+    }
+  },
+  {
+    id: "js-minifier",
+    title: "JS Minifier",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["javascript", "js", "minify", "compress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JavaScript Minifier Online - Minify JS Code Free",
+    metaDescription: "Minify JavaScript online for free. Compress JS files for faster loading. Optimize JavaScript code.",
+    description: "Minify JavaScript by removing whitespace",
+    icon: "file-code-2",
+    howTo: [
+      "Paste your JavaScript code",
+      "Click 'Minify JS'",
+      "Get compressed JavaScript",
+      "Copy minified code"
+    ],
+    article: {
+      title: "Minify JavaScript Code",
+      content: `Minify JavaScript to reduce file size and improve website performance by removing whitespace and comments.
+
+## Optimization
+
+Reduces file size significantly for faster downloads.
+
+## Production Ready
+
+Perfect for deploying optimized JavaScript to production.`,
+      relatedTools: ["js-beautifier", "html-minifier", "css-minifier"]
+    }
+  },
+  {
+    id: "js-beautifier",
+    title: "JS Beautifier",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["javascript", "js", "beautify", "format"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JavaScript Beautifier Online - Beautify JS Code Free",
+    metaDescription: "Beautify JavaScript online for free. Format JS with proper indentation. Make JavaScript readable.",
+    description: "Beautify and format JavaScript for readability",
+    icon: "code",
+    howTo: [
+      "Paste minified JavaScript",
+      "Click 'Beautify'",
+      "View formatted code",
+      "Copy beautified JavaScript"
+    ],
+    article: {
+      title: "Beautify JavaScript Code",
+      content: `Transform minified JavaScript into readable, well-formatted code with proper indentation and structure.
+
+## Code Clarity
+
+Makes complex JavaScript easy to read and debug.
+
+## Configurable Options
+
+Choose indentation style and formatting preferences.`,
+      relatedTools: ["js-minifier", "code-formatter", "code-beautifier"]
+    }
+  },
+  {
+    id: "sql-formatter",
+    title: "SQL Formatter",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["sql", "format", "database", "query"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "SQL Formatter Online - Format SQL Queries Free",
+    metaDescription: "Format SQL online for free. Beautify SQL queries with proper indentation. Make SQL readable.",
+    description: "Format and beautify SQL queries",
+    icon: "database",
+    howTo: [
+      "Paste your SQL query",
+      "Click 'Format SQL'",
+      "View formatted query",
+      "Copy formatted SQL"
+    ],
+    article: {
+      title: "Format SQL Queries",
+      content: `Format SQL queries with proper indentation and structure for better readability and debugging.
+
+## Query Organization
+
+Aligns keywords and clauses for clear structure.
+
+## Multiple Dialects
+
+Supports various SQL dialects and standards.`,
+      relatedTools: ["sql-minifier", "database-tools", "code-formatter"]
+    }
+  },
+  {
+    id: "sql-minifier",
+    title: "SQL Minifier",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["sql", "minify", "compress", "database"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "SQL Minifier Online - Minify SQL Queries Free",
+    metaDescription: "Minify SQL online for free. Compress SQL queries by removing whitespace. Optimize SQL code.",
+    description: "Minify SQL by removing whitespace",
+    icon: "minimize",
+    howTo: [
+      "Paste your SQL query",
+      "Click 'Minify SQL'",
+      "Get compressed SQL",
+      "Copy minified query"
+    ],
+    article: {
+      title: "Minify SQL Queries",
+      content: `Minify SQL queries by removing unnecessary whitespace to reduce storage size and improve transmission.
+
+## Size Reduction
+
+Removes extra spaces and line breaks from queries.
+
+## Compact Storage
+
+Ideal for storing queries in configuration files.`,
+      relatedTools: ["sql-formatter", "database-tools", "code-minifier"]
+    }
+  },
+  {
+    id: "lorem-ipsum-generator",
+    title: "Lorem Ipsum Generator",
+    category: "Text Generators" as ToolCategory,
+    tags: ["lorem", "ipsum", "placeholder", "text"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Lorem Ipsum Generator - Generate Placeholder Text Free",
+    metaDescription: "Generate Lorem Ipsum placeholder text online for free. Create dummy text for design mockups. Fast generator.",
+    description: "Generate Lorem Ipsum placeholder text",
+    icon: "text",
+    howTo: [
+      "Select number of paragraphs or words",
+      "Click 'Generate'",
+      "Copy placeholder text",
+      "Use in your design"
+    ],
+    article: {
+      title: "Lorem Ipsum Text Generator",
+      content: `Generate Lorem Ipsum placeholder text for design mockups, templates, and prototypes.
+
+## Customizable Length
+
+Generate specific number of words, sentences, or paragraphs.
+
+## Design Standard
+
+The industry-standard placeholder text for designers.`,
+      relatedTools: ["text-generator", "random-text", "placeholder-generator"]
+    }
+  },
+  {
+    id: "uuid-generator",
+    title: "UUID Generator",
+    category: "Text Generators" as ToolCategory,
+    tags: ["uuid", "guid", "generate", "unique"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "UUID Generator Online - Generate UUIDs Free",
+    metaDescription: "Generate UUIDs online for free. Create unique identifiers (UUID/GUID) instantly. Fast UUID generator.",
+    description: "Generate unique UUIDs (Universally Unique Identifiers)",
+    icon: "hash",
+    howTo: [
+      "Select UUID version (v1, v4, etc.)",
+      "Click 'Generate UUID'",
+      "Copy generated UUID",
+      "Use in your application"
+    ],
+    article: {
+      title: "Generate UUIDs Online",
+      content: `Generate universally unique identifiers (UUIDs) for databases, APIs, and applications.
+
+## Multiple Versions
+
+Supports UUID v1, v4, and other standard versions.
+
+## Guaranteed Uniqueness
+
+Creates cryptographically strong unique identifiers.`,
+      relatedTools: ["hash-generator", "random-generator", "guid-generator"]
+    }
+  },
+  {
+    id: "hash-generator-md5",
+    title: "Hash Generator (MD5)",
+    category: "Encoding & Decoding" as ToolCategory,
+    tags: ["hash", "md5", "checksum", "digest"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MD5 Hash Generator Online - Generate MD5 Hashes Free",
+    metaDescription: "Generate MD5 hashes online for free. Create MD5 checksums for text and files. Fast hash generator.",
+    description: "Generate MD5 hash checksums",
+    icon: "fingerprint",
+    howTo: [
+      "Enter text or upload file",
+      "Click 'Generate MD5'",
+      "Copy generated hash",
+      "Use for verification"
+    ],
+    article: {
+      title: "MD5 Hash Generator",
+      content: `Generate MD5 hashes for data verification, checksums, and file integrity checking.
+
+## Quick Checksums
+
+Generate MD5 hashes instantly for any text or file.
+
+## Data Verification
+
+Verify file integrity and detect changes.`,
+      relatedTools: ["hash-generator-sha256", "checksum-tool", "file-hash"]
+    }
+  },
+  {
+    id: "hash-generator-sha256",
+    title: "Hash Generator (SHA-256)",
+    category: "Encoding & Decoding" as ToolCategory,
+    tags: ["hash", "sha256", "checksum", "secure"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "SHA-256 Hash Generator - Generate SHA-256 Hashes Free",
+    metaDescription: "Generate SHA-256 hashes online for free. Create secure SHA-256 checksums. Fast hash generator.",
+    description: "Generate SHA-256 hash checksums",
+    icon: "shield",
+    howTo: [
+      "Enter text or upload file",
+      "Click 'Generate SHA-256'",
+      "Copy generated hash",
+      "Use for security"
+    ],
+    article: {
+      title: "SHA-256 Hash Generator",
+      content: `Generate SHA-256 hashes for secure data verification and cryptographic applications.
+
+## Cryptographic Security
+
+SHA-256 is a secure hashing algorithm widely used in security.
+
+## File Integrity
+
+Verify downloads and detect tampering.`,
+      relatedTools: ["hash-generator-md5", "checksum-tool", "encryption-tools"]
+    }
+  },
+  {
+    id: "base64-encode",
+    title: "Base64 Encode",
+    category: "Encoding & Decoding" as ToolCategory,
+    tags: ["base64", "encode", "convert", "encoding"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Base64 Encode Online - Encode Text to Base64 Free",
+    metaDescription: "Encode text to Base64 online for free. Convert strings to Base64 encoding instantly. Simple encoder tool.",
+    description: "Encode text and files to Base64 format",
+    icon: "lock",
+    howTo: [
+      "Enter text or upload file",
+      "Click 'Encode to Base64'",
+      "Copy encoded output",
+      "Use in your application"
+    ],
+    article: {
+      title: "Base64 Encoding Tool",
+      content: `Encode text and binary data to Base64 format for safe transmission and storage.
+
+## Safe Transmission
+
+Base64 encoding ensures data can be safely transmitted.
+
+## Wide Support
+
+Supported by all programming languages and platforms.`,
+      relatedTools: ["base64-decode", "url-encode", "encoding-tools"]
+    }
+  },
+  {
+    id: "base64-decode",
+    title: "Base64 Decode",
+    category: "Encoding & Decoding" as ToolCategory,
+    tags: ["base64", "decode", "convert", "decoding"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Base64 Decode Online - Decode Base64 to Text Free",
+    metaDescription: "Decode Base64 online for free. Convert Base64 encoding back to original text. Fast decoder tool.",
+    description: "Decode Base64 encoded text and files",
+    icon: "unlock",
+    howTo: [
+      "Enter Base64 encoded text",
+      "Click 'Decode from Base64'",
+      "View decoded output",
+      "Copy or download result"
+    ],
+    article: {
+      title: "Base64 Decoding Tool",
+      content: `Decode Base64 encoded data back to its original format for reading and processing.
+
+## Reverse Encoding
+
+Converts Base64 back to original text or binary data.
+
+## Data Recovery
+
+Decode encoded data for viewing and analysis.`,
+      relatedTools: ["base64-encode", "url-decode", "decoding-tools"]
+    }
+  },
+  {
+    id: "url-encode",
+    title: "URL Encode",
+    category: "Encoding & Decoding" as ToolCategory,
+    tags: ["url", "encode", "percent", "escape"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "URL Encode Online - Encode URLs Free",
+    metaDescription: "URL encode text online for free. Convert text to URL-safe format with percent encoding. Fast encoder.",
+    description: "Encode text for safe use in URLs",
+    icon: "link-2",
+    howTo: [
+      "Enter text to encode",
+      "Click 'URL Encode'",
+      "Copy encoded URL",
+      "Use in web addresses"
+    ],
+    article: {
+      title: "URL Encoding Tool",
+      content: `Encode text for safe use in URLs by converting special characters to percent-encoded format.
+
+## URL Safety
+
+Makes text safe for use in query parameters and URLs.
+
+## Special Characters
+
+Properly encodes spaces, symbols, and non-ASCII characters.`,
+      relatedTools: ["url-decode", "base64-encode", "encoding-tools"]
+    }
+  },
+  {
+    id: "url-decode",
+    title: "URL Decode",
+    category: "Encoding & Decoding" as ToolCategory,
+    tags: ["url", "decode", "percent", "unescape"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "URL Decode Online - Decode URLs Free",
+    metaDescription: "URL decode text online for free. Convert percent-encoded URLs back to readable text. Fast decoder.",
+    description: "Decode URL-encoded text to readable format",
+    icon: "link",
+    howTo: [
+      "Enter URL-encoded text",
+      "Click 'URL Decode'",
+      "View decoded text",
+      "Copy readable output"
+    ],
+    article: {
+      title: "URL Decoding Tool",
+      content: `Decode percent-encoded URLs back to readable text for analysis and debugging.
+
+## Readable Output
+
+Converts %20, %2F and other codes back to characters.
+
+## Query Parameter Analysis
+
+Perfect for debugging URL parameters and query strings.`,
+      relatedTools: ["url-encode", "base64-decode", "decoding-tools"]
+    }
+  },
+  {
+    id: "text-case-converter",
+    title: "Text Case Converter",
+    category: "Text Manipulation" as ToolCategory,
+    tags: ["case", "convert", "upper", "lower"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Text Case Converter - Convert Text Case Online Free",
+    metaDescription: "Convert text case online for free. Change to uppercase, lowercase, title case, and more. Fast converter.",
+    description: "Convert text between different cases",
+    icon: "type",
+    howTo: [
+      "Paste your text",
+      "Select desired case",
+      "Click 'Convert'",
+      "Copy converted text"
+    ],
+    article: {
+      title: "Convert Text Case",
+      content: `Convert text between uppercase, lowercase, title case, sentence case, and more formatting options.
+
+## Multiple Case Options
+
+Supports uppercase, lowercase, title case, sentence case, and camelCase.
+
+## Bulk Conversion
+
+Convert large amounts of text instantly.`,
+      relatedTools: ["uppercase-converter", "lowercase-converter", "title-case-converter"]
+    }
+  },
+  {
+    id: "uppercase-converter",
+    title: "Uppercase Converter",
+    category: "Text Manipulation" as ToolCategory,
+    tags: ["uppercase", "caps", "convert", "text"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Uppercase Converter - Convert Text to UPPERCASE Free",
+    metaDescription: "Convert text to uppercase online for free. Transform text to all caps instantly. Simple uppercase tool.",
+    description: "Convert text to UPPERCASE",
+    icon: "a-arrow-up",
+    howTo: [
+      "Paste your text",
+      "Click 'Convert to Uppercase'",
+      "Get ALL CAPS text",
+      "Copy converted text"
+    ],
+    article: {
+      title: "Convert to Uppercase",
+      content: `Convert any text to uppercase (ALL CAPS) format instantly for emphasis and formatting.
+
+## Instant Conversion
+
+Transforms all characters to uppercase immediately.
+
+## Preserve Numbers
+
+Keeps numbers and special characters unchanged.`,
+      relatedTools: ["lowercase-converter", "text-case-converter", "title-case"]
+    }
+  },
+  {
+    id: "lowercase-converter",
+    title: "Lowercase Converter",
+    category: "Text Manipulation" as ToolCategory,
+    tags: ["lowercase", "convert", "text", "small"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Lowercase Converter - Convert Text to lowercase Free",
+    metaDescription: "Convert text to lowercase online for free. Transform text to all lowercase instantly. Simple converter.",
+    description: "Convert text to lowercase",
+    icon: "a-arrow-down",
+    howTo: [
+      "Paste your text",
+      "Click 'Convert to Lowercase'",
+      "Get lowercase text",
+      "Copy converted text"
+    ],
+    article: {
+      title: "Convert to Lowercase",
+      content: `Convert any text to lowercase format for consistency and standardization.
+
+## Quick Transformation
+
+Changes all characters to lowercase instantly.
+
+## Text Normalization
+
+Perfect for data processing and standardization.`,
+      relatedTools: ["uppercase-converter", "text-case-converter", "sentence-case"]
+    }
+  },
+  {
+    id: "title-case-converter",
+    title: "Title Case Converter",
+    category: "Text Manipulation" as ToolCategory,
+    tags: ["title", "case", "capitalize", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Title Case Converter - Convert to Title Case Free",
+    metaDescription: "Convert text to title case online for free. Capitalize first letter of each word. Fast title case tool.",
+    description: "Convert text to Title Case",
+    icon: "heading",
+    howTo: [
+      "Paste your text",
+      "Click 'Convert to Title Case'",
+      "Get Title Case Text",
+      "Copy converted text"
+    ],
+    article: {
+      title: "Convert to Title Case",
+      content: `Convert text to title case by capitalizing the first letter of each word, perfect for headings and titles.
+
+## Smart Capitalization
+
+Capitalizes important words, keeps small words lowercase.
+
+## Professional Formatting
+
+Creates properly formatted titles and headings.`,
+      relatedTools: ["sentence-case-converter", "uppercase-converter", "text-case-converter"]
+    }
+  },
+  {
+    id: "sentence-case-converter",
+    title: "Sentence Case Converter",
+    category: "Text Manipulation" as ToolCategory,
+    tags: ["sentence", "case", "capitalize", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Sentence Case Converter - Convert to Sentence Case Free",
+    metaDescription: "Convert text to sentence case online for free. Capitalize first letter of sentences. Simple converter.",
+    description: "Convert text to Sentence case",
+    icon: "text-quote",
+    howTo: [
+      "Paste your text",
+      "Click 'Convert to Sentence Case'",
+      "Get sentence case text",
+      "Copy converted text"
+    ],
+    article: {
+      title: "Convert to Sentence Case",
+      content: `Convert text to sentence case with only the first letter of each sentence capitalized.
+
+## Natural Format
+
+Matches standard sentence capitalization rules.
+
+## Grammar Friendly
+
+Perfect for normalizing text to proper grammar.`,
+      relatedTools: ["title-case-converter", "lowercase-converter", "text-formatter"]
+    }
+  },
+  {
+    id: "password-generator",
+    title: "Password Generator",
+    category: "Text Generators" as ToolCategory,
+    tags: ["password", "generate", "secure", "random"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Password Generator - Generate Secure Passwords Free",
+    metaDescription: "Generate secure passwords online for free. Create strong random passwords with custom options. Safe generator.",
+    description: "Generate secure random passwords",
+    icon: "key",
+    howTo: [
+      "Select password length",
+      "Choose character types",
+      "Click 'Generate Password'",
+      "Copy secure password"
+    ],
+    article: {
+      title: "Generate Secure Passwords",
+      content: `Generate strong, secure passwords with customizable length and character types for maximum security.
+
+## Customizable Options
+
+Choose length and include/exclude numbers, symbols, etc.
+
+## Cryptographically Secure
+
+Uses secure random generation for strong passwords.`,
+      relatedTools: ["random-generator", "uuid-generator", "security-tools"]
+    }
+  },
+  {
+    id: "qr-code-generator",
+    title: "QR Code Generator",
+    category: "QR Code Tools" as ToolCategory,
+    tags: ["qr", "code", "generate", "barcode"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "QR Code Generator - Create QR Codes Free Online",
+    metaDescription: "Generate QR codes online for free. Create QR codes for URLs, text, and more. Fast QR code generator.",
+    description: "Generate QR codes for URLs, text, and more",
+    icon: "qr-code",
+    howTo: [
+      "Enter text or URL",
+      "Customize size and color",
+      "Click 'Generate QR Code'",
+      "Download QR code image"
+    ],
+    article: {
+      title: "Create QR Codes Online",
+      content: `Generate QR codes for websites, contact info, WiFi passwords, and more with customizable options.
+
+## Versatile Content
+
+Create QR codes for URLs, text, contact cards, WiFi, and more.
+
+## Customizable Design
+
+Choose size, colors, and error correction level.`,
+      relatedTools: ["qr-code-reader", "barcode-generator", "link-shortener"]
+    }
+  },
+  {
+    id: "qr-code-reader",
+    title: "QR Code Reader",
+    category: "QR Code Tools" as ToolCategory,
+    tags: ["qr", "code", "read", "scan", "decode"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "QR Code Reader Online - Scan QR Codes Free",
+    metaDescription: "Read QR codes online for free. Scan and decode QR codes from images. Fast QR code scanner.",
+    description: "Read and decode QR codes from images",
+    icon: "scan",
+    howTo: [
+      "Upload QR code image",
+      "Click 'Read QR Code'",
+      "View decoded content",
+      "Copy or use the data"
+    ],
+    article: {
+      title: "Scan QR Codes Online",
+      content: `Read and decode QR codes from images to extract URLs, text, and other encoded information.
+
+## Image Upload
+
+Upload QR code images from your computer or phone.
+
+## Instant Decoding
+
+Quickly extracts information from QR codes.`,
+      relatedTools: ["qr-code-generator", "barcode-reader", "image-tools"]
+    }
+  },
+  {
+    id: "compress-audio",
+    title: "Compress Audio",
+    category: "Audio Tools" as ToolCategory,
+    tags: ["audio", "compress", "reduce", "size"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress Audio Online - Reduce Audio File Size Free",
+    metaDescription: "Compress audio files online for free. Reduce audio file size while maintaining quality. Fast compression.",
+    description: "Compress audio files to reduce size",
+    icon: "volume-2",
+    howTo: [
+      "Upload your audio file",
+      "Select compression level",
+      "Click 'Compress Audio'",
+      "Download compressed file"
+    ],
+    article: {
+      title: "Compress Audio Files",
+      content: `Reduce audio file size while maintaining acceptable quality for easier sharing and storage.
+
+## Quality Control
+
+Choose compression level to balance size and quality.
+
+## Format Support
+
+Works with MP3, WAV, AAC, and other popular formats.`,
+      relatedTools: ["compress-mp3", "audio-converter", "reduce-file-size"]
+    }
+  },
+  {
+    id: "compress-mp3",
+    title: "Compress MP3",
+    category: "Audio Tools" as ToolCategory,
+    tags: ["mp3", "compress", "reduce", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress MP3 Online - Reduce MP3 File Size Free",
+    metaDescription: "Compress MP3 files online for free. Reduce MP3 size with adjustable quality. Fast MP3 compressor.",
+    description: "Compress MP3 files while maintaining quality",
+    icon: "music",
+    howTo: [
+      "Upload your MP3 file",
+      "Choose bitrate/quality",
+      "Click 'Compress MP3'",
+      "Download smaller MP3"
+    ],
+    article: {
+      title: "Compress MP3 Files",
+      content: `Reduce MP3 file size by adjusting bitrate and quality settings for optimal compression.
+
+## Bitrate Control
+
+Select from various bitrates to control file size.
+
+## Quality Preservation
+
+Maintains acceptable audio quality at lower file sizes.`,
+      relatedTools: ["compress-audio", "mp3-converter", "audio-tools"]
+    }
+  },
+  {
+    id: "csv-editor",
+    title: "Online CSV Editor",
+    category: "Editor Tools" as ToolCategory,
+    tags: ["csv", "edit", "table", "spreadsheet"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online CSV Editor - Edit CSV Files Free",
+    metaDescription: "Edit CSV files online for free. View and modify CSV data in table format. Fast CSV editor.",
+    description: "Edit CSV files in an online spreadsheet interface",
+    icon: "table-2",
+    howTo: [
+      "Upload your CSV file",
+      "Edit data in table view",
+      "Add or remove rows/columns",
+      "Download modified CSV"
+    ],
+    article: {
+      title: "Edit CSV Files Online",
+      content: `Edit CSV files with an intuitive table interface. Add, remove, or modify data easily.
+
+## Table View
+
+View and edit CSV data in familiar spreadsheet format.
+
+## Easy Editing
+
+Add rows, columns, sort data, and make changes quickly.`,
+      relatedTools: ["csv-to-json", "excel-editor", "data-tools"]
+    }
+  },
+  {
+    id: "markdown-editor",
+    title: "Online Markdown Editor",
+    category: "Editor Tools" as ToolCategory,
+    tags: ["markdown", "edit", "preview", "md"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Markdown Editor - Write Markdown with Preview",
+    metaDescription: "Edit Markdown online for free. Write MD with live preview. Fast Markdown editor with syntax highlighting.",
+    description: "Edit Markdown with live preview",
+    icon: "edit",
+    howTo: [
+      "Write Markdown text",
+      "See live preview",
+      "Use formatting toolbar",
+      "Export as MD or HTML"
+    ],
+    article: {
+      title: "Edit Markdown Online",
+      content: `Write and edit Markdown with live preview to see formatted output in real-time.
+
+## Live Preview
+
+See rendered Markdown as you type.
+
+## Syntax Highlighting
+
+Color-coded syntax for easier editing.`,
+      relatedTools: ["markdown-to-html", "html-to-markdown", "text-editor"]
+    }
+  },
+  {
+    id: "code-diff-checker",
+    title: "Code Diff Checker",
+    category: "Code Formatting" as ToolCategory,
+    tags: ["diff", "code", "compare", "changes"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Code Diff Checker - Compare Code Changes Online Free",
+    metaDescription: "Check code differences online for free. Compare two code files side-by-side. Fast diff checker.",
+    description: "Compare code files to see differences",
+    icon: "git-branch",
+    howTo: [
+      "Paste original code",
+      "Paste modified code",
+      "Click 'Compare'",
+      "View highlighted differences"
+    ],
+    article: {
+      title: "Compare Code Changes",
+      content: `Compare two versions of code to see exactly what changed with syntax-aware diff checking.
+
+## Syntax Highlighting
+
+Shows code differences with proper syntax coloring.
+
+## Line-by-Line
+
+Detailed comparison showing additions, deletions, and modifications.`,
+      relatedTools: ["text-difference-checker", "merge-code", "version-control"]
     }
   }
 ] as const;
