@@ -19,10 +19,10 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Free PDF, Audio & Video Tools Online - 600+ Tools for All Your Needs</title>
-        <meta name="description" content="Free online PDF, audio, and video tools. Merge PDFs, convert audio, edit videos, compress files, and more. 600+ professional tools. Fast, secure, and easy to use. No registration required." />
-        <meta property="og:title" content="Free PDF, Audio & Video Tools Online - 600+ Professional Tools" />
-        <meta property="og:description" content="Professional PDF, audio, and video tools for all your media needs. Convert, edit, compress, merge, and enhance. 600+ tools available." />
+        <title>Free PDF, Audio & Video Tools Online - 693+ Tools for All Your Needs</title>
+        <meta name="description" content="Free online PDF, audio, video, and archive tools. Merge PDFs, convert audio, edit videos, compress files, extract archives, and more. 693+ professional tools. Fast, secure, and easy to use. No registration required." />
+        <meta property="og:title" content="Free PDF, Audio & Video Tools Online - 693+ Professional Tools" />
+        <meta property="og:description" content="Professional PDF, audio, video, and archive tools for all your media needs. Convert, edit, compress, merge, enhance, and manage files. 693+ tools available." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={typeof window !== 'undefined' ? window.location.href : ''} />
         <meta property="og:image" content={typeof window !== 'undefined' ? `${window.location.origin}/favicon.png` : ''} />

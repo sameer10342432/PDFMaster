@@ -42,10 +42,10 @@ export default function Tools() {
   return (
     <>
       <Helmet>
-        <title>All PDF & Image Tools - 560+ Free Online Utilities</title>
-        <meta name="description" content="Browse all 560+ free PDF and image tools. Merge PDFs, compress images, convert formats, edit photos with filters and effects, AI-powered tools, and more. Fast, secure, and easy to use." />
-        <meta property="og:title" content="All PDF & Image Tools - 560+ Free Online Utilities" />
-        <meta property="og:description" content="Complete collection of 560+ free PDF and image tools for all your document and image needs including editing, conversion, compression, and AI enhancements." />
+        <title>All PDF, Video & Archive Tools - 693+ Free Online Utilities</title>
+        <meta name="description" content="Browse all 693+ free PDF, video, audio, image, and archive tools. Merge PDFs, edit videos, extract archives, compress images, and more. Fast, secure, and easy to use." />
+        <meta property="og:title" content="All PDF, Video & Archive Tools - 693+ Free Online Utilities" />
+        <meta property="og:description" content="Complete collection of 693+ free tools for PDFs, videos, audio, images, and archives. All your file needs including editing, conversion, compression, and AI enhancements." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={typeof window !== 'undefined' ? window.location.href : ''} />
         <meta property="og:image" content={typeof window !== 'undefined' ? `${window.location.origin}/favicon.png` : ''} />
@@ -59,10 +59,10 @@ export default function Tools() {
             <div className="container mx-auto max-w-7xl px-4">
               <div className="text-center space-y-6 max-w-3xl mx-auto">
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                  All PDF & Image Tools
+                  All 693+ PDF, Audio & Video Tools
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Explore our complete collection of 560+ free PDF and image tools
+                  Explore our complete collection of 693+ free tools for PDFs, videos, audio, images, and archives
                 </p>
                 
                 <div className="relative max-w-md mx-auto">

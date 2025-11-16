@@ -51,6 +51,14 @@ export const toolCategories = [
   "Video Editing",
   "Video Compression",
   "Video Effects",
+  "Video Enhancement",
+  "Video Subtitle Tools",
+  "Video Analysis",
+  "Archive Extraction",
+  "Archive Creation",
+  "Archive Conversion",
+  "Archive Management",
+  "Web Tools",
   "Editor Tools"
 ] as const;
 
@@ -29643,6 +29651,3232 @@ Flip videos for:
 - Symmetry creation
 - Artistic effects`,
       relatedTools: ["flip-video", "mirror-video", "video-effects"]
+    }
+  },
+  // Video Editing Tools - Additional Tools
+  {
+    id: "resize-video",
+    title: "Resize Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["resize", "scale", "dimensions", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Resize Video Online Free - Change Video Dimensions",
+    metaDescription: "Resize video dimensions online for free. Scale videos to any size. Adjust resolution and aspect ratio easily.",
+    description: "Resize video dimensions to any size",
+    icon: "maximize",
+    howTo: [
+      "Upload your video file",
+      "Enter desired width and height",
+      "Choose scaling method",
+      "Download resized video"
+    ],
+    article: {
+      title: "How to Resize Videos Online",
+      content: `Resize videos to fit social media requirements, reduce file size, or match specific dimensions. Our free tool makes video resizing simple and fast.
+
+## Why Resize Videos?
+
+Resizing videos is essential for:
+- Social media platform requirements
+- Reducing file size
+- Matching display dimensions
+- Optimizing for mobile devices
+- Creating thumbnails
+
+## Resizing Options
+
+Our tool offers flexible resizing:
+- Custom dimensions
+- Aspect ratio preservation
+- Quality optimization
+- Batch resizing
+- Multiple formats`,
+      relatedTools: ["video-resizer", "change-video-aspect-ratio", "compress-video"]
+    }
+  },
+  {
+    id: "video-resizer",
+    title: "Video Resizer",
+    category: "Video Editing" as ToolCategory,
+    tags: ["resize", "scale", "crop", "dimensions"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video Resizer Tool - Resize Videos for Any Platform",
+    metaDescription: "Professional video resizer for all platforms. Instagram, YouTube, TikTok presets. Free video resizing tool.",
+    description: "Professional video resizing with platform presets",
+    icon: "monitor",
+    howTo: [
+      "Select video file",
+      "Choose platform preset or custom size",
+      "Apply resize settings",
+      "Export resized video"
+    ],
+    article: {
+      title: "Professional Video Resizing Guide",
+      content: `Master video resizing for all major platforms with our professional tool. Get perfect dimensions for Instagram, YouTube, TikTok, and more.
+
+## Platform Presets
+
+Optimize for:
+- Instagram (1080x1080, 1080x1350)
+- YouTube (1920x1080, 3840x2160)
+- TikTok (1080x1920)
+- Facebook (1200x1200, 1280x720)
+- Twitter (1280x720)
+
+## Advanced Features
+
+Professional resizing includes:
+- Aspect ratio locking
+- Crop positioning
+- Quality preservation
+- Batch processing
+- Preview mode`,
+      relatedTools: ["resize-video", "crop-video", "change-video-aspect-ratio"]
+    }
+  },
+  {
+    id: "change-video-aspect-ratio",
+    title: "Change Video Aspect Ratio",
+    category: "Video Editing" as ToolCategory,
+    tags: ["aspect", "ratio", "resize", "crop"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Change Video Aspect Ratio Online - 16:9, 4:3, 1:1",
+    metaDescription: "Change video aspect ratio online. Convert to 16:9, 4:3, 1:1, 9:16. Free aspect ratio converter.",
+    description: "Convert videos to different aspect ratios",
+    icon: "aspect-ratio",
+    howTo: [
+      "Upload video",
+      "Select target aspect ratio",
+      "Choose fit or fill method",
+      "Download converted video"
+    ],
+    article: {
+      title: "Change Video Aspect Ratio Guide",
+      content: `Change video aspect ratios to fit different platforms and displays. Convert between 16:9, 4:3, 1:1, 9:16, and more.
+
+## Common Aspect Ratios
+
+Popular formats:
+- 16:9 (Widescreen, YouTube)
+- 9:16 (Vertical, TikTok, Stories)
+- 1:1 (Square, Instagram)
+- 4:3 (Standard, Classic)
+- 21:9 (Ultrawide)
+
+## Conversion Methods
+
+Choose between:
+- Crop to fit (fills frame)
+- Letterbox (adds bars)
+- Stretch (distorts image)
+- Smart crop (AI-powered)
+- Custom positioning`,
+      relatedTools: ["resize-video", "crop-video", "video-resizer"]
+    }
+  },
+  {
+    id: "merge-video",
+    title: "Merge Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["merge", "combine", "join", "concatenate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Merge Videos Online Free - Combine Multiple Videos Into One",
+    metaDescription: "Merge multiple videos into one file online for free. Combine video clips easily. Video merger tool.",
+    description: "Combine multiple videos into one file",
+    icon: "video",
+    howTo: [
+      "Upload multiple video files",
+      "Arrange videos in desired order",
+      "Choose transition effects (optional)",
+      "Merge and download combined video"
+    ],
+    article: {
+      title: "How to Merge Videos Online",
+      content: `Merge multiple video clips into a single file effortlessly. Perfect for creating compilations, montages, and complete presentations.
+
+## Merging Benefits
+
+Combine videos for:
+- Creating video compilations
+- Building presentations
+- Joining recording segments
+- Making highlight reels
+- Assembling tutorials
+
+## Merge Features
+
+Professional merging:
+- Unlimited clips
+- Drag-and-drop ordering
+- Transition effects
+- Audio synchronization
+- Format compatibility`,
+      relatedTools: ["combine-videos", "video-joiner", "join-video"]
+    }
+  },
+  {
+    id: "combine-videos",
+    title: "Combine Videos",
+    category: "Video Editing" as ToolCategory,
+    tags: ["combine", "merge", "join", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Combine Videos Online - Free Video Combiner Tool",
+    metaDescription: "Combine videos online for free. Join multiple video files. Easy video combiner with transitions.",
+    description: "Join multiple video files into one",
+    icon: "layers",
+    howTo: [
+      "Select video files to combine",
+      "Reorder clips as needed",
+      "Add transitions between clips",
+      "Export combined video"
+    ],
+    article: {
+      title: "Combine Videos Effortlessly",
+      content: `Combine separate video files into one seamless presentation. Add professional transitions and create polished final products.
+
+## Combination Options
+
+Combine with:
+- Cross-fade transitions
+- Cut transitions
+- Fade to black
+- Custom timing
+- Audio mixing
+
+## Professional Output
+
+Create quality videos:
+- Seamless joins
+- Matched quality
+- Synced audio
+- Smooth transitions
+- Multiple formats`,
+      relatedTools: ["merge-video", "video-joiner", "join-video"]
+    }
+  },
+  {
+    id: "video-joiner",
+    title: "Video Joiner",
+    category: "Video Editing" as ToolCategory,
+    tags: ["join", "combine", "merge", "concatenate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video Joiner Online Free - Join Video Clips Together",
+    metaDescription: "Join video clips together online. Free video joiner tool. Combine clips with transitions.",
+    description: "Join video clips together seamlessly",
+    icon: "link",
+    howTo: [
+      "Upload video clips",
+      "Arrange in sequence",
+      "Configure join settings",
+      "Download joined video"
+    ],
+    article: {
+      title: "Join Video Clips Together",
+      content: `Join separate video clips into a unified whole. Perfect for creating complete stories from multiple segments.
+
+## Joining Uses
+
+Join videos for:
+- Multi-part recordings
+- Scene combinations
+- Clip assemblies
+- Story creation
+- Content compilation
+
+## Join Quality
+
+Maintain excellence:
+- No quality loss
+- Smooth transitions
+- Audio sync
+- Format matching
+- Fast processing`,
+      relatedTools: ["merge-video", "combine-videos", "video-merger"]
+    }
+  },
+  {
+    id: "add-audio-to-video",
+    title: "Add Audio to Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["audio", "music", "sound", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Audio to Video Online Free - Add Music to Video",
+    metaDescription: "Add audio track to video online for free. Replace or add music to videos. Video audio editor.",
+    description: "Add or replace audio track in videos",
+    icon: "music",
+    howTo: [
+      "Upload video file",
+      "Upload audio file (MP3, WAV, etc.)",
+      "Adjust audio timing and volume",
+      "Export video with new audio"
+    ],
+    article: {
+      title: "Add Audio to Videos Online",
+      content: `Add background music, voiceovers, or sound effects to your videos. Perfect for enhancing social media content and presentations.
+
+## Audio Options
+
+Add different types:
+- Background music
+- Voiceovers
+- Sound effects
+- Podcasts
+- Narration
+
+## Audio Controls
+
+Professional features:
+- Volume adjustment
+- Fade in/out
+- Audio trimming
+- Multiple tracks
+- Sync control`,
+      relatedTools: ["change-video-audio", "remove-audio-from-video", "mix-audio"]
+    }
+  },
+  {
+    id: "change-video-audio",
+    title: "Change Video Audio",
+    category: "Video Editing" as ToolCategory,
+    tags: ["audio", "replace", "swap", "change"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Change Video Audio Online - Replace Video Soundtrack",
+    metaDescription: "Change video audio online. Replace soundtrack with new music. Free audio replacement tool.",
+    description: "Replace existing video audio with new audio",
+    icon: "replace",
+    howTo: [
+      "Upload video with audio",
+      "Select new audio file",
+      "Match audio to video length",
+      "Save video with new audio"
+    ],
+    article: {
+      title: "Change Video Audio Tracks",
+      content: `Replace or change the audio track in your videos. Perfect for fixing audio issues or adding better soundtracks.
+
+## Replacement Benefits
+
+Change audio for:
+- Better music choices
+- Fixing poor audio
+- Language changes
+- Copyright compliance
+- Quality improvement
+
+## Audio Matching
+
+Smart features:
+- Auto-sync options
+- Length matching
+- Volume normalization
+- Format conversion
+- Quality preservation`,
+      relatedTools: ["add-audio-to-video", "remove-audio-from-video", "extract-audio"]
+    }
+  },
+  {
+    id: "remove-audio-from-video",
+    title: "Remove Audio from Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["remove", "audio", "mute", "silent"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Remove Audio from Video Online Free - Mute Video",
+    metaDescription: "Remove audio from video online for free. Create silent videos. Video audio remover tool.",
+    description: "Remove audio track from videos",
+    icon: "volume-x",
+    howTo: [
+      "Upload video file",
+      "Click remove audio button",
+      "Preview silent video",
+      "Download muted video"
+    ],
+    article: {
+      title: "Remove Audio from Videos",
+      content: `Remove unwanted audio from videos to create silent content perfect for adding custom soundtracks or subtitles later.
+
+## Why Remove Audio?
+
+Remove audio for:
+- Adding custom music
+- Creating silent tutorials
+- Removing noise
+- Copyright issues
+- Professional editing
+
+## Processing Benefits
+
+Clean removal:
+- Complete audio strip
+- No quality loss
+- Fast processing
+- Any format
+- Instant results`,
+      relatedTools: ["mute-video", "change-video-audio", "extract-audio"]
+    }
+  },
+  {
+    id: "mute-video",
+    title: "Mute Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["mute", "silent", "audio", "remove"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Mute Video Online Free - Create Silent Videos",
+    metaDescription: "Mute videos online for free. Remove all sound from video. Silent video creator.",
+    description: "Mute all audio in videos",
+    icon: "volume",
+    howTo: [
+      "Select video to mute",
+      "Apply mute function",
+      "Preview silent result",
+      "Save muted video"
+    ],
+    article: {
+      title: "Mute Videos Instantly",
+      content: `Mute videos quickly to remove all sound. Perfect for creating content that works without audio or preparing videos for custom soundtracks.
+
+## Muting Uses
+
+Mute for:
+- Silent social posts
+- GIF creation prep
+- Custom audio addition
+- Noise elimination
+- Professional editing
+
+## Quick Processing
+
+Fast muting:
+- Instant results
+- Batch support
+- Quality maintained
+- All formats
+- Simple interface`,
+      relatedTools: ["remove-audio-from-video", "silent-video", "audio-remover"]
+    }
+  },
+  {
+    id: "add-subtitles-to-video",
+    title: "Add Subtitles to Video",
+    category: "Video Subtitle Tools" as ToolCategory,
+    tags: ["subtitles", "captions", "srt", "text"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Subtitles to Video Online Free - Video Subtitle Editor",
+    metaDescription: "Add subtitles to videos online for free. Upload SRT, VTT files or create captions. Free subtitle editor.",
+    description: "Add subtitle files to your videos",
+    icon: "subtitles",
+    howTo: [
+      "Upload video file",
+      "Upload subtitle file (SRT, VTT) or create new",
+      "Customize subtitle appearance",
+      "Export video with embedded subtitles"
+    ],
+    article: {
+      title: "Add Subtitles to Videos",
+      content: `Add professional subtitles to your videos for better accessibility and reach. Support for SRT, VTT, and custom subtitle creation.
+
+## Subtitle Benefits
+
+Add subtitles for:
+- Accessibility
+- International audiences
+- Social media (silent autoplay)
+- SEO improvement
+- Better engagement
+
+## Customization Options
+
+Style your subtitles:
+- Font selection
+- Size and color
+- Position on screen
+- Background opacity
+- Timing adjustment`,
+      relatedTools: ["burn-subtitles", "subtitle-editor", "create-subtitles"]
+    }
+  },
+  {
+    id: "burn-subtitles",
+    title: "Burn Subtitles",
+    category: "Video Subtitle Tools" as ToolCategory,
+    tags: ["burn", "subtitles", "hardcode", "embed"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Burn Subtitles into Video - Hardcode Subtitles Online",
+    metaDescription: "Burn subtitles permanently into video. Hardcode captions. Free subtitle burning tool.",
+    description: "Permanently embed subtitles into video",
+    icon: "flame",
+    howTo: [
+      "Upload video and subtitle file",
+      "Configure subtitle style",
+      "Burn subtitles into video",
+      "Download video with hardcoded subs"
+    ],
+    article: {
+      title: "Burn Subtitles into Videos",
+      content: `Permanently embed subtitles into your video file. Hardcoded subtitles ensure they display on any platform or device.
+
+## Why Burn Subtitles?
+
+Burn for:
+- Universal compatibility
+- Social media uploads
+- Permanent captions
+- Platform compliance
+- Professional delivery
+
+## Burning Options
+
+Customize before burning:
+- Font and size
+- Position
+- Color scheme
+- Background style
+- Animation effects`,
+      relatedTools: ["add-subtitles-to-video", "hardcode-subtitles", "embed-captions"]
+    }
+  },
+  {
+    id: "subtitle-editor",
+    title: "Subtitle Editor",
+    category: "Video Subtitle Tools" as ToolCategory,
+    tags: ["editor", "subtitles", "srt", "timing"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Subtitle Editor Online - Edit SRT and VTT Files",
+    metaDescription: "Edit subtitles online. Adjust timing, fix errors. Free SRT and VTT subtitle editor.",
+    description: "Edit subtitle files and adjust timing",
+    icon: "edit",
+    howTo: [
+      "Upload subtitle file (SRT, VTT)",
+      "Edit text and timing",
+      "Preview with video",
+      "Download edited subtitles"
+    ],
+    article: {
+      title: "Edit Subtitles Online",
+      content: `Professional subtitle editing tool for adjusting timing, correcting errors, and perfecting your caption files.
+
+## Editing Features
+
+Edit subtitles:
+- Timing adjustment
+- Text corrections
+- Split and merge
+- Format conversion
+- Sync to video
+
+## Time Management
+
+Perfect timing:
+- Frame-accurate sync
+- Auto-timing
+- Offset adjustment
+- Gap detection
+- Overlap fixing`,
+      relatedTools: ["sync-subtitles", "subtitle-converter", "fix-subtitles"]
+    }
+  },
+  {
+    id: "subtitle-converter-srt-to-vtt",
+    title: "Subtitle Converter (SRT to VTT)",
+    category: "Video Subtitle Tools" as ToolCategory,
+    tags: ["convert", "srt", "vtt", "subtitle"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert SRT to VTT Online Free - Subtitle Format Converter",
+    metaDescription: "Convert SRT to VTT subtitle format online for free. Batch subtitle conversion. Free converter tool.",
+    description: "Convert SRT subtitle files to VTT format",
+    icon: "file-code",
+    howTo: [
+      "Upload SRT file",
+      "Select VTT as output format",
+      "Convert subtitle file",
+      "Download VTT file"
+    ],
+    article: {
+      title: "Convert SRT to VTT Format",
+      content: `Convert subtitle files between SRT and VTT formats for compatibility with different video platforms and players.
+
+## Format Differences
+
+Understand formats:
+- SRT (SubRip)
+- VTT (WebVTT)
+- Platform requirements
+- Feature differences
+- Compatibility notes
+
+## Conversion Features
+
+Professional conversion:
+- Batch processing
+- Encoding preservation
+- Timing accuracy
+- Format validation
+- Quality assurance`,
+      relatedTools: ["vtt-to-srt-converter", "subtitle-format-converter", "convert-subtitles"]
+    }
+  },
+  {
+    id: "vtt-to-srt-converter",
+    title: "VTT to SRT Converter",
+    category: "Video Subtitle Tools" as ToolCategory,
+    tags: ["convert", "vtt", "srt", "subtitle"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert VTT to SRT Online Free - Subtitle Converter",
+    metaDescription: "Convert VTT to SRT subtitle format for free. Fast VTT to SRT conversion online.",
+    description: "Convert VTT subtitle files to SRT format",
+    icon: "repeat",
+    howTo: [
+      "Upload VTT file",
+      "Select SRT output",
+      "Convert instantly",
+      "Download SRT file"
+    ],
+    article: {
+      title: "Convert VTT to SRT Online",
+      content: `Convert WebVTT subtitle files to SubRip (SRT) format for maximum compatibility with video players and editing software.
+
+## Why Convert?
+
+Convert for:
+- Player compatibility
+- Editing software
+- Platform requirements
+- Archive purposes
+- Universal support
+
+## Conversion Quality
+
+Maintain integrity:
+- Perfect timing
+- Text preservation
+- Encoding support
+- Batch conversion
+- Error checking`,
+      relatedTools: ["subtitle-converter-srt-to-vtt", "convert-subtitles", "subtitle-format"]
+    }
+  },
+  {
+    id: "extract-subtitles-from-video",
+    title: "Extract Subtitles from Video",
+    category: "Video Subtitle Tools" as ToolCategory,
+    tags: ["extract", "subtitles", "rip", "export"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract Subtitles from Video - Export Subtitle Files",
+    metaDescription: "Extract embedded subtitles from video files. Export to SRT or VTT format. Free subtitle extractor.",
+    description: "Extract embedded subtitles from videos",
+    icon: "download",
+    howTo: [
+      "Upload video with embedded subs",
+      "Select subtitle track",
+      "Choose output format (SRT, VTT)",
+      "Download extracted subtitles"
+    ],
+    article: {
+      title: "Extract Subtitles from Videos",
+      content: `Extract embedded subtitle tracks from video files and save them as separate SRT or VTT files for editing or reuse.
+
+## Extraction Uses
+
+Extract for:
+- Subtitle editing
+- Translation work
+- Format conversion
+- Backup purposes
+- Reuse in other videos
+
+## Extraction Features
+
+Advanced extraction:
+- Multiple tracks
+- Language selection
+- Format options
+- Batch extraction
+- Quality preservation`,
+      relatedTools: ["rip-subtitles", "export-captions", "subtitle-extractor"]
+    }
+  },
+  {
+    id: "add-text-to-video",
+    title: "Add Text to Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["text", "overlay", "caption", "title"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Text to Video Online Free - Video Text Overlay Tool",
+    metaDescription: "Add text overlays to videos online for free. Customize font, color, position. Free text editor.",
+    description: "Add custom text overlays to videos",
+    icon: "type",
+    howTo: [
+      "Upload video file",
+      "Type your text",
+      "Customize font, size, color, position",
+      "Set display timing",
+      "Download video with text"
+    ],
+    article: {
+      title: "Add Text Overlays to Videos",
+      content: `Add professional text overlays to your videos. Perfect for titles, captions, credits, and callouts.
+
+## Text Uses
+
+Add text for:
+- Video titles
+- Lower thirds
+- Call-to-action
+- Credits
+- Timestamps
+
+## Customization
+
+Style your text:
+- Font selection
+- Size and weight
+- Colors and shadows
+- Position control
+- Animation effects`,
+      relatedTools: ["video-text-editor", "add-captions", "text-overlay"]
+    }
+  },
+  {
+    id: "add-image-to-video",
+    title: "Add Image to Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["image", "overlay", "logo", "watermark"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Image to Video Online - Image Overlay Tool",
+    metaDescription: "Add images to videos online. Add logos, watermarks, or graphics. Free image overlay tool.",
+    description: "Overlay images on your videos",
+    icon: "image",
+    howTo: [
+      "Upload video",
+      "Upload image (PNG, JPG)",
+      "Position and resize image",
+      "Set display duration",
+      "Export video with image"
+    ],
+    article: {
+      title: "Add Images to Videos",
+      content: `Overlay images on your videos for branding, watermarking, or creative effects. Support for logos, graphics, and photos.
+
+## Image Overlays
+
+Use images for:
+- Branding logos
+- Watermarks
+- Graphics
+- Profile pictures
+- Product shots
+
+## Overlay Controls
+
+Professional features:
+- Position anywhere
+- Resize and rotate
+- Opacity control
+- Timing control
+- Multiple layers`,
+      relatedTools: ["add-watermark-to-video", "add-logo-to-video", "image-overlay"]
+    }
+  },
+  {
+    id: "add-watermark-to-video",
+    title: "Add Watermark to Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["watermark", "logo", "brand", "protect"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Watermark to Video Online - Video Watermark Tool",
+    metaDescription: "Add watermark to videos online for free. Protect your content with logos and text. Free watermarking tool.",
+    description: "Add watermarks to protect your videos",
+    icon: "shield",
+    howTo: [
+      "Upload video",
+      "Upload logo or create text watermark",
+      "Position watermark",
+      "Adjust opacity",
+      "Download watermarked video"
+    ],
+    article: {
+      title: "Watermark Your Videos",
+      content: `Protect your video content with custom watermarks. Add logos, text, or both to establish ownership and brand identity.
+
+## Watermark Types
+
+Choose from:
+- Logo watermarks
+- Text watermarks
+- Combined watermarks
+- Dynamic watermarks
+- QR codes
+
+## Protection Features
+
+Secure your content:
+- Opacity control
+- Position locking
+- Size options
+- Batch watermarking
+- Persistent placement`,
+      relatedTools: ["protect-video", "brand-video", "add-logo"]
+    }
+  },
+  {
+    id: "video-watermark-remover",
+    title: "Video Watermark Remover",
+    category: "Video Editing" as ToolCategory,
+    tags: ["remove", "watermark", "clean", "erase"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Remove Watermark from Video - AI Watermark Remover",
+    metaDescription: "Remove watermarks from videos with AI. Clean video watermark remover tool.",
+    description: "Remove watermarks from videos (AI-powered)",
+    icon: "eraser",
+    howTo: [
+      "Upload video with watermark",
+      "Select watermark area",
+      "AI processes removal",
+      "Download clean video"
+    ],
+    article: {
+      title: "Remove Watermarks from Videos",
+      content: `Advanced AI-powered watermark removal for videos. Clean up your footage while maintaining video quality.
+
+## Removal Technology
+
+AI-powered features:
+- Automatic detection
+- Intelligent inpainting
+- Quality preservation
+- Frame-by-frame
+- Batch processing
+
+## Use Cases
+
+Remove watermarks for:
+- Stock footage use
+- Content repurposing
+- Archive restoration
+- Personal projects
+- Professional editing
+
+Note: Only use on content you have rights to use.`,
+      relatedTools: ["clean-video", "remove-overlay", "video-cleaner"]
+    }
+  },
+  {
+    id: "change-video-speed",
+    title: "Change Video Speed",
+    category: "Video Editing" as ToolCategory,
+    tags: ["speed", "slow", "fast", "tempo"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Change Video Speed Online - Speed Up or Slow Down Videos",
+    metaDescription: "Change video playback speed online. Speed up or slow down videos. Free speed controller.",
+    description: "Adjust video playback speed",
+    icon: "gauge",
+    howTo: [
+      "Upload video file",
+      "Select speed multiplier (0.25x to 4x)",
+      "Preview speed change",
+      "Download modified video"
+    ],
+    article: {
+      title: "Change Video Speed Online",
+      content: `Adjust video playback speed for time-lapse effects, slow motion, or content optimization. Flexible speed control from 0.25x to 4x.
+
+## Speed Options
+
+Control speed for:
+- Slow motion effects
+- Time-lapse videos
+- Quick reviews
+- Tutorial pacing
+- Sports analysis
+
+## Speed Features
+
+Professional control:
+- Precise multipliers
+- Audio pitch correction
+- Smooth playback
+- Frame interpolation
+- Batch processing`,
+      relatedTools: ["speed-up-video", "slow-down-video", "time-lapse"]
+    }
+  },
+  {
+    id: "speed-up-video",
+    title: "Speed Up Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["fast", "speed", "accelerate", "quick"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Speed Up Video Online - Make Videos Faster",
+    metaDescription: "Speed up videos online for free. Create fast-motion and time-lapse effects. Video accelerator.",
+    description: "Increase video playback speed",
+    icon: "fast-forward",
+    howTo: [
+      "Upload video",
+      "Choose speed increase (2x, 3x, 4x)",
+      "Preview accelerated video",
+      "Save faster video"
+    ],
+    article: {
+      title: "Speed Up Videos",
+      content: `Create fast-motion effects or compress lengthy content by speeding up videos. Perfect for time-lapses and quick reviews.
+
+## Speed Up Uses
+
+Accelerate for:
+- Time-lapse creation
+- Long process videos
+- Tutorial compression
+- Artistic effects
+- Content optimization
+
+## Acceleration Options
+
+Speed choices:
+- 2x faster
+- 3x faster
+- 4x faster
+- Custom speeds
+- Smooth motion`,
+      relatedTools: ["change-video-speed", "fast-motion", "time-lapse-maker"]
+    }
+  },
+  {
+    id: "slow-down-video",
+    title: "Slow Down Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["slow", "motion", "speed", "decelerate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Slow Down Video Online - Create Slow Motion Videos",
+    metaDescription: "Slow down videos online for free. Create slow motion effects. Video slow motion tool.",
+    description: "Decrease video playback speed for slow motion",
+    icon: "rewind",
+    howTo: [
+      "Select video file",
+      "Choose slowdown factor (0.25x, 0.5x)",
+      "Preview slow motion",
+      "Download slowed video"
+    ],
+    article: {
+      title: "Create Slow Motion Videos",
+      content: `Create dramatic slow-motion effects by reducing video playback speed. Perfect for sports, action sequences, and artistic content.
+
+## Slow Motion Uses
+
+Slow down for:
+- Sports analysis
+- Action sequences
+- Dance videos
+- Special effects
+- Detailed inspection
+
+## Slow Motion Quality
+
+High-quality effects:
+- Frame interpolation
+- Smooth playback
+- Quality preservation
+- Multiple speeds
+- Professional results`,
+      relatedTools: ["change-video-speed", "slow-motion", "speed-controller"]
+    }
+  },
+  {
+    id: "loop-video",
+    title: "Loop Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["loop", "repeat", "continuous", "cycle"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Loop Video Online - Create Repeating Videos",
+    metaDescription: "Loop videos online for free. Create continuous repeating videos. Video looper tool.",
+    description: "Create looping/repeating videos",
+    icon: "repeat",
+    howTo: [
+      "Upload video",
+      "Set number of loops",
+      "Add seamless transitions (optional)",
+      "Generate looped video"
+    ],
+    article: {
+      title: "Create Looping Videos",
+      content: `Create seamlessly repeating videos perfect for social media, backgrounds, and presentations.
+
+## Looping Uses
+
+Loop videos for:
+- Social media content
+- Background videos
+- Product displays
+- Cinemagraphs
+- Presentations
+
+## Loop Features
+
+Professional looping:
+- Seamless transitions
+- Custom loop count
+- Fade effects
+- Reverse loops
+- Infinite playback`,
+      relatedTools: ["repeat-video", "continuous-video", "video-looper"]
+    }
+  },
+  {
+    id: "stabilize-video",
+    title: "Stabilize Video",
+    category: "Video Enhancement" as ToolCategory,
+    tags: ["stabilize", "smooth", "shake", "steady"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Stabilize Shaky Video Online - Video Stabilization Tool",
+    metaDescription: "Stabilize shaky videos online. Remove camera shake. Free video stabilizer.",
+    description: "Remove shake and stabilize shaky videos",
+    icon: "anchor",
+    howTo: [
+      "Upload shaky video",
+      "AI analyzes and stabilizes",
+      "Preview stabilized result",
+      "Download smooth video"
+    ],
+    article: {
+      title: "Stabilize Shaky Videos",
+      content: `Remove camera shake and stabilize shaky footage with advanced AI. Perfect for handheld recordings and action videos.
+
+## Stabilization Benefits
+
+Stabilize for:
+- Handheld footage
+- Action videos
+- Drone recordings
+- Walking videos
+- Professional quality
+
+## Stabilization Technology
+
+Advanced features:
+- AI-powered analysis
+- Motion smoothing
+- Crop optimization
+- Quality preservation
+- Batch processing`,
+      relatedTools: ["video-deshaker", "smooth-video", "remove-shake"]
+    }
+  },
+  {
+    id: "video-deshaker",
+    title: "Video Deshaker",
+    category: "Video Enhancement" as ToolCategory,
+    tags: ["deshake", "stabilize", "smooth", "fix"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Video Deshaker Online - Remove Video Shake",
+    metaDescription: "Deshake videos online. Professional video deshaker tool. Remove camera shake.",
+    description: "Advanced video shake removal",
+    icon: "move",
+    howTo: [
+      "Select shaky video",
+      "Configure deshake settings",
+      "Process video",
+      "Save stabilized result"
+    ],
+    article: {
+      title: "Professional Video Deshaking",
+      content: `Advanced deshaking technology removes camera shake while preserving video quality. Professional-grade stabilization.
+
+## Deshaking Technology
+
+Advanced algorithms:
+- Motion tracking
+- Frame alignment
+- Edge optimization
+- Smart cropping
+- Quality retention
+
+## Professional Uses
+
+Deshake for:
+- Documentary footage
+- Event videos
+- Sports recordings
+- Travel videos
+- Professional projects`,
+      relatedTools: ["stabilize-video", "smooth-camera", "fix-shake"]
+    }
+  },
+  {
+    id: "reverse-video",
+    title: "Reverse Video",
+    category: "Video Effects" as ToolCategory,
+    tags: ["reverse", "backward", "rewind", "effect"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Reverse Video Online - Play Video Backwards",
+    metaDescription: "Reverse videos online for free. Play videos backward. Create reverse video effects.",
+    description: "Play videos in reverse/backward",
+    icon: "corner-up-left",
+    howTo: [
+      "Upload video file",
+      "Click reverse button",
+      "Preview reversed video",
+      "Download backward video"
+    ],
+    article: {
+      title: "Reverse Videos Online",
+      content: `Create captivating reverse video effects by playing footage backward. Perfect for creative content and social media.
+
+## Reverse Effects
+
+Creative uses:
+- Magic tricks
+- Viral content
+- Artistic effects
+- Revealing shots
+- Comedy videos
+
+## Reverse Features
+
+Professional reversing:
+- Audio reversal option
+- Quality preservation
+- Fast processing
+- Any length
+- Multiple formats`,
+      relatedTools: ["video-reverser", "backward-video", "rewind-effect"]
+    }
+  },
+  {
+    id: "video-reverser",
+    title: "Video Reverser",
+    category: "Video Effects" as ToolCategory,
+    tags: ["reverse", "backward", "flip", "rewind"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video Reverser Tool - Reverse Videos Online",
+    metaDescription: "Reverse video playback online. Professional video reverser. Create backward effects.",
+    description: "Professional video reversing tool",
+    icon: "rotate-ccw",
+    howTo: [
+      "Select video",
+      "Choose reverse options",
+      "Process reversal",
+      "Export reversed video"
+    ],
+    article: {
+      title: "Professional Video Reversing",
+      content: `Advanced video reversing with options for audio handling and quality optimization. Create professional backward effects.
+
+## Reversal Options
+
+Control reversal:
+- Reverse video only
+- Reverse audio too
+- Speed adjustment
+- Quality settings
+- Format selection
+
+## Creative Applications
+
+Use reversed video for:
+- TikTok effects
+- Instagram Reels
+- YouTube content
+- Artistic projects
+- Special effects`,
+      relatedTools: ["reverse-video", "play-backward", "rewind-video"]
+    }
+  },
+  {
+    id: "add-filter-to-video",
+    title: "Add Filter to Video",
+    category: "Video Effects" as ToolCategory,
+    tags: ["filter", "effect", "color", "style"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Filter to Video Online - Video Filter Effects",
+    metaDescription: "Add filters to videos online for free. Apply color filters and effects. Video filter editor.",
+    description: "Apply color filters and effects to videos",
+    icon: "palette",
+    howTo: [
+      "Upload video",
+      "Browse and select filter",
+      "Adjust filter intensity",
+      "Download filtered video"
+    ],
+    article: {
+      title: "Add Filters to Videos",
+      content: `Transform your videos with professional color filters and effects. Create mood, enhance colors, and add style.
+
+## Filter Types
+
+Choose from:
+- Vintage filters
+- Cinematic looks
+- Black & white
+- Color grading
+- Artistic effects
+
+## Filter Controls
+
+Professional adjustments:
+- Intensity slider
+- Custom presets
+- Real-time preview
+- Batch application
+- Save favorites`,
+      relatedTools: ["video-filter", "color-grade", "video-effects"]
+    }
+  },
+  {
+    id: "video-color-correction",
+    title: "Video Color Correction",
+    category: "Video Enhancement" as ToolCategory,
+    tags: ["color", "correction", "grade", "balance"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video Color Correction Online - Professional Color Grading",
+    metaDescription: "Color correct videos online. Professional color grading tool. Fix colors in videos.",
+    description: "Professional color correction and grading",
+    icon: "droplet",
+    howTo: [
+      "Upload video",
+      "Adjust color parameters",
+      "Apply corrections",
+      "Export corrected video"
+    ],
+    article: {
+      title: "Video Color Correction Guide",
+      content: `Professional color correction tools for fixing exposure, white balance, and color issues in your videos.
+
+## Correction Tools
+
+Adjust parameters:
+- Exposure levels
+- White balance
+- Color temperature
+- Tint and saturation
+- Shadows/highlights
+
+## Professional Grading
+
+Advanced features:
+- Curve adjustments
+- LUT support
+- Color wheels
+- Scopes
+- Presets`,
+      relatedTools: ["color-grade", "fix-colors", "video-enhancement"]
+    }
+  },
+  {
+    id: "adjust-video-brightness",
+    title: "Adjust Video Brightness",
+    category: "Video Enhancement" as ToolCategory,
+    tags: ["brightness", "exposure", "light", "adjust"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Adjust Video Brightness Online - Fix Dark Videos",
+    metaDescription: "Adjust video brightness online for free. Fix dark or bright videos. Video brightness editor.",
+    description: "Adjust brightness and exposure in videos",
+    icon: "sun",
+    howTo: [
+      "Upload video file",
+      "Adjust brightness slider",
+      "Preview changes",
+      "Save adjusted video"
+    ],
+    article: {
+      title: "Adjust Video Brightness",
+      content: `Fix underexposed or overexposed videos by adjusting brightness levels. Perfect for fixing dark footage or bright scenes.
+
+## Brightness Fixes
+
+Correct issues:
+- Dark videos
+- Overexposed footage
+- Poor lighting
+- Night recordings
+- Shadow recovery
+
+## Adjustment Features
+
+Professional controls:
+- Brightness slider
+- Auto-adjust option
+- Exposure zones
+- Highlight protection
+- Shadow detail`,
+      relatedTools: ["fix-dark-video", "video-exposure", "lighten-video"]
+    }
+  },
+  {
+    id: "adjust-video-contrast",
+    title: "Adjust Video Contrast",
+    category: "Video Enhancement" as ToolCategory,
+    tags: ["contrast", "dynamic", "range", "adjust"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Adjust Video Contrast Online - Enhance Video Contrast",
+    metaDescription: "Adjust video contrast online for free. Enhance flat videos. Video contrast editor.",
+    description: "Adjust contrast and dynamic range",
+    icon: "contrast",
+    howTo: [
+      "Select video",
+      "Adjust contrast slider",
+      "Fine-tune highlights/shadows",
+      "Export enhanced video"
+    ],
+    article: {
+      title: "Enhance Video Contrast",
+      content: `Improve video quality by adjusting contrast and dynamic range. Make flat videos pop with proper contrast adjustment.
+
+## Contrast Benefits
+
+Enhance videos:
+- Fix flat footage
+- Improve depth
+- Add punch
+- Separate subjects
+- Professional look
+
+## Control Options
+
+Advanced adjustments:
+- Contrast slider
+- Curve control
+- Midtone adjustment
+- Black/white points
+- Auto-enhance`,
+      relatedTools: ["enhance-contrast", "video-levels", "dynamic-range"]
+    }
+  },
+  {
+    id: "screen-recorder",
+    title: "Screen Recorder",
+    category: "Video Editing" as ToolCategory,
+    tags: ["record", "screen", "capture", "desktop"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Screen Recorder Online - Record Screen Free",
+    metaDescription: "Record screen online for free. Capture desktop, browser tabs. Free screen recording tool.",
+    description: "Record your screen and create tutorials",
+    icon: "screen-share",
+    howTo: [
+      "Click start recording",
+      "Select screen/window to record",
+      "Record your screen activity",
+      "Stop and download recording"
+    ],
+    article: {
+      title: "Record Your Screen Online",
+      content: `Capture your screen activity for tutorials, presentations, and demonstrations. Easy browser-based screen recording.
+
+## Recording Options
+
+Record:
+- Full screen
+- Browser tab
+- Application window
+- With audio
+- With webcam
+
+## Recording Features
+
+Professional tools:
+- HD quality
+- Audio capture
+- Cursor highlighting
+- Countdown timer
+- Editing tools`,
+      relatedTools: ["record-screen-and-camera", "desktop-recorder", "tutorial-recorder"]
+    }
+  },
+  {
+    id: "record-screen-and-camera",
+    title: "Record Screen and Camera",
+    category: "Video Editing" as ToolCategory,
+    tags: ["record", "screen", "webcam", "pip"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Record Screen and Camera - Picture-in-Picture Recording",
+    metaDescription: "Record screen with webcam overlay. Create picture-in-picture videos. Free screen and camera recorder.",
+    description: "Record screen with webcam picture-in-picture",
+    icon: "video",
+    howTo: [
+      "Enable screen and camera recording",
+      "Position webcam overlay",
+      "Start recording",
+      "Download PiP video"
+    ],
+    article: {
+      title: "Screen and Camera Recording",
+      content: `Create professional presentations and tutorials by recording your screen with webcam overlay. Perfect for courses and vlogs.
+
+## PiP Recording
+
+Record together:
+- Screen + webcam
+- Position webcam anywhere
+- Resize overlay
+- Switch modes
+- Professional quality
+
+## Use Cases
+
+Perfect for:
+- Online courses
+- Tutorials
+- Presentations
+- Reactions
+- Demonstrations`,
+      relatedTools: ["screen-recorder", "webcam-recorder", "pip-recorder"]
+    }
+  },
+  {
+    id: "webcam-recorder",
+    title: "Webcam Recorder",
+    category: "Video Editing" as ToolCategory,
+    tags: ["webcam", "camera", "record", "video"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Webcam Recorder Online - Record Video from Webcam",
+    metaDescription: "Record webcam online for free. Capture video from your camera. Free webcam recorder.",
+    description: "Record video directly from your webcam",
+    icon: "camera",
+    howTo: [
+      "Allow camera access",
+      "Position and frame yourself",
+      "Click record",
+      "Download webcam video"
+    ],
+    article: {
+      title: "Record Webcam Videos",
+      content: `Record high-quality videos directly from your webcam. Perfect for vlogs, messages, and video content creation.
+
+## Webcam Recording
+
+Features:
+- HD recording
+- Audio capture
+- Preview mode
+- Countdown timer
+- Simple interface
+
+## Recording Uses
+
+Create content:
+- Video messages
+- Vlogs
+- Testimonials
+- Introductions
+- Social content`,
+      relatedTools: ["camera-recorder", "video-message", "self-record"]
+    }
+  },
+  {
+    id: "video-to-jpg",
+    title: "Video to JPG",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["convert", "extract", "frames", "jpg"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert Video to JPG Images - Extract Video Frames",
+    metaDescription: "Convert video to JPG images online. Extract frames from video. Video to image converter.",
+    description: "Extract frames from video as JPG images",
+    icon: "image",
+    howTo: [
+      "Upload video file",
+      "Select frame extraction method",
+      "Choose image quality",
+      "Download JPG images"
+    ],
+    article: {
+      title: "Convert Video to JPG Images",
+      content: `Extract frames from videos and save them as JPG images. Perfect for creating thumbnails, storyboards, and image sequences.
+
+## Extraction Methods
+
+Choose method:
+- Every N seconds
+- Specific timestamps
+- Frame-by-frame
+- Key frames only
+- Scene changes
+
+## Image Quality
+
+Control output:
+- Quality settings
+- Resolution options
+- Batch export
+- Naming patterns
+- ZIP download`,
+      relatedTools: ["video-to-png", "extract-frames", "video-screenshot"]
+    }
+  },
+  {
+    id: "video-to-png",
+    title: "Video to PNG",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["convert", "extract", "frames", "png"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert Video to PNG Images - Extract Video Frames as PNG",
+    metaDescription: "Convert video to PNG images online. Extract frames with transparency support. Video to PNG converter.",
+    description: "Extract video frames as PNG images",
+    icon: "file-image",
+    howTo: [
+      "Select video file",
+      "Configure frame extraction",
+      "Set PNG quality/compression",
+      "Export PNG images"
+    ],
+    article: {
+      title: "Extract Video Frames as PNG",
+      content: `Extract video frames and save them as PNG images with support for transparency and high quality.
+
+## PNG Advantages
+
+Benefits of PNG:
+- Lossless quality
+- Transparency support
+- Better for graphics
+- Editing friendly
+- High detail
+
+## Extraction Options
+
+Flexible extraction:
+- Custom intervals
+- Specific frames
+- Quality control
+- Batch processing
+- ZIP packaging`,
+      relatedTools: ["video-to-jpg", "extract-frames-from-video", "frame-grabber"]
+    }
+  },
+  {
+    id: "extract-frames-from-video",
+    title: "Extract Frames from Video",
+    category: "Video Analysis" as ToolCategory,
+    tags: ["extract", "frames", "images", "sequence"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract Frames from Video - Video Frame Extractor",
+    metaDescription: "Extract all frames from video online. Create image sequences. Free frame extractor.",
+    description: "Extract individual frames from videos",
+    icon: "film",
+    howTo: [
+      "Upload video",
+      "Select extraction settings",
+      "Choose output format",
+      "Download frame sequence"
+    ],
+    article: {
+      title: "Extract Video Frames",
+      content: `Extract individual frames from videos for analysis, editing, or creating image sequences. Professional frame extraction tool.
+
+## Frame Extraction
+
+Extract modes:
+- All frames
+- Every Nth frame
+- Time-based intervals
+- Key frames
+- Scene changes
+
+## Professional Uses
+
+Extract for:
+- Animation creation
+- Video analysis
+- Storyboarding
+- Quality control
+- Editing prep`,
+      relatedTools: ["video-to-jpg", "video-to-png", "frame-sequence"]
+    }
+  },
+  {
+    id: "video-metadata-editor",
+    title: "Video Metadata Editor",
+    category: "Video Editing" as ToolCategory,
+    tags: ["metadata", "tags", "info", "properties"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video Metadata Editor - Edit Video Properties & Tags",
+    metaDescription: "Edit video metadata online. Change title, author, tags. Video property editor.",
+    description: "Edit video metadata, title, tags, and properties",
+    icon: "info",
+    howTo: [
+      "Upload video file",
+      "Edit metadata fields",
+      "Update properties",
+      "Save video with new metadata"
+    ],
+    article: {
+      title: "Edit Video Metadata",
+      content: `Modify video file metadata including title, author, description, tags, and other properties. Essential for video organization and SEO.
+
+## Metadata Fields
+
+Edit fields:
+- Title
+- Author
+- Description
+- Tags/keywords
+- Copyright
+- Date/time
+
+## SEO Benefits
+
+Optimize for:
+- Search engines
+- Video platforms
+- Organization
+- Discovery
+- Attribution`,
+      relatedTools: ["edit-video-info", "video-properties", "metadata-manager"]
+    }
+  },
+  {
+    id: "video-to-mp3",
+    title: "Video to MP3",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["convert", "audio", "mp3", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert Video to MP3 Online Free - Extract Audio from Video",
+    metaDescription: "Convert video to MP3 online for free. Extract audio track from videos. Video to MP3 converter.",
+    description: "Extract audio from videos as MP3",
+    icon: "music",
+    howTo: [
+      "Upload video file",
+      "Select MP3 quality",
+      "Convert to audio",
+      "Download MP3 file"
+    ],
+    article: {
+      title: "Convert Video to MP3",
+      content: `Extract audio tracks from videos and save them as MP3 files. Perfect for music videos, podcasts, and audio extraction.
+
+## MP3 Conversion
+
+Features:
+- High quality audio
+- Bitrate selection
+- ID3 tag support
+- Batch conversion
+- Fast processing
+
+## Common Uses
+
+Extract audio for:
+- Music collection
+- Podcasts
+- Audiobooks
+- Soundtracks
+- Voice recordings`,
+      relatedTools: ["video-to-wav", "video-to-audio", "extract-audio"]
+    }
+  },
+  {
+    id: "video-to-wav",
+    title: "Video to WAV",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["convert", "audio", "wav", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert Video to WAV Online - Extract WAV Audio from Video",
+    metaDescription: "Convert video to WAV online for free. Lossless audio extraction. Video to WAV converter.",
+    description: "Extract lossless audio from videos as WAV",
+    icon: "waveform",
+    howTo: [
+      "Select video file",
+      "Choose WAV settings",
+      "Extract audio",
+      "Download WAV file"
+    ],
+    article: {
+      title: "Extract WAV Audio from Videos",
+      content: `Extract high-quality, lossless audio from videos in WAV format. Perfect for professional audio editing and production.
+
+## WAV Benefits
+
+Advantages:
+- Lossless quality
+- Professional standard
+- Editing friendly
+- No compression
+- Maximum fidelity
+
+## Professional Use
+
+Extract WAV for:
+- Audio editing
+- Music production
+- Sound design
+- Archival
+- Master recordings`,
+      relatedTools: ["video-to-mp3", "video-to-audio", "audio-extractor"]
+    }
+  },
+  {
+    id: "video-to-audio",
+    title: "Video to Audio",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["convert", "audio", "extract", "sound"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert Video to Audio - Extract Audio from Video Files",
+    metaDescription: "Convert video to audio online. Extract sound from videos in any format. Video to audio converter.",
+    description: "Extract audio track from videos",
+    icon: "headphones",
+    howTo: [
+      "Upload video",
+      "Select audio format (MP3, WAV, AAC)",
+      "Convert and extract",
+      "Download audio file"
+    ],
+    article: {
+      title: "Extract Audio from Videos",
+      content: `Convert videos to audio files in multiple formats. Extract soundtracks, music, dialogue, and sound effects.
+
+## Audio Formats
+
+Support for:
+- MP3 (compressed)
+- WAV (lossless)
+- AAC (efficient)
+- FLAC (lossless)
+- OGG (open)
+
+## Extraction Quality
+
+Quality options:
+- Bitrate selection
+- Sample rate
+- Channels (stereo/mono)
+- Normalization
+- Trimming`,
+      relatedTools: ["video-to-mp3", "video-to-wav", "extract-sound"]
+    }
+  },
+  {
+    id: "slideshow-maker",
+    title: "Slideshow Maker (Photos to Video)",
+    category: "Video Editing" as ToolCategory,
+    tags: ["slideshow", "photos", "images", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Slideshow Maker - Create Video from Photos Online",
+    metaDescription: "Create video slideshows from photos online for free. Add music and transitions. Photo slideshow maker.",
+    description: "Create video slideshows from photos",
+    icon: "presentation",
+    howTo: [
+      "Upload multiple photos",
+      "Arrange photo order",
+      "Add music and transitions",
+      "Create and download slideshow video"
+    ],
+    article: {
+      title: "Create Photo Slideshows",
+      content: `Transform your photos into engaging video slideshows with music, transitions, and effects. Perfect for memories, presentations, and social media.
+
+## Slideshow Features
+
+Create with:
+- Photo transitions
+- Background music
+- Text overlays
+- Duration control
+- Ken Burns effect
+
+## Use Cases
+
+Make slideshows for:
+- Weddings
+- Birthdays
+- Travel memories
+- Business presentations
+- Social media`,
+      relatedTools: ["photos-to-video", "image-slideshow", "video-montage"]
+    }
+  },
+  {
+    id: "video-collage-maker",
+    title: "Video Collage Maker",
+    category: "Video Editing" as ToolCategory,
+    tags: ["collage", "grid", "split", "multi"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video Collage Maker - Create Split Screen Videos",
+    metaDescription: "Create video collages online. Split screen videos with multiple clips. Free video collage tool.",
+    description: "Create split-screen video collages",
+    icon: "grid",
+    howTo: [
+      "Upload multiple videos",
+      "Select collage layout (2x2, 3x3, etc.)",
+      "Arrange videos in grid",
+      "Export collage video"
+    ],
+    article: {
+      title: "Create Video Collages",
+      content: `Create professional split-screen videos by combining multiple clips in a grid layout. Perfect for comparisons, reactions, and multi-angle views.
+
+## Collage Layouts
+
+Choose from:
+- 2x2 grid (4 videos)
+- 3x3 grid (9 videos)
+- Custom grids
+- Picture-in-picture
+- Side-by-side
+
+## Collage Uses
+
+Create collages for:
+- Comparison videos
+- Reaction videos
+- Multi-angle sports
+- Before/after
+- Tutorial steps`,
+      relatedTools: ["split-screen-video", "multi-video", "grid-video"]
+    }
+  },
+  {
+    id: "stop-motion-maker",
+    title: "Stop Motion Maker",
+    category: "Video Editing" as ToolCategory,
+    tags: ["stop", "motion", "animation", "frames"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Stop Motion Maker - Create Stop Motion Videos Online",
+    metaDescription: "Create stop motion videos online. Animation from photos. Free stop motion tool.",
+    description: "Create stop motion animation videos",
+    icon: "clapperboard",
+    howTo: [
+      "Upload sequence of photos",
+      "Adjust frame rate",
+      "Add audio (optional)",
+      "Generate stop motion video"
+    ],
+    article: {
+      title: "Create Stop Motion Videos",
+      content: `Create captivating stop motion animations from photo sequences. Perfect for creative projects, education, and artistic expression.
+
+## Stop Motion Basics
+
+Animation features:
+- Frame rate control
+- Onion skinning
+- Audio sync
+- Title cards
+- Export options
+
+## Creative Projects
+
+Make animations for:
+- Product showcases
+- Educational content
+- Art projects
+- Social media
+- Storytelling`,
+      relatedTools: ["animation-maker", "frame-animation", "photo-sequence"]
+    }
+  },
+  {
+    id: "video-player",
+    title: "Video Player",
+    category: "Video Editing" as ToolCategory,
+    tags: ["player", "watch", "playback", "preview"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Video Player - Play Videos in Browser",
+    metaDescription: "Play videos online in any format. Universal video player. Free browser-based player.",
+    description: "Universal online video player",
+    icon: "play",
+    howTo: [
+      "Upload or drag video file",
+      "Video plays automatically",
+      "Use playback controls",
+      "Adjust settings as needed"
+    ],
+    article: {
+      title: "Universal Video Player",
+      content: `Play videos in any format directly in your browser. No software installation required. Support for all major video formats.
+
+## Supported Formats
+
+Play formats:
+- MP4, AVI, MOV
+- WebM, MKV
+- FLV, WMV
+- And more
+
+## Player Features
+
+Advanced playback:
+- Speed control
+- Frame-by-frame
+- Subtitles
+- Quality selection
+- Fullscreen mode`,
+      relatedTools: ["watch-video", "preview-video", "video-viewer"]
+    }
+  },
+  {
+    id: "online-video-player",
+    title: "Online Video Player",
+    category: "Video Editing" as ToolCategory,
+    tags: ["player", "online", "stream", "watch"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Video Player - Stream Videos in Browser",
+    metaDescription: "Stream and watch videos online. Browser-based video player. No download required.",
+    description: "Stream and watch videos online",
+    icon: "monitor",
+    howTo: [
+      "Select video file",
+      "Player loads video",
+      "Control playback",
+      "Enjoy your video"
+    ],
+    article: {
+      title: "Stream Videos Online",
+      content: `Watch videos instantly in your browser without downloading. Modern HTML5 video player with advanced controls.
+
+## Streaming Features
+
+Player includes:
+- Instant playback
+- Adaptive quality
+- Progress saving
+- Keyboard shortcuts
+- Mobile friendly
+
+## Playback Controls
+
+Full control with:
+- Play/pause
+- Seek bar
+- Volume
+- Speed adjustment
+- Fullscreen`,
+      relatedTools: ["video-player", "stream-video", "browser-player"]
+    }
+  },
+  {
+    id: "teleprompter",
+    title: "Teleprompter",
+    category: "Video Editing" as ToolCategory,
+    tags: ["teleprompter", "script", "recording", "presenter"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Teleprompter - Free Teleprompter for Video Recording",
+    metaDescription: "Free online teleprompter for video recording. Scrolling script prompter. Professional video tool.",
+    description: "Online teleprompter for video recording",
+    icon: "scroll",
+    howTo: [
+      "Paste or type your script",
+      "Adjust scroll speed and text size",
+      "Start recording with webcam",
+      "Read script while recording"
+    ],
+    article: {
+      title: "Professional Teleprompter Tool",
+      content: `Read scripts naturally while recording videos with our free online teleprompter. Perfect for presentations, vlogs, and professional videos.
+
+## Teleprompter Features
+
+Professional tools:
+- Adjustable scroll speed
+- Text size control
+- Color customization
+- Mirror mode
+- Webcam integration
+
+## Recording Tips
+
+Use for:
+- YouTube videos
+- Presentations
+- Training videos
+- Vlogs
+- Professional content`,
+      relatedTools: ["script-reader", "video-prompter", "presenter-tool"]
+    }
+  },
+  {
+    id: "ai-video-upscaler",
+    title: "AI Video Upscaler",
+    category: "Video Enhancement" as ToolCategory,
+    tags: ["upscale", "ai", "enhance", "quality"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "AI Video Upscaler - Enhance Video Quality with AI",
+    metaDescription: "Upscale videos with AI. Enhance video resolution and quality. AI-powered video upscaler.",
+    description: "AI-powered video quality enhancement",
+    icon: "trending-up",
+    howTo: [
+      "Upload low-resolution video",
+      "Select target resolution",
+      "AI processes and upscales",
+      "Download enhanced video"
+    ],
+    article: {
+      title: "AI Video Upscaling",
+      content: `Enhance video quality and resolution using advanced AI technology. Upscale old footage, low-res videos, and improve overall quality.
+
+## AI Enhancement
+
+AI features:
+- Resolution upscaling
+- Detail enhancement
+- Noise reduction
+- Artifact removal
+- Color enhancement
+
+## Upscaling Benefits
+
+Improve videos:
+- Old footage
+- Low-res recordings
+- Web videos
+- Archive restoration
+- Quality boost`,
+      relatedTools: ["enhance-video", "upscale-quality", "video-enhancer"]
+    }
+  },
+  {
+    id: "ai-video-background-remover",
+    title: "AI Video Background Remover",
+    category: "Video Editing" as ToolCategory,
+    tags: ["background", "remove", "ai", "green screen"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "AI Video Background Remover - Remove Video Background",
+    metaDescription: "Remove video background with AI. No green screen needed. AI background removal tool.",
+    description: "AI-powered background removal for videos",
+    icon: "user-minus",
+    howTo: [
+      "Upload video",
+      "AI detects and removes background",
+      "Add new background (optional)",
+      "Download video with transparent/new background"
+    ],
+    article: {
+      title: "Remove Video Backgrounds with AI",
+      content: `Remove video backgrounds automatically using AI. No green screen required. Perfect for creating professional videos with custom backgrounds.
+
+## AI Removal
+
+Advanced AI:
+- Automatic detection
+- Precise edges
+- Hair detail
+- Motion tracking
+- Real-time processing
+
+## Use Cases
+
+Remove backgrounds for:
+- Professional videos
+- Custom backgrounds
+- Virtual studios
+- Creative effects
+- Product videos`,
+      relatedTools: ["remove-background", "green-screen-remover", "background-changer"]
+    }
+  },
+  {
+    id: "ai-video-noise-reduction",
+    title: "AI Video Noise Reduction",
+    category: "Video Enhancement" as ToolCategory,
+    tags: ["noise", "reduction", "ai", "clean"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "AI Video Noise Reduction - Remove Video Noise",
+    metaDescription: "Remove video noise with AI. Clean grainy footage. AI noise reduction tool.",
+    description: "AI-powered video noise and grain removal",
+    icon: "sparkles",
+    howTo: [
+      "Upload noisy video",
+      "AI analyzes and reduces noise",
+      "Preview cleaned video",
+      "Download noise-free video"
+    ],
+    article: {
+      title: "AI Video Noise Reduction",
+      content: `Remove video noise and grain using advanced AI. Perfect for cleaning up low-light footage, old videos, and improving overall quality.
+
+## Noise Reduction
+
+AI cleaning:
+- Grain removal
+- Temporal noise
+- Color noise
+- Compression artifacts
+- Quality preservation
+
+## Cleaning Benefits
+
+Reduce noise in:
+- Low-light videos
+- Old footage
+- High-ISO recordings
+- Compressed videos
+- Archive restoration`,
+      relatedTools: ["denoise-video", "clean-video", "video-enhancer"]
+    }
+  },
+  {
+    id: "ai-auto-subtitle-generator",
+    title: "AI Auto-Subtitle Generator",
+    category: "Video Subtitle Tools" as ToolCategory,
+    tags: ["ai", "subtitle", "automatic", "transcription"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "AI Auto-Subtitle Generator - Automatic Video Subtitles",
+    metaDescription: "Generate subtitles automatically with AI. Auto transcribe videos. AI subtitle generator.",
+    description: "Automatically generate subtitles with AI",
+    icon: "bot",
+    howTo: [
+      "Upload video",
+      "AI transcribes audio automatically",
+      "Review and edit subtitles",
+      "Download subtitle file or burn into video"
+    ],
+    article: {
+      title: "Auto-Generate Subtitles with AI",
+      content: `Automatically create accurate subtitles for your videos using AI speech recognition. Save hours of manual transcription work.
+
+## AI Transcription
+
+Features:
+- Automatic speech recognition
+- Multiple languages
+- High accuracy
+- Timestamp generation
+- Formatting
+
+## Subtitle Benefits
+
+Generate subtitles for:
+- Accessibility
+- SEO improvement
+- International reach
+- Social media
+- Professional videos`,
+      relatedTools: ["auto-subtitle", "transcribe-video", "speech-to-text"]
+    }
+  },
+  {
+    id: "ai-video-editor",
+    title: "AI Video Editor",
+    category: "Video Editing" as ToolCategory,
+    tags: ["ai", "editor", "automatic", "smart"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "AI Video Editor - Automatic Video Editing with AI",
+    metaDescription: "Edit videos automatically with AI. Smart video editor. AI-powered editing tool.",
+    description: "AI-powered automatic video editing",
+    icon: "wand",
+    howTo: [
+      "Upload raw footage",
+      "Select editing style/template",
+      "AI automatically edits video",
+      "Review and download edited video"
+    ],
+    article: {
+      title: "AI-Powered Video Editing",
+      content: `Let AI automatically edit your videos with smart cuts, transitions, and effects. Perfect for quick edits and social media content.
+
+## AI Editing
+
+Automatic features:
+- Smart cuts
+- Scene detection
+- Auto-transitions
+- Music sync
+- Color grading
+
+## Editing Styles
+
+AI can create:
+- Social media clips
+- Highlights
+- Montages
+- Trailers
+- Quick edits`,
+      relatedTools: ["auto-edit", "smart-editor", "quick-edit"]
+    }
+  },
+  {
+    id: "green-screen-remover",
+    title: "Green Screen Remover",
+    category: "Video Editing" as ToolCategory,
+    tags: ["green", "screen", "chroma", "key"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Green Screen Remover - Chroma Key Video Editor",
+    metaDescription: "Remove green screen from videos online. Chroma key editor. Free green screen removal.",
+    description: "Remove green/blue screen backgrounds",
+    icon: "square",
+    howTo: [
+      "Upload video with green screen",
+      "Adjust chroma key settings",
+      "Add new background (optional)",
+      "Export video with removed background"
+    ],
+    article: {
+      title: "Green Screen Removal Tool",
+      content: `Remove green or blue screen backgrounds from your videos using chroma key technology. Replace with custom backgrounds or make transparent.
+
+## Chroma Key Features
+
+Professional tools:
+- Color picker
+- Threshold adjustment
+- Edge feathering
+- Spill suppression
+- Real-time preview
+
+## Creative Uses
+
+Use green screen for:
+- Custom backgrounds
+- Special effects
+- Weather reports
+- Virtual sets
+- Creative videos`,
+      relatedTools: ["chroma-key", "remove-background", "blue-screen-remover"]
+    }
+  },
+  // Archive Tools - ZIP
+  {
+    id: "zip-creator",
+    title: "ZIP Creator",
+    category: "Archive Creation" as ToolCategory,
+    tags: ["zip", "compress", "archive", "create"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Create ZIP File Online - Free ZIP Creator Tool",
+    metaDescription: "Create ZIP archives online for free. Compress files and folders. Free ZIP creator.",
+    description: "Create ZIP archives from files and folders",
+    icon: "archive",
+    howTo: [
+      "Upload files or folders",
+      "Arrange contents",
+      "Set compression level",
+      "Download ZIP archive"
+    ],
+    article: {
+      title: "Create ZIP Archives",
+      content: `Create ZIP archives to compress and bundle multiple files together. Perfect for file sharing, storage, and organization.
+
+## ZIP Benefits
+
+Use ZIP for:
+- File compression
+- Multiple file sharing
+- Storage optimization
+- Backup creation
+- Email attachments
+
+## Compression Options
+
+Control compression:
+- Compression level
+- File organization
+- Password protection
+- Archive comments
+- Date preservation`,
+      relatedTools: ["compress-files-to-zip", "create-archive", "zip-files"]
+    }
+  },
+  {
+    id: "zip-extractor",
+    title: "ZIP Extractor",
+    category: "Archive Extraction" as ToolCategory,
+    tags: ["zip", "extract", "unzip", "decompress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract ZIP Files Online - Free ZIP Extractor",
+    metaDescription: "Extract ZIP files online for free. Unzip archives in browser. No software needed.",
+    description: "Extract and unzip ZIP archives",
+    icon: "package-open",
+    howTo: [
+      "Upload ZIP file",
+      "Preview contents",
+      "Select files to extract",
+      "Download extracted files"
+    ],
+    article: {
+      title: "Extract ZIP Files Online",
+      content: `Extract ZIP archives directly in your browser. No software installation required. View and download individual files or entire archives.
+
+## Extraction Features
+
+Extract with:
+- Selective extraction
+- Preview contents
+- Folder structure
+- Batch extraction
+- Password support
+
+## ZIP File Support
+
+Handle ZIP files:
+- Standard ZIP
+- ZIP64 (large files)
+- Password-protected
+- Multi-volume
+- Encrypted archives`,
+      relatedTools: ["online-unzipper", "unzip-files", "zip-viewer"]
+    }
+  },
+  {
+    id: "online-unzipper",
+    title: "Online Unzipper",
+    category: "Archive Extraction" as ToolCategory,
+    tags: ["unzip", "extract", "zip", "decompress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Unzipper - Unzip Files in Browser",
+    metaDescription: "Unzip files online for free. Extract ZIP archives in browser. Free online unzipper.",
+    description: "Unzip files directly in your browser",
+    icon: "folder-open",
+    howTo: [
+      "Drop ZIP file",
+      "View file list",
+      "Extract all or selected",
+      "Download unzipped files"
+    ],
+    article: {
+      title: "Unzip Files Online",
+      content: `Quickly unzip files without installing software. Extract ZIP archives directly in your browser with our free online tool.
+
+## Quick Extraction
+
+Features:
+- Instant extraction
+- No installation
+- Browser-based
+- Secure processing
+- Fast download
+
+## File Management
+
+Extract options:
+- All files
+- Selected files
+- Folder preservation
+- Rename extraction
+- Preview files`,
+      relatedTools: ["zip-extractor", "extract-zip", "decompress-zip"]
+    }
+  },
+  {
+    id: "rar-extractor",
+    title: "RAR Extractor",
+    category: "Archive Extraction" as ToolCategory,
+    tags: ["rar", "extract", "unrar", "decompress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract RAR Files Online - Free RAR Extractor",
+    metaDescription: "Extract RAR files online for free. Unrar archives in browser. No WinRAR needed.",
+    description: "Extract and unrar RAR archives",
+    icon: "archive",
+    howTo: [
+      "Upload RAR file",
+      "Browse contents",
+      "Extract files",
+      "Download extracted content"
+    ],
+    article: {
+      title: "Extract RAR Files Online",
+      content: `Extract RAR archives without WinRAR. Free online RAR extractor supporting RAR, RAR5, and password-protected archives.
+
+## RAR Support
+
+Extract formats:
+- RAR archives
+- RAR5 (latest)
+- Multi-volume RAR
+- Password-protected
+- Encrypted files
+
+## Extraction Benefits
+
+No software needed:
+- Browser-based
+- Any device
+- Fast extraction
+- Secure processing
+- Free forever`,
+      relatedTools: ["online-unrar", "unrar-files", "rar-viewer"]
+    }
+  },
+  {
+    id: "online-unrar",
+    title: "Online Unrar",
+    category: "Archive Extraction" as ToolCategory,
+    tags: ["unrar", "rar", "extract", "decompress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Unrar Tool - Unrar Files in Browser",
+    metaDescription: "Unrar files online for free. Extract RAR archives without software. Free online unrar.",
+    description: "Unrar files directly in browser",
+    icon: "package-open",
+    howTo: [
+      "Select RAR file",
+      "View archive contents",
+      "Unrar all or specific files",
+      "Download extracted files"
+    ],
+    article: {
+      title: "Unrar Files Online",
+      content: `Unrar files instantly in your browser. No software installation required. Free online tool for all RAR archive types.
+
+## Unrar Features
+
+Extract with:
+- No software required
+- Password support
+- Multi-volume support
+- Preview contents
+- Fast processing
+
+## Archive Support
+
+Handle RAR:
+- RAR and RAR5
+- Split archives
+- Encrypted RAR
+- Large files
+- All versions`,
+      relatedTools: ["rar-extractor", "extract-rar", "rar-opener"]
+    }
+  },
+  {
+    id: "7z-extractor",
+    title: "7z Extractor",
+    category: "Archive Extraction" as ToolCategory,
+    tags: ["7z", "extract", "seven-zip", "decompress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract 7z Files Online - Free 7-Zip Extractor",
+    metaDescription: "Extract 7z files online for free. Unpack 7-Zip archives in browser. No software needed.",
+    description: "Extract 7z (7-Zip) archives",
+    icon: "file-archive",
+    howTo: [
+      "Upload 7z file",
+      "Browse archive contents",
+      "Select files to extract",
+      "Download extracted files"
+    ],
+    article: {
+      title: "Extract 7z Files Online",
+      content: `Extract 7z archives without installing 7-Zip software. Free online extractor for 7-Zip compressed files.
+
+## 7z Format
+
+7-Zip benefits:
+- Higher compression
+- Open-source format
+- Strong encryption
+- Large file support
+- Cross-platform
+
+## Extraction Features
+
+Professional tools:
+- Fast extraction
+- Password support
+- Selective extraction
+- Preview mode
+- Batch processing`,
+      relatedTools: ["online-un-7z", "extract-seven-zip", "7zip-opener"]
+    }
+  },
+  {
+    id: "online-un-7z",
+    title: "Online Un-7z",
+    category: "Archive Extraction" as ToolCategory,
+    tags: ["7z", "un7z", "extract", "7-zip"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Un-7z Tool - Extract 7-Zip Files",
+    metaDescription: "Un-7z files online. Extract 7-Zip archives in browser. Free online 7z extractor.",
+    description: "Extract 7-Zip files online",
+    icon: "folder-archive",
+    howTo: [
+      "Drop 7z file",
+      "View file structure",
+      "Extract all or selected",
+      "Download files"
+    ],
+    article: {
+      title: "Un-7z Files Online",
+      content: `Quickly extract 7-Zip archives online without software. Free browser-based 7z extraction tool.
+
+## Quick Extraction
+
+Features:
+- No installation
+- Browser-based
+- Fast processing
+- Secure extraction
+- Free service
+
+## File Support
+
+Extract from:
+- Standard 7z
+- Encrypted 7z
+- Multi-volume
+- Large archives
+- Any compression`,
+      relatedTools: ["7z-extractor", "extract-7zip", "7z-opener"]
+    }
+  },
+  {
+    id: "tar-extractor",
+    title: "TAR Extractor",
+    category: "Archive Extraction" as ToolCategory,
+    tags: ["tar", "extract", "untar", "archive"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract TAR Files Online - Free TAR Extractor",
+    metaDescription: "Extract TAR archives online for free. Untar files in browser. No software needed.",
+    description: "Extract TAR archives",
+    icon: "box",
+    howTo: [
+      "Upload TAR file",
+      "Preview archive contents",
+      "Extract files",
+      "Download extracted content"
+    ],
+    article: {
+      title: "Extract TAR Archives",
+      content: `Extract TAR archive files online without command-line tools. Free browser-based TAR extractor.
+
+## TAR Format
+
+Archive features:
+- Unix/Linux standard
+- No compression (by default)
+- Preserves permissions
+- Directory structure
+- Metadata retention
+
+## Extraction Options
+
+Extract with:
+- Full extraction
+- Selective files
+- Structure preservation
+- Metadata support
+- Fast processing`,
+      relatedTools: ["untar-files", "tar-gz-extractor", "extract-tar"]
+    }
+  },
+  {
+    id: "tar-gz-extractor",
+    title: "TAR.GZ Extractor",
+    category: "Archive Extraction" as ToolCategory,
+    tags: ["tar", "gz", "gzip", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract TAR.GZ Files Online - Free TAR.GZ Extractor",
+    metaDescription: "Extract TAR.GZ archives online for free. Decompress .tar.gz files. No software needed.",
+    description: "Extract compressed TAR.GZ archives",
+    icon: "package",
+    howTo: [
+      "Upload .tar.gz file",
+      "Tool decompresses and extracts",
+      "Browse extracted files",
+      "Download content"
+    ],
+    article: {
+      title: "Extract TAR.GZ Files",
+      content: `Extract compressed TAR.GZ archives online. Handle both gzip decompression and tar extraction in one step.
+
+## TAR.GZ Format
+
+Combined format:
+- TAR archiving
+- GZIP compression
+- Common on Linux
+- Source distributions
+- Backup archives
+
+## Two-Step Extraction
+
+Process includes:
+- Gunzip decompression
+- TAR extraction
+- Automatic handling
+- Structure preservation
+- Fast processing`,
+      relatedTools: ["extract-tar-gz", "decompress-targz", "tgz-extractor"]
+    }
+  },
+  {
+    id: "tar-bz2-extractor",
+    title: "TAR.BZ2 Extractor",
+    category: "Archive Extraction" as ToolCategory,
+    tags: ["tar", "bz2", "bzip2", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract TAR.BZ2 Files Online - Free TAR.BZ2 Extractor",
+    metaDescription: "Extract TAR.BZ2 archives online for free. Decompress .tar.bz2 files. Browser-based extractor.",
+    description: "Extract compressed TAR.BZ2 archives",
+    icon: "archive",
+    howTo: [
+      "Upload .tar.bz2 file",
+      "Automatic decompression and extraction",
+      "View extracted files",
+      "Download content"
+    ],
+    article: {
+      title: "Extract TAR.BZ2 Files",
+      content: `Extract TAR.BZ2 archives with bzip2 compression online. Free tool for Linux archive extraction.
+
+## TAR.BZ2 Format
+
+Features:
+- Better compression than gzip
+- TAR archiving
+- Common on Linux
+- Source packages
+- Efficient compression
+
+## Extraction Process
+
+Automatic:
+- Bzip2 decompression
+- TAR extraction
+- Single-step process
+- Structure retention
+- Quick results`,
+      relatedTools: ["extract-tar-bz2", "decompress-bz2", "tbz2-extractor"]
+    }
+  },
+  {
+    id: "create-7z-archive",
+    title: "Create 7z Archive",
+    category: "Archive Creation" as ToolCategory,
+    tags: ["7z", "create", "compress", "archive"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Create 7z Archive Online - Free 7-Zip Creator",
+    metaDescription: "Create 7z archives online for free. Compress files with 7-Zip format. Maximum compression.",
+    description: "Create highly compressed 7z archives",
+    icon: "package-plus",
+    howTo: [
+      "Upload files to compress",
+      "Select compression level",
+      "Add password (optional)",
+      "Create and download 7z archive"
+    ],
+    article: {
+      title: "Create 7z Archives",
+      content: `Create highly compressed 7z archives online. Better compression than ZIP with password protection support.
+
+## 7z Advantages
+
+Benefits:
+- Higher compression ratio
+- Strong AES-256 encryption
+- Large file support
+- Open-source format
+- Cross-platform
+
+## Compression Settings
+
+Customize:
+- Compression level
+- Dictionary size
+- Solid archiving
+- Encryption
+- Split volumes`,
+      relatedTools: ["7zip-creator", "compress-7z", "make-7z"]
+    }
+  },
+  {
+    id: "create-tar-gz-archive",
+    title: "Create TAR.GZ Archive",
+    category: "Archive Creation" as ToolCategory,
+    tags: ["tar", "gz", "gzip", "create"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Create TAR.GZ Archive Online - Free TAR.GZ Creator",
+    metaDescription: "Create TAR.GZ archives online for free. Compress files in tar.gz format. Linux archive creator.",
+    description: "Create compressed TAR.GZ archives",
+    icon: "file-archive",
+    howTo: [
+      "Upload files and folders",
+      "Set compression options",
+      "Create TAR.GZ archive",
+      "Download compressed archive"
+    ],
+    article: {
+      title: "Create TAR.GZ Archives",
+      content: `Create TAR.GZ archives online for Linux/Unix compatibility. Standard format for source code and backups.
+
+## TAR.GZ Use
+
+Perfect for:
+- Linux distributions
+- Source code packages
+- Website backups
+- Directory compression
+- Unix systems
+
+## Archive Creation
+
+Features:
+- Directory preservation
+- Permission retention
+- GZIP compression
+- Metadata support
+- Cross-platform`,
+      relatedTools: ["targz-creator", "compress-tar-gz", "make-targz"]
+    }
+  },
+  {
+    id: "archive-converter",
+    title: "Archive Converter",
+    category: "Archive Conversion" as ToolCategory,
+    tags: ["convert", "archive", "format", "transform"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Archive Converter Online - Convert Between Archive Formats",
+    metaDescription: "Convert archive formats online. ZIP to RAR, 7z to ZIP, and more. Free archive converter.",
+    description: "Convert between archive formats",
+    icon: "repeat",
+    howTo: [
+      "Upload archive file",
+      "Select target format",
+      "Convert archive",
+      "Download converted file"
+    ],
+    article: {
+      title: "Convert Archive Formats",
+      content: `Convert between different archive formats online. Support for ZIP, RAR, 7z, TAR, and more.
+
+## Supported Formats
+
+Convert between:
+- ZIP
+- RAR
+- 7z
+- TAR/TAR.GZ/TAR.BZ2
+- And more
+
+## Conversion Features
+
+Professional conversion:
+- Format transformation
+- Compression optimization
+- Metadata preservation
+- Batch conversion
+- Quality retention`,
+      relatedTools: ["zip-to-7z", "7z-to-zip", "rar-to-zip"]
+    }
+  },
+  {
+    id: "zip-to-7z",
+    title: "ZIP to 7z",
+    category: "Archive Conversion" as ToolCategory,
+    tags: ["zip", "7z", "convert", "compress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert ZIP to 7z Online - Free ZIP to 7z Converter",
+    metaDescription: "Convert ZIP to 7z online for free. Better compression with 7-Zip format. Archive converter.",
+    description: "Convert ZIP archives to 7z format",
+    icon: "arrow-right",
+    howTo: [
+      "Upload ZIP file",
+      "Select 7z compression level",
+      "Convert to 7z format",
+      "Download 7z archive"
+    ],
+    article: {
+      title: "Convert ZIP to 7z",
+      content: `Convert ZIP archives to 7z format for better compression. Reduce file size while maintaining quality.
+
+## Why Convert to 7z?
+
+Benefits:
+- Better compression
+- Smaller file sizes
+- Strong encryption
+- Modern format
+- Efficient storage
+
+## Conversion Options
+
+Customize:
+- Compression level
+- Encryption
+- Solid compression
+- Dictionary size
+- Thread count`,
+      relatedTools: ["archive-converter", "zip-to-rar", "compress-7z"]
+    }
+  },
+  {
+    id: "7z-to-zip",
+    title: "7z to ZIP",
+    category: "Archive Conversion" as ToolCategory,
+    tags: ["7z", "zip", "convert", "compatibility"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert 7z to ZIP Online - Free 7z to ZIP Converter",
+    metaDescription: "Convert 7z to ZIP online for free. Better compatibility with ZIP format. Archive converter.",
+    description: "Convert 7z archives to ZIP format",
+    icon: "arrow-left",
+    howTo: [
+      "Upload 7z file",
+      "Select ZIP compression",
+      "Convert to ZIP format",
+      "Download ZIP archive"
+    ],
+    article: {
+      title: "Convert 7z to ZIP",
+      content: `Convert 7z archives to ZIP format for universal compatibility. ZIP works on all platforms without special software.
+
+## Why Convert to ZIP?
+
+Use ZIP for:
+- Universal compatibility
+- Windows built-in support
+- Email attachments
+- Web sharing
+- Standard format
+
+## Conversion Quality
+
+Maintain quality:
+- Lossless conversion
+- Structure preservation
+- Metadata retention
+- Fast processing
+- Reliable results`,
+      relatedTools: ["archive-converter", "7z-to-rar", "extract-7z"]
+    }
+  },
+  {
+    id: "rar-to-zip",
+    title: "RAR to ZIP",
+    category: "Archive Conversion" as ToolCategory,
+    tags: ["rar", "zip", "convert", "compatibility"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert RAR to ZIP Online - Free RAR to ZIP Converter",
+    metaDescription: "Convert RAR to ZIP online for free. Easy compatibility with ZIP format. Archive converter.",
+    description: "Convert RAR archives to ZIP format",
+    icon: "shuffle",
+    howTo: [
+      "Upload RAR file",
+      "Choose ZIP settings",
+      "Convert to ZIP",
+      "Download ZIP file"
+    ],
+    article: {
+      title: "Convert RAR to ZIP",
+      content: `Convert RAR archives to ZIP format for better compatibility. ZIP doesn't require special software to open.
+
+## Conversion Benefits
+
+ZIP advantages:
+- No special software
+- Built-in support
+- Universal format
+- Easy sharing
+- Standard compression
+
+## Conversion Process
+
+Simple steps:
+- Extract RAR
+- Recompress to ZIP
+- Optimize settings
+- Fast conversion
+- Quality preservation`,
+      relatedTools: ["archive-converter", "rar-to-7z", "extract-rar"]
+    }
+  },
+  {
+    id: "rar-to-7z",
+    title: "RAR to 7z",
+    category: "Archive Conversion" as ToolCategory,
+    tags: ["rar", "7z", "convert", "compress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert RAR to 7z Online - Free RAR to 7z Converter",
+    metaDescription: "Convert RAR to 7z online for free. Better compression with 7-Zip. Archive converter.",
+    description: "Convert RAR archives to 7z format",
+    icon: "repeat",
+    howTo: [
+      "Upload RAR archive",
+      "Configure 7z compression",
+      "Convert to 7z format",
+      "Download 7z file"
+    ],
+    article: {
+      title: "Convert RAR to 7z",
+      content: `Convert RAR archives to 7z format for open-source compression with better ratios. Free format with strong features.
+
+## Why Choose 7z?
+
+7z benefits:
+- Open-source
+- Better compression
+- No licensing
+- Strong encryption
+- Modern format
+
+## Conversion Features
+
+Professional conversion:
+- High compression
+- Quality retention
+- Fast processing
+- Settings control
+- Batch support`,
+      relatedTools: ["archive-converter", "rar-to-zip", "create-7z"]
+    }
+  },
+  {
+    id: "compress-files-to-zip",
+    title: "Compress Files to ZIP",
+    category: "Archive Creation" as ToolCategory,
+    tags: ["compress", "zip", "reduce", "size"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress Files to ZIP Online - Free File Compression",
+    metaDescription: "Compress files to ZIP online for free. Reduce file size. Create ZIP archives easily.",
+    description: "Compress and create ZIP archives",
+    icon: "compress",
+    howTo: [
+      "Select files to compress",
+      "Choose compression level",
+      "Create ZIP archive",
+      "Download compressed ZIP"
+    ],
+    article: {
+      title: "Compress Files to ZIP",
+      content: `Compress multiple files into a single ZIP archive. Reduce file size for easier storage and sharing.
+
+## Compression Benefits
+
+Reduce size for:
+- Email attachments
+- Cloud storage
+- File sharing
+- Backup storage
+- Download speed
+
+## Compression Levels
+
+Choose level:
+- Maximum (smaller, slower)
+- Normal (balanced)
+- Fast (larger, faster)
+- Store (no compression)
+- Custom settings`,
+      relatedTools: ["zip-creator", "compress-folder", "create-archive"]
+    }
+  },
+  {
+    id: "compress-folder-to-zip",
+    title: "Compress Folder to ZIP",
+    category: "Archive Creation" as ToolCategory,
+    tags: ["compress", "folder", "zip", "directory"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress Folder to ZIP Online - Folder ZIP Creator",
+    metaDescription: "Compress folders to ZIP online for free. Create ZIP from directories. Folder compression tool.",
+    description: "Compress entire folders to ZIP",
+    icon: "folder-archive",
+    howTo: [
+      "Upload or select folder",
+      "Review folder contents",
+      "Set compression options",
+      "Create and download ZIP"
+    ],
+    article: {
+      title: "Compress Folders to ZIP",
+      content: `Compress entire folders and their contents into ZIP archives. Preserve folder structure and organization.
+
+## Folder Compression
+
+Compress for:
+- Project backups
+- Directory sharing
+- Website packages
+- Document collections
+- Photo albums
+
+## Structure Preservation
+
+Maintain:
+- Folder hierarchy
+- File organization
+- Relative paths
+- Nested folders
+- Complete structure`,
+      relatedTools: ["zip-creator", "compress-files-to-zip", "archive-folder"]
+    }
+  },
+  {
+    id: "password-protect-zip",
+    title: "Password Protect ZIP",
+    category: "Archive Management" as ToolCategory,
+    tags: ["password", "protect", "encrypt", "secure"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Password Protect ZIP Files - Encrypt ZIP Archives",
+    metaDescription: "Password protect ZIP files online for free. Encrypt ZIP archives. Secure file compression.",
+    description: "Create password-protected ZIP archives",
+    icon: "lock",
+    howTo: [
+      "Upload files or existing ZIP",
+      "Set strong password",
+      "Choose encryption method",
+      "Download protected ZIP"
+    ],
+    article: {
+      title: "Password Protect ZIP Files",
+      content: `Secure your ZIP archives with password protection and encryption. Keep sensitive files safe during storage and sharing.
+
+## Security Features
+
+Protection with:
+- Strong passwords
+- AES-256 encryption
+- Password hints
+- Secure creation
+- Privacy assurance
+
+## Protected Uses
+
+Secure for:
+- Confidential documents
+- Financial files
+- Personal data
+- Business files
+- Sensitive information`,
+      relatedTools: ["encrypt-zip", "secure-zip", "protect-archive"]
+    }
+  },
+  {
+    id: "zip-file-viewer",
+    title: "ZIP File Viewer",
+    category: "Archive Management" as ToolCategory,
+    tags: ["view", "zip", "preview", "browse"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "ZIP File Viewer Online - Browse ZIP Contents",
+    metaDescription: "View ZIP file contents online. Browse ZIP archives without extracting. Free ZIP viewer.",
+    description: "View and browse ZIP contents online",
+    icon: "eye",
+    howTo: [
+      "Upload ZIP file",
+      "Browse file list",
+      "Preview individual files",
+      "Download selected files"
+    ],
+    article: {
+      title: "View ZIP Files Online",
+      content: `Browse ZIP archive contents without extracting. Preview files, check structure, and download only what you need.
+
+## Viewer Features
+
+Browse with:
+- File list view
+- Tree structure
+- File previews
+- Search function
+- Selective download
+
+## Preview Support
+
+Preview types:
+- Text files
+- Images
+- Documents
+- Code files
+- Metadata`,
+      relatedTools: ["browse-zip", "preview-zip", "zip-explorer"]
+    }
+  },
+  {
+    id: "rar-file-viewer",
+    title: "RAR File Viewer",
+    category: "Archive Management" as ToolCategory,
+    tags: ["view", "rar", "preview", "browse"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "RAR File Viewer Online - Browse RAR Archives",
+    metaDescription: "View RAR file contents online. Browse RAR archives without extracting. Free RAR viewer.",
+    description: "View and browse RAR contents online",
+    icon: "search",
+    howTo: [
+      "Upload RAR file",
+      "View archive structure",
+      "Preview files",
+      "Extract selected items"
+    ],
+    article: {
+      title: "View RAR Files Online",
+      content: `Browse RAR archive contents without extraction. Inspect files, preview content, and extract only what you need.
+
+## RAR Viewing
+
+Features:
+- Complete file list
+- Folder structure
+- File information
+- Preview mode
+- Selective extraction
+
+## Archive Information
+
+View details:
+- File sizes
+- Compression ratio
+- File count
+- Archive properties
+- Metadata`,
+      relatedTools: ["browse-rar", "preview-rar", "rar-explorer"]
+    }
+  },
+  {
+    id: "split-archive",
+    title: "Split Archive",
+    category: "Archive Management" as ToolCategory,
+    tags: ["split", "divide", "parts", "volume"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Split Archive Online - Create Multi-Volume Archives",
+    metaDescription: "Split large archives into smaller parts online. Create multi-volume ZIP, RAR, 7z. Free archive splitter.",
+    description: "Split large archives into smaller parts",
+    icon: "scissors",
+    howTo: [
+      "Upload large archive",
+      "Set part size (MB/GB)",
+      "Split into volumes",
+      "Download all parts"
+    ],
+    article: {
+      title: "Split Large Archives",
+      content: `Split large archive files into smaller parts for easier storage, transfer, and sharing. Create multi-volume archives.
+
+## Splitting Benefits
+
+Split for:
+- Email attachment limits
+- Storage restrictions
+- Network transfer
+- CD/DVD burning
+- Cloud upload limits
+
+## Volume Options
+
+Customize:
+- Part size
+- Volume count
+- Numbering scheme
+- Format choice
+- Auto-naming`,
+      relatedTools: ["multi-volume", "divide-archive", "split-zip"]
+    }
+  },
+  {
+    id: "merge-archives",
+    title: "Merge Archives",
+    category: "Archive Management" as ToolCategory,
+    tags: ["merge", "combine", "join", "reunite"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Merge Archive Parts - Combine Multi-Volume Archives",
+    metaDescription: "Merge split archives online. Combine multi-volume ZIP, RAR, 7z parts. Free archive merger.",
+    description: "Merge multi-volume archive parts",
+    icon: "git-merge",
+    howTo: [
+      "Upload all archive parts",
+      "Verify part sequence",
+      "Merge into single archive",
+      "Download complete archive"
+    ],
+    article: {
+      title: "Merge Archive Parts",
+      content: `Combine split archive parts back into a single file. Merge multi-volume ZIP, RAR, or 7z archives easily.
+
+## Merging Process
+
+Combine:
+- Multi-volume archives
+- Split parts
+- Sequenced files
+- Numbered volumes
+- All formats
+
+## Merge Features
+
+Automatic:
+- Part detection
+- Sequence verification
+- Error checking
+- Complete reconstruction
+- Format preservation`,
+      relatedTools: ["combine-archives", "join-parts", "reunite-archive"]
+    }
+  },
+  // Web Tools
+  {
+    id: "website-downloader",
+    title: "Website Downloader",
+    category: "Web Tools" as ToolCategory,
+    tags: ["download", "website", "offline", "save"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Download Website Offline - Save Entire Websites",
+    metaDescription: "Download entire websites for offline viewing. Save webpages with assets. Website archiver.",
+    description: "Download entire websites for offline viewing",
+    icon: "download",
+    howTo: [
+      "Enter website URL",
+      "Configure download options",
+      "Download website",
+      "View offline in browser"
+    ],
+    article: {
+      title: "Download Websites for Offline Viewing",
+      content: `Download complete websites for offline access. Perfect for research, archival, and working without internet.
+
+## Download Features
+
+Capture:
+- HTML pages
+- CSS stylesheets
+- JavaScript files
+- Images
+- Linked resources
+
+## Download Options
+
+Configure:
+- Depth level
+- File types
+- Domain limits
+- Link following
+- Asset inclusion
+
+## Use Cases
+
+Download for:
+- Offline research
+- Website archival
+- Backup purposes
+- Portfolio saving
+- Documentation`,
+      relatedTools: ["save-webpage", "archive-website", "offline-browser"]
+    }
+  },
+  {
+    id: "screenshot-website",
+    title: "Screenshot Website",
+    category: "Web Tools" as ToolCategory,
+    tags: ["screenshot", "capture", "webpage", "image"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "Screenshot Website Online - Capture Webpage as Image",
+    metaDescription: "Take screenshots of websites online. Capture full webpage or visible area. Free website screenshot tool.",
+    description: "Capture screenshots of websites",
+    icon: "camera",
+    howTo: [
+      "Enter website URL",
+      "Choose capture mode (full page/viewport)",
+      "Set screenshot options",
+      "Download screenshot image"
+    ],
+    article: {
+      title: "Capture Website Screenshots",
+      content: `Take high-quality screenshots of websites. Capture full pages, specific viewports, or mobile views.
+
+## Screenshot Modes
+
+Capture types:
+- Full page (entire length)
+- Viewport (visible area)
+- Mobile view
+- Specific dimensions
+- Responsive sizes
+
+## Screenshot Options
+
+Customize:
+- Image format (PNG, JPG)
+- Quality settings
+- Device emulation
+- Viewport size
+- Delay timing
+
+## Use Cases
+
+Screenshot for:
+- Documentation
+- Portfolio
+- Bug reports
+- Design reference
+- Social sharing`,
+      relatedTools: ["webpage-capture", "site-screenshot", "page-capture"]
     }
   }
 ] as const;
