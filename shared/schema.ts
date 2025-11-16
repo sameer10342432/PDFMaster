@@ -36174,6 +36174,3181 @@ This tool only validates the mathematical format of card numbers and does not st
       relatedTools: ["number-validator", "data-validator", "form-validator"]
     }
   },
+  {
+    id: "iban-validator",
+    title: "IBAN Validator",
+    category: "Validation Tools" as ToolCategory,
+    tags: ["iban", "validator", "bank", "account"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "IBAN Validator - Validate International Bank Account Numbers Online",
+    metaDescription: "Validate IBAN (International Bank Account Number) format online. Free IBAN validator tool to verify bank account numbers instantly.",
+    description: "Validate International Bank Account Numbers (IBAN) format",
+    icon: "badge-check",
+    howTo: [
+      "Enter your IBAN number",
+      "Click 'Validate IBAN'",
+      "View validation result",
+      "See country and bank details"
+    ],
+    article: {
+      title: "How to Validate IBAN Numbers",
+      content: `IBAN (International Bank Account Number) validation ensures correct bank account number format for international transfers. Our free tool checks IBAN structure and validity.
+
+## What is IBAN?
+
+IBAN is a standardized format for:
+- International bank transfers
+- Cross-border payments
+- Account identification
+- Error prevention
+
+## Validation Features
+
+- Format checking
+- Country code verification
+- Checksum validation
+- Bank identification`,
+      relatedTools: ["bic-validator", "swift-validator", "bank-validator"]
+    }
+  },
+  {
+    id: "slug-to-title",
+    title: "Slug to Title",
+    category: "Text Tools" as ToolCategory,
+    tags: ["slug", "title", "convert", "url"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Slug to Title Converter - Convert URL Slugs to Titles Online",
+    metaDescription: "Convert URL slugs to readable titles online. Free tool to transform hyphenated text into proper titles instantly.",
+    description: "Convert URL slugs to readable titles with proper capitalization",
+    icon: "type",
+    howTo: [
+      "Enter your URL slug",
+      "Click 'Convert to Title'",
+      "Get formatted title",
+      "Copy the result"
+    ],
+    article: {
+      title: "Convert URL Slugs to Titles",
+      content: `Transform URL-friendly slugs into properly formatted titles. Perfect for content management and SEO work.
+
+## Use Cases
+
+- CMS development
+- Blog management
+- URL processing
+- Title generation
+
+## Features
+
+- Auto capitalization
+- Hyphen to space conversion
+- Word case handling
+- Instant results`,
+      relatedTools: ["title-to-slug", "case-converter", "text-formatter"]
+    }
+  },
+  {
+    id: "title-to-slug",
+    title: "Title to Slug",
+    category: "Text Tools" as ToolCategory,
+    tags: ["title", "slug", "url", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Title to Slug Converter - Create SEO-Friendly URL Slugs",
+    metaDescription: "Convert titles to URL-friendly slugs online. Create SEO-optimized URL slugs from titles instantly and free.",
+    description: "Convert titles to SEO-friendly URL slugs",
+    icon: "link",
+    howTo: [
+      "Enter your title",
+      "Click 'Convert to Slug'",
+      "Get URL-friendly slug",
+      "Use in your URLs"
+    ],
+    article: {
+      title: "Create SEO-Friendly URL Slugs",
+      content: `Generate clean, SEO-optimized URL slugs from titles. Essential for web development and content management.
+
+## Benefits
+
+- SEO optimization
+- Clean URLs
+- Better readability
+- Standard formatting
+
+## Features
+
+- Lowercase conversion
+- Special character removal
+- Space to hyphen
+- URL-safe output`,
+      relatedTools: ["slug-to-title", "url-encoder", "seo-tools"]
+    }
+  },
+  {
+    id: "case-converter-camel",
+    title: "Case Converter (CamelCase)",
+    category: "Text Formatting" as ToolCategory,
+    tags: ["camelcase", "convert", "text", "format"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CamelCase Converter - Convert Text to camelCase Online",
+    metaDescription: "Convert text to camelCase format online. Free tool for developers to format variable names and code instantly.",
+    description: "Convert text to camelCase format for programming",
+    icon: "code",
+    howTo: [
+      "Enter your text",
+      "Click 'Convert to camelCase'",
+      "Get formatted output",
+      "Copy for use in code"
+    ],
+    article: {
+      title: "Convert Text to camelCase",
+      content: `Transform text into camelCase naming convention used in programming. Perfect for variable and function names.
+
+## Programming Uses
+
+- Variable names
+- Function naming
+- Object properties
+- Method names
+
+## Features
+
+- Auto formatting
+- First word lowercase
+- Capital word boundaries
+- Remove spaces/hyphens`,
+      relatedTools: ["case-converter-pascal", "case-converter-snake", "case-converter-kebab"]
+    }
+  },
+  {
+    id: "case-converter-snake",
+    title: "Case Converter (Snake_Case)",
+    category: "Text Formatting" as ToolCategory,
+    tags: ["snake_case", "convert", "text", "format"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Snake_Case Converter - Convert Text to snake_case Online",
+    metaDescription: "Convert text to snake_case format online. Free tool for Python developers and database naming conventions.",
+    description: "Convert text to snake_case format",
+    icon: "code",
+    howTo: [
+      "Enter your text",
+      "Click 'Convert to snake_case'",
+      "Get formatted output",
+      "Use in your code"
+    ],
+    article: {
+      title: "Convert Text to snake_case",
+      content: `Format text in snake_case naming convention commonly used in Python and database schemas.
+
+## Common Uses
+
+- Python variables
+- Database columns
+- Configuration keys
+- File naming
+
+## Features
+
+- Lowercase conversion
+- Underscore separation
+- Special char removal
+- Instant formatting`,
+      relatedTools: ["case-converter-camel", "case-converter-kebab", "case-converter-pascal"]
+    }
+  },
+  {
+    id: "case-converter-kebab",
+    title: "Case Converter (Kebab-Case)",
+    category: "Text Formatting" as ToolCategory,
+    tags: ["kebab-case", "convert", "text", "format"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Kebab-Case Converter - Convert Text to kebab-case Online",
+    metaDescription: "Convert text to kebab-case format online. Free tool for CSS class names and URL slugs.",
+    description: "Convert text to kebab-case format",
+    icon: "minus",
+    howTo: [
+      "Enter your text",
+      "Click 'Convert to kebab-case'",
+      "Get formatted output",
+      "Use in CSS or URLs"
+    ],
+    article: {
+      title: "Convert Text to kebab-case",
+      content: `Transform text into kebab-case format used in CSS, URLs, and file naming.
+
+## Popular Uses
+
+- CSS class names
+- URL slugs
+- File names
+- HTML attributes
+
+## Features
+
+- Lowercase formatting
+- Hyphen separation
+- Clean output
+- Instant conversion`,
+      relatedTools: ["case-converter-camel", "case-converter-snake", "title-to-slug"]
+    }
+  },
+  {
+    id: "case-converter-pascal",
+    title: "Case Converter (PascalCase)",
+    category: "Text Formatting" as ToolCategory,
+    tags: ["pascalcase", "convert", "text", "format"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PascalCase Converter - Convert Text to PascalCase Online",
+    metaDescription: "Convert text to PascalCase format online. Free tool for class names and component naming in programming.",
+    description: "Convert text to PascalCase format",
+    icon: "code",
+    howTo: [
+      "Enter your text",
+      "Click 'Convert to PascalCase'",
+      "Get formatted output",
+      "Use for class names"
+    ],
+    article: {
+      title: "Convert Text to PascalCase",
+      content: `Format text in PascalCase convention used for class names and components in programming.
+
+## Use Cases
+
+- Class names
+- React components
+- TypeScript interfaces
+- C# classes
+
+## Features
+
+- Capital first letters
+- No spaces or hyphens
+- Clean formatting
+- Instant conversion`,
+      relatedTools: ["case-converter-camel", "case-converter-snake", "case-converter-kebab"]
+    }
+  },
+  {
+    id: "find-facebook-id",
+    title: "Find Facebook ID",
+    category: "Social Media Tools" as ToolCategory,
+    tags: ["facebook", "id", "social", "profile"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Find Facebook ID - Get Facebook Profile ID Number Online",
+    metaDescription: "Find Facebook profile ID number from profile URL. Free tool to get numeric Facebook ID instantly.",
+    description: "Extract Facebook profile ID from profile URL",
+    icon: "user-circle",
+    howTo: [
+      "Enter Facebook profile URL",
+      "Click 'Find ID'",
+      "Get numeric profile ID",
+      "Copy for API use"
+    ],
+    article: {
+      title: "How to Find Facebook Profile ID",
+      content: `Discover a Facebook user's numeric profile ID from their profile URL. Useful for developers and marketers.
+
+## Why Find Facebook ID?
+
+- API integration
+- App development
+- Marketing analytics
+- Profile verification
+
+## Features
+
+- URL to ID conversion
+- Instant results
+- No login required
+- Free to use`,
+      relatedTools: ["find-twitter-id", "find-instagram-id", "social-media-tools"]
+    }
+  },
+  {
+    id: "find-twitter-id",
+    title: "Find Twitter ID",
+    category: "Social Media Tools" as ToolCategory,
+    tags: ["twitter", "id", "social", "profile"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Find Twitter ID - Get Twitter User ID Number Online",
+    metaDescription: "Find Twitter user ID from username. Free tool to get numeric Twitter ID for API integration.",
+    description: "Get Twitter user ID from username",
+    icon: "user-circle",
+    howTo: [
+      "Enter Twitter username",
+      "Click 'Find ID'",
+      "Get numeric user ID",
+      "Use in API calls"
+    ],
+    article: {
+      title: "How to Find Twitter User ID",
+      content: `Find a Twitter user's numeric ID from their username. Essential for Twitter API development.
+
+## Common Uses
+
+- Twitter API
+- Bot development
+- Analytics tools
+- Social monitoring
+
+## Features
+
+- Username to ID
+- Fast lookup
+- Free service
+- Developer friendly`,
+      relatedTools: ["find-facebook-id", "find-instagram-id", "twitter-tools"]
+    }
+  },
+  {
+    id: "http-status-checker",
+    title: "Get HTTP Status Code",
+    category: "Web Tools" as ToolCategory,
+    tags: ["http", "status", "code", "web"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HTTP Status Code Checker - Check Website HTTP Response",
+    metaDescription: "Check HTTP status codes for any URL. Free tool to verify website response codes and headers instantly.",
+    description: "Check HTTP status codes and response headers for any URL",
+    icon: "globe",
+    howTo: [
+      "Enter website URL",
+      "Click 'Check Status'",
+      "View HTTP status code",
+      "See response headers"
+    ],
+    article: {
+      title: "HTTP Status Code Checker",
+      content: `Check HTTP response status codes to verify website availability and diagnose issues.
+
+## HTTP Status Codes
+
+- 200: Success
+- 301/302: Redirects
+- 404: Not Found
+- 500: Server Error
+
+## Features
+
+- Status code checking
+- Response headers
+- Redirect following
+- Fast results`,
+      relatedTools: ["website-tester", "seo-analyzer", "broken-link-checker"]
+    }
+  },
+  {
+    id: "screen-resolution-detector",
+    title: "Screen Resolution Detector",
+    category: "Browser Tools" as ToolCategory,
+    tags: ["screen", "resolution", "display", "monitor"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Screen Resolution Detector - Check Your Display Resolution",
+    metaDescription: "Detect your screen resolution, viewport size, and display information. Free browser tool to check monitor specs.",
+    description: "Detect screen resolution and display information",
+    icon: "monitor",
+    howTo: [
+      "Visit the tool page",
+      "Auto-detect resolution",
+      "View screen details",
+      "See viewport size"
+    ],
+    article: {
+      title: "Screen Resolution Detection",
+      content: `Instantly detect your screen resolution and display specifications for responsive design and testing.
+
+## Information Provided
+
+- Screen resolution
+- Viewport dimensions
+- Device pixel ratio
+- Color depth
+
+## Uses
+
+- Responsive design
+- Testing layouts
+- Display verification
+- Device specifications`,
+      relatedTools: ["browser-info", "dpi-calculator", "aspect-ratio-calculator"]
+    }
+  },
+  {
+    id: "browser-info-detector",
+    title: "Browser Info",
+    category: "Browser Tools" as ToolCategory,
+    tags: ["browser", "info", "user-agent", "detect"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Browser Information Detector - Check Your Browser Details",
+    metaDescription: "Detect browser name, version, OS, and capabilities. Free tool to check browser information instantly.",
+    description: "Detect browser information and capabilities",
+    icon: "info",
+    howTo: [
+      "Visit the tool page",
+      "Auto-detect browser",
+      "View browser details",
+      "See system info"
+    ],
+    article: {
+      title: "Browser Information Detection",
+      content: `Discover detailed information about your web browser and system for compatibility testing.
+
+## Detected Information
+
+- Browser name/version
+- Operating system
+- User agent string
+- JavaScript enabled
+
+## Benefits
+
+- Compatibility testing
+- Troubleshooting
+- System verification
+- Feature detection`,
+      relatedTools: ["screen-resolution-detector", "dpi-calculator", "user-agent-parser"]
+    }
+  },
+  {
+    id: "dpi-calculator",
+    title: "DPI Calculator",
+    category: "Calculators" as ToolCategory,
+    tags: ["dpi", "ppi", "resolution", "calculator"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "DPI Calculator - Calculate Dots Per Inch for Screen & Print",
+    metaDescription: "Calculate DPI (dots per inch) for screens and prints. Free tool to compute pixel density and resolution.",
+    description: "Calculate DPI (dots per inch) for screens and prints",
+    icon: "calculator",
+    howTo: [
+      "Enter dimensions",
+      "Enter resolution",
+      "Click 'Calculate DPI'",
+      "View DPI result"
+    ],
+    article: {
+      title: "DPI Calculator Tool",
+      content: `Calculate DPI/PPI for displays and print materials to ensure optimal image quality.
+
+## What is DPI?
+
+DPI (dots per inch) measures:
+- Print resolution
+- Screen pixel density
+- Image quality
+- Output sharpness
+
+## Use Cases
+
+- Print design
+- Screen specs
+- Image sizing
+- Quality assurance`,
+      relatedTools: ["aspect-ratio-calculator", "pixels-to-cm-converter", "image-resizer"]
+    }
+  },
+  {
+    id: "aspect-ratio-calculator",
+    title: "Aspect Ratio Calculator",
+    category: "Calculators" as ToolCategory,
+    tags: ["aspect", "ratio", "calculator", "resolution"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Aspect Ratio Calculator - Calculate Image & Video Ratios",
+    metaDescription: "Calculate aspect ratios for images and videos. Free tool to find and maintain perfect proportions.",
+    description: "Calculate and maintain aspect ratios for images and videos",
+    icon: "square",
+    howTo: [
+      "Enter width and height",
+      "Click 'Calculate Ratio'",
+      "View aspect ratio",
+      "Get scaled dimensions"
+    ],
+    article: {
+      title: "Aspect Ratio Calculator",
+      content: `Calculate aspect ratios and maintain proportions for images, videos, and displays.
+
+## Common Ratios
+
+- 16:9 (Widescreen)
+- 4:3 (Standard)
+- 1:1 (Square)
+- 21:9 (Ultrawide)
+
+## Features
+
+- Ratio calculation
+- Dimension scaling
+- Multiple formats
+- Instant results`,
+      relatedTools: ["dpi-calculator", "image-resizer", "video-converter"]
+    }
+  },
+  {
+    id: "pixels-to-cm-converter",
+    title: "Pixels to CM Converter",
+    category: "Unit Converters" as ToolCategory,
+    tags: ["pixels", "cm", "converter", "resolution"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Pixels to CM Converter - Convert Pixels to Centimeters Online",
+    metaDescription: "Convert pixels to centimeters and vice versa. Free tool for print and web design conversions.",
+    description: "Convert between pixels and centimeters",
+    icon: "arrows-left-right",
+    howTo: [
+      "Enter pixel value",
+      "Set DPI/resolution",
+      "Click 'Convert'",
+      "Get CM result"
+    ],
+    article: {
+      title: "Convert Pixels to Centimeters",
+      content: `Convert between pixels and centimeters for accurate print and web design measurements.
+
+## Conversion Uses
+
+- Print design
+- Web layouts
+- Image sizing
+- Design specs
+
+## Factors
+
+- DPI setting
+- Resolution
+- Print vs screen
+- Accuracy`,
+      relatedTools: ["dpi-calculator", "unit-converter", "image-resizer"]
+    }
+  },
+  {
+    id: "words-to-pages-converter",
+    title: "Words to Pages Converter",
+    category: "Unit Converters" as ToolCategory,
+    tags: ["words", "pages", "converter", "writing"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Words to Pages Converter - Calculate Page Count from Word Count",
+    metaDescription: "Convert word count to page count for essays and documents. Free tool for students and writers.",
+    description: "Convert word count to estimated page count",
+    icon: "file-text",
+    howTo: [
+      "Enter word count",
+      "Select formatting",
+      "Click 'Convert'",
+      "View page estimate"
+    ],
+    article: {
+      title: "Words to Pages Converter",
+      content: `Estimate page count from word count for academic and professional writing.
+
+## Factors Affecting Count
+
+- Font size
+- Line spacing
+- Margins
+- Font type
+
+## Common Estimates
+
+- 250 words = 1 page (double-spaced)
+- 500 words = 1 page (single-spaced)
+
+## Uses
+
+- Essay planning
+- Assignment requirements
+- Publishing estimates
+- Writing goals`,
+      relatedTools: ["word-counter", "reading-time-calculator", "character-counter"]
+    }
+  },
+  {
+    id: "reading-time-calculator",
+    title: "Reading Time Calculator",
+    category: "Text Analysis" as ToolCategory,
+    tags: ["reading", "time", "calculator", "text"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Reading Time Calculator - Estimate Reading Time for Text",
+    metaDescription: "Calculate estimated reading time for articles and documents. Free tool for content creators and readers.",
+    description: "Calculate estimated reading time for text content",
+    icon: "clock",
+    howTo: [
+      "Paste your text",
+      "Click 'Calculate Time'",
+      "View reading estimate",
+      "See word count"
+    ],
+    article: {
+      title: "Reading Time Calculator",
+      content: `Estimate how long it will take to read text content for better user experience.
+
+## Reading Speeds
+
+- Average: 200-250 wpm
+- Slow: 150-200 wpm
+- Fast: 250-300 wpm
+
+## Uses
+
+- Blog posts
+- Articles
+- Documentation
+- Content planning
+
+## Benefits
+
+- Better UX
+- Content metrics
+- Time estimates
+- Reader engagement`,
+      relatedTools: ["word-counter", "character-counter", "text-analyzer"]
+    }
+  },
+  {
+    id: "random-color-generator",
+    title: "Random Color Generator",
+    category: "Color Tools" as ToolCategory,
+    tags: ["random", "color", "generator", "hex"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Random Color Generator - Generate Random Colors Online",
+    metaDescription: "Generate random colors in HEX, RGB, and HSL formats. Free tool for designers and developers.",
+    description: "Generate random colors for design inspiration",
+    icon: "palette",
+    howTo: [
+      "Click 'Generate Color'",
+      "View color preview",
+      "See HEX/RGB/HSL codes",
+      "Copy color values"
+    ],
+    article: {
+      title: "Random Color Generator",
+      content: `Generate random colors for design inspiration and creative projects.
+
+## Color Formats
+
+- HEX codes
+- RGB values
+- HSL notation
+- Color names
+
+## Features
+
+- Instant generation
+- Multiple formats
+- Copy to clipboard
+- Color preview
+
+## Uses
+
+- Design inspiration
+- Placeholder colors
+- Color schemes
+- Creative projects`,
+      relatedTools: ["random-palette-generator", "color-picker", "gradient-generator"]
+    }
+  },
+  {
+    id: "random-palette-generator",
+    title: "Random Palette Generator",
+    category: "Color Tools" as ToolCategory,
+    tags: ["random", "palette", "colors", "scheme"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Random Color Palette Generator - Create Color Schemes Online",
+    metaDescription: "Generate random color palettes and schemes. Free tool for designers to create harmonious color combinations.",
+    description: "Generate random color palettes and schemes",
+    icon: "palette",
+    howTo: [
+      "Click 'Generate Palette'",
+      "View color scheme",
+      "Lock favorite colors",
+      "Regenerate unlocked colors"
+    ],
+    article: {
+      title: "Random Palette Generator",
+      content: `Create beautiful random color palettes for your design projects.
+
+## Palette Features
+
+- 5-color schemes
+- Lock colors
+- HEX codes
+- Instant preview
+
+## Design Uses
+
+- Website themes
+- Brand colors
+- UI design
+- Creative inspiration
+
+## Color Harmony
+
+- Complementary
+- Analogous
+- Triadic
+- Random mix`,
+      relatedTools: ["random-color-generator", "color-picker", "gradient-generator"]
+    }
+  },
+  {
+    id: "password-strength-checker",
+    title: "Password Strength Checker",
+    category: "Security" as ToolCategory,
+    tags: ["password", "strength", "security", "checker"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Password Strength Checker - Test Password Security Online",
+    metaDescription: "Check password strength and security. Free tool to test password complexity and get improvement tips.",
+    description: "Check password strength and get security recommendations",
+    icon: "shield-check",
+    howTo: [
+      "Enter your password",
+      "View strength score",
+      "See security tips",
+      "Improve weak passwords"
+    ],
+    article: {
+      title: "Password Strength Checker",
+      content: `Test your password strength and learn how to create secure passwords.
+
+## Strength Factors
+
+- Length (12+ chars)
+- Uppercase/lowercase
+- Numbers
+- Special characters
+
+## Security Tips
+
+- Avoid common words
+- Use unique passwords
+- Enable 2FA
+- Regular updates
+
+## Password Best Practices
+
+- Minimum 12 characters
+- Mix character types
+- No personal info
+- Use password manager`,
+      relatedTools: ["password-generator", "hash-generator", "security-tools"]
+    }
+  },
+  {
+    id: "font-identifier",
+    title: "What Font Is This (Image)",
+    category: "Design Tools" as ToolCategory,
+    tags: ["font", "identifier", "image", "typography"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Font Identifier - Identify Fonts from Images Online",
+    metaDescription: "Identify fonts from images. Upload a picture and discover font names instantly with our free font finder tool.",
+    description: "Identify fonts from uploaded images",
+    icon: "type",
+    howTo: [
+      "Upload image with text",
+      "Select text area",
+      "Click 'Identify Font'",
+      "View font matches"
+    ],
+    article: {
+      title: "Font Identification Tool",
+      content: `Identify fonts from images to find the perfect typeface for your projects.
+
+## How It Works
+
+- Image analysis
+- Font matching
+- Multiple suggestions
+- Download links
+
+## Uses
+
+- Design recreation
+- Brand matching
+- Typography research
+- Font discovery
+
+## Best Results
+
+- Clear text images
+- High contrast
+- Large font size
+- Minimal distortion`,
+      relatedTools: ["font-generator", "text-tools", "image-tools"]
+    }
+  },
+  {
+    id: "color-blindness-simulator",
+    title: "Color Blindness Simulator",
+    category: "Color Tools" as ToolCategory,
+    tags: ["colorblind", "simulator", "accessibility", "vision"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Color Blindness Simulator - Test Accessibility of Your Designs",
+    metaDescription: "Simulate color blindness to test design accessibility. Free tool to see how colorblind users view your content.",
+    description: "Simulate different types of color blindness",
+    icon: "eye",
+    howTo: [
+      "Upload your image",
+      "Select blindness type",
+      "View simulation",
+      "Compare differences"
+    ],
+    article: {
+      title: "Color Blindness Simulator",
+      content: `Test your designs for color blind accessibility with our simulation tool.
+
+## Types Simulated
+
+- Protanopia (Red-blind)
+- Deuteranopia (Green-blind)
+- Tritanopia (Blue-blind)
+- Monochromacy
+
+## Accessibility Importance
+
+- 8% of men affected
+- 0.5% of women
+- Better UX for all
+- WCAG compliance
+
+## Design Tips
+
+- Don't rely on color alone
+- Use patterns/textures
+- High contrast
+- Text labels`,
+      relatedTools: ["contrast-checker", "accessibility-tools", "color-picker"]
+    }
+  },
+  {
+    id: "online-mind-map",
+    title: "Online Mind Map",
+    category: "Productivity Tools" as ToolCategory,
+    tags: ["mindmap", "brainstorm", "diagram", "organize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Mind Map Creator - Free Mind Mapping Tool",
+    metaDescription: "Create mind maps online for brainstorming and organizing ideas. Free, easy-to-use mind mapping tool.",
+    description: "Create mind maps for brainstorming and idea organization",
+    icon: "network",
+    howTo: [
+      "Start with central idea",
+      "Add branches",
+      "Connect concepts",
+      "Export or save"
+    ],
+    article: {
+      title: "Online Mind Mapping Tool",
+      content: `Organize your thoughts and brainstorm ideas with our free mind mapping tool.
+
+## Mind Map Benefits
+
+- Visual thinking
+- Idea organization
+- Creative brainstorming
+- Better memory
+
+## Features
+
+- Drag and drop
+- Color coding
+- Export options
+- Real-time saving
+
+## Uses
+
+- Project planning
+- Study notes
+- Presentations
+- Team brainstorming`,
+      relatedTools: ["flowchart-maker", "diagram-tool", "kanban-board"]
+    }
+  },
+  {
+    id: "online-flowchart-maker",
+    title: "Online Flowchart Maker",
+    category: "Productivity Tools" as ToolCategory,
+    tags: ["flowchart", "diagram", "process", "workflow"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Flowchart Maker - Create Flowcharts Free",
+    metaDescription: "Create professional flowcharts online. Free flowchart maker with templates and export options.",
+    description: "Create professional flowcharts and process diagrams",
+    icon: "git-branch",
+    howTo: [
+      "Choose a template",
+      "Add shapes",
+      "Connect with arrows",
+      "Export diagram"
+    ],
+    article: {
+      title: "Flowchart Creation Tool",
+      content: `Design clear process flowcharts for documentation and planning.
+
+## Flowchart Uses
+
+- Process documentation
+- Algorithm design
+- Workflow planning
+- Decision trees
+
+## Features
+
+- Standard shapes
+- Auto-layout
+- Multiple exports
+- Templates
+
+## Best Practices
+
+- Clear labeling
+- Consistent symbols
+- Logical flow
+- Simple design`,
+      relatedTools: ["mind-map", "diagram-tool", "process-mapper"]
+    }
+  },
+  {
+    id: "online-diagram-tool",
+    title: "Online Diagram Tool",
+    category: "Productivity Tools" as ToolCategory,
+    tags: ["diagram", "chart", "visual", "design"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Diagram Tool - Create Diagrams and Charts Free",
+    metaDescription: "Create professional diagrams, charts, and visual representations online. Free diagram tool with templates.",
+    description: "Create various types of diagrams and charts",
+    icon: "network",
+    howTo: [
+      "Select diagram type",
+      "Add elements",
+      "Customize design",
+      "Export result"
+    ],
+    article: {
+      title: "Online Diagram Creation",
+      content: `Create any type of diagram for presentations, documentation, and planning.
+
+## Diagram Types
+
+- Flowcharts
+- UML diagrams
+- Network diagrams
+- Organizational charts
+
+## Features
+
+- Drag-and-drop
+- Smart connectors
+- Export formats
+- Collaboration
+
+## Professional Uses
+
+- Technical docs
+- Presentations
+- Training materials
+- System design`,
+      relatedTools: ["flowchart-maker", "mind-map", "gantt-chart"]
+    }
+  },
+  {
+    id: "online-gantt-chart",
+    title: "Online Gantt Chart",
+    category: "Productivity Tools" as ToolCategory,
+    tags: ["gantt", "chart", "project", "timeline"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Gantt Chart Maker - Create Project Timelines Free",
+    metaDescription: "Create Gantt charts for project management. Free online tool to plan timelines and track progress.",
+    description: "Create Gantt charts for project planning and timelines",
+    icon: "calendar-clock",
+    howTo: [
+      "Add project tasks",
+      "Set durations",
+      "Define dependencies",
+      "View timeline"
+    ],
+    article: {
+      title: "Gantt Chart Creator",
+      content: `Plan and track projects with professional Gantt charts.
+
+## Project Management
+
+- Task scheduling
+- Deadline tracking
+- Resource allocation
+- Progress monitoring
+
+## Features
+
+- Interactive timeline
+- Dependencies
+- Milestones
+- Export options
+
+## Benefits
+
+- Visual planning
+- Team coordination
+- Deadline management
+- Progress tracking`,
+      relatedTools: ["kanban-board", "project-planner", "timeline-maker"]
+    }
+  },
+  {
+    id: "online-kanban-board",
+    title: "Online Kanban Board",
+    category: "Productivity Tools" as ToolCategory,
+    tags: ["kanban", "board", "task", "workflow"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Kanban Board - Free Task Management Tool",
+    metaDescription: "Manage tasks with online Kanban boards. Free agile project management tool for teams.",
+    description: "Manage tasks with drag-and-drop Kanban boards",
+    icon: "list",
+    howTo: [
+      "Create columns",
+      "Add task cards",
+      "Drag to move tasks",
+      "Track progress"
+    ],
+    article: {
+      title: "Kanban Board Tool",
+      content: `Organize work with visual Kanban boards for better task management.
+
+## Kanban Method
+
+- Visualize workflow
+- Limit WIP
+- Continuous flow
+- Team collaboration
+
+## Features
+
+- Drag-and-drop
+- Custom columns
+- Task cards
+- Real-time updates
+
+## Use Cases
+
+- Agile development
+- Task tracking
+- Team coordination
+- Workflow optimization`,
+      relatedTools: ["gantt-chart", "task-manager", "project-planner"]
+    }
+  },
+  {
+    id: "online-sticky-notes",
+    title: "Online Sticky Notes",
+    category: "Productivity Tools" as ToolCategory,
+    tags: ["sticky", "notes", "memo", "reminder"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Sticky Notes - Free Virtual Sticky Note Tool",
+    metaDescription: "Create virtual sticky notes online. Free digital sticky note tool for quick memos and reminders.",
+    description: "Create virtual sticky notes for quick memos",
+    icon: "sticky-note",
+    howTo: [
+      "Click 'New Note'",
+      "Type your memo",
+      "Choose color",
+      "Position on board"
+    ],
+    article: {
+      title: "Virtual Sticky Notes",
+      content: `Keep track of ideas and reminders with virtual sticky notes.
+
+## Features
+
+- Color options
+- Drag-and-drop
+- Auto-save
+- Delete/edit
+
+## Uses
+
+- Quick notes
+- Reminders
+- Brainstorming
+- To-do items
+
+## Benefits
+
+- No paper waste
+- Always accessible
+- Easy organization
+- Shareable`,
+      relatedTools: ["note-taking", "todo-list", "reminder-app"]
+    }
+  },
+  {
+    id: "online-wysiwyg-editor",
+    title: "Online WYSIWYG Editor",
+    category: "Editor Tools" as ToolCategory,
+    tags: ["wysiwyg", "editor", "html", "rich-text"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online WYSIWYG Editor - Free Rich Text Editor",
+    metaDescription: "Create and edit rich text content online. Free WYSIWYG HTML editor with formatting tools.",
+    description: "Edit rich text content with visual formatting",
+    icon: "file-edit",
+    howTo: [
+      "Start typing",
+      "Use formatting tools",
+      "Add images/links",
+      "Export HTML"
+    ],
+    article: {
+      title: "WYSIWYG Editor Tool",
+      content: `Create formatted content with our what-you-see-is-what-you-get editor.
+
+## Features
+
+- Rich formatting
+- Image uploads
+- Link insertion
+- HTML export
+
+## Uses
+
+- Blog posts
+- Articles
+- Documentation
+- Email templates
+
+## Benefits
+
+- No coding needed
+- Visual editing
+- Clean HTML output
+- User-friendly`,
+      relatedTools: ["html-editor", "markdown-editor", "code-editor"]
+    }
+  },
+  {
+    id: "online-code-editor",
+    title: "Online Code Editor",
+    category: "Editor Tools" as ToolCategory,
+    tags: ["code", "editor", "programming", "ide"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Code Editor - Free Web-Based IDE",
+    metaDescription: "Write and test code online. Free code editor supporting multiple programming languages with syntax highlighting.",
+    description: "Write and test code with syntax highlighting",
+    icon: "code",
+    howTo: [
+      "Select language",
+      "Write your code",
+      "Run/test code",
+      "Save or export"
+    ],
+    article: {
+      title: "Online Code Editor",
+      content: `Write, edit, and test code directly in your browser with our online IDE.
+
+## Supported Languages
+
+- JavaScript
+- Python
+- HTML/CSS
+- Many more
+
+## Features
+
+- Syntax highlighting
+- Auto-completion
+- Error detection
+- Code formatting
+
+## Uses
+
+- Quick prototyping
+- Learning to code
+- Code testing
+- Collaboration`,
+      relatedTools: ["regex-tester", "json-editor", "html-editor"]
+    }
+  },
+  {
+    id: "online-regex-tester",
+    title: "Online Regex Tester",
+    category: "Web Tools" as ToolCategory,
+    tags: ["regex", "tester", "pattern", "validation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Regex Tester - Test Regular Expressions Free",
+    metaDescription: "Test and debug regular expressions online. Free regex tester with pattern matching and explanation.",
+    description: "Test and debug regular expressions",
+    icon: "search",
+    howTo: [
+      "Enter regex pattern",
+      "Add test string",
+      "View matches",
+      "See explanation"
+    ],
+    article: {
+      title: "Regex Testing Tool",
+      content: `Test and perfect your regular expressions with real-time feedback.
+
+## Features
+
+- Live matching
+- Pattern explanation
+- Common patterns
+- Match highlighting
+
+## Use Cases
+
+- Form validation
+- Text parsing
+- Data extraction
+- Pattern matching
+
+## Learning Regex
+
+- Syntax guide
+- Examples
+- Best practices
+- Common pitfalls`,
+      relatedTools: ["text-tools", "pattern-matcher", "string-validator"]
+    }
+  },
+  {
+    id: "online-json-editor",
+    title: "Online JSON Editor",
+    category: "Editor Tools" as ToolCategory,
+    tags: ["json", "editor", "validator", "formatter"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online JSON Editor - Format and Validate JSON Free",
+    metaDescription: "Edit, format, and validate JSON online. Free JSON editor with syntax highlighting and error detection.",
+    description: "Edit, format, and validate JSON data",
+    icon: "file-json",
+    howTo: [
+      "Paste JSON data",
+      "Auto-format",
+      "Validate syntax",
+      "Export formatted JSON"
+    ],
+    article: {
+      title: "JSON Editor and Validator",
+      content: `Work with JSON data efficiently using our online editor and validator.
+
+## Features
+
+- Syntax validation
+- Auto-formatting
+- Error highlighting
+- Tree view
+
+## Uses
+
+- API development
+- Config files
+- Data modeling
+- Testing
+
+## Benefits
+
+- Clean formatting
+- Error detection
+- Easy editing
+- Export options`,
+      relatedTools: ["xml-editor", "code-editor", "api-tester"]
+    }
+  },
+  {
+    id: "online-xml-editor",
+    title: "Online XML Editor",
+    category: "Editor Tools" as ToolCategory,
+    tags: ["xml", "editor", "validator", "formatter"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online XML Editor - Format and Validate XML Free",
+    metaDescription: "Edit, format, and validate XML online. Free XML editor with syntax checking and formatting.",
+    description: "Edit, format, and validate XML documents",
+    icon: "file-code",
+    howTo: [
+      "Paste XML content",
+      "Auto-format",
+      "Validate structure",
+      "Export XML"
+    ],
+    article: {
+      title: "XML Editor and Validator",
+      content: `Edit and validate XML documents with our online XML editor.
+
+## Features
+
+- Syntax validation
+- Auto-indentation
+- Error detection
+- XPath testing
+
+## Common Uses
+
+- Config files
+- Data interchange
+- Web services
+- Document markup
+
+## XML Benefits
+
+- Human-readable
+- Structured data
+- Self-describing
+- Platform independent`,
+      relatedTools: ["json-editor", "html-editor", "code-formatter"]
+    }
+  },
+  {
+    id: "qr-code-wifi",
+    title: "QR Code Generator (WiFi)",
+    category: "QR Code Tools" as ToolCategory,
+    tags: ["qr", "wifi", "generator", "network"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "WiFi QR Code Generator - Create WiFi QR Codes Free",
+    metaDescription: "Generate QR codes for WiFi networks. Free tool to create scannable WiFi QR codes instantly.",
+    description: "Generate QR codes for WiFi network access",
+    icon: "qr-code",
+    howTo: [
+      "Enter WiFi SSID",
+      "Add password",
+      "Select security type",
+      "Generate & download QR"
+    ],
+    article: {
+      title: "WiFi QR Code Generator",
+      content: `Create QR codes for easy WiFi sharing without typing passwords.
+
+## Information Needed
+
+- Network name (SSID)
+- Password
+- Security type (WPA/WEP)
+- Hidden network option
+
+## Benefits
+
+- Easy guest access
+- No typing needed
+- Secure sharing
+- Quick connection
+
+## Uses
+
+- Home networks
+- Guest WiFi
+- Business networks
+- Public spaces`,
+      relatedTools: ["qr-generator-vcard", "qr-generator-url", "wifi-tools"]
+    }
+  },
+  {
+    id: "qr-code-vcard",
+    title: "QR Code Generator (vCard)",
+    category: "QR Code Tools" as ToolCategory,
+    tags: ["qr", "vcard", "contact", "generator"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "vCard QR Code Generator - Create Contact QR Codes Free",
+    metaDescription: "Generate vCard QR codes for easy contact sharing. Free tool to create scannable business card QR codes.",
+    description: "Generate QR codes for contact information (vCard)",
+    icon: "qr-code",
+    howTo: [
+      "Enter contact details",
+      "Add optional info",
+      "Generate QR code",
+      "Download or print"
+    ],
+    article: {
+      title: "vCard QR Code Generator",
+      content: `Share contact information instantly with vCard QR codes.
+
+## Contact Fields
+
+- Name
+- Phone
+- Email
+- Website
+- Address
+
+## Uses
+
+- Business cards
+- Networking
+- Events
+- Marketing
+
+## Benefits
+
+- Instant sharing
+- No manual entry
+- Error-free contacts
+- Professional`,
+      relatedTools: ["qr-generator-email", "qr-generator-phone", "digital-business-card"]
+    }
+  },
+  {
+    id: "qr-code-email",
+    title: "QR Code Generator (Email)",
+    category: "QR Code Tools" as ToolCategory,
+    tags: ["qr", "email", "generator", "contact"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Email QR Code Generator - Create Email QR Codes Free",
+    metaDescription: "Generate QR codes for email addresses. Free tool to create scannable email QR codes with subject and message.",
+    description: "Generate QR codes that open email composer",
+    icon: "qr-code",
+    howTo: [
+      "Enter email address",
+      "Add subject (optional)",
+      "Add message (optional)",
+      "Generate QR code"
+    ],
+    article: {
+      title: "Email QR Code Generator",
+      content: `Create QR codes that launch email composition with pre-filled information.
+
+## QR Code Contents
+
+- Email address
+- Subject line
+- Pre-filled message
+- Auto-open email app
+
+## Use Cases
+
+- Customer support
+- Feedback forms
+- Contact pages
+- Marketing
+
+## Benefits
+
+- Quick contact
+- Pre-filled forms
+- Reduced errors
+- Better response rates`,
+      relatedTools: ["qr-generator-vcard", "qr-generator-phone", "email-tools"]
+    }
+  },
+  {
+    id: "qr-code-phone",
+    title: "QR Code Generator (Phone)",
+    category: "QR Code Tools" as ToolCategory,
+    tags: ["qr", "phone", "call", "generator"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Phone QR Code Generator - Create Call QR Codes Free",
+    metaDescription: "Generate QR codes for phone numbers. Free tool to create scannable phone call QR codes.",
+    description: "Generate QR codes for phone numbers",
+    icon: "qr-code",
+    howTo: [
+      "Enter phone number",
+      "Include country code",
+      "Generate QR code",
+      "Download or share"
+    ],
+    article: {
+      title: "Phone Number QR Code",
+      content: `Create QR codes that initiate phone calls with a single scan.
+
+## Features
+
+- Direct dial QR
+- Country codes
+- Instant calling
+- Error-free numbers
+
+## Uses
+
+- Business cards
+- Advertisements
+- Support contacts
+- Emergency numbers
+
+## Benefits
+
+- No manual dialing
+- Quick contact
+- Reduced errors
+- Professional`,
+      relatedTools: ["qr-generator-vcard", "qr-generator-email", "qr-generator-sms"]
+    }
+  },
+  {
+    id: "qr-code-event",
+    title: "QR Code Generator (Event)",
+    category: "QR Code Tools" as ToolCategory,
+    tags: ["qr", "event", "calendar", "generator"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Event QR Code Generator - Create Calendar Event QR Codes",
+    metaDescription: "Generate QR codes for calendar events. Free tool to create event QR codes with date, time, and location.",
+    description: "Generate QR codes for calendar events",
+    icon: "qr-code",
+    howTo: [
+      "Enter event details",
+      "Set date and time",
+      "Add location",
+      "Generate QR code"
+    ],
+    article: {
+      title: "Calendar Event QR Codes",
+      content: `Share event details with QR codes that add events to calendars automatically.
+
+## Event Information
+
+- Event title
+- Date and time
+- Location
+- Description
+
+## Uses
+
+- Conference badges
+- Event posters
+- Invitations
+- Tickets
+
+## Benefits
+
+- Auto-calendar add
+- No manual entry
+- Time zone handling
+- Reminders enabled`,
+      relatedTools: ["qr-generator-url", "event-planner", "calendar-tools"]
+    }
+  },
+  {
+    id: "image-to-css-art",
+    title: "Image to CSS Art",
+    category: "CSS Generators" as ToolCategory,
+    tags: ["image", "css", "art", "generator"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image to CSS Art Converter - Convert Images to Pure CSS",
+    metaDescription: "Convert images to pure CSS art. Free tool to transform pictures into CSS box-shadow art.",
+    description: "Convert images to CSS art using box-shadows",
+    icon: "image",
+    howTo: [
+      "Upload image",
+      "Adjust resolution",
+      "Generate CSS",
+      "Copy code"
+    ],
+    article: {
+      title: "CSS Art from Images",
+      content: `Transform images into pure CSS art using box-shadow techniques.
+
+## How It Works
+
+- Pixel analysis
+- Box-shadow generation
+- Color extraction
+- Pure CSS output
+
+## Use Cases
+
+- Creative coding
+- CSS challenges
+- Unique designs
+- Learning CSS
+
+## Limitations
+
+- File size
+- Performance
+- Browser support
+- Complexity`,
+      relatedTools: ["css-generators", "image-tools", "design-tools"]
+    }
+  },
+  {
+    id: "image-to-data-uri",
+    title: "Image to Data URI",
+    category: "Data Format Conversion" as ToolCategory,
+    tags: ["image", "data-uri", "base64", "converter"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image to Data URI Converter - Convert Images to Base64",
+    metaDescription: "Convert images to Data URIs for inline HTML/CSS use. Free tool to create base64 encoded images.",
+    description: "Convert images to Data URI for inline embedding",
+    icon: "image-plus",
+    howTo: [
+      "Upload image file",
+      "Generate Data URI",
+      "Copy base64 string",
+      "Use in HTML/CSS"
+    ],
+    article: {
+      title: "Image to Data URI Converter",
+      content: `Convert images to Data URIs for embedding directly in HTML and CSS.
+
+## Benefits
+
+- No HTTP requests
+- Faster loading
+- Self-contained code
+- No external files
+
+## Use Cases
+
+- Email templates
+- Offline apps
+- SVG embedding
+- CSS backgrounds
+
+## Considerations
+
+- Larger file size
+- Browser caching
+- Code readability
+- Maintenance`,
+      relatedTools: ["base64-encoder", "image-optimizer", "svg-tools"]
+    }
+  },
+  {
+    id: "css-triangle-generator",
+    title: "CSS Triangle Generator",
+    category: "CSS Generators" as ToolCategory,
+    tags: ["css", "triangle", "generator", "shape"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSS Triangle Generator - Create CSS Triangles Online",
+    metaDescription: "Generate CSS triangles with custom colors and sizes. Free tool to create pure CSS triangle shapes.",
+    description: "Generate CSS code for triangle shapes",
+    icon: "triangle",
+    howTo: [
+      "Select direction",
+      "Choose color",
+      "Set size",
+      "Copy CSS code"
+    ],
+    article: {
+      title: "CSS Triangle Generator",
+      content: `Create pure CSS triangles for tooltips, arrows, and design elements.
+
+## Triangle Types
+
+- Up/Down
+- Left/Right
+- Isosceles
+- Equilateral
+
+## Uses
+
+- Tooltips
+- Arrows
+- Breadcrumbs
+- Design accents
+
+## Benefits
+
+- No images needed
+- Scalable
+- Easy to customize
+- Lightweight`,
+      relatedTools: ["css-button-generator", "css-shape-generator", "css-tools"]
+    }
+  },
+  {
+    id: "css-button-generator",
+    title: "CSS Button Generator",
+    category: "CSS Generators" as ToolCategory,
+    tags: ["css", "button", "generator", "design"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSS Button Generator - Create Beautiful Buttons Online",
+    metaDescription: "Generate custom CSS buttons with gradients, shadows, and hover effects. Free button design tool.",
+    description: "Generate custom CSS button styles",
+    icon: "square",
+    howTo: [
+      "Customize appearance",
+      "Add hover effects",
+      "Preview button",
+      "Copy CSS code"
+    ],
+    article: {
+      title: "CSS Button Generator",
+      content: `Design beautiful, customizable buttons with pure CSS.
+
+## Customization Options
+
+- Colors
+- Gradients
+- Shadows
+- Borders
+- Hover effects
+
+## Features
+
+- Live preview
+- Copy-ready code
+- Responsive design
+- Cross-browser
+
+## Button Styles
+
+- Flat
+- 3D
+- Outline
+- Gradient`,
+      relatedTools: ["css-form-generator", "css-gradient", "design-tools"]
+    }
+  },
+  {
+    id: "css-form-generator",
+    title: "CSS Form Generator",
+    category: "CSS Generators" as ToolCategory,
+    tags: ["css", "form", "generator", "design"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSS Form Generator - Create Styled Forms Online",
+    metaDescription: "Generate beautiful CSS forms with custom styling. Free tool to create professional form designs.",
+    description: "Generate styled form elements with CSS",
+    icon: "form-input",
+    howTo: [
+      "Select form elements",
+      "Customize styles",
+      "Preview form",
+      "Copy HTML/CSS"
+    ],
+    article: {
+      title: "CSS Form Generator",
+      content: `Create beautifully styled forms with custom CSS.
+
+## Form Elements
+
+- Text inputs
+- Select dropdowns
+- Checkboxes
+- Radio buttons
+- Textareas
+
+## Styling Options
+
+- Colors
+- Borders
+- Shadows
+- Focus states
+- Validation styles
+
+## Benefits
+
+- Professional design
+- Consistent styling
+- Accessibility
+- Copy-ready code`,
+      relatedTools: ["css-button-generator", "html-form-generator", "design-tools"]
+    }
+  },
+  {
+    id: "css-loader-generator",
+    title: "CSS Loader Generator",
+    category: "CSS Generators" as ToolCategory,
+    tags: ["css", "loader", "spinner", "animation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSS Loader Generator - Create Loading Spinners Online",
+    metaDescription: "Generate CSS loading spinners and animations. Free tool to create pure CSS loaders and spinners.",
+    description: "Generate CSS loading animations and spinners",
+    icon: "loader",
+    howTo: [
+      "Choose loader style",
+      "Customize colors",
+      "Adjust speed",
+      "Copy CSS code"
+    ],
+    article: {
+      title: "CSS Loader Generator",
+      content: `Create engaging loading animations with pure CSS.
+
+## Loader Types
+
+- Spinners
+- Dots
+- Bars
+- Pulse
+- Custom shapes
+
+## Customization
+
+- Colors
+- Size
+- Speed
+- Animation style
+
+## Benefits
+
+- No images
+- Lightweight
+- Customizable
+- Cross-browser`,
+      relatedTools: ["css-animation", "loading-tools", "css-generators"]
+    }
+  },
+  {
+    id: "css-animated-background",
+    title: "CSS Animated Background",
+    category: "CSS Generators" as ToolCategory,
+    tags: ["css", "background", "animation", "gradient"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSS Animated Background Generator - Create Moving Backgrounds",
+    metaDescription: "Generate CSS animated backgrounds and gradients. Free tool to create beautiful moving background effects.",
+    description: "Generate animated CSS backgrounds",
+    icon: "layers",
+    howTo: [
+      "Choose animation type",
+      "Select colors",
+      "Adjust speed",
+      "Copy CSS code"
+    ],
+    article: {
+      title: "CSS Animated Backgrounds",
+      content: `Create stunning animated backgrounds with pure CSS.
+
+## Animation Types
+
+- Gradient shifts
+- Particle effects
+- Wave animations
+- Geometric patterns
+
+## Customization
+
+- Colors
+- Speed
+- Direction
+- Complexity
+
+## Uses
+
+- Hero sections
+- Landing pages
+- Backgrounds
+- Creative effects`,
+      relatedTools: ["css-gradient", "animation-tools", "background-generator"]
+    }
+  },
+  {
+    id: "html-table-generator",
+    title: "HTML Table Generator",
+    category: "Content Generators" as ToolCategory,
+    tags: ["html", "table", "generator", "data"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HTML Table Generator - Create HTML Tables Online",
+    metaDescription: "Generate HTML tables with custom rows and columns. Free tool to create responsive HTML tables.",
+    description: "Generate HTML tables with custom styling",
+    icon: "table",
+    howTo: [
+      "Set rows and columns",
+      "Add content",
+      "Style table",
+      "Copy HTML code"
+    ],
+    article: {
+      title: "HTML Table Generator",
+      content: `Create HTML tables quickly with our visual table builder.
+
+## Features
+
+- Custom dimensions
+- Styling options
+- Responsive design
+- Merge cells
+
+## Uses
+
+- Data display
+- Pricing tables
+- Comparison charts
+- Documentation
+
+## Benefits
+
+- Visual editor
+- Clean code
+- Mobile-friendly
+- Copy-ready`,
+      relatedTools: ["html-list-generator", "markdown-table", "data-tools"]
+    }
+  },
+  {
+    id: "html-list-generator",
+    title: "HTML List Generator",
+    category: "Content Generators" as ToolCategory,
+    tags: ["html", "list", "generator", "ul", "ol"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HTML List Generator - Create Ordered and Unordered Lists",
+    metaDescription: "Generate HTML lists (ul/ol) online. Free tool to create formatted HTML lists with custom styling.",
+    description: "Generate HTML ordered and unordered lists",
+    icon: "list",
+    howTo: [
+      "Choose list type",
+      "Add list items",
+      "Customize style",
+      "Copy HTML"
+    ],
+    article: {
+      title: "HTML List Generator",
+      content: `Create HTML lists with proper structure and styling.
+
+## List Types
+
+- Ordered (ol)
+- Unordered (ul)
+- Nested lists
+- Description lists
+
+## Styling
+
+- Custom bullets
+- Numbering styles
+- Spacing
+- Colors
+
+## Uses
+
+- Content organization
+- Navigation menus
+- Feature lists
+- Documentation`,
+      relatedTools: ["html-table-generator", "markdown-converter", "content-tools"]
+    }
+  },
+  {
+    id: "html-symbol-codes",
+    title: "HTML Symbol Codes",
+    category: "Web Tools" as ToolCategory,
+    tags: ["html", "symbols", "entities", "characters"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HTML Symbol Codes - HTML Entity Reference Guide",
+    metaDescription: "Browse and copy HTML symbol codes and entities. Complete reference guide for HTML special characters.",
+    description: "Browse and copy HTML entity codes and symbols",
+    icon: "code",
+    howTo: [
+      "Browse symbols",
+      "Click to copy",
+      "Paste in HTML",
+      "Use in your code"
+    ],
+    article: {
+      title: "HTML Symbol Reference",
+      content: `Quick reference for HTML entity codes and special characters.
+
+## Symbol Categories
+
+- Mathematical
+- Currency
+- Arrows
+- Greek letters
+- Punctuation
+
+## Common Entities
+
+- &amp; (&amp;)
+- &lt; (&lt;)
+- &gt; (&gt;)
+- &copy; (&copy;)
+
+## Uses
+
+- Special characters
+- Math equations
+- Proper typography
+- International text`,
+      relatedTools: ["emoji-list", "unicode-converter", "character-map"]
+    }
+  },
+  {
+    id: "emoji-list",
+    title: "Emoji List",
+    category: "Text Tools" as ToolCategory,
+    tags: ["emoji", "symbols", "icons", "unicode"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Emoji List - Browse and Copy All Emojis",
+    metaDescription: "Browse complete emoji list and copy to clipboard. Free tool to find and use emojis easily.",
+    description: "Browse and copy emojis from complete list",
+    icon: "smile",
+    howTo: [
+      "Browse emoji categories",
+      "Click to copy emoji",
+      "Paste anywhere",
+      "Search by keyword"
+    ],
+    article: {
+      title: "Complete Emoji Reference",
+      content: `Find and copy any emoji from our comprehensive emoji library.
+
+## Emoji Categories
+
+- Smileys & People
+- Animals & Nature
+- Food & Drink
+- Activities
+- Travel & Places
+- Objects
+- Symbols
+
+## Features
+
+- Click to copy
+- Search function
+- Categories
+- Unicode codes
+
+## Uses
+
+- Social media
+- Messaging
+- Documentation
+- Creative content`,
+      relatedTools: ["html-symbols", "unicode-tools", "text-formatter"]
+    }
+  },
+  {
+    id: "htaccess-generator",
+    title: "htaccess Generator",
+    category: "Web Tools" as ToolCategory,
+    tags: ["htaccess", "apache", "generator", "redirect"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "htaccess Generator - Create Apache .htaccess Files Online",
+    metaDescription: "Generate .htaccess files for Apache servers. Free tool to create redirects, rewrites, and security rules.",
+    description: "Generate .htaccess files for Apache configuration",
+    icon: "file-code",
+    howTo: [
+      "Select rule type",
+      "Configure settings",
+      "Generate htaccess",
+      "Upload to server"
+    ],
+    article: {
+      title: ".htaccess File Generator",
+      content: `Create Apache .htaccess files for server configuration and redirects.
+
+## Common Rules
+
+- URL redirects
+- Custom error pages
+- Cache control
+- Security headers
+
+## Features
+
+- Redirect generator
+- Rewrite rules
+- Security settings
+- Performance options
+
+## Use Cases
+
+- SEO redirects
+- HTTPS forcing
+- WWW redirects
+- Access control`,
+      relatedTools: ["redirect-generator", "nginx-config", "server-tools"]
+    }
+  },
+  {
+    id: "htpasswd-generator",
+    title: "htpasswd Generator",
+    category: "Security" as ToolCategory,
+    tags: ["htpasswd", "password", "apache", "authentication"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "htpasswd Generator - Create Apache Password Files Online",
+    metaDescription: "Generate .htpasswd files for Apache authentication. Free tool to create password-protected directories.",
+    description: "Generate .htpasswd files for Apache authentication",
+    icon: "lock",
+    howTo: [
+      "Enter username",
+      "Enter password",
+      "Select encryption",
+      "Generate htpasswd"
+    ],
+    article: {
+      title: ".htpasswd File Generator",
+      content: `Create password-protected directories with Apache .htpasswd files.
+
+## Encryption Types
+
+- bcrypt
+- MD5
+- SHA
+- Crypt
+
+## Use Cases
+
+- Directory protection
+- Staging sites
+- Admin areas
+- Private content
+
+## Security
+
+- Strong passwords
+- HTTPS recommended
+- Regular updates
+- Access logging`,
+      relatedTools: ["htaccess-generator", "password-generator", "security-tools"]
+    }
+  },
+  {
+    id: "cron-job-generator",
+    title: "Cron Job Generator",
+    category: "Web Tools" as ToolCategory,
+    tags: ["cron", "job", "scheduler", "linux"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Cron Job Generator - Create Cron Expressions Online",
+    metaDescription: "Generate cron job expressions for task scheduling. Free tool to create crontab syntax easily.",
+    description: "Generate cron expressions for scheduled tasks",
+    icon: "clock",
+    howTo: [
+      "Set schedule",
+      "Choose frequency",
+      "Generate expression",
+      "Add to crontab"
+    ],
+    article: {
+      title: "Cron Expression Generator",
+      content: `Create cron job expressions for automated task scheduling on Linux/Unix systems.
+
+## Schedule Options
+
+- Minutes
+- Hours
+- Days
+- Months
+- Weekdays
+
+## Common Patterns
+
+- Every minute
+- Daily at midnight
+- Weekly on Monday
+- Monthly on 1st
+
+## Uses
+
+- Backups
+- Reports
+- Cleanup scripts
+- Data sync`,
+      relatedTools: ["task-scheduler", "automation-tools", "server-tools"]
+    }
+  },
+  {
+    id: "subnet-calculator",
+    title: "Subnet Calculator",
+    category: "Domain & Network Tools" as ToolCategory,
+    tags: ["subnet", "calculator", "ip", "network"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Subnet Calculator - Calculate IP Subnets and CIDR Online",
+    metaDescription: "Calculate IP subnets and CIDR notation. Free tool for network administrators and IT professionals.",
+    description: "Calculate IP subnets and network information",
+    icon: "network",
+    howTo: [
+      "Enter IP address",
+      "Enter subnet mask",
+      "Calculate subnet",
+      "View network info"
+    ],
+    article: {
+      title: "IP Subnet Calculator",
+      content: `Calculate subnet information for network planning and administration.
+
+## Calculated Info
+
+- Network address
+- Broadcast address
+- Usable host range
+- CIDR notation
+
+## Uses
+
+- Network planning
+- IP allocation
+- Subnetting
+- Network design
+
+## Features
+
+- CIDR support
+- IPv4/IPv6
+- Wildcard masks
+- Binary conversion`,
+      relatedTools: ["ip-calculator", "network-tools", "cidr-calculator"]
+    }
+  },
+  {
+    id: "gzip-compression-checker",
+    title: "GZIP Compression Checker",
+    category: "Web Tools" as ToolCategory,
+    tags: ["gzip", "compression", "checker", "website"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "GZIP Compression Checker - Test Website Compression",
+    metaDescription: "Check if GZIP compression is enabled on websites. Free tool to verify server compression settings.",
+    description: "Check if GZIP compression is enabled on websites",
+    icon: "package",
+    howTo: [
+      "Enter website URL",
+      "Click 'Check'",
+      "View compression status",
+      "See size reduction"
+    ],
+    article: {
+      title: "GZIP Compression Checker",
+      content: `Verify GZIP compression is enabled for faster website loading.
+
+## Why GZIP Matters
+
+- Faster loading
+- Reduced bandwidth
+- Better SEO
+- Improved UX
+
+## Compression Benefits
+
+- 70-90% size reduction
+- Lower hosting costs
+- Mobile-friendly
+- Search ranking factor
+
+## How to Enable
+
+- Apache: mod_deflate
+- Nginx: gzip on
+- CloudFlare
+- CDN settings`,
+      relatedTools: ["website-speed-test", "seo-checker", "performance-tools"]
+    }
+  },
+  {
+    id: "email-obfuscator",
+    title: "Email Obfuscator",
+    category: "Security" as ToolCategory,
+    tags: ["email", "obfuscator", "spam", "protection"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Email Obfuscator - Protect Email from Spam Bots",
+    metaDescription: "Obfuscate email addresses to prevent spam. Free tool to encode emails for website protection.",
+    description: "Obfuscate email addresses to prevent spam harvesting",
+    icon: "shield",
+    howTo: [
+      "Enter email address",
+      "Choose method",
+      "Generate code",
+      "Add to website"
+    ],
+    article: {
+      title: "Email Address Obfuscation",
+      content: `Protect email addresses from spam bots while keeping them accessible to humans.
+
+## Obfuscation Methods
+
+- HTML entities
+- JavaScript encoding
+- CSS direction
+- ROT13
+
+## Benefits
+
+- Spam prevention
+- Visible to humans
+- Search engine friendly
+- Easy implementation
+
+## Best Practices
+
+- Use contact forms
+- CAPTCHA protection
+- Multiple methods
+- Regular updates`,
+      relatedTools: ["spam-filter", "contact-form-generator", "security-tools"]
+    }
+  },
+  {
+    id: "port-scanner",
+    title: "Port Scanner",
+    category: "Domain & Network Tools" as ToolCategory,
+    tags: ["port", "scanner", "network", "security"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Port Scanner - Check Open Ports Online Free",
+    metaDescription: "Scan for open ports on servers and networks. Free port scanner tool for network security analysis.",
+    description: "Scan for open ports on servers and networks",
+    icon: "scan",
+    howTo: [
+      "Enter IP or domain",
+      "Select port range",
+      "Start scan",
+      "View open ports"
+    ],
+    article: {
+      title: "Network Port Scanner",
+      content: `Scan networks for open ports to assess security and connectivity.
+
+## Common Ports
+
+- 21: FTP
+- 22: SSH
+- 80: HTTP
+- 443: HTTPS
+- 3306: MySQL
+
+## Security Uses
+
+- Vulnerability assessment
+- Network mapping
+- Firewall testing
+- Service discovery
+
+## Important Note
+
+Only scan networks you own or have permission to test.`,
+      relatedTools: ["ping-tool", "traceroute", "network-analyzer"]
+    }
+  },
+  {
+    id: "split-pdf-by-qr-code",
+    title: "Split PDF by QR Code",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["split", "qr", "code", "scan"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Split PDF by QR Code - Divide PDF at QR Code Markers",
+    metaDescription: "Split PDF files at QR code locations. Free tool to divide PDFs using QR code markers automatically.",
+    description: "Automatically split PDF at QR code locations",
+    icon: "qr-code",
+    howTo: [
+      "Upload PDF file",
+      "Scan for QR codes",
+      "Auto-split at markers",
+      "Download split files"
+    ],
+    article: {
+      title: "Split PDF by QR Codes",
+      content: `Automatically divide PDF documents at QR code marker locations.
+
+## Use Cases
+
+- Document processing
+- Batch scanning
+- Automated workflows
+- Form separation
+
+## Features
+
+- QR code detection
+- Auto-splitting
+- Batch processing
+- Marker recognition`,
+      relatedTools: ["split-pdf-by-barcode", "qr-scanner", "pdf-splitter"]
+    }
+  },
+  {
+    id: "split-pdf-by-barcode",
+    title: "Split PDF by Barcode",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["split", "barcode", "scan", "divide"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Split PDF by Barcode - Divide PDF at Barcode Markers",
+    metaDescription: "Split PDF files at barcode locations. Free tool to divide PDFs using barcode markers automatically.",
+    description: "Automatically split PDF at barcode locations",
+    icon: "scan",
+    howTo: [
+      "Upload PDF file",
+      "Detect barcodes",
+      "Auto-split documents",
+      "Download results"
+    ],
+    article: {
+      title: "Split PDF by Barcodes",
+      content: `Divide PDF documents automatically at barcode marker positions.
+
+## Applications
+
+- Invoice processing
+- Document sorting
+- Batch scanning
+- Automated workflows
+
+## Barcode Types
+
+- Code 39
+- Code 128
+- QR codes
+- Data Matrix`,
+      relatedTools: ["split-pdf-by-qr-code", "barcode-scanner", "pdf-splitter"]
+    }
+  },
+  {
+    id: "add-qr-code-to-pdf",
+    title: "Add QR Code to PDF",
+    category: "Watermark & Stamp" as ToolCategory,
+    tags: ["qr", "code", "add", "stamp"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add QR Code to PDF - Insert QR Codes into PDF Documents",
+    metaDescription: "Add QR codes to PDF files online. Free tool to insert QR codes with custom data into PDF documents.",
+    description: "Add QR codes to PDF documents",
+    icon: "qr-code",
+    howTo: [
+      "Upload PDF file",
+      "Enter QR code data",
+      "Position QR code",
+      "Download PDF"
+    ],
+    article: {
+      title: "Add QR Codes to PDFs",
+      content: `Insert QR codes into PDF documents for tracking and linking.
+
+## QR Code Uses
+
+- Document tracking
+- URLs
+- Contact info
+- Product codes
+
+## Features
+
+- Custom positioning
+- Size adjustment
+- Data encoding
+- Batch processing`,
+      relatedTools: ["add-barcode-to-pdf", "qr-generator", "pdf-stamp"]
+    }
+  },
+  {
+    id: "add-barcode-to-pdf",
+    title: "Add Barcode to PDF",
+    category: "Watermark & Stamp" as ToolCategory,
+    tags: ["barcode", "add", "stamp", "code"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Barcode to PDF - Insert Barcodes into PDF Documents",
+    metaDescription: "Add barcodes to PDF files online. Free tool to insert barcodes with custom data into PDF documents.",
+    description: "Add barcodes to PDF documents",
+    icon: "scan",
+    howTo: [
+      "Upload PDF file",
+      "Choose barcode type",
+      "Enter barcode data",
+      "Download with barcode"
+    ],
+    article: {
+      title: "Add Barcodes to PDFs",
+      content: `Insert barcodes into PDF documents for tracking and identification.
+
+## Barcode Types
+
+- Code 39
+- Code 128
+- EAN-13
+- UPC
+
+## Applications
+
+- Inventory
+- Shipping labels
+- Product tracking
+- Document ID`,
+      relatedTools: ["add-qr-code-to-pdf", "barcode-generator", "pdf-stamp"]
+    }
+  },
+  {
+    id: "compress-and-merge-pdf",
+    title: "Compress and Merge PDF",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["compress", "merge", "combine", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress and Merge PDF - Combine and Optimize PDF Files",
+    metaDescription: "Merge and compress PDF files in one step. Free tool to combine and optimize PDFs simultaneously.",
+    description: "Merge PDF files while compressing them",
+    icon: "package",
+    howTo: [
+      "Upload PDF files",
+      "Arrange order",
+      "Merge and compress",
+      "Download optimized PDF"
+    ],
+    article: {
+      title: "Compress and Merge PDFs",
+      content: `Combine multiple PDFs into one while reducing file size.
+
+## Benefits
+
+- Smaller file size
+- Faster sharing
+- Combined documents
+- Optimized storage
+
+## Features
+
+- Batch merging
+- Auto-compression
+- Quality control
+- Preview`,
+      relatedTools: ["merge-pdf", "compress-pdf", "optimize-pdf"]
+    }
+  },
+  {
+    id: "split-and-compress-pdf",
+    title: "Split and Compress PDF",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["split", "compress", "divide", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Split and Compress PDF - Divide and Optimize PDF Files",
+    metaDescription: "Split and compress PDF files in one step. Free tool to divide and optimize PDFs simultaneously.",
+    description: "Split PDF while compressing pages",
+    icon: "scissors",
+    howTo: [
+      "Upload PDF file",
+      "Select split points",
+      "Split and compress",
+      "Download files"
+    ],
+    article: {
+      title: "Split and Compress PDFs",
+      content: `Divide PDF files while optimizing each resulting document.
+
+## Use Cases
+
+- Large file handling
+- Email sharing
+- Storage optimization
+- Batch processing
+
+## Features
+
+- Smart splitting
+- Auto-compression
+- Size reduction
+- Batch export`,
+      relatedTools: ["split-pdf", "compress-pdf", "optimize-pdf"]
+    }
+  },
+  {
+    id: "rotate-and-watermark-pdf",
+    title: "Rotate and Watermark PDF",
+    category: "Watermark & Stamp" as ToolCategory,
+    tags: ["rotate", "watermark", "stamp", "protect"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Rotate and Watermark PDF - Rotate Pages and Add Watermark",
+    metaDescription: "Rotate PDF pages and add watermarks. Free tool to adjust orientation and protect PDFs.",
+    description: "Rotate pages and add watermarks to PDF",
+    icon: "rotate-cw",
+    howTo: [
+      "Upload PDF file",
+      "Rotate pages",
+      "Add watermark",
+      "Download PDF"
+    ],
+    article: {
+      title: "Rotate and Watermark PDFs",
+      content: `Fix page orientation and add watermarks to protect your documents.
+
+## Features
+
+- Page rotation
+- Custom watermarks
+- Batch processing
+- Position control
+
+## Uses
+
+- Document correction
+- Copyright protection
+- Branding
+- Security`,
+      relatedTools: ["rotate-pdf", "watermark-pdf", "protect-pdf"]
+    }
+  },
+  {
+    id: "word-to-pdf-protect",
+    title: "Convert (Word) to PDF and Protect",
+    category: "Security" as ToolCategory,
+    tags: ["word", "convert", "protect", "password"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert Word to PDF and Protect - Secure PDF Creation",
+    metaDescription: "Convert Word documents to password-protected PDF. Free tool to create secure PDFs from Word files.",
+    description: "Convert Word documents to protected PDF",
+    icon: "lock",
+    howTo: [
+      "Upload Word file",
+      "Set password",
+      "Convert to PDF",
+      "Download protected PDF"
+    ],
+    article: {
+      title: "Convert and Protect Word to PDF",
+      content: `Create secure, password-protected PDFs from Word documents.
+
+## Security Features
+
+- Password protection
+- Encryption
+- Permission control
+- Secure conversion
+
+## Uses
+
+- Confidential docs
+- Client deliverables
+- Legal documents
+- Secure sharing`,
+      relatedTools: ["word-to-pdf", "protect-pdf", "encrypt-pdf"]
+    }
+  },
+  {
+    id: "extract-images-convert-jpg",
+    title: "Extract Images and Convert to JPG",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["extract", "images", "jpg", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Extract Images from PDF and Convert to JPG",
+    metaDescription: "Extract all images from PDF and convert to JPG format. Free tool to save PDF images as JPEG files.",
+    description: "Extract images from PDF and convert to JPG",
+    icon: "image",
+    howTo: [
+      "Upload PDF file",
+      "Extract images",
+      "Convert to JPG",
+      "Download images"
+    ],
+    article: {
+      title: "Extract and Convert PDF Images",
+      content: `Save all images from PDFs as JPG files for easy use.
+
+## Features
+
+- Batch extraction
+- JPG conversion
+- Quality control
+- Zip download
+
+## Uses
+
+- Image reuse
+- Content extraction
+- Design assets
+- Archiving`,
+      relatedTools: ["extract-images", "pdf-to-jpg", "image-extractor"]
+    }
+  },
+  {
+    id: "unlock-and-compress-pdf",
+    title: "Unlock and Compress PDF",
+    category: "Security" as ToolCategory,
+    tags: ["unlock", "compress", "decrypt", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Unlock and Compress PDF - Remove Password and Optimize",
+    metaDescription: "Remove password protection and compress PDF files. Free tool to unlock and optimize PDFs.",
+    description: "Remove password protection and compress PDF",
+    icon: "unlock",
+    howTo: [
+      "Upload protected PDF",
+      "Enter password",
+      "Unlock and compress",
+      "Download optimized PDF"
+    ],
+    article: {
+      title: "Unlock and Compress PDFs",
+      content: `Remove password protection while optimizing file size.
+
+## Features
+
+- Password removal
+- File compression
+- Quality preservation
+- Batch processing
+
+## Requirements
+
+- Owner password
+- Permission rights
+- Valid credentials`,
+      relatedTools: ["unlock-pdf", "compress-pdf", "decrypt-pdf"]
+    }
+  },
+  {
+    id: "ocr-and-compress-pdf",
+    title: "OCR and Compress PDF",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["ocr", "compress", "text", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "OCR and Compress PDF - Extract Text and Optimize Files",
+    metaDescription: "Perform OCR and compress PDF files. Free tool to make PDFs searchable and smaller.",
+    description: "Perform OCR text recognition and compress PDF",
+    icon: "scan-text",
+    howTo: [
+      "Upload scanned PDF",
+      "Run OCR",
+      "Compress file",
+      "Download searchable PDF"
+    ],
+    article: {
+      title: "OCR and Compress PDFs",
+      content: `Make scanned PDFs searchable while reducing file size.
+
+## Features
+
+- Text recognition
+- Multi-language OCR
+- File compression
+- Searchable output
+
+## Benefits
+
+- Searchable text
+- Smaller files
+- Better indexing
+- Easy editing`,
+      relatedTools: ["ocr-pdf", "compress-pdf", "searchable-pdf"]
+    }
+  },
+  {
+    id: "pdf-to-searchable-pdf",
+    title: "PDF to Searchable PDF",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["searchable", "ocr", "text", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Searchable PDF - Add OCR Text Layer",
+    metaDescription: "Convert scanned PDFs to searchable PDFs with OCR. Free tool to add text layer to image-based PDFs.",
+    description: "Convert image-based PDF to searchable PDF with OCR",
+    icon: "file-search",
+    howTo: [
+      "Upload scanned PDF",
+      "Select language",
+      "Run OCR",
+      "Download searchable PDF"
+    ],
+    article: {
+      title: "Create Searchable PDFs",
+      content: `Add text layer to scanned PDFs for searching and editing.
+
+## OCR Features
+
+- Multi-language support
+- High accuracy
+- Layout preservation
+- Font matching
+
+## Benefits
+
+- Text search
+- Copy/paste text
+- Screen readers
+- Indexing`,
+      relatedTools: ["ocr-pdf", "pdf-to-text", "scan-to-pdf"]
+    }
+  },
+  {
+    id: "add-signature-protect-pdf",
+    title: "Add Signature and Protect PDF",
+    category: "Security" as ToolCategory,
+    tags: ["signature", "protect", "sign", "secure"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Signature and Protect PDF - Sign and Secure Documents",
+    metaDescription: "Add digital signature and protect PDF files. Free tool to sign and secure PDF documents.",
+    description: "Add digital signature and password protection",
+    icon: "file-signature",
+    howTo: [
+      "Upload PDF file",
+      "Add signature",
+      "Set password",
+      "Download protected PDF"
+    ],
+    article: {
+      title: "Sign and Protect PDFs",
+      content: `Add your signature and secure PDFs with password protection.
+
+## Security Features
+
+- Digital signatures
+- Password protection
+- Encryption
+- Tamper prevention
+
+## Uses
+
+- Legal documents
+- Contracts
+- Official papers
+- Secure sharing`,
+      relatedTools: ["sign-pdf", "protect-pdf", "digital-signature"]
+    }
+  },
+  {
+    id: "fill-form-flatten-pdf",
+    title: "Fill Form and Flatten PDF",
+    category: "Forms" as ToolCategory,
+    tags: ["form", "fill", "flatten", "fields"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Fill Form and Flatten PDF - Complete and Lock PDF Forms",
+    metaDescription: "Fill PDF forms and flatten fields. Free tool to complete forms and prevent further editing.",
+    description: "Fill PDF form fields and flatten to prevent editing",
+    icon: "file-check",
+    howTo: [
+      "Upload PDF form",
+      "Fill in fields",
+      "Flatten PDF",
+      "Download final PDF"
+    ],
+    article: {
+      title: "Fill and Flatten PDF Forms",
+      content: `Complete PDF forms and lock them to prevent changes.
+
+## Features
+
+- Form filling
+- Field flattening
+- Data preservation
+- Final version creation
+
+## Uses
+
+- Application forms
+- Contracts
+- Surveys
+- Official documents`,
+      relatedTools: ["fill-pdf-form", "flatten-pdf", "form-editor"]
+    }
+  },
+  {
+    id: "create-pdf-invoice",
+    title: "Create PDF Invoice",
+    category: "Content Generators" as ToolCategory,
+    tags: ["invoice", "create", "generate", "billing"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Create PDF Invoice - Professional Invoice Generator",
+    metaDescription: "Create professional PDF invoices online. Free invoice generator with customizable templates.",
+    description: "Create professional PDF invoices from template",
+    icon: "receipt",
+    howTo: [
+      "Choose template",
+      "Enter invoice details",
+      "Customize design",
+      "Download PDF invoice"
+    ],
+    article: {
+      title: "PDF Invoice Creator",
+      content: `Generate professional invoices in PDF format quickly and easily.
+
+## Invoice Elements
+
+- Company details
+- Line items
+- Tax calculations
+- Payment terms
+
+## Features
+
+- Templates
+- Auto-calculations
+- Logo upload
+- Custom branding`,
+      relatedTools: ["invoice-generator", "receipt-maker", "billing-tools"]
+    }
+  },
+  {
+    id: "pdf-invoice-generator",
+    title: "PDF Invoice Generator",
+    category: "Content Generators" as ToolCategory,
+    tags: ["invoice", "generator", "billing", "template"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Invoice Generator - Create Invoices from Templates",
+    metaDescription: "Generate PDF invoices from customizable templates. Free professional invoice maker.",
+    description: "Generate invoices using customizable templates",
+    icon: "file-text",
+    howTo: [
+      "Select template",
+      "Add client info",
+      "List items",
+      "Generate PDF"
+    ],
+    article: {
+      title: "Invoice Generation Tool",
+      content: `Create professional invoices with pre-designed templates.
+
+## Template Features
+
+- Professional layouts
+- Auto-calculations
+- Tax handling
+- Multiple currencies
+
+## Customization
+
+- Logo addition
+- Color schemes
+- Font choices
+- Terms & conditions`,
+      relatedTools: ["create-invoice", "receipt-generator", "quotation-maker"]
+    }
+  },
+  {
+    id: "merge-pdf-add-page-numbers",
+    title: "Merge PDF and Add Page Numbers",
+    category: "Merge & Combine" as ToolCategory,
+    tags: ["merge", "page-numbers", "combine", "numbering"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Merge PDF and Add Page Numbers - Combine with Numbering",
+    metaDescription: "Merge PDFs and add sequential page numbers. Free tool to combine PDFs with automatic numbering.",
+    description: "Merge PDFs and add sequential page numbers",
+    icon: "hash",
+    howTo: [
+      "Upload PDF files",
+      "Arrange order",
+      "Merge files",
+      "Auto-add page numbers"
+    ],
+    article: {
+      title: "Merge and Number PDFs",
+      content: `Combine multiple PDFs with automatic page numbering.
+
+## Features
+
+- Sequential numbering
+- Custom formats
+- Position control
+- Font customization
+
+## Uses
+
+- Document compilation
+- Reports
+- Manuals
+- Presentations`,
+      relatedTools: ["merge-pdf", "add-page-numbers", "combine-pdf"]
+    }
+  },
+  {
+    id: "pdf-redact-find-redact",
+    title: "PDF Redact (Find and Redact)",
+    category: "Security" as ToolCategory,
+    tags: ["redact", "find", "remove", "sensitive"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Redact - Find and Remove Sensitive Information",
+    metaDescription: "Find and redact sensitive information in PDFs. Free tool to permanently remove confidential data.",
+    description: "Search and redact sensitive information in PDFs",
+    icon: "search",
+    howTo: [
+      "Upload PDF file",
+      "Search for text",
+      "Select matches",
+      "Apply redactions"
+    ],
+    article: {
+      title: "Find and Redact PDF Content",
+      content: `Automatically find and permanently remove sensitive information.
+
+## Redaction Features
+
+- Text search
+- Pattern matching
+- Permanent removal
+- Visual confirmation
+
+## Use Cases
+
+- Privacy compliance
+- GDPR
+- Legal documents
+- Confidential data`,
+      relatedTools: ["pdf-redact-area", "pdf-redact-pattern", "sanitize-pdf"]
+    }
+  },
+  {
+    id: "pdf-redact-area",
+    title: "PDF Redact (Area)",
+    category: "Security" as ToolCategory,
+    tags: ["redact", "area", "block", "remove"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Redact Area - Block Out Sensitive Regions",
+    metaDescription: "Redact specific areas in PDF documents. Free tool to permanently block out regions in PDFs.",
+    description: "Redact specific areas and regions in PDFs",
+    icon: "square",
+    howTo: [
+      "Upload PDF file",
+      "Draw redaction areas",
+      "Apply redactions",
+      "Download redacted PDF"
+    ],
+    article: {
+      title: "Area-Based PDF Redaction",
+      content: `Permanently remove content from specific areas of PDF pages.
+
+## Features
+
+- Visual selection
+- Rectangular areas
+- Permanent removal
+- Multi-page support
+
+## Uses
+
+- Privacy protection
+- Information hiding
+- Document sanitization
+- Compliance`,
+      relatedTools: ["pdf-redact-find", "pdf-redact-pattern", "remove-content"]
+    }
+  },
+  {
+    id: "pdf-redact-pattern",
+    title: "PDF Redaction (Pattern-based)",
+    category: "Security" as ToolCategory,
+    tags: ["redact", "pattern", "regex", "automatic"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Pattern-Based PDF Redaction - Auto-Redact with Patterns",
+    metaDescription: "Automatically redact content using patterns in PDFs. Free tool to find and remove data by pattern.",
+    description: "Automatically redact content using patterns and regex",
+    icon: "filter",
+    howTo: [
+      "Upload PDF file",
+      "Define patterns",
+      "Preview matches",
+      "Apply redactions"
+    ],
+    article: {
+      title: "Pattern-Based Redaction",
+      content: `Automatically find and redact content using patterns and regular expressions.
+
+## Pattern Types
+
+- SSN numbers
+- Credit cards
+- Email addresses
+- Phone numbers
+- Custom regex
+
+## Benefits
+
+- Automated process
+- Consistent results
+- Bulk redaction
+- Error reduction`,
+      relatedTools: ["pdf-redact-find", "pdf-redact-area", "auto-sanitize"]
+    }
+  },
+  {
+    id: "pdf-redact-metadata",
+    title: "PDF Redaction (Metadata)",
+    category: "Security" as ToolCategory,
+    tags: ["redact", "metadata", "properties", "remove"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Metadata Redaction - Remove Hidden Information",
+    metaDescription: "Remove metadata and hidden information from PDFs. Free tool to sanitize PDF properties.",
+    description: "Remove metadata and hidden information from PDFs",
+    icon: "eye-off",
+    howTo: [
+      "Upload PDF file",
+      "View metadata",
+      "Select items to remove",
+      "Download sanitized PDF"
+    ],
+    article: {
+      title: "PDF Metadata Removal",
+      content: `Remove hidden metadata and properties from PDF files.
+
+## Metadata Types
+
+- Author information
+- Creation date
+- Software used
+- Edit history
+- Comments
+
+## Privacy Benefits
+
+- Data privacy
+- Anonymous sharing
+- GDPR compliance
+- Security`,
+      relatedTools: ["remove-metadata", "sanitize-pdf", "pdf-properties"]
+    }
+  },
+  {
+    id: "pdf-attachment-adder",
+    title: "PDF Attachment Adder",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["attachment", "add", "embed", "files"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Attachment Adder - Embed Files in PDF Documents",
+    metaDescription: "Add file attachments to PDF documents. Free tool to embed files within PDF for easy sharing.",
+    description: "Add file attachments to PDF documents",
+    icon: "paperclip",
+    howTo: [
+      "Upload PDF file",
+      "Select files to attach",
+      "Embed attachments",
+      "Download PDF with files"
+    ],
+    article: {
+      title: "Add Attachments to PDFs",
+      content: `Embed files directly into PDF documents for comprehensive sharing.
+
+## Attachment Uses
+
+- Supporting documents
+- Source files
+- Related files
+- Archives
+
+## Benefits
+
+- All-in-one package
+- Easy distribution
+- File organization
+- Version control`,
+      relatedTools: ["pdf-attachment-remover", "embed-files", "combine-files"]
+    }
+  },
+  {
+    id: "pdf-attachment-remover",
+    title: "PDF Attachment Remover",
+    category: "Edit Pages" as ToolCategory,
+    tags: ["attachment", "remove", "extract", "files"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Attachment Remover - Extract Embedded Files from PDF",
+    metaDescription: "Remove or extract file attachments from PDFs. Free tool to manage embedded files in PDF documents.",
+    description: "Remove or extract file attachments from PDFs",
+    icon: "file-x-2",
+    howTo: [
+      "Upload PDF file",
+      "View attachments",
+      "Extract or remove",
+      "Download clean PDF"
+    ],
+    article: {
+      title: "Manage PDF Attachments",
+      content: `Extract or remove embedded files from PDF documents.
+
+## Features
+
+- List attachments
+- Extract files
+- Remove attachments
+- Batch processing
+
+## Uses
+
+- File extraction
+- PDF cleanup
+- Size reduction
+- Security`,
+      relatedTools: ["pdf-attachment-adder", "extract-files", "pdf-tools"]
+    }
+  },
+  {
+    id: "pdf-portfolio-extractor",
+    title: "PDF Portfolio Extractor",
+    category: "OCR & Extract" as ToolCategory,
+    tags: ["portfolio", "extract", "files", "unpack"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Portfolio Extractor - Extract Files from PDF Portfolios",
+    metaDescription: "Extract all files from PDF portfolios. Free tool to unpack PDF portfolio containers.",
+    description: "Extract all files from PDF portfolio containers",
+    icon: "archive",
+    howTo: [
+      "Upload PDF portfolio",
+      "Scan contents",
+      "Extract all files",
+      "Download as ZIP"
+    ],
+    article: {
+      title: "Extract PDF Portfolio Files",
+      content: `Unpack all files from PDF portfolio containers.
+
+## Portfolio Contents
+
+- Multiple PDFs
+- Documents
+- Images
+- Spreadsheets
+
+## Features
+
+- Bulk extraction
+- ZIP download
+- Folder structure
+- Metadata preservation`,
+      relatedTools: ["extract-attachments", "unzip-pdf", "file-extractor"]
+    }
+  },
 ] as const;
 
 export type NewTool = typeof newTools[number];

@@ -38,7 +38,7 @@ import {
   VolumeX, Volume1, Volume2, Timer, Music4, Redo,
   RefreshCw, FlipHorizontal, FlipVertical, GitBranch, Headphones, Settings2,
   Shrink, ArrowRightLeft, ArrowLeftRight,
-  Repeat2, Layers2, UserCircle,
+  Repeat2, Layers2, UserCircle, Monitor, Loader,
   type LucideIcon
 } from "lucide-react";
 
@@ -671,6 +671,135 @@ export const toolIcons: Record<string, LucideIcon> = {
   "mute-video": MicOff,
 
   // Default icon for any unmapped tools
+  // Validation Tools
+  "iban-validator": BadgeCheck,
+  
+  // Text Tools
+  "slug-to-title": Type,
+  "title-to-slug": Link,
+  "emoji-list": Type,
+  
+  // Text Formatting / Case Converters
+  "case-converter-camel": Code,
+  "case-converter-snake": Code,
+  "case-converter-kebab": Code,
+  "case-converter-pascal": Code,
+  
+  // Social Media Tools
+  "find-facebook-id": UserCircle,
+  "find-twitter-id": UserCircle,
+  
+  // Web Tools
+  "http-status-checker": Globe,
+  "html-symbol-codes": Code,
+  "htaccess-generator": FileCode2,
+  "cron-job-generator": Clock,
+  "gzip-compression-checker": Package,
+  "online-regex-tester": Search,
+  
+  // Browser Tools
+  "screen-resolution-detector": Monitor,
+  "browser-info-detector": Info,
+  
+  // Calculators
+  "dpi-calculator": Calculator,
+  "aspect-ratio-calculator": Square,
+  
+  // Unit Converters
+  "pixels-to-cm-converter": ArrowRightLeft,
+  "words-to-pages-converter": FileText,
+  
+  // Text Analysis
+  "reading-time-calculator": Clock,
+  
+  // Color Tools
+  "random-color-generator": Palette,
+  "random-palette-generator": Palette,
+  "color-blindness-simulator": Eye,
+  
+  // Security
+  "password-strength-checker": ShieldCheck,
+  "email-obfuscator": Shield,
+  "htpasswd-generator": Lock,
+  "unlock-and-compress-pdf": Unlock,
+  "word-to-pdf-protect": Lock,
+  "add-signature-protect-pdf": FileSignature,
+  "pdf-redact-find-redact": Search,
+  "pdf-redact-area": Square,
+  "pdf-redact-pattern": Filter,
+  "pdf-redact-metadata": EyeOff,
+  
+  // Design Tools
+  "font-identifier": Type,
+  
+  // Productivity Tools
+  "online-mind-map": Network,
+  "online-flowchart-maker": GitBranch,
+  "online-diagram-tool": Network,
+  "online-gantt-chart": CalendarClock,
+  "online-kanban-board": List,
+  "online-sticky-notes": StickyNote,
+  
+  // Editor Tools
+  "online-wysiwyg-editor": FileEdit,
+  "online-code-editor": Code,
+  "online-json-editor": FileJson,
+  "online-xml-editor": FileCode,
+  
+  // QR Code Tools
+  "qr-code-wifi": QrCode,
+  "qr-code-vcard": QrCode,
+  "qr-code-email": QrCode,
+  "qr-code-phone": QrCode,
+  "qr-code-event": QrCode,
+  
+  // CSS Generators
+  "image-to-css-art": Image,
+  "css-triangle-generator": Triangle,
+  "css-button-generator": Square,
+  "css-form-generator": FormInput,
+  "css-loader-generator": Loader,
+  "css-animated-background": Layers,
+  
+  // Data Format Conversion
+  "image-to-data-uri": ImagePlus,
+  
+  // Content Generators
+  "html-table-generator": Table,
+  "html-list-generator": List,
+  "create-pdf-invoice": Receipt,
+  "pdf-invoice-generator": FileText,
+  
+  // Domain & Network Tools
+  "subnet-calculator": Network,
+  "port-scanner": Scan,
+  
+  // PDF Tools - Edit Pages
+  "split-pdf-by-qr-code": QrCode,
+  "split-pdf-by-barcode": Scan,
+  "pdf-attachment-adder": Paperclip,
+  "pdf-attachment-remover": FileX2,
+  
+  // PDF Tools - Watermark & Stamp
+  "add-qr-code-to-pdf": QrCode,
+  "add-barcode-to-pdf": Scan,
+  "rotate-and-watermark-pdf": RotateCw,
+  
+  // PDF Tools - Compress & Optimize
+  "compress-and-merge-pdf": Package,
+  "split-and-compress-pdf": Package,
+  
+  // PDF Tools - OCR & Extract
+  "extract-images-convert-jpg": Image,
+  "ocr-and-compress-pdf": ScanLine,
+  "pdf-to-searchable-pdf": FileSearch,
+  "pdf-portfolio-extractor": Archive,
+  
+  // PDF Tools - Forms
+  "fill-form-flatten-pdf": FileCheck,
+  
+  // PDF Tools - Merge & Combine
+  "merge-pdf-add-page-numbers": Hash,
   default: FileText,
 };
 
