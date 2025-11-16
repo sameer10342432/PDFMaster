@@ -17,7 +17,12 @@ export const toolCategories = [
   "Comparison",
   "Standards & Compliance",
   "Accessibility",
-  "Print Production"
+  "Print Production",
+  "Image Compression",
+  "Image Resize & Crop",
+  "Image Conversion",
+  "Image Editing",
+  "GIF Tools"
 ] as const;
 
 export type ToolCategory = typeof toolCategories[number];
@@ -19558,6 +19563,2899 @@ Achieve consistent:
 - Press reliability
 - Client satisfaction`,
       relatedTools: ["pdf-to-pdf-x", "prepress-checker", "pdf-line-weight-editor"]
+    }
+  },
+  {
+    id: "pdf-to-rich-black-converter",
+    title: "PDF to Rich Black Converter",
+    category: "Print Production" as ToolCategory,
+    tags: ["rich black", "convert", "cmyk", "print"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Rich Black Converter Online - Convert Black to Rich Black Free",
+    metaDescription: "Convert standard black to rich black in PDF files online for free. Professional CMYK color conversion tool for print production. Fast and secure.",
+    description: "Convert standard black to rich black (CMYK) for professional printing",
+    icon: "palette",
+    howTo: [
+      "Upload your PDF file",
+      "Select rich black conversion settings (C:60 M:40 Y:40 K:100)",
+      "Click 'Convert to Rich Black' to process",
+      "Download your converted PDF with rich black colors"
+    ],
+    article: {
+      title: "Understanding Rich Black in PDF Printing",
+      content: `Rich black creates deeper, more professional black colors in print by combining all CMYK inks instead of using only black ink. Our converter helps you achieve superior print quality.
+
+## What is Rich Black?
+
+Rich black uses multiple CMYK inks (typically C:60 M:40 Y:40 K:100) to create a deeper, richer black than standard black (K:100 only). This is essential for professional print production.
+
+## Benefits of Rich Black
+
+- Deeper, more saturated black appearance
+- Better coverage on coated papers
+- More professional print quality
+- Consistent with industry standards
+
+## When to Use Rich Black
+
+Use rich black for large black areas, backgrounds, and professional brochures. Avoid it for small text to prevent registration issues.`,
+      relatedTools: ["pdf-color-space-converter-rgb-to-cmyk", "pdf-color-space-converter-cmyk-to-rgb"]
+    }
+  },
+  {
+    id: "pdf-font-embedder",
+    title: "PDF Font Embedder",
+    category: "Print Production" as ToolCategory,
+    tags: ["font", "embed", "typography", "compatibility"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Font Embedder Online - Embed Fonts in PDF Free",
+    metaDescription: "Embed fonts in PDF files online for free. Ensure font compatibility and preserve typography. Professional PDF font embedding tool.",
+    description: "Embed fonts in PDF documents to ensure perfect display everywhere",
+    icon: "type",
+    howTo: [
+      "Upload your PDF file",
+      "Review fonts that need embedding",
+      "Click 'Embed Fonts' to process",
+      "Download your PDF with embedded fonts"
+    ],
+    article: {
+      title: "Why You Should Embed Fonts in PDFs",
+      content: `Embedding fonts in PDFs ensures your documents display correctly on any device, even if the fonts aren't installed. This is crucial for professional document sharing.
+
+## Font Embedding Explained
+
+When fonts are embedded, the PDF file contains the actual font data, making it independent of the viewing system's installed fonts.
+
+## Benefits of Font Embedding
+
+- Consistent display across all devices
+- Preserve exact typography and layout
+- Professional document appearance
+- Print-ready files
+
+## When to Embed Fonts
+
+Always embed fonts for professional documents, print production, and any PDF that will be shared externally.`,
+      relatedTools: ["pdf-font-un-embedder", "pdf-to-pdf-a"]
+    }
+  },
+  {
+    id: "pdf-font-un-embedder",
+    title: "PDF Font Un-embedder",
+    category: "Compress & Optimize" as ToolCategory,
+    tags: ["font", "unembed", "reduce size", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Font Un-embedder Online - Remove Embedded Fonts Free",
+    metaDescription: "Remove embedded fonts from PDF files to reduce file size. Free online PDF font un-embedding tool. Optimize PDFs quickly.",
+    description: "Remove embedded fonts from PDFs to reduce file size",
+    icon: "minimize",
+    howTo: [
+      "Upload your PDF with embedded fonts",
+      "Select fonts to unembed",
+      "Click 'Remove Fonts' to process",
+      "Download your optimized PDF"
+    ],
+    article: {
+      title: "When to Remove Embedded Fonts from PDFs",
+      content: `Removing embedded fonts can significantly reduce PDF file size, making files easier to share and faster to load. However, this should only be done when appropriate.
+
+## Font Un-embedding Benefits
+
+- Smaller file sizes
+- Faster download and loading times
+- Reduced storage requirements
+- Better for internal documents
+
+## When It's Safe to Unembed
+
+Unembed fonts when the document will only be viewed on systems with those fonts installed, or when file size is more important than perfect typography.
+
+## Risks to Consider
+
+Un-embedding fonts may cause display issues on systems without those fonts. Always test on target systems first.`,
+      relatedTools: ["pdf-font-embedder", "compress-pdf"]
+    }
+  },
+  {
+    id: "pdf-color-space-converter-rgb-to-cmyk",
+    title: "PDF Color Space Converter (RGB to CMYK)",
+    category: "Print Production" as ToolCategory,
+    tags: ["color", "rgb", "cmyk", "convert", "print"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "RGB to CMYK PDF Converter Online - Convert Color Space Free",
+    metaDescription: "Convert PDF from RGB to CMYK color space online for free. Professional color conversion for print production. Fast and accurate.",
+    description: "Convert PDF color space from RGB to CMYK for professional printing",
+    icon: "droplet",
+    howTo: [
+      "Upload your RGB PDF file",
+      "Select CMYK color profile",
+      "Click 'Convert to CMYK' to process",
+      "Download your print-ready CMYK PDF"
+    ],
+    article: {
+      title: "RGB to CMYK Conversion for Print Production",
+      content: `Converting RGB PDFs to CMYK is essential for professional print production. Our tool ensures accurate color conversion for the best print results.
+
+## Understanding Color Spaces
+
+RGB (Red, Green, Blue) is used for screens, while CMYK (Cyan, Magenta, Yellow, Black) is the standard for printing. Professional printers require CMYK files.
+
+## Why Convert to CMYK
+
+- Match print industry standards
+- Prevent color shifts during printing
+- Get predictable print results
+- Professional-quality output
+
+## Color Conversion Best Practices
+
+Always convert to CMYK before sending to commercial printers. Review colors after conversion as some RGB colors cannot be exactly reproduced in CMYK.`,
+      relatedTools: ["pdf-color-space-converter-cmyk-to-rgb", "pdf-to-rich-black-converter"]
+    }
+  },
+  {
+    id: "pdf-color-space-converter-cmyk-to-rgb",
+    title: "PDF Color Space Converter (CMYK to RGB)",
+    category: "Convert" as ToolCategory,
+    tags: ["color", "cmyk", "rgb", "convert", "screen"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CMYK to RGB PDF Converter Online - Convert Color Space Free",
+    metaDescription: "Convert PDF from CMYK to RGB color space online for free. Optimize PDFs for screen display. Fast and accurate color conversion.",
+    description: "Convert PDF color space from CMYK to RGB for optimal screen display",
+    icon: "monitor",
+    howTo: [
+      "Upload your CMYK PDF file",
+      "Select RGB color profile",
+      "Click 'Convert to RGB' to process",
+      "Download your screen-optimized RGB PDF"
+    ],
+    article: {
+      title: "CMYK to RGB Conversion for Digital Display",
+      content: `Converting CMYK PDFs to RGB optimizes them for screen viewing and digital distribution. Our tool ensures accurate color conversion for the best on-screen results.
+
+## When to Convert to RGB
+
+Convert CMYK to RGB for:
+- Web publishing and online viewing
+- Digital presentations and slideshows
+- Email attachments and digital sharing
+- Screen-only display applications
+
+## RGB Benefits for Digital
+
+RGB files are optimized for screens, offer brighter colors, and typically have smaller file sizes than CMYK equivalents.
+
+## Conversion Accuracy
+
+Our tool uses industry-standard color profiles to ensure the most accurate CMYK to RGB conversion possible.`,
+      relatedTools: ["pdf-color-space-converter-rgb-to-cmyk", "pdf-color-space-converter-to-grayscale"]
+    }
+  },
+  {
+    id: "pdf-color-space-converter-to-grayscale",
+    title: "PDF Color Space Converter (to Grayscale)",
+    category: "Convert" as ToolCategory,
+    tags: ["grayscale", "black and white", "convert", "monochrome"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF to Grayscale Converter Online - Convert to Black and White Free",
+    metaDescription: "Convert color PDF to grayscale online for free. Create black and white PDFs instantly. Professional grayscale conversion tool.",
+    description: "Convert color PDFs to grayscale for black and white printing",
+    icon: "contrast",
+    howTo: [
+      "Upload your color PDF file",
+      "Select grayscale conversion options",
+      "Click 'Convert to Grayscale' to process",
+      "Download your black and white PDF"
+    ],
+    article: {
+      title: "Converting PDFs to Grayscale",
+      content: `Converting color PDFs to grayscale is useful for black and white printing, reducing file size, and creating professional monochrome documents.
+
+## Benefits of Grayscale Conversion
+
+- Reduced file sizes
+- Lower printing costs
+- Professional black and white appearance
+- Better for some document types
+
+## When to Use Grayscale
+
+Convert to grayscale for black and white printing, formal documents, and when color isn't necessary.
+
+## Quality Preservation
+
+Our tool maintains image quality while removing color information, ensuring crisp, clear grayscale output.`,
+      relatedTools: ["pdf-color-space-converter-rgb-to-cmyk", "compress-pdf"]
+    }
+  },
+  {
+    id: "pdf-spot-color-replacer",
+    title: "PDF Spot Color Replacer",
+    category: "Print Production" as ToolCategory,
+    tags: ["spot color", "pantone", "replace", "print"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PDF Spot Color Replacer Online - Replace Pantone Colors Free",
+    metaDescription: "Replace spot colors in PDF files online for free. Swap Pantone and special colors easily. Professional spot color management tool.",
+    description: "Replace spot colors (Pantone) in PDFs with process colors or other spots",
+    icon: "palette",
+    howTo: [
+      "Upload your PDF with spot colors",
+      "Identify spot colors to replace",
+      "Select replacement colors (CMYK or other spots)",
+      "Download your PDF with updated colors"
+    ],
+    article: {
+      title: "Managing Spot Colors in PDFs",
+      content: `Spot color replacement is essential for print production when you need to substitute special colors, convert to process colors, or match specific brand guidelines.
+
+## What Are Spot Colors?
+
+Spot colors (like Pantone) are special pre-mixed inks used in printing for precise color matching and special effects.
+
+## Why Replace Spot Colors
+
+- Convert spot to process colors to reduce printing costs
+- Replace discontinued or unavailable spot colors
+- Update brand colors across documents
+- Simplify printing workflows
+
+## Professional Color Management
+
+Our tool preserves document quality while accurately replacing spot colors throughout your PDF.`,
+      relatedTools: ["pdf-color-space-converter-rgb-to-cmyk", "pdf-to-rich-black-converter"]
+    }
+  },
+  {
+    id: "compress-image",
+    title: "Compress Image",
+    category: "Image Compression" as ToolCategory,
+    tags: ["compress", "optimize", "reduce size", "image"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress Image Online Free - Reduce Image Size Without Quality Loss",
+    metaDescription: "Compress images online for free. Reduce image file size while maintaining quality. Support for JPG, PNG, GIF, WebP, and more.",
+    description: "Compress images to reduce file size while maintaining quality",
+    icon: "minimize",
+    howTo: [
+      "Upload your image file",
+      "Choose compression level (quality vs. file size)",
+      "Click 'Compress Image' to process",
+      "Download your optimized image"
+    ],
+    article: {
+      title: "How to Compress Images Without Losing Quality",
+      content: `Image compression reduces file sizes while preserving visual quality. Our tool uses advanced algorithms to optimize images for web and storage.
+
+## Why Compress Images?
+
+- Faster website loading times
+- Reduced storage requirements
+- Lower bandwidth usage
+- Better user experience
+
+## Smart Compression Technology
+
+Our tool analyzes each image and applies optimal compression settings to achieve the best balance between file size and quality.
+
+## Supported Formats
+
+Compress JPG, PNG, GIF, WebP, HEIC, and SVG images with a single tool.`,
+      relatedTools: ["compress-jpg", "compress-png", "resize-image"]
+    }
+  },
+  {
+    id: "compress-jpg",
+    title: "Compress JPG",
+    category: "Image Compression" as ToolCategory,
+    tags: ["compress", "jpg", "jpeg", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress JPG Online Free - Reduce JPEG File Size",
+    metaDescription: "Compress JPG/JPEG images online for free. Reduce file size up to 80% while maintaining quality. Fast and easy JPG compression.",
+    description: "Optimize JPG/JPEG images with advanced compression",
+    icon: "file-image",
+    howTo: [
+      "Upload your JPG/JPEG file",
+      "Adjust compression quality slider",
+      "Preview before and after comparison",
+      "Download your compressed JPG"
+    ],
+    article: {
+      title: "JPG Compression Guide",
+      content: `JPG compression reduces file sizes for faster web loading and easier sharing. Our tool optimizes JPG images while preserving visual quality.
+
+## JPG Compression Benefits
+
+- Significantly smaller file sizes
+- Faster image loading
+- Reduced storage costs
+- Better website performance
+
+## Quality vs. Size Balance
+
+Find the perfect balance between image quality and file size with our intuitive compression controls.
+
+## When to Compress JPG
+
+Compress JPG images for websites, email attachments, social media, and any scenario where file size matters.`,
+      relatedTools: ["compress-image", "compress-png", "resize-jpg"]
+    }
+  },
+  {
+    id: "compress-png",
+    title: "Compress PNG",
+    category: "Image Compression" as ToolCategory,
+    tags: ["compress", "png", "optimize", "lossless"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress PNG Online Free - Reduce PNG File Size",
+    metaDescription: "Compress PNG images online for free. Reduce file size with lossless or lossy compression. Maintain transparency while optimizing PNGs.",
+    description: "Compress PNG images while preserving transparency",
+    icon: "image",
+    howTo: [
+      "Upload your PNG file",
+      "Choose lossless or lossy compression",
+      "Click 'Compress PNG' to optimize",
+      "Download your smaller PNG with transparency intact"
+    ],
+    article: {
+      title: "PNG Compression Techniques",
+      content: `PNG compression reduces file sizes while maintaining image quality and transparency. Our tool offers both lossless and lossy compression options.
+
+## PNG Compression Options
+
+- Lossless: Perfect quality, moderate size reduction
+- Lossy: Greater compression, minimal quality loss
+- Transparency preservation in both modes
+
+## When to Use PNG Compression
+
+Optimize PNGs for web graphics, logos, icons, and images requiring transparency.
+
+## Transparency Preservation
+
+Our tool maintains alpha channel transparency during compression, ensuring your PNGs work perfectly in any context.`,
+      relatedTools: ["compress-image", "compress-jpg", "png-to-jpg"]
+    }
+  },
+  {
+    id: "compress-gif",
+    title: "Compress GIF",
+    category: "Image Compression" as ToolCategory,
+    tags: ["compress", "gif", "optimize", "animation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress GIF Online Free - Reduce GIF File Size",
+    metaDescription: "Compress GIF images and animations online for free. Reduce file size while maintaining quality. Optimize GIFs for web and social media.",
+    description: "Optimize GIF animations and images for smaller file sizes",
+    icon: "film",
+    howTo: [
+      "Upload your GIF file (static or animated)",
+      "Adjust compression settings",
+      "Preview the optimized GIF",
+      "Download your compressed GIF"
+    ],
+    article: {
+      title: "GIF Compression for Web and Social Media",
+      content: `GIF compression reduces file sizes for faster loading and easier sharing. Our tool optimizes both static and animated GIFs.
+
+## GIF Optimization Benefits
+
+- Smaller file sizes for faster loading
+- Better performance on websites
+- Easier social media sharing
+- Maintained animation quality
+
+## Animation Preservation
+
+Compress animated GIFs while preserving frame timing and animation quality.
+
+## Color Optimization
+
+Our tool optimizes the color palette to reduce file size while maintaining visual appeal.`,
+      relatedTools: ["compress-image", "gif-maker", "gif-to-mp4"]
+    }
+  },
+  {
+    id: "compress-svg",
+    title: "Compress SVG",
+    category: "Image Compression" as ToolCategory,
+    tags: ["compress", "svg", "optimize", "vector"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress SVG Online Free - Optimize SVG Files",
+    metaDescription: "Compress SVG files online for free. Remove unnecessary code and optimize vector graphics. Reduce SVG file size significantly.",
+    description: "Optimize SVG vector files by removing unnecessary code",
+    icon: "code",
+    howTo: [
+      "Upload your SVG file",
+      "Choose optimization level",
+      "Click 'Compress SVG' to clean up code",
+      "Download your optimized SVG"
+    ],
+    article: {
+      title: "SVG Optimization and Compression",
+      content: `SVG compression removes unnecessary code and optimizes vector graphics for web use. Our tool significantly reduces SVG file sizes.
+
+## SVG Optimization Techniques
+
+- Remove metadata and comments
+- Simplify paths and shapes
+- Optimize coordinates
+- Clean up code structure
+
+## Benefits of Compressed SVGs
+
+Smaller file sizes, faster loading, better website performance, and cleaner code.
+
+## Vector Quality Preserved
+
+Optimization maintains perfect scalability and visual quality of your vector graphics.`,
+      relatedTools: ["compress-image", "image-to-svg", "svg-to-png"]
+    }
+  },
+  {
+    id: "compress-webp",
+    title: "Compress WebP",
+    category: "Image Compression" as ToolCategory,
+    tags: ["compress", "webp", "optimize", "modern"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress WebP Online Free - Optimize WebP Images",
+    metaDescription: "Compress WebP images online for free. Further optimize modern WebP format for best web performance. Fast and easy.",
+    description: "Further optimize WebP images for maximum compression",
+    icon: "zap",
+    howTo: [
+      "Upload your WebP file",
+      "Adjust quality and compression level",
+      "Preview optimization results",
+      "Download your compressed WebP"
+    ],
+    article: {
+      title: "WebP Compression for Modern Web",
+      content: `WebP already offers excellent compression, but our tool can optimize it further for maximum web performance.
+
+## WebP Advantages
+
+- Superior compression compared to JPG/PNG
+- Support for transparency like PNG
+- Animation support like GIF
+- Modern browser compatibility
+
+## Further Optimization
+
+Even WebP files can be optimized further by adjusting quality settings and removing metadata.
+
+## Web Performance
+
+Compressed WebP images load faster, improve Core Web Vitals, and enhance user experience.`,
+      relatedTools: ["compress-image", "webp-to-jpg", "png-to-webp"]
+    }
+  },
+  {
+    id: "compress-heic",
+    title: "Compress HEIC",
+    category: "Image Compression" as ToolCategory,
+    tags: ["compress", "heic", "heif", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress HEIC Online Free - Reduce HEIC File Size",
+    metaDescription: "Compress HEIC/HEIF images online for free. Optimize iPhone photos. Reduce file size while maintaining quality.",
+    description: "Compress HEIC/HEIF images from iPhone and modern cameras",
+    icon: "smartphone",
+    howTo: [
+      "Upload your HEIC/HEIF file",
+      "Select compression quality",
+      "Click 'Compress HEIC' to process",
+      "Download your optimized HEIC"
+    ],
+    article: {
+      title: "HEIC Compression for iPhone Photos",
+      content: `HEIC (High Efficiency Image Container) is Apple's modern image format. Our tool compresses HEIC files while preserving quality.
+
+## HEIC Format Benefits
+
+- Better compression than JPEG
+- Higher quality at smaller sizes
+- Modern efficiency
+- iPhone native format
+
+## Why Compress HEIC
+
+Reduce storage usage, faster uploads, easier sharing, and better cloud backup efficiency.
+
+## Quality Preservation
+
+Maintain excellent image quality while achieving significant file size reduction.`,
+      relatedTools: ["compress-image", "heic-to-jpg", "heic-to-png"]
+    }
+  },
+  {
+    id: "resize-image",
+    title: "Resize Image",
+    category: "Image Resize & Crop" as ToolCategory,
+    tags: ["resize", "scale", "dimensions", "image"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Resize Image Online Free - Change Image Dimensions",
+    metaDescription: "Resize images online for free. Change dimensions, scale by percentage, or fit to specific sizes. Support for all image formats.",
+    description: "Resize images to specific dimensions or percentages",
+    icon: "maximize",
+    howTo: [
+      "Upload your image",
+      "Enter new dimensions or percentage",
+      "Choose resize method (fit, fill, or stretch)",
+      "Download your resized image"
+    ],
+    article: {
+      title: "How to Resize Images Online",
+      content: `Resizing images is essential for web optimization, social media, and specific size requirements. Our tool makes it easy.
+
+## Resize Options
+
+- Exact dimensions (width x height)
+- Percentage scaling
+- Maintain aspect ratio
+- Fit or fill modes
+
+## Common Use Cases
+
+Optimize for web, create thumbnails, fit social media requirements, or match specific size specifications.
+
+## Quality Preservation
+
+Our tool uses advanced algorithms to maintain image quality when resizing.`,
+      relatedTools: ["resize-jpg", "resize-png", "crop-image"]
+    }
+  },
+  {
+    id: "resize-jpg",
+    title: "Resize JPG",
+    category: "Image Resize & Crop" as ToolCategory,
+    tags: ["resize", "jpg", "jpeg", "scale"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Resize JPG Online Free - Change JPEG Dimensions",
+    metaDescription: "Resize JPG/JPEG images online for free. Change dimensions while maintaining quality. Fast and easy JPG resizing tool.",
+    description: "Resize JPG/JPEG images to any dimensions",
+    icon: "maximize-2",
+    howTo: [
+      "Upload your JPG file",
+      "Specify new width and height",
+      "Preview the resized image",
+      "Download your resized JPG"
+    ],
+    article: {
+      title: "JPG Resizing Best Practices",
+      content: `Resizing JPG images properly ensures quality and optimal file sizes for your specific needs.
+
+## When to Resize JPGs
+
+- Web optimization
+- Email attachments
+- Social media posts
+- Thumbnail creation
+
+## Aspect Ratio Preservation
+
+Maintain original proportions or stretch to exact dimensions based on your needs.
+
+## Quality Control
+
+Choose quality settings when resizing to balance file size and visual appearance.`,
+      relatedTools: ["resize-image", "resize-png", "compress-jpg"]
+    }
+  },
+  {
+    id: "resize-png",
+    title: "Resize PNG",
+    category: "Image Resize & Crop" as ToolCategory,
+    tags: ["resize", "png", "scale", "transparent"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Resize PNG Online Free - Change PNG Dimensions",
+    metaDescription: "Resize PNG images online for free. Preserve transparency while changing dimensions. Professional PNG resizing tool.",
+    description: "Resize PNG images while preserving transparency",
+    icon: "move",
+    howTo: [
+      "Upload your PNG file",
+      "Enter new dimensions",
+      "Choose resize mode",
+      "Download with transparency preserved"
+    ],
+    article: {
+      title: "PNG Resizing with Transparency",
+      content: `Resizing PNG images requires special handling to preserve transparency. Our tool maintains alpha channels perfectly.
+
+## Transparency Preservation
+
+All resize operations maintain the alpha channel, ensuring your transparent PNGs work correctly at any size.
+
+## Common PNG Resize Uses
+
+- Logo sizing
+- Icon creation
+- Web graphics
+- UI elements
+
+## Quality Maintenance
+
+High-quality resampling ensures crisp edges and clear transparency.`,
+      relatedTools: ["resize-image", "resize-jpg", "compress-png"]
+    }
+  },
+  {
+    id: "resize-gif",
+    title: "Resize GIF",
+    category: "Image Resize & Crop" as ToolCategory,
+    tags: ["resize", "gif", "animation", "scale"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Resize GIF Online Free - Change GIF Dimensions",
+    metaDescription: "Resize GIF images and animations online for free. Change dimensions while preserving animation. Fast GIF resizing tool.",
+    description: "Resize GIF animations while preserving frame timing",
+    icon: "film",
+    howTo: [
+      "Upload your GIF (static or animated)",
+      "Specify new dimensions",
+      "Preview the resized animation",
+      "Download your resized GIF"
+    ],
+    article: {
+      title: "Resizing Animated GIFs",
+      content: `Resizing GIF animations requires processing all frames while maintaining timing and quality. Our tool handles this automatically.
+
+## Animation Preservation
+
+All frames are resized proportionally, maintaining animation timing and loop settings.
+
+## Optimize for Different Platforms
+
+Resize GIFs for social media, messaging apps, or web display.
+
+## Quality Control
+
+Maintain animation smoothness and visual quality at any size.`,
+      relatedTools: ["resize-image", "compress-gif", "gif-maker"]
+    }
+  },
+  {
+    id: "resize-svg",
+    title: "Resize SVG",
+    category: "Image Resize & Crop" as ToolCategory,
+    tags: ["resize", "svg", "vector", "scale"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Resize SVG Online Free - Change SVG Dimensions",
+    metaDescription: "Resize SVG files online for free. Change vector graphic dimensions without quality loss. Perfect scalability preserved.",
+    description: "Resize SVG vector graphics to any dimensions",
+    icon: "box",
+    howTo: [
+      "Upload your SVG file",
+      "Enter new dimensions",
+      "Click 'Resize SVG' to update viewBox",
+      "Download your resized vector graphic"
+    ],
+    article: {
+      title: "SVG Resizing and Scaling",
+      content: `SVG files are resolution-independent vectors, but sometimes you need to update their declared dimensions or viewBox.
+
+## Vector Advantages
+
+SVG files scale infinitely without quality loss, making them perfect for responsive design.
+
+## When to Resize SVGs
+
+Update declared dimensions for specific use cases, adjust viewBox for proper display, or prepare for particular applications.
+
+## Perfect Quality
+
+Resized SVGs maintain perfect quality at any size due to their vector nature.`,
+      relatedTools: ["resize-image", "compress-svg", "image-to-svg"]
+    }
+  },
+  {
+    id: "resize-webp",
+    title: "Resize WebP",
+    category: "Image Resize & Crop" as ToolCategory,
+    tags: ["resize", "webp", "modern", "scale"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Resize WebP Online Free - Change WebP Dimensions",
+    metaDescription: "Resize WebP images online for free. Change dimensions while maintaining modern format benefits. Fast WebP resizing.",
+    description: "Resize WebP images for optimal web performance",
+    icon: "aperture",
+    howTo: [
+      "Upload your WebP file",
+      "Specify new dimensions",
+      "Choose quality level",
+      "Download your resized WebP"
+    ],
+    article: {
+      title: "WebP Resizing for Web Performance",
+      content: `Resizing WebP images helps optimize web performance while maintaining the format's compression advantages.
+
+## WebP Resize Benefits
+
+- Maintain superior compression
+- Optimize for responsive design
+- Better web performance
+- Modern browser support
+
+## Quality Preservation
+
+Resize with minimal quality loss thanks to WebP's advanced compression.
+
+## Responsive Images
+
+Create multiple sizes for responsive web design with optimal file sizes.`,
+      relatedTools: ["resize-image", "compress-webp", "webp-to-jpg"]
+    }
+  },
+  {
+    id: "resize-heic",
+    title: "Resize HEIC",
+    category: "Image Resize & Crop" as ToolCategory,
+    tags: ["resize", "heic", "heif", "iphone"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Resize HEIC Online Free - Change HEIC Dimensions",
+    metaDescription: "Resize HEIC/HEIF images online for free. Optimize iPhone photos by changing dimensions. Fast HEIC resizing tool.",
+    description: "Resize HEIC/HEIF images from iPhone and modern cameras",
+    icon: "smartphone",
+    howTo: [
+      "Upload your HEIC file",
+      "Enter new dimensions",
+      "Preview the resize",
+      "Download your resized HEIC"
+    ],
+    article: {
+      title: "Resizing iPhone HEIC Photos",
+      content: `Resize HEIC images while maintaining the format's efficiency advantages. Perfect for optimizing iPhone photos.
+
+## HEIC Advantages
+
+- Better compression than JPEG
+- High quality at smaller sizes
+- iPhone native format
+
+## Why Resize HEIC
+
+Optimize for web upload, reduce storage usage, or meet specific size requirements.
+
+## Quality Maintenance
+
+Maintain excellent quality while resizing HEIC images.`,
+      relatedTools: ["resize-image", "compress-heic", "heic-to-jpg"]
+    }
+  },
+  {
+    id: "crop-image",
+    title: "Crop Image",
+    category: "Image Resize & Crop" as ToolCategory,
+    tags: ["crop", "cut", "trim", "image"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Crop Image Online Free - Cut and Trim Images",
+    metaDescription: "Crop images online for free. Cut and trim to focus on what matters. Support for all image formats with easy-to-use crop tool.",
+    description: "Crop images to focus on specific areas or remove unwanted parts",
+    icon: "crop",
+    howTo: [
+      "Upload your image",
+      "Select crop area by dragging",
+      "Adjust crop boundaries precisely",
+      "Download your cropped image"
+    ],
+    article: {
+      title: "Image Cropping Guide",
+      content: `Cropping images helps focus on important content, remove distractions, and meet specific aspect ratio requirements.
+
+## Why Crop Images
+
+- Focus on subjects
+- Remove unwanted elements
+- Meet aspect ratio requirements
+- Create better compositions
+
+## Crop Tools
+
+Free-form cropping, aspect ratio presets, and precise manual adjustment.
+
+## Professional Results
+
+Create perfectly cropped images for any purpose.`,
+      relatedTools: ["crop-jpg", "crop-png", "resize-image"]
+    }
+  },
+  {
+    id: "crop-jpg",
+    title: "Crop JPG",
+    category: "Image Resize & Crop" as ToolCategory,
+    tags: ["crop", "jpg", "jpeg", "trim"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Crop JPG Online Free - Trim JPEG Images",
+    metaDescription: "Crop JPG/JPEG images online for free. Trim and cut to perfect composition. Easy-to-use JPG cropping tool.",
+    description: "Crop JPG/JPEG images to perfect composition",
+    icon: "scissors",
+    howTo: [
+      "Upload your JPG file",
+      "Drag to select crop area",
+      "Fine-tune crop boundaries",
+      "Download cropped JPG"
+    ],
+    article: {
+      title: "JPG Cropping Techniques",
+      content: `Cropping JPG images helps improve composition and focus on important content.
+
+## Cropping Benefits
+
+- Better composition
+- Remove distractions
+- Focus on subjects
+- Meet size requirements
+
+## Quality Preservation
+
+Crop without recompression to maintain maximum quality.
+
+## Common Uses
+
+Profile pictures, product photos, social media images, and more.`,
+      relatedTools: ["crop-image", "resize-jpg", "rotate-image"]
+    }
+  },
+  {
+    id: "crop-png",
+    title: "Crop PNG",
+    category: "Image Resize & Crop" as ToolCategory,
+    tags: ["crop", "png", "transparent", "trim"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Crop PNG Online Free - Trim PNG Images with Transparency",
+    metaDescription: "Crop PNG images online for free. Preserve transparency while cropping. Professional PNG cropping tool.",
+    description: "Crop PNG images while preserving transparency",
+    icon: "crop",
+    howTo: [
+      "Upload your PNG file",
+      "Select crop area",
+      "Adjust precisely",
+      "Download with transparency intact"
+    ],
+    article: {
+      title: "PNG Cropping with Transparency",
+      content: `Crop PNG images while maintaining alpha channel transparency for perfect results.
+
+## Transparency Preservation
+
+All cropping operations maintain transparency, ensuring your PNGs work correctly.
+
+## Common PNG Crop Uses
+
+- Logo refinement
+- Icon creation
+- UI element preparation
+- Graphic design
+
+## Perfect Edges
+
+Maintain crisp edges and transparency through precise cropping.`,
+      relatedTools: ["crop-image", "resize-png", "remove-image-background"]
+    }
+  },
+  {
+    id: "rotate-image",
+    title: "Rotate Image",
+    category: "Image Editing" as ToolCategory,
+    tags: ["rotate", "turn", "orientation", "image"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Rotate Image Online Free - Turn Images Any Angle",
+    metaDescription: "Rotate images online for free. Turn 90°, 180°, 270° or any custom angle. Support for all image formats.",
+    description: "Rotate images to any angle or flip horizontally/vertically",
+    icon: "rotate-cw",
+    howTo: [
+      "Upload your image",
+      "Choose rotation angle (90°, 180°, 270°, or custom)",
+      "Preview the rotation",
+      "Download your rotated image"
+    ],
+    article: {
+      title: "Image Rotation Guide",
+      content: `Rotating images fixes orientation issues and creates dynamic compositions. Our tool makes rotation easy and lossless.
+
+## Rotation Options
+
+- Quick rotate: 90°, 180°, 270°
+- Custom angle rotation
+- Horizontal/vertical flip
+- Preview before download
+
+## Lossless Rotation
+
+90° rotations are completely lossless for JPG images using EXIF rotation.
+
+## Common Uses
+
+Fix orientation, create dynamic compositions, correct camera angles, prepare for print.`,
+      relatedTools: ["crop-image", "resize-image", "image-editor"]
+    }
+  },
+  {
+    id: "watermark-image",
+    title: "Watermark Image",
+    category: "Image Editing" as ToolCategory,
+    tags: ["watermark", "protect", "copyright", "brand"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Watermark to Image Online Free - Protect Your Photos",
+    metaDescription: "Add watermark to images online for free. Protect photos with text or logo watermarks. Easy watermarking tool.",
+    description: "Add text or logo watermarks to protect your images",
+    icon: "shield-check",
+    howTo: [
+      "Upload your image",
+      "Add text or upload logo watermark",
+      "Position and customize appearance",
+      "Download watermarked image"
+    ],
+    article: {
+      title: "Image Watermarking for Copyright Protection",
+      content: `Watermarks protect your images from unauthorized use and help establish ownership and branding.
+
+## Watermark Types
+
+- Text watermarks with custom fonts
+- Logo/image watermarks
+- Transparent overlays
+- Positioned anywhere
+
+## Why Watermark
+
+Protect copyright, prevent theft, establish branding, and track image usage.
+
+## Professional Appearance
+
+Customize opacity, size, and position for subtle yet effective watermarks.`,
+      relatedTools: ["add-text-to-image", "image-editor", "compress-image"]
+    }
+  },
+  {
+    id: "add-text-to-image",
+    title: "Add Text to Image",
+    category: "Image Editing" as ToolCategory,
+    tags: ["text", "caption", "label", "overlay"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Text to Image Online Free - Image Text Overlay Tool",
+    metaDescription: "Add text to images online for free. Create captions, labels, and text overlays. Customize fonts, colors, and positioning.",
+    description: "Add customizable text overlays to your images",
+    icon: "type",
+    howTo: [
+      "Upload your image",
+      "Enter text to add",
+      "Customize font, size, color, and position",
+      "Download image with text overlay"
+    ],
+    article: {
+      title: "Adding Text to Images",
+      content: `Adding text to images creates memes, captions, labels, and informative graphics. Our tool makes it simple.
+
+## Text Customization
+
+- Multiple fonts
+- Custom colors
+- Size and opacity control
+- Precise positioning
+
+## Common Uses
+
+Create memes, add captions, label images, create quotes, design social media posts.
+
+## Professional Quality
+
+Anti-aliased text rendering ensures crisp, clear text at any size.`,
+      relatedTools: ["watermark-image", "image-editor", "photo-editor"]
+    }
+  },
+  {
+    id: "image-converter",
+    title: "Image Converter",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["convert", "format", "change", "image"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image Converter Online Free - Convert Image Formats",
+    metaDescription: "Convert images between formats online for free. Support for JPG, PNG, WebP, HEIC, GIF, and more. Fast format conversion.",
+    description: "Convert images between any supported format",
+    icon: "repeat",
+    howTo: [
+      "Upload your image",
+      "Select output format",
+      "Choose quality settings",
+      "Download converted image"
+    ],
+    article: {
+      title: "Image Format Conversion Guide",
+      content: `Converting between image formats helps achieve compatibility, optimize file size, or meet specific requirements.
+
+## Supported Formats
+
+JPG, PNG, WebP, HEIC, GIF, BMP, TIFF, SVG, and more.
+
+## Why Convert
+
+- Format compatibility
+- File size optimization
+- Specific feature requirements
+- Platform compatibility
+
+## Quality Control
+
+Adjust quality and compression settings for optimal results.`,
+      relatedTools: ["png-to-jpg", "jpg-to-png", "heic-to-jpg"]
+    }
+  },
+  {
+    id: "png-to-jpg",
+    title: "PNG to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["convert", "png", "jpg", "jpeg"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PNG to JPG Converter Online Free - Convert PNG to JPEG",
+    metaDescription: "Convert PNG to JPG online for free. Remove transparency and reduce file size. Fast PNG to JPEG conversion.",
+    description: "Convert PNG images to JPG format",
+    icon: "image",
+    howTo: [
+      "Upload your PNG file",
+      "Choose background color for transparency",
+      "Select JPG quality",
+      "Download your JPG"
+    ],
+    article: {
+      title: "Converting PNG to JPG",
+      content: `PNG to JPG conversion removes transparency and typically reduces file size, making it ideal for web and sharing.
+
+## When to Convert
+
+- Reduce file size
+- Remove transparency
+- Better compatibility
+- Web optimization
+
+## Background Color
+
+Choose a background color to replace transparency, or use white by default.
+
+## Quality Settings
+
+Adjust JPG quality to balance file size and visual appearance.`,
+      relatedTools: ["jpg-to-png", "image-converter", "compress-jpg"]
+    }
+  },
+  {
+    id: "jpg-to-png",
+    title: "JPG to PNG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["convert", "jpg", "png", "transparency"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JPG to PNG Converter Online Free - Convert JPEG to PNG",
+    metaDescription: "Convert JPG to PNG online for free. Enable editing and transparency support. Fast JPEG to PNG conversion.",
+    description: "Convert JPG images to PNG format",
+    icon: "file-image",
+    howTo: [
+      "Upload your JPG file",
+      "Click 'Convert to PNG'",
+      "Wait for processing",
+      "Download your PNG"
+    ],
+    article: {
+      title: "Converting JPG to PNG",
+      content: `JPG to PNG conversion enables transparency support and lossless editing, perfect for graphics that need further editing.
+
+## Why Convert to PNG
+
+- Enable transparency
+- Lossless quality
+- Better for editing
+- Graphics and logos
+
+## Quality Preservation
+
+Lossless PNG format preserves all JPG quality perfectly.
+
+## File Size Consideration
+
+PNG files are typically larger than JPG, so use this conversion thoughtfully.`,
+      relatedTools: ["png-to-jpg", "image-converter", "compress-png"]
+    }
+  },
+  {
+    id: "heic-to-jpg",
+    title: "HEIC to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["convert", "heic", "jpg", "iphone"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HEIC to JPG Converter Online Free - Convert iPhone Photos",
+    metaDescription: "Convert HEIC to JPG online for free. Make iPhone photos compatible with all devices. Fast HEIC to JPEG conversion.",
+    description: "Convert HEIC/HEIF images to universal JPG format",
+    icon: "smartphone",
+    howTo: [
+      "Upload your HEIC file from iPhone",
+      "Choose JPG quality",
+      "Click 'Convert to JPG'",
+      "Download compatible JPG"
+    ],
+    article: {
+      title: "HEIC to JPG Conversion for Compatibility",
+      content: `HEIC is Apple's modern format, but JPG offers universal compatibility. Convert HEIC to JPG for sharing and compatibility.
+
+## Why Convert HEIC
+
+- Universal compatibility
+- Share on any platform
+- Open on any device
+- Standard format support
+
+## Quality Preservation
+
+Maintain excellent image quality during conversion.
+
+## iPhone Photos
+
+Easily convert iPhone photos to shareable JPG format.`,
+      relatedTools: ["heic-to-png", "image-converter", "compress-jpg"]
+    }
+  },
+  {
+    id: "webp-to-jpg",
+    title: "WebP to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["convert", "webp", "jpg", "compatibility"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "WebP to JPG Converter Online Free - Convert WebP to JPEG",
+    metaDescription: "Convert WebP to JPG online for free. Create compatible JPG from modern WebP images. Fast conversion tool.",
+    description: "Convert WebP images to widely compatible JPG format",
+    icon: "image",
+    howTo: [
+      "Upload your WebP file",
+      "Select JPG quality",
+      "Click 'Convert to JPG'",
+      "Download your JPG"
+    ],
+    article: {
+      title: "WebP to JPG Conversion",
+      content: `Convert modern WebP images to universal JPG format for maximum compatibility.
+
+## Compatibility Needs
+
+While WebP is efficient, JPG ensures compatibility with all devices and software.
+
+## Quality Control
+
+Choose JPG quality level to balance file size and appearance.
+
+## When to Convert
+
+Convert for older devices, specific software compatibility, or universal sharing.`,
+      relatedTools: ["jpg-to-webp", "webp-to-png", "image-converter"]
+    }
+  },
+  {
+    id: "image-to-base64",
+    title: "Image to Base64",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["base64", "encode", "data url", "embed"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image to Base64 Converter Online Free - Encode Images",
+    metaDescription: "Convert images to Base64 online for free. Create data URLs for embedding images in code. Fast Base64 encoding.",
+    description: "Convert images to Base64 encoded strings for embedding",
+    icon: "code",
+    howTo: [
+      "Upload your image",
+      "Click 'Convert to Base64'",
+      "Copy the Base64 string",
+      "Use in HTML, CSS, or code"
+    ],
+    article: {
+      title: "Image to Base64 Encoding",
+      content: `Base64 encoding converts images to text strings that can be embedded directly in HTML, CSS, or code.
+
+## Use Cases
+
+- Embed images in HTML/CSS
+- Store in databases
+- Include in JSON/API responses
+- Avoid external image requests
+
+## Benefits
+
+No separate image files, reduce HTTP requests, simplify deployment.
+
+## Data URLs
+
+Create data URLs for direct image embedding in web pages.`,
+      relatedTools: ["base64-to-image", "image-converter", "compress-image"]
+    }
+  },
+  {
+    id: "base64-to-image",
+    title: "Base64 to Image",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["base64", "decode", "data url", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Base64 to Image Converter Online Free - Decode Base64",
+    metaDescription: "Convert Base64 to images online for free. Decode Base64 strings to image files. Fast Base64 decoding.",
+    description: "Decode Base64 strings back to image files",
+    icon: "download",
+    howTo: [
+      "Paste Base64 string",
+      "Click 'Convert to Image'",
+      "Preview the decoded image",
+      "Download as image file"
+    ],
+    article: {
+      title: "Base64 to Image Decoding",
+      content: `Decode Base64 strings back to usable image files for editing, saving, or sharing.
+
+## Decode Base64
+
+Extract images from Base64 data URLs, code, or databases.
+
+## Common Sources
+
+- HTML data URLs
+- API responses
+- Database fields
+- Code snippets
+
+## Output Formats
+
+Save decoded images as JPG, PNG, or original format.`,
+      relatedTools: ["image-to-base64", "image-converter", "image-editor"]
+    }
+  },
+  {
+    id: "image-editor",
+    title: "Image Editor",
+    category: "Image Editing" as ToolCategory,
+    tags: ["edit", "adjust", "filter", "enhance"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image Editor Online Free - Edit Photos in Browser",
+    metaDescription: "Edit images online for free. Adjust brightness, contrast, saturation, apply filters, and more. Powerful online image editor.",
+    description: "Edit images with filters, adjustments, and effects",
+    icon: "edit",
+    howTo: [
+      "Upload your image",
+      "Apply adjustments (brightness, contrast, etc.)",
+      "Add filters and effects",
+      "Download your edited image"
+    ],
+    article: {
+      title: "Online Image Editing Guide",
+      content: `Edit images directly in your browser with professional tools for adjustments, filters, and enhancements.
+
+## Editing Features
+
+- Brightness and contrast
+- Saturation and hue
+- Filters and effects
+- Crop and rotate
+
+## No Software Needed
+
+Edit images entirely in your browser without installing software.
+
+## Professional Results
+
+Create professionally edited images with powerful tools.`,
+      relatedTools: ["photo-editor", "crop-image", "rotate-image"]
+    }
+  },
+  {
+    id: "photo-editor",
+    title: "Photo Editor",
+    category: "Image Editing" as ToolCategory,
+    tags: ["photo", "edit", "enhance", "retouch"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Photo Editor Online Free - Edit Photos in Browser",
+    metaDescription: "Edit photos online for free. Enhance, retouch, and improve your photos. Professional online photo editing tool.",
+    description: "Professional photo editing with advanced tools and effects",
+    icon: "camera",
+    howTo: [
+      "Upload your photo",
+      "Use editing tools (enhance, retouch, etc.)",
+      "Apply effects and adjustments",
+      "Download your enhanced photo"
+    ],
+    article: {
+      title: "Professional Photo Editing Online",
+      content: `Edit and enhance photos with professional-grade tools, all in your browser.
+
+## Photo Editing Tools
+
+- Auto enhance
+- Exposure and levels
+- Color correction
+- Sharpening and blur
+
+## Portrait Retouching
+
+Enhance portraits with specialized tools.
+
+## Quick Enhancements
+
+One-click auto-enhance for instant improvements.`,
+      relatedTools: ["image-editor", "remove-image-background", "colorize-photo"]
+    }
+  },
+  {
+    id: "remove-image-background",
+    title: "Remove Image Background",
+    category: "Image Editing" as ToolCategory,
+    tags: ["background", "remove", "transparent", "cutout"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Remove Image Background Online Free - Background Remover",
+    metaDescription: "Remove image backgrounds online for free. Create transparent backgrounds automatically. AI-powered background removal tool.",
+    description: "Automatically remove image backgrounds for transparent PNGs",
+    icon: "layers",
+    howTo: [
+      "Upload your image",
+      "Wait for automatic background removal",
+      "Refine edges if needed",
+      "Download PNG with transparent background"
+    ],
+    article: {
+      title: "AI-Powered Background Removal",
+      content: `Remove image backgrounds automatically using AI technology. Create professional cutouts and transparent images instantly.
+
+## Background Removal Uses
+
+- Product photography
+- Profile pictures
+- Graphic design
+- Marketing materials
+
+## AI Technology
+
+Advanced AI detects subjects and removes backgrounds accurately.
+
+## Professional Quality
+
+Get clean edges and precise cutouts automatically.`,
+      relatedTools: ["image-background-remover", "crop-png", "image-editor"]
+    }
+  },
+  {
+    id: "image-background-remover",
+    title: "Image Background Remover",
+    category: "Image Editing" as ToolCategory,
+    tags: ["background", "remove", "transparent", "ai"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image Background Remover Online Free - Remove Backgrounds",
+    metaDescription: "Remove backgrounds from images online for free. AI-powered tool creates transparent backgrounds instantly. Fast and accurate.",
+    description: "AI-powered tool to remove backgrounds from any image",
+    icon: "eraser",
+    howTo: [
+      "Upload your image",
+      "AI automatically removes background",
+      "Preview and adjust if needed",
+      "Download transparent PNG"
+    ],
+    article: {
+      title: "Automatic Background Removal",
+      content: `Remove backgrounds from images automatically with AI. Perfect for creating professional product photos and graphics.
+
+## AI-Powered Precision
+
+Advanced algorithms detect and remove backgrounds with high accuracy.
+
+## Common Applications
+
+E-commerce products, headshots, graphic design, presentations.
+
+## Instant Results
+
+Get transparent backgrounds in seconds.`,
+      relatedTools: ["remove-image-background", "crop-image", "photo-editor"]
+    }
+  },
+  {
+    id: "convert-to-ico",
+    title: "Convert to ICO",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["ico", "icon", "favicon", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert to ICO Online Free - Create ICO Icons",
+    metaDescription: "Convert images to ICO format online for free. Create favicons and Windows icons. Support for multiple sizes in one file.",
+    description: "Convert images to ICO format for favicons and icons",
+    icon: "image",
+    howTo: [
+      "Upload your image",
+      "Select ICO sizes to include",
+      "Click 'Convert to ICO'",
+      "Download your ICO file"
+    ],
+    article: {
+      title: "Creating ICO Icons and Favicons",
+      content: `ICO format is essential for favicons and Windows icons. Our converter creates multi-size ICO files easily.
+
+## ICO Format Uses
+
+- Website favicons
+- Windows desktop icons
+- Application icons
+- Browser tab icons
+
+## Multiple Sizes
+
+Include multiple resolutions in one ICO file (16x16, 32x32, 48x48, etc.).
+
+## Web Standards
+
+Create standard-compliant favicons for your website.`,
+      relatedTools: ["ico-converter", "image-converter", "resize-image"]
+    }
+  },
+  {
+    id: "ico-converter",
+    title: "ICO Converter",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["ico", "icon", "convert", "favicon"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "ICO Converter Online Free - Convert ICO Files",
+    metaDescription: "Convert to and from ICO format online for free. Create favicons or extract images from ICO files. Fast ICO conversion.",
+    description: "Convert to/from ICO format for icons and favicons",
+    icon: "star",
+    howTo: [
+      "Upload image or ICO file",
+      "Choose conversion direction",
+      "Select output options",
+      "Download converted file"
+    ],
+    article: {
+      title: "ICO Format Conversion",
+      content: `Convert images to ICO for icons, or extract images from ICO files. Our tool handles both directions.
+
+## ICO Capabilities
+
+- Convert to ICO (favicon creation)
+- Extract from ICO (get images)
+- Multi-size support
+- Transparency preservation
+
+## Favicon Creation
+
+Create professional favicons for your website.
+
+## Icon Extraction
+
+Extract individual images from multi-size ICO files.`,
+      relatedTools: ["convert-to-ico", "image-converter", "png-to-jpg"]
+    }
+  },
+  {
+    id: "image-to-svg",
+    title: "Image to SVG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["svg", "vector", "trace", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image to SVG Converter Online Free - Vectorize Images",
+    metaDescription: "Convert images to SVG online for free. Vectorize photos and logos. Create scalable vector graphics from raster images.",
+    description: "Convert raster images to scalable SVG vector graphics",
+    icon: "vector",
+    howTo: [
+      "Upload your raster image",
+      "Adjust vectorization settings",
+      "Preview the SVG result",
+      "Download your vector SVG"
+    ],
+    article: {
+      title: "Vectorizing Images with SVG",
+      content: `Convert raster images to scalable SVG vectors for infinite scalability and smaller file sizes.
+
+## Vectorization Benefits
+
+- Infinite scalability
+- No quality loss when resizing
+- Smaller file sizes for simple graphics
+- Editing capabilities
+
+## Best Images to Vectorize
+
+Logos, icons, simple graphics, and illustrations work best.
+
+## Customization
+
+Adjust detail level and color precision for optimal results.`,
+      relatedTools: ["svg-to-png", "compress-svg", "image-converter"]
+    }
+  },
+  {
+    id: "svg-to-png",
+    title: "SVG to PNG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["svg", "png", "rasterize", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "SVG to PNG Converter Online Free - Rasterize SVG",
+    metaDescription: "Convert SVG to PNG online for free. Rasterize vector graphics to PNG images. Set custom resolution and transparency.",
+    description: "Convert SVG vector graphics to PNG raster images",
+    icon: "image",
+    howTo: [
+      "Upload your SVG file",
+      "Set output resolution",
+      "Choose background (transparent or color)",
+      "Download your PNG"
+    ],
+    article: {
+      title: "Converting SVG to PNG",
+      content: `Rasterize SVG vectors to PNG for compatibility and specific size requirements.
+
+## Why Convert to PNG
+
+- Universal compatibility
+- Fixed resolution needed
+- Raster editing
+- Social media use
+
+## Resolution Control
+
+Set exact pixel dimensions for your PNG output.
+
+## Transparency Options
+
+Keep transparent background or choose a solid color.`,
+      relatedTools: ["image-to-svg", "png-to-jpg", "compress-png"]
+    }
+  },
+  {
+    id: "upscale-image",
+    title: "Upscale Image",
+    category: "Image Editing" as ToolCategory,
+    tags: ["upscale", "enlarge", "enhance", "ai"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Upscale Image Online Free - AI Image Upscaler",
+    metaDescription: "Upscale images online for free. AI-powered image enlargement without quality loss. Enhance and increase image resolution.",
+    description: "AI-powered image upscaling to increase resolution without quality loss",
+    icon: "trending-up",
+    howTo: [
+      "Upload your low-resolution image",
+      "Select upscaling factor (2x, 4x, etc.)",
+      "AI processes and enhances the image",
+      "Download your high-resolution result"
+    ],
+    article: {
+      title: "AI Image Upscaling Technology",
+      content: `Upscale images using AI to increase resolution while maintaining or even enhancing quality.
+
+## AI Upscaling Benefits
+
+- Increase resolution significantly
+- Maintain or enhance quality
+- Recover details
+- Professional results
+
+## How It Works
+
+AI analyzes image content and intelligently adds detail and sharpness when enlarging.
+
+## Common Uses
+
+Enhance old photos, prepare for large prints, improve low-res images, restore details.`,
+      relatedTools: ["ai-image-upscaler", "image-editor", "photo-editor"]
+    }
+  },
+  {
+    id: "ai-image-upscaler",
+    title: "AI Image Upscaler",
+    category: "Image Editing" as ToolCategory,
+    tags: ["ai", "upscale", "enhance", "resolution"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "AI Image Upscaler Online Free - Enhance Resolution with AI",
+    metaDescription: "Upscale images with AI online for free. Increase resolution and enhance quality automatically. Powerful AI upscaling tool.",
+    description: "Advanced AI upscaling for superior image enhancement",
+    icon: "sparkles",
+    howTo: [
+      "Upload your image",
+      "Choose upscale level (2x, 4x, 8x)",
+      "Wait for AI processing",
+      "Download enhanced high-res image"
+    ],
+    article: {
+      title: "Advanced AI Upscaling",
+      content: `Use cutting-edge AI technology to upscale images with unprecedented quality enhancement.
+
+## AI Technology
+
+Deep learning models analyze and enhance images intelligently.
+
+## Massive Resolution Increase
+
+Upscale 2x, 4x, or even 8x while maintaining quality.
+
+## Detail Enhancement
+
+AI adds realistic details and sharpness during upscaling.`,
+      relatedTools: ["upscale-image", "photo-editor", "image-editor"]
+    }
+  },
+  {
+    id: "colorize-photo",
+    title: "Colorize Photo",
+    category: "Image Editing" as ToolCategory,
+    tags: ["colorize", "ai", "black and white", "enhance"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Colorize Photo Online Free - AI Photo Colorization",
+    metaDescription: "Colorize black and white photos online for free. AI automatically adds realistic colors to old photos. Restore and enhance vintage images.",
+    description: "AI-powered colorization of black and white photos",
+    icon: "palette",
+    howTo: [
+      "Upload black and white photo",
+      "AI automatically colorizes the image",
+      "Adjust colors if desired",
+      "Download colorized photo"
+    ],
+    article: {
+      title: "AI Photo Colorization",
+      content: `Bring black and white photos to life with AI-powered colorization. Our tool adds realistic colors automatically.
+
+## Colorization Technology
+
+AI analyzes image content and applies historically accurate, realistic colors.
+
+## Perfect for Old Photos
+
+Restore vintage family photos and historical images with color.
+
+## Realistic Results
+
+Get natural-looking colorization that respects the original photo's content and context.`,
+      relatedTools: ["photo-editor", "image-editor", "ai-image-upscaler"]
+    }
+  },
+  {
+    id: "image-color-picker",
+    title: "Image Color Picker",
+    category: "Image Editing" as ToolCategory,
+    tags: ["color picker", "eyedropper", "hex", "rgb"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image Color Picker Online Free - Extract Colors from Images",
+    metaDescription: "Pick colors from images online for free. Extract hex and RGB values. Perfect eyedropper tool for designers.",
+    description: "Extract color values from any point in an image",
+    icon: "droplet",
+    howTo: [
+      "Upload your image",
+      "Click anywhere to pick a color",
+      "View hex, RGB, and other color codes",
+      "Copy color values to use in your designs"
+    ],
+    article: {
+      title: "Picking Colors from Images",
+      content: `Extract exact color values from images for use in design work, matching brand colors, or creating color palettes.
+
+## Color Information
+
+Get hex, RGB, HSL, and CMYK values for any pixel.
+
+## Design Workflow
+
+Perfect for matching colors in design work or creating brand palettes.
+
+## Easy Copying
+
+One-click copy of color codes in any format.`,
+      relatedTools: ["image-editor", "photo-editor", "image-converter"]
+    }
+  },
+  {
+    id: "gif-maker",
+    title: "GIF Maker",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["gif", "create", "animation", "make"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "GIF Maker Online Free - Create Animated GIFs",
+    metaDescription: "Make GIF animations online for free. Create GIFs from images or video. Easy-to-use GIF creator tool.",
+    description: "Create animated GIFs from images or video",
+    icon: "film",
+    howTo: [
+      "Upload multiple images or a video",
+      "Adjust frame duration and order",
+      "Set loop options and optimize",
+      "Download your animated GIF"
+    ],
+    article: {
+      title: "Creating Animated GIFs",
+      content: `Make animated GIFs from images or videos for social media, websites, and messaging.
+
+## GIF Creation Methods
+
+- From multiple images
+- From video files
+- Screen recordings
+- Webcam capture
+
+## Customization Options
+
+Adjust frame rate, duration, loop settings, and optimize file size.
+
+## Social Media Ready
+
+Create GIFs perfect for social media sharing.`,
+      relatedTools: ["video-to-gif", "gif-to-mp4", "apng-maker"]
+    }
+  },
+  {
+    id: "video-to-gif",
+    title: "Video to GIF",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["video", "gif", "convert", "animation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video to GIF Converter Online Free - Convert Videos to GIF",
+    metaDescription: "Convert videos to GIF online for free. Turn video clips into animated GIFs. Support for MP4, AVI, MOV, and more.",
+    description: "Convert video clips to animated GIF format",
+    icon: "film",
+    howTo: [
+      "Upload your video file",
+      "Select start and end time",
+      "Adjust quality and size",
+      "Download your GIF animation"
+    ],
+    article: {
+      title: "Converting Videos to GIFs",
+      content: `Extract clips from videos and convert them to shareable animated GIFs.
+
+## Video Sources
+
+Support for MP4, AVI, MOV, WebM, and other video formats.
+
+## Clip Selection
+
+Choose exact start and end times to extract the perfect moment.
+
+## Optimization
+
+Balance quality and file size for optimal sharing.`,
+      relatedTools: ["gif-maker", "gif-to-mp4", "compress-gif"]
+    }
+  },
+  {
+    id: "gif-to-mp4",
+    title: "GIF to MP4",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["gif", "mp4", "video", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "GIF to MP4 Converter Online Free - Convert GIF to Video",
+    metaDescription: "Convert GIF to MP4 video online for free. Better quality and smaller file sizes. Fast GIF to MP4 conversion.",
+    description: "Convert GIF animations to MP4 video format",
+    icon: "video",
+    howTo: [
+      "Upload your GIF animation",
+      "Choose video quality settings",
+      "Click 'Convert to MP4'",
+      "Download your MP4 video"
+    ],
+    article: {
+      title: "GIF to MP4 Conversion Benefits",
+      content: `Converting GIFs to MP4 provides better quality, smaller file sizes, and wider compatibility.
+
+## MP4 Advantages
+
+- Smaller file sizes
+- Better quality
+- Wider compatibility
+- Audio support
+
+## When to Convert
+
+Use MP4 for better quality, smaller sizes, or when you need audio support.
+
+## Quality Improvement
+
+MP4's modern codec provides better compression and quality than GIF.`,
+      relatedTools: ["video-to-gif", "gif-maker", "compress-gif"]
+    }
+  },
+  {
+    id: "apng-maker",
+    title: "APNG Maker",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["apng", "animation", "png", "create"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "APNG Maker Online Free - Create Animated PNG",
+    metaDescription: "Create APNG (Animated PNG) online for free. Better quality than GIF with full color support. Make animated PNGs easily.",
+    description: "Create animated PNG (APNG) files with better quality than GIF",
+    icon: "image",
+    howTo: [
+      "Upload multiple PNG images",
+      "Set frame duration and order",
+      "Adjust loop options",
+      "Download your APNG animation"
+    ],
+    article: {
+      title: "Creating Animated PNGs (APNG)",
+      content: `APNG provides better quality than GIF with full color support and transparency.
+
+## APNG Advantages
+
+- Full 24-bit color
+- Better transparency
+- Higher quality
+- Smaller than GIF
+
+## Use Cases
+
+High-quality animations, UI elements, icons, and graphics requiring full color.
+
+## Modern Format
+
+APNG is supported by modern browsers and offers superior quality to GIF.`,
+      relatedTools: ["gif-maker", "png-to-gif", "image-converter"]
+    }
+  },
+  {
+    id: "gif-to-png",
+    title: "GIF to PNG",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["gif", "png", "convert", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "GIF to PNG Converter Online Free - Extract GIF Frames",
+    metaDescription: "Convert GIF to PNG online for free. Extract individual frames from animated GIFs. Save all frames as PNG images.",
+    description: "Extract frames from GIF animations as PNG images",
+    icon: "image",
+    howTo: [
+      "Upload your GIF animation",
+      "Choose frames to extract (all or specific)",
+      "Click 'Convert to PNG'",
+      "Download PNG frames as a ZIP file"
+    ],
+    article: {
+      title: "Extracting PNG Frames from GIFs",
+      content: `Extract individual frames from GIF animations as high-quality PNG images for editing or analysis.
+
+## Frame Extraction
+
+- Extract all frames
+- Select specific frames
+- Save as individual PNGs
+- ZIP archive download
+
+## Common Uses
+
+Edit individual frames, analyze animations, create sprite sheets, or repurpose content.
+
+## Quality Preservation
+
+PNG format preserves all colors and transparency from GIF frames.`,
+      relatedTools: ["gif-to-jpg", "apng-maker", "gif-maker"]
+    }
+  },
+  {
+    id: "gif-to-jpg",
+    title: "GIF to JPG",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["gif", "jpg", "convert", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "GIF to JPG Converter Online Free - Extract GIF Frames as JPG",
+    metaDescription: "Convert GIF to JPG online for free. Extract frames from animated GIFs as JPEG images. Fast conversion tool.",
+    description: "Extract GIF frames and save as JPG images",
+    icon: "file-image",
+    howTo: [
+      "Upload your GIF file",
+      "Select frames to convert",
+      "Choose JPG quality",
+      "Download JPG images"
+    ],
+    article: {
+      title: "Converting GIF Frames to JPG",
+      content: `Extract and convert GIF frames to JPG format for editing, sharing, or storage.
+
+## JPG Benefits
+
+- Smaller file sizes
+- Universal compatibility
+- Good for photos
+- Easy sharing
+
+## Frame Selection
+
+Choose all frames or select specific ones to convert.
+
+## Quality Control
+
+Adjust JPG quality to balance file size and appearance.`,
+      relatedTools: ["gif-to-png", "jpg-to-gif", "gif-maker"]
+    }
+  },
+  {
+    id: "png-to-gif",
+    title: "PNG to GIF",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["png", "gif", "convert", "animation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PNG to GIF Converter Online Free - Create GIF from PNGs",
+    metaDescription: "Convert PNG to GIF online for free. Create animated GIFs from PNG images. Simple PNG to GIF animation tool.",
+    description: "Convert PNG images to GIF format or create animations",
+    icon: "image",
+    howTo: [
+      "Upload PNG image(s)",
+      "Create static GIF or animation from multiple PNGs",
+      "Adjust settings",
+      "Download your GIF"
+    ],
+    article: {
+      title: "PNG to GIF Conversion",
+      content: `Convert PNG images to GIF format, or create animations from multiple PNGs.
+
+## Conversion Options
+
+- Single PNG to static GIF
+- Multiple PNGs to animated GIF
+- Transparency preservation
+- Color optimization
+
+## Animation Creation
+
+Combine multiple PNGs into one animated GIF.
+
+## Web Compatibility
+
+GIF format ensures compatibility across all platforms.`,
+      relatedTools: ["gif-to-png", "jpg-to-gif", "gif-maker"]
+    }
+  },
+  {
+    id: "jpg-to-gif",
+    title: "JPG to GIF",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["jpg", "gif", "convert", "animation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JPG to GIF Converter Online Free - Create GIF from JPEGs",
+    metaDescription: "Convert JPG to GIF online for free. Create GIF animations from JPEG images. Fast JPG to GIF conversion.",
+    description: "Convert JPG images to GIF format or create animations",
+    icon: "film",
+    howTo: [
+      "Upload JPG image(s)",
+      "Convert to static or animated GIF",
+      "Adjust frame timing for animations",
+      "Download your GIF"
+    ],
+    article: {
+      title: "JPG to GIF Conversion",
+      content: `Convert JPG images to GIF format or create animated GIFs from multiple JPEGs.
+
+## Conversion Types
+
+- Single JPG to GIF
+- Multiple JPGs to animation
+- Slideshow creation
+- Custom timing
+
+## Animation Options
+
+Set frame duration, loop settings, and transitions.
+
+## Compatibility
+
+Create GIFs that work everywhere.`,
+      relatedTools: ["gif-to-jpg", "png-to-gif", "gif-maker"]
+    }
+  },
+  {
+    id: "bmp-to-jpg",
+    title: "BMP to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["bmp", "jpg", "convert", "compress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "BMP to JPG Converter Online Free - Convert Bitmap to JPEG",
+    metaDescription: "Convert BMP to JPG online for free. Compress large bitmap files to smaller JPEGs. Fast BMP to JPEG conversion.",
+    description: "Convert BMP bitmap images to compressed JPG format",
+    icon: "minimize",
+    howTo: [
+      "Upload your BMP file",
+      "Choose JPG quality",
+      "Click 'Convert to JPG'",
+      "Download your compressed JPG"
+    ],
+    article: {
+      title: "Converting BMP to JPG",
+      content: `Convert large uncompressed BMP files to efficient JPG format for easier sharing and storage.
+
+## Why Convert BMP
+
+- Massive file size reduction
+- Better web compatibility
+- Easier sharing
+- Universal support
+
+## Quality Control
+
+Balance compression and visual quality.
+
+## Use Cases
+
+Optimize old bitmap files, reduce storage needs, prepare for web use.`,
+      relatedTools: ["jpg-to-bmp", "image-converter", "compress-image"]
+    }
+  },
+  {
+    id: "jpg-to-bmp",
+    title: "JPG to BMP",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["jpg", "bmp", "convert", "uncompressed"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JPG to BMP Converter Online Free - Convert JPEG to Bitmap",
+    metaDescription: "Convert JPG to BMP online for free. Create uncompressed bitmap images from JPEGs. Fast JPEG to BMP conversion.",
+    description: "Convert JPG to uncompressed BMP bitmap format",
+    icon: "maximize",
+    howTo: [
+      "Upload your JPG file",
+      "Click 'Convert to BMP'",
+      "Wait for conversion",
+      "Download uncompressed BMP"
+    ],
+    article: {
+      title: "JPG to BMP Conversion",
+      content: `Convert JPG to BMP when you need uncompressed images for specific software or legacy compatibility.
+
+## When to Use BMP
+
+- Software requirements
+- Legacy system compatibility
+- Editing workflows
+- Uncompressed archival
+
+## File Size Consideration
+
+BMP files are much larger than JPG due to lack of compression.
+
+## Quality Preservation
+
+BMP preserves all image data without compression artifacts.`,
+      relatedTools: ["bmp-to-jpg", "image-converter", "png-to-jpg"]
+    }
+  },
+  {
+    id: "tiff-to-jpg",
+    title: "TIFF to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["tiff", "jpg", "convert", "compress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "TIFF to JPG Converter Online Free - Convert TIFF to JPEG",
+    metaDescription: "Convert TIFF to JPG online for free. Compress TIFF files to smaller JPEGs. Fast TIFF to JPEG conversion.",
+    description: "Convert TIFF images to compressed JPG format",
+    icon: "file-image",
+    howTo: [
+      "Upload your TIFF file",
+      "Select JPG quality",
+      "Click 'Convert to JPG'",
+      "Download your JPG"
+    ],
+    article: {
+      title: "TIFF to JPG Conversion",
+      content: `Convert large TIFF files to compressed JPG for easier sharing and web use.
+
+## Benefits of Conversion
+
+- Reduced file sizes
+- Better web compatibility
+- Easier sharing
+- Faster loading
+
+## Quality Options
+
+Choose JPG quality level for optimal results.
+
+## Multi-page TIFF
+
+Convert multi-page TIFF to multiple JPG files.`,
+      relatedTools: ["jpg-to-tiff", "image-converter", "compress-jpg"]
+    }
+  },
+  {
+    id: "jpg-to-tiff",
+    title: "JPG to TIFF",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["jpg", "tiff", "convert", "professional"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JPG to TIFF Converter Online Free - Convert JPEG to TIFF",
+    metaDescription: "Convert JPG to TIFF online for free. Create professional TIFF files from JPEGs. Support for compression options.",
+    description: "Convert JPG to TIFF format for professional use",
+    icon: "file-image",
+    howTo: [
+      "Upload your JPG file",
+      "Choose TIFF compression (LZW, ZIP, or none)",
+      "Click 'Convert to TIFF'",
+      "Download your TIFF"
+    ],
+    article: {
+      title: "JPG to TIFF Conversion",
+      content: `Convert JPG to TIFF when you need professional image format for printing or archival.
+
+## TIFF Advantages
+
+- Professional standard
+- Lossless compression options
+- Metadata support
+- Print production ready
+
+## Compression Options
+
+Choose LZW or ZIP compression to reduce file size.
+
+## Professional Use
+
+TIFF is the standard for professional photography and printing.`,
+      relatedTools: ["tiff-to-jpg", "image-converter", "png-to-jpg"]
+    }
+  },
+  {
+    id: "webp-to-png",
+    title: "WebP to PNG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["webp", "png", "convert", "transparency"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "WebP to PNG Converter Online Free - Convert WebP to PNG",
+    metaDescription: "Convert WebP to PNG online for free. Preserve transparency and quality. Fast WebP to PNG conversion.",
+    description: "Convert WebP images to PNG format",
+    icon: "image",
+    howTo: [
+      "Upload your WebP file",
+      "Click 'Convert to PNG'",
+      "Wait for processing",
+      "Download your PNG"
+    ],
+    article: {
+      title: "WebP to PNG Conversion",
+      content: `Convert modern WebP images to universal PNG format for compatibility and editing.
+
+## When to Convert
+
+- Maximum compatibility
+- Editing requirements
+- Transparency preservation
+- Legacy software support
+
+## Quality Preservation
+
+Lossless conversion maintains all image quality.
+
+## Transparency Support
+
+Both formats support transparency, preserved during conversion.`,
+      relatedTools: ["png-to-webp", "webp-to-jpg", "image-converter"]
+    }
+  },
+  {
+    id: "png-to-webp",
+    title: "PNG to WebP",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["png", "webp", "convert", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PNG to WebP Converter Online Free - Convert PNG to WebP",
+    metaDescription: "Convert PNG to WebP online for free. Reduce file size with modern format. Maintain quality and transparency.",
+    description: "Convert PNG to modern WebP format for better compression",
+    icon: "zap",
+    howTo: [
+      "Upload your PNG file",
+      "Choose quality level",
+      "Click 'Convert to WebP'",
+      "Download your optimized WebP"
+    ],
+    article: {
+      title: "PNG to WebP Conversion",
+      content: `Convert PNG to WebP for superior compression and modern web performance.
+
+## WebP Benefits
+
+- Smaller file sizes
+- Better compression
+- Transparency support
+- Modern browsers supported
+
+## Quality Control
+
+Adjust quality for optimal size/appearance balance.
+
+## Web Optimization
+
+WebP files load faster and improve website performance.`,
+      relatedTools: ["webp-to-png", "compress-png", "image-converter"]
+    }
+  },
+  {
+    id: "webp-to-gif",
+    title: "WebP to GIF",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["webp", "gif", "convert", "animation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "WebP to GIF Converter Online Free - Convert WebP to GIF",
+    metaDescription: "Convert WebP to GIF online for free. Create GIF animations from WebP. Fast conversion tool.",
+    description: "Convert WebP images to GIF format",
+    icon: "film",
+    howTo: [
+      "Upload your WebP file",
+      "Click 'Convert to GIF'",
+      "Adjust settings if needed",
+      "Download your GIF"
+    ],
+    article: {
+      title: "WebP to GIF Conversion",
+      content: `Convert WebP images to GIF format for wider compatibility.
+
+## Compatibility Reasons
+
+GIF format works on older systems and has universal support.
+
+## Animation Support
+
+Both formats support animation, converted automatically.
+
+## Color Considerations
+
+GIF has 256-color limit, while WebP supports full color.`,
+      relatedTools: ["gif-to-webp", "webp-to-png", "image-converter"]
+    }
+  },
+  {
+    id: "gif-to-webp",
+    title: "GIF to WebP",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["gif", "webp", "convert", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "GIF to WebP Converter Online Free - Convert GIF to WebP",
+    metaDescription: "Convert GIF to WebP online for free. Better quality and smaller file sizes for animations. Fast GIF to WebP conversion.",
+    description: "Convert GIF animations to modern WebP format",
+    icon: "zap",
+    howTo: [
+      "Upload your GIF animation",
+      "Choose quality settings",
+      "Click 'Convert to WebP'",
+      "Download your optimized WebP"
+    ],
+    article: {
+      title: "GIF to WebP Conversion Benefits",
+      content: `Convert GIF animations to WebP for better quality and smaller file sizes.
+
+## WebP Animation Advantages
+
+- Better compression
+- Full color support (vs 256 colors)
+- Smaller file sizes
+- Modern format
+
+## Quality Improvement
+
+WebP provides better quality than GIF for animations.
+
+## File Size Reduction
+
+Significant file size reduction compared to GIF.`,
+      relatedTools: ["webp-to-gif", "gif-to-mp4", "compress-gif"]
+    }
+  },
+  {
+    id: "heic-to-png",
+    title: "HEIC to PNG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["heic", "png", "convert", "iphone"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HEIC to PNG Converter Online Free - Convert iPhone Photos to PNG",
+    metaDescription: "Convert HEIC to PNG online for free. Transform iPhone photos to universal PNG format. Fast HEIC to PNG conversion.",
+    description: "Convert HEIC/HEIF to PNG for universal compatibility",
+    icon: "smartphone",
+    howTo: [
+      "Upload your HEIC file",
+      "Click 'Convert to PNG'",
+      "Wait for processing",
+      "Download your PNG"
+    ],
+    article: {
+      title: "HEIC to PNG Conversion",
+      content: `Convert iPhone HEIC photos to PNG for compatibility and editing.
+
+## Why Convert to PNG
+
+- Universal compatibility
+- Lossless quality
+- Editing support
+- Transparency capability
+
+## Quality Preservation
+
+Lossless PNG format preserves all image quality.
+
+## Universal Use
+
+PNG works on all devices and software.`,
+      relatedTools: ["heic-to-jpg", "png-to-jpg", "image-converter"]
+    }
+  },
+  {
+    id: "heic-to-gif",
+    title: "HEIC to GIF",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["heic", "gif", "convert", "iphone"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HEIC to GIF Converter Online Free - Convert HEIC to GIF",
+    metaDescription: "Convert HEIC to GIF online for free. Transform iPhone photos to GIF format. Fast conversion tool.",
+    description: "Convert HEIC images to GIF format",
+    icon: "film",
+    howTo: [
+      "Upload your HEIC file",
+      "Click 'Convert to GIF'",
+      "Adjust settings",
+      "Download your GIF"
+    ],
+    article: {
+      title: "HEIC to GIF Conversion",
+      content: `Convert HEIC images to GIF for compatibility and web use.
+
+## GIF Benefits
+
+- Universal compatibility
+- Web-friendly format
+- Animation support
+- Wide platform support
+
+## Use Cases
+
+Share on platforms that don't support HEIC, create simple graphics.
+
+## Compatibility
+
+GIF works everywhere, from old systems to modern web.`,
+      relatedTools: ["heic-to-jpg", "heic-to-png", "image-converter"]
+    }
+  },
+  {
+    id: "avif-to-jpg",
+    title: "AVIF to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["avif", "jpg", "convert", "modern"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "AVIF to JPG Converter Online Free - Convert AVIF to JPEG",
+    metaDescription: "Convert AVIF to JPG online for free. Transform modern AVIF images to universal JPEG. Fast conversion.",
+    description: "Convert modern AVIF images to universal JPG format",
+    icon: "image",
+    howTo: [
+      "Upload your AVIF file",
+      "Choose JPG quality",
+      "Click 'Convert to JPG'",
+      "Download your JPG"
+    ],
+    article: {
+      title: "AVIF to JPG Conversion",
+      content: `Convert cutting-edge AVIF images to universal JPG for compatibility.
+
+## AVIF Format
+
+AVIF is the newest image format with excellent compression.
+
+## When to Convert
+
+When you need compatibility with older devices or software.
+
+## Quality Control
+
+Choose JPG quality level for optimal results.`,
+      relatedTools: ["jpg-to-avif", "avif-to-png", "image-converter"]
+    }
+  },
+  {
+    id: "jpg-to-avif",
+    title: "JPG to AVIF",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["jpg", "avif", "convert", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JPG to AVIF Converter Online Free - Convert JPEG to AVIF",
+    metaDescription: "Convert JPG to AVIF online for free. Get superior compression with modern AVIF format. Reduce file sizes significantly.",
+    description: "Convert JPG to modern AVIF format for superior compression",
+    icon: "zap",
+    howTo: [
+      "Upload your JPG file",
+      "Choose quality level",
+      "Click 'Convert to AVIF'",
+      "Download your optimized AVIF"
+    ],
+    article: {
+      title: "JPG to AVIF Conversion",
+      content: `Convert JPG to AVIF for the best compression and quality available.
+
+## AVIF Advantages
+
+- Superior compression
+- Smaller file sizes
+- Better quality
+- Modern standard
+
+## File Size Reduction
+
+AVIF can be 50% smaller than JPG at same quality.
+
+## Future-Proof
+
+AVIF is the future of web images with growing browser support.`,
+      relatedTools: ["avif-to-jpg", "png-to-avif", "compress-jpg"]
+    }
+  },
+  {
+    id: "avif-to-png",
+    title: "AVIF to PNG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["avif", "png", "convert", "lossless"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "AVIF to PNG Converter Online Free - Convert AVIF to PNG",
+    metaDescription: "Convert AVIF to PNG online for free. Get lossless PNG from modern AVIF images. Fast conversion tool.",
+    description: "Convert AVIF to lossless PNG format",
+    icon: "image",
+    howTo: [
+      "Upload your AVIF file",
+      "Click 'Convert to PNG'",
+      "Wait for processing",
+      "Download your lossless PNG"
+    ],
+    article: {
+      title: "AVIF to PNG Conversion",
+      content: `Convert AVIF to PNG for lossless quality and editing.
+
+## PNG Benefits
+
+- Lossless quality
+- Better for editing
+- Transparency support
+- Universal compatibility
+
+## When to Convert
+
+When you need to edit images or require lossless quality.
+
+## Quality Preservation
+
+PNG preserves all image data without compression loss.`,
+      relatedTools: ["png-to-avif", "avif-to-jpg", "image-converter"]
+    }
+  },
+  {
+    id: "png-to-avif",
+    title: "PNG to AVIF",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["png", "avif", "convert", "optimize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PNG to AVIF Converter Online Free - Convert PNG to AVIF",
+    metaDescription: "Convert PNG to AVIF online for free. Reduce file size with modern compression. Maintain quality with AVIF format.",
+    description: "Convert PNG to AVIF for modern compression",
+    icon: "minimize",
+    howTo: [
+      "Upload your PNG file",
+      "Choose quality level",
+      "Click 'Convert to AVIF'",
+      "Download your optimized AVIF"
+    ],
+    article: {
+      title: "PNG to AVIF Conversion",
+      content: `Convert PNG to AVIF for superior compression while maintaining quality.
+
+## Compression Benefits
+
+- Massive file size reduction
+- Quality preservation
+- Transparency support
+- Modern format
+
+## Web Performance
+
+AVIF files load faster and improve website performance.
+
+## Quality Control
+
+Adjust quality to find perfect balance for your needs.`,
+      relatedTools: ["avif-to-png", "compress-png", "png-to-webp"]
+    }
+  },
+  {
+    id: "jpe-to-jpg",
+    title: "JPE to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["jpe", "jpg", "convert", "rename"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JPE to JPG Converter Online Free - Convert JPE to JPEG",
+    metaDescription: "Convert JPE to JPG online for free. Rename JPE extension to standard JPG. Fast conversion.",
+    description: "Convert JPE extension to standard JPG format",
+    icon: "file",
+    howTo: [
+      "Upload your JPE file",
+      "Click 'Convert to JPG'",
+      "File is converted instantly",
+      "Download with .jpg extension"
+    ],
+    article: {
+      title: "JPE to JPG Conversion",
+      content: `JPE is just an alternate extension for JPEG. Convert to standard JPG extension for better compatibility.
+
+## Same Format
+
+JPE and JPG are the same format, just different file extensions.
+
+## Why Convert
+
+Standard JPG extension is more widely recognized and compatible.
+
+## Instant Conversion
+
+Conversion is instant as it's just a file extension change.`,
+      relatedTools: ["jfif-to-jpg", "image-converter", "jpg-to-png"]
+    }
+  },
+  {
+    id: "jfif-to-jpg",
+    title: "JFIF to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["jfif", "jpg", "convert", "rename"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JFIF to JPG Converter Online Free - Convert JFIF to JPEG",
+    metaDescription: "Convert JFIF to JPG online for free. Transform JFIF files to standard JPG format. Fast conversion.",
+    description: "Convert JFIF files to standard JPG format",
+    icon: "file-image",
+    howTo: [
+      "Upload your JFIF file",
+      "Click 'Convert to JPG'",
+      "Instant conversion",
+      "Download as JPG"
+    ],
+    article: {
+      title: "JFIF to JPG Conversion",
+      content: `JFIF is a JPEG format variant. Convert to standard JPG for better compatibility.
+
+## JFIF Format
+
+JFIF (JPEG File Interchange Format) is a specific type of JPEG.
+
+## Better Compatibility
+
+Standard JPG extension works better across all platforms.
+
+## Quick Conversion
+
+Convert instantly to the more common JPG extension.`,
+      relatedTools: ["jpe-to-jpg", "image-converter", "jpg-to-png"]
+    }
+  },
+  {
+    id: "raw-to-jpg",
+    title: "RAW to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["raw", "jpg", "convert", "camera"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "RAW to JPG Converter Online Free - Convert Camera RAW to JPEG",
+    metaDescription: "Convert RAW images to JPG online for free. Process camera RAW files to universal JPEG. Support for CR2, NEF, ARW, and more.",
+    description: "Convert camera RAW files to JPG format",
+    icon: "camera",
+    howTo: [
+      "Upload your RAW file (CR2, NEF, ARW, DNG, etc.)",
+      "Adjust processing settings",
+      "Choose JPG quality",
+      "Download your JPG"
+    ],
+    article: {
+      title: "Converting RAW to JPG",
+      content: `Convert professional camera RAW files to universal JPG format for sharing and compatibility.
+
+## RAW Formats Supported
+
+CR2 (Canon), NEF (Nikon), ARW (Sony), DNG (Adobe), and more.
+
+## Processing Options
+
+Adjust white balance, exposure, and other settings during conversion.
+
+## Quality Control
+
+Choose JPG quality level for optimal file size and appearance.`,
+      relatedTools: ["cr2-to-jpg", "nef-to-jpg", "arw-to-jpg"]
+    }
+  },
+  {
+    id: "cr2-to-jpg",
+    title: "CR2 to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["cr2", "jpg", "canon", "raw"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CR2 to JPG Converter Online Free - Convert Canon RAW to JPEG",
+    metaDescription: "Convert CR2 to JPG online for free. Process Canon RAW files to JPEG. Fast CR2 to JPG conversion.",
+    description: "Convert Canon CR2 RAW files to JPG",
+    icon: "camera",
+    howTo: [
+      "Upload your Canon CR2 file",
+      "Adjust image processing settings",
+      "Select JPG quality",
+      "Download converted JPG"
+    ],
+    article: {
+      title: "Canon CR2 to JPG Conversion",
+      content: `Convert Canon camera RAW (CR2) files to shareable JPG format.
+
+## Canon RAW Format
+
+CR2 is Canon's proprietary RAW format containing unprocessed sensor data.
+
+## Processing Control
+
+Adjust settings like exposure and white balance during conversion.
+
+## Universal Compatibility
+
+JPG works on all devices and is easy to share.`,
+      relatedTools: ["raw-to-jpg", "nef-to-jpg", "image-converter"]
+    }
+  },
+  {
+    id: "nef-to-jpg",
+    title: "NEF to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["nef", "jpg", "nikon", "raw"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "NEF to JPG Converter Online Free - Convert Nikon RAW to JPEG",
+    metaDescription: "Convert NEF to JPG online for free. Process Nikon RAW files to JPEG. Fast NEF to JPG conversion.",
+    description: "Convert Nikon NEF RAW files to JPG",
+    icon: "camera",
+    howTo: [
+      "Upload your Nikon NEF file",
+      "Adjust processing parameters",
+      "Choose JPG quality",
+      "Download your JPG"
+    ],
+    article: {
+      title: "Nikon NEF to JPG Conversion",
+      content: `Convert Nikon camera RAW (NEF) files to universal JPG format.
+
+## Nikon RAW Format
+
+NEF (Nikon Electronic Format) contains unprocessed camera data.
+
+## Image Processing
+
+Control white balance, exposure, and other settings.
+
+## Easy Sharing
+
+Convert to JPG for easy sharing and compatibility.`,
+      relatedTools: ["raw-to-jpg", "cr2-to-jpg", "image-converter"]
+    }
+  },
+  {
+    id: "arw-to-jpg",
+    title: "ARW to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["arw", "jpg", "sony", "raw"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "ARW to JPG Converter Online Free - Convert Sony RAW to JPEG",
+    metaDescription: "Convert ARW to JPG online for free. Process Sony RAW files to JPEG. Fast ARW to JPG conversion.",
+    description: "Convert Sony ARW RAW files to JPG",
+    icon: "camera",
+    howTo: [
+      "Upload your Sony ARW file",
+      "Adjust image settings",
+      "Select JPG quality",
+      "Download converted JPG"
+    ],
+    article: {
+      title: "Sony ARW to JPG Conversion",
+      content: `Convert Sony camera RAW (ARW) files to shareable JPG format.
+
+## Sony RAW Format
+
+ARW is Sony's RAW format for their Alpha series cameras.
+
+## Processing Control
+
+Adjust exposure, color, and other parameters during conversion.
+
+## Universal Format
+
+JPG provides compatibility across all devices and platforms.`,
+      relatedTools: ["raw-to-jpg", "cr2-to-jpg", "image-converter"]
+    }
+  },
+  {
+    id: "dng-to-jpg",
+    title: "DNG to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["dng", "jpg", "adobe", "raw"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "DNG to JPG Converter Online Free - Convert Adobe DNG to JPEG",
+    metaDescription: "Convert DNG to JPG online for free. Process Adobe Digital Negative files to JPEG. Fast DNG to JPG conversion.",
+    description: "Convert Adobe DNG RAW files to JPG",
+    icon: "camera",
+    howTo: [
+      "Upload your DNG file",
+      "Adjust processing settings",
+      "Choose JPG quality",
+      "Download your JPG"
+    ],
+    article: {
+      title: "DNG to JPG Conversion",
+      content: `Convert Adobe's universal DNG (Digital Negative) RAW format to JPG.
+
+## DNG Format
+
+DNG is Adobe's open RAW format, supported by many cameras and smartphones.
+
+## Universal RAW
+
+DNG is a standardized RAW format that works across platforms.
+
+## Processing Options
+
+Full control over image processing during conversion.`,
+      relatedTools: ["raw-to-jpg", "cr2-to-jpg", "image-converter"]
+    }
+  },
+  {
+    id: "svg-to-jpg",
+    title: "SVG to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["svg", "jpg", "rasterize", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "SVG to JPG Converter Online Free - Rasterize SVG to JPEG",
+    metaDescription: "Convert SVG to JPG online for free. Rasterize vector graphics to JPEG images. Set custom resolution.",
+    description: "Convert SVG vector graphics to JPG raster images",
+    icon: "image",
+    howTo: [
+      "Upload your SVG file",
+      "Set output resolution",
+      "Choose JPG quality and background color",
+      "Download your JPG"
+    ],
+    article: {
+      title: "Converting SVG to JPG",
+      content: `Rasterize SVG vectors to JPG for compatibility and fixed-size requirements.
+
+## Rasterization
+
+Convert scalable vectors to pixel-based JPG images.
+
+## Resolution Control
+
+Set exact pixel dimensions for your JPG output.
+
+## Background Color
+
+Choose background color to replace SVG transparency.`,
+      relatedTools: ["svg-to-png", "image-to-svg", "image-converter"]
+    }
+  },
+  {
+    id: "eps-to-png",
+    title: "EPS to PNG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["eps", "png", "convert", "vector"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "EPS to PNG Converter Online Free - Convert EPS to PNG",
+    metaDescription: "Convert EPS to PNG online for free. Rasterize vector EPS files to PNG images. Preserve transparency.",
+    description: "Convert EPS vector files to PNG raster images",
+    icon: "file-image",
+    howTo: [
+      "Upload your EPS file",
+      "Set output resolution",
+      "Choose transparent or solid background",
+      "Download your PNG"
+    ],
+    article: {
+      title: "EPS to PNG Conversion",
+      content: `Convert professional EPS vector files to PNG raster images for web and general use.
+
+## EPS Format
+
+EPS (Encapsulated PostScript) is a professional vector format.
+
+## Resolution Control
+
+Set output resolution for your PNG.
+
+## Transparency Support
+
+Choose transparent or solid background for your PNG.`,
+      relatedTools: ["eps-to-jpg", "svg-to-png", "image-converter"]
+    }
+  },
+  {
+    id: "eps-to-jpg",
+    title: "EPS to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["eps", "jpg", "convert", "vector"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "EPS to JPG Converter Online Free - Convert EPS to JPEG",
+    metaDescription: "Convert EPS to JPG online for free. Rasterize vector EPS files to JPEG images. Professional conversion tool.",
+    description: "Convert EPS vector files to JPG raster images",
+    icon: "file-image",
+    howTo: [
+      "Upload your EPS file",
+      "Set output resolution",
+      "Choose JPG quality and background color",
+      "Download your JPG"
+    ],
+    article: {
+      title: "EPS to JPG Conversion",
+      content: `Convert professional EPS vectors to JPG for compatibility and sharing.
+
+## Professional Format
+
+EPS is used in professional design and print workflows.
+
+## Rasterization Control
+
+Set resolution and quality for optimal results.
+
+## Universal Compatibility
+
+JPG works on all devices and platforms.`,
+      relatedTools: ["eps-to-png", "svg-to-jpg", "image-converter"]
+    }
+  },
+  {
+    id: "psd-to-jpg",
+    title: "PSD to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["psd", "jpg", "photoshop", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PSD to JPG Converter Online Free - Convert Photoshop to JPEG",
+    metaDescription: "Convert PSD to JPG online for free. Flatten Photoshop files to JPEG images. Fast PSD to JPG conversion.",
+    description: "Convert Photoshop PSD files to JPG format",
+    icon: "layers",
+    howTo: [
+      "Upload your PSD file",
+      "Preview flattened image",
+      "Choose JPG quality",
+      "Download your JPG"
+    ],
+    article: {
+      title: "PSD to JPG Conversion",
+      content: `Convert Adobe Photoshop PSD files to universal JPG format for sharing.
+
+## Photoshop Files
+
+PSD files contain layers and editing information.
+
+## Flattening
+
+Conversion flattens all layers into a single JPG image.
+
+## Easy Sharing
+
+JPG format is universally compatible and easy to share.`,
+      relatedTools: ["psd-to-png", "image-converter", "compress-jpg"]
+    }
+  },
+  {
+    id: "psd-to-png",
+    title: "PSD to PNG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["psd", "png", "photoshop", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PSD to PNG Converter Online Free - Convert Photoshop to PNG",
+    metaDescription: "Convert PSD to PNG online for free. Preserve transparency from Photoshop files. Fast PSD to PNG conversion.",
+    description: "Convert Photoshop PSD files to PNG with transparency",
+    icon: "layers",
+    howTo: [
+      "Upload your PSD file",
+      "Preview with transparency",
+      "Click 'Convert to PNG'",
+      "Download your PNG with transparency"
+    ],
+    article: {
+      title: "PSD to PNG Conversion",
+      content: `Convert Photoshop PSD files to PNG while preserving transparency.
+
+## Transparency Preservation
+
+PNG maintains alpha channel transparency from PSD files.
+
+## Layer Flattening
+
+All visible layers are flattened into the final PNG.
+
+## Web-Ready
+
+PNG format is perfect for web graphics with transparency.`,
+      relatedTools: ["psd-to-jpg", "image-converter", "png-to-jpg"]
     }
   }
 ] as const;
