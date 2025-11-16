@@ -8,7 +8,7 @@ interface SEOProps {
 }
 
 export function SEO({ title, description, canonical, ogType = "website" }: SEOProps) {
-  const fullTitle = `${title} | PDF Tools`;
+  const fullTitle = `${title} | PDF & Media Tools`;
   const siteUrl = typeof window !== "undefined" ? window.location.origin : "";
   const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "");
 
@@ -25,7 +25,7 @@ export function SEO({ title, description, canonical, ogType = "website" }: SEOPr
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:site_name" content="PDF Tools" />
+      <meta property="og:site_name" content="PDF & Media Tools" />
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

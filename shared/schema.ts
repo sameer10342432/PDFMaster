@@ -42,7 +42,15 @@ export const toolCategories = [
   "Text Manipulation",
   "Encoding & Decoding",
   "QR Code Tools",
-  "Audio Tools",
+  "Audio Conversion",
+  "Audio Editing",
+  "Audio Effects",
+  "Audio Analysis",
+  "Voice Tools",
+  "Video Conversion",
+  "Video Editing",
+  "Video Compression",
+  "Video Effects",
   "Editor Tools"
 ] as const;
 
@@ -21334,44 +21342,7 @@ Choose exact start and end times to extract the perfect moment.
 ## Optimization
 
 Balance quality and file size for optimal sharing.`,
-      relatedTools: ["gif-maker", "gif-to-mp4", "compress-gif"]
-    }
-  },
-  {
-    id: "gif-to-mp4",
-    title: "GIF to MP4",
-    category: "GIF Tools" as ToolCategory,
-    tags: ["gif", "mp4", "video", "convert"],
-    capability: "coming-soon" as ToolCapability,
-    metaTitle: "GIF to MP4 Converter Online Free - Convert GIF to Video",
-    metaDescription: "Convert GIF to MP4 video online for free. Better quality and smaller file sizes. Fast GIF to MP4 conversion.",
-    description: "Convert GIF animations to MP4 video format",
-    icon: "video",
-    howTo: [
-      "Upload your GIF animation",
-      "Choose video quality settings",
-      "Click 'Convert to MP4'",
-      "Download your MP4 video"
-    ],
-    article: {
-      title: "GIF to MP4 Conversion Benefits",
-      content: `Converting GIFs to MP4 provides better quality, smaller file sizes, and wider compatibility.
-
-## MP4 Advantages
-
-- Smaller file sizes
-- Better quality
-- Wider compatibility
-- Audio support
-
-## When to Convert
-
-Use MP4 for better quality, smaller sizes, or when you need audio support.
-
-## Quality Improvement
-
-MP4's modern codec provides better compression and quality than GIF.`,
-      relatedTools: ["video-to-gif", "gif-maker", "compress-gif"]
+      relatedTools: ["gif-maker", "compress-gif"]
     }
   },
   {
@@ -26505,6 +26476,3173 @@ Shows code differences with proper syntax coloring.
 
 Detailed comparison showing additions, deletions, and modifications.`,
       relatedTools: ["text-difference-checker", "merge-code", "version-control"]
+    }
+  },
+  {
+    id: "m4a-to-mp3",
+    title: "M4A to MP3",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["m4a", "mp3", "audio", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "M4A to MP3 Converter Online Free - Convert M4A Files to MP3",
+    metaDescription: "Convert M4A to MP3 online for free. Fast, high-quality audio conversion. No registration required. Convert unlimited M4A files to MP3 instantly.",
+    description: "Convert M4A audio files to MP3 format with high quality",
+    icon: "music",
+    howTo: [
+      "Upload your M4A audio file",
+      "Select MP3 quality settings",
+      "Click 'Convert to MP3'",
+      "Download your converted MP3 file"
+    ],
+    article: {
+      title: "Convert M4A to MP3 Online Free",
+      content: `Convert M4A audio files to MP3 format for universal compatibility. Our free online tool provides high-quality audio conversion in seconds.
+
+## Why Convert M4A to MP3?
+
+MP3 is the most widely supported audio format, making it perfect for:
+- Playing on any device or media player
+- Sharing audio files with others
+- Using in video editing software
+- Creating music libraries
+- Streaming and uploading online
+
+## High Quality Conversion
+
+Our M4A to MP3 converter maintains audio quality while ensuring broad compatibility. Choose from multiple bitrate options to balance file size and sound quality.
+
+## Fast and Secure
+
+All conversions happen securely in your browser or on our servers with automatic file deletion. Your audio files are never stored permanently, ensuring complete privacy.`,
+      relatedTools: ["mp3-to-m4a", "audio-converter", "compress-audio"]
+    }
+  },
+  {
+    id: "mp3-to-m4a",
+    title: "MP3 to M4A",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["mp3", "m4a", "audio", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MP3 to M4A Converter Online Free - Convert MP3 to M4A Fast",
+    metaDescription: "Convert MP3 to M4A online free. High-quality audio conversion for Apple devices. No software installation needed.",
+    description: "Convert MP3 files to M4A format optimized for Apple devices",
+    icon: "music",
+    howTo: [
+      "Upload your MP3 file",
+      "Configure M4A quality settings",
+      "Click 'Convert to M4A'",
+      "Download your M4A audio file"
+    ],
+    article: {
+      title: "MP3 to M4A Conversion Online",
+      content: `Convert MP3 files to M4A format, which offers better compression and quality, especially for Apple devices and iTunes.
+
+## Benefits of M4A Format
+
+M4A provides advantages over MP3:
+- Better sound quality at similar file sizes
+- Native support on Apple devices
+- Advanced Audio Coding (AAC) technology
+- Smaller file sizes with equivalent quality
+
+## Perfect for Apple Ecosystem
+
+M4A is ideal for:
+- iTunes libraries and Apple Music
+- iPhone and iPad audio files
+- macOS media applications
+- Creating ringtones for iOS devices`,
+      relatedTools: ["m4a-to-mp3", "audio-converter", "compress-m4a"]
+    }
+  },
+  {
+    id: "flac-to-mp3",
+    title: "FLAC to MP3",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["flac", "mp3", "audio", "convert", "lossless"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "FLAC to MP3 Converter Free - Convert Lossless Audio to MP3",
+    metaDescription: "Convert FLAC to MP3 online for free. Transform lossless audio to MP3 format. Fast conversion with quality control.",
+    description: "Convert lossless FLAC files to MP3 format",
+    icon: "disc",
+    howTo: [
+      "Upload your FLAC audio file",
+      "Choose MP3 bitrate (128-320 kbps)",
+      "Convert to MP3 format",
+      "Download your compressed MP3"
+    ],
+    article: {
+      title: "Convert FLAC to MP3 for Universal Playback",
+      content: `Convert high-quality FLAC files to MP3 format for better compatibility across all devices while maintaining excellent audio quality.
+
+## Why Convert FLAC to MP3?
+
+FLAC files are lossless but large. Converting to MP3:
+- Reduces file size significantly
+- Enables playback on all devices
+- Makes sharing easier
+- Saves storage space
+
+## Quality Options
+
+Choose your preferred MP3 bitrate:
+- 128 kbps for smaller files
+- 192 kbps for balanced quality
+- 256 kbps for high quality
+- 320 kbps for maximum quality`,
+      relatedTools: ["mp3-to-flac", "compress-audio", "audio-converter"]
+    }
+  },
+  {
+    id: "mp3-to-flac",
+    title: "MP3 to FLAC",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["mp3", "flac", "audio", "convert", "lossless"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MP3 to FLAC Converter - Convert MP3 to Lossless FLAC Free",
+    metaDescription: "Convert MP3 to FLAC format online for free. Upgrade to lossless audio quality. No registration needed.",
+    description: "Convert MP3 files to lossless FLAC format",
+    icon: "disc-3",
+    howTo: [
+      "Upload MP3 audio file",
+      "Select FLAC compression level",
+      "Click 'Convert to FLAC'",
+      "Download lossless FLAC file"
+    ],
+    article: {
+      title: "Upgrade MP3 to FLAC Format",
+      content: `Convert MP3 files to FLAC format for archival purposes and audiophile applications. Note: This won't restore quality lost in the original MP3 encoding.
+
+## When to Use FLAC
+
+FLAC is ideal for:
+- Audio archiving and preservation
+- Professional audio work
+- Audiophile music collections
+- Lossless music libraries
+
+## Understanding the Conversion
+
+Converting MP3 to FLAC creates a lossless container but cannot restore quality lost during the original MP3 compression. It's best used for preventing further quality loss in future conversions.`,
+      relatedTools: ["flac-to-mp3", "audio-converter", "audio-quality"]
+    }
+  },
+  {
+    id: "ogg-to-mp3",
+    title: "OGG to MP3",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["ogg", "mp3", "audio", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "OGG to MP3 Converter Online Free - Convert OGG Files to MP3",
+    metaDescription: "Convert OGG to MP3 online for free. Fast OGG Vorbis to MP3 conversion with high quality. No software required.",
+    description: "Convert OGG Vorbis files to MP3 format",
+    icon: "file-audio",
+    howTo: [
+      "Upload your OGG file",
+      "Select output quality",
+      "Convert to MP3",
+      "Download converted file"
+    ],
+    article: {
+      title: "OGG to MP3 Conversion Tool",
+      content: `Convert OGG Vorbis audio files to the more compatible MP3 format for universal playback on all devices.
+
+## Why Convert OGG to MP3?
+
+OGG is a great format but MP3 offers:
+- Universal device compatibility
+- Support in all media players
+- Easier file sharing
+- Better software support
+
+## Maintain Audio Quality
+
+Our converter preserves audio quality during conversion, ensuring your music sounds great in MP3 format.`,
+      relatedTools: ["mp3-to-ogg", "audio-converter", "flac-to-mp3"]
+    }
+  },
+  {
+    id: "mp3-to-ogg",
+    title: "MP3 to OGG",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["mp3", "ogg", "audio", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MP3 to OGG Converter Free - Convert MP3 to OGG Vorbis",
+    metaDescription: "Convert MP3 to OGG format online for free. Create OGG Vorbis files from MP3. Fast, secure conversion.",
+    description: "Convert MP3 files to OGG Vorbis format",
+    icon: "file-audio",
+    howTo: [
+      "Upload MP3 file",
+      "Choose OGG quality settings",
+      "Click 'Convert to OGG'",
+      "Download OGG file"
+    ],
+    article: {
+      title: "Convert MP3 to OGG Vorbis",
+      content: `Convert MP3 files to OGG Vorbis format, an open-source alternative that offers excellent quality and compression.
+
+## Advantages of OGG
+
+OGG Vorbis provides:
+- Better quality at lower bitrates
+- Open-source format
+- No licensing restrictions
+- Smaller file sizes
+
+## Use Cases
+
+OGG is perfect for:
+- Web applications and games
+- Open-source projects
+- Streaming applications
+- Audio where licensing matters`,
+      relatedTools: ["ogg-to-mp3", "audio-converter", "compress-audio"]
+    }
+  },
+  {
+    id: "aac-to-mp3",
+    title: "AAC to MP3",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["aac", "mp3", "audio", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "AAC to MP3 Converter Online Free - Convert AAC Files to MP3",
+    metaDescription: "Convert AAC to MP3 online for free. Fast AAC to MP3 conversion with high quality audio output. No registration needed.",
+    description: "Convert AAC audio files to MP3 format",
+    icon: "music-2",
+    howTo: [
+      "Upload your AAC audio file",
+      "Select MP3 quality preference",
+      "Click 'Convert to MP3'",
+      "Download your MP3 file"
+    ],
+    article: {
+      title: "AAC to MP3 Converter Online",
+      content: `Convert AAC (Advanced Audio Coding) files to MP3 for broader compatibility across devices and media players.
+
+## When to Convert AAC to MP3
+
+Convert AAC to MP3 when you need:
+- Compatibility with older devices
+- Universal media player support
+- Easier file sharing
+- Wider software compatibility
+
+## Quality Preservation
+
+Our converter maintains high audio quality during AAC to MP3 conversion, ensuring your music and audio files sound great.`,
+      relatedTools: ["mp3-to-aac", "m4a-to-mp3", "audio-converter"]
+    }
+  },
+  {
+    id: "mp3-to-aac",
+    title: "MP3 to AAC",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["mp3", "aac", "audio", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MP3 to AAC Converter Free - Convert MP3 to AAC Online",
+    metaDescription: "Convert MP3 to AAC format online for free. Better compression and quality. Fast MP3 to AAC conversion tool.",
+    description: "Convert MP3 files to AAC format",
+    icon: "music-2",
+    howTo: [
+      "Upload MP3 file",
+      "Select AAC bitrate",
+      "Convert to AAC",
+      "Download AAC file"
+    ],
+    article: {
+      title: "MP3 to AAC Conversion",
+      content: `Convert MP3 files to AAC (Advanced Audio Coding) format for better compression efficiency and audio quality.
+
+## AAC Advantages
+
+AAC offers improvements over MP3:
+- Better sound quality at same bitrate
+- More efficient compression
+- Native support on Apple devices
+- Improved frequency response
+
+## Ideal Use Cases
+
+AAC is perfect for:
+- iTunes and Apple Music
+- Streaming applications
+- Modern audio projects
+- Mobile device playback`,
+      relatedTools: ["aac-to-mp3", "mp3-to-m4a", "audio-converter"]
+    }
+  },
+  {
+    id: "video-to-mp3",
+    title: "Video to MP3",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["video", "mp3", "extract", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video to MP3 Converter Free - Extract Audio from Video Online",
+    metaDescription: "Extract MP3 audio from video files online for free. Convert video to MP3 quickly. Supports MP4, AVI, MOV and more.",
+    description: "Extract audio from video files and save as MP3",
+    icon: "video",
+    howTo: [
+      "Upload your video file",
+      "Select MP3 quality (bitrate)",
+      "Click 'Extract Audio'",
+      "Download MP3 audio file"
+    ],
+    article: {
+      title: "Extract MP3 Audio from Videos",
+      content: `Extract audio tracks from video files and save them as MP3 files. Perfect for creating music files, podcasts, or audiobooks from video content.
+
+## Why Extract Audio from Video?
+
+Video to MP3 conversion is useful for:
+- Creating music files from music videos
+- Extracting podcast audio from video
+- Converting lectures to audio format
+- Saving audio from recordings
+- Creating audiobooks from video courses
+
+## Supported Video Formats
+
+Extract audio from:
+- MP4 videos
+- AVI files
+- MOV (QuickTime)
+- MKV files
+- WebM videos
+- And many more formats
+
+## Quality Control
+
+Choose your preferred audio quality from 128 kbps to 320 kbps to balance file size and sound quality based on your needs.`,
+      relatedTools: ["mp4-to-mp3", "remove-audio-from-video", "audio-converter"]
+    }
+  },
+  {
+    id: "mp4-to-mp3",
+    title: "MP4 to MP3",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["mp4", "mp3", "video", "audio", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MP4 to MP3 Converter Free - Extract MP3 from MP4 Video Online",
+    metaDescription: "Convert MP4 to MP3 online for free. Extract audio from MP4 videos quickly. High-quality MP3 extraction tool.",
+    description: "Extract MP3 audio from MP4 video files",
+    icon: "file-video",
+    howTo: [
+      "Upload MP4 video file",
+      "Choose audio quality",
+      "Click 'Convert to MP3'",
+      "Download extracted MP3"
+    ],
+    article: {
+      title: "Extract MP3 from MP4 Videos",
+      content: `Convert MP4 video files to MP3 audio format quickly and easily. Extract the audio track from your MP4 videos for music, podcasts, or audio archiving.
+
+## Common Uses
+
+MP4 to MP3 conversion is perfect for:
+- Extracting music from music videos
+- Converting video podcasts to audio
+- Creating audio versions of tutorials
+- Saving speeches and presentations as audio
+- Building audio libraries from video content
+
+## Fast Processing
+
+Our MP4 to MP3 converter processes files quickly, extracting high-quality audio while maintaining the original sound quality from your video.`,
+      relatedTools: ["video-to-mp3", "avi-to-mp3", "mov-to-mp3"]
+    }
+  },
+  {
+    id: "avi-to-mp3",
+    title: "AVI to MP3",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["avi", "mp3", "video", "audio", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "AVI to MP3 Converter Online Free - Extract Audio from AVI",
+    metaDescription: "Convert AVI to MP3 online for free. Extract audio from AVI videos. Fast and secure AVI to MP3 conversion.",
+    description: "Extract MP3 audio from AVI video files",
+    icon: "film",
+    howTo: [
+      "Upload AVI video file",
+      "Select MP3 bitrate",
+      "Convert to MP3",
+      "Download MP3 audio"
+    ],
+    article: {
+      title: "AVI to MP3 Audio Extraction",
+      content: `Extract high-quality MP3 audio from AVI video files. Perfect for converting old video recordings to audio format.
+
+## Why Extract from AVI?
+
+AVI is a common legacy video format. Extract audio to:
+- Create music files from old video recordings
+- Archive audio from vintage content
+- Save space by keeping only audio
+- Convert for modern audio players
+
+## Quality Retention
+
+Our converter preserves the audio quality from your AVI files while creating universally compatible MP3 files.`,
+      relatedTools: ["mp4-to-mp3", "video-to-mp3", "mov-to-mp3"]
+    }
+  },
+  {
+    id: "mov-to-mp3",
+    title: "MOV to MP3",
+    category: "Audio Conversion" as ToolCategory,
+    tags: ["mov", "mp3", "quicktime", "audio", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MOV to MP3 Converter Free - Extract Audio from MOV Files",
+    metaDescription: "Convert MOV to MP3 online for free. Extract audio from QuickTime videos. Fast MOV to MP3 conversion tool.",
+    description: "Extract MP3 audio from MOV QuickTime files",
+    icon: "film",
+    howTo: [
+      "Upload MOV/QuickTime file",
+      "Choose audio quality",
+      "Extract to MP3",
+      "Download MP3 file"
+    ],
+    article: {
+      title: "MOV to MP3 Conversion Tool",
+      content: `Convert MOV (QuickTime) video files to MP3 audio format. Extract high-quality audio from your QuickTime videos for easy playback and sharing.
+
+## MOV File Compatibility
+
+MOV files are common from:
+- iPhone and iPad recordings
+- macOS screen recordings
+- QuickTime video captures
+- Professional video cameras
+- Screen recording software
+
+## Audio Extraction Benefits
+
+Extract MP3 from MOV to:
+- Play audio on any device
+- Create podcasts from video
+- Save storage space
+- Share audio easily`,
+      relatedTools: ["mp4-to-mp3", "video-to-mp3", "avi-to-mp3"]
+    }
+  },
+  {
+    id: "cut-audio",
+    title: "Cut Audio",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["cut", "trim", "edit", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Cut Audio Online Free - Audio Cutter Tool",
+    metaDescription: "Cut audio files online for free. Precise audio cutting tool. Trim MP3, WAV, and other audio formats. No software needed.",
+    description: "Cut and trim audio files with precision",
+    icon: "scissors",
+    howTo: [
+      "Upload your audio file",
+      "Select the section to cut",
+      "Preview your selection",
+      "Download trimmed audio"
+    ],
+    article: {
+      title: "Cut Audio Files Online",
+      content: `Cut and trim audio files with precision using our free online audio cutter. Perfect for creating ringtones, removing unwanted sections, or extracting specific parts.
+
+## Audio Cutting Uses
+
+Cut audio for:
+- Creating ringtones and notifications
+- Removing silence or unwanted parts
+- Extracting specific sections
+- Preparing audio for projects
+- Making audio clips from songs
+
+## Precise Control
+
+Use our intuitive timeline to select exactly which parts of your audio to keep. Zoom in for frame-accurate cuts.
+
+## All Audio Formats
+
+Cut any audio format:
+- MP3 files
+- WAV audio
+- M4A files
+- OGG and FLAC
+- AAC and more`,
+      relatedTools: ["trim-audio", "merge-audio", "split-audio"]
+    }
+  },
+  {
+    id: "trim-audio",
+    title: "Trim Audio",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["trim", "cut", "edit", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Trim Audio Online Free - Audio Trimmer Tool",
+    metaDescription: "Trim audio files online for free. Easy audio trimming with visual waveform. Cut MP3, WAV and more. No registration.",
+    description: "Trim audio files to exact length",
+    icon: "move-horizontal",
+    howTo: [
+      "Upload audio file",
+      "Set start and end points",
+      "Preview trimmed audio",
+      "Save trimmed file"
+    ],
+    article: {
+      title: "Trim Audio Files Precisely",
+      content: `Trim audio files to the exact length you need with our easy-to-use online audio trimmer. Remove unwanted beginnings, endings, or middle sections.
+
+## When to Trim Audio
+
+Trim audio for:
+- Removing silence from recordings
+- Creating shorter clips
+- Preparing audio for presentations
+- Making ringtones
+- Editing podcasts
+
+## Visual Waveform
+
+See your audio's waveform to make precise cuts. Zoom in to trim with millisecond accuracy.`,
+      relatedTools: ["cut-audio", "audio-cutter", "split-audio"]
+    }
+  },
+  {
+    id: "audio-trimmer",
+    title: "Audio Trimmer",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["trim", "cut", "edit", "audio", "trimmer"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Audio Trimmer Online - Trim Audio Files Free",
+    metaDescription: "Professional audio trimmer online. Trim MP3, WAV, and all audio formats free. Easy timeline editing with waveform display.",
+    description: "Professional audio trimming with waveform visualization",
+    icon: "waveform",
+    howTo: [
+      "Upload your audio",
+      "Use waveform to select range",
+      "Preview your trim",
+      "Download trimmed audio"
+    ],
+    article: {
+      title: "Professional Audio Trimming Tool",
+      content: `Our audio trimmer provides professional-grade editing capabilities with an easy-to-use interface. Perfect for musicians, podcasters, and content creators.
+
+## Advanced Features
+
+Professional trimming with:
+- Waveform visualization
+- Zoom controls for precision
+- Fade in/out options
+- Multiple format support
+- Batch processing
+
+## Use Cases
+
+Perfect for:
+- Podcast editing
+- Music production
+- Voice-over trimming
+- Sound effect creation
+- Audio book editing`,
+      relatedTools: ["cut-audio", "trim-audio", "audio-editor"]
+    }
+  },
+  {
+    id: "merge-audio",
+    title: "Merge Audio",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["merge", "combine", "join", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Merge Audio Files Online Free - Audio Merger Tool",
+    metaDescription: "Merge multiple audio files into one online for free. Combine MP3, WAV files easily. Fast audio merging with no quality loss.",
+    description: "Combine multiple audio files into one",
+    icon: "combine",
+    howTo: [
+      "Upload multiple audio files",
+      "Arrange them in desired order",
+      "Click 'Merge Audio'",
+      "Download combined file"
+    ],
+    article: {
+      title: "Merge Audio Files Together",
+      content: `Combine multiple audio files into a single track with our free audio merger. Perfect for creating playlists, podcasts, or continuous audio.
+
+## Merging Use Cases
+
+Merge audio files for:
+- Creating podcast episodes from segments
+- Combining music tracks into mixes
+- Joining voice recordings
+- Making audiobooks from chapters
+- Building continuous audio presentations
+
+## Seamless Joining
+
+Our tool ensures smooth transitions between files, with options to add crossfades or silence between tracks.
+
+## Format Flexibility
+
+Merge different audio formats together - our tool automatically handles conversion to create a unified output file.`,
+      relatedTools: ["combine-audio", "audio-joiner", "join-audio"]
+    }
+  },
+  {
+    id: "combine-audio",
+    title: "Combine Audio Files",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["combine", "merge", "join", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Combine Audio Files Online Free - Audio Combiner",
+    metaDescription: "Combine audio files online for free. Join multiple audio tracks into one. Supports all audio formats. No software required.",
+    description: "Join multiple audio tracks into a single file",
+    icon: "layers",
+    howTo: [
+      "Select audio files to combine",
+      "Order tracks as needed",
+      "Add transitions if desired",
+      "Download combined audio"
+    ],
+    article: {
+      title: "Combine Multiple Audio Files",
+      content: `Our audio combiner makes it easy to join multiple audio files into one continuous track. Ideal for creating playlists, compilations, and professional audio projects.
+
+## Professional Audio Combining
+
+Combine audio with:
+- Crossfade transitions
+- Custom gap settings
+- Volume normalization
+- Format conversion
+- Quality preservation
+
+## Common Uses
+
+Perfect for:
+- Music compilations and DJ mixes
+- Podcast production
+- Audiobook creation
+- Presentation audio tracks
+- Educational content`,
+      relatedTools: ["merge-audio", "audio-joiner", "join-audio-files"]
+    }
+  },
+  {
+    id: "audio-joiner",
+    title: "Audio Joiner",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["join", "merge", "combine", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Audio Joiner Online Free - Join Audio Files Together",
+    metaDescription: "Join audio files online for free. Combine multiple audio tracks seamlessly. Easy audio joining tool. No registration needed.",
+    description: "Join audio files together seamlessly",
+    icon: "link",
+    howTo: [
+      "Upload audio files to join",
+      "Arrange in join order",
+      "Configure transition settings",
+      "Download joined audio"
+    ],
+    article: {
+      title: "Join Audio Files Seamlessly",
+      content: `Join multiple audio files into one seamless track. Our audio joiner handles all popular formats and provides professional results.
+
+## Seamless Joining
+
+Create smooth audio with:
+- Automatic fade transitions
+- Gap elimination
+- Volume matching
+- Quality preservation
+- Format flexibility
+
+## Use Cases
+
+Join audio for:
+- Creating continuous music mixes
+- Assembling podcast episodes
+- Building audio presentations
+- Making compilation albums
+- Educational audio content`,
+      relatedTools: ["merge-audio", "combine-audio", "audio-mixer"]
+    }
+  },
+  {
+    id: "change-audio-volume",
+    title: "Change Audio Volume",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["volume", "adjust", "amplify", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Change Audio Volume Online Free - Adjust Audio Levels",
+    metaDescription: "Change audio volume online for free. Increase or decrease audio levels. Simple volume adjustment tool. No software needed.",
+    description: "Adjust audio volume levels up or down",
+    icon: "volume-2",
+    howTo: [
+      "Upload your audio file",
+      "Adjust volume slider",
+      "Preview the changes",
+      "Download adjusted audio"
+    ],
+    article: {
+      title: "Adjust Audio Volume Online",
+      content: `Change audio volume levels with precision using our free online tool. Increase quiet recordings or decrease loud audio to the perfect level.
+
+## Volume Adjustment
+
+Control your audio with:
+- Percentage-based adjustment
+- Decibel (dB) control
+- Real-time preview
+- Quality preservation
+- Batch processing
+
+## Common Uses
+
+Adjust volume for:
+- Fixing quiet recordings
+- Normalizing audio levels
+- Preparing for mixing
+- Meeting broadcast standards
+- Improving audio consistency`,
+      relatedTools: ["increase-audio-volume", "decrease-audio-volume", "audio-normalizer"]
+    }
+  },
+  {
+    id: "increase-audio-volume",
+    title: "Increase Audio Volume",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["volume", "increase", "amplify", "boost"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Increase Audio Volume Online Free - Make Audio Louder",
+    metaDescription: "Increase audio volume online for free. Make quiet audio louder. Amplify audio files without distortion. Easy volume booster.",
+    description: "Boost audio volume and make files louder",
+    icon: "volume-x",
+    howTo: [
+      "Upload quiet audio file",
+      "Set desired volume increase",
+      "Preview boosted audio",
+      "Save louder audio file"
+    ],
+    article: {
+      title: "Increase Audio Volume Safely",
+      content: `Make quiet audio files louder without introducing distortion. Our volume booster intelligently amplifies audio while maintaining quality.
+
+## Smart Amplification
+
+Increase volume with:
+- Automatic gain control
+- Distortion prevention
+- Peak limiting
+- Quality preservation
+- Custom boost levels
+
+## When to Boost Volume
+
+Increase audio for:
+- Quiet voice recordings
+- Low-volume music files
+- Whispered content
+- Distant recordings
+- Soft-spoken audio`,
+      relatedTools: ["change-audio-volume", "audio-normalizer", "audio-amplifier"]
+    }
+  },
+  {
+    id: "decrease-audio-volume",
+    title: "Decrease Audio Volume",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["volume", "decrease", "reduce", "quiet"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Decrease Audio Volume Online Free - Reduce Audio Levels",
+    metaDescription: "Decrease audio volume online for free. Make loud audio quieter. Simple volume reducer tool. No registration required.",
+    description: "Reduce audio volume and make files quieter",
+    icon: "volume-1",
+    howTo: [
+      "Upload loud audio file",
+      "Set volume reduction level",
+      "Preview quieter audio",
+      "Download reduced audio"
+    ],
+    article: {
+      title: "Decrease Audio Volume Online",
+      content: `Reduce audio volume levels for loud files. Perfect for matching audio levels, preventing distortion, or creating quieter versions.
+
+## Volume Reduction
+
+Decrease audio with:
+- Precise control
+- No quality loss
+- Real-time preview
+- Batch processing
+- Multiple format support
+
+## Use Cases
+
+Reduce volume for:
+- Matching audio levels
+- Creating background music
+- Preventing speaker damage
+- Meeting volume limits
+- Audio mixing preparation`,
+      relatedTools: ["change-audio-volume", "audio-normalizer", "audio-compressor"]
+    }
+  },
+  {
+    id: "change-audio-speed",
+    title: "Change Audio Speed",
+    category: "Audio Effects" as ToolCategory,
+    tags: ["speed", "tempo", "fast", "slow"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Change Audio Speed Online Free - Speed Up or Slow Down Audio",
+    metaDescription: "Change audio speed online for free. Speed up or slow down audio without changing pitch. Easy tempo adjustment tool.",
+    description: "Adjust audio playback speed without changing pitch",
+    icon: "gauge",
+    howTo: [
+      "Upload your audio file",
+      "Adjust speed slider (0.5x to 2x)",
+      "Preview speed change",
+      "Download modified audio"
+    ],
+    article: {
+      title: "Adjust Audio Speed Online",
+      content: `Change audio playback speed without affecting pitch. Perfect for learning, accessibility, and creative audio projects.
+
+## Speed Control
+
+Adjust speed with:
+- Range from 0.5x to 2x
+- Pitch preservation
+- Quality maintenance
+- Real-time preview
+- Precise control
+
+## Common Uses
+
+Change speed for:
+- Language learning
+- Transcription work
+- Accessibility needs
+- Time-stretching music
+- Podcast consumption`,
+      relatedTools: ["audio-speed-changer", "change-audio-pitch", "time-stretch"]
+    }
+  },
+  {
+    id: "audio-speed-changer",
+    title: "Audio Speed Changer",
+    category: "Audio Effects" as ToolCategory,
+    tags: ["speed", "tempo", "change", "adjust"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Audio Speed Changer Online - Change Tempo Without Pitch Shift",
+    metaDescription: "Professional audio speed changer. Adjust tempo without changing pitch. Free online tool for speed modification.",
+    description: "Professional audio speed modification tool",
+    icon: "timer",
+    howTo: [
+      "Upload audio file",
+      "Set exact speed percentage",
+      "Maintain pitch checkbox",
+      "Download speed-changed audio"
+    ],
+    article: {
+      title: "Professional Audio Speed Changing",
+      content: `Change audio speed professionally with our advanced tempo adjustment tool. Ideal for musicians, content creators, and accessibility.
+
+## Advanced Speed Control
+
+Professional features:
+- Precise percentage control
+- Pitch preservation option
+- Time-stretching algorithm
+- Quality preservation
+- Batch processing
+
+## Applications
+
+Use speed changing for:
+- DJ mixing and remixing
+- Dance practice recordings
+- Instrument practice
+- Accessibility features
+- Content consumption`,
+      relatedTools: ["change-audio-speed", "audio-pitch-shifter", "tempo-changer"]
+    }
+  },
+  {
+    id: "change-audio-pitch",
+    title: "Change Audio Pitch",
+    category: "Audio Effects" as ToolCategory,
+    tags: ["pitch", "transpose", "key", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Change Audio Pitch Online Free - Pitch Shifter Tool",
+    metaDescription: "Change audio pitch online for free. Transpose music to different keys. Professional pitch shifting without changing speed.",
+    description: "Shift audio pitch up or down without changing speed",
+    icon: "music-4",
+    howTo: [
+      "Upload audio file",
+      "Adjust pitch in semitones",
+      "Preview pitch shift",
+      "Download transposed audio"
+    ],
+    article: {
+      title: "Change Audio Pitch Online",
+      content: `Shift audio pitch without changing playback speed. Perfect for transposing music, voice modification, and creative audio effects.
+
+## Pitch Shifting
+
+Professional pitch control:
+- Semitone adjustment
+- Speed preservation
+- Quality algorithms
+- Real-time preview
+- Key transposition
+
+## Use Cases
+
+Change pitch for:
+- Transposing music to match vocals
+- Voice effect creation
+- Instrument practice
+- DJ mixing
+- Creative audio production`,
+      relatedTools: ["audio-pitch-shifter", "transpose-audio", "voice-changer"]
+    }
+  },
+  {
+    id: "audio-pitch-shifter",
+    title: "Audio Pitch Shifter",
+    category: "Audio Effects" as ToolCategory,
+    tags: ["pitch", "shift", "transpose", "key"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Audio Pitch Shifter Online - Transpose Audio Free",
+    metaDescription: "Professional pitch shifter online for free. Transpose audio to any key. High-quality pitch shifting without speed change.",
+    description: "Professional pitch shifting and transposition tool",
+    icon: "sliders",
+    howTo: [
+      "Upload your audio",
+      "Set pitch shift in semitones",
+      "Maintain tempo setting",
+      "Save pitch-shifted audio"
+    ],
+    article: {
+      title: "Professional Audio Pitch Shifting",
+      content: `Professional-grade pitch shifting for musicians, producers, and audio engineers. Transpose audio while maintaining natural quality.
+
+## Advanced Features
+
+Professional pitch shifting:
+- Semitone precision
+- Formant preservation
+- Tempo independence
+- High-quality algorithms
+- Batch processing
+
+## Applications
+
+Perfect for:
+- Music transposition
+- Vocal pitch correction
+- Karaoke key adjustment
+- Instrument tuning
+- Audio mastering`,
+      relatedTools: ["change-audio-pitch", "transpose-music", "audio-effects"]
+    }
+  },
+  {
+    id: "reverse-audio",
+    title: "Reverse Audio",
+    category: "Audio Effects" as ToolCategory,
+    tags: ["reverse", "backwards", "flip", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Reverse Audio Online Free - Play Audio Backwards",
+    metaDescription: "Reverse audio files online for free. Create backwards audio effects. Simple audio reverser tool. No software needed.",
+    description: "Reverse audio to play backwards",
+    icon: "redo",
+    howTo: [
+      "Upload audio file",
+      "Click 'Reverse Audio'",
+      "Preview reversed audio",
+      "Download backwards audio"
+    ],
+    article: {
+      title: "Reverse Audio Files Online",
+      content: `Reverse audio files to create backwards playback effects. Perfect for creative projects, hidden messages, and unique audio effects.
+
+## Audio Reversal
+
+Create reversed audio for:
+- Creative sound effects
+- Music production
+- Film and video effects
+- Experimental audio
+- Mystery and suspense
+
+## Applications
+
+Use reversed audio in:
+- Music tracks and transitions
+- Horror and thriller soundtracks
+- Psychedelic effects
+- Audio puzzles
+- Creative storytelling`,
+      relatedTools: ["audio-reverser", "audio-effects", "sound-effects"]
+    }
+  },
+  {
+    id: "audio-reverser",
+    title: "Audio Reverser",
+    category: "Audio Effects" as ToolCategory,
+    tags: ["reverse", "backwards", "flip", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Audio Reverser Tool - Reverse Audio Files Online Free",
+    metaDescription: "Reverse audio online with our audio reverser. Create backwards audio effects instantly. Free tool with all format support.",
+    description: "Professional audio reversal tool",
+    icon: "rotate-ccw",
+    howTo: [
+      "Upload any audio file",
+      "Process reversal",
+      "Listen to preview",
+      "Save reversed audio"
+    ],
+    article: {
+      title: "Professional Audio Reversal",
+      content: `Our audio reverser creates professional backwards audio effects with high quality output. Used by musicians, producers, and sound designers.
+
+## Creative Uses
+
+Audio reversal for:
+- Reverse cymbal effects
+- Backwards vocal swells
+- Atmospheric soundscapes
+- Transition effects
+- Experimental music
+
+## Quality Processing
+
+Professional reversal with:
+- Quality preservation
+- All format support
+- Fast processing
+- No artifacts
+- Instant preview`,
+      relatedTools: ["reverse-audio", "audio-effects", "sound-design"]
+    }
+  },
+  {
+    id: "audio-equalizer",
+    title: "Audio Equalizer",
+    category: "Audio Effects" as ToolCategory,
+    tags: ["equalizer", "eq", "bass", "treble"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Audio Equalizer Online Free - EQ Your Audio Files",
+    metaDescription: "Equalize audio online for free. Adjust bass, treble, and mid frequencies. Professional audio EQ tool. No software required.",
+    description: "Adjust audio frequencies with equalizer",
+    icon: "sliders-horizontal",
+    howTo: [
+      "Upload audio file",
+      "Adjust EQ bands (bass, mid, treble)",
+      "Preview equalized audio",
+      "Download processed audio"
+    ],
+    article: {
+      title: "Audio Equalization Online",
+      content: `Adjust audio frequencies with our professional equalizer tool. Perfect for enhancing music, improving voice recordings, and audio mastering.
+
+## EQ Controls
+
+Professional equalization:
+- Multiple frequency bands
+- Visual frequency response
+- Preset configurations
+- Real-time preview
+- Quality preservation
+
+## Common Uses
+
+Equalize audio for:
+- Enhancing music quality
+- Improving voice clarity
+- Removing unwanted frequencies
+- Audio mastering
+- Podcast production`,
+      relatedTools: ["audio-enhancer", "bass-booster", "treble-enhancer"]
+    }
+  },
+  {
+    id: "add-audio-to-video",
+    title: "Add Audio to Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["audio", "video", "combine", "add"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Audio to Video Online Free - Replace Video Audio",
+    metaDescription: "Add audio to video files online for free. Replace or add background music to videos. Easy video audio editor.",
+    description: "Add or replace audio track in video files",
+    icon: "file-plus-2",
+    howTo: [
+      "Upload video file",
+      "Upload audio file",
+      "Choose mix or replace option",
+      "Download video with new audio"
+    ],
+    article: {
+      title: "Add Audio Tracks to Videos",
+      content: `Add background music, voiceovers, or replace audio in video files. Perfect for video editing, content creation, and audio enhancement.
+
+## Audio Addition Options
+
+Add audio with:
+- Replace original audio
+- Mix with existing audio
+- Volume balance control
+- Sync timing adjustment
+- Multiple audio layers
+
+## Use Cases
+
+Add audio to videos for:
+- Adding background music
+- Inserting voice-overs
+- Replacing poor audio
+- Creating music videos
+- Enhancing presentations`,
+      relatedTools: ["remove-audio-from-video", "replace-video-audio", "video-editor"]
+    }
+  },
+  {
+    id: "remove-audio-from-video",
+    title: "Remove Audio from Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["remove", "audio", "video", "mute"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Remove Audio from Video Online Free - Mute Video Audio",
+    metaDescription: "Remove audio from video files online for free. Mute videos instantly. Extract silent video. No software needed.",
+    description: "Remove audio track from video files",
+    icon: "volume-x",
+    howTo: [
+      "Upload video file",
+      "Click 'Remove Audio'",
+      "Preview silent video",
+      "Download muted video"
+    ],
+    article: {
+      title: "Remove Audio from Videos",
+      content: `Remove audio tracks from video files to create silent videos. Perfect for adding your own audio, creating GIFs, or removing unwanted sound.
+
+## Why Remove Audio?
+
+Remove audio to:
+- Add your own audio track
+- Create silent videos for social media
+- Remove copyrighted music
+- Prepare for voice-over
+- Convert to GIF format
+
+## Quick Processing
+
+Fast audio removal with:
+- One-click operation
+- All video format support
+- Quality preservation
+- No re-encoding needed
+- Instant download`,
+      relatedTools: ["mute-video", "add-audio-to-video", "extract-video"]
+    }
+  },
+  {
+    id: "mute-video",
+    title: "Mute Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["mute", "silent", "video", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Mute Video Online Free - Create Silent Videos",
+    metaDescription: "Mute video online for free. Remove sound from videos instantly. Create silent videos for any purpose. Fast and easy.",
+    description: "Mute video and create silent video files",
+    icon: "mic-off",
+    howTo: [
+      "Upload video",
+      "Click 'Mute'",
+      "Preview silent video",
+      "Save muted video"
+    ],
+    article: {
+      title: "Mute Videos Online",
+      content: `Create silent videos by muting audio tracks. Perfect for social media, presentations, or adding custom audio later.
+
+## Muting Applications
+
+Mute videos for:
+- Social media posts
+- Presentation slides
+- Background videos
+- Preparing for voice-over
+- GIF creation
+
+## Fast and Simple
+
+Quick muting with:
+- One-click process
+- Quality preservation
+- All formats supported
+- No re-encoding
+- Instant results`,
+      relatedTools: ["remove-audio-from-video", "silent-video", "video-editor"]
+    }
+  },
+  {
+    id: "voice-recorder",
+    title: "Voice Recorder",
+    category: "Voice Tools" as ToolCategory,
+    tags: ["record", "voice", "audio", "microphone"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Voice Recorder Online Free - Record Audio from Microphone",
+    metaDescription: "Record voice online for free. Simple voice recorder with microphone input. Save recordings as MP3. No installation needed.",
+    description: "Record voice and audio from your microphone",
+    icon: "mic",
+    howTo: [
+      "Click 'Start Recording'",
+      "Speak into your microphone",
+      "Click 'Stop' when finished",
+      "Download your recording"
+    ],
+    article: {
+      title: "Online Voice Recorder Tool",
+      content: `Record your voice directly in your browser with our free online voice recorder. Perfect for memos, podcasts, music, and voice notes.
+
+## Recording Features
+
+Professional recording with:
+- High-quality microphone input
+- Real-time waveform display
+- Pause and resume
+- Unlimited recording time
+- Multiple export formats
+
+## Use Cases
+
+Record voice for:
+- Voice memos and notes
+- Podcast episodes
+- Music and singing
+- Interviews
+- Language practice`,
+      relatedTools: ["online-voice-recorder", "audio-recorder", "screen-recorder"]
+    }
+  },
+  {
+    id: "online-voice-recorder",
+    title: "Online Voice Recorder",
+    category: "Voice Tools" as ToolCategory,
+    tags: ["voice", "record", "online", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Voice Recorder - Record Voice in Browser Free",
+    metaDescription: "Record voice online with our browser-based recorder. High-quality audio recording. Save as MP3 or WAV. Free and easy.",
+    description: "Browser-based voice recording tool",
+    icon: "radio",
+    howTo: [
+      "Allow microphone access",
+      "Press record button",
+      "Speak your message",
+      "Save recording as MP3/WAV"
+    ],
+    article: {
+      title: "Record Voice in Your Browser",
+      content: `Record high-quality voice audio directly in your web browser. No software installation required, works on all devices.
+
+## Browser Recording
+
+Record anywhere with:
+- No software needed
+- Works on all browsers
+- Mobile compatible
+- Cloud saving option
+- Instant playback
+
+## Applications
+
+Perfect for:
+- Quick voice notes
+- Remote interviews
+- Podcast recording
+- Music demos
+- Voice messages`,
+      relatedTools: ["voice-recorder", "audio-recorder", "microphone-test"]
+    }
+  },
+  {
+    id: "text-to-speech",
+    title: "Text to Speech",
+    category: "Voice Tools" as ToolCategory,
+    tags: ["tts", "text", "speech", "voice"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Text to Speech Online Free - Convert Text to Voice",
+    metaDescription: "Convert text to speech online for free. Natural-sounding text-to-speech with multiple voices. Download as MP3 audio.",
+    description: "Convert written text to natural speech audio",
+    icon: "message-square",
+    howTo: [
+      "Enter or paste your text",
+      "Select voice and language",
+      "Click 'Generate Speech'",
+      "Download audio file"
+    ],
+    article: {
+      title: "Text to Speech Converter",
+      content: `Convert text to natural-sounding speech with our advanced text-to-speech tool. Perfect for accessibility, content creation, and learning.
+
+## TTS Features
+
+Professional text-to-speech:
+- Multiple natural voices
+- Various languages supported
+- Adjustable speech rate
+- Pitch control
+- Download as MP3
+
+## Use Cases
+
+Create speech audio for:
+- Audiobooks and narration
+- Accessibility features
+- Language learning
+- Video voice-overs
+- Podcast automation`,
+      relatedTools: ["speech-to-text", "voice-generator", "audio-creator"]
+    }
+  },
+  {
+    id: "speech-to-text",
+    title: "Speech to Text",
+    category: "Voice Tools" as ToolCategory,
+    tags: ["stt", "speech", "text", "transcribe"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Speech to Text Online Free - Audio Transcription Tool",
+    metaDescription: "Convert speech to text online for free. Automatic audio transcription. Transcribe recordings to text. Fast and accurate.",
+    description: "Transcribe speech audio to written text",
+    icon: "file-text",
+    howTo: [
+      "Upload audio file or record",
+      "Select language",
+      "Click 'Transcribe'",
+      "Download text transcript"
+    ],
+    article: {
+      title: "Speech to Text Transcription",
+      content: `Automatically transcribe speech to text with our advanced speech recognition tool. Perfect for meetings, interviews, and content creation.
+
+## Transcription Features
+
+Accurate speech-to-text:
+- Automatic transcription
+- Multiple language support
+- Timestamp inclusion
+- Speaker identification
+- Editable output
+
+## Applications
+
+Transcribe audio for:
+- Meeting minutes
+- Interview documentation
+- Podcast show notes
+- Video subtitles
+- Content accessibility`,
+      relatedTools: ["audio-to-text", "transcribe-audio", "text-to-speech"]
+    }
+  },
+  {
+    id: "audio-to-text",
+    title: "Audio to Text",
+    category: "Voice Tools" as ToolCategory,
+    tags: ["audio", "text", "transcribe", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Audio to Text Converter Free - Transcribe Audio Online",
+    metaDescription: "Convert audio to text online for free. Automatic audio transcription tool. Transcribe MP3, WAV and more to text.",
+    description: "Convert audio files to text transcripts",
+    icon: "captions",
+    howTo: [
+      "Upload audio file",
+      "Choose transcription language",
+      "Start transcription",
+      "Edit and download text"
+    ],
+    article: {
+      title: "Audio to Text Conversion",
+      content: `Convert audio recordings to text automatically with our advanced transcription tool. Save time on manual transcription.
+
+## Transcription Quality
+
+High-quality conversion:
+- Accurate speech recognition
+- Punctuation detection
+- Speaker separation
+- Timestamp support
+- Export formats (TXT, SRT, VTT)
+
+## Use Cases
+
+Convert audio to text for:
+- Podcast transcripts
+- Meeting notes
+- Interview documentation
+- Video subtitles
+- Content accessibility`,
+      relatedTools: ["speech-to-text", "transcribe-audio", "subtitle-generator"]
+    }
+  },
+  {
+    id: "transcribe-audio",
+    title: "Transcribe Audio",
+    category: "Voice Tools" as ToolCategory,
+    tags: ["transcribe", "audio", "text", "speech"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Transcribe Audio Online Free - Audio Transcription Service",
+    metaDescription: "Transcribe audio to text online for free. Automatic audio transcription with high accuracy. Fast audio transcription tool.",
+    description: "Transcribe audio recordings to text automatically",
+    icon: "file-audio",
+    howTo: [
+      "Upload audio recording",
+      "Select audio language",
+      "Click 'Transcribe'",
+      "Review and download transcript"
+    ],
+    article: {
+      title: "Automatic Audio Transcription",
+      content: `Transcribe audio recordings automatically with our AI-powered transcription service. Fast, accurate, and easy to use.
+
+## Advanced Transcription
+
+Professional features:
+- AI-powered accuracy
+- Multiple format support
+- Language detection
+- Speaker diarization
+- Custom vocabulary
+
+## Applications
+
+Transcribe audio for:
+- Journalism and reporting
+- Legal documentation
+- Academic research
+- Content creation
+- Accessibility compliance`,
+      relatedTools: ["audio-to-text", "speech-to-text", "subtitle-creator"]
+    }
+  },
+  {
+    id: "audio-metadata-editor",
+    title: "Audio Metadata Editor",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["metadata", "tags", "id3", "edit"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Audio Metadata Editor - Edit MP3 Tags Online Free",
+    metaDescription: "Edit audio metadata online for free. Change MP3 tags, artist, title, album. Audio tag editor for all formats.",
+    description: "Edit audio file metadata and tags",
+    icon: "tag",
+    howTo: [
+      "Upload audio file",
+      "Edit metadata fields",
+      "Add album artwork",
+      "Save updated file"
+    ],
+    article: {
+      title: "Edit Audio Metadata and Tags",
+      content: `Edit audio file metadata including artist, title, album, year, genre, and album artwork. Keep your music library organized.
+
+## Metadata Editing
+
+Edit all metadata:
+- Artist and album information
+- Track title and number
+- Release year and genre
+- Album artwork
+- Composer and comments
+
+## Use Cases
+
+Edit metadata for:
+- Organizing music libraries
+- Fixing incorrect tags
+- Adding album art
+- Preparing for streaming
+- Professional releases`,
+      relatedTools: ["mp3-tag-editor", "audio-tagger", "music-organizer"]
+    }
+  },
+  {
+    id: "mp3-tag-editor",
+    title: "MP3 Tag Editor",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["mp3", "tags", "id3", "metadata"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MP3 Tag Editor Online Free - Edit MP3 Metadata",
+    metaDescription: "Edit MP3 tags online for free. Change artist, title, album, and artwork. Professional MP3 metadata editor.",
+    description: "Edit MP3 file tags and metadata",
+    icon: "file-music",
+    howTo: [
+      "Upload MP3 file",
+      "Modify ID3 tags",
+      "Upload album cover",
+      "Download tagged MP3"
+    ],
+    article: {
+      title: "MP3 Tag Editing Tool",
+      content: `Professional MP3 tag editor for managing ID3 metadata. Edit artist, title, album, genre, year, and add album artwork.
+
+## ID3 Tag Support
+
+Full tag editing:
+- ID3v1 and ID3v2 support
+- All standard fields
+- Custom tags
+- Batch editing
+- Album artwork
+
+## Benefits
+
+Organize music with:
+- Consistent tagging
+- Complete metadata
+- Album art inclusion
+- Genre classification
+- Professional organization`,
+      relatedTools: ["audio-metadata-editor", "music-tagger", "album-art-editor"]
+    }
+  },
+  {
+    id: "audio-visualizer",
+    title: "Audio Visualizer",
+    category: "Audio Analysis" as ToolCategory,
+    tags: ["visualize", "waveform", "spectrum", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Audio Visualizer Online Free - Create Audio Waveforms",
+    metaDescription: "Create audio visualizations online for free. Generate waveforms and spectrum displays. Audio visualization tool.",
+    description: "Create visual representations of audio",
+    icon: "bar-chart-3",
+    howTo: [
+      "Upload audio file",
+      "Choose visualization style",
+      "Customize colors and effects",
+      "Export as video or image"
+    ],
+    article: {
+      title: "Audio Visualization Tool",
+      content: `Create stunning visual representations of audio files. Generate waveforms, spectrum analyzers, and animated visualizations.
+
+## Visualization Types
+
+Create various visuals:
+- Waveform displays
+- Frequency spectrum
+- Circular visualizations
+- Bar graph animations
+- Custom styles
+
+## Use Cases
+
+Visualize audio for:
+- Music videos
+- Social media posts
+- Podcast artwork
+- Audio presentations
+- Educational content`,
+      relatedTools: ["spectrogram-generator", "waveform-generator", "audio-analyzer"]
+    }
+  },
+  {
+    id: "spectrogram-generator",
+    title: "Spectrogram Generator",
+    category: "Audio Analysis" as ToolCategory,
+    tags: ["spectrogram", "frequency", "analysis", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Spectrogram Generator Free - Audio Frequency Analysis",
+    metaDescription: "Generate spectrograms online for free. Visualize audio frequencies. Professional spectrogram analysis tool.",
+    description: "Generate spectrograms for audio analysis",
+    icon: "activity",
+    howTo: [
+      "Upload audio file",
+      "Configure spectrogram settings",
+      "Generate frequency visualization",
+      "Download spectrogram image"
+    ],
+    article: {
+      title: "Audio Spectrogram Generation",
+      content: `Generate detailed spectrograms to visualize audio frequencies over time. Perfect for audio analysis, music production, and scientific research.
+
+## Spectrogram Features
+
+Advanced analysis:
+- Frequency vs time display
+- Color-coded intensity
+- Zoom and navigation
+- Export high-res images
+- Multiple color schemes
+
+## Applications
+
+Use spectrograms for:
+- Audio analysis and research
+- Music production
+- Speech analysis
+- Noise identification
+- Quality control`,
+      relatedTools: ["audio-visualizer", "frequency-analyzer", "audio-analyzer"]
+    }
+  },
+  {
+    id: "audio-normalizer",
+    title: "Audio Normalizer",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["normalize", "volume", "balance", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Audio Normalizer Online Free - Normalize Audio Levels",
+    metaDescription: "Normalize audio online for free. Balance audio levels automatically. Professional audio normalization tool.",
+    description: "Normalize audio levels automatically",
+    icon: "align-center",
+    howTo: [
+      "Upload audio file",
+      "Select normalization method",
+      "Click 'Normalize'",
+      "Download balanced audio"
+    ],
+    article: {
+      title: "Audio Normalization Tool",
+      content: `Normalize audio levels to achieve consistent volume across files. Perfect for podcasts, music albums, and video production.
+
+## Normalization Methods
+
+Professional normalization:
+- Peak normalization
+- RMS normalization
+- Loudness (LUFS) standards
+- Batch processing
+- Quality preservation
+
+## Use Cases
+
+Normalize audio for:
+- Podcast episodes
+- Music albums
+- Video soundtracks
+- Broadcast standards
+- Streaming platforms`,
+      relatedTools: ["change-audio-volume", "audio-compressor", "loudness-meter"]
+    }
+  },
+  {
+    id: "remove-vocals",
+    title: "Remove Vocals (Karaoke)",
+    category: "Audio Effects" as ToolCategory,
+    tags: ["vocals", "karaoke", "instrumental", "remove"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Remove Vocals from Song Free - Karaoke Maker Online",
+    metaDescription: "Remove vocals from songs online for free. Create karaoke tracks instantly. AI-powered vocal removal tool.",
+    description: "Remove vocals from songs to create karaoke tracks",
+    icon: "mic-off",
+    howTo: [
+      "Upload music file",
+      "Click 'Remove Vocals'",
+      "Preview instrumental",
+      "Download karaoke track"
+    ],
+    article: {
+      title: "Vocal Removal for Karaoke",
+      content: `Remove vocals from songs using advanced AI technology to create high-quality karaoke tracks and instrumentals.
+
+## Vocal Removal Quality
+
+Professional removal:
+- AI-powered separation
+- Minimal artifacts
+- Preserve music quality
+- Stereo output
+- All music genres
+
+## Create Karaoke
+
+Perfect for:
+- Karaoke parties
+- Singing practice
+- Music production
+- Cover songs
+- Learning songs`,
+      relatedTools: ["vocal-remover", "isolate-vocals", "karaoke-maker"]
+    }
+  },
+  {
+    id: "vocal-remover",
+    title: "Vocal Remover",
+    category: "Audio Effects" as ToolCategory,
+    tags: ["vocal", "remove", "instrumental", "isolate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Vocal Remover Online Free - Extract Instrumental from Songs",
+    metaDescription: "Remove vocals online for free. Extract instrumental tracks from songs. AI vocal remover tool with high quality.",
+    description: "Extract instrumental by removing vocals",
+    icon: "eraser",
+    howTo: [
+      "Upload song file",
+      "Process vocal removal",
+      "Preview instrumental track",
+      "Save instrumental version"
+    ],
+    article: {
+      title: "AI-Powered Vocal Removal",
+      content: `Extract clean instrumentals from songs using cutting-edge AI vocal removal technology. Create backing tracks for any song.
+
+## Advanced Separation
+
+AI vocal removal with:
+- Deep learning models
+- Clean separation
+- Quality preservation
+- Fast processing
+- Multiple export options
+
+## Use Cases
+
+Remove vocals for:
+- Creating backing tracks
+- Remixing songs
+- Music analysis
+- Karaoke creation
+- DJ performances`,
+      relatedTools: ["remove-vocals", "isolate-vocals", "stem-separator"]
+    }
+  },
+  {
+    id: "isolate-vocals",
+    title: "Isolate Vocals",
+    category: "Audio Effects" as ToolCategory,
+    tags: ["isolate", "vocals", "acapella", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Isolate Vocals Online Free - Extract Vocals from Songs",
+    metaDescription: "Isolate vocals from songs online for free. Extract acapella vocals using AI. Professional vocal isolation tool.",
+    description: "Isolate and extract vocals from music",
+    icon: "user-circle",
+    howTo: [
+      "Upload music file",
+      "Click 'Isolate Vocals'",
+      "Preview vocal track",
+      "Download acapella"
+    ],
+    article: {
+      title: "Vocal Isolation Tool",
+      content: `Isolate vocals from music tracks to create clean acapella versions. Perfect for remixing, sampling, and music production.
+
+## Vocal Isolation
+
+AI-powered isolation:
+- Clean vocal extraction
+- Minimal background bleed
+- High-quality output
+- Stereo preservation
+- Fast processing
+
+## Applications
+
+Isolate vocals for:
+- Acapella creation
+- Remix production
+- Vocal sampling
+- Music analysis
+- Cover creation`,
+      relatedTools: ["vocal-remover", "remove-vocals", "stem-separator"]
+    }
+  },
+  {
+    id: "audio-noise-reduction",
+    title: "Audio Noise Reduction",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["noise", "reduction", "denoise", "clean"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Audio Noise Reduction Online Free - Remove Background Noise",
+    metaDescription: "Reduce audio noise online for free. Remove background noise from recordings. Professional noise reduction tool.",
+    description: "Remove background noise from audio recordings",
+    icon: "shield",
+    howTo: [
+      "Upload noisy audio",
+      "Adjust noise reduction level",
+      "Preview cleaned audio",
+      "Download noise-reduced file"
+    ],
+    article: {
+      title: "Professional Noise Reduction",
+      content: `Remove unwanted background noise from audio recordings with our advanced noise reduction tool. Perfect for cleaning up voice recordings and music.
+
+## Noise Reduction
+
+Remove various noises:
+- Background hiss
+- Wind noise
+- Room echo
+- Electrical hum
+- Ambient sounds
+
+## Use Cases
+
+Clean audio for:
+- Podcast production
+- Voice recordings
+- Video soundtracks
+- Music restoration
+- Professional audio`,
+      relatedTools: ["denoise-audio", "audio-enhancer", "noise-gate"]
+    }
+  },
+  {
+    id: "denoise-audio",
+    title: "Denoise Audio",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["denoise", "noise", "clean", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Denoise Audio Online Free - Clean Audio Recordings",
+    metaDescription: "Denoise audio files online for free. Remove noise and clean audio. Professional audio denoising tool.",
+    description: "Clean and denoise audio recordings",
+    icon: "sparkles",
+    howTo: [
+      "Upload audio with noise",
+      "Select denoising profile",
+      "Process audio",
+      "Save cleaned audio"
+    ],
+    article: {
+      title: "Audio Denoising Tool",
+      content: `Clean up noisy audio recordings with our professional denoising tool. Remove unwanted background noise while preserving voice quality.
+
+## Denoising Profiles
+
+Multiple profiles for:
+- Voice recordings
+- Music restoration
+- Field recordings
+- Podcast cleanup
+- Video audio
+
+## Benefits
+
+Clean audio provides:
+- Better clarity
+- Professional sound
+- Improved listening
+- Broadcast quality
+- Enhanced quality`,
+      relatedTools: ["audio-noise-reduction", "audio-cleaner", "restore-audio"]
+    }
+  },
+  {
+    id: "audio-fader",
+    title: "Audio Fader (Fade In/Out)",
+    category: "Audio Effects" as ToolCategory,
+    tags: ["fade", "in", "out", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Audio Fade In/Out Online Free - Add Fades to Audio",
+    metaDescription: "Add fade in and fade out effects to audio online for free. Professional audio fading tool. Create smooth transitions.",
+    description: "Add fade in and fade out effects to audio",
+    icon: "trending-up",
+    howTo: [
+      "Upload audio file",
+      "Set fade in duration",
+      "Set fade out duration",
+      "Download faded audio"
+    ],
+    article: {
+      title: "Audio Fade Effects",
+      content: `Add professional fade in and fade out effects to audio files. Create smooth transitions at the beginning and end of tracks.
+
+## Fade Control
+
+Precise fade settings:
+- Custom fade durations
+- Fade curve shapes
+- Visual preview
+- Separate in/out control
+- Quality preservation
+
+## Use Cases
+
+Add fades for:
+- Music tracks
+- Podcast intros/outros
+- Video soundtracks
+- Audio transitions
+- Professional productions`,
+      relatedTools: ["audio-crossfade", "audio-transitions", "audio-effects"]
+    }
+  },
+  {
+    id: "8d-audio-converter",
+    title: "8D Audio Converter",
+    category: "Audio Effects" as ToolCategory,
+    tags: ["8d", "spatial", "surround", "audio"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "8D Audio Converter Free - Create 8D Surround Sound Effect",
+    metaDescription: "Create 8D audio online for free. Convert songs to 8D surround sound. Immersive audio effect converter.",
+    description: "Create 8D surround sound audio effect",
+    icon: "headphones",
+    howTo: [
+      "Upload audio file",
+      "Adjust 8D effect intensity",
+      "Preview with headphones",
+      "Download 8D audio"
+    ],
+    article: {
+      title: "Create 8D Audio Effects",
+      content: `Convert regular audio to immersive 8D surround sound. Create the illusion of sound moving around the listener's head.
+
+## 8D Audio Effect
+
+Spatial audio with:
+- Binaural panning
+- Head rotation simulation
+- Adjustable intensity
+- Stereo enhancement
+- Immersive experience
+
+## Best Experience
+
+Enjoy 8D audio with:
+- Headphones (required)
+- Quiet environment
+- Closed eyes for immersion
+- Quality audio source
+- Proper volume level`,
+      relatedTools: ["spatial-audio", "surround-sound", "audio-effects"]
+    }
+  },
+  {
+    id: "change-audio-channels",
+    title: "Change Audio Channels (Stereo/Mono)",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["channels", "stereo", "mono", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Change Audio Channels Free - Convert Stereo to Mono Online",
+    metaDescription: "Change audio channels online for free. Convert between stereo and mono. Audio channel converter tool.",
+    description: "Convert audio between stereo and mono",
+    icon: "settings-2",
+    howTo: [
+      "Upload audio file",
+      "Select output channels (mono/stereo)",
+      "Click 'Convert'",
+      "Download converted audio"
+    ],
+    article: {
+      title: "Audio Channel Conversion",
+      content: `Convert audio between stereo and mono formats. Adjust channel configuration for different applications and compatibility.
+
+## Channel Options
+
+Conversion types:
+- Stereo to mono
+- Mono to stereo
+- Dual mono
+- Channel extraction
+- Custom routing
+
+## Use Cases
+
+Convert channels for:
+- Device compatibility
+- File size reduction
+- Broadcasting requirements
+- Audio mixing
+- Legacy systems`,
+      relatedTools: ["audio-converter", "channel-mixer", "stereo-enhancer"]
+    }
+  },
+  {
+    id: "ringtone-maker",
+    title: "Ringtone Maker",
+    category: "Audio Editing" as ToolCategory,
+    tags: ["ringtone", "trim", "cut", "mobile"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Ringtone Maker Online Free - Create Custom Ringtones",
+    metaDescription: "Create custom ringtones online for free. Cut and trim songs to make ringtones. Works for iPhone and Android.",
+    description: "Create custom ringtones from any audio",
+    icon: "smartphone",
+    howTo: [
+      "Upload song or audio",
+      "Select ringtone portion",
+      "Add fade effects",
+      "Download ringtone (M4R/MP3)"
+    ],
+    article: {
+      title: "Custom Ringtone Creation",
+      content: `Create custom ringtones from your favorite songs and audio files. Perfect for personalizing your phone with unique sounds.
+
+## Ringtone Features
+
+Professional creation:
+- Precise trimming
+- Fade effects
+- Quality optimization
+- Format conversion
+- Direct phone transfer
+
+## Device Support
+
+Create ringtones for:
+- iPhone (M4R format)
+- Android (MP3/OGG)
+- All smartphones
+- Feature phones
+- Tablet devices`,
+      relatedTools: ["cut-audio", "trim-audio", "audio-converter"]
+    }
+  },
+  {
+    id: "compress-video",
+    title: "Compress Video",
+    category: "Video Compression" as ToolCategory,
+    tags: ["compress", "video", "reduce", "size"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress Video Online Free - Reduce Video File Size",
+    metaDescription: "Compress video files online for free. Reduce video size without losing quality. Fast video compression tool.",
+    description: "Compress video files to reduce size",
+    icon: "minimize-2",
+    howTo: [
+      "Upload video file",
+      "Choose compression level",
+      "Preview quality",
+      "Download compressed video"
+    ],
+    article: {
+      title: "Video Compression Tool",
+      content: `Compress video files to reduce size while maintaining quality. Perfect for sharing, uploading, and saving storage space.
+
+## Compression Options
+
+Smart compression:
+- Quality presets (low/medium/high)
+- Custom bitrate control
+- Resolution adjustment
+- Format optimization
+- Batch processing
+
+## Why Compress Videos?
+
+Reduce video size for:
+- Faster uploads/downloads
+- Email attachments
+- Social media sharing
+- Save storage space
+- Bandwidth savings
+
+## Quality Balance
+
+Choose compression level:
+- High quality (larger files)
+- Balanced (recommended)
+- High compression (smaller files)
+- Custom settings`,
+      relatedTools: ["reduce-video-size", "compress-mp4", "video-optimizer"]
+    }
+  },
+  {
+    id: "reduce-video-size",
+    title: "Reduce Video Size",
+    category: "Video Compression" as ToolCategory,
+    tags: ["reduce", "video", "size", "compress"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Reduce Video Size Online Free - Make Videos Smaller",
+    metaDescription: "Reduce video file size online for free. Make large videos smaller without quality loss. Easy video size reducer.",
+    description: "Make video files smaller for easy sharing",
+    icon: "shrink",
+    howTo: [
+      "Upload large video",
+      "Select target size or quality",
+      "Process compression",
+      "Download smaller video"
+    ],
+    article: {
+      title: "Reduce Video File Sizes",
+      content: `Make large video files smaller without significant quality loss. Perfect for sharing videos via email, messaging, or social media.
+
+## Size Reduction Methods
+
+Reduce size by:
+- Lowering resolution
+- Adjusting bitrate
+- Changing format
+- Removing audio
+- Trimming length
+
+## Target Size Options
+
+Reduce to specific size:
+- Email-friendly (<25MB)
+- WhatsApp compatible
+- Social media optimized
+- Custom file size
+- Percentage reduction`,
+      relatedTools: ["compress-video", "video-compressor", "optimize-video"]
+    }
+  },
+  {
+    id: "compress-mp4",
+    title: "Compress MP4",
+    category: "Video Compression" as ToolCategory,
+    tags: ["compress", "mp4", "video", "reduce"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress MP4 Online Free - Reduce MP4 File Size",
+    metaDescription: "Compress MP4 videos online for free. Reduce MP4 file size while maintaining quality. Fast MP4 compression.",
+    description: "Compress MP4 video files efficiently",
+    icon: "file-video-2",
+    howTo: [
+      "Upload MP4 video",
+      "Choose compression settings",
+      "Compress MP4",
+      "Download compressed file"
+    ],
+    article: {
+      title: "MP4 Video Compression",
+      content: `Compress MP4 video files efficiently with our advanced compression tool. Maintain visual quality while significantly reducing file size.
+
+## MP4 Compression
+
+Optimize MP4 with:
+- H.264/H.265 encoding
+- Bitrate optimization
+- Resolution options
+- Quality presets
+- Fast processing
+
+## Benefits
+
+Compressed MP4 for:
+- Faster streaming
+- Lower bandwidth usage
+- More storage space
+- Quicker sharing
+- Better compatibility`,
+      relatedTools: ["compress-video", "compress-mov", "compress-avi"]
+    }
+  },
+  {
+    id: "compress-mov",
+    title: "Compress MOV",
+    category: "Video Compression" as ToolCategory,
+    tags: ["compress", "mov", "quicktime", "reduce"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress MOV Online Free - Reduce MOV File Size",
+    metaDescription: "Compress MOV videos online for free. Reduce QuickTime file sizes. Fast MOV compression tool.",
+    description: "Compress MOV QuickTime video files",
+    icon: "film",
+    howTo: [
+      "Upload MOV file",
+      "Select compression level",
+      "Process video",
+      "Download compressed MOV"
+    ],
+    article: {
+      title: "MOV File Compression",
+      content: `Compress large MOV (QuickTime) files to more manageable sizes. Perfect for Mac users and iPhone/iPad recordings.
+
+## MOV Compression
+
+Reduce MOV size with:
+- Codec optimization
+- Bitrate control
+- Resolution adjustment
+- Quality settings
+- Format conversion option
+
+## Common Sources
+
+Compress MOV from:
+- iPhone/iPad recordings
+- macOS screen captures
+- QuickTime recordings
+- Professional cameras
+- Video editing software`,
+      relatedTools: ["compress-mp4", "mov-to-mp4", "compress-video"]
+    }
+  },
+  {
+    id: "compress-avi",
+    title: "Compress AVI",
+    category: "Video Compression" as ToolCategory,
+    tags: ["compress", "avi", "video", "reduce"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Compress AVI Online Free - Reduce AVI Video Size",
+    metaDescription: "Compress AVI videos online for free. Reduce large AVI file sizes. Fast AVI compression tool.",
+    description: "Compress AVI video files to smaller sizes",
+    icon: "video",
+    howTo: [
+      "Upload AVI video",
+      "Choose compression options",
+      "Compress file",
+      "Save compressed AVI"
+    ],
+    article: {
+      title: "AVI Video Compression",
+      content: `Compress large AVI files to reduce storage requirements and enable easier sharing. AVI files are often large and benefit greatly from compression.
+
+## AVI Optimization
+
+Compress AVI by:
+- Modern codec conversion
+- Bitrate reduction
+- Resolution scaling
+- Audio compression
+- Container optimization
+
+## Why Compress AVI?
+
+AVI files are often:
+- Uncompressed or lightly compressed
+- Very large in size
+- Inefficient for storage
+- Slow to transfer
+- Ready for optimization`,
+      relatedTools: ["compress-video", "avi-to-mp4", "video-compressor"]
+    }
+  },
+  {
+    id: "video-converter",
+    title: "Video Converter",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["convert", "video", "format", "transform"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video Converter Online Free - Convert Video Formats",
+    metaDescription: "Convert video formats online for free. Convert between MP4, AVI, MOV, MKV and more. Universal video converter.",
+    description: "Convert videos between different formats",
+    icon: "repeat",
+    howTo: [
+      "Upload video file",
+      "Select output format",
+      "Choose quality settings",
+      "Download converted video"
+    ],
+    article: {
+      title: "Universal Video Converter",
+      content: `Convert videos between any format with our universal video converter. Support for all popular video formats and codecs.
+
+## Supported Formats
+
+Convert between:
+- MP4, AVI, MOV, MKV
+- WebM, FLV, WMV
+- MPEG, 3GP, and more
+- All common codecs
+- HD and 4K support
+
+## Conversion Features
+
+Professional conversion:
+- Quality preservation
+- Custom settings
+- Batch conversion
+- Fast processing
+- All devices supported`,
+      relatedTools: ["mp4-to-avi", "avi-to-mp4", "mov-to-mp4"]
+    }
+  },
+  {
+    id: "mp4-to-avi",
+    title: "MP4 to AVI",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["mp4", "avi", "convert", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MP4 to AVI Converter Free - Convert MP4 to AVI Online",
+    metaDescription: "Convert MP4 to AVI online for free. Fast MP4 to AVI conversion with quality preservation. No software needed.",
+    description: "Convert MP4 videos to AVI format",
+    icon: "arrow-right-left",
+    howTo: [
+      "Upload MP4 file",
+      "Configure AVI settings",
+      "Convert to AVI",
+      "Download AVI video"
+    ],
+    article: {
+      title: "MP4 to AVI Conversion",
+      content: `Convert MP4 videos to AVI format for compatibility with older devices and software. Our converter maintains video quality throughout the process.
+
+## Why Convert to AVI?
+
+AVI format for:
+- Legacy device compatibility
+- Older video editing software
+- Windows Media Player
+- DVD authoring
+- Archival purposes
+
+## Quality Options
+
+Convert with:
+- Original quality preservation
+- Custom codec selection
+- Bitrate control
+- Resolution options
+- Audio settings`,
+      relatedTools: ["avi-to-mp4", "video-converter", "format-changer"]
+    }
+  },
+  {
+    id: "avi-to-mp4",
+    title: "AVI to MP4",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["avi", "mp4", "convert", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "AVI to MP4 Converter Free - Convert AVI to MP4 Online",
+    metaDescription: "Convert AVI to MP4 online for free. Fast AVI to MP4 conversion. Works on all devices. No installation required.",
+    description: "Convert AVI videos to MP4 format",
+    icon: "arrow-left-right",
+    howTo: [
+      "Upload AVI file",
+      "Select MP4 quality",
+      "Convert video",
+      "Download MP4 file"
+    ],
+    article: {
+      title: "AVI to MP4 Conversion Tool",
+      content: `Convert AVI files to MP4 format for better compatibility, smaller file sizes, and modern device support. MP4 is the universal standard for video.
+
+## Benefits of MP4
+
+MP4 offers advantages:
+- Smaller file sizes
+- Better compression
+- Universal compatibility
+- Web and mobile support
+- Streaming optimization
+
+## Conversion Quality
+
+High-quality conversion:
+- H.264/H.265 encoding
+- Custom bitrate options
+- Resolution preservation
+- Audio quality maintenance
+- Fast processing`,
+      relatedTools: ["mp4-to-avi", "video-converter", "compress-mp4"]
+    }
+  },
+  {
+    id: "mov-to-mp4",
+    title: "MOV to MP4",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["mov", "mp4", "quicktime", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MOV to MP4 Converter Free - Convert QuickTime to MP4",
+    metaDescription: "Convert MOV to MP4 online for free. QuickTime to MP4 conversion. Fast and high-quality video conversion.",
+    description: "Convert MOV QuickTime files to MP4",
+    icon: "shuffle",
+    howTo: [
+      "Upload MOV file",
+      "Choose MP4 settings",
+      "Convert to MP4",
+      "Download converted video"
+    ],
+    article: {
+      title: "MOV to MP4 Converter",
+      content: `Convert MOV (QuickTime) files to universally compatible MP4 format. Perfect for sharing iPhone videos and Mac recordings on any device.
+
+## Why Convert MOV to MP4?
+
+MP4 provides:
+- Better compatibility
+- Smaller file sizes
+- Windows support
+- Android playback
+- Web streaming
+
+## Common MOV Sources
+
+Convert MOV from:
+- iPhone/iPad videos
+- Mac screen recordings
+- QuickTime captures
+- Professional cameras
+- Video editing exports`,
+      relatedTools: ["mp4-to-mov", "compress-mov", "video-converter"]
+    }
+  },
+  {
+    id: "mp4-to-mov",
+    title: "MP4 to MOV",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["mp4", "mov", "quicktime", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MP4 to MOV Converter Free - Convert to QuickTime Format",
+    metaDescription: "Convert MP4 to MOV online for free. Create QuickTime-compatible videos from MP4. Fast conversion tool.",
+    description: "Convert MP4 videos to MOV QuickTime format",
+    icon: "repeat-2",
+    howTo: [
+      "Upload MP4 video",
+      "Select MOV codec",
+      "Convert file",
+      "Download MOV video"
+    ],
+    article: {
+      title: "MP4 to MOV Conversion",
+      content: `Convert MP4 files to MOV format for optimal compatibility with Apple devices and professional video editing software.
+
+## MOV Benefits
+
+MOV format for:
+- Final Cut Pro editing
+- macOS compatibility
+- iMovie projects
+- Professional workflows
+- Apple ecosystem
+
+## Quality Preservation
+
+Convert with:
+- ProRes codec option
+- High-quality encoding
+- Original resolution
+- Audio preservation
+- Metadata retention`,
+      relatedTools: ["mov-to-mp4", "video-converter", "apple-video"]
+    }
+  },
+  {
+    id: "mkv-to-mp4",
+    title: "MKV to MP4",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["mkv", "mp4", "convert", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MKV to MP4 Converter Free - Convert MKV Files to MP4",
+    metaDescription: "Convert MKV to MP4 online for free. Fast MKV to MP4 conversion. Works on all devices. No registration needed.",
+    description: "Convert MKV videos to MP4 format",
+    icon: "file-video",
+    howTo: [
+      "Upload MKV file",
+      "Choose conversion settings",
+      "Convert to MP4",
+      "Download MP4 video"
+    ],
+    article: {
+      title: "MKV to MP4 Conversion",
+      content: `Convert MKV files to MP4 for better device compatibility. MKV containers are feature-rich but MP4 offers universal playback.
+
+## Why Convert MKV?
+
+MP4 advantages:
+- Universal device support
+- Web browser playback
+- Mobile compatibility
+- Smaller file sizes
+- Streaming optimization
+
+## Conversion Options
+
+Convert with:
+- Quality preservation
+- Subtitle embedding
+- Audio track selection
+- Codec optimization
+- Fast processing`,
+      relatedTools: ["mp4-to-mkv", "video-converter", "compress-mkv"]
+    }
+  },
+  {
+    id: "mp4-to-mkv",
+    title: "MP4 to MKV",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["mp4", "mkv", "convert", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MP4 to MKV Converter Free - Convert to Matroska Format",
+    metaDescription: "Convert MP4 to MKV online for free. Create MKV files from MP4 videos. Support for multiple audio and subtitle tracks.",
+    description: "Convert MP4 videos to MKV Matroska format",
+    icon: "package",
+    howTo: [
+      "Upload MP4 file",
+      "Add subtitles/audio (optional)",
+      "Convert to MKV",
+      "Download MKV file"
+    ],
+    article: {
+      title: "MP4 to MKV Converter",
+      content: `Convert MP4 to MKV format for advanced features like multiple audio tracks, subtitles, and chapters. MKV is ideal for archiving.
+
+## MKV Advantages
+
+MKV format supports:
+- Multiple audio tracks
+- Multiple subtitle formats
+- Chapter markers
+- Metadata and tags
+- High-quality preservation
+
+## Use Cases
+
+Convert to MKV for:
+- Movie archiving
+- Multiple language support
+- Subtitle integration
+- High-quality storage
+- Media server libraries`,
+      relatedTools: ["mkv-to-mp4", "video-converter", "subtitle-adder"]
+    }
+  },
+  {
+    id: "webm-to-mp4",
+    title: "WebM to MP4",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["webm", "mp4", "convert", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "WebM to MP4 Converter Free - Convert WebM to MP4 Online",
+    metaDescription: "Convert WebM to MP4 online for free. Fast WebM to MP4 conversion. Better compatibility and support.",
+    description: "Convert WebM videos to MP4 format",
+    icon: "globe",
+    howTo: [
+      "Upload WebM file",
+      "Select MP4 quality",
+      "Convert video",
+      "Download MP4 file"
+    ],
+    article: {
+      title: "WebM to MP4 Conversion",
+      content: `Convert WebM files to MP4 for broader device compatibility. While WebM is great for web, MP4 works everywhere.
+
+## Why Convert WebM?
+
+MP4 provides:
+- Universal compatibility
+- Mobile device support
+- TV and player support
+- Social media compatibility
+- Editing software support
+
+## Web to Universal
+
+Convert WebM from:
+- Screen recordings
+- Downloaded web videos
+- Browser captures
+- YouTube downloads
+- Web content`,
+      relatedTools: ["mp4-to-webm", "video-converter", "web-video"]
+    }
+  },
+  {
+    id: "mp4-to-webm",
+    title: "MP4 to WebM",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["mp4", "webm", "convert", "web"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MP4 to WebM Converter Free - Convert for Web Playback",
+    metaDescription: "Convert MP4 to WebM online for free. Optimize videos for web playback. Fast MP4 to WebM conversion.",
+    description: "Convert MP4 videos to WebM for web use",
+    icon: "monitor",
+    howTo: [
+      "Upload MP4 video",
+      "Choose WebM settings",
+      "Convert to WebM",
+      "Download web-optimized video"
+    ],
+    article: {
+      title: "MP4 to WebM for Web",
+      content: `Convert MP4 to WebM format for optimized web playback. WebM offers excellent compression and quality for websites.
+
+## WebM Benefits
+
+Web advantages:
+- Smaller file sizes
+- Better web compression
+- Open-source format
+- HTML5 support
+- Efficient streaming
+
+## Web Optimization
+
+Perfect for:
+- Website videos
+- HTML5 video tags
+- Background videos
+- Web applications
+- Progressive web apps`,
+      relatedTools: ["webm-to-mp4", "compress-video", "web-optimizer"]
+    }
+  },
+  {
+    id: "avi-to-mpeg",
+    title: "AVI to MPEG",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["avi", "mpeg", "convert", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "AVI to MPEG Converter Free - Convert AVI to MPEG Online",
+    metaDescription: "Convert AVI to MPEG online for free. Create DVD-compatible videos. Fast AVI to MPEG conversion.",
+    description: "Convert AVI videos to MPEG format",
+    icon: "disc-2",
+    howTo: [
+      "Upload AVI file",
+      "Select MPEG standard",
+      "Convert video",
+      "Download MPEG file"
+    ],
+    article: {
+      title: "AVI to MPEG Conversion",
+      content: `Convert AVI files to MPEG format for DVD authoring and broadcast compatibility. MPEG is the standard for physical media.
+
+## MPEG Standards
+
+Convert to:
+- MPEG-1 (VCD quality)
+- MPEG-2 (DVD quality)
+- MPEG-4 (modern standard)
+- Broadcast formats
+- DVD authoring
+
+## Use Cases
+
+MPEG format for:
+- DVD creation
+- Broadcast video
+- Physical media
+- Legacy systems
+- Archival purposes`,
+      relatedTools: ["video-converter", "dvd-converter", "mpeg-encoder"]
+    }
+  },
+  {
+    id: "mp4-to-gif",
+    title: "MP4 to GIF",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["mp4", "gif", "convert", "animation"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MP4 to GIF Converter Free - Convert Video to GIF Online",
+    metaDescription: "Convert MP4 to GIF online for free. Create animated GIFs from videos. Fast video to GIF converter.",
+    description: "Convert MP4 videos to animated GIF images",
+    icon: "image",
+    howTo: [
+      "Upload MP4 video",
+      "Select GIF portion and duration",
+      "Adjust quality and size",
+      "Download animated GIF"
+    ],
+    article: {
+      title: "MP4 to GIF Conversion",
+      content: `Convert MP4 videos to animated GIF images for easy sharing on social media and messaging apps. Create perfect loops and reactions.
+
+## GIF Creation
+
+Professional GIF making:
+- Custom duration
+- Frame rate control
+- Size optimization
+- Quality settings
+- Loop options
+
+## Perfect For
+
+Create GIFs for:
+- Social media sharing
+- Reaction images
+- Memes and humor
+- Tutorial snippets
+- Product demonstrations`,
+      relatedTools: ["gif-to-mp4", "gif-maker", "video-to-gif"]
+    }
+  },
+  {
+    id: "gif-to-mp4",
+    title: "GIF to MP4",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["gif", "mp4", "convert", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "GIF to MP4 Converter Free - Convert GIF to Video Online",
+    metaDescription: "Convert GIF to MP4 online for free. Turn animated GIFs into videos. Reduce file size and improve quality.",
+    description: "Convert animated GIFs to MP4 video format",
+    icon: "film",
+    howTo: [
+      "Upload GIF file",
+      "Set video quality",
+      "Convert to MP4",
+      "Download video file"
+    ],
+    article: {
+      title: "GIF to MP4 Conversion",
+      content: `Convert animated GIFs to MP4 video format for better quality and smaller file sizes. MP4 videos are more efficient than GIFs.
+
+## Why Convert GIF to MP4?
+
+Video advantages:
+- Much smaller file sizes
+- Better quality
+- Smooth playback
+- Audio support option
+- Modern compatibility
+
+## Benefits
+
+MP4 from GIF provides:
+- 90% smaller files
+- Better compression
+- Smoother animation
+- Instagram/TikTok ready
+- Professional quality`,
+      relatedTools: ["mp4-to-gif", "compress-gif", "video-converter"]
+    }
+  },
+  {
+    id: "video-to-webm",
+    title: "Video to WebM",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["video", "webm", "convert", "web"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video to WebM Converter Free - Convert Any Video to WebM",
+    metaDescription: "Convert any video to WebM online for free. Optimize for web playback. Fast video to WebM conversion.",
+    description: "Convert any video format to WebM",
+    icon: "code",
+    howTo: [
+      "Upload any video file",
+      "Configure WebM settings",
+      "Convert to WebM",
+      "Download web-ready video"
+    ],
+    article: {
+      title: "Convert Videos to WebM Format",
+      content: `Convert any video format to WebM for optimal web performance. WebM provides excellent compression and quality for HTML5 video.
+
+## WebM Optimization
+
+Web-ready videos:
+- Small file sizes
+- Fast streaming
+- High quality
+- Browser support
+- Open standard
+
+## Perfect For
+
+WebM videos for:
+- Website backgrounds
+- HTML5 video players
+- Web applications
+- Progressive web apps
+- Mobile web`,
+      relatedTools: ["webm-to-mp4", "mp4-to-webm", "web-video-optimizer"]
+    }
+  },
+  {
+    id: "video-to-flv",
+    title: "Video to FLV",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["video", "flv", "flash", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video to FLV Converter Free - Convert to Flash Video Online",
+    metaDescription: "Convert video to FLV format online for free. Create Flash video files. Legacy format converter.",
+    description: "Convert videos to FLV Flash format",
+    icon: "zap",
+    howTo: [
+      "Upload video file",
+      "Select FLV settings",
+      "Convert to FLV",
+      "Download Flash video"
+    ],
+    article: {
+      title: "Video to FLV Conversion",
+      content: `Convert videos to FLV (Flash Video) format for legacy systems and specific applications requiring Flash format.
+
+## FLV Format
+
+Flash video for:
+- Legacy applications
+- Older websites
+- Specific software requirements
+- Historical content
+- Archive purposes
+
+## Note
+
+FLV is a legacy format. For modern use, consider MP4 or WebM instead.`,
+      relatedTools: ["flv-to-mp4", "video-converter", "legacy-converter"]
+    }
+  },
+  {
+    id: "video-to-3gp",
+    title: "Video to 3GP",
+    category: "Video Conversion" as ToolCategory,
+    tags: ["video", "3gp", "mobile", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video to 3GP Converter Free - Convert for Mobile Phones",
+    metaDescription: "Convert video to 3GP format online for free. Create mobile-compatible videos. Fast video to 3GP conversion.",
+    description: "Convert videos to 3GP mobile format",
+    icon: "smartphone",
+    howTo: [
+      "Upload video file",
+      "Choose 3GP quality",
+      "Convert to 3GP",
+      "Download mobile video"
+    ],
+    article: {
+      title: "Convert Videos to 3GP Format",
+      content: `Convert videos to 3GP format for compatibility with older mobile phones and feature phones. 3GP offers small file sizes.
+
+## 3GP Format
+
+Mobile video for:
+- Feature phones
+- Older smartphones
+- MMS messages
+- Limited storage devices
+- Low bandwidth sharing
+
+## Small File Sizes
+
+3GP provides:
+- Minimal file sizes
+- Basic quality
+- Universal mobile support
+- MMS compatibility
+- Bandwidth efficiency`,
+      relatedTools: ["3gp-to-mp4", "mobile-video", "compress-video"]
+    }
+  },
+  {
+    id: "cut-video",
+    title: "Cut Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["cut", "trim", "edit", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Cut Video Online Free - Video Cutter Tool",
+    metaDescription: "Cut video files online for free. Trim videos to exact length. Precise video cutting tool. No software needed.",
+    description: "Cut and trim videos with precision",
+    icon: "scissors",
+    howTo: [
+      "Upload video file",
+      "Select portion to keep",
+      "Preview your cut",
+      "Download trimmed video"
+    ],
+    article: {
+      title: "Cut Videos Online",
+      content: `Cut and trim videos with precision using our free online video cutter. Perfect for removing unwanted sections, creating clips, and preparing videos for sharing.
+
+## Video Cutting
+
+Precise cutting with:
+- Frame-accurate trimming
+- Visual timeline
+- Real-time preview
+- Multiple cuts
+- No quality loss
+
+## Use Cases
+
+Cut videos for:
+- Removing unwanted parts
+- Creating video clips
+- Social media posts
+- Highlights and best moments
+- Video presentations`,
+      relatedTools: ["trim-video", "split-video", "video-editor"]
+    }
+  },
+  {
+    id: "trim-video",
+    title: "Trim Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["trim", "cut", "edit", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Trim Video Online Free - Video Trimmer Tool",
+    metaDescription: "Trim video files online for free. Cut videos to exact length. Easy video trimming with timeline. No registration.",
+    description: "Trim videos to exact length needed",
+    icon: "move-horizontal",
+    howTo: [
+      "Upload video",
+      "Set start and end points",
+      "Preview trimmed video",
+      "Save trimmed file"
+    ],
+    article: {
+      title: "Trim Videos Precisely",
+      content: `Trim videos to the exact length you need with our easy-to-use online video trimmer. Remove unwanted beginnings, endings, or sections.
+
+## Trimming Features
+
+Professional trimming:
+- Timeline scrubbing
+- Precise frame selection
+- Instant preview
+- Quality preservation
+- All formats supported
+
+## Common Uses
+
+Trim videos for:
+- Removing intro/outro
+- Creating shorts
+- Instagram Reels
+- TikTok videos
+- Highlight clips`,
+      relatedTools: ["cut-video", "video-trimmer", "split-video"]
+    }
+  },
+  {
+    id: "video-trimmer",
+    title: "Video Trimmer",
+    category: "Video Editing" as ToolCategory,
+    tags: ["trim", "cut", "edit", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video Trimmer Online - Trim Videos Free",
+    metaDescription: "Professional video trimmer online. Trim videos with frame accuracy. Easy timeline editing. Download trimmed videos instantly.",
+    description: "Professional video trimming tool",
+    icon: "sliders",
+    howTo: [
+      "Upload your video",
+      "Use timeline to select range",
+      "Preview trim",
+      "Download trimmed video"
+    ],
+    article: {
+      title: "Professional Video Trimming",
+      content: `Our video trimmer provides professional-grade editing capabilities with an intuitive interface. Perfect for content creators and video editors.
+
+## Advanced Features
+
+Professional trimming:
+- Frame-accurate control
+- Keyboard shortcuts
+- Batch trimming
+- Format preservation
+- Fast processing
+
+## Perfect For
+
+Ideal for:
+- Content creators
+- Video producers
+- Social media managers
+- YouTubers
+- Marketing teams`,
+      relatedTools: ["cut-video", "trim-video", "video-editor"]
+    }
+  },
+  {
+    id: "crop-video",
+    title: "Crop Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["crop", "resize", "frame", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Crop Video Online Free - Video Cropper Tool",
+    metaDescription: "Crop video online for free. Remove unwanted areas from videos. Resize video frame. Easy video cropping tool.",
+    description: "Crop videos to remove unwanted areas",
+    icon: "crop",
+    howTo: [
+      "Upload video file",
+      "Select crop area",
+      "Adjust aspect ratio",
+      "Download cropped video"
+    ],
+    article: {
+      title: "Crop Videos Online",
+      content: `Crop videos to remove unwanted areas, change aspect ratios, or focus on specific parts of the frame. Perfect for social media and presentations.
+
+## Cropping Options
+
+Professional cropping:
+- Custom dimensions
+- Aspect ratio presets (16:9, 1:1, 9:16)
+- Social media formats
+- Visual crop preview
+- Quality preservation
+
+## Use Cases
+
+Crop videos for:
+- Social media posts (Instagram, TikTok)
+- Removing watermarks
+- Focusing on subjects
+- Changing aspect ratios
+- Mobile optimization`,
+      relatedTools: ["video-cropper", "resize-video", "video-aspect-ratio"]
+    }
+  },
+  {
+    id: "video-cropper",
+    title: "Video Cropper",
+    category: "Video Editing" as ToolCategory,
+    tags: ["crop", "cut", "resize", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video Cropper Online - Crop Videos to Any Size Free",
+    metaDescription: "Crop videos to any size online for free. Professional video cropper with aspect ratio presets. Easy to use.",
+    description: "Professional video cropping tool",
+    icon: "maximize-2",
+    howTo: [
+      "Upload video",
+      "Choose crop area or preset",
+      "Preview cropped result",
+      "Save cropped video"
+    ],
+    article: {
+      title: "Professional Video Cropping",
+      content: `Crop videos professionally with our advanced video cropper. Perfect for social media, removing unwanted elements, and optimizing compositions.
+
+## Cropping Presets
+
+Quick presets:
+- Instagram Square (1:1)
+- Instagram Story (9:16)
+- YouTube (16:9)
+- TikTok (9:16)
+- Custom sizes
+
+## Advanced Features
+
+Professional tools:
+- Pixel-precise control
+- Multiple aspect ratios
+- Position adjustment
+- Zoom and pan
+- Batch cropping`,
+      relatedTools: ["crop-video", "resize-video", "aspect-ratio-changer"]
+    }
+  },
+  {
+    id: "rotate-video",
+    title: "Rotate Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["rotate", "flip", "orientation", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Rotate Video Online Free - Fix Video Orientation",
+    metaDescription: "Rotate video online for free. Fix sideways or upside-down videos. Rotate 90, 180, 270 degrees. Easy video rotation.",
+    description: "Rotate videos to correct orientation",
+    icon: "rotate-cw",
+    howTo: [
+      "Upload video file",
+      "Select rotation angle (90°, 180°, 270°)",
+      "Preview rotated video",
+      "Download corrected video"
+    ],
+    article: {
+      title: "Rotate Videos Online",
+      content: `Rotate videos to fix incorrect orientation from phone recordings or cameras. Support for 90°, 180°, and 270° rotations.
+
+## Rotation Options
+
+Rotate videos:
+- 90° clockwise
+- 90° counter-clockwise
+- 180° flip
+- 270° rotation
+- Custom angles
+
+## Common Uses
+
+Rotate videos from:
+- Sideways phone recordings
+- Upside-down cameras
+- Incorrect orientations
+- Screen captures
+- Device rotations`,
+      relatedTools: ["video-rotator", "flip-video", "video-orientation"]
+    }
+  },
+  {
+    id: "video-rotator",
+    title: "Video Rotator",
+    category: "Video Editing" as ToolCategory,
+    tags: ["rotate", "spin", "turn", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video Rotator Online - Rotate Videos to Any Angle Free",
+    metaDescription: "Rotate videos to any angle online for free. Fix video orientation quickly. Professional video rotation tool.",
+    description: "Professional video rotation tool",
+    icon: "refresh-cw",
+    howTo: [
+      "Upload your video",
+      "Choose rotation method",
+      "Apply rotation",
+      "Save rotated video"
+    ],
+    article: {
+      title: "Professional Video Rotation",
+      content: `Rotate videos with precision using our professional video rotator. Fix orientation issues and create perfectly aligned videos.
+
+## Rotation Features
+
+Advanced rotation:
+- Standard angles (90°, 180°, 270°)
+- Custom angle input
+- Preview before processing
+- Quality preservation
+- Fast processing
+
+## Fix Common Issues
+
+Rotate to fix:
+- Portrait mode videos
+- Landscape orientation
+- Camera mount errors
+- Device rotation mistakes
+- Recorded screen issues`,
+      relatedTools: ["rotate-video", "flip-video", "video-editor"]
+    }
+  },
+  {
+    id: "flip-video",
+    title: "Flip Video",
+    category: "Video Editing" as ToolCategory,
+    tags: ["flip", "mirror", "reverse", "video"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Flip Video Online Free - Mirror Videos Horizontally or Vertically",
+    metaDescription: "Flip video online for free. Mirror videos horizontally or vertically. Fix mirrored recordings. Easy video flipper.",
+    description: "Flip videos horizontally or vertically",
+    icon: "flip-horizontal",
+    howTo: [
+      "Upload video file",
+      "Choose flip direction (horizontal/vertical)",
+      "Preview flipped video",
+      "Download mirrored video"
+    ],
+    article: {
+      title: "Flip Videos Online",
+      content: `Flip videos horizontally or vertically to create mirror effects or fix front-camera recordings. Perfect for social media and creative projects.
+
+## Flip Options
+
+Mirror videos:
+- Horizontal flip (left-right)
+- Vertical flip (up-down)
+- Both directions
+- Multiple flips
+- Preview before saving
+
+## Use Cases
+
+Flip videos for:
+- Fixing front camera videos
+- Creating mirror effects
+- Dance tutorials (mirroring)
+- Correcting reflections
+- Creative video effects`,
+      relatedTools: ["video-flipper", "rotate-video", "mirror-video"]
+    }
+  },
+  {
+    id: "video-flipper",
+    title: "Video Flipper",
+    category: "Video Editing" as ToolCategory,
+    tags: ["flip", "mirror", "horizontal", "vertical"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Video Flipper Online - Create Mirrored Videos Free",
+    metaDescription: "Flip videos online with our video flipper. Create horizontal or vertical mirrors. Professional mirroring tool.",
+    description: "Professional video flipping and mirroring",
+    icon: "flip-vertical",
+    howTo: [
+      "Upload video",
+      "Select flip axis",
+      "Apply flip effect",
+      "Save flipped video"
+    ],
+    article: {
+      title: "Professional Video Flipping",
+      content: `Create professional mirrored videos with our video flipper. Perfect for dance tutorials, fixing front-camera videos, and creative effects.
+
+## Flipping Features
+
+Advanced flipping:
+- Horizontal mirroring
+- Vertical mirroring
+- Dual-axis flipping
+- Batch processing
+- Quality retention
+
+## Creative Uses
+
+Flip videos for:
+- Dance choreography videos
+- Mirror effect content
+- Front-facing camera fix
+- Symmetry creation
+- Artistic effects`,
+      relatedTools: ["flip-video", "mirror-video", "video-effects"]
     }
   }
 ] as const;

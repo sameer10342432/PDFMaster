@@ -19,10 +19,10 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Free PDF & Image Tools Online - 560+ Tools for All Your Needs</title>
-        <meta name="description" content="Free online PDF and image tools. Merge PDFs, compress images, convert formats, edit photos, and more. 560+ professional tools. Fast, secure, and easy to use. No registration required." />
-        <meta property="og:title" content="Free PDF & Image Tools Online - 560+ Professional Tools" />
-        <meta property="og:description" content="Professional PDF and image tools for all your document and image needs. Merge, convert, compress, edit, and enhance. 560+ tools available." />
+        <title>Free PDF, Audio & Video Tools Online - 600+ Tools for All Your Needs</title>
+        <meta name="description" content="Free online PDF, audio, and video tools. Merge PDFs, convert audio, edit videos, compress files, and more. 600+ professional tools. Fast, secure, and easy to use. No registration required." />
+        <meta property="og:title" content="Free PDF, Audio & Video Tools Online - 600+ Professional Tools" />
+        <meta property="og:description" content="Professional PDF, audio, and video tools for all your media needs. Convert, edit, compress, merge, and enhance. 600+ tools available." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={typeof window !== 'undefined' ? window.location.href : ''} />
         <meta property="og:image" content={typeof window !== 'undefined' ? `${window.location.origin}/favicon.png` : ''} />
@@ -36,10 +36,10 @@ export default function Home() {
             <div className="container mx-auto max-w-7xl px-4">
               <div className="text-center space-y-6 max-w-3xl mx-auto">
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                  Free PDF & Image Tools Online
+                  Free PDF, Audio & Video Tools Online
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Professional-grade PDF and image tools for merging, combining, converting, compressing, and editing. 
+                  Professional-grade PDF, audio, and video tools for converting, editing, compressing, and merging. 
                   Fast, secure, and completely free. No registration required.
                 </p>
                 <div className="flex items-center justify-center gap-4 flex-wrap text-sm">
@@ -74,10 +74,10 @@ export default function Home() {
             <div className="container mx-auto max-w-7xl px-4">
               <div className="text-center mb-12 space-y-4">
                 <h2 className="text-3xl md:text-4xl font-semibold">
-                  All 560+ PDF & Image Tools
+                  All {tools.length}+ PDF, Audio & Video Tools
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Choose from our comprehensive collection of {tools.length} professional PDF and image tools including conversion, editing, compression, AI-powered tools, and more
+                  Choose from our comprehensive collection of {tools.length} professional tools for PDF, audio, and video including conversion, editing, compression, merging, and more
                 </p>
               </div>
 
@@ -110,7 +110,7 @@ export default function Home() {
             <div className="container mx-auto max-w-7xl px-4">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-                  Why Choose Our PDF & Image Tools?
+                  Why Choose Our PDF, Audio & Video Tools?
                 </h2>
               </div>
 

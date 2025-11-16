@@ -10,10 +10,10 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <FileText className="h-6 w-6 text-primary" />
-              <span className="text-lg font-bold">PDF Tools</span>
+              <span className="text-lg font-bold">PDF & Media Tools</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Free online PDF tools for all your document needs. Fast, secure, and easy to use.
+              Free online tools for PDF, audio, and video editing. Fast, secure, and easy to use.
             </p>
             <div className="flex flex-col gap-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
@@ -76,7 +76,7 @@ export function Footer() {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2024 PDF Tools. All rights reserved. Files are automatically deleted after 1 hour.</p>
+          <p>© 2024 PDF & Media Tools. All rights reserved. Files are automatically deleted after 1 hour.</p>
         </div>
       </div>
     </footer>

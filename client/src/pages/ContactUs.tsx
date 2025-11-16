@@ -8,9 +8,9 @@ export default function ContactUs() {
   return (
     <>
       <Helmet>
-        <title>Contact Us - PDF Tools</title>
-        <meta name="description" content="Contact PDF Tools for support, questions, or feedback. We're here to help you with all your PDF manipulation needs." />
-        <meta property="og:title" content="Contact Us - PDF Tools" />
+        <title>Contact Us - PDF & Media Tools</title>
+        <meta name="description" content="Contact PDF & Media Tools for support, questions, or feedback. We're here to help you with all your PDF, audio, and video needs." />
+        <meta property="og:title" content="Contact Us - PDF & Media Tools" />
         <meta property="og:description" content="Get in touch with us for support and inquiries." />
         <meta property="og:type" content="website" />
       </Helmet>

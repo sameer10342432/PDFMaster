@@ -7,10 +7,10 @@ export default function TermsOfService() {
   return (
     <>
       <Helmet>
-        <title>Terms of Service - PDF Tools</title>
-        <meta name="description" content="Terms of Service for PDF Tools. Read our terms and conditions for using our free online PDF manipulation tools." />
-        <meta property="og:title" content="Terms of Service - PDF Tools" />
-        <meta property="og:description" content="Terms and conditions for using our PDF tools service." />
+        <title>Terms of Service - PDF & Media Tools</title>
+        <meta name="description" content="Terms of Service for PDF & Media Tools. Read our terms and conditions for using our free online PDF, audio, and video tools." />
+        <meta property="og:title" content="Terms of Service - PDF & Media Tools" />
+        <meta property="og:description" content="Terms and conditions for using our media tools service." />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -37,12 +37,12 @@ export default function TermsOfService() {
                 <div className="prose prose-gray dark:prose-invert max-w-none">
                   <h2 className="text-2xl font-semibold mb-4">Agreement to Terms</h2>
                   <p className="mb-6 text-muted-foreground leading-relaxed">
-                    By accessing and using PDF Tools, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using this service.
+                    By accessing and using PDF & Media Tools, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using this service.
                   </p>
 
                   <h2 className="text-2xl font-semibold mb-4 mt-8">Use License</h2>
                   <p className="mb-4 text-muted-foreground leading-relaxed">
-                    Permission is granted to use PDF Tools for personal and commercial purposes under the following conditions:
+                    Permission is granted to use PDF & Media Tools for personal and commercial purposes under the following conditions:
                   </p>
                   <ul className="list-disc pl-6 mb-6 text-muted-foreground space-y-2">
                     <li>The service is provided "as is" for PDF file manipulation</li>

@@ -32,6 +32,13 @@ import {
   BookText, Calculator, Languages, Wand2, Award, FileBarChart2,
   Layers3, Accessibility, ScrollText, MessageSquareText, Gauge as GaugeIcon,
   ScanEye, ShieldPlus, ClipboardCheck, Sparkles as SparklesIcon,
+  Music, Music2, Disc, Disc3, FileAudio, FileVideo, FileVideo2, Film,
+  Mic, MicOff, Radio, Captions,
+  FileMusic, Activity,
+  VolumeX, Volume1, Volume2, Timer, Music4, Redo,
+  RefreshCw, FlipHorizontal, FlipVertical, GitBranch, Headphones, Settings2,
+  Shrink, ArrowRightLeft, ArrowLeftRight,
+  Repeat2, Layers2, UserCircle,
   type LucideIcon
 } from "lucide-react";
 
@@ -566,6 +573,102 @@ export const toolIcons: Record<string, LucideIcon> = {
   "pdf-transparency-flattener": Layers,
   "pdf-overprint-preview": Eye,
   "pdf-hairline-fixer": Pencil,
+
+  // Audio Conversion Tools
+  "m4a-to-mp3": Music,
+  "mp3-to-m4a": Music,
+  "flac-to-mp3": Disc,
+  "mp3-to-flac": Disc3,
+  "ogg-to-mp3": FileAudio,
+  "mp3-to-ogg": FileAudio,
+  "aac-to-mp3": Music2,
+  "mp3-to-aac": Music2,
+  "video-to-mp3": Video,
+  "mp4-to-mp3": FileVideo,
+  "avi-to-mp3": Film,
+  "mov-to-mp3": Film,
+
+  // Audio Editing Tools
+  "cut-audio": Scissors,
+  "trim-audio": MoveHorizontal,
+  "audio-trimmer": SlidersHorizontal,
+  "merge-audio": Combine,
+  "combine-audio": Layers,
+  "audio-joiner": Link,
+  "change-audio-volume": Volume2,
+  "increase-audio-volume": VolumeX,
+  "decrease-audio-volume": Volume1,
+  "audio-normalizer": AlignCenter,
+  "audio-metadata-editor": Tag,
+  "mp3-tag-editor": FileMusic,
+  "audio-noise-reduction": Shield,
+  "denoise-audio": Sparkles,
+  "audio-fader": TrendingUp,
+  "change-audio-channels": Settings2,
+  "ringtone-maker": Smartphone,
+
+  // Audio Effects Tools
+  "change-audio-speed": Gauge,
+  "audio-speed-changer": Timer,
+  "change-audio-pitch": Music4,
+  "audio-pitch-shifter": Sliders,
+  "reverse-audio": Redo,
+  "audio-reverser": RotateCw,
+  "audio-equalizer": SlidersHorizontal,
+  "remove-vocals": MicOff,
+  "vocal-remover": Eraser,
+  "isolate-vocals": UserCircle,
+  "8d-audio-converter": Headphones,
+
+  // Audio Analysis Tools
+  "audio-visualizer": BarChart3,
+  "spectrogram-generator": Activity,
+
+  // Voice Tools
+  "voice-recorder": Mic,
+  "online-voice-recorder": Radio,
+  "text-to-speech": MessageSquare,
+  "speech-to-text": FileText,
+  "audio-to-text": Captions,
+  "transcribe-audio": FileAudio,
+
+  // Video Compression Tools
+  "compress-video": Minimize2,
+  "reduce-video-size": Shrink,
+  "compress-mp4": FileVideo2,
+  "compress-mov": Film,
+  "compress-avi": Video,
+
+  // Video Conversion Tools
+  "video-converter": Repeat,
+  "mp4-to-avi": ArrowRightLeft,
+  "avi-to-mp4": ArrowLeftRight,
+  "mov-to-mp4": Shuffle,
+  "mp4-to-mov": Repeat2,
+  "mkv-to-mp4": FileVideo,
+  "mp4-to-mkv": Package,
+  "webm-to-mp4": Globe,
+  "mp4-to-webm": Globe,
+  "avi-to-mpeg": Disc3,
+  "mp4-to-gif": Image,
+  "gif-to-mp4": Film,
+  "video-to-webm": Code,
+  "video-to-flv": Zap,
+  "video-to-3gp": Smartphone,
+
+  // Video Editing Tools
+  "cut-video": Scissors,
+  "trim-video": MoveHorizontal,
+  "video-trimmer": Sliders,
+  "crop-video": Crop,
+  "video-cropper": Maximize2,
+  "rotate-video": RotateCw,
+  "video-rotator": RefreshCw,
+  "flip-video": FlipHorizontal,
+  "video-flipper": FlipVertical,
+  "add-audio-to-video": FilePlus2,
+  "remove-audio-from-video": VolumeX,
+  "mute-video": MicOff,
 
   // Default icon for any unmapped tools
   default: FileText,

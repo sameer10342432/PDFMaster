@@ -7,9 +7,9 @@ export default function PrivacyPolicy() {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - PDF Tools</title>
-        <meta name="description" content="Privacy Policy for PDF Tools. Learn how we protect your data and respect your privacy when using our free PDF manipulation tools." />
-        <meta property="og:title" content="Privacy Policy - PDF Tools" />
+        <title>Privacy Policy - PDF & Media Tools</title>
+        <meta name="description" content="Privacy Policy for PDF & Media Tools. Learn how we protect your data and respect your privacy when using our free PDF, audio, and video tools." />
+        <meta property="og:title" content="Privacy Policy - PDF & Media Tools" />
         <meta property="og:description" content="Our commitment to protecting your privacy and data security." />
         <meta property="og:type" content="website" />
       </Helmet>
@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
                 <div className="prose prose-gray dark:prose-invert max-w-none">
                   <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
                   <p className="mb-6 text-muted-foreground leading-relaxed">
-                    Welcome to PDF Tools. We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we handle your information when you use our free online PDF tools.
+                    Welcome to PDF & Media Tools. We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we handle your information when you use our free online PDF, audio, and video tools.
                   </p>
 
                   <h2 className="text-2xl font-semibold mb-4 mt-8">Information We Collect</h2>
