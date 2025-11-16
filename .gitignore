@@ -5,3 +5,8 @@ server/public
 vite.config.ts.*
 *.tar.gz
 .local/
+# environment and secrets
+.env
+.env.*
+*.pem
+*.key
