@@ -22,7 +22,20 @@ export const toolCategories = [
   "Image Resize & Crop",
   "Image Conversion",
   "Image Editing",
-  "GIF Tools"
+  "GIF Tools",
+  "Image Effects",
+  "Image Filters",
+  "Image Creative Tools",
+  "Image Combination",
+  "Icon Tools",
+  "Image Analysis",
+  "Image Enhancement",
+  "AI Image Tools",
+  "Artistic Conversion",
+  "Document Conversion",
+  "Text Tools",
+  "Data Format Conversion",
+  "eBook Tools"
 ] as const;
 
 export type ToolCategory = typeof toolCategories[number];
@@ -22460,6 +22473,2419 @@ PNG format is perfect for web graphics with transparency.`,
   }
 ] as const;
 
+// New Image and Document Tools
+export const newTools = [
+  {
+    id: "ai-to-jpg",
+    title: "AI to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["ai", "jpg", "illustrator", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "AI to JPG Converter Online Free - Convert Adobe Illustrator to JPG",
+    metaDescription: "Convert AI files to JPG online for free. Transform Adobe Illustrator files to JPEG images instantly. Fast, secure, no registration required.",
+    description: "Convert Adobe Illustrator AI files to JPG format",
+    icon: "file-image",
+    howTo: [
+      "Upload your AI file",
+      "Select quality settings",
+      "Click 'Convert to JPG'",
+      "Download your JPG image"
+    ],
+    article: {
+      title: "Convert AI to JPG Online",
+      content: `Convert Adobe Illustrator (AI) files to JPG format for easy sharing and web use. Our free tool makes AI to JPG conversion simple and fast.
+
+## Why Convert AI to JPG?
+
+JPG is universally compatible and perfect for:
+- Sharing designs on social media
+- Using images on websites
+- Email attachments
+- Quick previews
+
+## High Quality Conversion
+
+Our converter maintains the quality of your Illustrator designs while creating widely compatible JPG files.`,
+      relatedTools: ["ai-to-png", "image-converter", "compress-jpg"]
+    }
+  },
+  {
+    id: "ai-to-png",
+    title: "AI to PNG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["ai", "png", "illustrator", "convert", "transparency"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "AI to PNG Converter Online - Convert Illustrator to PNG Free",
+    metaDescription: "Convert AI to PNG online for free. Preserve transparency from Adobe Illustrator files. Fast AI to PNG conversion with no signup needed.",
+    description: "Convert Adobe Illustrator AI files to PNG with transparency",
+    icon: "layers",
+    howTo: [
+      "Upload your AI file",
+      "Maintain transparency settings",
+      "Click 'Convert to PNG'",
+      "Download your PNG with transparency"
+    ],
+    article: {
+      title: "AI to PNG Conversion with Transparency",
+      content: `Convert Adobe Illustrator files to PNG format while preserving transparency. Perfect for web graphics and logos.
+
+## Transparency Support
+
+PNG format maintains alpha channel transparency from your Illustrator designs.
+
+## Web-Ready Output
+
+PNG files are perfect for websites, apps, and digital designs.`,
+      relatedTools: ["ai-to-jpg", "png-converter", "image-converter"]
+    }
+  },
+  {
+    id: "indd-to-jpg",
+    title: "INDD to JPG",
+    category: "Image Conversion" as ToolCategory,
+    tags: ["indd", "jpg", "indesign", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "INDD to JPG Converter - Convert InDesign to JPG Online Free",
+    metaDescription: "Convert INDD files to JPG online for free. Transform Adobe InDesign documents to JPEG images. Fast and secure conversion.",
+    description: "Convert Adobe InDesign INDD files to JPG images",
+    icon: "file-type",
+    howTo: [
+      "Upload your INDD file",
+      "Select pages to convert",
+      "Choose image quality",
+      "Download JPG images"
+    ],
+    article: {
+      title: "Convert InDesign to JPG",
+      content: `Convert Adobe InDesign documents to JPG images for easy sharing and preview. Our tool handles INDD files efficiently.
+
+## Page Selection
+
+Convert specific pages or entire InDesign documents to JPG format.
+
+## Quality Control
+
+Choose from various quality settings for optimal file size and image clarity.`,
+      relatedTools: ["pdf-to-jpg", "image-converter", "compress-jpg"]
+    }
+  },
+  {
+    id: "flip-image-vertical",
+    title: "Flip Image Vertical",
+    category: "Image Effects" as ToolCategory,
+    tags: ["flip", "vertical", "mirror", "transform"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Flip Image Vertically Online Free - Vertical Image Flipper",
+    metaDescription: "Flip images vertically online for free. Mirror your photos upside down instantly. No software required, works in browser.",
+    description: "Flip images vertically (upside down) with one click",
+    icon: "flip-vertical",
+    howTo: [
+      "Upload your image",
+      "Click 'Flip Vertical'",
+      "Preview the result",
+      "Download flipped image"
+    ],
+    article: {
+      title: "Flip Images Vertically Online",
+      content: `Flip images vertically to create mirror effects or correct orientation. Our free tool makes vertical flipping instant and easy.
+
+## Quick Image Flipping
+
+Flip any image upside down with a single click. Perfect for creative effects or fixing orientation issues.
+
+## All Formats Supported
+
+Works with JPG, PNG, GIF, and other popular image formats.`,
+      relatedTools: ["flip-image-horizontal", "rotate-image", "image-editor"]
+    }
+  },
+  {
+    id: "flip-image-horizontal",
+    title: "Flip Image Horizontal",
+    category: "Image Effects" as ToolCategory,
+    tags: ["flip", "horizontal", "mirror", "transform"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Flip Image Horizontally Online Free - Horizontal Image Mirror",
+    metaDescription: "Flip images horizontally online for free. Create mirror effect instantly. Fast horizontal image flipping tool.",
+    description: "Flip images horizontally (mirror effect) instantly",
+    icon: "flip-horizontal",
+    howTo: [
+      "Upload your image",
+      "Click 'Flip Horizontal'",
+      "View mirrored result",
+      "Save flipped image"
+    ],
+    article: {
+      title: "Horizontal Image Flipping Made Easy",
+      content: `Create mirror effects by flipping images horizontally. Our tool provides instant horizontal flipping for any image.
+
+## Mirror Effect
+
+Perfect for creating symmetrical designs or correcting left-right orientation.
+
+## Instant Processing
+
+Flip images in seconds with our fast online tool.`,
+      relatedTools: ["flip-image-vertical", "rotate-image", "image-transform"]
+    }
+  },
+  {
+    id: "adjust-brightness",
+    title: "Adjust Image Brightness",
+    category: "Image Effects" as ToolCategory,
+    tags: ["brightness", "adjust", "lighten", "darken"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Adjust Image Brightness Online Free - Brighten or Darken Photos",
+    metaDescription: "Adjust image brightness online for free. Lighten or darken your photos instantly. Easy-to-use brightness adjustment tool.",
+    description: "Adjust brightness levels of your images",
+    icon: "sun",
+    howTo: [
+      "Upload your image",
+      "Use slider to adjust brightness",
+      "Preview changes in real-time",
+      "Download adjusted image"
+    ],
+    article: {
+      title: "Adjust Image Brightness Online",
+      content: `Control the brightness of your images to make them lighter or darker. Perfect for fixing underexposed or overexposed photos.
+
+## Real-Time Preview
+
+See changes as you adjust brightness levels with our interactive slider.
+
+## Perfect Exposure
+
+Fix dark photos or reduce overly bright images to achieve perfect exposure.`,
+      relatedTools: ["adjust-contrast", "adjust-saturation", "image-editor"]
+    }
+  },
+  {
+    id: "adjust-contrast",
+    title: "Adjust Image Contrast",
+    category: "Image Effects" as ToolCategory,
+    tags: ["contrast", "adjust", "enhance", "improve"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Adjust Image Contrast Online Free - Enhance Photo Contrast",
+    metaDescription: "Adjust image contrast online for free. Enhance your photos by increasing or decreasing contrast. Instant contrast adjustment tool.",
+    description: "Adjust contrast to make images more vivid or subtle",
+    icon: "contrast",
+    howTo: [
+      "Upload your image",
+      "Adjust contrast slider",
+      "See live preview",
+      "Save enhanced image"
+    ],
+    article: {
+      title: "Enhance Images with Contrast Adjustment",
+      content: `Improve image quality by adjusting contrast. Make photos more vivid or create subtle, soft effects.
+
+## Dynamic Range Control
+
+Increase contrast for bold, vivid images or decrease for softer, muted tones.
+
+## Professional Results
+
+Enhance photo quality with precise contrast control.`,
+      relatedTools: ["adjust-brightness", "adjust-saturation", "image-enhancer"]
+    }
+  },
+  {
+    id: "adjust-saturation",
+    title: "Adjust Image Saturation",
+    category: "Image Effects" as ToolCategory,
+    tags: ["saturation", "color", "vibrant", "desaturate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Adjust Image Saturation Online - Control Photo Color Intensity",
+    metaDescription: "Adjust image saturation online for free. Make colors more vibrant or create black and white effects. Easy saturation control.",
+    description: "Control color intensity and vibrancy of images",
+    icon: "droplet",
+    howTo: [
+      "Upload your image",
+      "Move saturation slider",
+      "Preview color changes",
+      "Download result"
+    ],
+    article: {
+      title: "Control Image Saturation Online",
+      content: `Adjust color saturation to make images more vibrant or create subtle, desaturated effects.
+
+## Color Control
+
+Increase saturation for vivid, bold colors or decrease for muted, vintage-style images.
+
+## Instant Preview
+
+See color changes in real-time as you adjust saturation levels.`,
+      relatedTools: ["grayscale-image", "adjust-brightness", "color-corrector"]
+    }
+  },
+  {
+    id: "sharpen-image",
+    title: "Image Sharpen",
+    category: "Image Enhancement" as ToolCategory,
+    tags: ["sharpen", "enhance", "clarity", "detail"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Sharpen Image Online Free - Enhance Photo Sharpness",
+    metaDescription: "Sharpen images online for free. Enhance photo clarity and detail. Professional image sharpening tool with instant results.",
+    description: "Sharpen blurry images to enhance detail and clarity",
+    icon: "focus",
+    howTo: [
+      "Upload your image",
+      "Adjust sharpness level",
+      "Preview enhanced details",
+      "Download sharp image"
+    ],
+    article: {
+      title: "Sharpen Images for Better Clarity",
+      content: `Enhance image sharpness to bring out details and improve overall clarity. Perfect for fixing slightly blurry photos.
+
+## Detail Enhancement
+
+Sharpen images to make text, edges, and fine details more visible and crisp.
+
+## Controlled Sharpening
+
+Adjust sharpness levels to achieve natural-looking enhancement without artifacts.`,
+      relatedTools: ["deblur-image", "enhance-image", "image-enhancer"]
+    }
+  },
+  {
+    id: "blur-image",
+    title: "Image Blur",
+    category: "Image Effects" as ToolCategory,
+    tags: ["blur", "soft", "smooth", "gaussian"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Blur Image Online Free - Add Blur Effect to Photos",
+    metaDescription: "Blur images online for free. Add soft blur effects to photos. Adjustable blur intensity with instant preview.",
+    description: "Add blur effect to images for artistic or privacy purposes",
+    icon: "blur",
+    howTo: [
+      "Upload your image",
+      "Adjust blur intensity",
+      "Preview blur effect",
+      "Download blurred image"
+    ],
+    article: {
+      title: "Add Blur Effects to Images",
+      content: `Apply blur effects to create artistic images or obscure sensitive information. Our tool offers precise blur control.
+
+## Adjustable Blur
+
+Control blur intensity from subtle softening to strong blur effects.
+
+## Privacy Protection
+
+Blur faces, license plates, or sensitive information in photos.`,
+      relatedTools: ["sharpen-image", "image-effects", "privacy-blur"]
+    }
+  },
+  {
+    id: "grayscale-image",
+    title: "Grayscale Image",
+    category: "Image Filters" as ToolCategory,
+    tags: ["grayscale", "black and white", "monochrome", "filter"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Convert Image to Grayscale Online Free - Black and White Filter",
+    metaDescription: "Convert images to grayscale online for free. Create black and white photos instantly. Professional grayscale conversion tool.",
+    description: "Convert color images to grayscale (black and white)",
+    icon: "circle-half",
+    howTo: [
+      "Upload your color image",
+      "Click 'Convert to Grayscale'",
+      "Preview black and white result",
+      "Download grayscale image"
+    ],
+    article: {
+      title: "Convert Images to Grayscale",
+      content: `Transform color images into classic black and white photos. Our grayscale converter creates professional-quality monochrome images.
+
+## Classic Black and White
+
+Create timeless black and white photos with accurate grayscale conversion.
+
+## Professional Quality
+
+Maintain image detail and tonal range in grayscale conversion.`,
+      relatedTools: ["black-white-filter", "sepia-filter", "vintage-filter"]
+    }
+  },
+  {
+    id: "invert-colors",
+    title: "Invert Image Colors",
+    category: "Image Filters" as ToolCategory,
+    tags: ["invert", "negative", "reverse", "colors"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Invert Image Colors Online Free - Create Negative Effect",
+    metaDescription: "Invert image colors online for free. Create negative photo effect instantly. Fast color inversion tool.",
+    description: "Invert all colors in an image to create negative effect",
+    icon: "palette",
+    howTo: [
+      "Upload your image",
+      "Click 'Invert Colors'",
+      "See negative effect",
+      "Download inverted image"
+    ],
+    article: {
+      title: "Invert Image Colors Online",
+      content: `Create negative effects by inverting all colors in your images. Perfect for artistic effects or analyzing images.
+
+## Color Negative
+
+Transform images into their color negative, creating unique visual effects.
+
+## Instant Inversion
+
+Process images in seconds with our fast color inversion tool.`,
+      relatedTools: ["grayscale-image", "image-filters", "color-effects"]
+    }
+  },
+  {
+    id: "add-border",
+    title: "Add Border to Image",
+    category: "Image Creative Tools" as ToolCategory,
+    tags: ["border", "frame", "edge", "decoration"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Border to Image Online Free - Photo Border Tool",
+    metaDescription: "Add borders to images online for free. Choose colors, styles, and widths. Create framed photos instantly.",
+    description: "Add customizable borders around your images",
+    icon: "square",
+    howTo: [
+      "Upload your image",
+      "Choose border color and width",
+      "Select border style",
+      "Download bordered image"
+    ],
+    article: {
+      title: "Add Borders to Images Online",
+      content: `Frame your images with custom borders. Choose from various colors, styles, and widths to create perfect frames.
+
+## Customizable Borders
+
+Select border color, width, and style to match your design needs.
+
+## Professional Framing
+
+Create professional-looking framed images for social media or printing.`,
+      relatedTools: ["round-corners", "image-frame", "add-watermark"]
+    }
+  },
+  {
+    id: "round-corners",
+    title: "Round Image Corners",
+    category: "Image Creative Tools" as ToolCategory,
+    tags: ["round", "corners", "radius", "smooth"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Round Image Corners Online Free - Add Rounded Corners to Photos",
+    metaDescription: "Round image corners online for free. Create photos with smooth rounded edges. Adjustable corner radius.",
+    description: "Add rounded corners to images for modern look",
+    icon: "square-rounded",
+    howTo: [
+      "Upload your image",
+      "Adjust corner radius",
+      "Preview rounded corners",
+      "Download result"
+    ],
+    article: {
+      title: "Create Rounded Corner Images",
+      content: `Add modern rounded corners to your images. Perfect for profile pictures, social media posts, and web design.
+
+## Adjustable Radius
+
+Control the degree of rounding from subtle curves to circular images.
+
+## Modern Design
+
+Rounded corners give images a contemporary, polished appearance.`,
+      relatedTools: ["add-border", "crop-image", "image-editor"]
+    }
+  },
+  {
+    id: "sepia-filter",
+    title: "Image Filter (Sepia)",
+    category: "Image Filters" as ToolCategory,
+    tags: ["sepia", "vintage", "filter", "warm"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Sepia Filter Online Free - Add Vintage Sepia Effect to Photos",
+    metaDescription: "Apply sepia filter to images online for free. Create warm vintage photos with classic sepia tone effect.",
+    description: "Apply warm sepia tone filter for vintage effect",
+    icon: "sun-medium",
+    howTo: [
+      "Upload your image",
+      "Apply sepia filter",
+      "Adjust intensity",
+      "Download vintage photo"
+    ],
+    article: {
+      title: "Create Sepia Tone Photos",
+      content: `Add classic sepia tones to create warm, vintage-style photographs. Perfect for creating nostalgic imagery.
+
+## Vintage Warmth
+
+Sepia tones add warmth and timeless quality to photos.
+
+## Adjustable Intensity
+
+Control the strength of the sepia effect for subtle or dramatic results.`,
+      relatedTools: ["vintage-filter", "grayscale-image", "black-white-filter"]
+    }
+  },
+  {
+    id: "vintage-filter",
+    title: "Image Filter (Vintage)",
+    category: "Image Filters" as ToolCategory,
+    tags: ["vintage", "retro", "old", "filter"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Vintage Filter Online Free - Add Retro Effect to Photos",
+    metaDescription: "Apply vintage filter to images online for free. Create retro-style photos with authentic vintage effects.",
+    description: "Apply vintage filter for retro, aged photo effect",
+    icon: "camera",
+    howTo: [
+      "Upload your image",
+      "Select vintage style",
+      "Adjust effect strength",
+      "Download retro photo"
+    ],
+    article: {
+      title: "Create Vintage Style Photos",
+      content: `Transform modern photos into vintage-style images with authentic retro effects including fading, grain, and color shifts.
+
+## Authentic Vintage Look
+
+Multiple vintage styles to recreate different era photography aesthetics.
+
+## Retro Appeal
+
+Perfect for creating nostalgic social media posts and artistic projects.`,
+      relatedTools: ["sepia-filter", "grain-effect", "color-fade"]
+    }
+  },
+  {
+    id: "black-white-filter",
+    title: "Image Filter (Black & White)",
+    category: "Image Filters" as ToolCategory,
+    tags: ["black and white", "monochrome", "contrast", "filter"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Black and White Filter Online - Convert Photos to B&W",
+    metaDescription: "Apply black and white filter online for free. Create high-contrast monochrome photos. Professional B&W conversion.",
+    description: "Create high-contrast black and white images",
+    icon: "contrast",
+    howTo: [
+      "Upload your image",
+      "Apply B&W filter",
+      "Adjust contrast",
+      "Download monochrome photo"
+    ],
+    article: {
+      title: "Professional Black and White Photography",
+      content: `Create stunning black and white images with enhanced contrast and tonal range. Perfect for dramatic, artistic photography.
+
+## High Contrast
+
+Optimized black and white conversion for maximum visual impact.
+
+## Artistic Control
+
+Fine-tune contrast and tonal balance for professional results.`,
+      relatedTools: ["grayscale-image", "adjust-contrast", "photo-effects"]
+    }
+  },
+  {
+    id: "meme-generator",
+    title: "Meme Generator",
+    category: "Image Creative Tools" as ToolCategory,
+    tags: ["meme", "caption", "text", "funny"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Meme Generator Online Free - Create Memes with Captions",
+    metaDescription: "Create memes online for free. Add top and bottom text to images. Easy-to-use meme generator with custom fonts.",
+    description: "Create memes by adding top and bottom text to images",
+    icon: "message-square",
+    howTo: [
+      "Upload your image or choose template",
+      "Add top text",
+      "Add bottom text",
+      "Download your meme"
+    ],
+    article: {
+      title: "Create Memes Online",
+      content: `Make viral-worthy memes with our easy-to-use meme generator. Add custom text with classic meme styling.
+
+## Classic Meme Format
+
+Add top and bottom text with traditional meme font and styling.
+
+## Custom or Template
+
+Use your own images or choose from popular meme templates.`,
+      relatedTools: ["add-text-to-photo", "image-caption", "social-media-post"]
+    }
+  },
+  {
+    id: "add-text-to-photo",
+    title: "Add Text to Photo",
+    category: "Image Creative Tools" as ToolCategory,
+    tags: ["text", "caption", "label", "annotate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Add Text to Photo Online Free - Photo Text Editor",
+    metaDescription: "Add text to photos online for free. Customize fonts, colors, and positions. Create captioned images instantly.",
+    description: "Add customizable text overlays to your images",
+    icon: "type",
+    howTo: [
+      "Upload your photo",
+      "Type your text",
+      "Customize font, color, size",
+      "Position and download"
+    ],
+    article: {
+      title: "Add Text to Photos Online",
+      content: `Enhance images with custom text overlays. Perfect for creating quotes, captions, labels, and social media posts.
+
+## Full Customization
+
+Choose fonts, colors, sizes, and positions for your text.
+
+## Multiple Text Layers
+
+Add multiple text elements to create complex designs.`,
+      relatedTools: ["meme-generator", "add-watermark", "image-editor"]
+    }
+  },
+  {
+    id: "split-image",
+    title: "Split Image",
+    category: "Image Combination" as ToolCategory,
+    tags: ["split", "divide", "separate", "slice"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Split Image Online Free - Divide Photos into Parts",
+    metaDescription: "Split images online for free. Divide photos into multiple parts. Grid splitter for Instagram and social media.",
+    description: "Split images into multiple parts or grid",
+    icon: "grid",
+    howTo: [
+      "Upload your image",
+      "Choose split pattern (2x2, 3x3, etc.)",
+      "Preview split parts",
+      "Download all parts"
+    ],
+    article: {
+      title: "Split Images into Parts",
+      content: `Divide images into multiple parts for Instagram grids, collages, or printing. Create perfect splits with our tool.
+
+## Grid Splitting
+
+Split images into grids for Instagram carousel posts.
+
+## Custom Divisions
+
+Choose how many rows and columns to divide your image.`,
+      relatedTools: ["merge-images", "image-grid", "instagram-split"]
+    }
+  },
+  {
+    id: "merge-images",
+    title: "Merge Images",
+    category: "Image Combination" as ToolCategory,
+    tags: ["merge", "combine", "join", "stitch"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Merge Images Online Free - Combine Multiple Photos",
+    metaDescription: "Merge images online for free. Combine multiple photos into one. Create collages and combined images instantly.",
+    description: "Combine multiple images into one",
+    icon: "layers",
+    howTo: [
+      "Upload multiple images",
+      "Arrange in order",
+      "Choose layout direction",
+      "Download merged image"
+    ],
+    article: {
+      title: "Merge Multiple Images",
+      content: `Combine multiple images into a single file. Perfect for creating before/after comparisons or image compilations.
+
+## Flexible Layouts
+
+Merge images horizontally, vertically, or in custom grids.
+
+## Quality Preservation
+
+Maintains original image quality when combining photos.`,
+      relatedTools: ["image-combiner-horizontal", "image-combiner-vertical", "split-image"]
+    }
+  },
+  {
+    id: "image-combiner-horizontal",
+    title: "Image Combiner (Horizontal)",
+    category: "Image Combination" as ToolCategory,
+    tags: ["combine", "horizontal", "side by side", "merge"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Combine Images Horizontally Online - Side by Side Image Tool",
+    metaDescription: "Combine images horizontally online for free. Place photos side by side. Create before/after comparisons.",
+    description: "Place images side by side horizontally",
+    icon: "columns",
+    howTo: [
+      "Upload your images",
+      "Images will be placed side by side",
+      "Adjust spacing if needed",
+      "Download combined image"
+    ],
+    article: {
+      title: "Combine Images Side by Side",
+      content: `Place multiple images side by side horizontally. Perfect for comparisons, product showcases, and panoramas.
+
+## Side by Side Layout
+
+Automatically arrange images in horizontal layout.
+
+## Before/After
+
+Create effective before and after comparison images.`,
+      relatedTools: ["image-combiner-vertical", "merge-images", "split-image"]
+    }
+  },
+  {
+    id: "image-combiner-vertical",
+    title: "Image Combiner (Vertical)",
+    category: "Image Combination" as ToolCategory,
+    tags: ["combine", "vertical", "stack", "merge"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Combine Images Vertically Online - Stack Photos Tool",
+    metaDescription: "Combine images vertically online for free. Stack photos top to bottom. Create vertical compilations easily.",
+    description: "Stack images vertically one above another",
+    icon: "rows",
+    howTo: [
+      "Upload your images",
+      "Images will be stacked vertically",
+      "Adjust spacing between images",
+      "Download stacked image"
+    ],
+    article: {
+      title: "Stack Images Vertically",
+      content: `Stack multiple images vertically to create compilations, tutorials, or progressive sequences.
+
+## Vertical Stacking
+
+Automatically arrange images in vertical layout from top to bottom.
+
+## Tutorial Creation
+
+Perfect for creating step-by-step tutorial images.`,
+      relatedTools: ["image-combiner-horizontal", "merge-images", "collage-maker"]
+    }
+  },
+  {
+    id: "favicon-generator",
+    title: "Favicon Generator",
+    category: "Icon Tools" as ToolCategory,
+    tags: ["favicon", "icon", "website", "ico"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Favicon Generator Online Free - Create Website Icons",
+    metaDescription: "Generate favicons online for free. Create website icons in all sizes. ICO, PNG, and Apple touch icon generator.",
+    description: "Generate favicons in multiple sizes for websites",
+    icon: "star",
+    howTo: [
+      "Upload your image or logo",
+      "Tool generates all favicon sizes",
+      "Download favicon package",
+      "Add to your website"
+    ],
+    article: {
+      title: "Generate Favicons for Your Website",
+      content: `Create complete favicon packages with all sizes needed for modern websites. Generate ICO, PNG, and Apple touch icons.
+
+## All Sizes Included
+
+Generates 16x16, 32x32, 48x48, and larger sizes for all devices.
+
+## Easy Integration
+
+Get ready-to-use HTML code for adding favicons to your site.`,
+      relatedTools: ["ico-to-png", "png-to-ico", "resize-image"]
+    }
+  },
+  {
+    id: "ico-to-png",
+    title: "ICO to PNG",
+    category: "Icon Tools" as ToolCategory,
+    tags: ["ico", "png", "icon", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "ICO to PNG Converter Online Free - Convert Icons to PNG",
+    metaDescription: "Convert ICO to PNG online for free. Transform Windows icons to PNG images. Fast ICO to PNG conversion.",
+    description: "Convert ICO icon files to PNG format",
+    icon: "file-image",
+    howTo: [
+      "Upload your ICO file",
+      "Select size to extract",
+      "Click 'Convert to PNG'",
+      "Download PNG image"
+    ],
+    article: {
+      title: "Convert ICO Icons to PNG",
+      content: `Convert Windows ICO icon files to PNG format for better compatibility and editing options.
+
+## Size Selection
+
+ICO files contain multiple sizes - choose which to extract.
+
+## Transparent PNG
+
+Maintains transparency from original icon files.`,
+      relatedTools: ["png-to-ico", "favicon-generator", "image-converter"]
+    }
+  },
+  {
+    id: "png-to-ico",
+    title: "PNG to ICO",
+    category: "Icon Tools" as ToolCategory,
+    tags: ["png", "ico", "icon", "convert", "favicon"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PNG to ICO Converter Online - Create ICO Icons from PNG",
+    metaDescription: "Convert PNG to ICO online for free. Create Windows icons and favicons from PNG images. Multi-size ICO generator.",
+    description: "Convert PNG images to ICO icon format",
+    icon: "image",
+    howTo: [
+      "Upload your PNG image",
+      "Select icon sizes to include",
+      "Click 'Convert to ICO'",
+      "Download ICO file"
+    ],
+    article: {
+      title: "Create ICO Icons from PNG",
+      content: `Convert PNG images to ICO format for Windows icons and favicons. Generate multi-size ICO files.
+
+## Multiple Sizes
+
+Include various sizes (16x16, 32x32, 48x48) in one ICO file.
+
+## Transparency Support
+
+PNG transparency is preserved in ICO conversion.`,
+      relatedTools: ["ico-to-png", "favicon-generator", "resize-image"]
+    }
+  },
+  {
+    id: "apng-to-gif",
+    title: "APNG to GIF",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["apng", "gif", "animated", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "APNG to GIF Converter Online - Convert Animated PNG to GIF",
+    metaDescription: "Convert APNG to GIF online for free. Transform animated PNG files to GIF format. Fast APNG to GIF conversion.",
+    description: "Convert animated PNG files to GIF format",
+    icon: "film",
+    howTo: [
+      "Upload your APNG file",
+      "Adjust quality settings",
+      "Click 'Convert to GIF'",
+      "Download GIF animation"
+    ],
+    article: {
+      title: "Convert APNG to GIF",
+      content: `Convert animated PNG (APNG) files to the more widely supported GIF format for better compatibility.
+
+## Wide Compatibility
+
+GIF format is supported by all browsers and platforms.
+
+## Animation Preservation
+
+Maintains animation timing and frames from APNG.`,
+      relatedTools: ["gif-to-apng", "gif-maker", "optimize-gif"]
+    }
+  },
+  {
+    id: "gif-to-apng",
+    title: "GIF to APNG",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["gif", "apng", "animated", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "GIF to APNG Converter Online - Convert GIF to Animated PNG",
+    metaDescription: "Convert GIF to APNG online for free. Transform GIF animations to animated PNG with better quality.",
+    description: "Convert GIF animations to animated PNG format",
+    icon: "image",
+    howTo: [
+      "Upload your GIF file",
+      "Tool converts to APNG",
+      "Preview animation",
+      "Download APNG file"
+    ],
+    article: {
+      title: "Convert GIF to APNG",
+      content: `Convert GIF animations to APNG format for improved quality and better color support.
+
+## Better Quality
+
+APNG supports true color and better compression than GIF.
+
+## Transparency
+
+Enhanced transparency support compared to GIF format.`,
+      relatedTools: ["apng-to-gif", "optimize-gif", "gif-editor"]
+    }
+  },
+  {
+    id: "image-to-ascii",
+    title: "Image to ASCII Art",
+    category: "Artistic Conversion" as ToolCategory,
+    tags: ["ascii", "art", "text", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image to ASCII Art Converter Online - Create ASCII Art",
+    metaDescription: "Convert images to ASCII art online for free. Transform photos into text-based art. Adjustable ASCII art generator.",
+    description: "Convert images to ASCII art using text characters",
+    icon: "code",
+    howTo: [
+      "Upload your image",
+      "Adjust ASCII art size",
+      "Choose character set",
+      "Copy or download ASCII art"
+    ],
+    article: {
+      title: "Create ASCII Art from Images",
+      content: `Transform images into ASCII art using text characters. Create unique text-based representations of your photos.
+
+## Customizable Output
+
+Control the size and character set used for ASCII conversion.
+
+## Copy or Save
+
+Copy ASCII art to clipboard or save as text file.`,
+      relatedTools: ["image-to-sketch", "image-effects", "text-art"]
+    }
+  },
+  {
+    id: "metadata-viewer",
+    title: "Image Metadata Viewer",
+    category: "Image Analysis" as ToolCategory,
+    tags: ["metadata", "exif", "info", "details"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image Metadata Viewer Online - View EXIF Data",
+    metaDescription: "View image metadata online for free. Check EXIF data, camera settings, and photo information. Complete metadata viewer.",
+    description: "View EXIF and metadata information from images",
+    icon: "info",
+    howTo: [
+      "Upload your image",
+      "View all metadata",
+      "Check EXIF data",
+      "Copy information if needed"
+    ],
+    article: {
+      title: "View Image Metadata and EXIF Data",
+      content: `Examine detailed metadata and EXIF information from your images including camera settings, location, and more.
+
+## Complete Information
+
+View camera model, settings, GPS data, and all embedded metadata.
+
+## Photo Analysis
+
+Analyze camera settings to learn from well-exposed photos.`,
+      relatedTools: ["remove-metadata", "exif-remover", "image-info"]
+    }
+  },
+  {
+    id: "remove-metadata",
+    title: "Remove Image Metadata (EXIF)",
+    category: "Image Analysis" as ToolCategory,
+    tags: ["metadata", "exif", "remove", "privacy"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Remove Image Metadata Online - Delete EXIF Data for Privacy",
+    metaDescription: "Remove metadata from images online for free. Delete EXIF data for privacy. Strip location and camera info from photos.",
+    description: "Remove EXIF and metadata from images for privacy",
+    icon: "shield",
+    howTo: [
+      "Upload your image",
+      "Click 'Remove Metadata'",
+      "Metadata is stripped",
+      "Download clean image"
+    ],
+    article: {
+      title: "Remove Image Metadata for Privacy",
+      content: `Strip EXIF data and metadata from images to protect your privacy when sharing photos online.
+
+## Privacy Protection
+
+Remove location data, camera info, and other metadata before sharing.
+
+## Complete Removal
+
+Removes all embedded metadata while preserving image quality.`,
+      relatedTools: ["metadata-viewer", "privacy-tools", "secure-image"]
+    }
+  },
+  {
+    id: "color-corrector",
+    title: "Image Color Corrector",
+    category: "Image Enhancement" as ToolCategory,
+    tags: ["color", "correct", "balance", "enhance"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image Color Corrector Online - Fix Photo Colors",
+    metaDescription: "Correct image colors online for free. Fix color balance, white balance, and color casts. Professional color correction tool.",
+    description: "Correct and balance colors in images",
+    icon: "palette",
+    howTo: [
+      "Upload your image",
+      "Use auto-correct or manual controls",
+      "Adjust color balance",
+      "Download corrected image"
+    ],
+    article: {
+      title: "Correct Image Colors Professionally",
+      content: `Fix color issues in photos with professional color correction tools. Balance colors, remove color casts, and enhance accuracy.
+
+## Auto Color Correction
+
+Automatic color balance adjustment for quick fixes.
+
+## Manual Control
+
+Fine-tune color channels individually for precise correction.`,
+      relatedTools: ["white-balance", "color-enhance", "photo-editor"]
+    }
+  },
+  {
+    id: "change-dpi",
+    title: "Change Image DPI",
+    category: "Image Enhancement" as ToolCategory,
+    tags: ["dpi", "resolution", "print", "quality"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Change Image DPI Online - Adjust Photo Resolution for Print",
+    metaDescription: "Change image DPI online for free. Adjust resolution for printing. Set custom DPI for photos and graphics.",
+    description: "Change DPI/resolution settings for printing",
+    icon: "settings",
+    howTo: [
+      "Upload your image",
+      "Enter desired DPI (e.g., 300 for print)",
+      "Apply DPI change",
+      "Download print-ready image"
+    ],
+    article: {
+      title: "Adjust Image DPI for Printing",
+      content: `Change image DPI settings to prepare photos for professional printing. Set appropriate resolution for different print needs.
+
+## Print Quality
+
+300 DPI is standard for high-quality photo printing.
+
+## Custom DPI
+
+Set any DPI value for specific printing requirements.`,
+      relatedTools: ["resize-image", "image-enlarger", "print-prep"]
+    }
+  },
+  {
+    id: "image-enlarger",
+    title: "Image Enlarger",
+    category: "Image Enhancement" as ToolCategory,
+    tags: ["enlarge", "upscale", "bigger", "resize"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image Enlarger Online - Upscale Photos Without Quality Loss",
+    metaDescription: "Enlarge images online for free. Upscale photos with AI enhancement. Increase image size without losing quality.",
+    description: "Enlarge images while maintaining quality",
+    icon: "maximize",
+    howTo: [
+      "Upload your image",
+      "Choose enlargement factor",
+      "AI enhances quality",
+      "Download larger image"
+    ],
+    article: {
+      title: "Enlarge Images Without Quality Loss",
+      content: `Upscale images while preserving quality using advanced algorithms. Perfect for making small images larger for printing.
+
+## AI Enhancement
+
+Smart upscaling algorithms maintain detail when enlarging.
+
+## Multiple Sizes
+
+Enlarge to 2x, 4x, or custom dimensions.`,
+      relatedTools: ["resize-image", "ai-enhance", "upscale-photo"]
+    }
+  },
+  {
+    id: "image-deblur",
+    title: "Image Deblur",
+    category: "Image Enhancement" as ToolCategory,
+    tags: ["deblur", "sharpen", "fix", "enhance"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Deblur Image Online - Fix Blurry Photos",
+    metaDescription: "Deblur images online for free. Fix blurry and out-of-focus photos. AI-powered image deblurring tool.",
+    description: "Fix blurry images and restore sharpness",
+    icon: "focus",
+    howTo: [
+      "Upload your blurry image",
+      "AI analyzes and deblurs",
+      "Preview enhanced result",
+      "Download sharp image"
+    ],
+    article: {
+      title: "Fix Blurry Images with Deblur",
+      content: `Restore sharpness to blurry photos using advanced deblurring technology. Fix out-of-focus and motion-blurred images.
+
+## AI Deblurring
+
+Advanced algorithms analyze and correct blur.
+
+## Motion Blur Fix
+
+Reduce motion blur from camera shake or movement.`,
+      relatedTools: ["sharpen-image", "ai-enhance", "photo-restore"]
+    }
+  },
+  {
+    id: "ai-image-generator",
+    title: "AI Image Generator",
+    category: "AI Image Tools" as ToolCategory,
+    tags: ["ai", "generate", "create", "artificial intelligence"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "AI Image Generator Online - Create Images from Text",
+    metaDescription: "Generate images with AI online. Create unique images from text descriptions. Free AI image generation tool.",
+    description: "Generate images from text using AI",
+    icon: "sparkles",
+    howTo: [
+      "Enter text description",
+      "Choose style preferences",
+      "AI generates image",
+      "Download created image"
+    ],
+    article: {
+      title: "Generate Images with AI",
+      content: `Create unique images from text descriptions using artificial intelligence. Generate art, photos, and graphics with AI.
+
+## Text to Image
+
+Describe what you want and AI creates it.
+
+## Multiple Styles
+
+Choose from various artistic styles and approaches.`,
+      relatedTools: ["ai-photo-retouch", "ai-enhance", "image-editor"]
+    }
+  },
+  {
+    id: "ai-photo-retouch",
+    title: "AI Photo Retouch",
+    category: "AI Image Tools" as ToolCategory,
+    tags: ["ai", "retouch", "enhance", "improve"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "AI Photo Retouch Online - Automatic Photo Enhancement",
+    metaDescription: "Retouch photos with AI online for free. Automatic skin smoothing, blemish removal, and photo enhancement.",
+    description: "Automatically retouch and enhance photos with AI",
+    icon: "wand",
+    howTo: [
+      "Upload your photo",
+      "AI analyzes image",
+      "Automatic retouching applied",
+      "Download enhanced photo"
+    ],
+    article: {
+      title: "Retouch Photos with AI",
+      content: `Enhance portraits and photos automatically with AI retouching. Remove blemishes, smooth skin, and improve overall appearance.
+
+## Automatic Enhancement
+
+AI detects and fixes common photo issues.
+
+## Portrait Perfection
+
+Specialized in portrait retouching and enhancement.`,
+      relatedTools: ["ai-enhance", "remove-blemish", "photo-editor"]
+    }
+  },
+  {
+    id: "ai-object-remover",
+    title: "AI Object Remover (Image)",
+    category: "AI Image Tools" as ToolCategory,
+    tags: ["ai", "remove", "object", "erase"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "AI Object Remover Online - Remove Unwanted Objects from Photos",
+    metaDescription: "Remove objects from images with AI online. Erase unwanted elements from photos automatically. Free AI object removal.",
+    description: "Remove unwanted objects from images using AI",
+    icon: "eraser",
+    howTo: [
+      "Upload your image",
+      "Mark objects to remove",
+      "AI removes and fills",
+      "Download clean image"
+    ],
+    article: {
+      title: "Remove Objects from Photos with AI",
+      content: `Erase unwanted objects, people, or elements from photos using AI. Clean up backgrounds and remove distractions.
+
+## Smart Removal
+
+AI intelligently fills removed areas with matching background.
+
+## Easy Selection
+
+Simply mark what you want to remove.`,
+      relatedTools: ["ai-enhance", "background-remover", "photo-cleanup"]
+    }
+  },
+  {
+    id: "ai-face-swapper",
+    title: "AI Face Swapper",
+    category: "AI Image Tools" as ToolCategory,
+    tags: ["ai", "face swap", "replace", "fun"],
+    capability: "requires-service" as ToolCapability,
+    metaTitle: "AI Face Swapper Online - Swap Faces in Photos",
+    metaDescription: "Swap faces in images with AI online. Replace faces in photos realistically. Free AI face swapping tool.",
+    description: "Swap faces between images using AI",
+    icon: "users",
+    howTo: [
+      "Upload two images",
+      "AI detects faces",
+      "Faces are swapped",
+      "Download result"
+    ],
+    article: {
+      title: "Swap Faces with AI Technology",
+      content: `Replace and swap faces between photos using advanced AI technology. Create fun face swaps with realistic results.
+
+## Realistic Results
+
+AI ensures natural-looking face swaps.
+
+## Easy Process
+
+Upload photos and AI handles the rest.`,
+      relatedTools: ["ai-photo-editor", "face-detection", "photo-fun"]
+    }
+  },
+  {
+    id: "image-to-sketch",
+    title: "Image to Sketch",
+    category: "Artistic Conversion" as ToolCategory,
+    tags: ["sketch", "drawing", "pencil", "art"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image to Sketch Converter Online - Turn Photos into Sketches",
+    metaDescription: "Convert images to sketches online for free. Transform photos into pencil drawing style. Realistic sketch effect.",
+    description: "Convert photos to pencil sketch style",
+    icon: "edit",
+    howTo: [
+      "Upload your photo",
+      "Choose sketch style",
+      "Adjust sketch intensity",
+      "Download sketch image"
+    ],
+    article: {
+      title: "Convert Photos to Sketch Drawings",
+      content: `Transform photos into realistic pencil sketch artwork. Create artistic sketch effects from any image.
+
+## Realistic Sketches
+
+Advanced algorithms create natural pencil drawing effects.
+
+## Style Options
+
+Choose from various sketch styles and intensities.`,
+      relatedTools: ["image-to-painting", "artistic-effects", "photo-to-art"]
+    }
+  },
+  {
+    id: "image-to-painting",
+    title: "Image to Painting",
+    category: "Artistic Conversion" as ToolCategory,
+    tags: ["painting", "art", "oil", "watercolor"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image to Painting Converter Online - Turn Photos into Art",
+    metaDescription: "Convert images to paintings online for free. Transform photos into oil painting or watercolor style. Artistic photo effects.",
+    description: "Transform photos into painting style artwork",
+    icon: "paintbrush",
+    howTo: [
+      "Upload your photo",
+      "Select painting style",
+      "Adjust artistic effect",
+      "Download painting"
+    ],
+    article: {
+      title: "Turn Photos into Paintings",
+      content: `Convert photos to beautiful paintings with various artistic styles including oil painting and watercolor effects.
+
+## Multiple Styles
+
+Choose from oil painting, watercolor, impressionist, and more.
+
+## Artistic Quality
+
+Create museum-quality artistic renditions of photos.`,
+      relatedTools: ["image-to-sketch", "art-filters", "creative-effects"]
+    }
+  },
+  {
+    id: "color-palette",
+    title: "Image Color Palette Generator",
+    category: "Image Analysis" as ToolCategory,
+    tags: ["color", "palette", "scheme", "extract"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image Color Palette Generator - Extract Colors from Photos",
+    metaDescription: "Generate color palettes from images online for free. Extract dominant colors from photos. Create color schemes from images.",
+    description: "Extract color palettes from images",
+    icon: "palette",
+    howTo: [
+      "Upload your image",
+      "Tool extracts dominant colors",
+      "View color codes (HEX, RGB)",
+      "Copy or download palette"
+    ],
+    article: {
+      title: "Extract Color Palettes from Images",
+      content: `Generate beautiful color palettes from any image. Extract dominant colors and create color schemes for design projects.
+
+## Dominant Colors
+
+Identifies the main colors in your image.
+
+## Multiple Formats
+
+Get color codes in HEX, RGB, and other formats.`,
+      relatedTools: ["color-picker", "histogram-generator", "color-analysis"]
+    }
+  },
+  {
+    id: "histogram-generator",
+    title: "Image Histogram Generator",
+    category: "Image Analysis" as ToolCategory,
+    tags: ["histogram", "analysis", "graph", "distribution"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Image Histogram Generator - Analyze Photo Color Distribution",
+    metaDescription: "Generate image histograms online for free. Analyze color and brightness distribution in photos. Photo histogram tool.",
+    description: "Generate histograms showing color/brightness distribution",
+    icon: "bar-chart",
+    howTo: [
+      "Upload your image",
+      "View RGB histograms",
+      "Analyze distribution",
+      "Download histogram data"
+    ],
+    article: {
+      title: "Analyze Images with Histograms",
+      content: `Generate detailed histograms showing the distribution of colors and brightness in your images. Perfect for photo analysis.
+
+## RGB Analysis
+
+See separate histograms for red, green, and blue channels.
+
+## Exposure Analysis
+
+Understand image exposure and tonal distribution.`,
+      relatedTools: ["color-palette", "image-analysis", "photo-info"]
+    }
+  },
+  {
+    id: "word-to-txt",
+    title: "Word to TXT",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["word", "txt", "text", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Word to TXT Converter Online - Convert DOCX to Plain Text",
+    metaDescription: "Convert Word to TXT online for free. Extract plain text from DOCX files. Simple Word to text conversion.",
+    description: "Convert Word documents to plain text format",
+    icon: "file-text",
+    howTo: [
+      "Upload your Word file",
+      "Text is extracted",
+      "Preview plain text",
+      "Download TXT file"
+    ],
+    article: {
+      title: "Convert Word Documents to Plain Text",
+      content: `Extract text from Word documents and save as plain text files. Remove formatting and get clean text content.
+
+## Clean Text
+
+Extracts text without formatting, images, or special elements.
+
+## Universal Format
+
+Plain text files work everywhere and with any software.`,
+      relatedTools: ["txt-to-word", "word-to-html", "document-converter"]
+    }
+  },
+  {
+    id: "word-to-html",
+    title: "Word to HTML",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["word", "html", "web", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Word to HTML Converter Online - Convert DOCX to HTML",
+    metaDescription: "Convert Word to HTML online for free. Transform DOCX documents to web pages. Clean HTML conversion from Word.",
+    description: "Convert Word documents to HTML format",
+    icon: "code",
+    howTo: [
+      "Upload your Word document",
+      "Conversion to HTML",
+      "Preview HTML output",
+      "Download HTML file"
+    ],
+    article: {
+      title: "Convert Word to HTML for Web",
+      content: `Transform Word documents into clean HTML code for web publishing. Preserve formatting while creating web-ready content.
+
+## Web-Ready HTML
+
+Generates clean, standards-compliant HTML code.
+
+## Formatting Preserved
+
+Maintains text formatting, lists, and basic styles.`,
+      relatedTools: ["html-to-word", "word-converter", "web-tools"]
+    }
+  },
+  {
+    id: "txt-to-word",
+    title: "TXT to Word",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["txt", "word", "docx", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "TXT to Word Converter Online - Convert Text to DOCX",
+    metaDescription: "Convert TXT to Word online for free. Transform plain text files to DOCX format. Add formatting to text files.",
+    description: "Convert plain text files to Word documents",
+    icon: "file-text",
+    howTo: [
+      "Upload your TXT file",
+      "Text is formatted",
+      "Preview Word document",
+      "Download DOCX file"
+    ],
+    article: {
+      title: "Convert Plain Text to Word Documents",
+      content: `Transform plain text files into formatted Word documents. Add document structure to simple text files.
+
+## Add Formatting
+
+Convert plain text to properly formatted Word documents.
+
+## Document Structure
+
+Creates professional-looking Word files from text.`,
+      relatedTools: ["word-to-txt", "document-editor", "text-converter"]
+    }
+  },
+  {
+    id: "html-to-word",
+    title: "HTML to Word",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["html", "word", "docx", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "HTML to Word Converter Online - Convert Web Pages to DOCX",
+    metaDescription: "Convert HTML to Word online for free. Transform web pages to DOCX documents. Preserve formatting in conversion.",
+    description: "Convert HTML files to Word documents",
+    icon: "file-code",
+    howTo: [
+      "Upload HTML file or paste code",
+      "HTML is converted",
+      "Preview Word document",
+      "Download DOCX"
+    ],
+    article: {
+      title: "Convert HTML to Word Documents",
+      content: `Transform HTML content into editable Word documents. Convert web pages to DOCX format with formatting preserved.
+
+## Formatting Conversion
+
+HTML styles are converted to Word formatting.
+
+## Editable Output
+
+Get fully editable Word documents from HTML.`,
+      relatedTools: ["word-to-html", "web-to-doc", "html-converter"]
+    }
+  },
+  {
+    id: "excel-to-csv",
+    title: "Excel to CSV",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["excel", "csv", "spreadsheet", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Excel to CSV Converter Online - Convert XLSX to CSV Free",
+    metaDescription: "Convert Excel to CSV online for free. Transform XLSX spreadsheets to CSV format. Simple Excel to CSV conversion.",
+    description: "Convert Excel spreadsheets to CSV format",
+    icon: "table",
+    howTo: [
+      "Upload your Excel file",
+      "Select sheet to convert",
+      "Convert to CSV",
+      "Download CSV file"
+    ],
+    article: {
+      title: "Convert Excel to CSV Format",
+      content: `Transform Excel spreadsheets into CSV (Comma-Separated Values) format for universal compatibility.
+
+## Universal Format
+
+CSV works with all spreadsheet applications and databases.
+
+## Data Portability
+
+Easily import/export data between different systems.`,
+      relatedTools: ["csv-to-excel", "excel-to-json", "data-converter"]
+    }
+  },
+  {
+    id: "csv-to-excel",
+    title: "CSV to Excel",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["csv", "excel", "xlsx", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSV to Excel Converter Online - Convert CSV to XLSX Free",
+    metaDescription: "Convert CSV to Excel online for free. Transform CSV files to XLSX spreadsheets. Add formatting to CSV data.",
+    description: "Convert CSV files to Excel spreadsheets",
+    icon: "file-spreadsheet",
+    howTo: [
+      "Upload your CSV file",
+      "Preview data",
+      "Convert to Excel",
+      "Download XLSX file"
+    ],
+    article: {
+      title: "Convert CSV to Excel Spreadsheets",
+      content: `Transform CSV data into formatted Excel spreadsheets. Add Excel functionality to simple CSV files.
+
+## Excel Features
+
+Access Excel formulas, formatting, and features.
+
+## Data Formatting
+
+Properly format data in Excel spreadsheet format.`,
+      relatedTools: ["excel-to-csv", "csv-editor", "spreadsheet-tools"]
+    }
+  },
+  {
+    id: "excel-to-json",
+    title: "Excel to JSON",
+    category: "Data Format Conversion" as ToolCategory,
+    tags: ["excel", "json", "data", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Excel to JSON Converter Online - Convert XLSX to JSON",
+    metaDescription: "Convert Excel to JSON online for free. Transform spreadsheet data to JSON format. Excel to JSON API converter.",
+    description: "Convert Excel data to JSON format",
+    icon: "braces",
+    howTo: [
+      "Upload your Excel file",
+      "Select data range",
+      "Convert to JSON",
+      "Download or copy JSON"
+    ],
+    article: {
+      title: "Convert Excel to JSON Data",
+      content: `Transform Excel spreadsheets into JSON format for use in APIs, web apps, and data processing.
+
+## API Ready
+
+JSON format is perfect for web APIs and applications.
+
+## Structured Data
+
+Maintains data structure in JSON format.`,
+      relatedTools: ["json-to-excel", "csv-to-json", "data-converter"]
+    }
+  },
+  {
+    id: "json-to-excel",
+    title: "JSON to Excel",
+    category: "Data Format Conversion" as ToolCategory,
+    tags: ["json", "excel", "xlsx", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JSON to Excel Converter Online - Convert JSON to XLSX",
+    metaDescription: "Convert JSON to Excel online for free. Transform JSON data to spreadsheet format. Visualize JSON in Excel.",
+    description: "Convert JSON data to Excel spreadsheets",
+    icon: "table",
+    howTo: [
+      "Paste JSON or upload file",
+      "Data is parsed",
+      "Convert to Excel",
+      "Download XLSX file"
+    ],
+    article: {
+      title: "Convert JSON to Excel Spreadsheets",
+      content: `Transform JSON data into Excel spreadsheets for easier viewing, editing, and analysis.
+
+## Data Visualization
+
+View complex JSON data in familiar spreadsheet format.
+
+## Easy Editing
+
+Edit JSON data using Excel's powerful tools.`,
+      relatedTools: ["excel-to-json", "json-viewer", "data-tools"]
+    }
+  },
+  {
+    id: "ppt-to-jpg",
+    title: "PPT to JPG",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["ppt", "powerpoint", "jpg", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PPT to JPG Converter Online - Convert PowerPoint to Images",
+    metaDescription: "Convert PPT to JPG online for free. Transform PowerPoint slides to JPEG images. Extract images from presentations.",
+    description: "Convert PowerPoint slides to JPG images",
+    icon: "presentation",
+    howTo: [
+      "Upload your PowerPoint file",
+      "Each slide becomes JPG",
+      "Preview images",
+      "Download all JPGs"
+    ],
+    article: {
+      title: "Convert PowerPoint to JPG Images",
+      content: `Transform PowerPoint presentations into JPG images. Extract slides as individual images for sharing and web use.
+
+## Slide Images
+
+Each slide is converted to a separate JPG image.
+
+## Easy Sharing
+
+Share presentation content as images on social media.`,
+      relatedTools: ["ppt-to-png", "ppt-to-video", "image-converter"]
+    }
+  },
+  {
+    id: "ppt-to-video",
+    title: "PPT to Video",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["ppt", "powerpoint", "video", "mp4", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PPT to Video Converter Online - Convert PowerPoint to MP4",
+    metaDescription: "Convert PPT to video online for free. Transform PowerPoint presentations to MP4 videos. Add timing and transitions.",
+    description: "Convert PowerPoint presentations to video",
+    icon: "video",
+    howTo: [
+      "Upload your PowerPoint",
+      "Set slide timing",
+      "Convert to video",
+      "Download MP4 file"
+    ],
+    article: {
+      title: "Convert PowerPoint to Video",
+      content: `Transform PowerPoint presentations into video files. Create MP4 videos from your slides with automated transitions.
+
+## Automated Playback
+
+Set timing for each slide to create automated video.
+
+## Video Sharing
+
+Share presentations as videos on YouTube and social media.`,
+      relatedTools: ["video-editor", "ppt-to-jpg", "presentation-tools"]
+    }
+  },
+  {
+    id: "word-counter",
+    title: "Word Counter",
+    category: "Text Tools" as ToolCategory,
+    tags: ["word count", "character count", "text analysis"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Word Counter Online - Count Words and Characters Free",
+    metaDescription: "Count words and characters online for free. Word counter tool with character count, sentence count, and reading time.",
+    description: "Count words, characters, sentences, and paragraphs",
+    icon: "hash",
+    howTo: [
+      "Paste or type your text",
+      "View instant word count",
+      "See character count",
+      "Check reading time"
+    ],
+    article: {
+      title: "Count Words and Characters Online",
+      content: `Analyze text with comprehensive word and character counting. Get detailed statistics about your content.
+
+## Complete Analysis
+
+Word count, character count, sentence count, and more.
+
+## Reading Time
+
+Estimates how long it takes to read your text.`,
+      relatedTools: ["text-editor", "character-counter", "text-analysis"]
+    }
+  },
+  {
+    id: "text-editor",
+    title: "Text Editor Online",
+    category: "Text Tools" as ToolCategory,
+    tags: ["text editor", "notepad", "write", "edit"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Online Text Editor Free - Web-Based Notepad",
+    metaDescription: "Edit text online for free. Simple web-based text editor with word count and save features. Online notepad alternative.",
+    description: "Simple online text editor with formatting",
+    icon: "edit",
+    howTo: [
+      "Start typing",
+      "Use formatting tools",
+      "Save or download",
+      "Copy text when done"
+    ],
+    article: {
+      title: "Edit Text Online",
+      content: `Write and edit text online with our simple text editor. Perfect for quick notes and text editing.
+
+## Simple Interface
+
+Clean, distraction-free text editing environment.
+
+## Save Locally
+
+Download text or save to browser storage.`,
+      relatedTools: ["word-counter", "markdown-editor", "note-taking"]
+    }
+  },
+  {
+    id: "markdown-editor",
+    title: "Markdown Editor",
+    category: "Text Tools" as ToolCategory,
+    tags: ["markdown", "md", "editor", "preview"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Markdown Editor Online - Write and Preview Markdown",
+    metaDescription: "Edit markdown online for free. Real-time preview of markdown formatting. Export to HTML or download MD files.",
+    description: "Write and preview Markdown with real-time rendering",
+    icon: "code",
+    howTo: [
+      "Write markdown syntax",
+      "See live preview",
+      "Export to HTML",
+      "Download MD file"
+    ],
+    article: {
+      title: "Write Markdown Online",
+      content: `Create and preview Markdown documents with live rendering. Perfect for documentation and content writing.
+
+## Live Preview
+
+See formatted output as you type Markdown.
+
+## Export Options
+
+Download as Markdown or export to HTML.`,
+      relatedTools: ["text-editor", "html-editor", "code-editor"]
+    }
+  },
+  {
+    id: "csv-viewer",
+    title: "CSV Viewer",
+    category: "Text Tools" as ToolCategory,
+    tags: ["csv", "viewer", "table", "data"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSV Viewer Online - View and Edit CSV Files",
+    metaDescription: "View CSV files online for free. Interactive CSV viewer and editor. Sort, filter, and analyze CSV data.",
+    description: "View and analyze CSV files in table format",
+    icon: "table",
+    howTo: [
+      "Upload CSV file",
+      "View in table format",
+      "Sort and filter data",
+      "Export if needed"
+    ],
+    article: {
+      title: "View and Analyze CSV Files",
+      content: `Open and view CSV files in an interactive table format. Sort, filter, and analyze data easily.
+
+## Interactive Table
+
+View CSV data in sortable, filterable tables.
+
+## Data Analysis
+
+Quickly analyze and understand CSV data.`,
+      relatedTools: ["json-viewer", "excel-viewer", "data-tools"]
+    }
+  },
+  {
+    id: "json-viewer",
+    title: "JSON Viewer",
+    category: "Text Tools" as ToolCategory,
+    tags: ["json", "viewer", "formatter", "validate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JSON Viewer Online - Format and Validate JSON",
+    metaDescription: "View and format JSON online for free. JSON validator with syntax highlighting. Tree view and error detection.",
+    description: "View, format, and validate JSON data",
+    icon: "braces",
+    howTo: [
+      "Paste JSON data",
+      "View formatted JSON",
+      "Validate syntax",
+      "Export formatted JSON"
+    ],
+    article: {
+      title: "View and Format JSON Data",
+      content: `View, format, and validate JSON data with syntax highlighting and tree view. Perfect for API development.
+
+## Syntax Validation
+
+Automatically detect JSON syntax errors.
+
+## Tree View
+
+Navigate complex JSON structures easily.`,
+      relatedTools: ["json-formatter", "json-to-csv", "api-tools"]
+    }
+  },
+  {
+    id: "xml-viewer",
+    title: "XML Viewer",
+    category: "Text Tools" as ToolCategory,
+    tags: ["xml", "viewer", "formatter", "validate"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "XML Viewer Online - Format and Validate XML",
+    metaDescription: "View and format XML online for free. XML validator with syntax highlighting. Tree view for XML documents.",
+    description: "View, format, and validate XML documents",
+    icon: "code",
+    howTo: [
+      "Paste XML data",
+      "View formatted XML",
+      "Validate syntax",
+      "Export formatted XML"
+    ],
+    article: {
+      title: "View and Format XML Documents",
+      content: `View, format, and validate XML documents with syntax highlighting. Navigate XML structure easily.
+
+## Syntax Validation
+
+Detect XML errors and validation issues.
+
+## Tree Structure
+
+View XML hierarchy in organized tree format.`,
+      relatedTools: ["xml-to-json", "xml-formatter", "data-tools"]
+    }
+  },
+  {
+    id: "json-to-csv",
+    title: "JSON to CSV",
+    category: "Data Format Conversion" as ToolCategory,
+    tags: ["json", "csv", "convert", "data"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JSON to CSV Converter Online - Convert JSON Data to CSV",
+    metaDescription: "Convert JSON to CSV online for free. Transform JSON arrays to CSV spreadsheet format. Flatten JSON data.",
+    description: "Convert JSON data to CSV format",
+    icon: "table",
+    howTo: [
+      "Paste JSON data",
+      "Data is converted",
+      "Preview CSV",
+      "Download CSV file"
+    ],
+    article: {
+      title: "Convert JSON to CSV Format",
+      content: `Transform JSON data into CSV format for use in spreadsheets and databases. Flatten nested JSON structures.
+
+## Automatic Flattening
+
+Converts nested JSON to flat CSV structure.
+
+## Spreadsheet Ready
+
+Open converted data in Excel or Google Sheets.`,
+      relatedTools: ["csv-to-json", "json-viewer", "data-converter"]
+    }
+  },
+  {
+    id: "csv-to-json",
+    title: "CSV to JSON",
+    category: "Data Format Conversion" as ToolCategory,
+    tags: ["csv", "json", "convert", "data"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSV to JSON Converter Online - Convert CSV to JSON Free",
+    metaDescription: "Convert CSV to JSON online for free. Transform spreadsheet data to JSON format. CSV to JSON array converter.",
+    description: "Convert CSV files to JSON format",
+    icon: "braces",
+    howTo: [
+      "Upload CSV file",
+      "Data is parsed",
+      "Convert to JSON",
+      "Download JSON file"
+    ],
+    article: {
+      title: "Convert CSV to JSON Data",
+      content: `Transform CSV spreadsheet data into JSON format for APIs and web applications.
+
+## API Ready
+
+JSON format perfect for REST APIs and web services.
+
+## Structured Output
+
+Creates properly structured JSON from CSV data.`,
+      relatedTools: ["json-to-csv", "csv-viewer", "json-tools"]
+    }
+  },
+  {
+    id: "xml-to-json",
+    title: "XML to JSON",
+    category: "Data Format Conversion" as ToolCategory,
+    tags: ["xml", "json", "convert", "data"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "XML to JSON Converter Online - Convert XML to JSON",
+    metaDescription: "Convert XML to JSON online for free. Transform XML documents to JSON format. Preserve data structure.",
+    description: "Convert XML documents to JSON format",
+    icon: "code",
+    howTo: [
+      "Paste XML data",
+      "Convert to JSON",
+      "Preview JSON output",
+      "Download or copy"
+    ],
+    article: {
+      title: "Convert XML to JSON",
+      content: `Transform XML documents into JSON format for modern web applications and APIs.
+
+## Structure Preservation
+
+Maintains XML document structure in JSON.
+
+## Modern Format
+
+JSON is more commonly used in modern web development.`,
+      relatedTools: ["json-to-xml", "xml-viewer", "data-converter"]
+    }
+  },
+  {
+    id: "json-to-xml",
+    title: "JSON to XML",
+    category: "Data Format Conversion" as ToolCategory,
+    tags: ["json", "xml", "convert", "data"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JSON to XML Converter Online - Convert JSON to XML",
+    metaDescription: "Convert JSON to XML online for free. Transform JSON data to XML format. Proper XML structure generation.",
+    description: "Convert JSON data to XML format",
+    icon: "file-code",
+    howTo: [
+      "Paste JSON data",
+      "Convert to XML",
+      "Preview XML output",
+      "Download XML file"
+    ],
+    article: {
+      title: "Convert JSON to XML Format",
+      content: `Transform JSON data into XML format for legacy systems and enterprise applications.
+
+## Valid XML
+
+Generates properly formatted XML from JSON.
+
+## Enterprise Ready
+
+XML format for enterprise and legacy systems.`,
+      relatedTools: ["xml-to-json", "json-viewer", "xml-tools"]
+    }
+  },
+  {
+    id: "json-to-yaml",
+    title: "JSON to YAML",
+    category: "Data Format Conversion" as ToolCategory,
+    tags: ["json", "yaml", "convert", "config"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "JSON to YAML Converter Online - Convert JSON to YAML",
+    metaDescription: "Convert JSON to YAML online for free. Transform JSON data to YAML configuration format. Clean YAML output.",
+    description: "Convert JSON to YAML configuration format",
+    icon: "file-text",
+    howTo: [
+      "Paste JSON data",
+      "Convert to YAML",
+      "View formatted YAML",
+      "Download YAML file"
+    ],
+    article: {
+      title: "Convert JSON to YAML",
+      content: `Transform JSON data into human-readable YAML format. Perfect for configuration files and data exchange.
+
+## Human Readable
+
+YAML is more readable than JSON for configurations.
+
+## Config Files
+
+Ideal for creating configuration files.`,
+      relatedTools: ["yaml-to-json", "json-formatter", "config-tools"]
+    }
+  },
+  {
+    id: "yaml-to-json",
+    title: "YAML to JSON",
+    category: "Data Format Conversion" as ToolCategory,
+    tags: ["yaml", "json", "convert", "config"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "YAML to JSON Converter Online - Convert YAML to JSON",
+    metaDescription: "Convert YAML to JSON online for free. Transform YAML configuration to JSON format. Validate YAML syntax.",
+    description: "Convert YAML to JSON format",
+    icon: "braces",
+    howTo: [
+      "Paste YAML data",
+      "Convert to JSON",
+      "View formatted JSON",
+      "Download JSON file"
+    ],
+    article: {
+      title: "Convert YAML to JSON",
+      content: `Transform YAML configuration files into JSON format for use in applications and APIs.
+
+## Syntax Validation
+
+Validates YAML syntax during conversion.
+
+## API Ready
+
+JSON format perfect for web APIs.`,
+      relatedTools: ["json-to-yaml", "yaml-validator", "data-tools"]
+    }
+  },
+  {
+    id: "yaml-to-csv",
+    title: "YAML to CSV",
+    category: "Data Format Conversion" as ToolCategory,
+    tags: ["yaml", "csv", "convert", "data"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "YAML to CSV Converter Online - Convert YAML to CSV",
+    metaDescription: "Convert YAML to CSV online for free. Transform YAML data to spreadsheet format. Flatten YAML structure.",
+    description: "Convert YAML data to CSV format",
+    icon: "table",
+    howTo: [
+      "Paste YAML data",
+      "Convert to CSV",
+      "Preview table data",
+      "Download CSV file"
+    ],
+    article: {
+      title: "Convert YAML to CSV",
+      content: `Transform YAML data into CSV format for use in spreadsheets and data analysis tools.
+
+## Data Flattening
+
+Converts nested YAML to flat CSV structure.
+
+## Spreadsheet Compatible
+
+Open in Excel, Google Sheets, and other tools.`,
+      relatedTools: ["csv-to-yaml", "yaml-to-json", "data-converter"]
+    }
+  },
+  {
+    id: "csv-to-yaml",
+    title: "CSV to YAML",
+    category: "Data Format Conversion" as ToolCategory,
+    tags: ["csv", "yaml", "convert", "config"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "CSV to YAML Converter Online - Convert CSV to YAML",
+    metaDescription: "Convert CSV to YAML online for free. Transform spreadsheet data to YAML format. Create configuration files.",
+    description: "Convert CSV data to YAML format",
+    icon: "file-text",
+    howTo: [
+      "Upload CSV file",
+      "Convert to YAML",
+      "View formatted YAML",
+      "Download YAML file"
+    ],
+    article: {
+      title: "Convert CSV to YAML",
+      content: `Transform CSV spreadsheet data into YAML configuration format.
+
+## Structured Output
+
+Creates organized YAML from tabular CSV data.
+
+## Configuration Files
+
+Perfect for creating config files from spreadsheet data.`,
+      relatedTools: ["yaml-to-csv", "csv-to-json", "config-tools"]
+    }
+  },
+  {
+    id: "xml-to-csv",
+    title: "XML to CSV",
+    category: "Data Format Conversion" as ToolCategory,
+    tags: ["xml", "csv", "convert", "data"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "XML to CSV Converter Online - Convert XML to CSV",
+    metaDescription: "Convert XML to CSV online for free. Transform XML data to spreadsheet format. Flatten XML structure.",
+    description: "Convert XML documents to CSV format",
+    icon: "table",
+    howTo: [
+      "Paste XML data",
+      "Convert to CSV",
+      "Preview table",
+      "Download CSV file"
+    ],
+    article: {
+      title: "Convert XML to CSV",
+      content: `Transform XML documents into CSV format for spreadsheet analysis and data processing.
+
+## Automatic Flattening
+
+Converts XML hierarchy to flat CSV structure.
+
+## Data Analysis
+
+Analyze XML data in spreadsheet applications.`,
+      relatedTools: ["csv-to-xml", "xml-to-json", "data-converter"]
+    }
+  },
+  {
+    id: "odt-to-docx",
+    title: "ODT to DOCX",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["odt", "docx", "word", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "ODT to DOCX Converter Online - Convert OpenDocument to Word",
+    metaDescription: "Convert ODT to DOCX online for free. Transform OpenDocument files to Microsoft Word format. Preserve formatting.",
+    description: "Convert OpenDocument Text to Word format",
+    icon: "file-text",
+    howTo: [
+      "Upload ODT file",
+      "Convert to DOCX",
+      "Preview document",
+      "Download Word file"
+    ],
+    article: {
+      title: "Convert ODT to Word DOCX",
+      content: `Transform OpenDocument Text files to Microsoft Word format for better compatibility.
+
+## Format Preservation
+
+Maintains formatting, styles, and document structure.
+
+## Cross-Platform
+
+Use OpenDocument files in Microsoft Word.`,
+      relatedTools: ["docx-to-odt", "document-converter", "word-tools"]
+    }
+  },
+  {
+    id: "docx-to-odt",
+    title: "DOCX to ODT",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["docx", "odt", "word", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "DOCX to ODT Converter Online - Convert Word to OpenDocument",
+    metaDescription: "Convert DOCX to ODT online for free. Transform Microsoft Word to OpenDocument format. Free and secure conversion.",
+    description: "Convert Word documents to OpenDocument format",
+    icon: "file-text",
+    howTo: [
+      "Upload DOCX file",
+      "Convert to ODT",
+      "Preview document",
+      "Download ODT file"
+    ],
+    article: {
+      title: "Convert Word to ODT Format",
+      content: `Transform Microsoft Word documents to OpenDocument format for use with LibreOffice and open-source tools.
+
+## Open Standard
+
+ODT is an open standard document format.
+
+## LibreOffice Compatible
+
+Perfect for LibreOffice Writer and other ODF applications.`,
+      relatedTools: ["odt-to-docx", "document-tools", "file-converter"]
+    }
+  },
+  {
+    id: "ods-to-xlsx",
+    title: "ODS to XLSX",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["ods", "xlsx", "excel", "spreadsheet", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "ODS to XLSX Converter Online - Convert OpenDocument to Excel",
+    metaDescription: "Convert ODS to XLSX online for free. Transform OpenDocument Spreadsheet to Microsoft Excel format.",
+    description: "Convert OpenDocument Spreadsheet to Excel",
+    icon: "table",
+    howTo: [
+      "Upload ODS file",
+      "Convert to XLSX",
+      "Preview spreadsheet",
+      "Download Excel file"
+    ],
+    article: {
+      title: "Convert ODS to Excel XLSX",
+      content: `Transform OpenDocument Spreadsheet files to Microsoft Excel format for better compatibility.
+
+## Formula Preservation
+
+Maintains formulas and calculations.
+
+## Excel Compatible
+
+Use ODS files in Microsoft Excel.`,
+      relatedTools: ["xlsx-to-ods", "spreadsheet-converter", "excel-tools"]
+    }
+  },
+  {
+    id: "xlsx-to-ods",
+    title: "XLSX to ODS",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["xlsx", "ods", "excel", "spreadsheet", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "XLSX to ODS Converter Online - Convert Excel to OpenDocument",
+    metaDescription: "Convert XLSX to ODS online for free. Transform Microsoft Excel to OpenDocument Spreadsheet format.",
+    description: "Convert Excel spreadsheets to OpenDocument format",
+    icon: "file-spreadsheet",
+    howTo: [
+      "Upload XLSX file",
+      "Convert to ODS",
+      "Preview spreadsheet",
+      "Download ODS file"
+    ],
+    article: {
+      title: "Convert Excel to ODS Format",
+      content: `Transform Microsoft Excel spreadsheets to OpenDocument format for use with LibreOffice Calc.
+
+## Open Standard
+
+ODS is an open standard for spreadsheets.
+
+## LibreOffice Compatible
+
+Perfect for LibreOffice Calc and other ODF applications.`,
+      relatedTools: ["ods-to-xlsx", "spreadsheet-tools", "file-converter"]
+    }
+  },
+  {
+    id: "odp-to-pptx",
+    title: "ODP to PPTX",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["odp", "pptx", "powerpoint", "presentation", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "ODP to PPTX Converter Online - Convert OpenDocument to PowerPoint",
+    metaDescription: "Convert ODP to PPTX online for free. Transform OpenDocument Presentation to Microsoft PowerPoint format.",
+    description: "Convert OpenDocument Presentation to PowerPoint",
+    icon: "presentation",
+    howTo: [
+      "Upload ODP file",
+      "Convert to PPTX",
+      "Preview slides",
+      "Download PowerPoint file"
+    ],
+    article: {
+      title: "Convert ODP to PowerPoint PPTX",
+      content: `Transform OpenDocument Presentation files to Microsoft PowerPoint format for better compatibility.
+
+## Slide Preservation
+
+Maintains slides, transitions, and animations.
+
+## PowerPoint Compatible
+
+Use ODP files in Microsoft PowerPoint.`,
+      relatedTools: ["pptx-to-odp", "presentation-converter", "powerpoint-tools"]
+    }
+  },
+  {
+    id: "pptx-to-odp",
+    title: "PPTX to ODP",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["pptx", "odp", "powerpoint", "presentation", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "PPTX to ODP Converter Online - Convert PowerPoint to OpenDocument",
+    metaDescription: "Convert PPTX to ODP online for free. Transform Microsoft PowerPoint to OpenDocument Presentation format.",
+    description: "Convert PowerPoint to OpenDocument format",
+    icon: "file-presentation",
+    howTo: [
+      "Upload PPTX file",
+      "Convert to ODP",
+      "Preview presentation",
+      "Download ODP file"
+    ],
+    article: {
+      title: "Convert PowerPoint to ODP Format",
+      content: `Transform Microsoft PowerPoint presentations to OpenDocument format for use with LibreOffice Impress.
+
+## Open Standard
+
+ODP is an open standard for presentations.
+
+## LibreOffice Compatible
+
+Perfect for LibreOffice Impress and other ODF applications.`,
+      relatedTools: ["odp-to-pptx", "presentation-tools", "file-converter"]
+    }
+  },
+  {
+    id: "epub-reader",
+    title: "EPUB Reader",
+    category: "eBook Tools" as ToolCategory,
+    tags: ["epub", "reader", "ebook", "view"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "EPUB Reader Online - Read EPUB Books in Browser",
+    metaDescription: "Read EPUB files online for free. Web-based EPUB reader with adjustable settings. No software installation required.",
+    description: "Read EPUB ebook files online",
+    icon: "book-open",
+    howTo: [
+      "Upload EPUB file",
+      "Book opens in reader",
+      "Adjust font and size",
+      "Read and navigate chapters"
+    ],
+    article: {
+      title: "Read EPUB Files Online",
+      content: `Read EPUB ebooks directly in your browser with our online EPUB reader. No software installation required.
+
+## Customizable Reading
+
+Adjust font, size, and background for comfortable reading.
+
+## Chapter Navigation
+
+Easy navigation between chapters and bookmarks.`,
+      relatedTools: ["mobi-to-epub", "epub-converter", "ebook-tools"]
+    }
+  },
+  {
+    id: "mobi-to-epub",
+    title: "MOBI to EPUB",
+    category: "eBook Tools" as ToolCategory,
+    tags: ["mobi", "epub", "ebook", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "MOBI to EPUB Converter Online - Convert Kindle to EPUB",
+    metaDescription: "Convert MOBI to EPUB online for free. Transform Kindle books to EPUB format. Preserve formatting and metadata.",
+    description: "Convert MOBI ebooks to EPUB format",
+    icon: "book",
+    howTo: [
+      "Upload MOBI file",
+      "Convert to EPUB",
+      "Preview ebook",
+      "Download EPUB file"
+    ],
+    article: {
+      title: "Convert MOBI to EPUB",
+      content: `Transform MOBI ebook files (Kindle format) to EPUB format for use on other e-readers and devices.
+
+## Universal Format
+
+EPUB works on most e-readers except Kindle.
+
+## Metadata Preservation
+
+Maintains book information and formatting.`,
+      relatedTools: ["epub-to-mobi", "epub-reader", "ebook-converter"]
+    }
+  },
+  {
+    id: "epub-to-mobi",
+    title: "EPUB to MOBI",
+    category: "eBook Tools" as ToolCategory,
+    tags: ["epub", "mobi", "kindle", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "EPUB to MOBI Converter Online - Convert EPUB for Kindle",
+    metaDescription: "Convert EPUB to MOBI online for free. Transform EPUB books to Kindle format. Read on Kindle devices.",
+    description: "Convert EPUB ebooks to MOBI (Kindle) format",
+    icon: "book-open",
+    howTo: [
+      "Upload EPUB file",
+      "Convert to MOBI",
+      "Preview conversion",
+      "Download MOBI file for Kindle"
+    ],
+    article: {
+      title: "Convert EPUB to MOBI for Kindle",
+      content: `Transform EPUB ebooks to MOBI format for reading on Kindle devices and apps.
+
+## Kindle Compatible
+
+MOBI format works on all Kindle devices and apps.
+
+## Format Preservation
+
+Maintains chapters, formatting, and book structure.`,
+      relatedTools: ["mobi-to-epub", "epub-reader", "kindle-tools"]
+    }
+  },
+  {
+    id: "epub-to-txt",
+    title: "EPUB to TXT",
+    category: "eBook Tools" as ToolCategory,
+    tags: ["epub", "txt", "text", "convert"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "EPUB to TXT Converter Online - Extract Text from EPUB",
+    metaDescription: "Convert EPUB to TXT online for free. Extract plain text from EPUB ebooks. Remove formatting and images.",
+    description: "Extract plain text from EPUB ebooks",
+    icon: "file-text",
+    howTo: [
+      "Upload EPUB file",
+      "Text is extracted",
+      "Preview plain text",
+      "Download TXT file"
+    ],
+    article: {
+      title: "Extract Text from EPUB Files",
+      content: `Convert EPUB ebooks to plain text format. Remove all formatting and extract readable text content.
+
+## Plain Text
+
+Removes all formatting, leaving only text content.
+
+## Universal Format
+
+Plain text works everywhere and with any software.`,
+      relatedTools: ["epub-reader", "text-extractor", "ebook-tools"]
+    }
+  },
+  {
+    id: "file-converter",
+    title: "File Converter",
+    category: "Convert" as ToolCategory,
+    tags: ["convert", "file", "format", "universal"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "File Converter Online - Convert Any File Format Free",
+    metaDescription: "Convert files online for free. Universal file converter supporting images, documents, videos, and more.",
+    description: "Universal file format converter",
+    icon: "repeat",
+    howTo: [
+      "Upload your file",
+      "Select target format",
+      "Convert file",
+      "Download converted file"
+    ],
+    article: {
+      title: "Convert Files Online",
+      content: `Convert between hundreds of file formats with our universal file converter. Support for documents, images, audio, and video.
+
+## Multiple Formats
+
+Support for images, documents, audio, video, and more.
+
+## Quality Preservation
+
+Maintains quality during format conversion.`,
+      relatedTools: ["image-converter", "document-converter", "video-converter"]
+    }
+  },
+  {
+    id: "document-converter",
+    title: "Document Converter",
+    category: "Document Conversion" as ToolCategory,
+    tags: ["document", "convert", "word", "pdf"],
+    capability: "coming-soon" as ToolCapability,
+    metaTitle: "Document Converter Online - Convert Documents Free",
+    metaDescription: "Convert documents online for free. Support for PDF, Word, Excel, PowerPoint, and more. Fast document conversion.",
+    description: "Convert between document formats",
+    icon: "file-type",
+    howTo: [
+      "Upload your document",
+      "Choose output format",
+      "Convert document",
+      "Download result"
+    ],
+    article: {
+      title: "Convert Documents Online",
+      content: `Convert between popular document formats including PDF, Word, Excel, PowerPoint, and more.
+
+## Format Support
+
+Convert PDF, DOCX, XLSX, PPTX, ODT, and many more.
+
+## Formatting Preserved
+
+Maintains document formatting and structure.`,
+      relatedTools: ["pdf-converter", "word-converter", "excel-converter"]
+    }
+  }
+] as const;
+
+export type NewTool = typeof newTools[number];
+
+// Combine all tools
+export const allTools = [...pdfTools, ...newTools] as const;
+export type Tool = typeof allTools[number];
 export type PDFTool = typeof pdfTools[number];
 
 // File upload schema
