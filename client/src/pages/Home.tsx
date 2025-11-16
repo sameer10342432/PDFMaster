@@ -14,7 +14,7 @@ export default function Home() {
     queryKey: ['/api/tools'],
   });
 
-  const popularTools = tools.slice(0, 12);
+  const allTools = tools;
 
   return (
     <>
@@ -74,16 +74,16 @@ export default function Home() {
             <div className="container mx-auto max-w-7xl px-4">
               <div className="text-center mb-12 space-y-4">
                 <h2 className="text-3xl md:text-4xl font-semibold">
-                  Popular PDF Tools
+                  All 400+ PDF Tools
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Choose from our collection of professional PDF tools designed to make your work easier
+                  Choose from our comprehensive collection of {tools.length} professional PDF tools with colorful icons
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {isLoading ? (
-                  Array.from({ length: 12 }).map((_, i) => (
+                  Array.from({ length: 20 }).map((_, i) => (
                     <div key={i} className="space-y-4 p-6">
                       <Skeleton className="h-12 w-12 rounded-lg" />
                       <Skeleton className="h-6 w-3/4" />
@@ -92,7 +92,7 @@ export default function Home() {
                     </div>
                   ))
                 ) : (
-                  popularTools.map((tool) => (
+                  allTools.map((tool) => (
                     <ToolCard
                       key={tool.id}
                       id={tool.id}
@@ -102,14 +102,6 @@ export default function Home() {
                     />
                   ))
                 )}
-              </div>
-
-              <div className="text-center mt-12">
-                <Link href="/tools">
-                  <Button variant="outline" size="lg" data-testid="button-browse-all">
-                    Browse All Tools
-                  </Button>
-                </Link>
               </div>
             </div>
           </section>

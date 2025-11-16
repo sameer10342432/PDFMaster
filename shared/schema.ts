@@ -16389,12 +16389,12 @@ Use for:
     }
   },
   {
-    id: "pdf-to-json",
-    title: "PDF to JSON",
+    id: "pdf-document-to-json",
+    title: "PDF Document to JSON",
     category: "Convert" as ToolCategory,
     tags: ["convert", "json", "data", "structured"],
     capability: "coming-soon" as ToolCapability,
-    metaTitle: "PDF to JSON Converter - Convert PDF to JSON Format Online",
+    metaTitle: "PDF Document to JSON Converter - Convert PDF to JSON Format Online",
     metaDescription: "Convert PDF to JSON format online for free. Transform PDF data into structured JSON. Professional PDF to JSON conversion tool.",
     description: "Convert PDF content to JSON format",
     icon: "braces",
@@ -16441,12 +16441,12 @@ Perfect for:
     }
   },
   {
-    id: "pdf-to-xml",
-    title: "PDF to XML",
+    id: "pdf-document-to-xml",
+    title: "PDF Document to XML",
     category: "Convert" as ToolCategory,
     tags: ["convert", "xml", "data", "structured"],
     capability: "coming-soon" as ToolCapability,
-    metaTitle: "PDF to XML Converter - Convert PDF to XML Format Online",
+    metaTitle: "PDF Document to XML Converter - Convert PDF to XML Format Online",
     metaDescription: "Convert PDF to XML format online for free. Transform PDF documents into structured XML. Professional PDF to XML conversion.",
     description: "Convert PDF documents to XML format",
     icon: "code-xml",
