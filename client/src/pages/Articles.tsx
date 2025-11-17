@@ -9,7 +9,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getToolIcon } from "@/lib/tool-icons";
-import type { PDFTool } from "@shared/schema";
+import type { Tool } from "@shared/schema";
 import { Search, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -17,7 +17,7 @@ export default function Articles() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  const { data: tools = [], isLoading: toolsLoading } = useQuery<PDFTool[]>({
+  const { data: tools = [], isLoading: toolsLoading } = useQuery<Tool[]>({
     queryKey: ['/api/tools'],
   });
 
@@ -42,10 +42,10 @@ export default function Articles() {
   return (
     <>
       <Helmet>
-        <title>PDF Tool Articles & Guides - Free Learning Resources</title>
-        <meta name="description" content="Browse comprehensive articles and guides for all our PDF tools. Learn how to merge, compress, convert, and manipulate PDFs effectively." />
-        <meta property="og:title" content="PDF Tool Articles & Guides" />
-        <meta property="og:description" content="Free learning resources for PDF manipulation tools." />
+        <title>Tool Articles & Guides - 845+ Free Learning Resources</title>
+        <meta name="description" content="Browse comprehensive articles and guides for all our PDF, AI, audio, video, and productivity tools. Learn how to use our 845+ professional tools effectively." />
+        <meta property="og:title" content="Tool Articles & Guides - 845+ Free Resources" />
+        <meta property="og:description" content="Free learning resources for PDF manipulation, AI tools, content creation, and productivity tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={typeof window !== 'undefined' ? window.location.href : ''} />
         <meta property="og:image" content={typeof window !== 'undefined' ? `${window.location.origin}/favicon.png` : ''} />
@@ -59,10 +59,10 @@ export default function Articles() {
             <div className="container mx-auto max-w-7xl px-4">
               <div className="text-center space-y-6 max-w-3xl mx-auto">
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                  PDF Tool Articles & Guides
+                  Tool Articles & Guides
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Learn how to use our PDF tools effectively with comprehensive guides and tutorials
+                  Learn how to use our PDF, AI, audio, video, and productivity tools effectively with comprehensive guides and tutorials
                 </p>
                 
                 <div className="relative max-w-md mx-auto">

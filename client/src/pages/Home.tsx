@@ -19,10 +19,10 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Free PDF, Audio & Video Tools Online - 770+ Tools for All Your Needs</title>
-        <meta name="description" content="Free online PDF, audio, video, web, SEO, color, calculator, and productivity tools. 770+ professional tools including website converters, SEO analyzers, color generators, unit converters, and more. Fast, secure, and easy to use. No registration required." />
-        <meta property="og:title" content="Free PDF, Audio & Video Tools Online - 770+ Professional Tools" />
-        <meta property="og:description" content="Professional PDF, audio, video, web, SEO, and productivity tools for all your needs. Convert, edit, compress, merge, analyze websites, optimize SEO, and more. 770+ tools available." />
+        <title>Free PDF, AI, Audio & Video Tools Online - 845+ Professional Tools</title>
+        <meta name="description" content="Free online PDF, AI, audio, video, web, SEO, and productivity tools. 845+ professional tools including AI generators, PDF converters, image editors, content creators, and more. Fast, secure, and easy to use. No registration required." />
+        <meta property="og:title" content="Free PDF, AI, Audio & Video Tools Online - 845+ Professional Tools" />
+        <meta property="og:description" content="Professional PDF, AI, audio, video, web, SEO, and productivity tools for all your needs. AI content generation, PDF manipulation, media editing, and more. 845+ tools available." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={typeof window !== 'undefined' ? window.location.href : ''} />
         <meta property="og:image" content={typeof window !== 'undefined' ? `${window.location.origin}/favicon.png` : ''} />
@@ -36,11 +36,11 @@ export default function Home() {
             <div className="container mx-auto max-w-7xl px-4">
               <div className="text-center space-y-6 max-w-3xl mx-auto">
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                  Free PDF, Audio, Video, Web & SEO Tools Online
+                  Free PDF, AI, Audio, Video & SEO Tools Online
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Professional-grade tools for PDF, audio, video, websites, SEO, colors, calculators, and more. 
-                  Convert, edit, compress, analyze, and optimize. Fast, secure, and completely free. No registration required.
+                  Professional-grade tools for PDF, AI generation, audio, video, websites, SEO, and more. 
+                  Create with AI, convert documents, edit media, analyze content, and optimize. Fast, secure, and completely free. No registration required.
                 </p>
                 <div className="flex items-center justify-center gap-4 flex-wrap text-sm">
                   <div className="flex items-center gap-2 text-muted-foreground">
