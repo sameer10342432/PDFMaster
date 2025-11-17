@@ -3029,6 +3029,76 @@ export const allTools: Tool[] = [
     category: 'State-Specific Tools',
     icon: '🌉',
     path: '/tools/bay-area-ca-commute-vs-housing-calculator'
+  },
+  {
+    name: 'California Wildfire Risk (CAL FIRE) Score',
+    description: 'Calculate California wildfire risk score for your property using CAL FIRE methodology and FHSZ classifications',
+    category: 'Risk Assessment',
+    icon: '🔥',
+    path: '/tools/california-wildfire-risk-cal-fire-score'
+  },
+  {
+    name: 'California Earthquake Insurance Estimator',
+    description: 'Calculate California earthquake insurance costs including CEA coverage options, deductibles, and regional risk premiums',
+    category: 'Insurance Tools',
+    icon: '🌊',
+    path: '/tools/california-earthquake-insurance-estimator'
+  },
+  {
+    name: 'New York "STAR" Exemption Calculator',
+    description: 'Calculate New York School Tax Relief (STAR) exemption benefits for Basic and Enhanced STAR programs by county',
+    category: 'Tax Strategy & Entity Planning',
+    icon: '⭐',
+    path: '/tools/new-york-star-exemption-calculator'
+  },
+  {
+    name: 'Florida CDD (Community Development District) Fee Calculator',
+    description: 'Calculate Florida CDD fees including debt service, O&M costs, and long-term financial impact on homeownership',
+    category: 'State-Specific Tools',
+    icon: '🏘️',
+    path: '/tools/florida-cdd-fee-calculator'
+  },
+  {
+    name: 'Massachusetts "Title 5" (Septic) Cost Estimator',
+    description: 'Estimate Massachusetts Title 5 septic system inspection and repair costs with pass/fail likelihood analysis',
+    category: 'Home Improvement',
+    icon: '🚰',
+    path: '/tools/massachusetts-title-5-septic-cost-estimator'
+  },
+  {
+    name: 'Ohio "Dower" Rights Real Estate Tool',
+    description: 'Understand Ohio dower rights impact on property transactions including spousal consent requirements and valuation',
+    category: 'State-Specific Tools',
+    icon: '💍',
+    path: '/tools/ohio-dower-rights-real-estate-tool'
+  },
+  {
+    name: 'Pennsylvania Realty Transfer Tax (Local vs. State)',
+    description: 'Calculate Pennsylvania realty transfer tax including state and local rates with county-specific calculations',
+    category: 'Tax Strategy & Entity Planning',
+    icon: '🔔',
+    path: '/tools/pennsylvania-realty-transfer-tax-calculator'
+  },
+  {
+    name: 'South Carolina Property Tax (4% vs. 6%)',
+    description: 'Calculate South Carolina property taxes with 4% owner-occupied vs. 6% non-owner assessment ratios and exemptions',
+    category: 'Tax Strategy & Entity Planning',
+    icon: '🏛️',
+    path: '/tools/south-carolina-property-tax-calculator'
+  },
+  {
+    name: 'Utah Property Tax "Truth in Taxation"',
+    description: 'Calculate Utah property tax changes under Truth in Taxation law with certified rate analysis and public hearing impact',
+    category: 'Tax Strategy & Entity Planning',
+    icon: '⛰️',
+    path: '/tools/utah-property-tax-truth-in-taxation-tool'
+  },
+  {
+    name: 'Virginia "Car Tax" (Personal Property) Housing Tool',
+    description: 'Calculate Virginia personal property tax on vehicles with car tax relief program and locality-specific rates',
+    category: 'State-Specific Tools',
+    icon: '🚗',
+    path: '/tools/virginia-car-tax-personal-property-housing-tool'
   }
 ];
 
