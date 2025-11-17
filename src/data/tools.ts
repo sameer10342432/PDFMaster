@@ -2959,6 +2959,76 @@ export const allTools: Tool[] = [
     category: 'State-Specific Tools',
     icon: '🌊',
     path: '/tools/miami-fl-flood-zone-impact-calculator'
+  },
+  {
+    name: 'New Orleans (LA) Short-Term Rental Law Checker',
+    description: 'Check New Orleans short-term rental regulations, zoning compliance, licensing requirements, and permit eligibility for Airbnb and VRBO properties',
+    category: 'State-Specific Tools',
+    icon: '🎷',
+    path: '/tools/new-orleans-la-short-term-rental-law-checker'
+  },
+  {
+    name: 'Denver (CO) ADU Feasibility Checker',
+    description: 'Determine if your Denver property qualifies for an ADU (accessory dwelling unit) with zoning, lot size, and cost analysis',
+    category: 'State-Specific Tools',
+    icon: '🏔️',
+    path: '/tools/denver-co-adu-feasibility-checker'
+  },
+  {
+    name: 'Seattle (WA) Duvall Fee Estimator',
+    description: 'Calculate Seattle and King County development impact fees, transportation fees, park fees, and school impact fees for new construction',
+    category: 'State-Specific Tools',
+    icon: '☔',
+    path: '/tools/seattle-wa-duvall-fee-estimator'
+  },
+  {
+    name: 'Portland (OR) Home Energy Score Cost',
+    description: 'Calculate the cost and value of Portland\'s required Home Energy Score assessment and energy efficiency improvements',
+    category: 'State-Specific Tools',
+    icon: '🌲',
+    path: '/tools/portland-or-home-energy-score-cost'
+  },
+  {
+    name: 'Atlanta (GA) BeltLine Property Value Premium',
+    description: 'Calculate property value premium for homes near Atlanta\'s BeltLine trail system and estimate appreciation potential',
+    category: 'State-Specific Tools',
+    icon: '🍑',
+    path: '/tools/atlanta-ga-beltline-property-value-premium'
+  },
+  {
+    name: 'Las Vegas (NV) Water Smart Landscape Rebate',
+    description: 'Calculate rebates for converting grass to desert landscaping in Las Vegas with water savings analysis',
+    category: 'State-Specific Tools',
+    icon: '💧',
+    path: '/tools/las-vegas-nv-water-smart-landscape-rebate'
+  },
+  {
+    name: 'Houston (TX) MUD Fee Calculator',
+    description: 'Calculate MUD (Municipal Utility District) fees and taxes for Houston-area properties',
+    category: 'State-Specific Tools',
+    icon: '🌟',
+    path: '/tools/houston-tx-mud-fee-calculator'
+  },
+  {
+    name: 'Dallas (TX) Property Tax Rate Analyzer',
+    description: 'Calculate and compare Dallas-area property tax rates by school district with exemption analysis',
+    category: 'State-Specific Tools',
+    icon: '🤠',
+    path: '/tools/dallas-tx-property-tax-rate-analyzer'
+  },
+  {
+    name: 'Phoenix (AZ) Heat Island Effect Cost',
+    description: 'Calculate cooling costs and mitigation strategies for Phoenix urban heat island effects',
+    category: 'State-Specific Tools',
+    icon: '☀️',
+    path: '/tools/phoenix-az-heat-island-effect-cost'
+  },
+  {
+    name: 'Bay Area (CA) Commute vs. Housing Calculator',
+    description: 'Compare total costs of living closer vs. farther from work in the San Francisco Bay Area',
+    category: 'State-Specific Tools',
+    icon: '🌉',
+    path: '/tools/bay-area-ca-commute-vs-housing-calculator'
   }
 ];
 
