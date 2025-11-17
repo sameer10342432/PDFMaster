@@ -1,15 +1,6 @@
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Lender Stress Test Calculator (US Version)',
-    description: 'Calculate if you can afford your mortgage under lender stress test scenarios with higher interest rates. Free calculator for homebuyers.',
-  };
-}
-
 'use client';
 
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
-import type { Metadata } from 'next';
 import { LENDER_STRESS_TEST_CALCULATOR_US_CONTENT } from '@/content/tools/lender-stress-test-calculator-us';
 import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 

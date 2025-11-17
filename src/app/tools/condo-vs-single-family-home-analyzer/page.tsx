@@ -1,15 +1,6 @@
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Condo vs. Single-Family Home (SFH) Analyzer',
-    description: 'Compare the total costs, responsibilities, and financial implications of condo versus single-family home ownership. Free calculator for homebuyers.',
-  };
-}
-
 'use client';
 
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
-import type { Metadata } from 'next';
 import { CONDO_VS_SINGLE_FAMILY_HOME_ANALYZER_CONTENT } from '@/content/tools/condo-vs-single-family-home-analyzer';
 import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 

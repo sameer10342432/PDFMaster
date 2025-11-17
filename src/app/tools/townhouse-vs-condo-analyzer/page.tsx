@@ -1,15 +1,6 @@
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Townhouse vs. Condo Analyzer',
-    description: 'Compare ownership costs, maintenance responsibilities, and investment potential between townhouses and condos. Free calculator for homebuyers.',
-  };
-}
-
 'use client';
 
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
-import type { Metadata } from 'next';
 import { TOWNHOUSE_VS_CONDO_ANALYZER_CONTENT } from '@/content/tools/townhouse-vs-condo-analyzer';
 import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
