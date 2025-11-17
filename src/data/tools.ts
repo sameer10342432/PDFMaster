@@ -3169,6 +3169,76 @@ export const allTools: Tool[] = [
     category: 'Rent & Lease Tools',
     icon: '🏘️',
     path: '/tools/renter-affordability-calculator'
+  },
+  {
+    name: 'What Can I Afford Calculator (Buyer)',
+    description: 'Calculate the maximum home price you can afford based on your income, debt, down payment, and credit score with detailed affordability analysis',
+    category: 'Buyer Tools',
+    icon: '🏡',
+    path: '/tools/what-can-i-afford-buyer-calculator'
+  },
+  {
+    name: 'Rent vs. Buy Calculator (Simple)',
+    description: 'Quick comparison tool to determine whether renting or buying makes more financial sense for your situation',
+    category: 'Buyer Tools',
+    icon: '⚖️',
+    path: '/tools/rent-vs-buy-simple-calculator'
+  },
+  {
+    name: 'Cost of Moving Calculator (Renter)',
+    description: 'Calculate the total cost of moving to a new rental including deposits, moving expenses, and setup costs',
+    category: 'Renter Tools',
+    icon: '📦',
+    path: '/tools/cost-of-moving-renter-calculator'
+  },
+  {
+    name: 'Cost of Moving Calculator (Buyer)',
+    description: 'Calculate comprehensive moving costs for homebuyers including closing costs, moving expenses, immediate repairs, and setup costs',
+    category: 'Buyer Tools',
+    icon: '🚚',
+    path: '/tools/cost-of-moving-buyer-calculator'
+  },
+  {
+    name: 'Renter\'s Insurance Cost Estimator',
+    description: 'Estimate the cost of renter\'s insurance based on coverage amount, location, deductible, and personal factors',
+    category: 'Renter Tools',
+    icon: '🛡️',
+    path: '/tools/renters-insurance-cost-estimator'
+  },
+  {
+    name: 'Broker Fee Calculator (Renting)',
+    description: 'Calculate rental broker fees and compare costs across different fee structures to understand total move-in expenses',
+    category: 'Renter Tools',
+    icon: '💼',
+    path: '/tools/broker-fee-renting-calculator'
+  },
+  {
+    name: 'Security Deposit Return Checklist',
+    description: 'Comprehensive move-out checklist to maximize your security deposit return with cleaning and repair guidelines',
+    category: 'Renter Tools',
+    icon: '✅',
+    path: '/tools/security-deposit-return-checklist'
+  },
+  {
+    name: 'Apartment Hunting Checklist Generator',
+    description: 'Generate a personalized apartment hunting checklist based on your priorities, lifestyle, and must-have features',
+    category: 'Renter Tools',
+    icon: '🔍',
+    path: '/tools/apartment-hunting-checklist-generator'
+  },
+  {
+    name: 'Rental Application Document Checklist',
+    description: 'Complete checklist of documents needed for rental applications to speed up approval and secure your apartment',
+    category: 'Renter Tools',
+    icon: '📋',
+    path: '/tools/rental-application-document-checklist'
+  },
+  {
+    name: 'Should I Get a Roommate? Calculator',
+    description: 'Analyze the financial and lifestyle tradeoffs of living with a roommate to make an informed decision',
+    category: 'Renter Tools',
+    icon: '👥',
+    path: '/tools/should-i-get-a-roommate-calculator'
   }
 ];
 
@@ -3189,6 +3259,8 @@ export const categories = [
   'Lifestyle & Housing',
   'State-Specific Tools',
   'First-Time Homebuyer Tools',
+  'Buyer Tools',
+  'Renter Tools',
   'Rent & Lease Tools'
 ];
 
