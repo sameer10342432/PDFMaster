@@ -2910,6 +2910,55 @@ export const allTools: Tool[] = [
     category: 'Lifestyle & Housing',
     icon: '💡',
     path: '/tools/utility-bill-splitter-roommates'
+  },
+  {
+    name: 'Tennessee Hall Income Tax (Real Estate)',
+    description: 'Calculate the former Tennessee Hall Income Tax on real estate investment income before its 2021 repeal',
+    category: 'State-Specific Tools',
+    icon: '🏛️',
+    path: '/tools/tennessee-hall-income-tax-real-estate'
+  },
+  {
+    name: 'Nevada No-State-Income-Tax Benefit Calculator',
+    description: 'Calculate tax savings from Nevada\'s no-income-tax status compared to high-tax states for real estate investors',
+    category: 'State-Specific Tools',
+    icon: '🎰',
+    path: '/tools/nevada-no-state-income-tax-benefit-calculator'
+  },
+  {
+    name: 'Prop 19 (California) Tax Basis Transfer Calculator',
+    description: 'Calculate property tax impacts of Prop 19 for inherited properties and parent-child transfers in California',
+    category: 'State-Specific Tools',
+    icon: '📜',
+    path: '/tools/prop-19-california-tax-basis-transfer-calculator'
+  },
+  {
+    name: 'Austin (TX) McMansion Ordinance Checker',
+    description: 'Check if your Austin property complies with residential design standards and FAR (floor area ratio) limits',
+    category: 'State-Specific Tools',
+    icon: '🏗️',
+    path: '/tools/austin-tx-mcmansion-ordinance-checker'
+  },
+  {
+    name: 'San Francisco (CA) Rent Control Calculator',
+    description: 'Calculate maximum allowable rent increases under San Francisco rent control ordinance',
+    category: 'State-Specific Tools',
+    icon: '🌉',
+    path: '/tools/san-francisco-ca-rent-control-calculator'
+  },
+  {
+    name: 'Los Angeles (CA) Rent Stabilization (RSO) Tool',
+    description: 'Calculate maximum allowable rent increases for Los Angeles Rent Stabilization Ordinance (RSO) properties',
+    category: 'State-Specific Tools',
+    icon: '🌴',
+    path: '/tools/los-angeles-ca-rent-stabilization-rso-tool'
+  },
+  {
+    name: 'Miami (FL) Flood Zone Impact Calculator',
+    description: 'Calculate flood insurance costs and property value impacts for different FEMA flood zones in Miami',
+    category: 'State-Specific Tools',
+    icon: '🌊',
+    path: '/tools/miami-fl-flood-zone-impact-calculator'
   }
 ];
 
@@ -2927,7 +2976,8 @@ export const categories = [
   'Tax Strategy & Entity Planning',
   'Additional Tools',
   'Home Improvement',
-  'Lifestyle & Housing'
+  'Lifestyle & Housing',
+  'State-Specific Tools'
 ];
 
 export const getToolsByCategory = (category: string): Tool[] => {
