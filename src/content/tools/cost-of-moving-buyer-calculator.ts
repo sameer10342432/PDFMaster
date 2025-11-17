@@ -135,7 +135,7 @@ export const COST_OF_MOVING_BUYER_CALCULATOR_CONTENT: CalculatorContent = {
         name: "newAppliances",
         label: "Need New Appliances?",
         type: "select",
-        options: ["No", "Some", "Full Set"],
+        options: [{ value: "No", label: "No" }, { value: "Some", label: "Some" }, { value: "Full Set", label: "Full Set" }],
         defaultValue: "Some",
       },
       {

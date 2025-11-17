@@ -90,7 +90,7 @@ export const COST_OF_MOVING_RENTER_CALCULATOR_CONTENT: CalculatorContent = {
         name: "lastMonthRequired",
         label: "Last Month's Rent Required?",
         type: "select",
-        options: ["No", "Yes"],
+        options: [{ value: "No", label: "No" }, { value: "Yes", label: "Yes" }],
         defaultValue: "No",
       },
       {
@@ -118,7 +118,7 @@ export const COST_OF_MOVING_RENTER_CALCULATOR_CONTENT: CalculatorContent = {
         name: "movingMethod",
         label: "Moving Method",
         type: "select",
-        options: ["DIY", "Truck Rental", "Professional Movers"],
+        options: [{ value: "DIY", label: "DIY" }, { value: "Truck Rental", label: "Truck Rental" }, { value: "Professional Movers", label: "Professional Movers" }],
         defaultValue: "Truck Rental",
       },
       {

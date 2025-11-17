@@ -110,7 +110,7 @@ export const BROKER_FEE_RENTING_CALCULATOR_CONTENT: CalculatorContent = {
         name: "feeType",
         label: "Broker Fee Type",
         type: "select",
-        options: ["Percentage of Annual Rent", "One Month Rent", "Flat Fee", "No Fee"],
+        options: [{ value: "Percentage of Annual Rent", label: "Percentage of Annual Rent" }, { value: "One Month Rent", label: "One Month Rent" }, { value: "Flat Fee", label: "Flat Fee" }, { value: "No Fee", label: "No Fee" }],
         defaultValue: "Percentage of Annual Rent",
       },
       {
@@ -138,7 +138,7 @@ export const BROKER_FEE_RENTING_CALCULATOR_CONTENT: CalculatorContent = {
         name: "lastMonthRequired",
         label: "Last Month Required?",
         type: "select",
-        options: ["No", "Yes"],
+        options: [{ value: "No", label: "No" }, { value: "Yes", label: "Yes" }],
         defaultValue: "Yes",
       },
     ],
