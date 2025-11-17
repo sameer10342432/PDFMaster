@@ -3,7 +3,7 @@ import { CalculatorContent } from '@/types';
 export const BROKER_FEE_RENTING_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Broker Fee Calculator (Renting)',
   description: 'Calculate rental broker fees and compare costs across different fee structures to understand total move-in expenses',
-  icon: 'Icon',
+  icon: '💼',
   category: 'Renter Tools',
   slug: 'broker-fee-renting-calculator',
   article: {

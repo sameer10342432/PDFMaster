@@ -3,7 +3,7 @@ import { CalculatorContent } from '@/types';
 export const RENTERS_INSURANCE_COST_ESTIMATOR_CONTENT: CalculatorContent = {
   title: 'Renter\'s Insurance Cost Estimator',
   description: 'Estimate the cost of renter\'s insurance based on coverage amount, location, deductible, and personal factors',
-  icon: 'Icon',
+  icon: '🛡️',
   category: 'Renter Tools',
   slug: 'renters-insurance-cost-estimator',
   article: {

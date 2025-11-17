@@ -3,7 +3,7 @@ import { CalculatorContent } from '@/types';
 export const RENT_VS_BUY_SIMPLE_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Rent vs. Buy Calculator (Simple)',
   description: 'Quick comparison tool to determine whether renting or buying makes more financial sense for your situation',
-  icon: 'Icon',
+  icon: '⚖️',
   category: 'Buyer Tools',
   slug: 'rent-vs-buy-simple-calculator',
   article: {

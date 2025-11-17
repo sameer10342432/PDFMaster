@@ -3,7 +3,7 @@ import { CalculatorContent } from '@/types';
 export const RENTAL_APPLICATION_DOCUMENT_CHECKLIST_CONTENT: CalculatorContent = {
   title: 'Rental Application Document Checklist',
   description: 'Complete checklist of documents needed for rental applications to speed up approval and secure your apartment',
-  icon: 'Icon',
+  icon: '📋',
   category: 'Renter Tools',
   slug: 'rental-application-document-checklist',
   article: {

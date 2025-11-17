@@ -3,7 +3,7 @@ import { CalculatorContent } from '@/types';
 export const WHAT_CAN_I_AFFORD_BUYER_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'What Can I Afford Calculator (Buyer)',
   description: 'Calculate the maximum home price you can afford based on your income, debt, down payment, and credit score with detailed affordability analysis',
-  icon: 'Icon',
+  icon: '🏡',
   category: 'Buyer Tools',
   slug: 'what-can-i-afford-buyer-calculator',
   article: {

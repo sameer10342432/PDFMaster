@@ -3,7 +3,7 @@ import { CalculatorContent } from '@/types';
 export const APARTMENT_HUNTING_CHECKLIST_GENERATOR_CONTENT: CalculatorContent = {
   title: 'Apartment Hunting Checklist Generator',
   description: 'Generate a personalized apartment hunting checklist based on your priorities, lifestyle, and must-have features',
-  icon: 'Icon',
+  icon: '🔍',
   category: 'Renter Tools',
   slug: 'apartment-hunting-checklist-generator',
   article: {

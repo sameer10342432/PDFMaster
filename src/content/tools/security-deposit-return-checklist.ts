@@ -3,7 +3,7 @@ import { CalculatorContent } from '@/types';
 export const SECURITY_DEPOSIT_RETURN_CHECKLIST_CONTENT: CalculatorContent = {
   title: 'Security Deposit Return Checklist',
   description: 'Comprehensive move-out checklist to maximize your security deposit return with cleaning and repair guidelines',
-  icon: 'Icon',
+  icon: '✅',
   category: 'Renter Tools',
   slug: 'security-deposit-return-checklist',
   article: {

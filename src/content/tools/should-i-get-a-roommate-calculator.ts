@@ -3,7 +3,7 @@ import { CalculatorContent } from '@/types';
 export const SHOULD_I_GET_A_ROOMMATE_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Should I Get a Roommate? Calculator',
   description: 'Analyze the financial and lifestyle tradeoffs of living with a roommate to make an informed decision',
-  icon: 'Icon',
+  icon: '👥',
   category: 'Renter Tools',
   slug: 'should-i-get-a-roommate-calculator',
   article: {

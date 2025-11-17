@@ -3,7 +3,7 @@ import { CalculatorContent } from '@/types';
 export const COST_OF_MOVING_BUYER_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Cost of Moving Calculator (Buyer)',
   description: 'Calculate comprehensive moving costs for homebuyers including closing costs, moving expenses, immediate repairs, and setup costs',
-  icon: 'Icon',
+  icon: '🚚',
   category: 'Buyer Tools',
   slug: 'cost-of-moving-buyer-calculator',
   article: {

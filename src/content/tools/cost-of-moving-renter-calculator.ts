@@ -3,7 +3,7 @@ import { CalculatorContent } from '@/types';
 export const COST_OF_MOVING_RENTER_CALCULATOR_CONTENT: CalculatorContent = {
   title: 'Cost of Moving Calculator (Renter)',
   description: 'Calculate the total cost of moving to a new rental including deposits, moving expenses, and setup costs',
-  icon: 'Icon',
+  icon: '📦',
   category: 'Renter Tools',
   slug: 'cost-of-moving-renter-calculator',
   article: {
