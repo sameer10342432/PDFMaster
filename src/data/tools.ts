@@ -3239,6 +3239,78 @@ export const allTools: Tool[] = [
     category: 'Renter Tools',
     icon: '👥',
     path: '/tools/should-i-get-a-roommate-calculator'
+  },
+  
+  // New Buyer Tools (10 tools)
+  {
+    name: 'Rate Lock Cost vs. Benefit Calculator',
+    description: 'Compare the cost of locking your mortgage rate versus the potential savings or risks',
+    category: 'Buyer Tools',
+    icon: '🔒',
+    path: '/tools/rate-lock-cost-vs-benefit-calculator'
+  },
+  {
+    name: 'Buyer\'s Agent vs. Dual Agent Comparison',
+    description: 'Compare the benefits and risks of using a buyer\'s agent versus dual agency',
+    category: 'Buyer Tools',
+    icon: '🤝',
+    path: '/tools/buyers-agent-vs-dual-agent'
+  },
+  {
+    name: 'Open House Feedback Tracker',
+    description: 'Track and analyze feedback from open house visits to make better buying decisions',
+    category: 'Buyer Tools',
+    icon: '🏠',
+    path: '/tools/open-house-feedback-tracker'
+  },
+  {
+    name: 'Property Viewing Scorecard',
+    description: 'Rate and score properties during viewings with a comprehensive evaluation system',
+    category: 'Buyer Tools',
+    icon: '📋',
+    path: '/tools/property-viewing-scorecard'
+  },
+  {
+    name: 'Love Letter to Seller Generator',
+    description: 'Generate a heartfelt personalized letter to sellers that helps your offer stand out',
+    category: 'Buyer Tools',
+    icon: '💌',
+    path: '/tools/love-letter-to-seller-generator'
+  },
+  {
+    name: 'What Happens at Closing Checklist',
+    description: 'Complete step-by-step guide to the home closing process and what to expect',
+    category: 'Buyer Tools',
+    icon: '✍️',
+    path: '/tools/what-happens-at-closing-checklist'
+  },
+  {
+    name: 'Final Walk-Through Checklist',
+    description: 'Comprehensive checklist for your final property inspection before closing',
+    category: 'Buyer Tools',
+    icon: '🔍',
+    path: '/tools/final-walk-through-checklist'
+  },
+  {
+    name: 'Moving Truck Rental Cost Estimator',
+    description: 'Calculate the total cost of renting a moving truck including all fees and fuel',
+    category: 'Buyer Tools',
+    icon: '🚚',
+    path: '/tools/moving-truck-rental-cost-estimator'
+  },
+  {
+    name: 'Packing Supplies Budget Calculator',
+    description: 'Calculate the cost and quantity of moving boxes and packing supplies needed',
+    category: 'Buyer Tools',
+    icon: '📦',
+    path: '/tools/packing-supplies-budget-calculator'
+  },
+  {
+    name: 'Change of Address Checklist',
+    description: 'Complete checklist for updating your address with all important organizations',
+    category: 'Buyer Tools',
+    icon: '📮',
+    path: '/tools/change-of-address-checklist'
   }
 ];
 

@@ -6,6 +6,9 @@ export interface CalculatorInput {
   placeholder?: string;
   options?: { value: string; label: string }[];
   rules?: Record<string, any>;
+  min?: string;
+  max?: string;
+  step?: string;
 }
 
 export interface CalculatorResult {
