@@ -10,20 +10,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
 import type { Metadata } from 'next';
-import { buyerWishlistVsRealityCalculator } from '@/content/tools/buyer-wishlist-vs-reality-tool';
+import { BUYER_WISHLIST_VS_REALITY_TOOL_CONTENT } from '@/content/tools/buyer-wishlist-vs-reality-tool';
 import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
 const BuyerWishlistVsRealityPage = () => {
   return (
-    <CalculatorLayout content={buyerWishlistVsRealityCalculator}>
+    <CalculatorLayout content={BUYER_WISHLIST_VS_REALITY_TOOL_CONTENT}>
       <EnhancedCalculator
-        title={buyerWishlistVsRealityCalculator.title}
+        title={BUYER_WISHLIST_VS_REALITY_TOOL_CONTENT.title}
         slug="buyer-wishlist-vs-reality-tool"
         category="Real Estate"
-        description={buyerWishlistVsRealityCalculator.description}
-        inputs={buyerWishlistVsRealityCalculator.calculator.fields}
-        results={buyerWishlistVsRealityCalculator.calculator.results}
-        calculation={buyerWishlistVsRealityCalculator.calculator.calculate}
+        description={BUYER_WISHLIST_VS_REALITY_TOOL_CONTENT.description}
+        inputs={BUYER_WISHLIST_VS_REALITY_TOOL_CONTENT.calculator.fields}
+        results={BUYER_WISHLIST_VS_REALITY_TOOL_CONTENT.calculator.results}
+        calculation={BUYER_WISHLIST_VS_REALITY_TOOL_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>
   );

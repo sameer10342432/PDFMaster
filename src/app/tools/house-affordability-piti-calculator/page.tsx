@@ -10,20 +10,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
 import type { Metadata } from 'next';
-import { houseAffordabilityPITICalculator } from '@/content/tools/house-affordability-piti-calculator';
+import { HOUSE_AFFORDABILITY_PITI_CALCULATOR_CONTENT } from '@/content/tools/house-affordability-piti-calculator';
 import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
 const HouseAffordabilityPITIPage = () => {
   return (
-    <CalculatorLayout content={houseAffordabilityPITICalculator}>
+    <CalculatorLayout content={HOUSE_AFFORDABILITY_PITI_CALCULATOR_CONTENT}>
       <EnhancedCalculator
-        title={houseAffordabilityPITICalculator.title}
+        title={HOUSE_AFFORDABILITY_PITI_CALCULATOR_CONTENT.title}
         slug="house-affordability-piti-calculator"
         category="Real Estate"
-        description={houseAffordabilityPITICalculator.description}
-        inputs={houseAffordabilityPITICalculator.calculator.fields}
-        results={houseAffordabilityPITICalculator.calculator.results}
-        calculation={houseAffordabilityPITICalculator.calculator.calculate}
+        description={HOUSE_AFFORDABILITY_PITI_CALCULATOR_CONTENT.description}
+        inputs={HOUSE_AFFORDABILITY_PITI_CALCULATOR_CONTENT.calculator.fields}
+        results={HOUSE_AFFORDABILITY_PITI_CALCULATOR_CONTENT.calculator.results}
+        calculation={HOUSE_AFFORDABILITY_PITI_CALCULATOR_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>
   );

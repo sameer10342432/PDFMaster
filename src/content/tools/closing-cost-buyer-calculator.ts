@@ -1,6 +1,6 @@
 import { CalculatorContent } from "@/types";
 
-export const closingCostBuyerCalculator: CalculatorContent = {
+export const CLOSING_COST_BUYER_CALCULATOR_CONTENT: CalculatorContent = {
   title: "Buyer Closing Cost Calculator | Complete Homebuyer Closing Costs Breakdown",
   description:
     "Calculate all closing costs for home buyers including loan fees, title insurance, escrow, taxes, and hidden fees. Know exactly how much cash you need to close on your home purchase.",

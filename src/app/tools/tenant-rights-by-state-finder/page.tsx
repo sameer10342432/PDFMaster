@@ -10,20 +10,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
 import type { Metadata } from 'next';
-import { tenantRightsFinderCalculator } from '@/content/tools/tenant-rights-by-state-finder';
+import { TENANT_RIGHTS_BY_STATE_FINDER_CONTENT } from '@/content/tools/tenant-rights-by-state-finder';
 import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
 const TenantRightsFinderPage = () => {
   return (
-    <CalculatorLayout content={tenantRightsFinderCalculator}>
+    <CalculatorLayout content={TENANT_RIGHTS_BY_STATE_FINDER_CONTENT}>
       <EnhancedCalculator
-        title={tenantRightsFinderCalculator.title}
+        title={TENANT_RIGHTS_BY_STATE_FINDER_CONTENT.title}
         slug="tenant-rights-by-state-finder"
         category="Real Estate"
-        description={tenantRightsFinderCalculator.description}
-        inputs={tenantRightsFinderCalculator.calculator.fields}
-        results={tenantRightsFinderCalculator.calculator.results}
-        calculation={tenantRightsFinderCalculator.calculator.calculate}
+        description={TENANT_RIGHTS_BY_STATE_FINDER_CONTENT.description}
+        inputs={TENANT_RIGHTS_BY_STATE_FINDER_CONTENT.calculator.fields}
+        results={TENANT_RIGHTS_BY_STATE_FINDER_CONTENT.calculator.results}
+        calculation={TENANT_RIGHTS_BY_STATE_FINDER_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>
   );

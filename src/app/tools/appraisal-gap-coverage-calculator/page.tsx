@@ -10,20 +10,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
 import type { Metadata } from 'next';
-import { appraisalGapCoverageCalculator } from '@/content/tools/appraisal-gap-coverage-calculator';
+import { APPRAISAL_GAP_COVERAGE_CALCULATOR_CONTENT } from '@/content/tools/appraisal-gap-coverage-calculator';
 import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
 const AppraisalGapCoverageCalculatorPage = () => {
   return (
-    <CalculatorLayout content={appraisalGapCoverageCalculator}>
+    <CalculatorLayout content={APPRAISAL_GAP_COVERAGE_CALCULATOR_CONTENT}>
       <EnhancedCalculator
-        title={appraisalGapCoverageCalculator.title}
+        title={APPRAISAL_GAP_COVERAGE_CALCULATOR_CONTENT.title}
         slug="appraisal-gap-coverage-calculator"
         category="Real Estate"
-        description={appraisalGapCoverageCalculator.description}
-        inputs={appraisalGapCoverageCalculator.calculator.fields}
-        results={appraisalGapCoverageCalculator.calculator.results}
-        calculation={appraisalGapCoverageCalculator.calculator.calculate}
+        description={APPRAISAL_GAP_COVERAGE_CALCULATOR_CONTENT.description}
+        inputs={APPRAISAL_GAP_COVERAGE_CALCULATOR_CONTENT.calculator.fields}
+        results={APPRAISAL_GAP_COVERAGE_CALCULATOR_CONTENT.calculator.results}
+        calculation={APPRAISAL_GAP_COVERAGE_CALCULATOR_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>
   );

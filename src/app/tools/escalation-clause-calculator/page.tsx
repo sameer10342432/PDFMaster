@@ -10,20 +10,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
 import type { Metadata } from 'next';
-import { escalationClauseCalculator } from '@/content/tools/escalation-clause-calculator';
+import { ESCALATION_CLAUSE_CALCULATOR_CONTENT } from '@/content/tools/escalation-clause-calculator';
 import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
 const EscalationClauseCalculatorPage = () => {
   return (
-    <CalculatorLayout content={escalationClauseCalculator}>
+    <CalculatorLayout content={ESCALATION_CLAUSE_CALCULATOR_CONTENT}>
       <EnhancedCalculator
-        title={escalationClauseCalculator.title}
+        title={ESCALATION_CLAUSE_CALCULATOR_CONTENT.title}
         slug="escalation-clause-calculator"
         category="Real Estate"
-        description={escalationClauseCalculator.description}
-        inputs={escalationClauseCalculator.calculator.fields}
-        results={escalationClauseCalculator.calculator.results}
-        calculation={escalationClauseCalculator.calculator.calculate}
+        description={ESCALATION_CLAUSE_CALCULATOR_CONTENT.description}
+        inputs={ESCALATION_CLAUSE_CALCULATOR_CONTENT.calculator.fields}
+        results={ESCALATION_CLAUSE_CALCULATOR_CONTENT.calculator.results}
+        calculation={ESCALATION_CLAUSE_CALCULATOR_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>
   );

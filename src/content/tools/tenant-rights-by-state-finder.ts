@@ -1,6 +1,6 @@
 import { CalculatorContent } from "@/types";
 
-export const tenantRightsFinderCalculator: CalculatorContent = {
+export const TENANT_RIGHTS_BY_STATE_FINDER_CONTENT: CalculatorContent = {
   title: "Tenant's Rights by State Finder | Renter Protection Laws & Security Deposit Rules",
   description:
     "Find your tenant rights, security deposit limits, eviction protections, and renter laws specific to your state. Know your rights as a renter in all 50 states.",

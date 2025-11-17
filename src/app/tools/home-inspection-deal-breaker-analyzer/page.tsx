@@ -10,20 +10,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
 import type { Metadata } from 'next';
-import { homeInspectionDealBreakerAnalyzer } from '@/content/tools/home-inspection-deal-breaker-analyzer';
+import { HOME_INSPECTION_DEAL_BREAKER_ANALYZER_CONTENT } from '@/content/tools/home-inspection-deal-breaker-analyzer';
 import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
 const HomeInspectionDealBreakerPage = () => {
   return (
-    <CalculatorLayout content={homeInspectionDealBreakerAnalyzer}>
+    <CalculatorLayout content={HOME_INSPECTION_DEAL_BREAKER_ANALYZER_CONTENT}>
       <EnhancedCalculator
-        title={homeInspectionDealBreakerAnalyzer.title}
+        title={HOME_INSPECTION_DEAL_BREAKER_ANALYZER_CONTENT.title}
         slug="home-inspection-deal-breaker-analyzer"
         category="Real Estate"
-        description={homeInspectionDealBreakerAnalyzer.description}
-        inputs={homeInspectionDealBreakerAnalyzer.calculator.fields}
-        results={homeInspectionDealBreakerAnalyzer.calculator.results}
-        calculation={homeInspectionDealBreakerAnalyzer.calculator.calculate}
+        description={HOME_INSPECTION_DEAL_BREAKER_ANALYZER_CONTENT.description}
+        inputs={HOME_INSPECTION_DEAL_BREAKER_ANALYZER_CONTENT.calculator.fields}
+        results={HOME_INSPECTION_DEAL_BREAKER_ANALYZER_CONTENT.calculator.results}
+        calculation={HOME_INSPECTION_DEAL_BREAKER_ANALYZER_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>
   );

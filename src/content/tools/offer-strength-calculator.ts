@@ -1,6 +1,6 @@
 import { CalculatorContent } from "@/types";
 
-export const offerStrengthCalculator: CalculatorContent = {
+export const OFFER_STRENGTH_CALCULATOR_CONTENT: CalculatorContent = {
   title: "Offer Strength Calculator | Home Offer Competitiveness Score",
   description:
     "Calculate how competitive your home offer is by weighing price, contingencies, closing timeline, and other terms. Win in multiple offer situations with strategic offers.",

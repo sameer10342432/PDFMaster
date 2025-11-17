@@ -1,6 +1,6 @@
 import { CalculatorContent } from "@/types";
 
-export const closingCostSellerCalculator: CalculatorContent = {
+export const CLOSING_COST_SELLER_CALCULATOR_CONTENT: CalculatorContent = {
   title: "Seller Closing Cost Calculator | How Much Will I Net From Home Sale?",
   description:
     "Calculate seller closing costs including realtor commissions, title fees, taxes, and payoffs. Find out your net proceeds from selling your home after all expenses.",

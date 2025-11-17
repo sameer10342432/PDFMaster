@@ -1,6 +1,6 @@
 import { CalculatorContent } from "@/types";
 
-export const buyerWishlistVsRealityCalculator: CalculatorContent = {
+export const BUYER_WISHLIST_VS_REALITY_TOOL_CONTENT: CalculatorContent = {
   title: "Home Buyer Wish List vs Reality Tool | Budget vs Expectations Calculator",
   description:
     "Compare your dream home wish list with what you can actually afford. Prioritize must-have features vs nice-to-haves and make realistic buying decisions within your budget.",

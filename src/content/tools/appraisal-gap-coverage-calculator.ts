@@ -1,6 +1,6 @@
 import { CalculatorContent } from "@/types";
 
-export const appraisalGapCoverageCalculator: CalculatorContent = {
+export const APPRAISAL_GAP_COVERAGE_CALCULATOR_CONTENT: CalculatorContent = {
   title: "Appraisal Gap Coverage Calculator | Low Appraisal Strategy Tool",
   description:
     "Calculate how much appraisal gap coverage to offer when buying a home. Protect yourself from low appraisals while making competitive offers in hot markets.",

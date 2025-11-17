@@ -1,6 +1,6 @@
 import { CalculatorContent } from "@/types";
 
-export const breakLeaseCalculator: CalculatorContent = {
+export const BREAK_LEASE_COST_CALCULATOR_CONTENT: CalculatorContent = {
   title: "Should I Break My Lease? Cost Calculator | Breaking Lease Penalty Calculator",
   description:
     "Calculate the total cost of breaking your lease early including penalties, remaining rent, forfeited deposits, and relocation costs. Make an informed decision about lease termination.",

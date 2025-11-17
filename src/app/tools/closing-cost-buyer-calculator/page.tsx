@@ -10,20 +10,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
 import type { Metadata } from 'next';
-import { closingCostBuyerCalculator } from '@/content/tools/closing-cost-buyer-calculator';
+import { CLOSING_COST_BUYER_CALCULATOR_CONTENT } from '@/content/tools/closing-cost-buyer-calculator';
 import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
 const ClosingCostBuyerCalculatorPage = () => {
   return (
-    <CalculatorLayout content={closingCostBuyerCalculator}>
+    <CalculatorLayout content={CLOSING_COST_BUYER_CALCULATOR_CONTENT}>
       <EnhancedCalculator
-        title={closingCostBuyerCalculator.title}
+        title={CLOSING_COST_BUYER_CALCULATOR_CONTENT.title}
         slug="closing-cost-buyer-calculator"
         category="Real Estate"
-        description={closingCostBuyerCalculator.description}
-        inputs={closingCostBuyerCalculator.calculator.fields}
-        results={closingCostBuyerCalculator.calculator.results}
-        calculation={closingCostBuyerCalculator.calculator.calculate}
+        description={CLOSING_COST_BUYER_CALCULATOR_CONTENT.description}
+        inputs={CLOSING_COST_BUYER_CALCULATOR_CONTENT.calculator.fields}
+        results={CLOSING_COST_BUYER_CALCULATOR_CONTENT.calculator.results}
+        calculation={CLOSING_COST_BUYER_CALCULATOR_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>
   );

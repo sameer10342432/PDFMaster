@@ -10,20 +10,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
 import { CalculatorLayout } from '@/components/calculators/CalculatorLayout';
 import type { Metadata } from 'next';
-import { offerStrengthCalculator } from '@/content/tools/offer-strength-calculator';
+import { OFFER_STRENGTH_CALCULATOR_CONTENT } from '@/content/tools/offer-strength-calculator';
 import { EnhancedCalculator } from '@/components/calculators/EnhancedCalculator';
 
 const OfferStrengthCalculatorPage = () => {
   return (
-    <CalculatorLayout content={offerStrengthCalculator}>
+    <CalculatorLayout content={OFFER_STRENGTH_CALCULATOR_CONTENT}>
       <EnhancedCalculator
-        title={offerStrengthCalculator.title}
+        title={OFFER_STRENGTH_CALCULATOR_CONTENT.title}
         slug="offer-strength-calculator"
         category="Real Estate"
-        description={offerStrengthCalculator.description}
-        inputs={offerStrengthCalculator.calculator.fields}
-        results={offerStrengthCalculator.calculator.results}
-        calculation={offerStrengthCalculator.calculator.calculate}
+        description={OFFER_STRENGTH_CALCULATOR_CONTENT.description}
+        inputs={OFFER_STRENGTH_CALCULATOR_CONTENT.calculator.fields}
+        results={OFFER_STRENGTH_CALCULATOR_CONTENT.calculator.results}
+        calculation={OFFER_STRENGTH_CALCULATOR_CONTENT.calculator.calculate}
       />
     </CalculatorLayout>
   );

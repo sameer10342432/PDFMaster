@@ -1,6 +1,6 @@
 import { CalculatorContent } from "@/types";
 
-export const houseAffordabilityPITICalculator: CalculatorContent = {
+export const HOUSE_AFFORDABILITY_PITI_CALCULATOR_CONTENT: CalculatorContent = {
   title: "How Much House Can I Afford Calculator | PITI + Utilities + Real Costs",
   description:
     "Calculate how much house you can really afford including PITI (Principal, Interest, Taxes, Insurance), HOA fees, utilities, maintenance, and all hidden homeownership costs.",

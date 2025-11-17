@@ -1,6 +1,6 @@
 import { CalculatorContent } from "@/types";
 
-export const escalationClauseCalculator: CalculatorContent = {
+export const ESCALATION_CLAUSE_CALCULATOR_CONTENT: CalculatorContent = {
   title: "Escalation Clause Calculator | Auto-Bid Strategy for Home Offers",
   description:
     "Calculate the perfect escalation clause for your home offer. Automatically beat competing bids while protecting your maximum price. Win competitive offers strategically.",
