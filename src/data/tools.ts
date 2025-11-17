@@ -3099,6 +3099,76 @@ export const allTools: Tool[] = [
     category: 'State-Specific Tools',
     icon: '🚗',
     path: '/tools/virginia-car-tax-personal-property-housing-tool'
+  },
+  {
+    name: 'Wisconsin Use-Value Assessment (Farms)',
+    description: 'Calculate property tax savings for Wisconsin farmland enrolled in the Use-Value Assessment program',
+    category: 'State-Specific Tools',
+    icon: '🌾',
+    path: '/tools/wisconsin-use-value-assessment-calculator'
+  },
+  {
+    name: 'Michigan Principal Residence Exemption (PRE)',
+    description: 'Calculate property tax savings with Michigan\'s PRE exemption from school operating tax',
+    category: 'State-Specific Tools',
+    icon: '🏠',
+    path: '/tools/michigan-pre-calculator'
+  },
+  {
+    name: 'Arizona Proposition 117 Tax Cap',
+    description: 'Calculate how Arizona\'s Proposition 117 limits annual property value increases to protect against rapid tax increases',
+    category: 'State-Specific Tools',
+    icon: '🏜️',
+    path: '/tools/arizona-proposition-117-calculator'
+  },
+  {
+    name: 'Connecticut Property Tax (Mill Rate)',
+    description: 'Calculate Connecticut property taxes using the mill rate system with assessment ratios',
+    category: 'State-Specific Tools',
+    icon: '⚖️',
+    path: '/tools/connecticut-mill-rate-calculator'
+  },
+  {
+    name: 'Montana Property Tax Biennial Reappraisal',
+    description: 'Calculate property tax changes under Montana\'s biennial reappraisal cycle',
+    category: 'State-Specific Tools',
+    icon: '⛰️',
+    path: '/tools/montana-biennial-reappraisal-calculator'
+  },
+  {
+    name: 'First-Time Home Buyer Tax Credit Finder',
+    description: 'Find available first-time home buyer tax credits and incentives based on your location and income',
+    category: 'First-Time Homebuyer Tools',
+    icon: '🎯',
+    path: '/tools/first-time-homebuyer-tax-credit-finder'
+  },
+  {
+    name: 'First-Time Home Buyer Savings Plan',
+    description: 'Calculate how much to save monthly for your first home purchase with a personalized timeline',
+    category: 'First-Time Homebuyer Tools',
+    icon: '💰',
+    path: '/tools/first-time-homebuyer-savings-plan'
+  },
+  {
+    name: 'Down Payment Assistance (DPA) Program Finder',
+    description: 'Find and estimate eligibility for down payment assistance programs including grants and forgivable loans',
+    category: 'First-Time Homebuyer Tools',
+    icon: '🎁',
+    path: '/tools/down-payment-assistance-finder'
+  },
+  {
+    name: 'Mortgage Credit Certificate (MCC) Calculator',
+    description: 'Calculate annual federal tax savings from a Mortgage Credit Certificate program',
+    category: 'First-Time Homebuyer Tools',
+    icon: '📜',
+    path: '/tools/mortgage-credit-certificate-calculator'
+  },
+  {
+    name: 'What Can I Afford (Renter) Calculator',
+    description: 'Calculate the maximum rent you can afford based on your income and financial goals',
+    category: 'Rent & Lease Tools',
+    icon: '🏘️',
+    path: '/tools/renter-affordability-calculator'
   }
 ];
 
@@ -3117,7 +3187,9 @@ export const categories = [
   'Additional Tools',
   'Home Improvement',
   'Lifestyle & Housing',
-  'State-Specific Tools'
+  'State-Specific Tools',
+  'First-Time Homebuyer Tools',
+  'Rent & Lease Tools'
 ];
 
 export const getToolsByCategory = (category: string): Tool[] => {
