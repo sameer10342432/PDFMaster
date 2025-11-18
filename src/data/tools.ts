@@ -3313,7 +3313,7 @@ export const allTools: Tool[] = [
     path: '/tools/change-of-address-checklist'
   },
 
-  // Agent Tools (10 tools)
+  // Agent Tools (20 tools)
   {
     name: 'E&O Insurance Cost Calculator',
     description: 'Calculate Errors & Omissions insurance costs based on coverage level, experience, and claims history',
@@ -3383,6 +3383,76 @@ export const allTools: Tool[] = [
     category: 'Agent Tools',
     icon: '📬',
     path: '/tools/direct-mail-postcard-roi-calculator'
+  },
+  {
+    name: 'CRM ROI Calculator',
+    description: 'Calculate the return on investment for your real estate CRM system and analyze cost savings, productivity gains, and revenue improvements',
+    category: 'Agent Tools',
+    icon: '💻',
+    path: '/tools/crm-roi-calculator'
+  },
+  {
+    name: 'Cost Per Lead (CPL) Calculator',
+    description: 'Calculate your marketing cost per lead and optimize your real estate lead generation budget across different channels',
+    category: 'Agent Tools',
+    icon: '📊',
+    path: '/tools/cost-per-lead-calculator'
+  },
+  {
+    name: 'Cost Per Acquisition (CPA) Calculator',
+    description: 'Calculate your cost per acquisition for real estate clients and optimize your marketing spend to maximize profitability',
+    category: 'Agent Tools',
+    icon: '🎯',
+    path: '/tools/cost-per-acquisition-calculator'
+  },
+  {
+    name: 'Lead Conversion Rate Calculator',
+    description: 'Calculate and analyze your real estate lead conversion rates across different stages of the sales funnel to optimize your conversion strategy',
+    category: 'Agent Tools',
+    icon: '📈',
+    path: '/tools/lead-conversion-rate-calculator'
+  },
+  {
+    name: 'Sphere of Influence (SOI) Potential Calculator',
+    description: 'Calculate the potential business value of your sphere of influence and develop a strategy to maximize referrals and repeat business',
+    category: 'Agent Tools',
+    icon: '👥',
+    path: '/tools/sphere-of-influence-potential-calculator'
+  },
+  {
+    name: 'Client Lifetime Value (CLV) Calculator',
+    description: 'Calculate the total lifetime value of your real estate clients including repeat business, referrals, and long-term relationship potential',
+    category: 'Agent Tools',
+    icon: '💎',
+    path: '/tools/client-lifetime-value-calculator'
+  },
+  {
+    name: 'Agent Team (Split vs. Salary) Calculator',
+    description: 'Compare commission split versus salary compensation models for building and managing your real estate team to determine the most profitable structure',
+    category: 'Agent Tools',
+    icon: '👨‍💼',
+    path: '/tools/agent-team-split-vs-salary-calculator'
+  },
+  {
+    name: "Buyer's Agent Commission Calculator",
+    description: "Calculate buyer's agent commission earnings including split structures, transaction fees, and net take-home pay from buyer representation deals",
+    category: 'Agent Tools',
+    icon: '🏠',
+    path: '/tools/buyers-agent-commission-calculator'
+  },
+  {
+    name: 'Listing Agent Commission Calculator',
+    description: 'Calculate listing agent commission earnings including co-broke splits, brokerage fees, transaction costs, and net proceeds from seller representation',
+    category: 'Agent Tools',
+    icon: '📋',
+    path: '/tools/listing-agent-commission-calculator'
+  },
+  {
+    name: 'Transaction Coordinator (TC) Cost vs. Benefit Calculator',
+    description: 'Calculate the ROI of hiring a transaction coordinator by analyzing time savings, increased capacity, and stress reduction versus the cost of TC services',
+    category: 'Agent Tools',
+    icon: '📝',
+    path: '/tools/transaction-coordinator-cost-vs-benefit-calculator'
   }
 ];
 
