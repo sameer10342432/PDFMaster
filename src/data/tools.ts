@@ -3593,6 +3593,76 @@ export const allTools: Tool[] = [
     category: 'Agent Tools',
     icon: '✅',
     path: '/tools/client-onboarding-checklist-buyer'
+  },
+  {
+    name: 'Cool Roof (Reflective) ROI Calculator',
+    description: 'Calculate energy savings and return on investment for reflective cool roofing systems that reduce cooling costs and extend roof lifespan',
+    category: 'Home Improvement',
+    icon: '🏠',
+    path: '/tools/cool-roof-reflective-roi-calculator'
+  },
+  {
+    name: 'Green Roof (Living Roof) Cost vs. Benefit',
+    description: 'Analyze costs and benefits of installing a green roof including energy savings, stormwater management, and environmental impact',
+    category: 'Home Improvement',
+    icon: '🌿',
+    path: '/tools/green-roof-living-roof-cost-vs-benefit'
+  },
+  {
+    name: 'Geothermal Heating/Cooling ROI Calculator',
+    description: 'Calculate installation costs and long-term savings of geothermal HVAC systems with payback period and lifetime energy savings analysis',
+    category: 'Home Improvement',
+    icon: '🌍',
+    path: '/tools/geothermal-heating-cooling-roi-calculator'
+  },
+  {
+    name: 'Tankless Water Heater ROI Calculator',
+    description: 'Compare tankless water heater costs vs. traditional tank systems including energy savings, lifespan, and return on investment',
+    category: 'Home Improvement',
+    icon: '💧',
+    path: '/tools/tankless-water-heater-roi-calculator'
+  },
+  {
+    name: 'Heat Pump ROI Calculator',
+    description: 'Calculate costs, energy savings, and ROI for heat pump installation vs. traditional HVAC systems with utility rebate analysis',
+    category: 'Home Improvement',
+    icon: '♨️',
+    path: '/tools/heat-pump-roi-calculator'
+  },
+  {
+    name: 'Net Zero Home Cost Calculator',
+    description: 'Estimate total costs to build or retrofit a net zero energy home including solar, insulation, and energy-efficient systems',
+    category: 'Home Improvement',
+    icon: '⚡',
+    path: '/tools/net-zero-home-cost-calculator'
+  },
+  {
+    name: 'LEED Certification Cost vs. Benefit',
+    description: 'Analyze LEED certification costs, process timeline, and benefits including property value increase and operational savings',
+    category: 'Home Improvement',
+    icon: '🏆',
+    path: '/tools/leed-certification-cost-vs-benefit'
+  },
+  {
+    name: 'HERS Index Score Calculator',
+    description: 'Calculate your home energy rating (HERS) score and estimate energy efficiency improvements needed for better ratings',
+    category: 'Home Improvement',
+    icon: '📊',
+    path: '/tools/hers-index-score-calculator'
+  },
+  {
+    name: 'Energy Efficient Mortgage (EEM) Savings',
+    description: 'Calculate potential savings and financing options with Energy Efficient Mortgages for green home improvements',
+    category: 'Home Improvement',
+    icon: '💚',
+    path: '/tools/energy-efficient-mortgage-eem-savings'
+  },
+  {
+    name: 'Cash for Clunkers (Appliance) Rebate Finder',
+    description: 'Find available rebates and incentives for replacing old appliances with energy-efficient models including federal, state, and utility programs',
+    category: 'Home Improvement',
+    icon: '🔌',
+    path: '/tools/cash-for-clunkers-appliance-rebate-finder'
   }
 ];
 
