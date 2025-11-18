@@ -3663,6 +3663,76 @@ export const allTools: Tool[] = [
     category: 'Home Improvement',
     icon: '🔌',
     path: '/tools/cash-for-clunkers-appliance-rebate-finder'
+  },
+  {
+    name: 'Home Electrification Cost Calculator',
+    description: 'Calculate the cost and ROI of converting your home from gas to all-electric appliances including HVAC, water heater, stove, and dryer',
+    category: 'Energy Efficiency',
+    icon: '⚡',
+    path: '/tools/home-electrification-cost-calculator'
+  },
+  {
+    name: 'EV Charger Installation ROI Calculator',
+    description: 'Calculate the cost and ROI of installing a Level 2 EV charger at home including installation costs, energy savings vs gas, and tax credits',
+    category: 'Energy Efficiency',
+    icon: '🔌',
+    path: '/tools/ev-charger-installation-roi-calculator'
+  },
+  {
+    name: 'Home Wind Turbine ROI Calculator',
+    description: 'Calculate the cost and ROI of installing a residential wind turbine including equipment, tower, installation, and energy production',
+    category: 'Energy Efficiency',
+    icon: '💨',
+    path: '/tools/home-wind-turbine-roi-calculator'
+  },
+  {
+    name: 'Rainwater Harvesting System ROI',
+    description: 'Calculate the cost and ROI of installing a rainwater harvesting system including tanks, filtration, plumbing, and water savings',
+    category: 'Water Conservation',
+    icon: '💧',
+    path: '/tools/rainwater-harvesting-system-roi'
+  },
+  {
+    name: 'Greywater System Cost Estimator',
+    description: 'Calculate the cost and savings of installing a greywater recycling system for landscape irrigation using shower, sink, and laundry water',
+    category: 'Water Conservation',
+    icon: '♻️',
+    path: '/tools/greywater-system-cost-estimator'
+  },
+  {
+    name: 'Xeriscaping (Low-Water) ROI Calculator',
+    description: 'Calculate the cost and water savings of converting your lawn to xeriscape with drought-tolerant plants, reducing irrigation needs by 50-75%',
+    category: 'Water Conservation',
+    icon: '🌵',
+    path: '/tools/xeriscaping-low-water-roi-calculator'
+  },
+  {
+    name: 'Drip Irrigation ROI Calculator',
+    description: 'Calculate the cost and water savings of converting from spray irrigation to drip irrigation, reducing water use by 30-50%',
+    category: 'Water Conservation',
+    icon: '💦',
+    path: '/tools/drip-irrigation-roi-calculator'
+  },
+  {
+    name: 'Smart Thermostat ROI Calculator',
+    description: 'Calculate the cost and energy savings of installing a smart thermostat, reducing HVAC costs by 10-23% annually',
+    category: 'Energy Efficiency',
+    icon: '🌡️',
+    path: '/tools/smart-thermostat-roi-calculator'
+  },
+  {
+    name: 'Smart Lightbulb ROI Calculator',
+    description: 'Calculate the cost and energy savings of replacing traditional bulbs with smart LED bulbs, reducing lighting costs by 75-92%',
+    category: 'Energy Efficiency',
+    icon: '💡',
+    path: '/tools/smart-lightbulb-roi-calculator'
+  },
+  {
+    name: 'Double-Pane vs Triple-Pane Window ROI',
+    description: 'Compare the cost and energy savings of double-pane vs triple-pane windows to determine which offers better ROI for your climate',
+    category: 'Energy Efficiency',
+    icon: '🪟',
+    path: '/tools/double-pane-vs-triple-pane-window-roi'
   }
 ];
 
@@ -3686,7 +3756,9 @@ export const categories = [
   'First-Time Homebuyer Tools',
   'Buyer Tools',
   'Renter Tools',
-  'Rent & Lease Tools'
+  'Rent & Lease Tools',
+  'Energy Efficiency',
+  'Water Conservation'
 ];
 
 export const getToolsByCategory = (category: string): Tool[] => {

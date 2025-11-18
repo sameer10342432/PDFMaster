@@ -1,7 +1,7 @@
 
 export const heroContent = {
   title: 'Free Real Estate Calculators & Tools',
-  subtitle: 'Make informed property decisions with our comprehensive suite of 517 calculators and tools designed for buyers, sellers, investors, and real estate agents.',
+  subtitle: 'Make informed property decisions with our comprehensive suite of 527 calculators and tools designed for buyers, sellers, investors, and real estate agents.',
   mainButton: {
     text: 'Explore All Tools',
     href: '/tools',
@@ -13,10 +13,10 @@ export const heroContent = {
 };
 
 export const toolsContent = {
-  title: 'Complete Property Tools Suite - 517 Tools',
+  title: 'Complete Property Tools Suite - 527 Tools',
   subtitle: 'Professional-grade calculators and tools for all your real estate needs',
   viewAllButton: {
-    text: '517 Professional Tools Available',
+    text: '527 Professional Tools Available',
     href: '/tools',
   },
 };
