@@ -3313,7 +3313,7 @@ export const allTools: Tool[] = [
     path: '/tools/change-of-address-checklist'
   },
 
-  // Agent Tools (20 tools)
+  // Agent Tools (30 tools)
   {
     name: 'E&O Insurance Cost Calculator',
     description: 'Calculate Errors & Omissions insurance costs based on coverage level, experience, and claims history',
@@ -3453,6 +3453,76 @@ export const allTools: Tool[] = [
     category: 'Agent Tools',
     icon: '📝',
     path: '/tools/transaction-coordinator-cost-vs-benefit-calculator'
+  },
+  {
+    name: 'Virtual Assistant (VA) for Real Estate ROI',
+    description: 'Calculate the ROI of hiring a virtual assistant including cost savings, time efficiency, and productivity gains for your real estate business',
+    category: 'Agent Tools',
+    icon: '💼',
+    path: '/tools/virtual-assistant-roi-calculator'
+  },
+  {
+    name: 'Staging Certification ROI Calculator',
+    description: 'Calculate the return on investment for obtaining a home staging certification including increased listings, higher commissions, and additional revenue streams',
+    category: 'Agent Tools',
+    icon: '🏡',
+    path: '/tools/staging-certification-roi-calculator'
+  },
+  {
+    name: 'Broker License ROI Calculator',
+    description: 'Calculate the ROI of upgrading to a broker license including higher commission splits, team building potential, and brokerage ownership opportunities',
+    category: 'Agent Tools',
+    icon: '📜',
+    path: '/tools/broker-license-roi-calculator'
+  },
+  {
+    name: 'Continuing Education (CE) Tracker',
+    description: 'Track your required continuing education credits, course costs, renewal dates, and certification requirements to maintain your real estate license',
+    category: 'Agent Tools',
+    icon: '📚',
+    path: '/tools/continuing-education-tracker'
+  },
+  {
+    name: 'Agent Business Plan Generator',
+    description: 'Generate a comprehensive real estate business plan including income goals, marketing strategies, lead generation plans, and financial projections',
+    category: 'Agent Tools',
+    icon: '📋',
+    path: '/tools/agent-business-plan-generator'
+  },
+  {
+    name: 'My Unique Value Proposition (UVP) Generator',
+    description: 'Create a compelling unique value proposition that differentiates you from other agents and attracts your ideal clients',
+    category: 'Agent Tools',
+    icon: '⭐',
+    path: '/tools/unique-value-proposition-generator'
+  },
+  {
+    name: 'Client Testimonial Request Generator',
+    description: 'Generate professional testimonial request messages customized for email, text, or social media to collect powerful client reviews',
+    category: 'Agent Tools',
+    icon: '💬',
+    path: '/tools/client-testimonial-request-generator'
+  },
+  {
+    name: 'Referral Partner (Loan Officer) Tracker',
+    description: 'Track and manage relationships with loan officers, mortgage brokers, and other referral partners including lead exchanges and closed deals',
+    category: 'Agent Tools',
+    icon: '🤝',
+    path: '/tools/referral-partner-tracker'
+  },
+  {
+    name: 'Broker Profitability (Per-Agent) Calculator',
+    description: 'Calculate per-agent profitability for brokerages including desk fees, splits, overhead costs, and net profit per agent',
+    category: 'Agent Tools',
+    icon: '💰',
+    path: '/tools/broker-profitability-calculator'
+  },
+  {
+    name: 'Agent SWOT Analysis Generator',
+    description: 'Generate a comprehensive SWOT analysis identifying your Strengths, Weaknesses, Opportunities, and Threats as a real estate agent',
+    category: 'Agent Tools',
+    icon: '🎯',
+    path: '/tools/agent-swot-analysis-generator'
   }
 ];
 
