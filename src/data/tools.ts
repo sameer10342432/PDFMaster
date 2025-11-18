@@ -3313,7 +3313,7 @@ export const allTools: Tool[] = [
     path: '/tools/change-of-address-checklist'
   },
 
-  // Agent Tools (30 tools)
+  // Agent Tools (40 tools)
   {
     name: 'E&O Insurance Cost Calculator',
     description: 'Calculate Errors & Omissions insurance costs based on coverage level, experience, and claims history',
@@ -3523,6 +3523,76 @@ export const allTools: Tool[] = [
     category: 'Agent Tools',
     icon: '🎯',
     path: '/tools/agent-swot-analysis-generator'
+  },
+  {
+    name: 'Agent Website Cost vs. Benefit Calculator',
+    description: 'Calculate the ROI of having a professional real estate agent website by comparing costs against lead generation value and client acquisition benefits',
+    category: 'Agent Tools',
+    icon: '💻',
+    path: '/tools/agent-website-cost-vs-benefit'
+  },
+  {
+    name: 'Drone Photography ROI Calculator',
+    description: 'Calculate the return on investment for drone photography in real estate listings by analyzing cost vs increased sale price, faster sales, and competitive advantages',
+    category: 'Agent Tools',
+    icon: '🚁',
+    path: '/tools/drone-photography-roi-calculator'
+  },
+  {
+    name: '3D Matterport Tour ROI Calculator',
+    description: 'Calculate the return on investment for 3D virtual tours in real estate listings by analyzing cost vs increased engagement, qualified leads, and faster sales',
+    category: 'Agent Tools',
+    icon: '🏘️',
+    path: '/tools/3d-matterport-tour-roi-calculator'
+  },
+  {
+    name: 'Floor Plan Creation Cost Calculator',
+    description: 'Calculate the cost and value of professional floor plans for real estate listings, including 2D, 3D, and interactive floor plan options with ROI analysis',
+    category: 'Agent Tools',
+    icon: '📐',
+    path: '/tools/floor-plan-creation-cost'
+  },
+  {
+    name: 'CMA Report Generator',
+    description: 'Generate professional comparative market analysis reports for sellers and buyers with accurate pricing analysis, market trends, and competitive property comparisons',
+    category: 'Agent Tools',
+    icon: '📊',
+    path: '/tools/cma-report-generator'
+  },
+  {
+    name: 'Buyer\'s Packet Generator',
+    description: 'Create comprehensive buyer packets with educational materials, process guides, checklists, and market information to help buyers navigate their home purchase journey',
+    category: 'Agent Tools',
+    icon: '📁',
+    path: '/tools/buyers-packet-generator'
+  },
+  {
+    name: 'Seller\'s Packet (Listing Presentation) Generator',
+    description: 'Create professional listing presentation packets for sellers with market analysis, pricing strategies, marketing plans, and comprehensive selling guides to win more listings',
+    category: 'Agent Tools',
+    icon: '📋',
+    path: '/tools/sellers-packet-generator'
+  },
+  {
+    name: 'Net Sheet Generator (for Seller Clients)',
+    description: 'Generate accurate net proceeds calculations for sellers showing exact costs, commissions, and estimated proceeds from their home sale with detailed line-item breakdown',
+    category: 'Agent Tools',
+    icon: '💵',
+    path: '/tools/net-sheet-generator'
+  },
+  {
+    name: 'Property Showing Feedback Form',
+    description: 'Collect structured feedback from buyer showings with professional feedback forms that help sellers understand buyer reactions and adjust strategy accordingly',
+    category: 'Agent Tools',
+    icon: '📝',
+    path: '/tools/property-showing-feedback-form'
+  },
+  {
+    name: 'Client Onboarding Checklist (Buyer)',
+    description: 'Comprehensive buyer client onboarding checklist ensuring smooth process from first contact to closing with all necessary steps, documents, and communications',
+    category: 'Agent Tools',
+    icon: '✅',
+    path: '/tools/client-onboarding-checklist-buyer'
   }
 ];
 
