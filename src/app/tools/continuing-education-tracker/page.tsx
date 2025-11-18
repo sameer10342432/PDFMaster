@@ -1,7 +1,8 @@
+
 import { CONTINUING_EDUCATION_TRACKER_CONTENT } from '@/content/tools/continuing-education-tracker';
 import type { Metadata } from 'next';
 import { CalculatorLayout } from '@/components/calculators';
-import { GenericCalculator } from '@/components/calculators/GenericCalculator';
+import { ContinuingEducationTracker } from '@/components/calculators/ContinuingEducationTracker';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -13,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const ContinuingEducationTrackerPage = () => {
   return (
     <CalculatorLayout content={CONTINUING_EDUCATION_TRACKER_CONTENT}>
-      <GenericCalculator content={CONTINUING_EDUCATION_TRACKER_CONTENT} />
+      <ContinuingEducationTracker />
     </CalculatorLayout>
   );
 };

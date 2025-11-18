@@ -1,7 +1,8 @@
+
 import { BROKER_LICENSE_ROI_CALCULATOR_CONTENT } from '@/content/tools/broker-license-roi-calculator';
 import type { Metadata } from 'next';
 import { CalculatorLayout } from '@/components/calculators';
-import { GenericCalculator } from '@/components/calculators/GenericCalculator';
+import { BrokerLicenseRoiCalculator } from '@/components/calculators/BrokerLicenseRoiCalculator';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -13,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const BrokerLicenseROICalculatorPage = () => {
   return (
     <CalculatorLayout content={BROKER_LICENSE_ROI_CALCULATOR_CONTENT}>
-      <GenericCalculator content={BROKER_LICENSE_ROI_CALCULATOR_CONTENT} />
+      <BrokerLicenseRoiCalculator />
     </CalculatorLayout>
   );
 };

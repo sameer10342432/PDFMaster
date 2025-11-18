@@ -1,7 +1,8 @@
+
 import { CLIENT_TESTIMONIAL_REQUEST_GENERATOR_CONTENT } from '@/content/tools/client-testimonial-request-generator';
 import type { Metadata } from 'next';
 import { CalculatorLayout } from '@/components/calculators';
-import { GenericCalculator } from '@/components/calculators/GenericCalculator';
+import { ClientTestimonialRequestGenerator } from '@/components/calculators/ClientTestimonialRequestGenerator';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -13,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const ClientTestimonialRequestGeneratorPage = () => {
   return (
     <CalculatorLayout content={CLIENT_TESTIMONIAL_REQUEST_GENERATOR_CONTENT}>
-      <GenericCalculator content={CLIENT_TESTIMONIAL_REQUEST_GENERATOR_CONTENT} />
+      <ClientTestimonialRequestGenerator />
     </CalculatorLayout>
   );
 };

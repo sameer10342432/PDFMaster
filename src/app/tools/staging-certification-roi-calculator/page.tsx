@@ -1,7 +1,8 @@
+
 import { STAGING_CERTIFICATION_ROI_CALCULATOR_CONTENT } from '@/content/tools/staging-certification-roi-calculator';
 import type { Metadata } from 'next';
 import { CalculatorLayout } from '@/components/calculators';
-import { GenericCalculator } from '@/components/calculators/GenericCalculator';
+import { StagingCertificationRoiCalculator } from '@/components/calculators/StagingCertificationRoiCalculator';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -13,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const StagingCertificationROICalculatorPage = () => {
   return (
     <CalculatorLayout content={STAGING_CERTIFICATION_ROI_CALCULATOR_CONTENT}>
-      <GenericCalculator content={STAGING_CERTIFICATION_ROI_CALCULATOR_CONTENT} />
+      <StagingCertificationRoiCalculator />
     </CalculatorLayout>
   );
 };

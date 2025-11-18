@@ -1,7 +1,8 @@
+
 import { AGENT_BUSINESS_PLAN_GENERATOR_CONTENT } from '@/content/tools/agent-business-plan-generator';
 import type { Metadata } from 'next';
 import { CalculatorLayout } from '@/components/calculators';
-import { GenericCalculator } from '@/components/calculators/GenericCalculator';
+import { AgentBusinessPlanGenerator } from '@/components/calculators/AgentBusinessPlanGenerator';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -13,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const AgentBusinessPlanGeneratorPage = () => {
   return (
     <CalculatorLayout content={AGENT_BUSINESS_PLAN_GENERATOR_CONTENT}>
-      <GenericCalculator content={AGENT_BUSINESS_PLAN_GENERATOR_CONTENT} />
+      <AgentBusinessPlanGenerator />
     </CalculatorLayout>
   );
 };

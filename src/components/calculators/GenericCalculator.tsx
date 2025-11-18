@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { CalculatorContent } from '@/types';
-import { EnhancedCalculator } from './EnhancedCalculator';
+import { Calculator } from './Calculator';
 
 interface GenericCalculatorProps {
   content: CalculatorContent;
@@ -10,14 +10,12 @@ interface GenericCalculatorProps {
 
 export const GenericCalculator: React.FC<GenericCalculatorProps> = ({ content }) => {
   return (
-    <EnhancedCalculator
+    <Calculator
       title={content.title}
       description={content.description}
       inputs={content.calculator.fields}
       results={content.calculator.results}
       calculation={content.calculator.calculate}
-      slug={content.slug}
-      category={content.category}
     />
   );
 };

@@ -1,7 +1,8 @@
+
 import { UNIQUE_VALUE_PROPOSITION_GENERATOR_CONTENT } from '@/content/tools/unique-value-proposition-generator';
 import type { Metadata } from 'next';
 import { CalculatorLayout } from '@/components/calculators';
-import { GenericCalculator } from '@/components/calculators/GenericCalculator';
+import { UniqueValuePropositionGenerator } from '@/components/calculators/UniqueValuePropositionGenerator';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -13,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const UniqueValuePropositionGeneratorPage = () => {
   return (
     <CalculatorLayout content={UNIQUE_VALUE_PROPOSITION_GENERATOR_CONTENT}>
-      <GenericCalculator content={UNIQUE_VALUE_PROPOSITION_GENERATOR_CONTENT} />
+      <UniqueValuePropositionGenerator />
     </CalculatorLayout>
   );
 };

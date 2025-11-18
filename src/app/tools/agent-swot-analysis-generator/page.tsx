@@ -1,7 +1,8 @@
+
 import { AGENT_SWOT_ANALYSIS_GENERATOR_CONTENT } from '@/content/tools/agent-swot-analysis-generator';
 import type { Metadata } from 'next';
 import { CalculatorLayout } from '@/components/calculators';
-import { GenericCalculator } from '@/components/calculators/GenericCalculator';
+import { AgentSwotAnalysisGenerator } from '@/components/calculators/AgentSwotAnalysisGenerator';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -13,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const AgentSWOTAnalysisGeneratorPage = () => {
   return (
     <CalculatorLayout content={AGENT_SWOT_ANALYSIS_GENERATOR_CONTENT}>
-      <GenericCalculator content={AGENT_SWOT_ANALYSIS_GENERATOR_CONTENT} />
+      <AgentSwotAnalysisGenerator />
     </CalculatorLayout>
   );
 };
