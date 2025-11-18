@@ -3311,6 +3311,78 @@ export const allTools: Tool[] = [
     category: 'Buyer Tools',
     icon: '📮',
     path: '/tools/change-of-address-checklist'
+  },
+
+  // Agent Tools (10 tools)
+  {
+    name: 'E&O Insurance Cost Calculator',
+    description: 'Calculate Errors & Omissions insurance costs based on coverage level, experience, and claims history',
+    category: 'Agent Tools',
+    icon: '🛡️',
+    path: '/tools/eo-insurance-cost-calculator'
+  },
+  {
+    name: 'MLS Fee Tracker',
+    description: 'Track and calculate total MLS fees including membership, listing fees, and additional services',
+    category: 'Agent Tools',
+    icon: '📊',
+    path: '/tools/mls-fee-tracker'
+  },
+  {
+    name: 'Realtor Association Dues Tracker',
+    description: 'Calculate total association dues including NAR, state, and local board memberships',
+    category: 'Agent Tools',
+    icon: '💼',
+    path: '/tools/realtor-association-dues-tracker'
+  },
+  {
+    name: 'Agent Marketing Budget Calculator',
+    description: 'Calculate recommended marketing budget based on income goals and business stage',
+    category: 'Agent Tools',
+    icon: '💰',
+    path: '/tools/agent-marketing-budget-calculator'
+  },
+  {
+    name: 'Zillow Premier Agent ROI Calculator',
+    description: 'Calculate ROI for Zillow Premier Agent advertising and lead generation costs',
+    category: 'Agent Tools',
+    icon: '📈',
+    path: '/tools/zillow-premier-agent-roi-calculator'
+  },
+  {
+    name: 'Realtor.com Leads ROI Calculator',
+    description: 'Calculate ROI for Realtor.com ReadyConnect Concierge exclusive leads program',
+    category: 'Agent Tools',
+    icon: '💡',
+    path: '/tools/realtor-com-leads-roi-calculator'
+  },
+  {
+    name: 'PPC for Real Estate ROI Calculator',
+    description: 'Calculate ROI for Google Ads and pay-per-click campaigns in real estate',
+    category: 'Agent Tools',
+    icon: '🎯',
+    path: '/tools/ppc-real-estate-roi-calculator'
+  },
+  {
+    name: 'Facebook Ads for Real Estate ROI Calculator',
+    description: 'Calculate ROI for Facebook and Instagram ad campaigns targeting real estate leads',
+    category: 'Agent Tools',
+    icon: '📱',
+    path: '/tools/facebook-ads-real-estate-roi-calculator'
+  },
+  {
+    name: 'Open House ROI Calculator',
+    description: 'Calculate ROI for open houses as a lead generation and marketing strategy',
+    category: 'Agent Tools',
+    icon: '🏡',
+    path: '/tools/open-house-roi-calculator'
+  },
+  {
+    name: 'Direct Mail (Postcard) ROI Calculator',
+    description: 'Calculate ROI for direct mail postcard campaigns targeting farm areas',
+    category: 'Agent Tools',
+    icon: '📬',
+    path: '/tools/direct-mail-postcard-roi-calculator'
   }
 ];
 
@@ -3325,6 +3397,7 @@ export const categories = [
   'Risk Assessment',
   'Advanced Analytics',
   'Seller Tools',
+  'Agent Tools',
   'Tax Strategy & Entity Planning',
   'Additional Tools',
   'Home Improvement',
