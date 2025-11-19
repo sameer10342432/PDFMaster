@@ -7,6 +7,7 @@ import archiver from 'archiver';
 import * as pdfUtils from './utils/pdf-utils';
 import * as imageUtils from './utils/image-utils';
 import * as textUtils from './utils/text-utils';
+import * as textValidators from './utils/text-validators';
 import * as webUtils from './utils/web-utils';
 import * as audioVideoUtils from './utils/audio-video-utils';
 import * as audioVideoValidators from './utils/audio-video-validators';
@@ -455,288 +456,279 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // ========================================
+  
+  // Helper function to separate validation errors (400) from server errors (500)
+  function handleTextToolError(error: unknown, operation: string, res: any) {
+    console.error(`${operation} error:`, error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    
+    // Zod validation errors should return 400
+    if (error && typeof error === 'object' && 'issues' in error) {
+      return res.status(400).json({ error: `Validation failed: ${errorMessage}` });
+    }
+    
+    // Processing/formatting errors (JSON parse, etc.) should return 400
+    if (errorMessage.includes('JSON') || errorMessage.includes('parse') || 
+        errorMessage.includes('Invalid') || errorMessage.includes('required')) {
+      return res.status(400).json({ error: errorMessage });
+    }
+    
+    // Everything else is a server error
+    return res.status(500).json({ error: `Failed to ${operation}: ${errorMessage}` });
+  }
+
   // TEXT TOOLS - Case Conversion, Generators, Analysis
   // ========================================
   app.post('/api/text/convert-case', upload.none(), async (req, res) => {
     try {
-      const { text, caseType } = req.body;
-
-      if (!text) {
-        return res.status(400).json({ error: 'No text provided' });
-      }
+      const validated = textValidators.caseConvertSchema.parse({
+        text: req.body.text,
+        caseType: req.body.caseType
+      });
 
       let result: string;
-
-      switch (caseType) {
+      switch (validated.caseType) {
         case 'uppercase':
-          result = textUtils.convertToUpperCase(text);
+          result = textUtils.convertToUpperCase(validated.text);
           break;
         case 'lowercase':
-          result = textUtils.convertToLowerCase(text);
+          result = textUtils.convertToLowerCase(validated.text);
           break;
         case 'titlecase':
-          result = textUtils.convertToTitleCase(text);
+          result = textUtils.convertToTitleCase(validated.text);
           break;
         case 'sentencecase':
-          result = textUtils.convertToSentenceCase(text);
+          result = textUtils.convertToSentenceCase(validated.text);
           break;
         case 'camelcase':
-          result = textUtils.convertToCamelCase(text);
+          result = textUtils.convertToCamelCase(validated.text);
           break;
         case 'snakecase':
-          result = textUtils.convertToSnakeCase(text);
+          result = textUtils.convertToSnakeCase(validated.text);
           break;
         case 'kebabcase':
-          result = textUtils.convertToKebabCase(text);
+          result = textUtils.convertToKebabCase(validated.text);
           break;
-        default:
-          return res.status(400).json({ error: 'Unknown case type' });
       }
 
       res.json({ result });
-
     } catch (error) {
-      console.error('Text case conversion error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to convert text case: ${errorMessage}` });
+      handleTextToolError(error, 'convert text case', res);
     }
   });
 
   app.post('/api/text/generate', upload.none(), async (req, res) => {
     try {
-      const { type, options } = req.body;
-      let result: string;
+      const validated = textValidators.textGeneratorSchema.parse({
+        type: req.body.type,
+        options: req.body.options
+      });
 
-      switch (type) {
+      let result: string;
+      const opts = validated.options || {};
+
+      switch (validated.type) {
         case 'lorem':
-          result = textUtils.generateLoremIpsum(options?.paragraphs || 1, options?.wordsPerPara || 50);
+          const paragraphs = opts.paragraphs ? parseInt(opts.paragraphs, 10) : 1;
+          const wordsPerPara = opts.wordsPerPara ? parseInt(opts.wordsPerPara, 10) : 50;
+          result = textUtils.generateLoremIpsum(isNaN(paragraphs) ? 1 : paragraphs, isNaN(wordsPerPara) ? 50 : wordsPerPara);
           break;
         case 'random':
-          result = textUtils.generateRandomText(options?.length || 100, options?.includeNumbers, options?.includeSpecial);
+          const length = opts.length ? parseInt(opts.length, 10) : 100;
+          result = textUtils.generateRandomText(isNaN(length) ? 100 : length, opts.includeNumbers, opts.includeSpecial);
           break;
         case 'password':
-          result = textUtils.generatePassword(options?.length || 12, options);
+          const pwdLen = opts.length ? parseInt(opts.length, 10) : 12;
+          result = textUtils.generatePassword(isNaN(pwdLen) ? 12 : pwdLen, opts);
           break;
-        default:
-          return res.status(400).json({ error: 'Unknown generator type' });
       }
 
       res.json({ result });
-
     } catch (error) {
-      console.error('Text generation error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to generate text: ${errorMessage}` });
+      handleTextToolError(error, 'generate text', res);
     }
   });
 
   app.post('/api/text/analyze', upload.none(), async (req, res) => {
     try {
-      const { text } = req.body;
+      const validated = textValidators.textInputSchema.parse({
+        text: req.body.text
+      });
 
-      if (!text) {
-        return res.status(400).json({ error: 'No text provided' });
-      }
-
-      const analysis = textUtils.analyzeText(text);
-      const wordFrequency = textUtils.getMostCommonWords(text, 10);
+      const analysis = textUtils.analyzeText(validated.text);
+      const wordFrequency = textUtils.getMostCommonWords(validated.text, 10);
 
       res.json({ analysis, wordFrequency });
-
     } catch (error) {
-      console.error('Text analysis error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to analyze text: ${errorMessage}` });
+      handleTextToolError(error, 'analyze text', res);
     }
   });
 
   app.post('/api/text/manipulate', upload.none(), async (req, res) => {
     try {
-      const { text, operation, options } = req.body;
-
-      if (!text) {
-        return res.status(400).json({ error: 'No text provided' });
-      }
+      const validated = textValidators.textManipulateSchema.parse({
+        text: req.body.text,
+        operation: req.body.operation,
+        options: req.body.options
+      });
 
       let result: string;
+      const opts = validated.options || {};
 
-      switch (operation) {
+      switch (validated.operation) {
         case 'remove-linebreaks':
-          result = textUtils.removeLineBreaks(text);
+          result = textUtils.removeLineBreaks(validated.text);
           break;
         case 'remove-spaces':
-          result = textUtils.removeExtraSpaces(text);
+          result = textUtils.removeExtraSpaces(validated.text);
           break;
         case 'reverse':
-          result = textUtils.reverseText(text);
+          result = textUtils.reverseText(validated.text);
           break;
         case 'sort-lines':
-          result = textUtils.sortLinesAlphabetically(text, options?.ascending !== false);
+          result = textUtils.sortLinesAlphabetically(validated.text, opts.ascending !== false);
           break;
         case 'remove-duplicates':
-          result = textUtils.removeDuplicateLines(text);
+          result = textUtils.removeDuplicateLines(validated.text);
           break;
         case 'add-line-numbers':
-          result = textUtils.addLineNumbers(text, options?.startNumber || 1);
+          const startNum = opts.startNumber ? parseInt(opts.startNumber, 10) : 1;
+          result = textUtils.addLineNumbers(validated.text, isNaN(startNum) ? 1 : startNum);
           break;
         case 'find-replace':
-          result = textUtils.findAndReplace(text, options?.find || '', options?.replace || '', options?.caseSensitive !== false);
+          result = textUtils.findAndReplace(validated.text, opts.find || '', opts.replace || '', opts.caseSensitive !== false);
           break;
-        default:
-          return res.status(400).json({ error: 'Unknown operation' });
       }
 
       res.json({ result });
-
     } catch (error) {
-      console.error('Text manipulation error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to manipulate text: ${errorMessage}` });
+      handleTextToolError(error, 'manipulate text', res);
     }
   });
 
   app.post('/api/text/encode', upload.none(), async (req, res) => {
     try {
-      const { text, type, action } = req.body;
-
-      if (!text) {
-        return res.status(400).json({ error: 'No text provided' });
-      }
+      const validated = textValidators.encodeDecodeSchema.parse({
+        text: req.body.text,
+        type: req.body.type,
+        action: req.body.action
+      });
 
       let result: string;
 
-      if (action === 'encode') {
-        switch (type) {
+      if (validated.action === 'encode') {
+        switch (validated.type) {
           case 'base64':
-            result = textUtils.encodeBase64(text);
+            result = textUtils.encodeBase64(validated.text);
             break;
           case 'url':
-            result = textUtils.encodeURL(text);
+            result = textUtils.encodeURL(validated.text);
             break;
           case 'html':
-            result = textUtils.encodeHTML(text);
+            result = textUtils.encodeHTML(validated.text);
             break;
-          default:
-            return res.status(400).json({ error: 'Unknown encoding type' });
         }
       } else {
-        switch (type) {
+        switch (validated.type) {
           case 'base64':
-            result = textUtils.decodeBase64(text);
+            result = textUtils.decodeBase64(validated.text);
             break;
           case 'url':
-            result = textUtils.decodeURL(text);
+            result = textUtils.decodeURL(validated.text);
             break;
           case 'html':
-            result = textUtils.decodeHTML(text);
+            result = textUtils.decodeHTML(validated.text);
             break;
-          default:
-            return res.status(400).json({ error: 'Unknown decoding type' });
         }
       }
 
       res.json({ result });
-
     } catch (error) {
-      console.error('Text encoding error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to encode/decode text: ${errorMessage}` });
+      handleTextToolError(error, 'encode/decode text', res);
     }
   });
 
   app.post('/api/text/uuid', upload.none(), async (req, res) => {
     try {
-      const { count = 1 } = req.body;
-      const uuids: string[] = [];
+      const countValue = req.body.count ? parseInt(req.body.count, 10) : 1;
+      const validated = textValidators.uuidGeneratorSchema.parse({
+        count: isNaN(countValue) ? undefined : countValue
+      });
 
-      for (let i = 0; i < Math.min(count, 100); i++) {
+      const uuids: string[] = [];
+      for (let i = 0; i < validated.count; i++) {
         uuids.push(textUtils.generateUUID());
       }
 
-      res.json({ result: count === 1 ? uuids[0] : uuids });
-
+      res.json({ result: validated.count === 1 ? uuids[0] : uuids });
     } catch (error) {
-      console.error('UUID generation error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to generate UUID: ${errorMessage}` });
+      handleTextToolError(error, 'generate UUID', res);
     }
   });
 
   app.post('/api/text/hash', upload.none(), async (req, res) => {
     try {
-      const { text, algorithm = 'sha256' } = req.body;
+      const validated = textValidators.hashInputSchema.parse({
+        text: req.body.text,
+        algorithm: req.body.algorithm || 'sha256'
+      });
 
-      if (!text) {
-        return res.status(400).json({ error: 'No text provided' });
-      }
-
-      const validAlgorithms = ['md5', 'sha1', 'sha256', 'sha512'];
-      if (!validAlgorithms.includes(algorithm)) {
-        return res.status(400).json({ error: 'Invalid algorithm. Use: md5, sha1, sha256, or sha512' });
-      }
-
-      const result = textUtils.hashText(text, algorithm as 'md5' | 'sha1' | 'sha256' | 'sha512');
+      const result = textUtils.hashText(validated.text, validated.algorithm);
       
-      res.json({ result, algorithm });
+      res.json({ result, algorithm: validated.algorithm });
 
     } catch (error) {
-      console.error('Hash generation error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to generate hash: ${errorMessage}` });
+      handleTextToolError(error, 'generate hash', res);
     }
   });
 
   app.post('/api/text/format', upload.none(), async (req, res) => {
     try {
-      const { text, type, action = 'format', indent = 2 } = req.body;
-
-      if (!text) {
-        return res.status(400).json({ error: 'No text provided' });
-      }
+      const indentValue = req.body.indent ? parseInt(req.body.indent, 10) : 2;
+      const validated = textValidators.formatSchema.parse({
+        text: req.body.text,
+        type: req.body.type,
+        action: req.body.action || 'format',
+        indent: isNaN(indentValue) ? 2 : indentValue
+      });
 
       let result: any;
-
-      switch (type) {
+      switch (validated.type) {
         case 'json':
-          if (action === 'validate') {
-            result = textUtils.validateJSON(text);
-          } else if (action === 'minify') {
-            result = textUtils.minifyJSON(text);
+          if (validated.action === 'validate') {
+            result = textUtils.validateJSON(validated.text);
+          } else if (validated.action === 'minify') {
+            result = textUtils.minifyJSON(validated.text);
           } else {
-            result = textUtils.formatJSON(text, indent);
+            result = textUtils.formatJSON(validated.text, validated.indent);
           }
           break;
         case 'xml':
-          if (action === 'minify') {
-            result = textUtils.minifyXML(text);
+          if (validated.action === 'minify') {
+            result = textUtils.minifyXML(validated.text);
           } else {
-            result = textUtils.formatXML(text, indent);
+            result = textUtils.formatXML(validated.text, validated.indent);
           }
           break;
         case 'html':
-          if (action === 'minify') {
-            result = textUtils.minifyHTML(text);
+          if (validated.action === 'minify') {
+            result = textUtils.minifyHTML(validated.text);
           } else {
-            result = textUtils.formatHTML(text, indent);
+            result = textUtils.formatHTML(validated.text, validated.indent);
           }
           break;
         case 'css':
-          if (action === 'minify') {
-            result = textUtils.minifyCSS(text);
+          if (validated.action === 'minify') {
+            result = textUtils.minifyCSS(validated.text);
           } else {
-            result = textUtils.formatCSS(text, indent);
+            result = textUtils.formatCSS(validated.text, validated.indent);
           }
           break;
-        default:
-          return res.status(400).json({ error: 'Unknown format type. Use: json, xml, html, or css' });
       }
 
       res.json({ result });
-
     } catch (error) {
-      console.error('Formatting error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to format text: ${errorMessage}` });
+      handleTextToolError(error, 'format text', res);
     }
   });
 

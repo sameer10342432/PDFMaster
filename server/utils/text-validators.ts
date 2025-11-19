@@ -47,3 +47,36 @@ export const xmlFormatSchema = z.object({
   text: z.string().min(1, "XML is required"),
   indent: z.number().int().min(0).max(8).optional().default(2),
 });
+
+export const caseConvertSchema = z.object({
+  text: z.string().min(1, "Text is required").max(1000000, "Text is too large"),
+  caseType: z.enum(["uppercase", "lowercase", "titlecase", "sentencecase", "camelcase", "snakecase", "kebabcase"]),
+});
+
+export const textGeneratorSchema = z.object({
+  type: z.enum(["lorem", "random", "password"]),
+  options: z.any().optional(),
+});
+
+export const textManipulateSchema = z.object({
+  text: z.string().min(1).max(1000000),
+  operation: z.enum(["remove-linebreaks", "remove-spaces", "reverse", "sort-lines", "remove-duplicates", "add-line-numbers", "find-replace"]),
+  options: z.any().optional(),
+});
+
+export const encodeDecodeSchema = z.object({
+  text: z.string().min(1, "Text is required"),
+  type: z.enum(["base64", "url", "html"]),
+  action: z.enum(["encode", "decode"]),
+});
+
+export const uuidGeneratorSchema = z.object({
+  count: z.number().int().min(1).max(100).optional().default(1),
+});
+
+export const formatSchema = z.object({
+  text: z.string().min(1, "Text is required").max(1000000, "Text is too large"),
+  type: z.enum(["json", "xml", "html", "css"]),
+  action: z.enum(["format", "minify", "validate"]).optional().default("format"),
+  indent: z.number().int().min(0).max(8).optional().default(2),
+});
