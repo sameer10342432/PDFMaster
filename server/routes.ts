@@ -8,6 +8,8 @@ import * as pdfUtils from './utils/pdf-utils';
 import * as imageUtils from './utils/image-utils';
 import * as textUtils from './utils/text-utils';
 import * as webUtils from './utils/web-utils';
+import * as audioVideoUtils from './utils/audio-video-utils';
+import * as audioVideoValidators from './utils/audio-video-validators';
 
 // Configure multer for file uploads
 const upload = multer({ 
@@ -35,6 +37,42 @@ const imageOnly = multer({
       cb(null, true);
     } else {
       cb(new Error('Only image files are allowed'));
+    }
+  }
+});
+
+const audioOnly = multer({ 
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 100 * 1024 * 1024 },
+  fileFilter: (req, file, cb) => {
+    if (file.mimetype.startsWith('audio/')) {
+      cb(null, true);
+    } else {
+      cb(new Error('Only audio files are allowed'));
+    }
+  }
+});
+
+const videoOnly = multer({ 
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 200 * 1024 * 1024 },
+  fileFilter: (req, file, cb) => {
+    if (file.mimetype.startsWith('video/')) {
+      cb(null, true);
+    } else {
+      cb(new Error('Only video files are allowed'));
+    }
+  }
+});
+
+const audioOrVideo = multer({ 
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 200 * 1024 * 1024 },
+  fileFilter: (req, file, cb) => {
+    if (file.mimetype.startsWith('audio/') || file.mimetype.startsWith('video/')) {
+      cb(null, true);
+    } else {
+      cb(new Error('Only audio or video files are allowed'));
     }
   }
 });
@@ -902,6 +940,435 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error('Calculator error:', error);
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       res.status(500).json({ error: `Calculation failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // AUDIO TOOLS - Conversion
+  // ========================================
+  app.post('/api/audio/convert', audioOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const validation = audioVideoValidators.audioConversionSchema.safeParse(req.body);
+      if (!validation.success) {
+        return res.status(400).json({ 
+          error: 'Invalid parameters', 
+          details: validation.error.errors.map(e => e.message).join(', ')
+        });
+      }
+
+      const { toolId, outputFormat, bitrate, quality } = validation.data;
+      let result: Buffer;
+      const format = outputFormat;
+
+      switch (toolId) {
+        case 'audio-to-mp3':
+        case 'mp3-converter':
+        case 'convert-to-mp3':
+          result = await audioVideoUtils.convertAudioToMP3(file.buffer, bitrate || '192k');
+          break;
+        case 'audio-to-wav':
+        case 'wav-converter':
+          result = await audioVideoUtils.convertAudioToWAV(file.buffer);
+          break;
+        case 'audio-to-aac':
+        case 'aac-converter':
+        case 'mp3-to-aac':
+        case 'aac-to-mp3':
+          result = await audioVideoUtils.convertAudioToAAC(file.buffer, bitrate || '192k');
+          break;
+        case 'audio-to-flac':
+        case 'flac-converter':
+        case 'mp3-to-flac':
+        case 'flac-to-mp3':
+          result = await audioVideoUtils.convertAudioToFLAC(file.buffer);
+          break;
+        case 'audio-to-ogg':
+        case 'ogg-converter':
+        case 'mp3-to-ogg':
+        case 'ogg-to-mp3':
+          result = await audioVideoUtils.convertAudioToOGG(file.buffer, quality);
+          break;
+        case 'audio-to-m4a':
+        case 'm4a-converter':
+        case 'mp3-to-m4a':
+        case 'm4a-to-mp3':
+          result = await audioVideoUtils.convertAudioToM4A(file.buffer, bitrate || '192k');
+          break;
+        case 'audio-to-wma':
+        case 'wma-converter':
+          result = await audioVideoUtils.convertAudioToWMA(file.buffer, bitrate || '192k');
+          break;
+        case 'audio-to-aiff':
+        case 'aiff-converter':
+          result = await audioVideoUtils.convertAudioToAIFF(file.buffer);
+          break;
+        default:
+          return res.status(400).json({ error: 'Unknown audio conversion tool' });
+      }
+
+      res.setHeader('Content-Type', `audio/${format}`);
+      res.setHeader('Content-Disposition', `attachment; filename="converted.${format}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Audio conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Audio conversion failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // AUDIO TOOLS - Editing
+  // ========================================
+  app.post('/api/audio/edit', audioOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const validation = audioVideoValidators.audioEditingSchema.safeParse(req.body);
+      if (!validation.success) {
+        return res.status(400).json({ 
+          error: 'Invalid parameters', 
+          details: validation.error.errors.map(e => e.message).join(', ')
+        });
+      }
+
+      const { toolId, startTime, duration, volume, speed, semitones, outputFormat } = validation.data;
+
+      audioVideoValidators.validateTrimOperation(toolId, startTime, duration);
+      audioVideoValidators.validateVolumeOperation(toolId, volume);
+      audioVideoValidators.validateSpeedOperation(toolId, speed);
+      audioVideoValidators.validatePitchOperation(toolId, semitones);
+      audioVideoValidators.validateFadeOperation(toolId, parseFloat(startTime || '0'), parseFloat(duration || '0'));
+
+      let result: Buffer;
+      const format = outputFormat;
+
+      switch (toolId) {
+        case 'trim-audio':
+        case 'cut-audio':
+        case 'clip-audio':
+          result = await audioVideoUtils.trimAudio(file.buffer, startTime, duration, format);
+          break;
+        case 'adjust-volume':
+        case 'change-audio-volume':
+        case 'increase-volume':
+        case 'decrease-volume':
+          result = await audioVideoUtils.adjustAudioVolume(file.buffer, parseFloat(volume), format);
+          break;
+        case 'normalize-audio':
+        case 'audio-normalizer':
+          result = await audioVideoUtils.normalizeAudio(file.buffer, format);
+          break;
+        case 'fade-in-audio':
+          result = await audioVideoUtils.fadeInAudio(file.buffer, parseFloat(duration), format);
+          break;
+        case 'fade-out-audio':
+          result = await audioVideoUtils.fadeOutAudio(file.buffer, parseFloat(startTime), parseFloat(duration), format);
+          break;
+        case 'change-audio-speed':
+        case 'speed-up-audio':
+        case 'slow-down-audio':
+          result = await audioVideoUtils.changeAudioSpeed(file.buffer, parseFloat(speed), format);
+          break;
+        case 'change-pitch':
+        case 'pitch-shifter':
+          result = await audioVideoUtils.changePitch(file.buffer, parseInt(semitones), format);
+          break;
+        case 'reverse-audio':
+        case 'audio-reverser':
+          result = await audioVideoUtils.reverseAudio(file.buffer, format);
+          break;
+        default:
+          return res.status(400).json({ error: 'Unknown audio editing tool' });
+      }
+
+      res.setHeader('Content-Type', `audio/${format}`);
+      res.setHeader('Content-Disposition', `attachment; filename="edited.${format}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Audio editing error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Audio editing failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // AUDIO TOOLS - Effects
+  // ========================================
+  app.post('/api/audio/effects', audioOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const validation = audioVideoValidators.audioEffectsSchema.safeParse(req.body);
+      if (!validation.success) {
+        return res.status(400).json({ 
+          error: 'Invalid parameters', 
+          details: validation.error.errors.map(e => e.message).join(', ')
+        });
+      }
+
+      const { toolId, roomSize, delay, decay, bass, mid, treble, outputFormat } = validation.data;
+      let result: Buffer;
+      const format = outputFormat;
+
+      switch (toolId) {
+        case 'add-reverb':
+        case 'reverb-effect':
+          result = await audioVideoUtils.addReverbToAudio(file.buffer, parseInt(roomSize) || 50, format);
+          break;
+        case 'add-echo':
+        case 'echo-effect':
+          result = await audioVideoUtils.addEchoToAudio(file.buffer, parseInt(delay) || 1000, parseFloat(decay) || 0.5, format);
+          break;
+        case 'equalizer':
+        case 'audio-equalizer':
+          result = await audioVideoUtils.applyEqualizerToAudio(
+            file.buffer,
+            parseInt(bass) || 0,
+            parseInt(mid) || 0,
+            parseInt(treble) || 0,
+            format
+          );
+          break;
+        case 'noise-reduction':
+        case 'remove-noise':
+        case 'denoise-audio':
+          result = await audioVideoUtils.removeNoiseFromAudio(file.buffer, format);
+          break;
+        default:
+          return res.status(400).json({ error: 'Unknown audio effect tool' });
+      }
+
+      res.setHeader('Content-Type', `audio/${format}`);
+      res.setHeader('Content-Disposition', `attachment; filename="effect.${format}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Audio effects error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Audio effect failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // VIDEO TOOLS - Conversion
+  // ========================================
+  app.post('/api/video/convert', videoOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const validation = audioVideoValidators.videoConversionSchema.safeParse(req.body);
+      if (!validation.success) {
+        return res.status(400).json({ 
+          error: 'Invalid parameters', 
+          details: validation.error.errors.map(e => e.message).join(', ')
+        });
+      }
+
+      const { toolId, quality, outputFormat } = validation.data;
+      let result: Buffer;
+      const format = outputFormat;
+
+      switch (toolId) {
+        case 'video-to-mp4':
+        case 'mp4-converter':
+        case 'convert-to-mp4':
+          result = await audioVideoUtils.convertVideoToMP4(file.buffer, quality || 'medium');
+          break;
+        case 'video-to-avi':
+        case 'avi-converter':
+        case 'mp4-to-avi':
+          result = await audioVideoUtils.convertVideoToAVI(file.buffer);
+          break;
+        case 'video-to-mov':
+        case 'mov-converter':
+        case 'mp4-to-mov':
+          result = await audioVideoUtils.convertVideoToMOV(file.buffer);
+          break;
+        case 'video-to-webm':
+        case 'webm-converter':
+        case 'mp4-to-webm':
+          result = await audioVideoUtils.convertVideoToWebM(file.buffer, quality || 'medium');
+          break;
+        case 'video-to-mkv':
+        case 'mkv-converter':
+        case 'mp4-to-mkv':
+          result = await audioVideoUtils.convertVideoToMKV(file.buffer);
+          break;
+        case 'video-to-flv':
+        case 'flv-converter':
+          result = await audioVideoUtils.convertVideoToFLV(file.buffer);
+          break;
+        case 'video-to-mpeg':
+        case 'mpeg-converter':
+          result = await audioVideoUtils.convertVideoToMPEG(file.buffer);
+          break;
+        case 'video-to-wmv':
+        case 'wmv-converter':
+          result = await audioVideoUtils.convertVideoToWMV(file.buffer);
+          break;
+        default:
+          return res.status(400).json({ error: 'Unknown video conversion tool' });
+      }
+
+      res.setHeader('Content-Type', `video/${format}`);
+      res.setHeader('Content-Disposition', `attachment; filename="converted.${format}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Video conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Video conversion failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // VIDEO TOOLS - Editing
+  // ========================================
+  app.post('/api/video/edit', videoOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const validation = audioVideoValidators.videoEditingSchema.safeParse(req.body);
+      if (!validation.success) {
+        return res.status(400).json({ 
+          error: 'Invalid parameters', 
+          details: validation.error.errors.map(e => e.message).join(', ')
+        });
+      }
+
+      const { toolId, startTime, duration, width, height, speed, angle, direction, quality, outputFormat } = validation.data;
+
+      audioVideoValidators.validateTrimOperation(toolId, startTime, duration);
+      audioVideoValidators.validateResizeOperation(toolId, width, height);
+      audioVideoValidators.validateSpeedOperation(toolId, speed);
+      audioVideoValidators.validateRotateOperation(toolId, angle);
+
+      let result: Buffer;
+      const format = outputFormat;
+
+      switch (toolId) {
+        case 'trim-video':
+        case 'cut-video':
+        case 'clip-video':
+          result = await audioVideoUtils.trimVideo(file.buffer, startTime, duration, format);
+          break;
+        case 'compress-video':
+        case 'reduce-video-size':
+        case 'video-compressor':
+          result = await audioVideoUtils.compressVideo(file.buffer, quality || 'medium');
+          break;
+        case 'resize-video':
+        case 'scale-video':
+        case 'change-video-resolution':
+          result = await audioVideoUtils.resizeVideo(file.buffer, parseInt(width), parseInt(height), format);
+          break;
+        case 'change-video-speed':
+        case 'speed-up-video':
+        case 'slow-down-video':
+          result = await audioVideoUtils.changeVideoSpeed(file.buffer, parseFloat(speed), format);
+          break;
+        case 'rotate-video':
+        case 'rotate-video-90':
+        case 'rotate-video-180':
+        case 'rotate-video-270':
+          result = await audioVideoUtils.rotateVideo(file.buffer, parseInt(angle) as 90 | 180 | 270, format);
+          break;
+        case 'flip-video':
+        case 'flip-video-horizontal':
+        case 'flip-video-vertical':
+        case 'mirror-video':
+          result = await audioVideoUtils.flipVideo(file.buffer, direction || 'horizontal', format);
+          break;
+        default:
+          return res.status(400).json({ error: 'Unknown video editing tool' });
+      }
+
+      res.setHeader('Content-Type', `video/${format}`);
+      res.setHeader('Content-Disposition', `attachment; filename="edited.${format}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Video editing error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Video editing failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // VIDEO TO AUDIO - Extract Audio
+  // ========================================
+  app.post('/api/video/extract-audio', videoOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const validation = audioVideoValidators.videoToAudioSchema.safeParse(req.body);
+      if (!validation.success) {
+        return res.status(400).json({ 
+          error: 'Invalid parameters', 
+          details: validation.error.errors.map(e => e.message).join(', ')
+        });
+      }
+
+      const { toolId, outputFormat, bitrate } = validation.data;
+      const result = await audioVideoUtils.extractAudioFromVideo(file.buffer, outputFormat, bitrate);
+
+      res.setHeader('Content-Type', `audio/${outputFormat}`);
+      res.setHeader('Content-Disposition', `attachment; filename="audio.${outputFormat}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Audio extraction error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Audio extraction failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // AUDIO METADATA
+  // ========================================
+  app.post('/api/audio/metadata', audioOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const metadata = await audioVideoUtils.getAudioMetadata(file.buffer);
+      res.json(metadata);
+
+    } catch (error) {
+      console.error('Metadata extraction error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Metadata extraction failed: ${errorMessage}` });
     }
   });
 
