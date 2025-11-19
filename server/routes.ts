@@ -733,6 +733,583 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // ========================================
+  // QR CODE TOOLS - Generate & Read QR Codes
+  // ========================================
+  app.post('/api/qr/generate', upload.none(), async (req, res) => {
+    try {
+      const { text, type = 'url', size = 256, errorCorrection = 'M' } = req.body;
+
+      if (!text || typeof text !== 'string') {
+        return res.status(400).json({ error: 'Text is required' });
+      }
+
+      if (text.length > 4000) {
+        return res.status(400).json({ error: 'Text too long (max 4000 characters)' });
+      }
+
+      const sizeNum = parseInt(size, 10);
+      if (isNaN(sizeNum) || sizeNum < 100 || sizeNum > 1000) {
+        return res.status(400).json({ error: 'Size must be between 100 and 1000 pixels' });
+      }
+
+      const validErrorLevels = ['L', 'M', 'Q', 'H'];
+      if (!validErrorLevels.includes(errorCorrection)) {
+        return res.status(400).json({ error: 'Invalid error correction level' });
+      }
+
+      const QRCode = await import('qrcode');
+      const qrDataURL = await QRCode.toDataURL(text, {
+        errorCorrectionLevel: errorCorrection as any,
+        width: sizeNum,
+        margin: 2
+      });
+
+      res.json({ 
+        qrCode: qrDataURL,
+        text,
+        size: sizeNum,
+        errorCorrection
+      });
+
+    } catch (error) {
+      console.error('QR generation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to generate QR code: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/qr/generate-wifi', upload.none(), async (req, res) => {
+    try {
+      const { ssid, password, encryption = 'WPA', hidden = false, size = 256 } = req.body;
+
+      if (!ssid) {
+        return res.status(400).json({ error: 'WiFi SSID is required' });
+      }
+
+      const validEncryptions = ['WPA', 'WEP', 'nopass'];
+      if (!validEncryptions.includes(encryption)) {
+        return res.status(400).json({ error: 'Invalid encryption type' });
+      }
+
+      if (encryption !== 'nopass' && !password) {
+        return res.status(400).json({ error: 'Password is required for secured networks' });
+      }
+
+      const wifiString = `WIFI:T:${encryption};S:${ssid};P:${password || ''};H:${hidden ? 'true' : 'false'};;`;
+
+      const QRCode = await import('qrcode');
+      const qrDataURL = await QRCode.toDataURL(wifiString, {
+        errorCorrectionLevel: 'M',
+        width: parseInt(size, 10) || 256,
+        margin: 2
+      });
+
+      res.json({ 
+        qrCode: qrDataURL,
+        ssid,
+        encryption
+      });
+
+    } catch (error) {
+      console.error('WiFi QR generation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to generate WiFi QR code: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/qr/generate-vcard', upload.none(), async (req, res) => {
+    try {
+      const { firstName, lastName, organization, phone, email, url, address, size = 256 } = req.body;
+
+      if (!firstName && !lastName) {
+        return res.status(400).json({ error: 'At least first name or last name is required' });
+      }
+
+      let vcardString = 'BEGIN:VCARD\nVERSION:3.0\n';
+      vcardString += `FN:${firstName || ''} ${lastName || ''}\n`;
+      if (firstName) vcardString += `N:${lastName || ''};${firstName};;;\n`;
+      if (organization) vcardString += `ORG:${organization}\n`;
+      if (phone) vcardString += `TEL:${phone}\n`;
+      if (email) vcardString += `EMAIL:${email}\n`;
+      if (url) vcardString += `URL:${url}\n`;
+      if (address) vcardString += `ADR:;;${address};;;;\n`;
+      vcardString += 'END:VCARD';
+
+      const QRCode = await import('qrcode');
+      const qrDataURL = await QRCode.toDataURL(vcardString, {
+        errorCorrectionLevel: 'M',
+        width: parseInt(size, 10) || 256,
+        margin: 2
+      });
+
+      res.json({ 
+        qrCode: qrDataURL,
+        name: `${firstName || ''} ${lastName || ''}`.trim()
+      });
+
+    } catch (error) {
+      console.error('vCard QR generation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to generate vCard QR code: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/qr/generate-email', upload.none(), async (req, res) => {
+    try {
+      const { email, subject = '', body = '', size = 256 } = req.body;
+
+      if (!email) {
+        return res.status(400).json({ error: 'Email address is required' });
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        return res.status(400).json({ error: 'Invalid email address' });
+      }
+
+      const mailto = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      const QRCode = await import('qrcode');
+      const qrDataURL = await QRCode.toDataURL(mailto, {
+        errorCorrectionLevel: 'M',
+        width: parseInt(size, 10) || 256,
+        margin: 2
+      });
+
+      res.json({ 
+        qrCode: qrDataURL,
+        email
+      });
+
+    } catch (error) {
+      console.error('Email QR generation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to generate email QR code: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/qr/generate-phone', upload.none(), async (req, res) => {
+    try {
+      const { phone, size = 256 } = req.body;
+
+      if (!phone) {
+        return res.status(400).json({ error: 'Phone number is required' });
+      }
+
+      const telString = `tel:${phone}`;
+
+      const QRCode = await import('qrcode');
+      const qrDataURL = await QRCode.toDataURL(telString, {
+        errorCorrectionLevel: 'M',
+        width: parseInt(size, 10) || 256,
+        margin: 2
+      });
+
+      res.json({ 
+        qrCode: qrDataURL,
+        phone
+      });
+
+    } catch (error) {
+      console.error('Phone QR generation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to generate phone QR code: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/qr/generate-event', upload.none(), async (req, res) => {
+    try {
+      const { title, location = '', startDate, endDate, description = '', size = 256 } = req.body;
+
+      if (!title) {
+        return res.status(400).json({ error: 'Event title is required' });
+      }
+
+      if (!startDate) {
+        return res.status(400).json({ error: 'Start date is required' });
+      }
+
+      const parseDate = (dateStr: string): Date => {
+        const parsed = new Date(dateStr);
+        if (!isNaN(parsed.getTime())) {
+          return parsed;
+        }
+        const timestamp = Date.parse(dateStr);
+        if (!isNaN(timestamp)) {
+          return new Date(timestamp);
+        }
+        
+        const iso24Hour = /^(\d{4})-(\d{2})-(\d{2})[\s|T](\d{2}):(\d{2})(?::(\d{2}))?$/;
+        const iso12Hour = /^(\d{4})-(\d{2})-(\d{2})[\s|T](\d{1,2}):(\d{2})(?::(\d{2}))?\s*(AM|PM)$/i;
+        const usFormat = /^(\d{1,2})\/(\d{1,2})\/(\d{4})[\s|,]?\s*(\d{1,2}):(\d{2})(?::(\d{2}))?\s*(AM|PM)?$/i;
+        
+        let match = dateStr.match(iso24Hour);
+        if (match) {
+          return new Date(parseInt(match[1]), parseInt(match[2]) - 1, parseInt(match[3]), 
+                          parseInt(match[4]), parseInt(match[5]), parseInt(match[6] || '0'));
+        }
+        
+        match = dateStr.match(iso12Hour);
+        if (match) {
+          let hour = parseInt(match[4]);
+          const isPM = match[7]?.toUpperCase() === 'PM';
+          if (isPM && hour !== 12) hour += 12;
+          if (!isPM && hour === 12) hour = 0;
+          return new Date(parseInt(match[1]), parseInt(match[2]) - 1, parseInt(match[3]), 
+                          hour, parseInt(match[5]), parseInt(match[6] || '0'));
+        }
+        
+        match = dateStr.match(usFormat);
+        if (match) {
+          let hour = parseInt(match[4]);
+          if (match[7] && match[7].trim() !== '') {
+            const isPM = match[7].toUpperCase() === 'PM';
+            if (isPM && hour !== 12) hour += 12;
+            if (!isPM && hour === 12) hour = 0;
+          }
+          if (hour < 0 || hour > 23) {
+            throw new Error('Invalid hour value');
+          }
+          return new Date(parseInt(match[3]), parseInt(match[1]) - 1, parseInt(match[2]), 
+                          hour, parseInt(match[5]), parseInt(match[6] || '0'));
+        }
+        
+        throw new Error('Invalid date format');
+      };
+
+      let startDateObj: Date;
+      try {
+        startDateObj = parseDate(startDate);
+      } catch {
+        return res.status(400).json({ error: 'Invalid start date format. Please provide a valid date.' });
+      }
+
+      let endDateObj: Date | null = null;
+      if (endDate) {
+        try {
+          endDateObj = parseDate(endDate);
+        } catch {
+          return res.status(400).json({ error: 'Invalid end date format. Please provide a valid date.' });
+        }
+      }
+
+      const formatDateForICal = (date: Date): string => {
+        return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+      };
+
+      let eventString = 'BEGIN:VEVENT\n';
+      eventString += `SUMMARY:${title}\n`;
+      eventString += `DTSTART:${formatDateForICal(startDateObj)}\n`;
+      if (endDateObj) {
+        eventString += `DTEND:${formatDateForICal(endDateObj)}\n`;
+      }
+      if (location) eventString += `LOCATION:${location}\n`;
+      if (description) eventString += `DESCRIPTION:${description}\n`;
+      eventString += 'END:VEVENT';
+
+      const QRCode = await import('qrcode');
+      const qrDataURL = await QRCode.toDataURL(eventString, {
+        errorCorrectionLevel: 'M',
+        width: parseInt(size, 10) || 256,
+        margin: 2
+      });
+
+      res.json({ 
+        qrCode: qrDataURL,
+        title
+      });
+
+    } catch (error) {
+      console.error('Event QR generation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to generate event QR code: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/qr/read', upload.single('file'), async (req, res) => {
+    try {
+      if (!req.file) {
+        return res.status(400).json({ error: 'No image file provided' });
+      }
+
+      const { PNG } = await import('pngjs');
+      const { default: jpeg } = await import('jpeg-js');
+      const jsQR = (await import('jsqr')).default;
+      
+      let imageData;
+
+      if (req.file.mimetype === 'image/png') {
+        const png = PNG.sync.read(req.file.buffer);
+        imageData = {
+          data: new Uint8ClampedArray(png.data),
+          width: png.width,
+          height: png.height
+        };
+      } else if (req.file.mimetype === 'image/jpeg' || req.file.mimetype === 'image/jpg') {
+        const jpegData = jpeg.decode(req.file.buffer);
+        imageData = {
+          data: new Uint8ClampedArray(jpegData.data),
+          width: jpegData.width,
+          height: jpegData.height
+        };
+      } else {
+        return res.status(400).json({ error: 'Unsupported image format. Please use PNG or JPEG.' });
+      }
+
+      const code = jsQR(imageData.data, imageData.width, imageData.height);
+
+      if (code) {
+        res.json({ 
+          success: true,
+          data: code.data,
+          location: {
+            topLeft: code.location.topLeftCorner,
+            topRight: code.location.topRightCorner,
+            bottomLeft: code.location.bottomLeftCorner,
+            bottomRight: code.location.bottomRightCorner
+          }
+        });
+      } else {
+        res.status(400).json({ error: 'No QR code found in the image' });
+      }
+
+    } catch (error) {
+      console.error('QR read error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to read QR code: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // ARCHIVE TOOLS - ZIP, TAR, 7Z Creation & Extraction
+  // ========================================
+  app.post('/api/archive/create-zip', upload.array('files', 50), async (req, res) => {
+    if (!req.files || !Array.isArray(req.files) || req.files.length === 0) {
+      return res.status(400).json({ error: 'No files provided' });
+    }
+
+    const archiver = await import('archiver');
+    const archive = archiver.default('zip', {
+      zlib: { level: 9 }
+    });
+
+    res.setHeader('Content-Type', 'application/zip');
+    res.setHeader('Content-Disposition', 'attachment; filename="archive.zip"');
+
+    archive.on('error', (err) => {
+      console.error('Archive error:', err);
+      res.destroy();
+    });
+
+    archive.pipe(res);
+
+    for (const file of req.files) {
+      archive.append(file.buffer, { name: file.originalname });
+    }
+
+    await archive.finalize();
+  });
+
+  app.post('/api/archive/extract-zip', upload.single('file'), async (req, res) => {
+    try {
+      if (!req.file) {
+        return res.status(400).json({ error: 'No ZIP file provided' });
+      }
+
+      const unzipper = await import('unzipper');
+      const { Readable } = await import('stream');
+      
+      const stream = Readable.from(req.file.buffer);
+      const directory = await stream.pipe(unzipper.Parse({ forceStream: true }));
+
+      const files: { name: string; size: number; content?: string }[] = [];
+
+      for await (const entry of directory) {
+        const fileName = entry.path;
+        const type = entry.type;
+
+        if (type === 'File') {
+          const content = await entry.buffer();
+          files.push({
+            name: fileName,
+            size: content.length,
+            content: content.length < 1024 * 1024 ? content.toString('base64') : undefined
+          });
+        } else {
+          entry.autodrain();
+        }
+      }
+
+      res.json({
+        success: true,
+        filesCount: files.length,
+        files: files.map(f => ({ name: f.name, size: f.size })),
+        fileContents: files.filter(f => f.content).map(f => ({ name: f.name, content: f.content }))
+      });
+
+    } catch (error) {
+      console.error('ZIP extraction error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to extract ZIP archive: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/archive/create-tar', upload.array('files', 50), async (req, res) => {
+    try {
+      if (!req.files || !Array.isArray(req.files) || req.files.length === 0) {
+        return res.status(400).json({ error: 'No files provided' });
+      }
+
+      const tar = await import('tar-stream');
+      const pack = tar.pack();
+
+      const chunks: Buffer[] = [];
+      pack.on('data', (chunk) => chunks.push(chunk));
+      pack.on('end', () => {
+        const buffer = Buffer.concat(chunks);
+        res.setHeader('Content-Type', 'application/x-tar');
+        res.setHeader('Content-Disposition', 'attachment; filename="archive.tar"');
+        res.send(buffer);
+      });
+
+      pack.on('error', (err) => {
+        throw err;
+      });
+
+      for (const file of req.files) {
+        pack.entry({ name: file.originalname, size: file.size }, file.buffer);
+      }
+
+      pack.finalize();
+
+    } catch (error) {
+      console.error('TAR creation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to create TAR archive: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/archive/extract-tar', upload.single('file'), async (req, res) => {
+    try {
+      if (!req.file) {
+        return res.status(400).json({ error: 'No TAR file provided' });
+      }
+
+      const tar = await import('tar-stream');
+      const { Readable } = await import('stream');
+
+      const extract = tar.extract();
+      const files: { name: string; size: number; content?: string }[] = [];
+
+      extract.on('entry', (header, stream, next) => {
+        const chunks: Buffer[] = [];
+
+        stream.on('data', (chunk) => chunks.push(chunk));
+        stream.on('end', () => {
+          const content = Buffer.concat(chunks);
+          files.push({
+            name: header.name,
+            size: content.length,
+            content: content.length < 1024 * 1024 ? content.toString('base64') : undefined
+          });
+          next();
+        });
+
+        stream.resume();
+      });
+
+      extract.on('finish', () => {
+        res.json({
+          success: true,
+          filesCount: files.length,
+          files: files.map(f => ({ name: f.name, size: f.size })),
+          fileContents: files.filter(f => f.content).map(f => ({ name: f.name, content: f.content }))
+        });
+      });
+
+      extract.on('error', (err) => {
+        throw err;
+      });
+
+      const stream = Readable.from(req.file.buffer);
+      stream.pipe(extract);
+
+    } catch (error) {
+      console.error('TAR extraction error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to extract TAR archive: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/archive/list-contents', upload.single('file'), async (req, res) => {
+    try {
+      if (!req.file) {
+        return res.status(400).json({ error: 'No archive file provided' });
+      }
+
+      const fileName = req.file.originalname.toLowerCase();
+      const files: { name: string; size: number; compressed: number }[] = [];
+
+      if (fileName.endsWith('.zip')) {
+        const unzipper = await import('unzipper');
+        const { Readable } = await import('stream');
+        
+        const stream = Readable.from(req.file.buffer);
+        const directory = await stream.pipe(unzipper.Parse({ forceStream: true }));
+
+        for await (const entry of directory) {
+          if (entry.type === 'File') {
+            files.push({
+              name: entry.path,
+              size: entry.vars.uncompressedSize || 0,
+              compressed: entry.vars.compressedSize || 0
+            });
+          }
+          entry.autodrain();
+        }
+
+      } else if (fileName.endsWith('.tar')) {
+        const tar = await import('tar-stream');
+        const { Readable } = await import('stream');
+
+        const extract = tar.extract();
+
+        await new Promise<void>((resolve, reject) => {
+          extract.on('entry', (header, stream, next) => {
+            files.push({
+              name: header.name,
+              size: header.size || 0,
+              compressed: header.size || 0
+            });
+            stream.on('end', next);
+            stream.resume();
+          });
+
+          extract.on('finish', resolve);
+          extract.on('error', reject);
+
+          const stream = Readable.from(req.file.buffer);
+          stream.pipe(extract);
+        });
+
+      } else {
+        return res.status(400).json({ error: 'Unsupported archive format. Please use ZIP or TAR.' });
+      }
+
+      res.json({
+        success: true,
+        filesCount: files.length,
+        files
+      });
+
+    } catch (error) {
+      console.error('Archive listing error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to list archive contents: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
   // WEB TOOLS - Color, CSS, SEO, Calculators
   // ========================================
   app.post('/api/web/color-convert', upload.none(), async (req, res) => {
@@ -781,6 +1358,205 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error('Palette generation error:', error);
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       res.status(500).json({ error: `Failed to generate palette: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/web/color-picker', upload.single('file'), async (req, res) => {
+    try {
+      if (!req.file) {
+        return res.status(400).json({ error: 'No image file provided' });
+      }
+
+      const sharp = await import('sharp');
+      const image = sharp.default(req.file.buffer);
+      
+      const { dominant } = await image.stats();
+      const dominantColor = `#${dominant.r.toString(16).padStart(2, '0')}${dominant.g.toString(16).padStart(2, '0')}${dominant.b.toString(16).padStart(2, '0')}`;
+
+      const resized = await image.resize(50, 50, { fit: 'cover' }).raw().toBuffer({ resolveWithObject: true });
+      const pixels = resized.data;
+      const colorMap = new Map<string, number>();
+
+      for (let i = 0; i < pixels.length; i += 3) {
+        const hex = `#${pixels[i].toString(16).padStart(2, '0')}${pixels[i + 1].toString(16).padStart(2, '0')}${pixels[i + 2].toString(16).padStart(2, '0')}`;
+        colorMap.set(hex, (colorMap.get(hex) || 0) + 1);
+      }
+
+      const sortedColors = Array.from(colorMap.entries())
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([color]) => color);
+
+      res.json({
+        dominant: dominantColor,
+        palette: sortedColors
+      });
+
+    } catch (error) {
+      console.error('Color picker error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to extract colors from image: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/web/color-harmony', upload.none(), async (req, res) => {
+    try {
+      const { color, scheme = 'complementary' } = req.body;
+
+      if (!color) {
+        return res.status(400).json({ error: 'Base color is required' });
+      }
+
+      const hexToHSL = (hex: string) => {
+        const r = parseInt(hex.slice(1, 3), 16) / 255;
+        const g = parseInt(hex.slice(3, 5), 16) / 255;
+        const b = parseInt(hex.slice(5, 7), 16) / 255;
+
+        const max = Math.max(r, g, b);
+        const min = Math.min(r, g, b);
+        let h = 0, s = 0, l = (max + min) / 2;
+
+        if (max !== min) {
+          const d = max - min;
+          s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+          
+          switch (max) {
+            case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+            case g: h = ((b - r) / d + 2) / 6; break;
+            case b: h = ((r - g) / d + 4) / 6; break;
+          }
+        }
+
+        return { h: h * 360, s: s * 100, l: l * 100 };
+      };
+
+      const HSLToHex = (h: number, s: number, l: number) => {
+        s = s / 100;
+        l = l / 100;
+        const c = (1 - Math.abs(2 * l - 1)) * s;
+        const x = c * (1 - Math.abs((h / 60) % 2 - 1));
+        const m = l - c / 2;
+        let r = 0, g = 0, b = 0;
+
+        if (h >= 0 && h < 60) { r = c; g = x; b = 0; }
+        else if (h >= 60 && h < 120) { r = x; g = c; b = 0; }
+        else if (h >= 120 && h < 180) { r = 0; g = c; b = x; }
+        else if (h >= 180 && h < 240) { r = 0; g = x; b = c; }
+        else if (h >= 240 && h < 300) { r = x; g = 0; b = c; }
+        else if (h >= 300 && h < 360) { r = c; g = 0; b = x; }
+
+        r = Math.round((r + m) * 255);
+        g = Math.round((g + m) * 255);
+        b = Math.round((b + m) * 255);
+
+        return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
+      };
+
+      const hsl = hexToHSL(color);
+      const colors: string[] = [color];
+
+      switch (scheme) {
+        case 'complementary':
+          colors.push(HSLToHex((hsl.h + 180) % 360, hsl.s, hsl.l));
+          break;
+        case 'analogous':
+          colors.push(HSLToHex((hsl.h + 30) % 360, hsl.s, hsl.l));
+          colors.push(HSLToHex((hsl.h - 30 + 360) % 360, hsl.s, hsl.l));
+          break;
+        case 'triadic':
+          colors.push(HSLToHex((hsl.h + 120) % 360, hsl.s, hsl.l));
+          colors.push(HSLToHex((hsl.h + 240) % 360, hsl.s, hsl.l));
+          break;
+        case 'split-complementary':
+          colors.push(HSLToHex((hsl.h + 150) % 360, hsl.s, hsl.l));
+          colors.push(HSLToHex((hsl.h + 210) % 360, hsl.s, hsl.l));
+          break;
+        case 'tetradic':
+          colors.push(HSLToHex((hsl.h + 90) % 360, hsl.s, hsl.l));
+          colors.push(HSLToHex((hsl.h + 180) % 360, hsl.s, hsl.l));
+          colors.push(HSLToHex((hsl.h + 270) % 360, hsl.s, hsl.l));
+          break;
+        case 'monochromatic':
+          colors.push(HSLToHex(hsl.h, hsl.s, Math.max(0, hsl.l - 20)));
+          colors.push(HSLToHex(hsl.h, hsl.s, Math.min(100, hsl.l + 20)));
+          break;
+        default:
+          return res.status(400).json({ error: 'Invalid color scheme' });
+      }
+
+      res.json({ scheme, colors });
+
+    } catch (error) {
+      console.error('Color harmony error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to generate color harmony: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/web/color-blindness', upload.none(), async (req, res) => {
+    try {
+      const { color, type = 'protanopia' } = req.body;
+
+      if (!color) {
+        return res.status(400).json({ error: 'Color is required' });
+      }
+
+      const hexToRGB = (hex: string) => ({
+        r: parseInt(hex.slice(1, 3), 16),
+        g: parseInt(hex.slice(3, 5), 16),
+        b: parseInt(hex.slice(5, 7), 16)
+      });
+
+      const rgbToHex = (r: number, g: number, b: number) => {
+        r = Math.max(0, Math.min(255, Math.round(r)));
+        g = Math.max(0, Math.min(255, Math.round(g)));
+        b = Math.max(0, Math.min(255, Math.round(b)));
+        return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
+      };
+
+      const rgb = hexToRGB(color);
+      let result: { r: number; g: number; b: number };
+
+      switch (type) {
+        case 'protanopia':
+          result = {
+            r: 0.567 * rgb.r + 0.433 * rgb.g,
+            g: 0.558 * rgb.r + 0.442 * rgb.g,
+            b: 0.242 * rgb.g + 0.758 * rgb.b
+          };
+          break;
+        case 'deuteranopia':
+          result = {
+            r: 0.625 * rgb.r + 0.375 * rgb.g,
+            g: 0.7 * rgb.r + 0.3 * rgb.g,
+            b: 0.3 * rgb.g + 0.7 * rgb.b
+          };
+          break;
+        case 'tritanopia':
+          result = {
+            r: 0.95 * rgb.r + 0.05 * rgb.g,
+            g: 0.433 * rgb.g + 0.567 * rgb.b,
+            b: 0.475 * rgb.g + 0.525 * rgb.b
+          };
+          break;
+        case 'achromatopsia':
+          const gray = 0.299 * rgb.r + 0.587 * rgb.g + 0.114 * rgb.b;
+          result = { r: gray, g: gray, b: gray };
+          break;
+        default:
+          return res.status(400).json({ error: 'Invalid color blindness type' });
+      }
+
+      res.json({
+        original: color,
+        type,
+        simulated: rgbToHex(result.r, result.g, result.b)
+      });
+
+    } catch (error) {
+      console.error('Color blindness simulation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to simulate color blindness: ${errorMessage}` });
     }
   });
 
@@ -852,6 +1628,57 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.post('/api/web/seo/robots-txt', upload.none(), async (req, res) => {
+    try {
+      const { userAgents = ['*'], allows = [], disallows = [], sitemap } = req.body;
+
+      let robotsTxt = '';
+      
+      userAgents.forEach((agent: string) => {
+        robotsTxt += `User-agent: ${agent}\n`;
+        allows.forEach((path: string) => robotsTxt += `Allow: ${path}\n`);
+        disallows.forEach((path: string) => robotsTxt += `Disallow: ${path}\n`);
+        robotsTxt += '\n';
+      });
+
+      if (sitemap) {
+        robotsTxt += `Sitemap: ${sitemap}\n`;
+      }
+
+      res.setHeader('Content-Type', 'text/plain');
+      res.setHeader('Content-Disposition', 'attachment; filename="robots.txt"');
+      res.send(robotsTxt.trim());
+
+    } catch (error) {
+      console.error('Robots.txt generation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to generate robots.txt: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/web/seo/schema-markup', upload.none(), async (req, res) => {
+    try {
+      const { type, data } = req.body;
+
+      if (!type || !data) {
+        return res.status(400).json({ error: 'Schema type and data are required' });
+      }
+
+      const schema: any = {
+        '@context': 'https://schema.org',
+        '@type': type,
+        ...data
+      };
+
+      res.json({ schema: JSON.stringify(schema, null, 2) });
+
+    } catch (error) {
+      console.error('Schema markup generation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to generate schema markup: ${errorMessage}` });
+    }
+  });
+
   app.post('/api/web/calculator', upload.none(), async (req, res) => {
     try {
       const { type, values } = req.body;
@@ -873,6 +1700,86 @@ export async function registerRoutes(app: Express): Promise<Server> {
         case 'days-between':
           result = webUtils.calculateDaysBetween(values.date1, values.date2);
           break;
+        case 'dpi':
+          const diagonalInches = parseFloat(values.diagonalInches);
+          const widthPixels = parseFloat(values.widthPixels);
+          const heightPixels = parseFloat(values.heightPixels);
+          
+          if (isNaN(diagonalInches) || isNaN(widthPixels) || isNaN(heightPixels)) {
+            return res.status(400).json({ error: 'Invalid numeric values for DPI calculation' });
+          }
+          if (diagonalInches <= 0) {
+            return res.status(400).json({ error: 'Diagonal inches must be greater than 0' });
+          }
+          
+          const diagonalPixels = Math.sqrt(widthPixels * widthPixels + heightPixels * heightPixels);
+          result = { dpi: Math.round(diagonalPixels / diagonalInches) };
+          break;
+        case 'aspect-ratio':
+          const width = parseFloat(values.width);
+          const height = parseFloat(values.height);
+          
+          if (isNaN(width) || isNaN(height) || width <= 0 || height <= 0) {
+            return res.status(400).json({ error: 'Valid width and height are required' });
+          }
+          
+          const gcd = (a: number, b: number): number => b === 0 ? a : gcd(b, a % b);
+          const divisor = gcd(Math.round(width), Math.round(height));
+          result = {
+            ratio: `${Math.round(width) / divisor}:${Math.round(height) / divisor}`,
+            decimal: (width / height).toFixed(2)
+          };
+          break;
+        case 'loan':
+          const principal = parseFloat(values.principal);
+          const annualRate = parseFloat(values.annualRate);
+          const years = parseFloat(values.years);
+          
+          if (isNaN(principal) || isNaN(annualRate) || isNaN(years)) {
+            return res.status(400).json({ error: 'Invalid loan calculation values' });
+          }
+          if (principal <= 0 || annualRate < 0 || years <= 0) {
+            return res.status(400).json({ error: 'Principal and years must be positive, rate must be non-negative' });
+          }
+          
+          const monthlyRate = annualRate / 100 / 12;
+          const numPayments = years * 12;
+          const monthlyPayment = monthlyRate === 0 ? 
+            principal / numPayments : 
+            principal * (monthlyRate * Math.pow(1 + monthlyRate, numPayments)) / (Math.pow(1 + monthlyRate, numPayments) - 1);
+          const totalPaid = monthlyPayment * numPayments;
+          const totalInterest = totalPaid - principal;
+          result = {
+            monthlyPayment: monthlyPayment.toFixed(2),
+            totalPaid: totalPaid.toFixed(2),
+            totalInterest: totalInterest.toFixed(2)
+          };
+          break;
+        case 'mortgage':
+          const loanAmount = parseFloat(values.loanAmount);
+          const interestRate = parseFloat(values.interestRate);
+          const loanTerm = parseFloat(values.loanTerm);
+          
+          if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTerm)) {
+            return res.status(400).json({ error: 'Invalid mortgage calculation values' });
+          }
+          if (loanAmount <= 0 || interestRate < 0 || loanTerm <= 0) {
+            return res.status(400).json({ error: 'Loan amount and term must be positive, interest rate must be non-negative' });
+          }
+          
+          const monthlyInterestRate = interestRate / 100 / 12;
+          const numberOfPayments = loanTerm * 12;
+          const monthlyPaymentCalc = monthlyInterestRate === 0 ?
+            loanAmount / numberOfPayments :
+            loanAmount * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)) / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
+          const totalPayment = monthlyPaymentCalc * numberOfPayments;
+          const totalInt = totalPayment - loanAmount;
+          result = {
+            monthlyPayment: monthlyPaymentCalc.toFixed(2),
+            totalPayment: totalPayment.toFixed(2),
+            totalInterest: totalInt.toFixed(2)
+          };
+          break;
         default:
           return res.status(400).json({ error: 'Unknown calculator type' });
       }
@@ -883,6 +1790,184 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error('Calculator error:', error);
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       res.status(500).json({ error: `Calculation failed: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/web/convert-unit', upload.none(), async (req, res) => {
+    try {
+      const { value, from, to, category } = req.body;
+
+      if (value === undefined || !from || !to || !category) {
+        return res.status(400).json({ error: 'Value, from, to, and category are required' });
+      }
+
+      const numValue = parseFloat(value);
+      if (isNaN(numValue) || !isFinite(numValue)) {
+        return res.status(400).json({ error: 'Invalid numeric value for conversion' });
+      }
+
+      let result: number = 0;
+
+      switch (category) {
+        case 'length':
+          const lengthUnits: Record<string, number> = {
+            meter: 1, kilometer: 1000, centimeter: 0.01, millimeter: 0.001,
+            mile: 1609.34, yard: 0.9144, foot: 0.3048, inch: 0.0254
+          };
+          result = numValue * (lengthUnits[from] / lengthUnits[to]);
+          break;
+
+        case 'weight':
+          const weightUnits: Record<string, number> = {
+            kilogram: 1, gram: 0.001, milligram: 0.000001, ton: 1000,
+            pound: 0.453592, ounce: 0.0283495
+          };
+          result = numValue * (weightUnits[from] / weightUnits[to]);
+          break;
+
+        case 'temperature':
+          if (from === 'celsius' && to === 'fahrenheit') result = (numValue * 9/5) + 32;
+          else if (from === 'fahrenheit' && to === 'celsius') result = (numValue - 32) * 5/9;
+          else if (from === 'celsius' && to === 'kelvin') result = numValue + 273.15;
+          else if (from === 'kelvin' && to === 'celsius') result = numValue - 273.15;
+          else if (from === 'fahrenheit' && to === 'kelvin') result = (numValue - 32) * 5/9 + 273.15;
+          else if (from === 'kelvin' && to === 'fahrenheit') result = (numValue - 273.15) * 9/5 + 32;
+          else result = numValue;
+          break;
+
+        case 'area':
+          const areaUnits: Record<string, number> = {
+            'square-meter': 1, 'square-kilometer': 1000000, 'square-centimeter': 0.0001,
+            'square-mile': 2589988.11, 'square-yard': 0.836127, 'square-foot': 0.092903,
+            'acre': 4046.86, 'hectare': 10000
+          };
+          result = numValue * (areaUnits[from] / areaUnits[to]);
+          break;
+
+        case 'volume':
+          const volumeUnits: Record<string, number> = {
+            liter: 1, milliliter: 0.001, 'cubic-meter': 1000, 'cubic-centimeter': 0.001,
+            gallon: 3.78541, quart: 0.946353, pint: 0.473176, cup: 0.236588,
+            'fluid-ounce': 0.0295735, tablespoon: 0.0147868, teaspoon: 0.00492892
+          };
+          result = numValue * (volumeUnits[from] / volumeUnits[to]);
+          break;
+
+        default:
+          return res.status(400).json({ error: 'Unknown unit category' });
+      }
+
+      res.json({ result: result.toFixed(6), value: numValue, from, to, category });
+
+    } catch (error) {
+      console.error('Unit conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Unit conversion failed: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/web/time-date', upload.none(), async (req, res) => {
+    try {
+      const { type, ...values } = req.body;
+      let result: any;
+
+      switch (type) {
+        case 'age':
+          if (!values.birthDate) {
+            return res.status(400).json({ error: 'Birth date is required' });
+          }
+          const birthDate = new Date(values.birthDate);
+          if (isNaN(birthDate.getTime())) {
+            return res.status(400).json({ error: 'Invalid birth date format' });
+          }
+          const today = new Date();
+          let age = today.getFullYear() - birthDate.getFullYear();
+          const monthDiff = today.getMonth() - birthDate.getMonth();
+          if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+          }
+          result = { age, years: age };
+          break;
+
+        case 'date-difference':
+          if (!values.date1 || !values.date2) {
+            return res.status(400).json({ error: 'Both dates are required' });
+          }
+          const date1 = new Date(values.date1);
+          const date2 = new Date(values.date2);
+          if (isNaN(date1.getTime()) || isNaN(date2.getTime())) {
+            return res.status(400).json({ error: 'Invalid date format' });
+          }
+          const diffTime = Math.abs(date2.getTime() - date1.getTime());
+          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+          const diffWeeks = Math.floor(diffDays / 7);
+          const diffMonths = Math.floor(diffDays / 30.44);
+          const diffYears = Math.floor(diffDays / 365.25);
+          result = { days: diffDays, weeks: diffWeeks, months: diffMonths, years: diffYears };
+          break;
+
+        case 'timezone-convert':
+          if (!values.dateTime) {
+            return res.status(400).json({ error: 'Date and time are required' });
+          }
+          const sourceDate = new Date(values.dateTime);
+          if (isNaN(sourceDate.getTime())) {
+            return res.status(400).json({ error: 'Invalid date/time format' });
+          }
+          const sourceTimezone = values.sourceTimezone || 'UTC';
+          const targetTimezone = values.targetTimezone || 'UTC';
+          
+          try {
+            new Intl.DateTimeFormat('en-US', { timeZone: sourceTimezone });
+            new Intl.DateTimeFormat('en-US', { timeZone: targetTimezone });
+            
+            const sourceTimeString = sourceDate.toLocaleString('en-US', { timeZone: sourceTimezone });
+            const targetTimeString = sourceDate.toLocaleString('en-US', { timeZone: targetTimezone });
+            
+            result = {
+              source: { timezone: sourceTimezone, dateTime: sourceTimeString },
+              target: { timezone: targetTimezone, dateTime: targetTimeString }
+            };
+          } catch (tzError) {
+            const errorMessage = tzError instanceof Error ? tzError.message : 'Invalid timezone';
+            return res.status(400).json({ error: `Invalid timezone specified: ${errorMessage}` });
+          }
+          break;
+
+        case 'add-time':
+          if (!values.date) {
+            return res.status(400).json({ error: 'Base date is required' });
+          }
+          const baseDate = new Date(values.date);
+          if (isNaN(baseDate.getTime())) {
+            return res.status(400).json({ error: 'Invalid date format' });
+          }
+          
+          const addYears = parseInt(values.years) || 0;
+          const addMonths = parseInt(values.months) || 0;
+          const addDays = parseInt(values.days) || 0;
+          const addHours = parseInt(values.hours) || 0;
+          const addMinutes = parseInt(values.minutes) || 0;
+          
+          baseDate.setFullYear(baseDate.getFullYear() + addYears);
+          baseDate.setMonth(baseDate.getMonth() + addMonths);
+          baseDate.setDate(baseDate.getDate() + addDays);
+          baseDate.setHours(baseDate.getHours() + addHours);
+          baseDate.setMinutes(baseDate.getMinutes() + addMinutes);
+          
+          result = { resultDate: baseDate.toISOString() };
+          break;
+
+        default:
+          return res.status(400).json({ error: 'Unknown time/date operation' });
+      }
+
+      res.json({ result });
+
+    } catch (error) {
+      console.error('Time/date operation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Time/date operation failed: ${errorMessage}` });
     }
   });
 
