@@ -1,63 +1,130 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useMutation } from "@tanstack/react-query";
+import { z } from "zod";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
-import { Calculator, Percent, DollarSign, TrendingUp, Calendar as CalendarIcon, Ruler, Banknote } from "lucide-react";
+import { apiRequest } from "@/lib/queryClient";
+import { Calculator, Percent, DollarSign, Banknote, Loader2 } from "lucide-react";
+
+// Validation Schemas
+const percentageSchema = z.object({
+  value: z.coerce.number().min(0, "Value must be positive"),
+  total: z.coerce.number().min(0.01, "Total must be greater than 0"),
+});
+
+const discountSchema = z.object({
+  originalPrice: z.coerce.number().min(0.01, "Price must be greater than 0"),
+  discountPercent: z.coerce.number().min(0, "Discount cannot be negative").max(100, "Discount cannot exceed 100%"),
+});
+
+const loanSchema = z.object({
+  principal: z.coerce.number().min(1, "Loan amount must be at least $1"),
+  annualRate: z.coerce.number().min(0, "Rate cannot be negative").max(100, "Rate cannot exceed 100%"),
+  years: z.coerce.number().min(0.1, "Term must be at least 0.1 years").max(50, "Term cannot exceed 50 years"),
+});
+
+type PercentageForm = z.infer<typeof percentageSchema>;
+type DiscountForm = z.infer<typeof discountSchema>;
+type LoanForm = z.infer<typeof loanSchema>;
 
 export default function CalculatorTools() {
   const { toast } = useToast();
-  const [result, setResult] = useState<string>("");
+  const [percentageResult, setPercentageResult] = useState<string>("");
+  const [discountResult, setDiscountResult] = useState<string>("");
+  const [loanResult, setLoanResult] = useState<string>("");
 
-  const calculatePercentage = async (value: string, total: string) => {
-    try {
-      const res = await fetch("/api/web/calculator", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "percentage", values: { value: parseFloat(value), total: parseFloat(total) } }),
-      });
-      const data = await res.json();
-      setResult(`${data.result.percentage.toFixed(2)}%`);
-      toast({ title: "Success", description: "Calculation complete!" });
-    } catch (error) {
-      toast({ title: "Error", description: "Calculation failed", variant: "destructive" });
-    }
-  };
+  // Forms
+  const percentageForm = useForm<PercentageForm>({
+    resolver: zodResolver(percentageSchema),
+    defaultValues: { value: 0, total: 0 },
+  });
 
-  const calculateDiscount = async (price: string, discount: string) => {
-    try {
-      const res = await fetch("/api/web/calculator", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "discount", values: { originalPrice: parseFloat(price), discountPercent: parseFloat(discount) } }),
+  const discountForm = useForm<DiscountForm>({
+    resolver: zodResolver(discountSchema),
+    defaultValues: { originalPrice: 0, discountPercent: 0 },
+  });
+
+  const loanForm = useForm<LoanForm>({
+    resolver: zodResolver(loanSchema),
+    defaultValues: { principal: 0, annualRate: 0, years: 0 },
+  });
+
+  // Mutations
+  const percentageMutation = useMutation({
+    mutationFn: async (values: PercentageForm) => {
+      const res = await apiRequest("POST", "/api/web/calculator", {
+        type: "percentage",
+        values,
       });
-      const data = await res.json();
-      setResult(`Discounted Price: $${data.result.discountedPrice.toFixed(2)} (You save: $${data.result.savings.toFixed(2)})`);
+      return res.json();
+    },
+    onSuccess: (data) => {
+      setPercentageResult(`${data.result.percentage.toFixed(2)}%`);
+      toast({ title: "Success", description: "Percentage calculated!" });
+    },
+    onError: (error) => {
+      toast({ 
+        title: "Error", 
+        description: error instanceof Error ? error.message : "Calculation failed", 
+        variant: "destructive" 
+      });
+    },
+  });
+
+  const discountMutation = useMutation({
+    mutationFn: async (values: DiscountForm) => {
+      const res = await apiRequest("POST", "/api/web/calculator", {
+        type: "discount",
+        values,
+      });
+      return res.json();
+    },
+    onSuccess: (data) => {
+      setDiscountResult(
+        `Discounted Price: $${data.result.discountedPrice.toFixed(2)} | You save: $${data.result.savings.toFixed(2)}`
+      );
       toast({ title: "Success", description: "Discount calculated!" });
-    } catch (error) {
-      toast({ title: "Error", description: "Calculation failed", variant: "destructive" });
-    }
-  };
-
-  const calculateLoan = async (principal: string, rate: string, years: string) => {
-    try {
-      const res = await fetch("/api/web/calculator", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "loan", values: { principal: parseFloat(principal), annualRate: parseFloat(rate), years: parseFloat(years) } }),
+    },
+    onError: (error) => {
+      toast({ 
+        title: "Error", 
+        description: error instanceof Error ? error.message : "Calculation failed", 
+        variant: "destructive" 
       });
-      const data = await res.json();
-      setResult(`Monthly Payment: $${data.result.monthlyPayment.toFixed(2)} | Total: $${data.result.totalPayment.toFixed(2)}`);
+    },
+  });
+
+  const loanMutation = useMutation({
+    mutationFn: async (values: LoanForm) => {
+      const res = await apiRequest("POST", "/api/web/calculator", {
+        type: "loan",
+        values,
+      });
+      return res.json();
+    },
+    onSuccess: (data) => {
+      setLoanResult(
+        `Monthly Payment: $${data.result.monthlyPayment.toFixed(2)} | Total: $${data.result.totalPayment.toFixed(2)} | Total Interest: $${data.result.totalInterest.toFixed(2)}`
+      );
       toast({ title: "Success", description: "Loan calculated!" });
-    } catch (error) {
-      toast({ title: "Error", description: "Calculation failed", variant: "destructive" });
-    }
-  };
+    },
+    onError: (error) => {
+      toast({ 
+        title: "Error", 
+        description: error instanceof Error ? error.message : "Calculation failed", 
+        variant: "destructive" 
+      });
+    },
+  });
 
   return (
     <>
@@ -82,92 +149,251 @@ export default function CalculatorTools() {
                   Online Calculators
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                  Free calculators for percentage, discount, loan, tip, and more
+                  Free calculators for percentage, discount, loan, and more
                 </p>
               </div>
 
               <Card>
                 <CardContent className="pt-6">
                   <Tabs defaultValue="percentage">
-                    <TabsList className="grid grid-cols-3 lg:grid-cols-6 gap-2 h-auto p-1 mb-6">
-                      <TabsTrigger value="percentage" data-testid="tab-percentage">
-                        <Percent className="h-4 w-4 mr-2" />
-                        Percentage
+                    <TabsList className="grid grid-cols-3 gap-2 h-auto p-1 mb-6">
+                      <TabsTrigger value="percentage" data-testid="tab-percentage" className="flex items-center gap-2">
+                        <Percent className="h-4 w-4" />
+                        <span>Percentage</span>
                       </TabsTrigger>
-                      <TabsTrigger value="discount" data-testid="tab-discount">
-                        <DollarSign className="h-4 w-4 mr-2" />
-                        Discount
+                      <TabsTrigger value="discount" data-testid="tab-discount" className="flex items-center gap-2">
+                        <DollarSign className="h-4 w-4" />
+                        <span>Discount</span>
                       </TabsTrigger>
-                      <TabsTrigger value="loan" data-testid="tab-loan">
-                        <Banknote className="h-4 w-4 mr-2" />
-                        Loan
+                      <TabsTrigger value="loan" data-testid="tab-loan" className="flex items-center gap-2">
+                        <Banknote className="h-4 w-4" />
+                        <span>Loan</span>
                       </TabsTrigger>
                     </TabsList>
 
+                    {/* Percentage Calculator */}
                     <TabsContent value="percentage" className="space-y-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="percent-value">Value</Label>
-                        <Input id="percent-value" type="number" placeholder="50" data-testid="input-percent-value" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="percent-total">Total</Label>
-                        <Input id="percent-total" type="number" placeholder="200" data-testid="input-percent-total" />
-                      </div>
-                      <Button onClick={() => {
-                        const value = (document.getElementById("percent-value") as HTMLInputElement).value;
-                        const total = (document.getElementById("percent-total") as HTMLInputElement).value;
-                        calculatePercentage(value, total);
-                      }} className="w-full" data-testid="button-calc-percentage">Calculate</Button>
+                      <Form {...percentageForm}>
+                        <form onSubmit={percentageForm.handleSubmit((data) => percentageMutation.mutate(data))} className="space-y-4">
+                          <FormField
+                            control={percentageForm.control}
+                            name="value"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Value</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    type="number"
+                                    step="0.01"
+                                    placeholder="50"
+                                    {...field}
+                                    data-testid="input-percent-value"
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          <FormField
+                            control={percentageForm.control}
+                            name="total"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Total</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    type="number"
+                                    step="0.01"
+                                    placeholder="200"
+                                    {...field}
+                                    data-testid="input-percent-total"
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          <Button 
+                            type="submit" 
+                            className="w-full" 
+                            disabled={percentageMutation.isPending}
+                            data-testid="button-calc-percentage"
+                          >
+                            {percentageMutation.isPending && <Loader2 className="h-4 w-4 animate-spin mr-2" />}
+                            Calculate
+                          </Button>
+                        </form>
+                      </Form>
+
+                      {percentageResult && (
+                        <Card className="bg-primary/5">
+                          <CardHeader>
+                            <CardTitle>Result</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <p className="text-lg font-semibold" data-testid="text-percentage-result">
+                              {percentageResult}
+                            </p>
+                          </CardContent>
+                        </Card>
+                      )}
                     </TabsContent>
 
+                    {/* Discount Calculator */}
                     <TabsContent value="discount" className="space-y-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="original-price">Original Price ($)</Label>
-                        <Input id="original-price" type="number" placeholder="100" data-testid="input-original-price" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="discount-percent">Discount (%)</Label>
-                        <Input id="discount-percent" type="number" placeholder="20" data-testid="input-discount-percent" />
-                      </div>
-                      <Button onClick={() => {
-                        const price = (document.getElementById("original-price") as HTMLInputElement).value;
-                        const discount = (document.getElementById("discount-percent") as HTMLInputElement).value;
-                        calculateDiscount(price, discount);
-                      }} className="w-full" data-testid="button-calc-discount">Calculate</Button>
+                      <Form {...discountForm}>
+                        <form onSubmit={discountForm.handleSubmit((data) => discountMutation.mutate(data))} className="space-y-4">
+                          <FormField
+                            control={discountForm.control}
+                            name="originalPrice"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Original Price ($)</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    type="number"
+                                    step="0.01"
+                                    placeholder="100"
+                                    {...field}
+                                    data-testid="input-original-price"
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          <FormField
+                            control={discountForm.control}
+                            name="discountPercent"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Discount (%)</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    type="number"
+                                    step="0.01"
+                                    placeholder="20"
+                                    {...field}
+                                    data-testid="input-discount-percent"
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          <Button 
+                            type="submit" 
+                            className="w-full" 
+                            disabled={discountMutation.isPending}
+                            data-testid="button-calc-discount"
+                          >
+                            {discountMutation.isPending && <Loader2 className="h-4 w-4 animate-spin mr-2" />}
+                            Calculate
+                          </Button>
+                        </form>
+                      </Form>
+
+                      {discountResult && (
+                        <Card className="bg-primary/5">
+                          <CardHeader>
+                            <CardTitle>Result</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <p className="text-lg font-semibold" data-testid="text-discount-result">
+                              {discountResult}
+                            </p>
+                          </CardContent>
+                        </Card>
+                      )}
                     </TabsContent>
 
+                    {/* Loan Calculator */}
                     <TabsContent value="loan" className="space-y-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="loan-principal">Loan Amount ($)</Label>
-                        <Input id="loan-principal" type="number" placeholder="200000" data-testid="input-loan-principal" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="loan-rate">Annual Interest Rate (%)</Label>
-                        <Input id="loan-rate" type="number" step="0.01" placeholder="5.5" data-testid="input-loan-rate" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="loan-years">Loan Term (years)</Label>
-                        <Input id="loan-years" type="number" placeholder="30" data-testid="input-loan-years" />
-                      </div>
-                      <Button onClick={() => {
-                        const principal = (document.getElementById("loan-principal") as HTMLInputElement).value;
-                        const rate = (document.getElementById("loan-rate") as HTMLInputElement).value;
-                        const years = (document.getElementById("loan-years") as HTMLInputElement).value;
-                        calculateLoan(principal, rate, years);
-                      }} className="w-full" data-testid="button-calc-loan">Calculate</Button>
+                      <Form {...loanForm}>
+                        <form onSubmit={loanForm.handleSubmit((data) => loanMutation.mutate(data))} className="space-y-4">
+                          <FormField
+                            control={loanForm.control}
+                            name="principal"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Loan Amount ($)</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    type="number"
+                                    step="0.01"
+                                    placeholder="200000"
+                                    {...field}
+                                    data-testid="input-loan-principal"
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          <FormField
+                            control={loanForm.control}
+                            name="annualRate"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Annual Interest Rate (%)</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    type="number"
+                                    step="0.01"
+                                    placeholder="5.5"
+                                    {...field}
+                                    data-testid="input-loan-rate"
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          <FormField
+                            control={loanForm.control}
+                            name="years"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Loan Term (years)</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    type="number"
+                                    step="0.1"
+                                    placeholder="30"
+                                    {...field}
+                                    data-testid="input-loan-years"
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          <Button 
+                            type="submit" 
+                            className="w-full" 
+                            disabled={loanMutation.isPending}
+                            data-testid="button-calc-loan"
+                          >
+                            {loanMutation.isPending && <Loader2 className="h-4 w-4 animate-spin mr-2" />}
+                            Calculate
+                          </Button>
+                        </form>
+                      </Form>
+
+                      {loanResult && (
+                        <Card className="bg-primary/5">
+                          <CardHeader>
+                            <CardTitle>Result</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <p className="text-lg font-semibold" data-testid="text-loan-result">
+                              {loanResult}
+                            </p>
+                          </CardContent>
+                        </Card>
+                      )}
                     </TabsContent>
                   </Tabs>
-
-                  {result && (
-                    <Card className="mt-6 bg-primary/5">
-                      <CardHeader>
-                        <CardTitle>Result</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-lg font-semibold" data-testid="text-result">{result}</p>
-                      </CardContent>
-                    </Card>
-                  )}
                 </CardContent>
               </Card>
             </div>
