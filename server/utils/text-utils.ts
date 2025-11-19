@@ -259,3 +259,115 @@ export function getMostCommonWords(text: string, count: number = 10): Array<{wor
     .sort((a, b) => b.frequency - a.frequency)
     .slice(0, count);
 }
+
+// Crypto & Hashing
+import crypto from 'crypto';
+
+export function generateUUID(): string {
+  return crypto.randomUUID();
+}
+
+export function hashText(text: string, algorithm: 'md5' | 'sha1' | 'sha256' | 'sha512' = 'sha256'): string {
+  return crypto.createHash(algorithm).update(text).digest('hex');
+}
+
+// JSON Formatting
+export function formatJSON(text: string, indent: number = 2): string {
+  const parsed = JSON.parse(text);
+  return JSON.stringify(parsed, null, indent);
+}
+
+export function minifyJSON(text: string): string {
+  const parsed = JSON.parse(text);
+  return JSON.stringify(parsed);
+}
+
+export function validateJSON(text: string): { valid: boolean; error?: string } {
+  try {
+    JSON.parse(text);
+    return { valid: true };
+  } catch (error) {
+    return { valid: false, error: error instanceof Error ? error.message : 'Invalid JSON' };
+  }
+}
+
+// XML Formatting
+export function formatXML(text: string, indent: number = 2): string {
+  const PADDING = ' '.repeat(indent);
+  const reg = /(>)(<)(\/*)/g;
+  let formatted = '';
+  let pad = 0;
+
+  text = text.replace(reg, '$1\n$2$3');
+  const lines = text.split('\n');
+
+  for (let line of lines) {
+    let indentLevel = 0;
+    if (line.match(/.+<\/\w[^>]*>$/)) {
+      indentLevel = 0;
+    } else if (line.match(/^<\/\w/) && pad > 0) {
+      pad -= 1;
+    } else if (line.match(/^<\w[^>]*[^\/]>.*$/)) {
+      indentLevel = 1;
+    } else {
+      indentLevel = 0;
+    }
+
+    formatted += PADDING.repeat(pad) + line + '\n';
+    pad += indentLevel;
+  }
+
+  return formatted.trim();
+}
+
+export function minifyXML(text: string): string {
+  return text.replace(/>\s+</g, '><').trim();
+}
+
+// HTML Formatting
+export function formatHTML(text: string, indent: number = 2): string {
+  return formatXML(text, indent);
+}
+
+export function minifyHTML(text: string): string {
+  return minifyXML(text);
+}
+
+// CSS Formatting
+export function formatCSS(text: string, indent: number = 2): string {
+  const PADDING = ' '.repeat(indent);
+  let formatted = '';
+  let pad = 0;
+
+  text = text.replace(/\s*{\s*/g, ' {\n');
+  text = text.replace(/\s*}\s*/g, '\n}\n');
+  text = text.replace(/\s*;\s*/g, ';\n');
+
+  const lines = text.split('\n').filter(line => line.trim());
+
+  for (let line of lines) {
+    line = line.trim();
+    if (line.endsWith('}')) {
+      pad = Math.max(0, pad - 1);
+      formatted += PADDING.repeat(pad) + line + '\n';
+    } else if (line.endsWith('{')) {
+      formatted += PADDING.repeat(pad) + line + '\n';
+      pad += 1;
+    } else {
+      formatted += PADDING.repeat(pad) + line + '\n';
+    }
+  }
+
+  return formatted.trim();
+}
+
+export function minifyCSS(text: string): string {
+  return text
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/\s+/g, ' ')
+    .replace(/\s*{\s*/g, '{')
+    .replace(/\s*}\s*/g, '}')
+    .replace(/\s*;\s*/g, ';')
+    .replace(/\s*:\s*/g, ':')
+    .trim();
+}

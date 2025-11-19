@@ -477,6 +477,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         case 'titlecase':
           result = textUtils.convertToTitleCase(text);
           break;
+        case 'sentencecase':
+          result = textUtils.convertToSentenceCase(text);
+          break;
         case 'camelcase':
           result = textUtils.convertToCamelCase(text);
           break;
@@ -638,6 +641,102 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error('Text encoding error:', error);
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       res.status(500).json({ error: `Failed to encode/decode text: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/text/uuid', upload.none(), async (req, res) => {
+    try {
+      const { count = 1 } = req.body;
+      const uuids: string[] = [];
+
+      for (let i = 0; i < Math.min(count, 100); i++) {
+        uuids.push(textUtils.generateUUID());
+      }
+
+      res.json({ result: count === 1 ? uuids[0] : uuids });
+
+    } catch (error) {
+      console.error('UUID generation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to generate UUID: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/text/hash', upload.none(), async (req, res) => {
+    try {
+      const { text, algorithm = 'sha256' } = req.body;
+
+      if (!text) {
+        return res.status(400).json({ error: 'No text provided' });
+      }
+
+      const validAlgorithms = ['md5', 'sha1', 'sha256', 'sha512'];
+      if (!validAlgorithms.includes(algorithm)) {
+        return res.status(400).json({ error: 'Invalid algorithm. Use: md5, sha1, sha256, or sha512' });
+      }
+
+      const result = textUtils.hashText(text, algorithm as 'md5' | 'sha1' | 'sha256' | 'sha512');
+      
+      res.json({ result, algorithm });
+
+    } catch (error) {
+      console.error('Hash generation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to generate hash: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/text/format', upload.none(), async (req, res) => {
+    try {
+      const { text, type, action = 'format', indent = 2 } = req.body;
+
+      if (!text) {
+        return res.status(400).json({ error: 'No text provided' });
+      }
+
+      let result: any;
+
+      switch (type) {
+        case 'json':
+          if (action === 'validate') {
+            result = textUtils.validateJSON(text);
+          } else if (action === 'minify') {
+            result = textUtils.minifyJSON(text);
+          } else {
+            result = textUtils.formatJSON(text, indent);
+          }
+          break;
+        case 'xml':
+          if (action === 'minify') {
+            result = textUtils.minifyXML(text);
+          } else {
+            result = textUtils.formatXML(text, indent);
+          }
+          break;
+        case 'html':
+          if (action === 'minify') {
+            result = textUtils.minifyHTML(text);
+          } else {
+            result = textUtils.formatHTML(text, indent);
+          }
+          break;
+        case 'css':
+          if (action === 'minify') {
+            result = textUtils.minifyCSS(text);
+          } else {
+            result = textUtils.formatCSS(text, indent);
+          }
+          break;
+        default:
+          return res.status(400).json({ error: 'Unknown format type. Use: json, xml, html, or css' });
+      }
+
+      res.json({ result });
+
+    } catch (error) {
+      console.error('Formatting error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to format text: ${errorMessage}` });
     }
   });
 
