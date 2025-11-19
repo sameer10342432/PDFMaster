@@ -2741,6 +2741,91 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // ========================================
+  // UNIFIED PROCESSING ENDPOINT
+  // Routes tool requests to appropriate handlers
+  // ========================================
+  app.post('/api/process-pdf', upload.any(), async (req, res) => {
+    try {
+      const toolId = req.body.toolId;
+      const files = req.files as Express.Multer.File[];
+
+      if (!toolId) {
+        return res.status(400).json({ error: 'Tool ID is required' });
+      }
+
+      const tool = allTools.find(t => t.id === toolId);
+      if (!tool) {
+        return res.status(404).json({ error: `Tool not found: ${toolId}` });
+      }
+
+      if (!files || files.length === 0) {
+        return res.status(400).json({ error: 'No files uploaded' });
+      }
+
+      const mergeTools = ['merge-pdf', 'combine-pdf', 'join-pdf-files', 'pdf-merger', 'pdf-combiner', 'append-pdf', 'add-pdf-to-pdf', 'merge-multiple-pdfs', 'combine-pdf-pages', 'interleave-pdf', 'pdf-binder', 'merge-pdf-bookmarks', 'combine-pdf-images', 'merge-pdf-word', 'merge-pdf-alternately'];
+      const splitTools = ['split-pdf', 'pdf-splitter', 'divide-pdf', 'break-pdf', 'extract-pdf-pages', 'pdf-page-extractor', 'delete-pdf-pages'];
+      const compressTools = ['compress-pdf', 'pdf-compressor', 'reduce-pdf-size', 'optimize-pdf'];
+
+      if (mergeTools.includes(toolId)) {
+        if (toolId === 'merge-pdf-alternately') {
+          const result = await pdfUtils.mergePDFsAlternately(files.map(f => f.buffer));
+          const pdfBytes = await result.save();
+          res.setHeader('Content-Type', 'application/pdf');
+          res.setHeader('Content-Disposition', `attachment; filename="${toolId}-result.pdf"`);
+          return res.send(Buffer.from(pdfBytes));
+        } else {
+          const result = await pdfUtils.mergePDFsSequentially(files.map(f => f.buffer));
+          const pdfBytes = await result.save();
+          res.setHeader('Content-Type', 'application/pdf');
+          res.setHeader('Content-Disposition', `attachment; filename="${toolId}-result.pdf"`);
+          return res.send(Buffer.from(pdfBytes));
+        }
+      }
+
+      if (splitTools.includes(toolId)) {
+        const pages = req.body.pages || '1';
+        const result = await pdfUtils.splitPDF(files[0].buffer, pages);
+        
+        if (result.length === 1) {
+          res.setHeader('Content-Type', 'application/pdf');
+          res.setHeader('Content-Disposition', `attachment; filename="${toolId}-page-${pages}.pdf"`);
+          return res.send(result[0]);
+        }
+
+        const zip = archiver('zip', { zlib: { level: 9 } });
+        res.setHeader('Content-Type', 'application/zip');
+        res.setHeader('Content-Disposition', `attachment; filename="${toolId}-pages.zip"`);
+        
+        zip.pipe(res);
+        result.forEach((pdf, index) => {
+          zip.append(pdf, { name: `page-${index + 1}.pdf` });
+        });
+        
+        await zip.finalize();
+        return;
+      }
+
+      if (compressTools.includes(toolId)) {
+        const quality = parseInt(req.body.quality || '50');
+        const result = await pdfUtils.compressPDF(files[0].buffer, quality);
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', `attachment; filename="${toolId}-compressed.pdf"`);
+        return res.send(result);
+      }
+
+      return res.status(501).json({ 
+        error: `Tool '${tool.title}' is coming soon!`,
+        capability: tool.capability 
+      });
+
+    } catch (error) {
+      console.error('Process error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Processing failed: ${errorMessage}` });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
