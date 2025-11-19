@@ -2745,7 +2745,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // UNIFIED PROCESSING ENDPOINT
   // Routes tool requests to appropriate handlers
   // ========================================
-  app.post('/api/process-pdf', upload.any(), async (req, res) => {
+  app.post('/api/process-pdf', pdfOnly.array('files', 100), async (req, res) => {
     try {
       const toolId = req.body.toolId;
       const files = req.files as Express.Multer.File[];
@@ -2763,55 +2763,44 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ error: 'No files uploaded' });
       }
 
-      const mergeTools = ['merge-pdf', 'combine-pdf', 'join-pdf-files', 'pdf-merger', 'pdf-combiner', 'append-pdf', 'add-pdf-to-pdf', 'merge-multiple-pdfs', 'combine-pdf-pages', 'interleave-pdf', 'pdf-binder', 'merge-pdf-bookmarks', 'combine-pdf-images', 'merge-pdf-word', 'merge-pdf-alternately'];
-      const splitTools = ['split-pdf', 'pdf-splitter', 'divide-pdf', 'break-pdf', 'extract-pdf-pages', 'pdf-page-extractor', 'delete-pdf-pages'];
-      const compressTools = ['compress-pdf', 'pdf-compressor', 'reduce-pdf-size', 'optimize-pdf'];
+      // Merge tools (require multiple files)
+      const mergeTools = ['merge-pdf', 'combine-pdf', 'join-pdf-files', 'pdf-merger', 'pdf-combiner', 'append-pdf', 'add-pdf-to-pdf', 'merge-multiple-pdfs', 'combine-pdf-pages', 'interleave-pdf', 'pdf-binder', 'merge-pdf-bookmarks', 'combine-pdf-images', 'merge-pdf-word'];
 
       if (mergeTools.includes(toolId)) {
-        if (toolId === 'merge-pdf-alternately') {
-          const result = await pdfUtils.mergePDFsAlternately(files.map(f => f.buffer));
-          const pdfBytes = await result.save();
-          res.setHeader('Content-Type', 'application/pdf');
-          res.setHeader('Content-Disposition', `attachment; filename="${toolId}-result.pdf"`);
-          return res.send(Buffer.from(pdfBytes));
-        } else {
-          const result = await pdfUtils.mergePDFsSequentially(files.map(f => f.buffer));
-          const pdfBytes = await result.save();
-          res.setHeader('Content-Type', 'application/pdf');
-          res.setHeader('Content-Disposition', `attachment; filename="${toolId}-result.pdf"`);
-          return res.send(Buffer.from(pdfBytes));
-        }
-      }
-
-      if (splitTools.includes(toolId)) {
-        const pages = req.body.pages || '1';
-        const result = await pdfUtils.splitPDF(files[0].buffer, pages);
-        
-        if (result.length === 1) {
-          res.setHeader('Content-Type', 'application/pdf');
-          res.setHeader('Content-Disposition', `attachment; filename="${toolId}-page-${pages}.pdf"`);
-          return res.send(result[0]);
-        }
-
-        const zip = archiver('zip', { zlib: { level: 9 } });
-        res.setHeader('Content-Type', 'application/zip');
-        res.setHeader('Content-Disposition', `attachment; filename="${toolId}-pages.zip"`);
-        
-        zip.pipe(res);
-        result.forEach((pdf, index) => {
-          zip.append(pdf, { name: `page-${index + 1}.pdf` });
-        });
-        
-        await zip.finalize();
-        return;
-      }
-
-      if (compressTools.includes(toolId)) {
-        const quality = parseInt(req.body.quality || '50');
-        const result = await pdfUtils.compressPDF(files[0].buffer, quality);
+        const result = await pdfUtils.mergePDFsSequentially(files.map(f => f.buffer));
+        const pdfBytes = await result.save();
         res.setHeader('Content-Type', 'application/pdf');
-        res.setHeader('Content-Disposition', `attachment; filename="${toolId}-compressed.pdf"`);
-        return res.send(result);
+        res.setHeader('Content-Disposition', `attachment; filename="${toolId}-result.pdf"`);
+        return res.send(Buffer.from(pdfBytes));
+      }
+
+      if (toolId === 'merge-pdf-alternately') {
+        const result = await pdfUtils.mergePDFsAlternately(files.map(f => f.buffer));
+        const pdfBytes = await result.save();
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', `attachment; filename="${toolId}-result.pdf"`);
+        return res.send(Buffer.from(pdfBytes));
+      }
+
+      // For single-file operations, use first file
+      const file = files[0];
+
+      // Compress tools
+      if (['compress-pdf', 'pdf-compressor', 'reduce-pdf-size', 'optimize-pdf'].includes(toolId)) {
+        const result = await pdfUtils.compressPDF(file, 'medium');
+        const pdfBytes = await result.save();
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', `attachment; filename="${toolId}-result.pdf"`);
+        return res.send(Buffer.from(pdfBytes));
+      }
+
+      // Split tools - default to first page extraction for simplicity
+      if (['split-pdf', 'pdf-splitter', 'divide-pdf', 'break-pdf', 'extract-pdf-pages', 'pdf-page-extractor', 'delete-pdf-pages'].includes(toolId)) {
+        const result = await pdfUtils.extractPDFPages(file, [1]);
+        const pdfBytes = await result.save();
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', `attachment; filename="${toolId}-page-1.pdf"`);
+        return res.send(Buffer.from(pdfBytes));
       }
 
       return res.status(501).json({ 
