@@ -10,6 +10,9 @@ import Articles from "@/pages/Articles";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService";
 import ContactUs from "@/pages/ContactUs";
+import QRCodeTools from "@/pages/QRCodeTools";
+import CalculatorTools from "@/pages/CalculatorTools";
+import UnitConverterTools from "@/pages/UnitConverterTools";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -19,6 +22,9 @@ function Router() {
       <Route path="/tools" component={Tools} />
       <Route path="/articles" component={Articles} />
       <Route path="/tool/:id" component={ToolPage} />
+      <Route path="/qr-code-tools" component={QRCodeTools} />
+      <Route path="/calculator-tools" component={CalculatorTools} />
+      <Route path="/unit-converter-tools" component={UnitConverterTools} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-of-service" component={TermsOfService} />
       <Route path="/contact" component={ContactUs} />
