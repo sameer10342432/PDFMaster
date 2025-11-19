@@ -386,3 +386,39 @@ export async function editPDFMetadata(
   
   return pdf;
 }
+
+// Merge multiple PDFs sequentially
+export async function mergePDFsSequentially(pdfBuffers: Buffer[]): Promise<PDFDocument> {
+  const mergedPdf = await PDFDocument.create();
+
+  for (const buffer of pdfBuffers) {
+    const pdf = await PDFDocument.load(buffer);
+    const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
+    copiedPages.forEach((page) => {
+      mergedPdf.addPage(page);
+    });
+  }
+
+  return mergedPdf;
+}
+
+// Merge multiple PDFs alternately (page by page from each)
+export async function mergePDFsAlternately(pdfBuffers: Buffer[]): Promise<PDFDocument> {
+  const mergedPdf = await PDFDocument.create();
+  const loadedPdfs = await Promise.all(
+    pdfBuffers.map(buffer => PDFDocument.load(buffer))
+  );
+
+  const maxPages = Math.max(...loadedPdfs.map(pdf => pdf.getPageCount()));
+
+  for (let pageIndex = 0; pageIndex < maxPages; pageIndex++) {
+    for (const pdf of loadedPdfs) {
+      if (pageIndex < pdf.getPageCount()) {
+        const [copiedPage] = await mergedPdf.copyPages(pdf, [pageIndex]);
+        mergedPdf.addPage(copiedPage);
+      }
+    }
+  }
+
+  return mergedPdf;
+}

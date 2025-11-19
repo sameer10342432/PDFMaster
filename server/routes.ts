@@ -115,11 +115,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
         case 'merge-pdf-bookmarks':
         case 'combine-pdf-images':
         case 'merge-pdf-word':
-          result = await mergePDFs(files);
+          result = await pdfUtils.mergePDFsSequentially(files.map(f => f.buffer));
           break;
 
         case 'merge-pdf-alternately':
-          result = await mergePDFsAlternately(files);
+          result = await pdfUtils.mergePDFsAlternately(files.map(f => f.buffer));
           break;
 
         default:
@@ -907,39 +907,4 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   const httpServer = createServer(app);
   return httpServer;
-}
-
-// Helper functions for PDF merge operations
-async function mergePDFs(files: Express.Multer.File[]): Promise<PDFDocument> {
-  const mergedPdf = await PDFDocument.create();
-
-  for (const file of files) {
-    const pdf = await PDFDocument.load(file.buffer);
-    const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
-    copiedPages.forEach((page) => {
-      mergedPdf.addPage(page);
-    });
-  }
-
-  return mergedPdf;
-}
-
-async function mergePDFsAlternately(files: Express.Multer.File[]): Promise<PDFDocument> {
-  const mergedPdf = await PDFDocument.create();
-  const loadedPdfs = await Promise.all(
-    files.map(file => PDFDocument.load(file.buffer))
-  );
-
-  const maxPages = Math.max(...loadedPdfs.map(pdf => pdf.getPageCount()));
-
-  for (let pageIndex = 0; pageIndex < maxPages; pageIndex++) {
-    for (const pdf of loadedPdfs) {
-      if (pageIndex < pdf.getPageCount()) {
-        const [copiedPage] = await mergedPdf.copyPages(pdf, [pageIndex]);
-        mergedPdf.addPage(copiedPage);
-      }
-    }
-  }
-
-  return mergedPdf;
 }
