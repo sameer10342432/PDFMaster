@@ -10,6 +10,7 @@ import * as textUtils from './utils/text-utils';
 import * as webUtils from './utils/web-utils';
 import * as audioVideoUtils from './utils/audio-video-utils';
 import * as audioVideoValidators from './utils/audio-video-validators';
+import * as imageValidators from './utils/image-validators';
 
 // Configure multer for file uploads
 const upload = multer({ 
@@ -450,155 +451,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error('PDF metadata error:', error);
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       res.status(500).json({ error: `Failed to update metadata: ${errorMessage}` });
-    }
-  });
-
-  // ========================================
-  // IMAGE TOOLS - Compression
-  // ========================================
-  app.post('/api/image/compress', imageOnly.single('file'), async (req, res) => {
-    try {
-      const file = req.file;
-      const quality = parseInt(req.body.quality || '80');
-      const format = req.body.format;
-
-      if (!file) {
-        return res.status(400).json({ error: 'No file uploaded' });
-      }
-
-      const result = await imageUtils.compressImage(file.buffer, quality, format);
-      const outputFormat = format || (file.mimetype.includes('png') ? 'png' : 'jpeg');
-
-      res.setHeader('Content-Type', `image/${outputFormat}`);
-      res.setHeader('Content-Disposition', `attachment; filename="compressed.${outputFormat}"`);
-      res.send(result);
-
-    } catch (error) {
-      console.error('Image compress error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to compress image: ${errorMessage}` });
-    }
-  });
-
-  // ========================================
-  // IMAGE TOOLS - Resize & Crop
-  // ========================================
-  app.post('/api/image/resize', imageOnly.single('file'), async (req, res) => {
-    try {
-      const file = req.file;
-      const width = req.body.width ? parseInt(req.body.width) : undefined;
-      const height = req.body.height ? parseInt(req.body.height) : undefined;
-      const fit = req.body.fit || 'cover';
-
-      if (!file) {
-        return res.status(400).json({ error: 'No file uploaded' });
-      }
-
-      const result = await imageUtils.resizeImage(file.buffer, width, height, fit);
-      const format = file.mimetype.includes('png') ? 'png' : 'jpeg';
-
-      res.setHeader('Content-Type', `image/${format}`);
-      res.setHeader('Content-Disposition', `attachment; filename="resized.${format}"`);
-      res.send(result);
-
-    } catch (error) {
-      console.error('Image resize error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to resize image: ${errorMessage}` });
-    }
-  });
-
-  // ========================================
-  // IMAGE TOOLS - Rotate & Flip
-  // ========================================
-  app.post('/api/image/rotate', imageOnly.single('file'), async (req, res) => {
-    try {
-      const file = req.file;
-      const angle = parseInt(req.body.angle || '90');
-
-      if (!file) {
-        return res.status(400).json({ error: 'No file uploaded' });
-      }
-
-      const result = await imageUtils.rotateImage(file.buffer, angle);
-      const format = file.mimetype.includes('png') ? 'png' : 'jpeg';
-
-      res.setHeader('Content-Type', `image/${format}`);
-      res.setHeader('Content-Disposition', `attachment; filename="rotated.${format}"`);
-      res.send(result);
-
-    } catch (error) {
-      console.error('Image rotate error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to rotate image: ${errorMessage}` });
-    }
-  });
-
-  // ========================================
-  // IMAGE TOOLS - Convert Format
-  // ========================================
-  app.post('/api/image/convert', imageOnly.single('file'), async (req, res) => {
-    try {
-      const file = req.file;
-      const format = req.body.format || 'png';
-
-      if (!file) {
-        return res.status(400).json({ error: 'No file uploaded' });
-      }
-
-      const result = await imageUtils.convertImageFormat(file.buffer, format);
-
-      res.setHeader('Content-Type', `image/${format}`);
-      res.setHeader('Content-Disposition', `attachment; filename="converted.${format}"`);
-      res.send(result);
-
-    } catch (error) {
-      console.error('Image convert error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to convert image: ${errorMessage}` });
-    }
-  });
-
-  // ========================================
-  // IMAGE TOOLS - Filters & Effects
-  // ========================================
-  app.post('/api/image/filter', imageOnly.single('file'), async (req, res) => {
-    try {
-      const file = req.file;
-      const filterType = req.body.filter;
-
-      if (!file) {
-        return res.status(400).json({ error: 'No file uploaded' });
-      }
-
-      let result: Buffer;
-
-      switch (filterType) {
-        case 'grayscale':
-          result = await imageUtils.applyGrayscale(file.buffer);
-          break;
-        case 'blur':
-          result = await imageUtils.applyBlur(file.buffer, parseInt(req.body.sigma || '5'));
-          break;
-        case 'sharpen':
-          result = await imageUtils.applySharpen(file.buffer, parseInt(req.body.sigma || '2'));
-          break;
-        case 'negate':
-          result = await imageUtils.applyNegate(file.buffer);
-          break;
-        default:
-          return res.status(400).json({ error: 'Unknown filter type' });
-      }
-
-      const format = file.mimetype.includes('png') ? 'png' : 'jpeg';
-      res.setHeader('Content-Type', `image/${format}`);
-      res.setHeader('Content-Disposition', `attachment; filename="filtered.${format}"`);
-      res.send(result);
-
-    } catch (error) {
-      console.error('Image filter error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to apply filter: ${errorMessage}` });
     }
   });
 
@@ -1367,6 +1219,347 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
     } catch (error) {
       console.error('Metadata extraction error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Metadata extraction failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // IMAGE COMPRESSION
+  // ========================================
+  app.post('/api/image/compress', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const validation = imageValidators.imageCompressionSchema.safeParse(req.body);
+      if (!validation.success) {
+        return res.status(400).json({ 
+          error: 'Invalid parameters', 
+          details: validation.error.errors.map(e => e.message).join(', ')
+        });
+      }
+
+      const { quality, format } = validation.data;
+      const result = await imageUtils.compressImage(file.buffer, quality, format);
+
+      const outputFormat = format || 'jpeg';
+      res.setHeader('Content-Type', `image/${outputFormat}`);
+      res.setHeader('Content-Disposition', `attachment; filename="compressed.${outputFormat}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Image compression error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Image compression failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // IMAGE CONVERSION
+  // ========================================
+  app.post('/api/image/convert', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const validation = imageValidators.imageConversionSchema.safeParse(req.body);
+      if (!validation.success) {
+        return res.status(400).json({ 
+          error: 'Invalid parameters', 
+          details: validation.error.errors.map(e => e.message).join(', ')
+        });
+      }
+
+      const { outputFormat, quality } = validation.data;
+      const result = await imageUtils.convertImageFormat(file.buffer, outputFormat);
+
+      res.setHeader('Content-Type', `image/${outputFormat}`);
+      res.setHeader('Content-Disposition', `attachment; filename="converted.${outputFormat}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Image conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Image conversion failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // IMAGE RESIZE
+  // ========================================
+  app.post('/api/image/resize', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const validation = imageValidators.imageResizeSchema.safeParse(req.body);
+      if (!validation.success) {
+        return res.status(400).json({ 
+          error: 'Invalid parameters', 
+          details: validation.error.errors.map(e => e.message).join(', ')
+        });
+      }
+
+      const { width, height, fit } = validation.data;
+      imageValidators.validateResizeOperation('resize', width, height);
+      
+      const result = await imageUtils.resizeImage(file.buffer, width, height, fit);
+
+      res.setHeader('Content-Type', file.mimetype);
+      res.setHeader('Content-Disposition', `attachment; filename="resized.${file.originalname.split('.').pop()}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Image resize error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Image resize failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // IMAGE CROP
+  // ========================================
+  app.post('/api/image/crop', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const validation = imageValidators.imageCropSchema.safeParse(req.body);
+      if (!validation.success) {
+        return res.status(400).json({ 
+          error: 'Invalid parameters', 
+          details: validation.error.errors.map(e => e.message).join(', ')
+        });
+      }
+
+      const { left, top, width, height } = validation.data;
+      imageValidators.validateCropOperation('crop', left, top, width, height);
+      
+      const result = await imageUtils.cropImage(file.buffer, left, top, width, height);
+
+      res.setHeader('Content-Type', file.mimetype);
+      res.setHeader('Content-Disposition', `attachment; filename="cropped.${file.originalname.split('.').pop()}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Image crop error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Image crop failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // IMAGE ROTATE & FLIP
+  // ========================================
+  app.post('/api/image/transform', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const { toolId, angle, direction } = req.body;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      let result: Buffer;
+
+      if (toolId?.includes('rotate')) {
+        const validation = imageValidators.imageRotateSchema.safeParse(req.body);
+        if (!validation.success) {
+          return res.status(400).json({ 
+            error: 'Invalid parameters', 
+            details: validation.error.errors.map(e => e.message).join(', ')
+          });
+        }
+        result = await imageUtils.rotateImage(file.buffer, validation.data.angle);
+      } else if (toolId?.includes('flip')) {
+        const validation = imageValidators.imageFlipSchema.safeParse(req.body);
+        if (!validation.success) {
+          return res.status(400).json({ 
+            error: 'Invalid parameters', 
+            details: validation.error.errors.map(e => e.message).join(', ')
+          });
+        }
+        const horizontal = validation.data.direction === 'horizontal' || validation.data.direction === 'both';
+        const vertical = validation.data.direction === 'vertical' || validation.data.direction === 'both';
+        result = await imageUtils.flipImage(file.buffer, horizontal, vertical);
+      } else {
+        return res.status(400).json({ error: 'Unknown transform operation' });
+      }
+
+      res.setHeader('Content-Type', file.mimetype);
+      res.setHeader('Content-Disposition', `attachment; filename="transformed.${file.originalname.split('.').pop()}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Image transform error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Image transform failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // IMAGE FILTERS
+  // ========================================
+  app.post('/api/image/filter', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const { toolId } = req.body;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      let result: Buffer;
+
+      switch (toolId) {
+        case 'grayscale-image':
+        case 'black-and-white':
+          result = await imageUtils.applyGrayscale(file.buffer);
+          break;
+        
+        case 'blur-image':
+          const blurValidation = imageValidators.imageFilterSchema.safeParse(req.body);
+          if (!blurValidation.success) {
+            return res.status(400).json({ error: 'Invalid blur parameters' });
+          }
+          result = await imageUtils.applyBlur(file.buffer, blurValidation.data.sigma);
+          break;
+        
+        case 'sharpen-image':
+          const sharpenValidation = imageValidators.imageFilterSchema.safeParse(req.body);
+          if (!sharpenValidation.success) {
+            return res.status(400).json({ error: 'Invalid sharpen parameters' });
+          }
+          result = await imageUtils.applySharpen(file.buffer, sharpenValidation.data.sigma);
+          break;
+        
+        case 'invert-colors':
+        case 'negate-image':
+          result = await imageUtils.applyNegate(file.buffer);
+          break;
+        
+        default:
+          return res.status(400).json({ error: 'Unknown filter type' });
+      }
+
+      res.setHeader('Content-Type', file.mimetype);
+      res.setHeader('Content-Disposition', `attachment; filename="filtered.${file.originalname.split('.').pop()}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Image filter error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Image filter failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // IMAGE ENHANCEMENT
+  // ========================================
+  app.post('/api/image/enhance', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const validation = imageValidators.imageEnhanceSchema.safeParse(req.body);
+      if (!validation.success) {
+        return res.status(400).json({ 
+          error: 'Invalid parameters', 
+          details: validation.error.errors.map(e => e.message).join(', ')
+        });
+      }
+
+      const { brightness, saturation, hue, contrast } = validation.data;
+      
+      const result = await imageUtils.enhanceImage(file.buffer, {
+        brightness,
+        saturation,
+        hue,
+        contrast
+      });
+
+      res.setHeader('Content-Type', file.mimetype);
+      res.setHeader('Content-Disposition', `attachment; filename="enhanced.${file.originalname.split('.').pop()}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Image enhancement error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Image enhancement failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // IMAGE WATERMARK
+  // ========================================
+  app.post('/api/image/watermark', imageOnly.array('files', 2), async (req, res) => {
+    try {
+      const files = req.files as Express.Multer.File[];
+
+      if (!files || files.length !== 2) {
+        return res.status(400).json({ error: 'Two files required: base image and watermark' });
+      }
+
+      const validation = imageValidators.imageWatermarkSchema.safeParse(req.body);
+      if (!validation.success) {
+        return res.status(400).json({ 
+          error: 'Invalid parameters', 
+          details: validation.error.errors.map(e => e.message).join(', ')
+        });
+      }
+
+      const { position, opacity } = validation.data;
+      
+      const result = await imageUtils.addImageWatermark(
+        files[0].buffer, 
+        files[1].buffer, 
+        position, 
+        opacity
+      );
+
+      res.setHeader('Content-Type', files[0].mimetype);
+      res.setHeader('Content-Disposition', `attachment; filename="watermarked.${files[0].originalname.split('.').pop()}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Image watermark error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Image watermark failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // IMAGE METADATA
+  // ========================================
+  app.post('/api/image/metadata', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const metadata = await imageUtils.getImageMetadata(file.buffer);
+      res.json(metadata);
+
+    } catch (error) {
+      console.error('Image metadata error:', error);
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       res.status(500).json({ error: `Metadata extraction failed: ${errorMessage}` });
     }
