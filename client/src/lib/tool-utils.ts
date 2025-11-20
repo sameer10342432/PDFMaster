@@ -142,6 +142,12 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
   if ((toolId.includes('merge') || toolId.includes('combine') || toolId.includes('join')) && toolType === 'pdf') {
     return '/api/pdf/merge';
   }
+  if (toolId.includes('extract') && toolId.includes('images') && toolType === 'pdf') {
+    return '/api/pdf/extract-images';
+  }
+  if (toolId.includes('reorder') && toolType === 'pdf') {
+    return '/api/pdf/edit';
+  }
   
   // Default: PDF processing
   return '/api/process-pdf';
