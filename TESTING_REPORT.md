@@ -1,6 +1,22 @@
 # PDF & Media Tools - Comprehensive Testing Report
-**Date:** November 19, 2025  
-**Status:** Testing in Progress
+**Date:** November 20, 2025  
+**Status:** Critical Bug Fixed - Testing in Progress
+
+## 🚨 CRITICAL BUG FIXED (November 20, 2025)
+
+**Issue:** Image, Video, and Audio tools were completely broken due to form field name mismatch.
+- **Root Cause:** Frontend was sending file as 'files' (plural) but backend expected 'file' (singular)
+- **Impact:** ALL Image/Video/Audio tools were failing (100+ tools affected)
+- **Fix Applied:**
+  1. Updated `ToolPage.tsx` to dynamically determine correct field name based on endpoint
+  2. Updated `tool-utils.ts` to properly detect PDF merge endpoint (`/api/pdf/merge`)
+  3. Fixed `maxFiles` logic to prevent UI from accepting multiple files when backend only supports single-file uploads
+  
+**Files Changed:**
+- `client/src/pages/ToolPage.tsx` - Dynamic field name logic and maxFiles override
+- `client/src/lib/tool-utils.ts` - PDF merge endpoint detection
+
+**Testing Status:** Ready for comprehensive testing of all Image/Video/Audio tools
 
 ## 📊 Executive Summary
 
