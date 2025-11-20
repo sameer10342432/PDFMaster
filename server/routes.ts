@@ -35,7 +35,9 @@ const imageOnly = multer({
   storage: multer.memoryStorage(),
   limits: { fileSize: 50 * 1024 * 1024 },
   fileFilter: (req, file, cb) => {
-    if (file.mimetype.startsWith('image/')) {
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp', '.tiff', '.svg', '.ico'];
+    const ext = file.originalname.toLowerCase().substring(file.originalname.lastIndexOf('.'));
+    if (file.mimetype.startsWith('image/') || imageExtensions.includes(ext)) {
       cb(null, true);
     } else {
       cb(new Error('Only image files are allowed'));
@@ -47,7 +49,9 @@ const audioOnly = multer({
   storage: multer.memoryStorage(),
   limits: { fileSize: 100 * 1024 * 1024 },
   fileFilter: (req, file, cb) => {
-    if (file.mimetype.startsWith('audio/')) {
+    const audioExtensions = ['.mp3', '.wav', '.ogg', '.flac', '.aac', '.m4a', '.wma', '.aiff', '.opus'];
+    const ext = file.originalname.toLowerCase().substring(file.originalname.lastIndexOf('.'));
+    if (file.mimetype.startsWith('audio/') || audioExtensions.includes(ext)) {
       cb(null, true);
     } else {
       cb(new Error('Only audio files are allowed'));
@@ -59,7 +63,9 @@ const videoOnly = multer({
   storage: multer.memoryStorage(),
   limits: { fileSize: 200 * 1024 * 1024 },
   fileFilter: (req, file, cb) => {
-    if (file.mimetype.startsWith('video/')) {
+    const videoExtensions = ['.mp4', '.avi', '.mov', '.wmv', '.flv', '.mkv', '.webm', '.m4v', '.mpg', '.mpeg'];
+    const ext = file.originalname.toLowerCase().substring(file.originalname.lastIndexOf('.'));
+    if (file.mimetype.startsWith('video/') || videoExtensions.includes(ext)) {
       cb(null, true);
     } else {
       cb(new Error('Only video files are allowed'));
@@ -71,7 +77,12 @@ const audioOrVideo = multer({
   storage: multer.memoryStorage(),
   limits: { fileSize: 200 * 1024 * 1024 },
   fileFilter: (req, file, cb) => {
-    if (file.mimetype.startsWith('audio/') || file.mimetype.startsWith('video/')) {
+    const audioExtensions = ['.mp3', '.wav', '.ogg', '.flac', '.aac', '.m4a', '.wma', '.aiff', '.opus'];
+    const videoExtensions = ['.mp4', '.avi', '.mov', '.wmv', '.flv', '.mkv', '.webm', '.m4v', '.mpg', '.mpeg'];
+    const ext = file.originalname.toLowerCase().substring(file.originalname.lastIndexOf('.'));
+    const isAudio = file.mimetype.startsWith('audio/') || audioExtensions.includes(ext);
+    const isVideo = file.mimetype.startsWith('video/') || videoExtensions.includes(ext);
+    if (isAudio || isVideo) {
       cb(null, true);
     } else {
       cb(new Error('Only audio or video files are allowed'));
