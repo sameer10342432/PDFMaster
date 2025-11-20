@@ -50,6 +50,12 @@ export default function ToolPage() {
     return getMimeTypesForToolType(toolType);
   }, [toolType]);
 
+  // Determine correct maxFiles based on endpoint (not just tool type)
+  // Only PDF merge allows multiple files, all other tools accept single file
+  const actualMaxFiles = useMemo(() => {
+    return processingEndpoint === '/api/pdf/merge' ? 10 : 1;
+  }, [processingEndpoint]);
+
   const isLoading = toolLoading;
 
   if (isLoading) {
@@ -235,7 +241,7 @@ export default function ToolPage() {
               <Card className="p-8 space-y-8">
                 <FileUploadZone 
                   onFilesChange={setFiles}
-                  maxFiles={toolConfig.maxFiles}
+                  maxFiles={actualMaxFiles}
                   acceptedFileTypes={toolConfig.acceptedFileTypes}
                   uploadLabel={toolConfig.uploadLabel}
                   allowedMimeTypes={mimeTypes}

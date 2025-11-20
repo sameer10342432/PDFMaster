@@ -138,6 +138,11 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
     return '/api/audio/metadata';
   }
   
+  // PDF tools - must check merge BEFORE default
+  if ((toolId.includes('merge') || toolId.includes('combine') || toolId.includes('join')) && toolType === 'pdf') {
+    return '/api/pdf/merge';
+  }
+  
   // Default: PDF processing
   return '/api/process-pdf';
 }
@@ -157,21 +162,21 @@ export function getToolConfig(toolType: ToolType): ToolConfig {
       uploadLabel: 'Image Files',
       processingEndpoint: '/api/image/compress',
       outputFileExtension: 'png',
-      maxFiles: 10,
+      maxFiles: 1,
     },
     video: {
       acceptedFileTypes: '.mp4,.avi,.mov,.wmv,.flv,.mkv,.webm,video/*',
       uploadLabel: 'Video Files',
       processingEndpoint: '/api/video/convert',
       outputFileExtension: 'mp4',
-      maxFiles: 5,
+      maxFiles: 1,
     },
     audio: {
       acceptedFileTypes: '.mp3,.wav,.ogg,.flac,.aac,.m4a,.wma,.aiff,audio/*',
       uploadLabel: 'Audio Files',
       processingEndpoint: '/api/audio/convert',
       outputFileExtension: 'mp3',
-      maxFiles: 10,
+      maxFiles: 1,
     },
     archive: {
       acceptedFileTypes: '.zip,.rar,.7z,.tar,.gz',
