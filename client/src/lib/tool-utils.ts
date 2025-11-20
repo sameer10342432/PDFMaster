@@ -216,6 +216,38 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
     if (lowerToolId.includes('password') || lowerToolId.includes('protect') || lowerToolId.includes('encrypt') || lowerToolId.includes('secure')) {
       return '/api/pdf/encrypt';
     }
+    // PDF to Word conversion
+    if (lowerToolId.includes('pdf-to-word') || lowerToolId.includes('pdf-to-docx') || lowerToolId.includes('pdf-to-doc')) {
+      return '/api/convert/pdf-to-word';
+    }
+    // PDF to Excel conversion
+    if (lowerToolId.includes('pdf-to-excel') || lowerToolId.includes('pdf-to-xlsx') || lowerToolId.includes('pdf-to-xls') || lowerToolId.includes('pdf-to-csv')) {
+      return '/api/convert/pdf-to-excel';
+    }
+    // PDF to PowerPoint conversion
+    if (lowerToolId.includes('pdf-to-ppt') || lowerToolId.includes('pdf-to-pptx') || lowerToolId.includes('pdf-to-powerpoint')) {
+      return '/api/convert/pdf-to-excel'; // Use Excel endpoint as fallback for now
+    }
+    // Word to PDF conversion
+    if (lowerToolId.includes('word-to-pdf') || lowerToolId.includes('docx-to-pdf') || lowerToolId.includes('doc-to-pdf')) {
+      return '/api/convert/word-to-pdf';
+    }
+    // Excel to PDF conversion
+    if (lowerToolId.includes('excel-to-pdf') || lowerToolId.includes('xlsx-to-pdf') || lowerToolId.includes('xls-to-pdf') || lowerToolId.includes('csv-to-pdf')) {
+      return '/api/convert/excel-to-pdf';
+    }
+    // PowerPoint to PDF conversion
+    if (lowerToolId.includes('ppt-to-pdf') || lowerToolId.includes('pptx-to-pdf') || lowerToolId.includes('powerpoint-to-pdf')) {
+      return '/api/convert/ppt-to-pdf';
+    }
+    // HTML to Word conversion
+    if (lowerToolId.includes('html-to-word') || lowerToolId.includes('html-to-docx') || lowerToolId.includes('webpage-to-word')) {
+      return '/api/convert/html-to-word';
+    }
+    // HTML to PDF conversion
+    if (lowerToolId.includes('html-to-pdf') || lowerToolId.includes('webpage-to-pdf')) {
+      return '/api/convert/html-to-pdf';
+    }
     // Unmapped PDF tool - configuration error
     console.error(`[Tool Routing] No endpoint mapping found for PDF tool: ${toolId}. Tool configuration is incomplete.`);
     return '';

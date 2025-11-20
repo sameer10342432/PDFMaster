@@ -13,6 +13,7 @@ import * as audioVideoUtils from './utils/audio-video-utils';
 import * as audioVideoValidators from './utils/audio-video-validators';
 import * as imageValidators from './utils/image-validators';
 import * as ocrUtils from './utils/ocr-utils';
+import * as docConverter from './utils/document-converter';
 
 // Configure multer for file uploads
 const upload = multer({ 
@@ -663,6 +664,149 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error('Image OCR error:', error);
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       res.status(500).json({ error: `Failed to perform OCR on image: ${errorMessage}` });
+    }
+  });
+
+  // DOCUMENT CONVERSION TOOLS
+  // ========================================
+  
+  app.post('/api/convert/pdf-to-word', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No PDF file uploaded' });
+      }
+
+      const docxBuffer = await docConverter.pdfToWord(file.buffer);
+
+      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace('.pdf', '.docx')}"`);
+      res.send(docxBuffer);
+
+    } catch (error) {
+      console.error('PDF to Word conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert PDF to Word: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/pdf-to-excel', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No PDF file uploaded' });
+      }
+
+      const xlsxBuffer = await docConverter.pdfToExcel(file.buffer);
+
+      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace('.pdf', '.xlsx')}"`);
+      res.send(xlsxBuffer);
+
+    } catch (error) {
+      console.error('PDF to Excel conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert PDF to Excel: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/word-to-pdf', upload.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No Word file uploaded' });
+      }
+
+      const pdfBuffer = await docConverter.wordToPdf(file.buffer);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.(docx?|odt)$/, '.pdf')}"`);
+      res.send(pdfBuffer);
+
+    } catch (error) {
+      console.error('Word to PDF conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert Word to PDF: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/excel-to-pdf', upload.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No Excel file uploaded' });
+      }
+
+      const pdfBuffer = await docConverter.excelToPdf(file.buffer);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.(xlsx?|ods|csv)$/, '.pdf')}"`);
+      res.send(pdfBuffer);
+
+    } catch (error) {
+      console.error('Excel to PDF conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert Excel to PDF: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/ppt-to-pdf', upload.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No PowerPoint file uploaded' });
+      }
+
+      const pdfBuffer = await docConverter.pptToPdf(file.buffer);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.(pptx?|odp)$/, '.pdf')}"`);
+      res.send(pdfBuffer);
+
+    } catch (error) {
+      console.error('PPT to PDF conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert PowerPoint to PDF: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/html-to-word', upload.none(), async (req, res) => {
+    try {
+      const htmlContent = req.body.html;
+      if (!htmlContent) {
+        return res.status(400).json({ error: 'No HTML content provided' });
+      }
+
+      const docxBuffer = await docConverter.htmlToWord(htmlContent);
+
+      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+      res.setHeader('Content-Disposition', 'attachment; filename="document.docx"');
+      res.send(docxBuffer);
+
+    } catch (error) {
+      console.error('HTML to Word conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert HTML to Word: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/html-to-pdf', upload.none(), async (req, res) => {
+    try {
+      const htmlContent = req.body.html;
+      if (!htmlContent) {
+        return res.status(400).json({ error: 'No HTML content provided' });
+      }
+
+      const pdfBuffer = await docConverter.htmlToPdf(htmlContent);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', 'attachment; filename="document.pdf"');
+      res.send(pdfBuffer);
+
+    } catch (error) {
+      console.error('HTML to PDF conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert HTML to PDF: ${errorMessage}` });
     }
   });
 
