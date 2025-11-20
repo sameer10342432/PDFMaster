@@ -92,6 +92,9 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
   // IMAGE TOOLS
   // ========================================
   if (toolType === 'image') {
+    if (lowerToolId.includes('image-to-text') || lowerToolId.includes('extract-text')) {
+      return '/api/image/ocr';
+    }
     if (lowerToolId.includes('compress')) {
       return '/api/image/compress';
     }
@@ -194,6 +197,25 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
     if (lowerToolId.includes('reorder') || lowerToolId.includes('reverse')) {
       return '/api/pdf/edit';
     }
+    // PDF OCR operations
+    if (lowerToolId.includes('ocr') || lowerToolId.includes('searchable') || lowerToolId.includes('scanned')) {
+      if (lowerToolId.includes('searchable') || lowerToolId.includes('pdf-to-searchable')) {
+        return '/api/pdf/ocr-searchable';
+      }
+      return '/api/pdf/ocr';
+    }
+    // PDF to text extraction
+    if (lowerToolId.includes('pdf-to-text') || lowerToolId.includes('pdf-to-txt') || (lowerToolId.includes('extract') && lowerToolId.includes('text'))) {
+      return '/api/pdf/ocr';
+    }
+    // PDF unlock and decrypt - CHECK FIRST before password/protect
+    if (lowerToolId.includes('unlock') || lowerToolId.includes('decrypt') || lowerToolId.includes('remove-password') || lowerToolId.includes('unlocker')) {
+      return '/api/pdf/decrypt';
+    }
+    // PDF security and password protection
+    if (lowerToolId.includes('password') || lowerToolId.includes('protect') || lowerToolId.includes('encrypt') || lowerToolId.includes('secure')) {
+      return '/api/pdf/encrypt';
+    }
     // Unmapped PDF tool - configuration error
     console.error(`[Tool Routing] No endpoint mapping found for PDF tool: ${toolId}. Tool configuration is incomplete.`);
     return '';
@@ -266,6 +288,16 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
         return '/api/archive/create-tar';
       }
       return '/api/archive/extract-tar';
+    }
+    // 7Z operations
+    if (lowerToolId.includes('7z') || lowerToolId.includes('seven')) {
+      if (lowerToolId.includes('extract') || lowerToolId.includes('un-7z') || lowerToolId.includes('decompress')) {
+        return '/api/archive/extract-7z';
+      }
+      if (lowerToolId.includes('create') || lowerToolId.includes('compress')) {
+        return '/api/archive/create-7z';
+      }
+      return '/api/archive/extract-7z';
     }
     // Default to ZIP if no specific format
     if (lowerToolId.includes('extract') || lowerToolId.includes('unzip') || lowerToolId.includes('decompress')) {

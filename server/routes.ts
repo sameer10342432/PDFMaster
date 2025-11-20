@@ -12,6 +12,7 @@ import * as webUtils from './utils/web-utils';
 import * as audioVideoUtils from './utils/audio-video-utils';
 import * as audioVideoValidators from './utils/audio-video-validators';
 import * as imageValidators from './utils/image-validators';
+import * as ocrUtils from './utils/ocr-utils';
 
 // Configure multer for file uploads
 const upload = multer({ 
@@ -506,6 +507,162 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error('PDF metadata error:', error);
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       res.status(500).json({ error: `Failed to update metadata: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // PDF TOOLS - Security & Password Protection
+  // ========================================
+  app.post('/api/pdf/encrypt', upload.fields([{ name: 'file', maxCount: 1 }, { name: 'files', maxCount: 1 }]), async (req, res) => {
+    try {
+      const file = (req.files as any)?.file?.[0] || (req.files as any)?.files?.[0] || req.file;
+      const password = req.body.password || 'password123';
+      const ownerPassword = req.body.ownerPassword || password;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const pdfDoc = await PDFDocument.load(file.buffer, { ignoreEncryption: true });
+      
+      pdfDoc.encrypt({
+        userPassword: password,
+        ownerPassword: ownerPassword,
+        permissions: {
+          printing: 'highResolution',
+          modifying: false,
+          copying: false,
+          annotating: true,
+          fillingForms: true,
+          contentAccessibility: true,
+          documentAssembly: false,
+        }
+      });
+
+      const pdfBytes = await pdfDoc.save();
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="protected.pdf"`);
+      res.send(Buffer.from(pdfBytes));
+
+    } catch (error) {
+      console.error('PDF encryption error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to encrypt PDF: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/pdf/decrypt', upload.fields([{ name: 'file', maxCount: 1 }, { name: 'files', maxCount: 1 }]), async (req, res) => {
+    try {
+      const file = (req.files as any)?.file?.[0] || (req.files as any)?.files?.[0] || req.file;
+      const password = req.body.password || '';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const pdfDoc = await PDFDocument.load(file.buffer, { 
+        password: password,
+        ignoreEncryption: true 
+      });
+
+      const pdfBytes = await pdfDoc.save();
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="unlocked.pdf"`);
+      res.send(Buffer.from(pdfBytes));
+
+    } catch (error) {
+      console.error('PDF decryption error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to decrypt PDF: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // PDF TOOLS - OCR & Text Extraction
+  // ========================================
+  app.post('/api/pdf/ocr', upload.fields([{ name: 'file', maxCount: 1 }, { name: 'files', maxCount: 1 }]), async (req, res) => {
+    try {
+      const file = (req.files as any)?.file?.[0] || (req.files as any)?.files?.[0] || req.file;
+      const options = JSON.parse(req.body.options || '{}');
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      let result: string;
+      const isPDF = file.mimetype === 'application/pdf';
+
+      if (isPDF) {
+        result = await ocrUtils.performOCROnPDF(file.buffer, {
+          language: options.language || 'eng',
+          outputFormat: 'text'
+        });
+      } else {
+        result = await ocrUtils.performOCROnImage(file.buffer, {
+          language: options.language || 'eng',
+          outputFormat: 'text'
+        });
+      }
+
+      res.setHeader('Content-Type', 'text/plain');
+      res.setHeader('Content-Disposition', `attachment; filename="extracted-text.txt"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('OCR error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to perform OCR: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/pdf/ocr-searchable', upload.fields([{ name: 'file', maxCount: 1 }, { name: 'files', maxCount: 1 }]), async (req, res) => {
+    try {
+      const file = (req.files as any)?.file?.[0] || (req.files as any)?.files?.[0] || req.file;
+      const options = JSON.parse(req.body.options || '{}');
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const pdfBytes = await ocrUtils.createSearchablePDF(file.buffer, {
+        language: options.language || 'eng'
+      });
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="searchable.pdf"`);
+      res.send(Buffer.from(pdfBytes));
+
+    } catch (error) {
+      console.error('Searchable PDF error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to create searchable PDF: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/image/ocr', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const options = JSON.parse(req.body.options || '{}');
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await ocrUtils.performOCROnImage(file.buffer, {
+        language: options.language || 'eng',
+        outputFormat: 'text'
+      });
+
+      res.setHeader('Content-Type', 'text/plain');
+      res.setHeader('Content-Disposition', `attachment; filename="extracted-text.txt"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Image OCR error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to perform OCR on image: ${errorMessage}` });
     }
   });
 
@@ -1360,6 +1517,90 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error('Archive listing error:', error);
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       res.status(500).json({ error: `Failed to list archive contents: ${errorMessage}` });
+    }
+  });
+
+  // 7Z Archive Tools
+  app.post('/api/archive/create-7z', upload.array('files', 50), async (req, res) => {
+    try {
+      const files = req.files as Express.Multer.File[];
+      if (!files || files.length === 0) {
+        return res.status(400).json({ error: 'No files provided' });
+      }
+
+      const Seven = (await import('node-7z')).default;
+      const path = await import('path');
+      const fs = await import('fs/promises');
+      const os = await import('os');
+
+      const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), '7z-create-'));
+      const archivePath = path.join(tempDir, 'archive.7z');
+
+      for (const file of files) {
+        const filePath = path.join(tempDir, file.originalname);
+        await fs.writeFile(filePath, file.buffer);
+      }
+
+      await Seven.add(archivePath, path.join(tempDir, '*'), {
+        $bin: '7z'
+      });
+
+      const archiveBuffer = await fs.readFile(archivePath);
+      await fs.rm(tempDir, { recursive: true, force: true });
+
+      res.setHeader('Content-Type', 'application/x-7z-compressed');
+      res.setHeader('Content-Disposition', 'attachment; filename="archive.7z"');
+      res.send(archiveBuffer);
+
+    } catch (error) {
+      console.error('7Z creation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to create 7Z archive: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/archive/extract-7z', upload.single('file'), async (req, res) => {
+    try {
+      if (!req.file) {
+        return res.status(400).json({ error: 'No 7Z file provided' });
+      }
+
+      const Seven = (await import('node-7z')).default;
+      const path = await import('path');
+      const fs = await import('fs/promises');
+      const os = await import('os');
+      const archiver = (await import('archiver')).default;
+
+      const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), '7z-extract-'));
+      const archivePath = path.join(tempDir, 'input.7z');
+      const extractPath = path.join(tempDir, 'extracted');
+
+      await fs.writeFile(archivePath, req.file.buffer);
+      await fs.mkdir(extractPath);
+
+      await Seven.extractFull(archivePath, extractPath, {
+        $bin: '7z'
+      });
+
+      const archive = archiver('zip', { zlib: { level: 9 } });
+      const buffers: Buffer[] = [];
+
+      archive.on('data', (chunk: Buffer) => buffers.push(chunk));
+      archive.on('end', async () => {
+        await fs.rm(tempDir, { recursive: true, force: true });
+        const zipBuffer = Buffer.concat(buffers);
+        res.setHeader('Content-Type', 'application/zip');
+        res.setHeader('Content-Disposition', 'attachment; filename="extracted.zip"');
+        res.send(zipBuffer);
+      });
+
+      archive.directory(extractPath, false);
+      archive.finalize();
+
+    } catch (error) {
+      console.error('7Z extraction error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to extract 7Z archive: ${errorMessage}` });
     }
   });
 
