@@ -750,65 +750,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.post('/api/convert/ppt-to-pdf', upload.single('file'), async (req, res) => {
-    try {
-      const file = req.file;
-      if (!file) {
-        return res.status(400).json({ error: 'No PowerPoint file uploaded' });
-      }
+  // Note: PPT to PDF conversion endpoint removed temporarily  
+  // Requires proper PPT processing library (officegen/pptxgenjs) integration
+  // Current implementation only generates placeholder PDF
+  // Will be re-implemented in Phase 3 with full PPT support
 
-      const pdfBuffer = await docConverter.pptToPdf(file.buffer);
-
-      res.setHeader('Content-Type', 'application/pdf');
-      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.(pptx?|odp)$/, '.pdf')}"`);
-      res.send(pdfBuffer);
-
-    } catch (error) {
-      console.error('PPT to PDF conversion error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to convert PowerPoint to PDF: ${errorMessage}` });
-    }
-  });
-
-  app.post('/api/convert/html-to-word', upload.none(), async (req, res) => {
-    try {
-      const htmlContent = req.body.html;
-      if (!htmlContent) {
-        return res.status(400).json({ error: 'No HTML content provided' });
-      }
-
-      const docxBuffer = await docConverter.htmlToWord(htmlContent);
-
-      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
-      res.setHeader('Content-Disposition', 'attachment; filename="document.docx"');
-      res.send(docxBuffer);
-
-    } catch (error) {
-      console.error('HTML to Word conversion error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to convert HTML to Word: ${errorMessage}` });
-    }
-  });
-
-  app.post('/api/convert/html-to-pdf', upload.none(), async (req, res) => {
-    try {
-      const htmlContent = req.body.html;
-      if (!htmlContent) {
-        return res.status(400).json({ error: 'No HTML content provided' });
-      }
-
-      const pdfBuffer = await docConverter.htmlToPdf(htmlContent);
-
-      res.setHeader('Content-Type', 'application/pdf');
-      res.setHeader('Content-Disposition', 'attachment; filename="document.pdf"');
-      res.send(pdfBuffer);
-
-    } catch (error) {
-      console.error('HTML to PDF conversion error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to convert HTML to PDF: ${errorMessage}` });
-    }
-  });
+  // Note: HTML conversion endpoints removed temporarily
+  // These require special handling for raw HTML input vs file uploads
+  // Will be re-implemented in future with proper frontend integration
 
   // ========================================
   
