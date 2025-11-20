@@ -34,7 +34,7 @@ export default function ToolPage() {
   // Determine tool type and configuration
   const toolType = useMemo(() => {
     if (!tool) return 'pdf';
-    return getToolType(tool.category);
+    return getToolType(tool.category, tool.id);
   }, [tool]);
 
   const toolConfig = useMemo(() => {

@@ -10,9 +10,39 @@ export interface ToolConfig {
   maxFiles: number;
 }
 
-// Determine tool type from category
-export function getToolType(category: string): ToolType {
+// Determine tool type from category and toolId
+export function getToolType(category: string, toolId?: string): ToolType {
   const lowerCategory = category.toLowerCase();
+  const lowerToolId = toolId?.toLowerCase() || '';
+  
+  // Special cases: Video-to-X converters (input is video, even if category says audio/image)
+  // Handles: video-to-mp3, mp4-to-mp3, avi-to-wav, mkv-to-audio, etc.
+  const videoFormats = ['video', 'mp4', 'avi', 'mov', 'mkv', 'wmv', 'flv', 'webm', 'm4v', 'mpg', 'mpeg'];
+  const isVideoToAudioConverter = videoFormats.some(format => 
+    lowerToolId.startsWith(`${format}-to-`) || lowerToolId.includes(`${format}-to-mp3`) || lowerToolId.includes(`${format}-to-wav`)
+  );
+  
+  if (isVideoToAudioConverter || 
+      lowerToolId.includes('extract-audio-from-video') ||
+      lowerToolId.includes('remove-audio-from-video') ||
+      lowerToolId.includes('add-audio-to-video') ||
+      lowerToolId.includes('mute-video')) {
+    return 'video';
+  }
+  
+  // GIF tools - check if converting TO/FROM GIF
+  if (lowerCategory.includes('gif')) {
+    // If converting TO GIF from video, input is video
+    if (lowerToolId.includes('video-to-gif') || lowerToolId.includes('mp4-to-gif')) {
+      return 'video';
+    }
+    // If converting FROM GIF to video, input is GIF (image)
+    if (lowerToolId.includes('gif-to-mp4') || lowerToolId.includes('gif-to-video')) {
+      return 'image';
+    }
+    // Default GIF tools to image
+    return 'image';
+  }
   
   if (lowerCategory.includes('pdf') || lowerCategory.includes('document')) {
     return 'pdf';
