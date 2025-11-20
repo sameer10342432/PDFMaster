@@ -145,7 +145,8 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
   if (toolId.includes('extract') && toolId.includes('images') && toolType === 'pdf') {
     return '/api/pdf/extract-images';
   }
-  if (toolId.includes('reorder') && toolType === 'pdf') {
+  // PDF edit operations that work without extra UI parameters
+  if ((toolId.includes('reorder') || toolId.includes('reverse')) && toolType === 'pdf') {
     return '/api/pdf/edit';
   }
   

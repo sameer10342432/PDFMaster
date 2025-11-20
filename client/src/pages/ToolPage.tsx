@@ -239,32 +239,59 @@ export default function ToolPage() {
           <section className="py-12">
             <div className="container mx-auto max-w-3xl px-4">
               <Card className="p-8 space-y-8">
-                <FileUploadZone 
-                  onFilesChange={setFiles}
-                  maxFiles={actualMaxFiles}
-                  acceptedFileTypes={toolConfig.acceptedFileTypes}
-                  uploadLabel={toolConfig.uploadLabel}
-                  allowedMimeTypes={mimeTypes}
-                />
+                {tool.capability === "implemented" ? (
+                  <>
+                    <FileUploadZone 
+                      onFilesChange={setFiles}
+                      maxFiles={actualMaxFiles}
+                      acceptedFileTypes={toolConfig.acceptedFileTypes}
+                      uploadLabel={toolConfig.uploadLabel}
+                      allowedMimeTypes={mimeTypes}
+                    />
 
-                {files.length > 0 && (
-                  <div className="flex justify-center">
-                    <Button
-                      size="lg"
-                      onClick={handleProcess}
-                      disabled={isProcessing}
-                      className="gap-2"
-                      data-testid="button-process-file"
-                    >
-                      {isProcessing ? (
-                        <>Processing...</>
-                      ) : (
-                        <>
-                          <Download className="h-5 w-5" />
-                          Process & Download
-                        </>
-                      )}
-                    </Button>
+                    {files.length > 0 && (
+                      <div className="flex justify-center">
+                        <Button
+                          size="lg"
+                          onClick={handleProcess}
+                          disabled={isProcessing}
+                          className="gap-2"
+                          data-testid="button-process-file"
+                        >
+                          {isProcessing ? (
+                            <>Processing...</>
+                          ) : (
+                            <>
+                              <Download className="h-5 w-5" />
+                              Process & Download
+                            </>
+                          )}
+                        </Button>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <div className="text-center space-y-4 py-12" data-testid="coming-soon-message">
+                    <div className="flex justify-center">
+                      <div className="rounded-full bg-muted p-4">
+                        <FileText className="w-12 h-12 text-muted-foreground" />
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-semibold">
+                      {tool.capability === "requires-service" ? "External Service Required" : "Coming Soon"}
+                    </h3>
+                    <p className="text-muted-foreground max-w-md mx-auto">
+                      {tool.capability === "requires-service" 
+                        ? "This tool requires external API services to function. We're working on integrating the necessary services."
+                        : "This tool is currently under development. We're working hard to bring it to you soon!"}
+                    </p>
+                    <div className="flex justify-center gap-4 pt-4">
+                      <Link href="/tools">
+                        <Button variant="outline">
+                          Browse Other Tools
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
                 )}
               </Card>
