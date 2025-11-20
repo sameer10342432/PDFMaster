@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useRoute, Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet";
@@ -11,6 +11,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { getToolIcon } from "@/lib/tool-icons";
+import { getToolType, getToolConfig, getProcessingEndpoint, getMimeTypesForToolType } from "@/lib/tool-utils";
 import type { Tool } from "@shared/schema";
 import { Download, ArrowRight, CheckCircle2, FileText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -29,6 +30,25 @@ export default function ToolPage() {
   const { data: allTools = [] } = useQuery<Tool[]>({
     queryKey: ['/api/tools'],
   });
+
+  // Determine tool type and configuration
+  const toolType = useMemo(() => {
+    if (!tool) return 'pdf';
+    return getToolType(tool.category);
+  }, [tool]);
+
+  const toolConfig = useMemo(() => {
+    return getToolConfig(toolType);
+  }, [toolType]);
+
+  const processingEndpoint = useMemo(() => {
+    if (!tool) return '/api/process-pdf';
+    return getProcessingEndpoint(tool.id, toolType);
+  }, [tool, toolType]);
+
+  const mimeTypes = useMemo(() => {
+    return getMimeTypesForToolType(toolType);
+  }, [toolType]);
 
   const isLoading = toolLoading;
 
@@ -74,7 +94,7 @@ export default function ToolPage() {
     if (files.length === 0) {
       toast({
         title: "No files selected",
-        description: "Please upload at least one PDF file to continue.",
+        description: `Please upload at least one file to continue.`,
         variant: "destructive",
       });
       return;
@@ -89,13 +109,13 @@ export default function ToolPage() {
       });
       formData.append('toolId', tool.id);
 
-      const response = await fetch('/api/process-pdf', {
+      const response = await fetch(processingEndpoint, {
         method: 'POST',
         body: formData,
       });
 
       if (!response.ok) {
-        let errorMessage = 'There was an error processing your PDF files. Please try again.';
+        let errorMessage = `There was an error processing your files. Please try again.`;
         
         try {
           const errorData = await response.json();
@@ -117,10 +137,10 @@ export default function ToolPage() {
 
       const blob = await response.blob();
       
-      if (!blob || blob.size === 0 || blob.type !== 'application/pdf') {
+      if (!blob || blob.size === 0) {
         toast({
-          title: "Invalid PDF",
-          description: "The downloaded file is not a valid PDF. Please try again.",
+          title: "Invalid file",
+          description: "The downloaded file is invalid. Please try again.",
           variant: "destructive",
         });
         return;
@@ -129,7 +149,7 @@ export default function ToolPage() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `${tool.id}-result.pdf`;
+      a.download = `${tool.id}-result.${toolConfig.outputFileExtension}`;
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);
@@ -137,12 +157,12 @@ export default function ToolPage() {
 
       toast({
         title: "Success!",
-        description: "Your PDF has been processed and downloaded.",
+        description: "Your file has been processed and downloaded.",
       });
 
       setFiles([]);
     } catch (error) {
-      console.error('PDF processing error:', error);
+      console.error('File processing error:', error);
       const errorMessage = error instanceof Error ? error.message : 'An unexpected error occurred. Please try again.';
       
       toast({
@@ -198,7 +218,13 @@ export default function ToolPage() {
           <section className="py-12">
             <div className="container mx-auto max-w-3xl px-4">
               <Card className="p-8 space-y-8">
-                <FileUploadZone onFilesChange={setFiles} />
+                <FileUploadZone 
+                  onFilesChange={setFiles}
+                  maxFiles={toolConfig.maxFiles}
+                  acceptedFileTypes={toolConfig.acceptedFileTypes}
+                  uploadLabel={toolConfig.uploadLabel}
+                  allowedMimeTypes={mimeTypes}
+                />
 
                 {files.length > 0 && (
                   <div className="flex justify-center">
@@ -207,14 +233,14 @@ export default function ToolPage() {
                       onClick={handleProcess}
                       disabled={isProcessing}
                       className="gap-2"
-                      data-testid="button-process-pdf"
+                      data-testid="button-process-file"
                     >
                       {isProcessing ? (
                         <>Processing...</>
                       ) : (
                         <>
                           <Download className="h-5 w-5" />
-                          Process & Download PDF
+                          Process & Download
                         </>
                       )}
                     </Button>

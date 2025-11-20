@@ -13,9 +13,18 @@ interface UploadedFile {
 interface FileUploadZoneProps {
   onFilesChange: (files: File[]) => void;
   maxFiles?: number;
+  acceptedFileTypes?: string;
+  uploadLabel?: string;
+  allowedMimeTypes?: string[];
 }
 
-export function FileUploadZone({ onFilesChange, maxFiles = 10 }: FileUploadZoneProps) {
+export function FileUploadZone({ 
+  onFilesChange, 
+  maxFiles = 10,
+  acceptedFileTypes = '.pdf,application/pdf',
+  uploadLabel = 'PDF Files',
+  allowedMimeTypes = ['application/pdf']
+}: FileUploadZoneProps) {
   const [files, setFiles] = useState<UploadedFile[]>([]);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -27,11 +36,22 @@ export function FileUploadZone({ onFilesChange, maxFiles = 10 }: FileUploadZoneP
     return Math.round(bytes / Math.pow(k, i) * 100) / 100 + " " + sizes[i];
   };
 
+  const isFileTypeAllowed = (file: File): boolean => {
+    // If wildcard is allowed, accept all files
+    if (allowedMimeTypes.includes('*')) return true;
+    
+    // Check MIME type
+    if (allowedMimeTypes.some(mime => file.type.startsWith(mime.split('/')[0]))) return true;
+    
+    // Exact MIME type match
+    return allowedMimeTypes.includes(file.type);
+  };
+
   const handleFiles = useCallback((newFiles: FileList | null) => {
     if (!newFiles) return;
     
-    const pdfFiles = Array.from(newFiles).filter(file => file.type === "application/pdf");
-    const uploadedFiles: UploadedFile[] = pdfFiles.map((file, index) => ({
+    const validFiles = Array.from(newFiles).filter(isFileTypeAllowed);
+    const uploadedFiles: UploadedFile[] = validFiles.map((file, index) => ({
       id: `${Date.now()}-${index}`,
       file,
       name: file.name,
@@ -41,7 +61,7 @@ export function FileUploadZone({ onFilesChange, maxFiles = 10 }: FileUploadZoneP
     const updatedFiles = [...files, ...uploadedFiles].slice(0, maxFiles);
     setFiles(updatedFiles);
     onFilesChange(updatedFiles.map(f => f.file));
-  }, [files, maxFiles, onFilesChange]);
+  }, [files, maxFiles, onFilesChange, allowedMimeTypes]);
 
   const removeFile = (id: string) => {
     const updatedFiles = files.filter(f => f.id !== id);
@@ -87,10 +107,10 @@ export function FileUploadZone({ onFilesChange, maxFiles = 10 }: FileUploadZoneP
         
         <div className="space-y-2">
           <h3 className="text-xl font-semibold">
-            {isDragging ? "Drop your PDF files here" : "Upload PDF Files"}
+            {isDragging ? `Drop your ${uploadLabel} here` : `Upload ${uploadLabel}`}
           </h3>
           <p className="text-sm text-muted-foreground">
-            Drag and drop your PDF files here, or click to browse
+            Drag and drop your {uploadLabel.toLowerCase()} here, or click to browse
           </p>
         </div>
 
@@ -98,7 +118,7 @@ export function FileUploadZone({ onFilesChange, maxFiles = 10 }: FileUploadZoneP
           type="file"
           id="file-upload"
           multiple
-          accept=".pdf,application/pdf"
+          accept={acceptedFileTypes}
           onChange={(e) => handleFiles(e.target.files)}
           className="hidden"
           data-testid="input-file"
@@ -109,7 +129,7 @@ export function FileUploadZone({ onFilesChange, maxFiles = 10 }: FileUploadZoneP
           size="lg"
           data-testid="button-select-files"
         >
-          Select PDF Files
+          Select {uploadLabel}
         </Button>
 
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
