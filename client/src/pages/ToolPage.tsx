@@ -104,9 +104,24 @@ export default function ToolPage() {
     
     try {
       const formData = new FormData();
-      files.forEach((file) => {
-        formData.append('files', file);
-      });
+      
+      // Determine field name based on the backend endpoint
+      // Only PDF merge uses .array('files'), all other endpoints use .single('file')
+      const isMultiFileEndpoint = processingEndpoint === '/api/pdf/merge';
+      const fieldName = isMultiFileEndpoint ? 'files' : 'file';
+      
+      if (isMultiFileEndpoint) {
+        // Multiple files upload for PDF merge
+        files.forEach((file) => {
+          formData.append(fieldName, file);
+        });
+      } else {
+        // Single file upload for all other tools
+        if (files.length > 0) {
+          formData.append(fieldName, files[0]);
+        }
+      }
+      
       formData.append('toolId', tool.id);
 
       const response = await fetch(processingEndpoint, {
