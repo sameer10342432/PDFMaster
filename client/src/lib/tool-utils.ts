@@ -182,6 +182,10 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
     if (lowerToolId.includes('compress') || lowerToolId.includes('reduce') || lowerToolId.includes('optimize')) {
       return '/api/pdf/compress';
     }
+    // PDF to Image conversions (pdf-to-jpg, pdf-to-png, pdf-to-webp, etc.)
+    if (lowerToolId.startsWith('pdf-to-') && (lowerToolId.includes('jpg') || lowerToolId.includes('png') || lowerToolId.includes('bmp') || lowerToolId.includes('tiff') || lowerToolId.includes('webp') || lowerToolId.includes('svg') || lowerToolId.includes('gif') || lowerToolId.includes('images') || lowerToolId.includes('image'))) {
+      return '/api/pdf/to-images';
+    }
     // PDF extract images
     if (lowerToolId.includes('extract') && lowerToolId.includes('images')) {
       return '/api/pdf/to-images';
