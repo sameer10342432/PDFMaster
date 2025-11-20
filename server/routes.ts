@@ -377,6 +377,49 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // ========================================
+  // PDF TOOLS - Extract Images
+  // ========================================
+  app.post('/api/pdf/extract-images', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const images = await pdfUtils.extractPDFImages(file);
+
+      if (images.length === 0) {
+        return res.status(404).json({ error: 'No images found in PDF' });
+      }
+
+      if (images.length === 1) {
+        res.setHeader('Content-Type', 'image/png');
+        res.setHeader('Content-Disposition', `attachment; filename="image-1.png"`);
+        res.send(images[0]);
+      } else {
+        res.setHeader('Content-Type', 'application/zip');
+        res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'pdf'}-images.zip"`);
+        
+        const archive = archiver('zip', { zlib: { level: 9 } });
+        archive.pipe(res);
+
+        images.forEach((img, i) => {
+          archive.append(img, { name: `image-${i + 1}.png` });
+        });
+
+        await archive.finalize();
+      }
+
+    } catch (error) {
+      console.error('PDF extract images error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to extract images from PDF: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
   // PDF TOOLS - Watermark & Stamp
   // ========================================
   app.post('/api/pdf/watermark', pdfOnly.single('file'), async (req, res) => {

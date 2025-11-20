@@ -422,3 +422,44 @@ export async function mergePDFsAlternately(pdfBuffers: Buffer[]): Promise<PDFDoc
 
   return mergedPdf;
 }
+
+// Extract images from PDF
+export async function extractPDFImages(file: Express.Multer.File): Promise<Buffer[]> {
+  const images: Buffer[] = [];
+  
+  try {
+    const loadingTask = pdfjsLib.getDocument({ data: file.buffer });
+    const pdfDocument = await loadingTask.promise;
+    
+    for (let pageNum = 1; pageNum <= pdfDocument.numPages; pageNum++) {
+      const page = await pdfDocument.getPage(pageNum);
+      const operatorList = await page.getOperatorList();
+      
+      for (let i = 0; i < operatorList.fnArray.length; i++) {
+        if (operatorList.fnArray[i] === pdfjsLib.OPS.paintImageXObject) {
+          const imageName = operatorList.argsArray[i][0];
+          const imageData = page.objs.get(imageName);
+          
+          if (imageData && imageData.data) {
+            const { width, height, data } = imageData;
+            
+            // Convert to PNG using sharp
+            const imageBuffer = await sharp(Buffer.from(data), {
+              raw: {
+                width,
+                height,
+                channels: 4
+              }
+            }).png().toBuffer();
+            
+            images.push(imageBuffer);
+          }
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Error extracting images:', error);
+  }
+  
+  return images;
+}
