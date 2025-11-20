@@ -106,6 +106,17 @@ export default function ToolPage() {
       return;
     }
 
+    // Check if tool has a valid processing endpoint
+    if (!processingEndpoint || processingEndpoint === '') {
+      toast({
+        title: "Configuration Error",
+        description: `This tool is not properly configured yet. Please contact support or try another tool.`,
+        variant: "destructive",
+      });
+      console.error('Tool configuration error:', { toolId: tool?.id, toolType, processingEndpoint });
+      return;
+    }
+
     setIsProcessing(true);
     
     try {

@@ -190,8 +190,9 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
     if (lowerToolId.includes('reorder') || lowerToolId.includes('reverse')) {
       return '/api/pdf/edit';
     }
-    // PDF tools default to process-pdf endpoint which handles merge/split/compress
-    return '/api/process-pdf';
+    // Unmapped PDF tool - configuration error
+    console.error(`[Tool Routing] No endpoint mapping found for PDF tool: ${toolId}. Tool configuration is incomplete.`);
+    return '';
   }
   
   // ========================================
@@ -276,9 +277,9 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
     return '/api/web/calculator';
   }
   
-  // Default fallback - log warning for unmapped tools
-  console.warn(`[Tool Routing] No endpoint mapping found for toolId: ${toolId}, toolType: ${toolType}. Defaulting to /api/process-pdf. This tool may need proper endpoint configuration.`);
-  return '/api/process-pdf';
+  // Unmapped tool - configuration error
+  console.error(`[Tool Routing] No endpoint mapping found for toolId: ${toolId}, toolType: ${toolType}. Tool configuration is incomplete.`);
+  return '';
 }
 
 // Get tool configuration based on type
