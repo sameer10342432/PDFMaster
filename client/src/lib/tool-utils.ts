@@ -15,6 +15,11 @@ export function getToolType(category: string, toolId?: string): ToolType {
   const lowerCategory = category.toLowerCase();
   const lowerToolId = toolId?.toLowerCase() || '';
   
+  // Check toolId first for PDF tools - many PDF tools have category names like "Merge & Combine" that don't contain "pdf"
+  if (lowerToolId.includes('pdf') || lowerToolId.includes('-pdf-')) {
+    return 'pdf';
+  }
+  
   // Special cases: Video-to-X converters (input is video, even if category says audio/image)
   // Handles: video-to-mp3, mp4-to-mp3, avi-to-wav, mkv-to-audio, etc.
   const videoFormats = ['video', 'mp4', 'avi', 'mov', 'mkv', 'wmv', 'flv', 'webm', 'm4v', 'mpg', 'mpeg'];
@@ -60,7 +65,7 @@ export function getToolType(category: string, toolId?: string): ToolType {
     return 'audio';
   }
   
-  if (lowerCategory.includes('text') || lowerCategory.includes('code')) {
+  if (lowerCategory.includes('text') || lowerCategory.includes('code') || lowerCategory.includes('encoding') || lowerCategory.includes('decoding')) {
     return 'text';
   }
   
@@ -185,6 +190,7 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
     if (lowerToolId.includes('reorder') || lowerToolId.includes('reverse')) {
       return '/api/pdf/edit';
     }
+    // PDF tools default to process-pdf endpoint which handles merge/split/compress
     return '/api/process-pdf';
   }
   
@@ -196,8 +202,8 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
     if (lowerToolId.includes('json') || lowerToolId.includes('xml') || lowerToolId.includes('html') || lowerToolId.includes('css') || lowerToolId.includes('formatter') || lowerToolId.includes('minifier') || lowerToolId.includes('beautifier')) {
       return '/api/text/format';
     }
-    // Encoding/decoding
-    if (lowerToolId.includes('base64') || lowerToolId.includes('url-encode') || lowerToolId.includes('url-decode') || lowerToolId.includes('encode') || lowerToolId.includes('decode')) {
+    // Encoding/decoding - more specific matching
+    if (lowerToolId.includes('base64-encode') || lowerToolId.includes('base64-decode') || lowerToolId.includes('url-encode') || lowerToolId.includes('url-decode')) {
       return '/api/text/encode';
     }
     // Case conversion
@@ -270,7 +276,8 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
     return '/api/web/calculator';
   }
   
-  // Default fallback
+  // Default fallback - log warning for unmapped tools
+  console.warn(`[Tool Routing] No endpoint mapping found for toolId: ${toolId}, toolType: ${toolType}. Defaulting to /api/process-pdf. This tool may need proper endpoint configuration.`);
   return '/api/process-pdf';
 }
 

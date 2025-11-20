@@ -1,15 +1,32 @@
 # Tool Inventory Analysis
-Generated: 2025-11-20T09:24:55.013Z
+Generated: 2025-11-20T09:28:36.779Z
 Total Tools: 1004
 
 ## Summary
 - ✅ Implemented: 110
-  - 🔌 Connected to backend: 77
-  - ⚠️ Needs connection: 33
+  - 🔌 Connected to backend: 110
+  - ⚠️ Needs connection: 0
 - ⏳ Coming Soon: 806
 - 🤖 Requires AI Service: 88
 
 ## Tools by Backend Endpoint
+
+### /api/pdf/merge (15 tools)
+- merge-pdf - Merge PDF
+- combine-pdf - Combine PDF
+- join-pdf-files - Join PDF Files
+- pdf-merger - PDF Merger
+- pdf-combiner - PDF Combiner
+- append-pdf - Append PDF
+- add-pdf-to-pdf - Add PDF to PDF
+- merge-multiple-pdfs - Merge Multiple PDFs
+- combine-pdf-pages - Combine PDF Pages
+- merge-pdf-alternately - Merge PDF Alternately
+- interleave-pdf - Interleave PDF
+- pdf-binder - PDF Binder
+- merge-pdf-bookmarks - Merge PDF with Bookmarks
+- combine-pdf-images - Combine PDF and Images
+- merge-pdf-word - Merge PDF and Word
 
 ### /api/video/convert (13 tools)
 - video-converter - Video Converter
@@ -48,6 +65,15 @@ Total Tools: 1004
 - aac-to-mp3 - AAC to MP3
 - mp3-to-aac - MP3 to AAC
 
+### /api/pdf/split (7 tools)
+- split-pdf - Split PDF
+- pdf-splitter - PDF Splitter
+- divide-pdf - Divide PDF
+- break-pdf - Break PDF
+- extract-pdf-pages - Extract PDF Pages
+- pdf-page-extractor - PDF Page Extractor
+- delete-pdf-pages - Delete PDF Pages
+
 ### /api/text/format (7 tools)
 - json-formatter - JSON Formatter
 - json-minifier - JSON Minifier
@@ -74,11 +100,23 @@ Total Tools: 1004
 - video-joiner - Video Joiner
 - video-reverser - Video Reverser
 
+### /api/pdf/compress (4 tools)
+- compress-pdf - Compress PDF
+- pdf-compressor - PDF Compressor
+- reduce-pdf-size - Reduce PDF Size
+- optimize-pdf - Optimize PDF
+
 ### /api/image/enhance (4 tools)
 - adjust-brightness - Adjust Image Brightness
 - adjust-contrast - Adjust Image Contrast
 - adjust-saturation - Adjust Image Saturation
 - sharpen-image - Image Sharpen
+
+### /api/text/encode (4 tools)
+- base64-encode - Base64 Encode
+- base64-decode - Base64 Decode
+- url-encode - URL Encode
+- url-decode - URL Decode
 
 ### /api/text/convert-case (4 tools)
 - uppercase-converter - Uppercase Converter
@@ -107,9 +145,16 @@ Total Tools: 1004
 - uuid-generator - UUID Generator
 - password-generator - Password Generator
 
+### /api/pdf/edit (2 tools)
+- reorder-pdf-pages - Reorder PDF Pages
+- reverse-pdf-pages - Reverse PDF Pages
+
 ### /api/audio/effects (2 tools)
 - audio-equalizer - Audio Equalizer
 - audio-noise-reduction - Audio Noise Reduction
+
+### /api/pdf/to-images (1 tools)
+- extract-pdf-images - Extract PDF Images
 
 ### /api/image/resize (1 tools)
 - resize-image - Resize Image
@@ -120,41 +165,8 @@ Total Tools: 1004
 ### /api/image/transform (1 tools)
 - rotate-image - Rotate Image
 
-## Tools Needing Connection (33)
+## Tools Needing Connection (0)
 
-- merge-pdf (Merge & Combine) -> /api/process-pdf
-- combine-pdf (Merge & Combine) -> /api/process-pdf
-- join-pdf-files (Merge & Combine) -> /api/process-pdf
-- pdf-merger (Merge & Combine) -> /api/process-pdf
-- pdf-combiner (Merge & Combine) -> /api/process-pdf
-- append-pdf (Merge & Combine) -> /api/process-pdf
-- add-pdf-to-pdf (Merge & Combine) -> /api/process-pdf
-- merge-multiple-pdfs (Merge & Combine) -> /api/process-pdf
-- combine-pdf-pages (Merge & Combine) -> /api/process-pdf
-- merge-pdf-alternately (Merge & Combine) -> /api/process-pdf
-- interleave-pdf (Merge & Combine) -> /api/process-pdf
-- pdf-binder (Merge & Combine) -> /api/process-pdf
-- merge-pdf-bookmarks (Merge & Combine) -> /api/process-pdf
-- combine-pdf-images (Merge & Combine) -> /api/process-pdf
-- merge-pdf-word (Merge & Combine) -> /api/process-pdf
-- split-pdf (Edit Pages) -> /api/process-pdf
-- pdf-splitter (Edit Pages) -> /api/process-pdf
-- divide-pdf (Edit Pages) -> /api/process-pdf
-- break-pdf (Edit Pages) -> /api/process-pdf
-- extract-pdf-pages (Edit Pages) -> /api/process-pdf
-- pdf-page-extractor (Edit Pages) -> /api/process-pdf
-- delete-pdf-pages (Edit Pages) -> /api/process-pdf
-- extract-pdf-images (OCR & Extract) -> /api/process-pdf
-- reorder-pdf-pages (Edit Pages) -> /api/process-pdf
-- reverse-pdf-pages (Edit Pages) -> /api/process-pdf
-- compress-pdf (Compress & Optimize) -> /api/process-pdf
-- pdf-compressor (Compress & Optimize) -> /api/process-pdf
-- reduce-pdf-size (Compress & Optimize) -> /api/process-pdf
-- optimize-pdf (Compress & Optimize) -> /api/process-pdf
-- base64-encode (Encoding & Decoding) -> /api/process-pdf
-- base64-decode (Encoding & Decoding) -> /api/process-pdf
-- url-encode (Encoding & Decoding) -> /api/process-pdf
-- url-decode (Encoding & Decoding) -> /api/process-pdf
 
 ## Coming Soon Tools by Category
 
