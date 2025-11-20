@@ -2057,7 +2057,7 @@ Perfect for document professionals who need complete control over PDF structure.
     title: "Reverse PDF Pages",
     category: "Edit Pages" as ToolCategory,
     tags: ["reverse", "flip", "backward", "pages"],
-    capability: "coming-soon" as ToolCapability,
+    capability: "implemented" as ToolCapability,
     metaTitle: "Reverse PDF Pages Online Free - Flip PDF Page Order",
     metaDescription: "Reverse PDF page order online for free. Flip PDF pages backward from last to first. Quick PDF page reversal tool.",
     description: "Reverse the order of all pages in a PDF document",
