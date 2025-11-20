@@ -81,76 +81,196 @@ export function getToolType(category: string, toolId?: string): ToolType {
 
 // Get endpoint from tool ID and type
 export function getProcessingEndpoint(toolId: string, toolType: ToolType): string {
-  // Image tools
-  if (toolId.includes('compress') && toolType === 'image') {
-    return '/api/image/compress';
-  }
-  if (toolId.includes('resize') && toolType === 'image') {
-    return '/api/image/resize';
-  }
-  if (toolId.includes('crop') && toolType === 'image') {
-    return '/api/image/crop';
-  }
-  if ((toolId.includes('convert') || toolId.includes('to-')) && toolType === 'image') {
+  const lowerToolId = toolId.toLowerCase();
+  
+  // ========================================
+  // IMAGE TOOLS
+  // ========================================
+  if (toolType === 'image') {
+    if (lowerToolId.includes('compress')) {
+      return '/api/image/compress';
+    }
+    if (lowerToolId.includes('resize')) {
+      return '/api/image/resize';
+    }
+    if (lowerToolId.includes('crop')) {
+      return '/api/image/crop';
+    }
+    if (lowerToolId.includes('convert') || lowerToolId.includes('to-')) {
+      return '/api/image/convert';
+    }
+    if (lowerToolId.includes('rotate') || lowerToolId.includes('flip') || lowerToolId.includes('mirror')) {
+      return '/api/image/transform';
+    }
+    if (lowerToolId.includes('sharpen') || lowerToolId.includes('brightness') || lowerToolId.includes('contrast') || lowerToolId.includes('saturation') || lowerToolId.includes('enhance')) {
+      return '/api/image/enhance';
+    }
+    if (lowerToolId.includes('invert') || lowerToolId.includes('filter') || lowerToolId.includes('effect') || lowerToolId.includes('grayscale') || lowerToolId.includes('sepia') || lowerToolId.includes('blur')) {
+      return '/api/image/filter';
+    }
+    if (lowerToolId.includes('tint')) {
+      return '/api/image/tint';
+    }
+    if (lowerToolId.includes('border')) {
+      return '/api/image/border';
+    }
+    if (lowerToolId.includes('watermark')) {
+      return '/api/image/watermark';
+    }
     return '/api/image/convert';
   }
-  if ((toolId.includes('rotate') || toolId.includes('flip') || toolId.includes('mirror')) && toolType === 'image') {
-    return '/api/image/transform';
-  }
-  if ((toolId.includes('filter') || toolId.includes('effect') || toolId.includes('grayscale') || toolId.includes('sepia') || toolId.includes('blur')) && toolType === 'image') {
-    return '/api/image/filter';
-  }
-  if ((toolId.includes('brightness') || toolId.includes('contrast') || toolId.includes('saturation') || toolId.includes('enhance')) && toolType === 'image') {
-    return '/api/image/enhance';
-  }
-  if (toolId.includes('tint') && toolType === 'image') {
-    return '/api/image/tint';
-  }
-  if (toolId.includes('border') && toolType === 'image') {
-    return '/api/image/border';
-  }
-  if (toolId.includes('watermark') && toolType === 'image') {
-    return '/api/image/watermark';
-  }
   
-  // Video tools
-  if (toolId.includes('convert') && toolType === 'video') {
+  // ========================================
+  // VIDEO TOOLS
+  // ========================================
+  if (toolType === 'video') {
+    // Video to audio extraction
+    if (lowerToolId.includes('extract-audio') || lowerToolId.includes('video-to-audio') || lowerToolId.includes('video-to-mp3') || lowerToolId.includes('mp4-to-mp3') || lowerToolId.includes('avi-to-mp3') || lowerToolId.includes('mov-to-mp3') || lowerToolId.includes('mkv-to-mp3')) {
+      return '/api/video/extract-audio';
+    }
+    // Video format conversion
+    if (lowerToolId.includes('convert') || lowerToolId.includes('-to-mp4') || lowerToolId.includes('-to-avi') || lowerToolId.includes('-to-mov') || lowerToolId.includes('-to-mkv') || lowerToolId.includes('-to-webm') || lowerToolId.includes('-to-flv') || lowerToolId.includes('-to-mpeg')) {
+      return '/api/video/convert';
+    }
+    // Video editing
+    if (lowerToolId.includes('trim') || lowerToolId.includes('cut') || lowerToolId.includes('compress') || lowerToolId.includes('resize') || lowerToolId.includes('speed') || lowerToolId.includes('rotate') || lowerToolId.includes('flip') || lowerToolId.includes('crop') || lowerToolId.includes('join') || lowerToolId.includes('reverse')) {
+      return '/api/video/edit';
+    }
     return '/api/video/convert';
   }
-  if ((toolId.includes('trim') || toolId.includes('cut') || toolId.includes('compress') || toolId.includes('resize') || toolId.includes('speed') || toolId.includes('rotate') || toolId.includes('flip')) && toolType === 'video') {
-    return '/api/video/edit';
-  }
-  if (toolId.includes('extract-audio') || toolId.includes('video-to-audio')) {
-    return '/api/video/extract-audio';
-  }
   
-  // Audio tools
-  if (toolId.includes('convert') && toolType === 'audio') {
+  // ========================================
+  // AUDIO TOOLS
+  // ========================================
+  if (toolType === 'audio') {
+    // Audio format conversion
+    if (lowerToolId.includes('convert') || lowerToolId.includes('-to-mp3') || lowerToolId.includes('-to-m4a') || lowerToolId.includes('-to-flac') || lowerToolId.includes('-to-ogg') || lowerToolId.includes('-to-aac') || lowerToolId.includes('-to-wav')) {
+      return '/api/audio/convert';
+    }
+    // Audio editing
+    if (lowerToolId.includes('trim') || lowerToolId.includes('cut') || lowerToolId.includes('volume') || lowerToolId.includes('normalize') || lowerToolId.includes('fade') || lowerToolId.includes('speed') || lowerToolId.includes('pitch') || lowerToolId.includes('reverse') || lowerToolId.includes('join')) {
+      return '/api/audio/edit';
+    }
+    // Audio effects
+    if (lowerToolId.includes('reverb') || lowerToolId.includes('echo') || lowerToolId.includes('equalizer') || lowerToolId.includes('noise')) {
+      return '/api/audio/effects';
+    }
+    if (lowerToolId.includes('metadata')) {
+      return '/api/audio/metadata';
+    }
     return '/api/audio/convert';
   }
-  if ((toolId.includes('trim') || toolId.includes('cut') || toolId.includes('volume') || toolId.includes('normalize') || toolId.includes('fade') || toolId.includes('speed') || toolId.includes('pitch') || toolId.includes('reverse')) && toolType === 'audio') {
-    return '/api/audio/edit';
-  }
-  if ((toolId.includes('reverb') || toolId.includes('echo') || toolId.includes('equalizer') || toolId.includes('noise')) && toolType === 'audio') {
-    return '/api/audio/effects';
-  }
-  if (toolId.includes('metadata') && toolType === 'audio') {
-    return '/api/audio/metadata';
+  
+  // ========================================
+  // PDF TOOLS
+  // ========================================
+  if (toolType === 'pdf') {
+    // PDF merge
+    if (lowerToolId.includes('merge') || lowerToolId.includes('combine') || lowerToolId.includes('join') || lowerToolId.includes('append') || lowerToolId.includes('add-pdf') || lowerToolId.includes('interleave') || lowerToolId.includes('binder')) {
+      return '/api/pdf/merge';
+    }
+    // PDF split
+    if (lowerToolId.includes('split') || lowerToolId.includes('divide') || lowerToolId.includes('break') || lowerToolId.includes('extract-pdf-pages') || lowerToolId.includes('delete-pdf-pages') || lowerToolId.includes('page-extractor')) {
+      return '/api/pdf/split';
+    }
+    // PDF compress
+    if (lowerToolId.includes('compress') || lowerToolId.includes('reduce') || lowerToolId.includes('optimize')) {
+      return '/api/pdf/compress';
+    }
+    // PDF extract images
+    if (lowerToolId.includes('extract') && lowerToolId.includes('images')) {
+      return '/api/pdf/to-images';
+    }
+    // PDF edit operations
+    if (lowerToolId.includes('reorder') || lowerToolId.includes('reverse')) {
+      return '/api/pdf/edit';
+    }
+    return '/api/process-pdf';
   }
   
-  // PDF tools - must check merge BEFORE default
-  if ((toolId.includes('merge') || toolId.includes('combine') || toolId.includes('join')) && toolType === 'pdf') {
-    return '/api/pdf/merge';
-  }
-  if (toolId.includes('extract') && toolId.includes('images') && toolType === 'pdf') {
-    return '/api/pdf/extract-images';
-  }
-  // PDF edit operations that work without extra UI parameters
-  if ((toolId.includes('reorder') || toolId.includes('reverse')) && toolType === 'pdf') {
-    return '/api/pdf/edit';
+  // ========================================
+  // TEXT TOOLS
+  // ========================================
+  if (toolType === 'text') {
+    // Code formatting
+    if (lowerToolId.includes('json') || lowerToolId.includes('xml') || lowerToolId.includes('html') || lowerToolId.includes('css') || lowerToolId.includes('formatter') || lowerToolId.includes('minifier') || lowerToolId.includes('beautifier')) {
+      return '/api/text/format';
+    }
+    // Encoding/decoding
+    if (lowerToolId.includes('base64') || lowerToolId.includes('url-encode') || lowerToolId.includes('url-decode') || lowerToolId.includes('encode') || lowerToolId.includes('decode')) {
+      return '/api/text/encode';
+    }
+    // Case conversion
+    if (lowerToolId.includes('uppercase') || lowerToolId.includes('lowercase') || lowerToolId.includes('title-case') || lowerToolId.includes('sentence-case') || lowerToolId.includes('case-converter')) {
+      return '/api/text/convert-case';
+    }
+    // Text generators
+    if (lowerToolId.includes('lorem') || lowerToolId.includes('uuid') || lowerToolId.includes('password') || lowerToolId.includes('generator')) {
+      return '/api/text/generate';
+    }
+    // Text analysis
+    if (lowerToolId.includes('analyze') || lowerToolId.includes('count') || lowerToolId.includes('word-counter')) {
+      return '/api/text/analyze';
+    }
+    // Text manipulation
+    if (lowerToolId.includes('manipulate') || lowerToolId.includes('replace') || lowerToolId.includes('trim')) {
+      return '/api/text/manipulate';
+    }
+    return '/api/text/format';
   }
   
-  // Default: PDF processing
+  // ========================================
+  // QR CODE TOOLS
+  // ========================================
+  if (toolType === 'qr') {
+    if (lowerToolId.includes('generate') || lowerToolId.includes('create')) {
+      return '/api/qr/generate';
+    }
+    if (lowerToolId.includes('scan') || lowerToolId.includes('read') || lowerToolId.includes('decode')) {
+      return '/api/qr/scan';
+    }
+    return '/api/qr/generate';
+  }
+  
+  // ========================================
+  // ARCHIVE TOOLS
+  // ========================================
+  if (toolType === 'archive') {
+    if (lowerToolId.includes('extract') || lowerToolId.includes('unzip') || lowerToolId.includes('decompress')) {
+      return '/api/archive/extract';
+    }
+    if (lowerToolId.includes('create') || lowerToolId.includes('compress') || lowerToolId.includes('zip')) {
+      return '/api/archive/create';
+    }
+    return '/api/archive/extract';
+  }
+  
+  // ========================================
+  // WEB/SEO TOOLS
+  // ========================================
+  if (toolType === 'web') {
+    if (lowerToolId.includes('color')) {
+      return '/api/web/color-convert';
+    }
+    if (lowerToolId.includes('css')) {
+      return '/api/web/css-generator';
+    }
+    if (lowerToolId.includes('seo') || lowerToolId.includes('meta') || lowerToolId.includes('sitemap') || lowerToolId.includes('robots')) {
+      return '/api/web/seo/meta-tags';
+    }
+    if (lowerToolId.includes('calculator') || lowerToolId.includes('calc')) {
+      return '/api/web/calculator';
+    }
+    if (lowerToolId.includes('convert') || lowerToolId.includes('unit')) {
+      return '/api/web/convert-unit';
+    }
+    if (lowerToolId.includes('time') || lowerToolId.includes('date')) {
+      return '/api/web/time-date';
+    }
+    return '/api/web/calculator';
+  }
+  
+  // Default fallback
   return '/api/process-pdf';
 }
 

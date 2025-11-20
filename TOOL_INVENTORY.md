@@ -1,15 +1,30 @@
 # Tool Inventory Analysis
-Generated: 2025-11-20T09:22:45.269Z
+Generated: 2025-11-20T09:24:55.013Z
 Total Tools: 1004
 
 ## Summary
 - ✅ Implemented: 110
-  - 🔌 Connected to backend: 33
-  - ⚠️ Needs connection: 77
+  - 🔌 Connected to backend: 77
+  - ⚠️ Needs connection: 33
 - ⏳ Coming Soon: 806
 - 🤖 Requires AI Service: 88
 
 ## Tools by Backend Endpoint
+
+### /api/video/convert (13 tools)
+- video-converter - Video Converter
+- mp4-to-avi - MP4 to AVI
+- avi-to-mp4 - AVI to MP4
+- mov-to-mp4 - MOV to MP4
+- mp4-to-mov - MP4 to MOV
+- mkv-to-mp4 - MKV to MP4
+- mp4-to-mkv - MP4 to MKV
+- webm-to-mp4 - WebM to MP4
+- mp4-to-webm - MP4 to WebM
+- avi-to-mpeg - AVI to MPEG
+- video-to-webm - Video to WebM
+- video-to-flv - Video to FLV
+- video-rotator - Video Rotator
 
 ### /api/image/convert (10 tools)
 - png-to-jpg - PNG to JPG
@@ -23,32 +38,74 @@ Total Tools: 1004
 - avif-to-png - AVIF to PNG
 - png-to-avif - PNG to AVIF
 
-### /api/audio/edit (6 tools)
+### /api/audio/convert (8 tools)
+- m4a-to-mp3 - M4A to MP3
+- mp3-to-m4a - MP3 to M4A
+- flac-to-mp3 - FLAC to MP3
+- mp3-to-flac - MP3 to FLAC
+- ogg-to-mp3 - OGG to MP3
+- mp3-to-ogg - MP3 to OGG
+- aac-to-mp3 - AAC to MP3
+- mp3-to-aac - MP3 to AAC
+
+### /api/text/format (7 tools)
+- json-formatter - JSON Formatter
+- json-minifier - JSON Minifier
+- xml-formatter - XML Formatter
+- html-minifier - HTML Minifier
+- html-beautifier - HTML Beautifier
+- css-minifier - CSS Minifier
+- css-beautifier - CSS Beautifier
+
+### /api/audio/edit (7 tools)
 - audio-trimmer - Audio Trimmer
+- audio-joiner - Audio Joiner
 - audio-speed-changer - Audio Speed Changer
 - audio-pitch-shifter - Audio Pitch Shifter
 - audio-reverser - Audio Reverser
 - audio-normalizer - Audio Normalizer
 - audio-fader - Audio Fader (Fade In/Out)
 
+### /api/video/edit (6 tools)
+- video-trimmer - Video Trimmer
+- video-cropper - Video Cropper
+- video-flipper - Video Flipper
+- video-resizer - Video Resizer
+- video-joiner - Video Joiner
+- video-reverser - Video Reverser
+
+### /api/image/enhance (4 tools)
+- adjust-brightness - Adjust Image Brightness
+- adjust-contrast - Adjust Image Contrast
+- adjust-saturation - Adjust Image Saturation
+- sharpen-image - Image Sharpen
+
+### /api/text/convert-case (4 tools)
+- uppercase-converter - Uppercase Converter
+- lowercase-converter - Lowercase Converter
+- title-case-converter - Title Case Converter
+- sentence-case-converter - Sentence Case Converter
+
+### /api/video/extract-audio (4 tools)
+- video-to-mp3 - Video to MP3
+- mp4-to-mp3 - MP4 to MP3
+- avi-to-mp3 - AVI to MP3
+- mov-to-mp3 - MOV to MP3
+
 ### /api/image/compress (3 tools)
 - compress-jpg - Compress JPG
 - compress-png - Compress PNG
 - compress-webp - Compress WebP
 
-### /api/image/enhance (3 tools)
-- adjust-brightness - Adjust Image Brightness
-- adjust-contrast - Adjust Image Contrast
-- adjust-saturation - Adjust Image Saturation
-
-### /api/video/edit (3 tools)
-- video-trimmer - Video Trimmer
-- video-flipper - Video Flipper
-- video-resizer - Video Resizer
-
-### /api/image/filter (2 tools)
+### /api/image/filter (3 tools)
 - blur-image - Image Blur
 - grayscale-image - Grayscale Image
+- invert-colors - Invert Image Colors
+
+### /api/text/generate (3 tools)
+- lorem-ipsum-generator - Lorem Ipsum Generator
+- uuid-generator - UUID Generator
+- password-generator - Password Generator
 
 ### /api/audio/effects (2 tools)
 - audio-equalizer - Audio Equalizer
@@ -63,10 +120,7 @@ Total Tools: 1004
 ### /api/image/transform (1 tools)
 - rotate-image - Rotate Image
 
-### /api/video/convert (1 tools)
-- video-converter - Video Converter
-
-## Tools Needing Connection (77)
+## Tools Needing Connection (33)
 
 - merge-pdf (Merge & Combine) -> /api/process-pdf
 - combine-pdf (Merge & Combine) -> /api/process-pdf
@@ -97,54 +151,10 @@ Total Tools: 1004
 - pdf-compressor (Compress & Optimize) -> /api/process-pdf
 - reduce-pdf-size (Compress & Optimize) -> /api/process-pdf
 - optimize-pdf (Compress & Optimize) -> /api/process-pdf
-- sharpen-image (Image Enhancement) -> /api/process-pdf
-- invert-colors (Image Filters) -> /api/process-pdf
-- json-formatter (Code Formatting) -> /api/process-pdf
-- json-minifier (Code Formatting) -> /api/process-pdf
-- xml-formatter (Code Formatting) -> /api/process-pdf
-- html-minifier (Code Formatting) -> /api/process-pdf
-- html-beautifier (Code Formatting) -> /api/process-pdf
-- css-minifier (Code Formatting) -> /api/process-pdf
-- css-beautifier (Code Formatting) -> /api/process-pdf
-- lorem-ipsum-generator (Text Generators) -> /api/process-pdf
-- uuid-generator (Text Generators) -> /api/process-pdf
 - base64-encode (Encoding & Decoding) -> /api/process-pdf
 - base64-decode (Encoding & Decoding) -> /api/process-pdf
 - url-encode (Encoding & Decoding) -> /api/process-pdf
 - url-decode (Encoding & Decoding) -> /api/process-pdf
-- uppercase-converter (Text Manipulation) -> /api/process-pdf
-- lowercase-converter (Text Manipulation) -> /api/process-pdf
-- title-case-converter (Text Manipulation) -> /api/process-pdf
-- sentence-case-converter (Text Manipulation) -> /api/process-pdf
-- password-generator (Text Generators) -> /api/process-pdf
-- m4a-to-mp3 (Audio Conversion) -> /api/process-pdf
-- mp3-to-m4a (Audio Conversion) -> /api/process-pdf
-- flac-to-mp3 (Audio Conversion) -> /api/process-pdf
-- mp3-to-flac (Audio Conversion) -> /api/process-pdf
-- ogg-to-mp3 (Audio Conversion) -> /api/process-pdf
-- mp3-to-ogg (Audio Conversion) -> /api/process-pdf
-- aac-to-mp3 (Audio Conversion) -> /api/process-pdf
-- mp3-to-aac (Audio Conversion) -> /api/process-pdf
-- video-to-mp3 (Audio Conversion) -> /api/process-pdf
-- mp4-to-mp3 (Audio Conversion) -> /api/process-pdf
-- avi-to-mp3 (Audio Conversion) -> /api/process-pdf
-- mov-to-mp3 (Audio Conversion) -> /api/process-pdf
-- audio-joiner (Audio Editing) -> /api/process-pdf
-- mp4-to-avi (Video Conversion) -> /api/process-pdf
-- avi-to-mp4 (Video Conversion) -> /api/process-pdf
-- mov-to-mp4 (Video Conversion) -> /api/process-pdf
-- mp4-to-mov (Video Conversion) -> /api/process-pdf
-- mkv-to-mp4 (Video Conversion) -> /api/process-pdf
-- mp4-to-mkv (Video Conversion) -> /api/process-pdf
-- webm-to-mp4 (Video Conversion) -> /api/process-pdf
-- mp4-to-webm (Video Conversion) -> /api/process-pdf
-- avi-to-mpeg (Video Conversion) -> /api/process-pdf
-- video-to-webm (Video Conversion) -> /api/process-pdf
-- video-to-flv (Video Conversion) -> /api/process-pdf
-- video-cropper (Video Editing) -> /api/process-pdf
-- video-rotator (Video Editing) -> /api/process-pdf
-- video-joiner (Video Editing) -> /api/process-pdf
-- video-reverser (Video Effects) -> /api/process-pdf
 
 ## Coming Soon Tools by Category
 
