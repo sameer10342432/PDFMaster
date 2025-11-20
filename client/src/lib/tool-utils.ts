@@ -234,7 +234,7 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
       return '/api/qr/generate';
     }
     if (lowerToolId.includes('scan') || lowerToolId.includes('read') || lowerToolId.includes('decode')) {
-      return '/api/qr/scan';
+      return '/api/qr/read';
     }
     return '/api/qr/generate';
   }
@@ -243,13 +243,34 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
   // ARCHIVE TOOLS
   // ========================================
   if (toolType === 'archive') {
+    // ZIP operations
+    if (lowerToolId.includes('zip')) {
+      if (lowerToolId.includes('extract') || lowerToolId.includes('unzip') || lowerToolId.includes('decompress')) {
+        return '/api/archive/extract-zip';
+      }
+      if (lowerToolId.includes('create') || lowerToolId.includes('compress')) {
+        return '/api/archive/create-zip';
+      }
+      return '/api/archive/extract-zip';
+    }
+    // TAR operations
+    if (lowerToolId.includes('tar')) {
+      if (lowerToolId.includes('extract') || lowerToolId.includes('untar') || lowerToolId.includes('decompress')) {
+        return '/api/archive/extract-tar';
+      }
+      if (lowerToolId.includes('create') || lowerToolId.includes('compress')) {
+        return '/api/archive/create-tar';
+      }
+      return '/api/archive/extract-tar';
+    }
+    // Default to ZIP if no specific format
     if (lowerToolId.includes('extract') || lowerToolId.includes('unzip') || lowerToolId.includes('decompress')) {
-      return '/api/archive/extract';
+      return '/api/archive/extract-zip';
     }
-    if (lowerToolId.includes('create') || lowerToolId.includes('compress') || lowerToolId.includes('zip')) {
-      return '/api/archive/create';
+    if (lowerToolId.includes('create') || lowerToolId.includes('compress')) {
+      return '/api/archive/create-zip';
     }
-    return '/api/archive/extract';
+    return '/api/archive/extract-zip';
   }
   
   // ========================================
