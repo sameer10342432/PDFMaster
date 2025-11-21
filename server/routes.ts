@@ -513,72 +513,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // ========================================
   // PDF TOOLS - Security & Password Protection
+  // NOTE: PDF encryption/decryption temporarily disabled
+  // pdf-lib library doesn't support encryption/decryption natively
+  // Requires alternative library (e.g., qpdf, pdftk) integration
   // ========================================
-  app.post('/api/pdf/encrypt', upload.fields([{ name: 'file', maxCount: 1 }, { name: 'files', maxCount: 1 }]), async (req, res) => {
-    try {
-      const file = (req.files as any)?.file?.[0] || (req.files as any)?.files?.[0] || req.file;
-      const password = req.body.password || 'password123';
-      const ownerPassword = req.body.ownerPassword || password;
+  
+  // DISABLED (pdf-lib doesn't support encryption):
+  // app.post('/api/pdf/encrypt', upload.fields([{ name: 'file', maxCount: 1 }, { name: 'files', maxCount: 1 }]), async (req, res) => {
+  //   try {
+  //     const file = (req.files as any)?.file?.[0] || (req.files as any)?.files?.[0] || req.file;
+  //     const password = req.body.password || 'password123';
+  //     const ownerPassword = req.body.ownerPassword || password;
+  //     if (!file) {
+  //       return res.status(400).json({ error: 'No file uploaded' });
+  //     }
+  //     // pdf-lib doesn't support encrypt() method
+  //     return res.status(501).json({ error: 'PDF encryption not yet implemented' });
+  //   } catch (error) {
+  //     console.error('PDF encryption error:', error);
+  //     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+  //     res.status(500).json({ error: `Failed to encrypt PDF: ${errorMessage}` });
+  //   }
+  // });
 
-      if (!file) {
-        return res.status(400).json({ error: 'No file uploaded' });
-      }
-
-      const pdfDoc = await PDFDocument.load(file.buffer, { ignoreEncryption: true });
-      
-      pdfDoc.encrypt({
-        userPassword: password,
-        ownerPassword: ownerPassword,
-        permissions: {
-          printing: 'highResolution',
-          modifying: false,
-          copying: false,
-          annotating: true,
-          fillingForms: true,
-          contentAccessibility: true,
-          documentAssembly: false,
-        }
-      });
-
-      const pdfBytes = await pdfDoc.save();
-
-      res.setHeader('Content-Type', 'application/pdf');
-      res.setHeader('Content-Disposition', `attachment; filename="protected.pdf"`);
-      res.send(Buffer.from(pdfBytes));
-
-    } catch (error) {
-      console.error('PDF encryption error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to encrypt PDF: ${errorMessage}` });
-    }
-  });
-
-  app.post('/api/pdf/decrypt', upload.fields([{ name: 'file', maxCount: 1 }, { name: 'files', maxCount: 1 }]), async (req, res) => {
-    try {
-      const file = (req.files as any)?.file?.[0] || (req.files as any)?.files?.[0] || req.file;
-      const password = req.body.password || '';
-
-      if (!file) {
-        return res.status(400).json({ error: 'No file uploaded' });
-      }
-
-      const pdfDoc = await PDFDocument.load(file.buffer, { 
-        password: password,
-        ignoreEncryption: true 
-      });
-
-      const pdfBytes = await pdfDoc.save();
-
-      res.setHeader('Content-Type', 'application/pdf');
-      res.setHeader('Content-Disposition', `attachment; filename="unlocked.pdf"`);
-      res.send(Buffer.from(pdfBytes));
-
-    } catch (error) {
-      console.error('PDF decryption error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to decrypt PDF: ${errorMessage}` });
-    }
-  });
+  // DISABLED (pdf-lib doesn't support password property):
+  // app.post('/api/pdf/decrypt', upload.fields([{ name: 'file', maxCount: 1 }, { name: 'files', maxCount: 1 }]), async (req, res) => {
+  //   try {
+  //     const file = (req.files as any)?.file?.[0] || (req.files as any)?.files?.[0] || req.file;
+  //     const password = req.body.password || '';
+  //     if (!file) {
+  //       return res.status(400).json({ error: 'No file uploaded' });
+  //     }
+  //     // pdf-lib LoadOptions doesn't support password property
+  //     return res.status(501).json({ error: 'PDF decryption not yet implemented' });
+  //   } catch (error) {
+  //     console.error('PDF decryption error:', error);
+  //     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+  //     res.status(500).json({ error: `Failed to decrypt PDF: ${errorMessage}` });
+  //   }
+  // });
 
   // ========================================
   // PDF TOOLS - OCR & Text Extraction
@@ -1592,6 +1565,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
           extract.on('finish', resolve);
           extract.on('error', reject);
 
+          if (!req.file) {
+            return reject(new Error('No file uploaded'));
+          }
           const stream = Readable.from(req.file.buffer);
           stream.pipe(extract);
         });
@@ -2473,32 +2449,32 @@ export async function registerRoutes(app: Express): Promise<Server> {
         case 'trim-audio':
         case 'cut-audio':
         case 'clip-audio':
-          result = await audioVideoUtils.trimAudio(file.buffer, startTime, duration, format);
+          result = await audioVideoUtils.trimAudio(file.buffer, startTime || '0', duration || '0', format);
           break;
         case 'adjust-volume':
         case 'change-audio-volume':
         case 'increase-volume':
         case 'decrease-volume':
-          result = await audioVideoUtils.adjustAudioVolume(file.buffer, parseFloat(volume), format);
+          result = await audioVideoUtils.adjustAudioVolume(file.buffer, volume ? parseFloat(volume) : 1, format);
           break;
         case 'normalize-audio':
         case 'audio-normalizer':
           result = await audioVideoUtils.normalizeAudio(file.buffer, format);
           break;
         case 'fade-in-audio':
-          result = await audioVideoUtils.fadeInAudio(file.buffer, parseFloat(duration), format);
+          result = await audioVideoUtils.fadeInAudio(file.buffer, duration ? parseFloat(duration) : 0, format);
           break;
         case 'fade-out-audio':
-          result = await audioVideoUtils.fadeOutAudio(file.buffer, parseFloat(startTime), parseFloat(duration), format);
+          result = await audioVideoUtils.fadeOutAudio(file.buffer, startTime ? parseFloat(startTime) : 0, duration ? parseFloat(duration) : 0, format);
           break;
         case 'change-audio-speed':
         case 'speed-up-audio':
         case 'slow-down-audio':
-          result = await audioVideoUtils.changeAudioSpeed(file.buffer, parseFloat(speed), format);
+          result = await audioVideoUtils.changeAudioSpeed(file.buffer, speed ? parseFloat(speed) : 1, format);
           break;
         case 'change-pitch':
         case 'pitch-shifter':
-          result = await audioVideoUtils.changePitch(file.buffer, parseInt(semitones), format);
+          result = await audioVideoUtils.changePitch(file.buffer, semitones ? parseInt(semitones) : 0, format);
           break;
         case 'reverse-audio':
         case 'audio-reverser':
@@ -2545,19 +2521,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
       switch (toolId) {
         case 'add-reverb':
         case 'reverb-effect':
-          result = await audioVideoUtils.addReverbToAudio(file.buffer, parseInt(roomSize) || 50, format);
+          result = await audioVideoUtils.addReverbToAudio(file.buffer, roomSize ? parseInt(roomSize) : 50, format);
           break;
         case 'add-echo':
         case 'echo-effect':
-          result = await audioVideoUtils.addEchoToAudio(file.buffer, parseInt(delay) || 1000, parseFloat(decay) || 0.5, format);
+          result = await audioVideoUtils.addEchoToAudio(file.buffer, delay ? parseInt(delay) : 1000, decay ? parseFloat(decay) : 0.5, format);
           break;
         case 'equalizer':
         case 'audio-equalizer':
           result = await audioVideoUtils.applyEqualizerToAudio(
             file.buffer,
-            parseInt(bass) || 0,
-            parseInt(mid) || 0,
-            parseInt(treble) || 0,
+            bass ? parseInt(bass) : 0,
+            mid ? parseInt(mid) : 0,
+            treble ? parseInt(treble) : 0,
             format
           );
           break;
