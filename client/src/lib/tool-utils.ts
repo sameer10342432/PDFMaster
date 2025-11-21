@@ -210,11 +210,11 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
     }
     // PDF unlock and decrypt - CHECK FIRST before password/protect
     if (lowerToolId.includes('unlock') || lowerToolId.includes('decrypt') || lowerToolId.includes('remove-password') || lowerToolId.includes('unlocker')) {
-      return '/api/pdf/decrypt';
+      return '/api/security/decrypt';
     }
     // PDF security and password protection
     if (lowerToolId.includes('password') || lowerToolId.includes('protect') || lowerToolId.includes('encrypt') || lowerToolId.includes('secure')) {
-      return '/api/pdf/encrypt';
+      return '/api/security/encrypt';
     }
     // PDF to Word conversion
     if (lowerToolId.includes('pdf-to-word') || lowerToolId.includes('pdf-to-docx') || lowerToolId.includes('pdf-to-doc')) {
