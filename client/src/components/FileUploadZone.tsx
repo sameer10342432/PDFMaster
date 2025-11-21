@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import { Upload, X, File, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useToast } from "@/hooks/use-toast";
 
 interface UploadedFile {
   id: string;
@@ -27,6 +28,7 @@ export function FileUploadZone({
 }: FileUploadZoneProps) {
   const [files, setFiles] = useState<UploadedFile[]>([]);
   const [isDragging, setIsDragging] = useState(false);
+  const { toast } = useToast();
 
   const formatFileSize = (bytes: number) => {
     if (bytes === 0) return "0 Bytes";
@@ -50,7 +52,20 @@ export function FileUploadZone({
   const handleFiles = useCallback((newFiles: FileList | null) => {
     if (!newFiles) return;
     
-    const validFiles = Array.from(newFiles).filter(isFileTypeAllowed);
+    const fileArray = Array.from(newFiles);
+    const validFiles = fileArray.filter(isFileTypeAllowed);
+    const invalidFiles = fileArray.filter(f => !isFileTypeAllowed(f));
+    
+    // Show error for invalid file types
+    if (invalidFiles.length > 0) {
+      const fileNames = invalidFiles.map(f => f.name).join(", ");
+      toast({
+        title: "Invalid file type",
+        description: `The following files were rejected: ${fileNames}. Please upload ${uploadLabel.toLowerCase()} only.`,
+        variant: "destructive",
+      });
+    }
+    
     const uploadedFiles: UploadedFile[] = validFiles.map((file, index) => ({
       id: `${Date.now()}-${index}`,
       file,
@@ -58,10 +73,29 @@ export function FileUploadZone({
       size: file.size,
     }));
 
-    const updatedFiles = [...files, ...uploadedFiles].slice(0, maxFiles);
+    const combinedFiles = [...files, ...uploadedFiles];
+    const updatedFiles = combinedFiles.slice(0, maxFiles);
+    const filesAdded = updatedFiles.length - files.length;
+    
+    // Show warning if max files exceeded
+    if (combinedFiles.length > maxFiles) {
+      toast({
+        title: "Maximum files reached",
+        description: `Only ${maxFiles} files are allowed. ${filesAdded} file${filesAdded !== 1 ? 's' : ''} added.`,
+        variant: "default",
+      });
+    }
+    // Show success message for valid uploads (only if no max limit reached)
+    else if (validFiles.length > 0 && invalidFiles.length === 0 && filesAdded > 0) {
+      toast({
+        title: "Files uploaded",
+        description: `${filesAdded} file${filesAdded !== 1 ? 's' : ''} ready to process.`,
+      });
+    }
+    
     setFiles(updatedFiles);
     onFilesChange(updatedFiles.map(f => f.file));
-  }, [files, maxFiles, onFilesChange, allowedMimeTypes]);
+  }, [files, maxFiles, onFilesChange, allowedMimeTypes, uploadLabel, toast]);
 
   const removeFile = (id: string) => {
     const updatedFiles = files.filter(f => f.id !== id);

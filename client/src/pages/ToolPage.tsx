@@ -59,6 +59,23 @@ export default function ToolPage() {
     return processingEndpoint === '/api/pdf/merge' ? 10 : 1;
   }, [processingEndpoint]);
 
+  // Simulate progress for better UX - must be before any conditional returns
+  useEffect(() => {
+    if (isProcessing) {
+      setProcessingProgress(0);
+      const interval = setInterval(() => {
+        setProcessingProgress((prev) => {
+          if (prev >= 90) return prev; // Stop at 90% until actual completion
+          return prev + 10;
+        });
+      }, 300);
+      return () => clearInterval(interval);
+    } else {
+      setProcessingProgress(0);
+      setProcessingStatus("");
+    }
+  }, [isProcessing]);
+
   const isLoading = toolLoading;
 
   if (isLoading) {
@@ -98,23 +115,6 @@ export default function ToolPage() {
       </div>
     );
   }
-
-  // Simulate progress for better UX
-  useEffect(() => {
-    if (isProcessing) {
-      setProcessingProgress(0);
-      const interval = setInterval(() => {
-        setProcessingProgress((prev) => {
-          if (prev >= 90) return prev; // Stop at 90% until actual completion
-          return prev + 10;
-        });
-      }, 300);
-      return () => clearInterval(interval);
-    } else {
-      setProcessingProgress(0);
-      setProcessingStatus("");
-    }
-  }, [isProcessing]);
 
   const handleProcess = async () => {
     if (files.length === 0) {
