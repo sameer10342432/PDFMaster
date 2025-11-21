@@ -1,9 +1,10 @@
-import type { Express } from "express";
+import type { Express, Request, Response, NextFunction } from "express";
 import { createServer, type Server } from "http";
 import multer from "multer";
 import { PDFDocument } from "pdf-lib";
 import { allTools, toolCategories } from "@shared/schema";
 import archiver from 'archiver';
+import express from 'express';
 import * as pdfUtils from './utils/pdf-utils';
 import * as imageUtils from './utils/image-utils';
 import * as textUtils from './utils/text-utils';
@@ -14,6 +15,7 @@ import * as audioVideoValidators from './utils/audio-video-validators';
 import * as imageValidators from './utils/image-validators';
 import * as ocrUtils from './utils/ocr-utils';
 import * as docConverter from './utils/document-converter';
+import * as pdfSecurity from './utils/pdf-security';
 
 // Configure multer for file uploads
 const upload = multer({ 
@@ -91,6 +93,30 @@ const audioOrVideo = multer({
     }
   }
 });
+
+// Middleware that accepts BOTH multipart file uploads AND raw text/JSON bodies
+// This is critical for viewer/editor routes that need to accept both files and direct text input
+function fileOrTextMiddleware(req: Request, res: Response, next: NextFunction) {
+  const contentType = req.get('content-type') || '';
+  
+  // If it's multipart/form-data, use multer to parse file upload
+  if (contentType.includes('multipart/form-data')) {
+    return upload.single('file')(req, res, next);
+  }
+  
+  // If it's application/json, parse as JSON
+  if (contentType.includes('application/json')) {
+    return express.json({ limit: '50mb' })(req, res, next);
+  }
+  
+  // If it's text/plain or other text types, parse as raw text
+  if (contentType.includes('text/')) {
+    return express.text({ limit: '50mb', type: 'text/*' })(req, res, next);
+  }
+  
+  // Default: try to parse as text
+  return express.text({ limit: '50mb', type: '*/*' })(req, res, next);
+}
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Tool listing endpoints
@@ -640,6 +666,78 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // ========================================
+  // PDF TOOLS - Data Extraction (Links, Annotations, Tables)
+  // ========================================
+  app.post('/api/pdf/extract/links', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      
+      if (!file) {
+        return res.status(400).json({ error: 'No PDF file uploaded' });
+      }
+
+      const links = await pdfUtils.extractLinksFromPDF(file);
+
+      res.json({
+        success: true,
+        count: links.length,
+        links: links
+      });
+
+    } catch (error) {
+      console.error('PDF link extraction error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to extract links from PDF: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/pdf/extract/annotations', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      
+      if (!file) {
+        return res.status(400).json({ error: 'No PDF file uploaded' });
+      }
+
+      const annotations = await pdfUtils.extractAnnotationsFromPDF(file);
+
+      res.json({
+        success: true,
+        count: annotations.length,
+        annotations: annotations
+      });
+
+    } catch (error) {
+      console.error('PDF annotation extraction error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to extract annotations from PDF: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/pdf/extract/tables', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      
+      if (!file) {
+        return res.status(400).json({ error: 'No PDF file uploaded' });
+      }
+
+      const tables = await pdfUtils.extractTablesFromPDF(file);
+
+      res.json({
+        success: true,
+        count: tables.length,
+        tables: tables
+      });
+
+    } catch (error) {
+      console.error('PDF table extraction error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to extract tables from PDF: ${errorMessage}` });
+    }
+  });
+
   // DOCUMENT CONVERSION TOOLS
   // ========================================
   
@@ -870,8 +968,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ error: 'No Excel file uploaded' });
       }
 
-      const options = JSON.parse(req.body.options || '{}');
-      const csvData = await dataFormatUtils.excelToCsv(file.buffer, options);
+      const csvData = await docConverter.excelToCsv(file.buffer);
 
       res.setHeader('Content-Type', 'text/csv');
       res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.(xlsx?|xls)$/i, '.csv')}"`);
@@ -881,6 +978,112 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error('Excel to CSV conversion error:', error);
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       res.status(500).json({ error: `Failed to convert Excel to CSV: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/csv-to-excel', upload.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No CSV file uploaded' });
+      }
+
+      const csvContent = file.buffer.toString('utf-8');
+      const excelBuffer = await docConverter.csvToExcel(csvContent);
+
+      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.csv$/i, '.xlsx')}"`);
+      res.send(excelBuffer);
+
+    } catch (error) {
+      console.error('CSV to Excel conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert CSV to Excel: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/pdf-to-txt', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No PDF file uploaded' });
+      }
+
+      const textContent = await docConverter.pdfToText(file.buffer);
+
+      res.setHeader('Content-Type', 'text/plain');
+      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.pdf$/i, '.txt')}"`);
+      res.send(textContent);
+
+    } catch (error) {
+      console.error('PDF to TXT conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert PDF to TXT: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/txt-to-pdf', upload.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No text file uploaded' });
+      }
+
+      const textContent = file.buffer.toString('utf-8');
+      const options = JSON.parse(req.body.options || '{}');
+      const pdfBuffer = await docConverter.textToPdf(textContent, options);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.txt$/i, '.pdf')}"`);
+      res.send(pdfBuffer);
+
+    } catch (error) {
+      console.error('TXT to PDF conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert TXT to PDF: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/markdown-to-html', upload.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No markdown file uploaded' });
+      }
+
+      const markdownContent = file.buffer.toString('utf-8');
+      const htmlContent = await docConverter.markdownToHtml(markdownContent);
+
+      res.setHeader('Content-Type', 'text/html');
+      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.md$/i, '.html')}"`);
+      res.send(htmlContent);
+
+    } catch (error) {
+      console.error('Markdown to HTML conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert Markdown to HTML: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/markdown-to-pdf', upload.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No markdown file uploaded' });
+      }
+
+      const markdownContent = file.buffer.toString('utf-8');
+      const options = JSON.parse(req.body.options || '{}');
+      const pdfBuffer = await docConverter.markdownToPdf(markdownContent, options);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.md$/i, '.pdf')}"`);
+      res.send(pdfBuffer);
+
+    } catch (error) {
+      console.error('Markdown to PDF conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert Markdown to PDF: ${errorMessage}` });
     }
   });
 
@@ -3633,6 +3836,944 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({ error: `Processing failed: ${errorMessage}` });
     }
   });
+
+  // ========================================
+  // PDF SECURITY TOOLS
+  // Decrypt, Encrypt, Set Permissions, Restrictions
+  // ========================================
+  
+  // Decrypt/Unlock PDF (remove password)
+  app.post('/api/security/decrypt', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const password = req.body.password || '';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.decryptPDF(file.buffer, { password });
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'unlocked'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('PDF decrypt error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to decrypt PDF: ${errorMessage}` });
+    }
+  });
+
+  // Encrypt PDF with password
+  app.post('/api/security/encrypt', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const userPassword = req.body.userPassword || '';
+      const ownerPassword = req.body.ownerPassword || req.body.userPassword || 'owner';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      if (!userPassword && !ownerPassword) {
+        return res.status(400).json({ error: 'At least one password (user or owner) is required' });
+      }
+
+      const result = await pdfSecurity.encryptPDF(file.buffer, {
+        userPassword,
+        ownerPassword,
+        keyLength: 256
+      });
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'encrypted'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('PDF encrypt error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to encrypt PDF: ${errorMessage}` });
+    }
+  });
+
+  // Advanced password protection with custom permissions
+  app.post('/api/security/protect-advanced', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const userPassword = req.body.userPassword || '';
+      const ownerPassword = req.body.ownerPassword || 'owner';
+      const permissions = JSON.parse(req.body.permissions || '{}');
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.advancedPasswordProtection(
+        file.buffer,
+        userPassword,
+        ownerPassword,
+        permissions
+      );
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'protected'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('PDF advanced protection error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to protect PDF: ${errorMessage}` });
+    }
+  });
+
+  // Set PDF permissions (permission-setter)
+  app.post('/api/security/set-permissions', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const ownerPassword = req.body.ownerPassword || 'owner';
+      const permissions = JSON.parse(req.body.permissions || '{}');
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.setPermissions(
+        file.buffer,
+        permissions,
+        ownerPassword
+      );
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'permissions-set'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('PDF set permissions error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to set permissions: ${errorMessage}` });
+    }
+  });
+
+  // Set PDF restrictions (restrict printing, copying, editing, etc.)
+  app.post('/api/security/set-restrictions', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const ownerPassword = req.body.ownerPassword || 'owner';
+      const restrictions = JSON.parse(req.body.restrictions || '{}');
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.setRestrictions(
+        file.buffer,
+        restrictions,
+        ownerPassword
+      );
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'restricted'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('PDF set restrictions error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to set restrictions: ${errorMessage}` });
+    }
+  });
+
+  // Restrict PDF printing
+  app.post('/api/security/restrict-printing', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const ownerPassword = req.body.ownerPassword || 'owner';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.restrictPrinting(file.buffer, ownerPassword);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'print-restricted'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('PDF restrict printing error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to restrict printing: ${errorMessage}` });
+    }
+  });
+
+  // Restrict PDF copying
+  app.post('/api/security/restrict-copying', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const ownerPassword = req.body.ownerPassword || 'owner';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.restrictCopying(file.buffer, ownerPassword);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'copy-restricted'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('PDF restrict copying error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to restrict copying: ${errorMessage}` });
+    }
+  });
+
+  // Restrict PDF editing
+  app.post('/api/security/restrict-editing', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const ownerPassword = req.body.ownerPassword || 'owner';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.restrictEditing(file.buffer, ownerPassword);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'edit-restricted'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('PDF restrict editing error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to restrict editing: ${errorMessage}` });
+    }
+  });
+
+  // Remove PDF restrictions
+  app.post('/api/security/remove-restrictions', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const ownerPassword = req.body.password || req.body.ownerPassword || '';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.removeRestrictions(file.buffer, ownerPassword);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'unrestricted'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('PDF remove restrictions error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to remove restrictions: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // NEW SECURITY TOOLS - 16 ADDITIONAL TOOLS
+  // ========================================
+
+  // 1. Password strength checker
+  app.post('/api/security/check-password-strength', async (req, res) => {
+    try {
+      const password = req.body.password;
+
+      if (!password) {
+        return res.status(400).json({ error: 'Password is required' });
+      }
+
+      const result = pdfSecurity.checkPasswordStrength(password);
+      res.json(result);
+
+    } catch (error) {
+      console.error('Password strength check error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to check password strength: ${errorMessage}` });
+    }
+  });
+
+  // 2. Set owner password
+  app.post('/api/security/set-owner-password', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const ownerPassword = req.body.ownerPassword;
+      const userPassword = req.body.userPassword || '';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      if (!ownerPassword) {
+        return res.status(400).json({ error: 'Owner password is required' });
+      }
+
+      const result = await pdfSecurity.setOwnerPassword(file.buffer, ownerPassword, userPassword);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'owner-protected'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Set owner password error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to set owner password: ${errorMessage}` });
+    }
+  });
+
+  // 3. Set user password
+  app.post('/api/security/set-user-password', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const userPassword = req.body.userPassword;
+      const ownerPassword = req.body.ownerPassword || '';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      if (!userPassword) {
+        return res.status(400).json({ error: 'User password is required' });
+      }
+
+      const result = await pdfSecurity.setUserPassword(file.buffer, userPassword, ownerPassword);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'user-protected'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Set user password error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to set user password: ${errorMessage}` });
+    }
+  });
+
+  // 4. Password recovery
+  app.post('/api/security/password-recovery', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const customPasswords = req.body.customPasswords ? JSON.parse(req.body.customPasswords) : [];
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.attemptPasswordRecovery(file.buffer, customPasswords);
+      res.json(result);
+
+    } catch (error) {
+      console.error('Password recovery error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to recover password: ${errorMessage}` });
+    }
+  });
+
+  // 5. Security analyzer
+  app.post('/api/security/analyze', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const securityInfo = await pdfSecurity.getSecurityInfo(file.buffer);
+      const hasPass = await pdfSecurity.hasPassword(file.buffer);
+
+      res.json({
+        ...securityInfo,
+        requiresPassword: hasPass,
+        securityLevel: securityInfo.encrypted ? 
+          (securityInfo.keyLength === 256 ? 'high' : 
+           securityInfo.keyLength === 128 ? 'medium' : 'low') : 'none'
+      });
+
+    } catch (error) {
+      console.error('Security analysis error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to analyze security: ${errorMessage}` });
+    }
+  });
+
+  // 6. Get security info
+  app.post('/api/security/info', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.getSecurityInfo(file.buffer);
+      res.json(result);
+
+    } catch (error) {
+      console.error('Get security info error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to get security info: ${errorMessage}` });
+    }
+  });
+
+  // 7. Check if PDF has password
+  app.post('/api/security/check-password', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const hasPass = await pdfSecurity.hasPassword(file.buffer);
+      res.json({ hasPassword: hasPass });
+
+    } catch (error) {
+      console.error('Check password error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to check password: ${errorMessage}` });
+    }
+  });
+
+  // 8. Detect encryption type
+  app.post('/api/security/detect-encryption', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.detectEncryption(file.buffer);
+      res.json(result);
+
+    } catch (error) {
+      console.error('Detect encryption error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to detect encryption: ${errorMessage}` });
+    }
+  });
+
+  // 9. Get encryption info
+  app.post('/api/security/encryption-info', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.detectEncryption(file.buffer);
+      res.json(result);
+
+    } catch (error) {
+      console.error('Get encryption info error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to get encryption info: ${errorMessage}` });
+    }
+  });
+
+  // 10. Unlock all PDF features
+  app.post('/api/security/unlock-all', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const password = req.body.password || '';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.unlockAllFeatures(file.buffer, password);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'fully-unlocked'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Unlock all features error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to unlock all features: ${errorMessage}` });
+    }
+  });
+
+  // 11. Unlock for accessibility
+  app.post('/api/security/unlock-accessibility', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const ownerPassword = req.body.ownerPassword || req.body.password || '';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.unlockAccessibility(file.buffer, ownerPassword);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'accessibility-unlocked'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Unlock accessibility error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to unlock accessibility: ${errorMessage}` });
+    }
+  });
+
+  // 12. Unlock printing
+  app.post('/api/security/unlock-print', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const ownerPassword = req.body.ownerPassword || req.body.password || '';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.unlockPrinting(file.buffer, ownerPassword);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'print-unlocked'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Unlock printing error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to unlock printing: ${errorMessage}` });
+    }
+  });
+
+  // 13. Unlock copying
+  app.post('/api/security/unlock-copy', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const ownerPassword = req.body.ownerPassword || req.body.password || '';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.unlockCopying(file.buffer, ownerPassword);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'copy-unlocked'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Unlock copying error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to unlock copying: ${errorMessage}` });
+    }
+  });
+
+  // 14. Unlock editing
+  app.post('/api/security/unlock-edit', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const ownerPassword = req.body.ownerPassword || req.body.password || '';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.unlockEditing(file.buffer, ownerPassword);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'edit-unlocked'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Unlock editing error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to unlock editing: ${errorMessage}` });
+    }
+  });
+
+  // 15. Unlock form filling
+  app.post('/api/security/unlock-form', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const ownerPassword = req.body.ownerPassword || req.body.password || '';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.unlockForms(file.buffer, ownerPassword);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'form-unlocked'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Unlock form filling error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to unlock form filling: ${errorMessage}` });
+    }
+  });
+
+  // 16. Unlock page assembly
+  app.post('/api/security/unlock-assembly', pdfOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      const toolId = req.body.toolId;
+      const ownerPassword = req.body.ownerPassword || req.body.password || '';
+
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const result = await pdfSecurity.unlockAssembly(file.buffer, ownerPassword);
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="${toolId || 'assembly-unlocked'}.pdf"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Unlock page assembly error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to unlock page assembly: ${errorMessage}` });
+    }
+  });
+
+
+  // ========================================
+  // VIEWER TOOLS - CSV, JSON, XML, YAML
+  // ========================================
+  
+  // CSV Viewer
+  app.post('/api/viewer/csv', fileOrTextMiddleware, async (req, res) => {
+    try {
+      const file = req.file;
+
+      let csvContent: string;
+      if (file) {
+        // File upload via multipart/form-data
+        csvContent = file.buffer.toString('utf-8');
+      } else if (req.body && typeof req.body === 'string') {
+        // Raw text body (text/plain or text/csv)
+        csvContent = req.body;
+      } else if (req.body && req.body.text) {
+        // Multipart form field named 'text'
+        csvContent = req.body.text;
+      } else if (req.body && typeof req.body === 'object' && req.body.content) {
+        // JSON body with 'content' field
+        csvContent = req.body.content;
+      } else {
+        return res.status(400).json({ error: 'No file or text provided' });
+      }
+
+      // Simple CSV parsing (basic implementation)
+      const lines = csvContent.split('\n').filter(line => line.trim());
+      const headers = lines[0].split(',').map(h => h.trim());
+      const rows = lines.slice(1).map(line => {
+        const values = line.split(',').map(v => v.trim());
+        const row: Record<string, string> = {};
+        headers.forEach((header, index) => {
+          row[header] = values[index] || '';
+        });
+        return row;
+      });
+
+      res.json({
+        success: true,
+        data: {
+          headers,
+          rows,
+          totalRows: rows.length,
+          totalColumns: headers.length
+        }
+      });
+
+    } catch (error) {
+      console.error('CSV viewer error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to parse CSV: ${errorMessage}` });
+    }
+  });
+
+  // JSON Viewer
+  app.post('/api/viewer/json', fileOrTextMiddleware, async (req, res) => {
+    try {
+      const file = req.file;
+
+      let jsonContent: string;
+      if (file) {
+        // File upload via multipart/form-data
+        jsonContent = file.buffer.toString('utf-8');
+      } else if (req.body && typeof req.body === 'string') {
+        // Raw text body (text/plain)
+        jsonContent = req.body;
+      } else if (req.body && typeof req.body === 'object' && !Array.isArray(req.body)) {
+        // JSON body - could be the actual JSON object or {content: "..."} wrapper
+        if (req.body.content) {
+          jsonContent = req.body.content;
+        } else if (req.body.text) {
+          jsonContent = req.body.text;
+        } else {
+          // Treat the entire body as the JSON to view
+          jsonContent = JSON.stringify(req.body);
+        }
+      } else {
+        return res.status(400).json({ error: 'No file or text provided' });
+      }
+
+      // Parse and validate JSON
+      const parsed = JSON.parse(jsonContent);
+      const formatted = JSON.stringify(parsed, null, 2);
+
+      res.json({
+        success: true,
+        data: {
+          content: formatted,
+          parsed: parsed,
+          size: jsonContent.length,
+          type: Array.isArray(parsed) ? 'array' : typeof parsed
+        }
+      });
+
+    } catch (error) {
+      console.error('JSON viewer error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(400).json({ 
+        error: `Invalid JSON: ${errorMessage}`,
+        isValid: false
+      });
+    }
+  });
+
+  // XML Viewer
+  app.post('/api/viewer/xml', fileOrTextMiddleware, async (req, res) => {
+    try {
+      const file = req.file;
+
+      let xmlContent: string;
+      if (file) {
+        // File upload via multipart/form-data
+        xmlContent = file.buffer.toString('utf-8');
+      } else if (req.body && typeof req.body === 'string') {
+        // Raw text body (text/xml or text/plain)
+        xmlContent = req.body;
+      } else if (req.body && req.body.text) {
+        // Multipart form field named 'text'
+        xmlContent = req.body.text;
+      } else if (req.body && typeof req.body === 'object' && req.body.content) {
+        // JSON body with 'content' field
+        xmlContent = req.body.content;
+      } else {
+        return res.status(400).json({ error: 'No file or text provided' });
+      }
+
+      // Basic XML validation (check if it has opening/closing tags)
+      const hasXmlDeclaration = xmlContent.trim().startsWith('<?xml');
+      const tagCount = (xmlContent.match(/<[^>]+>/g) || []).length;
+
+      res.json({
+        success: true,
+        data: {
+          content: xmlContent,
+          hasDeclaration: hasXmlDeclaration,
+          tagCount: tagCount,
+          size: xmlContent.length
+        }
+      });
+
+    } catch (error) {
+      console.error('XML viewer error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to parse XML: ${errorMessage}` });
+    }
+  });
+
+  // YAML Viewer
+  app.post('/api/viewer/yaml', fileOrTextMiddleware, async (req, res) => {
+    try {
+      const file = req.file;
+
+      let yamlContent: string;
+      if (file) {
+        // File upload via multipart/form-data
+        yamlContent = file.buffer.toString('utf-8');
+      } else if (req.body && typeof req.body === 'string') {
+        // Raw text body (text/yaml or text/plain)
+        yamlContent = req.body;
+      } else if (req.body && req.body.text) {
+        // Multipart form field named 'text'
+        yamlContent = req.body.text;
+      } else if (req.body && typeof req.body === 'object' && req.body.content) {
+        // JSON body with 'content' field
+        yamlContent = req.body.content;
+      } else {
+        return res.status(400).json({ error: 'No file or text provided' });
+      }
+
+      // Basic YAML structure analysis
+      const lines = yamlContent.split('\n');
+      const keyCount = lines.filter(line => line.includes(':')).length;
+      const listItems = lines.filter(line => line.trim().startsWith('-')).length;
+
+      res.json({
+        success: true,
+        data: {
+          content: yamlContent,
+          lineCount: lines.length,
+          keyCount: keyCount,
+          listItems: listItems,
+          size: yamlContent.length
+        }
+      });
+
+    } catch (error) {
+      console.error('YAML viewer error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to parse YAML: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // EDITOR TOOLS - Markdown, Text
+  // ========================================
+
+  // Markdown Editor - Load
+  app.post('/api/editor/markdown/load', fileOrTextMiddleware, async (req, res) => {
+    try {
+      const file = req.file;
+
+      let content: string;
+      if (file) {
+        // File upload via multipart/form-data
+        content = file.buffer.toString('utf-8');
+      } else if (req.body && typeof req.body === 'string') {
+        // Raw text body (text/markdown or text/plain)
+        content = req.body;
+      } else if (req.body && req.body.text) {
+        // Multipart form field named 'text'
+        content = req.body.text;
+      } else if (req.body && typeof req.body === 'object' && req.body.content) {
+        // JSON body with 'content' field
+        content = req.body.content;
+      } else {
+        return res.status(400).json({ error: 'No file or text provided' });
+      }
+
+      res.json({
+        success: true,
+        data: {
+          content: content,
+          wordCount: content.split(/\s+/).filter(w => w).length,
+          lineCount: content.split('\n').length,
+          charCount: content.length
+        }
+      });
+
+    } catch (error) {
+      console.error('Markdown editor load error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to load markdown: ${errorMessage}` });
+    }
+  });
+
+  // Markdown Editor - Save
+  app.post('/api/editor/markdown/save', upload.none(), async (req, res) => {
+    try {
+      const content = req.body.content;
+      const filename = req.body.filename || 'document.md';
+
+      if (!content && content !== '') {
+        return res.status(400).json({ error: 'No content provided' });
+      }
+
+      res.setHeader('Content-Type', 'text/markdown');
+      res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+      res.send(content);
+
+    } catch (error) {
+      console.error('Markdown editor save error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to save markdown: ${errorMessage}` });
+    }
+  });
+
+  // Text Editor - Load
+  app.post('/api/editor/text/load', fileOrTextMiddleware, async (req, res) => {
+    try {
+      const file = req.file;
+
+      let content: string;
+      if (file) {
+        // File upload via multipart/form-data
+        content = file.buffer.toString('utf-8');
+      } else if (req.body && typeof req.body === 'string') {
+        // Raw text body (text/plain)
+        content = req.body;
+      } else if (req.body && req.body.text) {
+        // Multipart form field named 'text'
+        content = req.body.text;
+      } else if (req.body && typeof req.body === 'object' && req.body.content) {
+        // JSON body with 'content' field
+        content = req.body.content;
+      } else {
+        return res.status(400).json({ error: 'No file or text provided' });
+      }
+
+      res.json({
+        success: true,
+        data: {
+          content: content,
+          wordCount: content.split(/\s+/).filter(w => w).length,
+          lineCount: content.split('\n').length,
+          charCount: content.length
+        }
+      });
+
+    } catch (error) {
+      console.error('Text editor load error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to load text: ${errorMessage}` });
+    }
+  });
+
+  // Text Editor - Save
+  app.post('/api/editor/text/save', upload.none(), async (req, res) => {
+    try {
+      const content = req.body.content;
+      const filename = req.body.filename || 'document.txt';
+
+      if (!content && content !== '') {
+        return res.status(400).json({ error: 'No content provided' });
+      }
+
+      res.setHeader('Content-Type', 'text/plain');
+      res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+      res.send(content);
+
+    } catch (error) {
+      console.error('Text editor save error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to save text: ${errorMessage}` });
+    }
+  });
+
 
   const httpServer = createServer(app);
   return httpServer;

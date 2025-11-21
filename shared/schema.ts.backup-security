@@ -13565,305 +13565,6 @@ Security assurance:
     }
   },
 
-  {
-    id: "password-protect-pdf-advanced",
-    title: "Advanced Password Protection",
-    category: "Security" as ToolCategory,
-    tags: ["password", "advanced", "protection", "secure"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Advanced PDF Password Protection - Secure PDFs with Custom Permissions",
-    metaDescription: "Advanced password protection for PDFs with granular permission controls. Set user and owner passwords, restrict printing, copying, and editing.",
-    description: "Protect PDFs with advanced password and permission settings",
-    icon: "shield-check",
-    howTo: [
-      "Upload your PDF file",
-      "Set user password (required to open)",
-      "Set owner password (required to change permissions)",
-      "Configure detailed permissions (print, copy, edit, etc.)",
-      "Download your protected PDF"
-    ],
-    article: {
-      title: "Advanced PDF Password Protection",
-      content: `Advanced password protection gives you complete control over PDF security with granular permission settings. Set different passwords for opening and modifying, plus detailed usage restrictions.
-
-## Permission Levels
-
-Control PDF usage:
-- Printing: Allow full, low-res, or no printing
-- Copying: Enable or disable text/image extraction
-- Editing: Control document modification levels
-- Annotations: Allow or block comments and markups
-- Forms: Enable or disable form filling
-- Accessibility: Control screen reader access
-
-## Password Types
-
-Two-tier protection:
-- User Password: Required to open the document
-- Owner Password: Required to change permissions
-- Both passwords can be set independently
-- 256-bit AES encryption for maximum security
-
-## Professional Security
-
-Perfect for:
-- Confidential business documents
-- Legal contracts with restrictions
-- Copyright-protected content
-- Sensitive client information
-- Internal company policies`,
-      relatedTools: ["encrypt-pdf", "secure-pdf", "pdf-permission-setter"]
-    }
-  },
-  {
-    id: "pdf-permission-setter",
-    title: "PDF Permission Setter",
-    category: "Security" as ToolCategory,
-    tags: ["permissions", "access", "control", "restrict"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Set PDF Permissions Online - Control Document Access & Usage",
-    metaDescription: "Set PDF permissions to control printing, copying, editing, and more. Free online tool to manage PDF access rights and restrictions.",
-    description: "Set detailed permissions and access controls for PDF documents",
-    icon: "settings",
-    howTo: [
-      "Upload your PDF document",
-      "Choose permission settings (print, copy, modify)",
-      "Set owner password for permission enforcement",
-      "Download PDF with applied permissions"
-    ],
-    article: {
-      title: "Control PDF Permissions",
-      content: `PDF permission settings let you control how users interact with your documents. Restrict printing, copying, editing, and other operations while keeping the PDF viewable.
-
-## Available Permissions
-
-Configure access:
-- Print: none, low-resolution, or full
-- Modify: none, annotations, forms, assembly, or all
-- Extract: Allow or prevent text/image copying
-- Annotate: Enable or disable comments
-- Forms: Allow or prevent form filling
-
-## Use Cases
-
-Common applications:
-- Protect copyrighted materials
-- Control document distribution
-- Prevent unauthorized editing
-- Maintain document integrity
-- Share view-only versions`,
-      relatedTools: ["password-protect-pdf-advanced", "pdf-restriction-setter", "secure-pdf"]
-    }
-  },
-  {
-    id: "pdf-restriction-setter",
-    title: "PDF Restriction Setter",
-    category: "Security" as ToolCategory,
-    tags: ["restrictions", "limit", "control", "protect"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Set PDF Restrictions Online - Limit Document Actions Free",
-    metaDescription: "Set PDF restrictions to limit printing, copying, editing, and more. Free online tool to apply usage restrictions to PDF files.",
-    description: "Apply usage restrictions to PDF documents for better control",
-    icon: "lock",
-    howTo: [
-      "Upload PDF to restrict",
-      "Select restrictions to apply (print, copy, edit)",
-      "Set owner password to enforce restrictions",
-      "Download restricted PDF"
-    ],
-    article: {
-      title: "Restrict PDF Usage",
-      content: `PDF restrictions help you maintain control over how your documents are used. Apply restrictions to prevent unwanted actions while keeping files accessible.
-
-## Restriction Types
-
-Common restrictions:
-- No printing allowed
-- No copying or extraction
-- No content modification
-- No annotations or comments
-- No form filling
-
-## Benefits
-
-Why restrict PDFs:
-- Protect intellectual property
-- Prevent unauthorized distribution
-- Maintain document authenticity
-- Control information usage
-- Enforce licensing terms`,
-      relatedTools: ["pdf-permission-setter", "restrict-pdf-editing", "restrict-pdf-printing"]
-    }
-  },
-  {
-    id: "restrict-pdf-editing",
-    title: "Restrict PDF Editing",
-    category: "Security" as ToolCategory,
-    tags: ["restrict", "editing", "readonly", "protect"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Restrict PDF Editing Online - Make PDF Read-Only Free",
-    metaDescription: "Restrict PDF editing to prevent unauthorized modifications. Free online tool to make PDFs read-only while allowing viewing.",
-    description: "Prevent unauthorized editing and modifications to PDF documents",
-    icon: "edit-off",
-    howTo: [
-      "Upload PDF to protect",
-      "Tool applies editing restrictions automatically",
-      "Optionally set owner password",
-      "Download edit-protected PDF"
-    ],
-    article: {
-      title: "Prevent PDF Editing",
-      content: `Restricting PDF editing prevents unauthorized modifications while keeping your documents viewable. Perfect for protecting finalized documents, contracts, and official records.
-
-## What Gets Restricted
-
-Editing restrictions prevent:
-- Text modifications
-- Page insertions or deletions
-- Content replacement
-- Document assembly
-- Form field changes (optional)
-
-## When to Use
-
-Ideal for:
-- Final contracts and agreements
-- Official certificates
-- Published reports
-- Legal documents
-- Historical records
-- Reference materials`,
-      relatedTools: ["restrict-pdf-copying", "restrict-pdf-printing", "pdf-restriction-setter"]
-    }
-  },
-  {
-    id: "restrict-pdf-printing",
-    title: "Restrict PDF Printing",
-    category: "Security" as ToolCategory,
-    tags: ["restrict", "printing", "noprint", "protect"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Restrict PDF Printing Online - Disable Print Function Free",
-    metaDescription: "Restrict PDF printing to prevent unauthorized copies. Free online tool to disable or limit printing while allowing digital viewing.",
-    description: "Disable or limit printing capabilities for PDF documents",
-    icon: "printer-off",
-    howTo: [
-      "Upload PDF file",
-      "Printing restriction is applied",
-      "Optionally set owner password",
-      "Download print-restricted PDF"
-    ],
-    article: {
-      title: "Control PDF Printing",
-      content: `Restricting PDF printing helps prevent unauthorized physical copies while keeping documents digitally accessible. Useful for digital-only distribution and preventing duplication.
-
-## Print Restriction Levels
-
-Control printing:
-- No printing allowed
-- Low-resolution printing only
-- Full-resolution printing allowed
-
-## Common Uses
-
-Applications:
-- Digital-only distribution
-- Prevent unauthorized copies
-- Reduce paper waste
-- Control document versions
-- Enforce digital workflows`,
-      relatedTools: ["restrict-pdf-editing", "restrict-pdf-copying", "pdf-restriction-setter"]
-    }
-  },
-  {
-    id: "restrict-pdf-copying",
-    title: "Restrict PDF Copying",
-    category: "Security" as ToolCategory,
-    tags: ["restrict", "copying", "extract", "protect"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Restrict PDF Copying Online - Prevent Text & Image Extraction",
-    metaDescription: "Restrict PDF copying to prevent text and image extraction. Free online tool to disable content copying while allowing viewing.",
-    description: "Prevent text and image extraction from PDF documents",
-    icon: "copy-off",
-    howTo: [
-      "Upload your PDF file",
-      "Copying restriction is applied",
-      "Optionally set owner password",
-      "Download copy-protected PDF"
-    ],
-    article: {
-      title: "Prevent PDF Content Copying",
-      content: `Restricting PDF copying prevents users from extracting text, images, and other content from your documents. Essential for protecting intellectual property and preventing plagiarism.
-
-## What Gets Restricted
-
-Copying restrictions prevent:
-- Text selection and copying
-- Image extraction
-- Content scraping
-- Screen capture (in some viewers)
-- Copy-paste operations
-
-## Protection Benefits
-
-Why restrict copying:
-- Protect copyrighted content
-- Prevent plagiarism
-- Maintain content exclusivity
-- Control information distribution
-- Preserve intellectual property`,
-      relatedTools: ["restrict-pdf-editing", "restrict-pdf-printing", "pdf-restriction-setter"]
-    }
-  },
-  {
-    id: "remove-pdf-restrictions",
-    title: "Remove PDF Restrictions",
-    category: "Security" as ToolCategory,
-    tags: ["remove", "restrictions", "unlock", "permissions"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Remove PDF Restrictions Online - Unlock PDF Permissions Free",
-    metaDescription: "Remove PDF restrictions and permissions online for free. Unlock printing, copying, and editing restrictions from your PDFs.",
-    description: "Remove usage restrictions and permissions from PDF documents",
-    icon: "unlock",
-    howTo: [
-      "Upload restricted PDF",
-      "Enter owner password if protected",
-      "Restrictions are removed automatically",
-      "Download unrestricted PDF"
-    ],
-    article: {
-      title: "Remove PDF Restrictions",
-      content: `Removing PDF restrictions unlocks all usage permissions, allowing full access to printing, copying, editing, and other operations. Requires owner password if the PDF is password-protected.
-
-## What Gets Removed
-
-Unrestrict:
-- Printing restrictions
-- Copying limitations
-- Editing blocks
-- Annotation restrictions
-- Form filling limits
-- Assembly restrictions
-
-## Requirements
-
-To remove restrictions:
-- Owner password if PDF is protected
-- Original PDF file
-- Legal right to modify restrictions
-
-## After Removal
-
-Full access restored:
-- Print at any quality
-- Copy text and images
-- Edit content freely
-- Add annotations
-- Fill forms
-- Modify document structure`,
-      relatedTools: ["unlock-pdf", "decrypt-pdf", "remove-pdf-password"]
-    }
-  },
-
   // Signature Tools
   {
     id: "sign-pdf",
@@ -16174,7 +15875,7 @@ Guarantees:
     title: "Extract Tables from PDF",
     category: "Data Extraction" as ToolCategory,
     tags: ["extract", "tables", "data", "grid"],
-    capability: "implemented" as ToolCapability,
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Extract Tables from PDF - PDF Table Extraction Online Free",
     metaDescription: "Extract tables from PDF documents online for free. Convert PDF tables to Excel or CSV. Accurate table data extraction tool.",
     description: "Extract tabular data from PDF documents",
@@ -24402,7 +24103,7 @@ Estimates how long it takes to read your text.`,
     title: "Text Editor Online",
     category: "Text Tools" as ToolCategory,
     tags: ["text editor", "notepad", "write", "edit"],
-    capability: "implemented" as ToolCapability,
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Online Text Editor Free - Web-Based Notepad",
     metaDescription: "Edit text online for free. Simple web-based text editor with word count and save features. Online notepad alternative.",
     description: "Simple online text editor with formatting",
@@ -24432,7 +24133,7 @@ Download text or save to browser storage.`,
     title: "Markdown Editor",
     category: "Text Tools" as ToolCategory,
     tags: ["markdown", "md", "editor", "preview"],
-    capability: "implemented" as ToolCapability,
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "Markdown Editor Online - Write and Preview Markdown",
     metaDescription: "Edit markdown online for free. Real-time preview of markdown formatting. Export to HTML or download MD files.",
     description: "Write and preview Markdown with real-time rendering",
@@ -24462,7 +24163,7 @@ Download as Markdown or export to HTML.`,
     title: "CSV Viewer",
     category: "Text Tools" as ToolCategory,
     tags: ["csv", "viewer", "table", "data"],
-    capability: "implemented" as ToolCapability,
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "CSV Viewer Online - View and Edit CSV Files",
     metaDescription: "View CSV files online for free. Interactive CSV viewer and editor. Sort, filter, and analyze CSV data.",
     description: "View and analyze CSV files in table format",
@@ -24492,7 +24193,7 @@ Quickly analyze and understand CSV data.`,
     title: "JSON Viewer",
     category: "Text Tools" as ToolCategory,
     tags: ["json", "viewer", "formatter", "validate"],
-    capability: "implemented" as ToolCapability,
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "JSON Viewer Online - Format and Validate JSON",
     metaDescription: "View and format JSON online for free. JSON validator with syntax highlighting. Tree view and error detection.",
     description: "View, format, and validate JSON data",
@@ -24522,7 +24223,7 @@ Navigate complex JSON structures easily.`,
     title: "XML Viewer",
     category: "Text Tools" as ToolCategory,
     tags: ["xml", "viewer", "formatter", "validate"],
-    capability: "implemented" as ToolCapability,
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "XML Viewer Online - Format and Validate XML",
     metaDescription: "View and format XML online for free. XML validator with syntax highlighting. Tree view for XML documents.",
     description: "View, format, and validate XML documents",
@@ -24546,36 +24247,6 @@ Detect XML errors and validation issues.
 View XML hierarchy in organized tree format.`,
       relatedTools: ["xml-to-json", "xml-formatter", "data-tools"]
     }
-    },
-  {
-    id: "yaml-viewer",
-    title: "YAML Viewer",
-    category: "Text Tools" as ToolCategory,
-    tags: ["yaml", "yml", "viewer", "formatter"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "YAML Viewer Online - View and Format YAML Files",
-    metaDescription: "View and format YAML files online for free. YAML validator with syntax highlighting. View YAML structure clearly.",
-    description: "View and format YAML configuration files",
-    icon: "file-code",
-    howTo: [
-      "Upload YAML file or paste YAML data",
-      "View formatted YAML",
-      "Validate syntax",
-      "Export formatted YAML"
-    ],
-    article: {
-      title: "View and Format YAML Files",
-      content: `View and format YAML configuration files with syntax highlighting. Perfect for config files and data files.
-
-## Syntax Validation
-
-Detect YAML errors and validation issues.
-
-## Clear Structure
-
-View YAML hierarchy in organized format.`,
-      relatedTools: ["json-viewer", "yaml-to-json", "config-tools"]
-    },
   },
   {
     id: "json-to-csv",
@@ -39410,293 +39081,6 @@ Only scan networks you own or have permission to test.`,
       relatedTools: ["remove-metadata", "sanitize-pdf", "pdf-properties"]
     }
   },
-    {
-    id: "pdf-password-strength-checker",
-    title: "PDF Password Strength Checker",
-    category: "Security" as ToolCategory,
-    tags: ["password","strength","security","check"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "PDF Password Strength Checker - Check Password Security",
-    metaDescription: "Check the strength of your PDF passwords. Analyze password security with our free online password strength checker tool.",
-    description: "Analyze password strength and get security recommendations",
-    icon: "shield-check",
-    howTo: [
-          "Enter the password you want to check",
-          "Click 'Check Strength' to analyze",
-          "Review the strength score and recommendations",
-          "Improve your password based on feedback"
-    ]
-  },
-  
-  {
-    id: "pdf-owner-password-setter",
-    title: "PDF Owner Password Setter",
-    category: "Security" as ToolCategory,
-    tags: ["owner","password","protect","security"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Set PDF Owner Password - Protect PDF Permissions",
-    metaDescription: "Set an owner password for your PDF to control permissions and restrictions. Secure your PDF documents online free.",
-    description: "Set owner password to control PDF permissions",
-    icon: "key",
-    howTo: [
-          "Upload your PDF file",
-          "Enter the owner password",
-          "Optionally set a user password",
-          "Download the protected PDF"
-    ]
-  },
-  
-  {
-    id: "pdf-user-password-setter",
-    title: "PDF User Password Setter",
-    category: "Security" as ToolCategory,
-    tags: ["user","password","protect","security"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Set PDF User Password - Password Protect PDF Files",
-    metaDescription: "Set a user password to protect your PDF files. Require password to open PDF documents. Free online PDF password protection.",
-    description: "Set user password to require password for opening PDF",
-    icon: "lock",
-    howTo: [
-          "Upload your PDF file",
-          "Enter the user password",
-          "Optionally set an owner password",
-          "Download the password-protected PDF"
-    ]
-  },
-  
-  {
-    id: "pdf-password-recovery",
-    title: "PDF Password Recovery",
-    category: "Security" as ToolCategory,
-    tags: ["password","recovery","crack","unlock"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "PDF Password Recovery - Recover Lost PDF Passwords",
-    metaDescription: "Attempt to recover lost PDF passwords using common password lists. Free online PDF password recovery tool.",
-    description: "Attempt to recover or crack PDF passwords",
-    icon: "unlock",
-    howTo: [
-          "Upload your password-protected PDF",
-          "Optionally provide custom passwords to try",
-          "Click 'Attempt Recovery' to start",
-          "View the results if password is found"
-    ]
-  },
-  
-  {
-    id: "pdf-security-analyzer",
-    title: "PDF Security Analyzer",
-    category: "Security" as ToolCategory,
-    tags: ["security","analyze","scan","check"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "PDF Security Analyzer - Analyze PDF Security Settings",
-    metaDescription: "Analyze PDF security settings and encryption. Get detailed security information about your PDF documents online free.",
-    description: "Analyze and report on PDF security settings",
-    icon: "shield-alert",
-    howTo: [
-          "Upload your PDF file",
-          "Click 'Analyze Security' to scan",
-          "Review comprehensive security report",
-          "Get recommendations for improvement"
-    ]
-  },
-  
-  {
-    id: "pdf-security-info",
-    title: "PDF Security Info",
-    category: "Security" as ToolCategory,
-    tags: ["security","info","details","encryption"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Get PDF Security Information - View PDF Encryption Details",
-    metaDescription: "Get detailed security information about PDF files. View encryption type, passwords, and permissions online free.",
-    description: "Get detailed security and encryption information",
-    icon: "info",
-    howTo: [
-          "Upload your PDF file",
-          "Click 'Get Security Info'",
-          "View encryption and permission details",
-          "Export security information if needed"
-    ]
-  },
-  
-  {
-    id: "check-pdf-password",
-    title: "Check PDF Password",
-    category: "Security" as ToolCategory,
-    tags: ["check","password","verify","protected"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Check if PDF Has Password - Verify PDF Protection",
-    metaDescription: "Check if a PDF file is password protected. Verify PDF security status online free without opening the file.",
-    description: "Check if PDF file is password protected",
-    icon: "shield-question",
-    howTo: [
-          "Upload your PDF file",
-          "Click 'Check Password' to verify",
-          "View password protection status",
-          "Get details about protection type"
-    ]
-  },
-  
-  {
-    id: "detect-pdf-encryption",
-    title: "Detect PDF Encryption",
-    category: "Security" as ToolCategory,
-    tags: ["detect","encryption","type","security"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Detect PDF Encryption Type - Identify PDF Security",
-    metaDescription: "Detect the encryption type used in PDF files. Identify AES-256, AES-128, RC4 encryption and more online free.",
-    description: "Detect and identify PDF encryption type",
-    icon: "scan",
-    howTo: [
-          "Upload your PDF file",
-          "Click 'Detect Encryption'",
-          "View encryption type and details",
-          "Understand the security level"
-    ]
-  },
-  
-  {
-    id: "pdf-encryption-info",
-    title: "PDF Encryption Info",
-    category: "Security" as ToolCategory,
-    tags: ["encryption","info","details","security"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "PDF Encryption Information - Get Encryption Details",
-    metaDescription: "Get detailed encryption information about PDF files. View encryption algorithm, key length, and version online free.",
-    description: "Get detailed PDF encryption information",
-    icon: "file-lock",
-    howTo: [
-          "Upload your PDF file",
-          "Click 'Get Encryption Info'",
-          "Review encryption algorithm details",
-          "Check encryption key length and version"
-    ]
-  },
-  
-  {
-    id: "unlock-all-pdf-features",
-    title: "Unlock All PDF Features",
-    category: "Security" as ToolCategory,
-    tags: ["unlock","features","remove","restrictions"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Unlock All PDF Features - Remove All PDF Restrictions",
-    metaDescription: "Unlock all PDF features and remove all restrictions. Enable printing, copying, editing, and more online free.",
-    description: "Remove all restrictions and unlock all PDF features",
-    icon: "unlock-keyhole",
-    howTo: [
-          "Upload your restricted PDF",
-          "Enter password if required",
-          "Click 'Unlock All Features'",
-          "Download fully unlocked PDF"
-    ]
-  },
-  
-  {
-    id: "pdf-accessibility-unlock",
-    title: "PDF Accessibility Unlock",
-    category: "Security" as ToolCategory,
-    tags: ["accessibility","unlock","screen reader","enable"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Unlock PDF for Accessibility - Enable Screen Readers",
-    metaDescription: "Unlock PDF for accessibility tools and screen readers. Make PDFs accessible online free.",
-    description: "Unlock PDF for accessibility tools and screen readers",
-    icon: "accessibility",
-    howTo: [
-          "Upload your PDF file",
-          "Enter owner password if required",
-          "Click 'Unlock Accessibility'",
-          "Download accessibility-enabled PDF"
-    ]
-  },
-  
-  {
-    id: "pdf-print-unlock",
-    title: "PDF Print Unlock",
-    category: "Security" as ToolCategory,
-    tags: ["print","unlock","enable","printing"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Unlock PDF Printing - Enable PDF Print Permission",
-    metaDescription: "Unlock PDF printing restrictions. Enable printing on restricted PDF files online free.",
-    description: "Enable printing on restricted PDF files",
-    icon: "printer",
-    howTo: [
-          "Upload your restricted PDF",
-          "Enter owner password if required",
-          "Click 'Unlock Printing'",
-          "Download print-enabled PDF"
-    ]
-  },
-  
-  {
-    id: "pdf-copy-unlock",
-    title: "PDF Copy Unlock",
-    category: "Security" as ToolCategory,
-    tags: ["copy","unlock","text","extract"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Unlock PDF Copying - Enable Text Copy from PDF",
-    metaDescription: "Unlock PDF text copying restrictions. Enable copying and content extraction from restricted PDFs online free.",
-    description: "Enable text copying and content extraction",
-    icon: "copy",
-    howTo: [
-          "Upload your restricted PDF",
-          "Enter owner password if required",
-          "Click 'Unlock Copying'",
-          "Download copy-enabled PDF"
-    ]
-  },
-  
-  {
-    id: "pdf-edit-unlock",
-    title: "PDF Edit Unlock",
-    category: "Security" as ToolCategory,
-    tags: ["edit","unlock","modify","enable"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Unlock PDF Editing - Enable PDF Modification",
-    metaDescription: "Unlock PDF editing restrictions. Enable modification and editing on restricted PDF files online free.",
-    description: "Enable editing and modification permissions",
-    icon: "edit",
-    howTo: [
-          "Upload your restricted PDF",
-          "Enter owner password if required",
-          "Click 'Unlock Editing'",
-          "Download editable PDF"
-    ]
-  },
-  
-  {
-    id: "pdf-form-unlock",
-    title: "PDF Form Unlock",
-    category: "Security" as ToolCategory,
-    tags: ["form","unlock","fill","enable"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Unlock PDF Form Filling - Enable PDF Forms",
-    metaDescription: "Unlock PDF form filling restrictions. Enable form fields on restricted PDF files online free.",
-    description: "Enable form filling on restricted PDFs",
-    icon: "file-input",
-    howTo: [
-          "Upload your restricted PDF",
-          "Enter owner password if required",
-          "Click 'Unlock Form Filling'",
-          "Download form-enabled PDF"
-    ]
-  },
-  
-  {
-    id: "pdf-assembly-unlock",
-    title: "PDF Assembly Unlock",
-    category: "Security" as ToolCategory,
-    tags: ["assembly","unlock","pages","enable"],
-    capability: "implemented" as ToolCapability,
-    metaTitle: "Unlock PDF Page Assembly - Enable Page Operations",
-    metaDescription: "Unlock PDF page assembly restrictions. Enable inserting, rotating, and deleting pages in restricted PDFs online free.",
-    description: "Enable page assembly operations (insert, rotate, delete pages)",
-    icon: "layers",
-    howTo: [
-          "Upload your restricted PDF",
-          "Enter owner password if required",
-          "Click 'Unlock Assembly'",
-          "Download assembly-enabled PDF"
-    ]
-  },
   {
     id: "pdf-attachment-adder",
     title: "PDF Attachment Adder",
@@ -40601,7 +39985,7 @@ Quickly fix page order mistakes from scanning or merging without recreating the 
     title: "PDF Link Extractor",
     category: "OCR & Extract" as ToolCategory,
     tags: ["links", "extract", "urls", "hyperlinks"],
-    capability: "implemented" as ToolCapability,
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "PDF Link Extractor - Extract All URLs from PDF",
     metaDescription: "Extract all hyperlinks and URLs from PDF documents. Get list of all links in PDF files.",
     description: "Extract all hyperlinks and URLs from PDF documents",
@@ -40635,7 +40019,7 @@ Download extracted links as text, CSV, or formatted list for further processing 
     title: "PDF Annotation Extractor",
     category: "OCR & Extract" as ToolCategory,
     tags: ["annotations", "comments", "extract", "notes"],
-    capability: "implemented" as ToolCapability,
+    capability: "coming-soon" as ToolCapability,
     metaTitle: "PDF Annotation Extractor - Extract Comments and Notes",
     metaDescription: "Extract all annotations, comments, and notes from PDF files. Export PDF markup as text.",
     description: "Extract all annotations, comments, and notes from PDF files",

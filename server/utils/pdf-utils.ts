@@ -2,6 +2,8 @@ import { PDFDocument, rgb, degrees, PDFPage, StandardFonts } from 'pdf-lib';
 import sharp from 'sharp';
 import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
 import { createCanvas } from 'canvas';
+// @ts-expect-error - No type definitions available for pdf-parse-fork
+import pdfParse from 'pdf-parse-fork';
 
 // PDF Split Utilities
 export async function splitPDFByPages(file: Express.Multer.File, pageRanges: string): Promise<PDFDocument[]> {
@@ -540,4 +542,237 @@ export async function deleteBlankPages(buffer: Buffer, threshold: number = 100):
   }
   
   return newPdf;
+}
+
+// ========================================
+// PDF DATA EXTRACTION UTILITIES
+// ========================================
+
+// Extract all hyperlinks from PDF
+export async function extractLinksFromPDF(file: Express.Multer.File): Promise<any[]> {
+  const pdf = await PDFDocument.load(file.buffer);
+  const links: any[] = [];
+  
+  try {
+    // Extract links using pdf-lib annotations
+    const pages = pdf.getPages();
+    
+    for (let pageIndex = 0; pageIndex < pages.length; pageIndex++) {
+      const page = pages[pageIndex];
+      const annotations = page.node.Annots();
+      
+      if (annotations) {
+        const annotArray = pdf.context.lookup(annotations);
+        
+        if (annotArray && 'asArray' in annotArray) {
+          const annots = (annotArray.asArray as any)();
+          
+          for (const annotRef of annots) {
+            const annot = pdf.context.lookup(annotRef);
+            
+            if (annot && 'get' in annot) {
+              const subtype = (annot.get as any)(pdf.context.obj('Subtype'));
+              const subtypeName = subtype?.toString();
+              
+              // Check for Link annotations
+              if (subtypeName?.includes('Link')) {
+                const action = (annot.get as any)(pdf.context.obj('A'));
+                
+                if (action && 'get' in action) {
+                  const uri = action.get(pdf.context.obj('URI'));
+                  
+                  if (uri) {
+                    const url = uri.toString().replace(/[()]/g, '');
+                    links.push({
+                      page: pageIndex + 1,
+                      url: url,
+                      type: 'external'
+                    });
+                  }
+                }
+                
+                // Check for destination (internal links)
+                const dest = (annot.get as any)(pdf.context.obj('Dest'));
+                if (dest) {
+                  links.push({
+                    page: pageIndex + 1,
+                    destination: dest.toString(),
+                    type: 'internal'
+                  });
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    // Also extract URLs from text content using regex
+    const data = await pdfParse(file.buffer);
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const textUrls = data.text.match(urlRegex) || [];
+    
+    textUrls.forEach((url: string) => {
+      // Check if not already in links array
+      if (!links.some(link => link.url === url)) {
+        links.push({
+          page: null,
+          url: url,
+          type: 'text'
+        });
+      }
+    });
+    
+  } catch (error) {
+    console.error('Error extracting links:', error);
+  }
+  
+  return links;
+}
+
+// Extract all annotations and comments from PDF
+export async function extractAnnotationsFromPDF(file: Express.Multer.File): Promise<any[]> {
+  const pdf = await PDFDocument.load(file.buffer);
+  const annotations: any[] = [];
+  
+  try {
+    const pages = pdf.getPages();
+    
+    for (let pageIndex = 0; pageIndex < pages.length; pageIndex++) {
+      const page = pages[pageIndex];
+      const pageAnnots = page.node.Annots();
+      
+      if (pageAnnots) {
+        const annotArray = pdf.context.lookup(pageAnnots);
+        
+        if (annotArray && 'asArray' in annotArray) {
+          const annots = (annotArray.asArray as any)();
+          
+          for (const annotRef of annots) {
+            const annot = pdf.context.lookup(annotRef);
+            
+            if (annot && 'get' in annot) {
+              const subtype = (annot.get as any)(pdf.context.obj('Subtype'));
+              const subtypeName = subtype?.toString().replace(/\//g, '');
+              
+              // Extract various annotation types
+              const contents = (annot.get as any)(pdf.context.obj('Contents'));
+              const title = (annot.get as any)(pdf.context.obj('T'));
+              const subject = (annot.get as any)(pdf.context.obj('Subj'));
+              const modDate = (annot.get as any)(pdf.context.obj('M'));
+              
+              const annotation: any = {
+                page: pageIndex + 1,
+                type: subtypeName || 'Unknown',
+              };
+              
+              if (contents) {
+                annotation.contents = contents.toString().replace(/[()]/g, '');
+              }
+              
+              if (title) {
+                annotation.author = title.toString().replace(/[()]/g, '');
+              }
+              
+              if (subject) {
+                annotation.subject = subject.toString().replace(/[()]/g, '');
+              }
+              
+              if (modDate) {
+                annotation.modifiedDate = modDate.toString().replace(/[()]/g, '');
+              }
+              
+              // Only add if has meaningful content
+              if (annotation.contents || annotation.subject) {
+                annotations.push(annotation);
+              }
+            }
+          }
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Error extracting annotations:', error);
+  }
+  
+  return annotations;
+}
+
+// Extract tables from PDF (basic version using text pattern detection)
+export async function extractTablesFromPDF(file: Express.Multer.File): Promise<any[]> {
+  const tables: any[] = [];
+  
+  try {
+    const data = await pdfParse(file.buffer);
+    const text = data.text;
+    const lines = text.split('\n');
+    
+    let currentTable: string[][] = [];
+    let inTable = false;
+    let tableIndex = 0;
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      
+      if (!line) {
+        // Empty line might indicate end of table
+        if (inTable && currentTable.length > 2) {
+          tables.push({
+            tableIndex: tableIndex++,
+            rows: currentTable.length,
+            columns: currentTable[0]?.length || 0,
+            data: currentTable
+          });
+          currentTable = [];
+          inTable = false;
+        }
+        continue;
+      }
+      
+      // Detect potential table rows (multiple whitespace-separated values or tab-separated)
+      const cells = line.split(/\s{2,}|\t/).filter((cell: string) => cell.trim().length > 0);
+      
+      // If line has multiple cells, consider it a table row
+      if (cells.length >= 2) {
+        if (!inTable) {
+          inTable = true;
+        }
+        currentTable.push(cells);
+      } else {
+        // If we were in a table and now have a single value, end the table
+        if (inTable && currentTable.length > 2) {
+          tables.push({
+            tableIndex: tableIndex++,
+            rows: currentTable.length,
+            columns: currentTable[0]?.length || 0,
+            data: currentTable
+          });
+          currentTable = [];
+          inTable = false;
+        }
+      }
+    }
+    
+    // Add last table if exists
+    if (currentTable.length > 2) {
+      tables.push({
+        tableIndex: tableIndex++,
+        rows: currentTable.length,
+        columns: currentTable[0]?.length || 0,
+        data: currentTable
+      });
+    }
+    
+    // Filter out tables with inconsistent column counts (likely false positives)
+    return tables.filter(table => {
+      const columnCounts = table.data.map((row: string[]) => row.length);
+      const avgCols = columnCounts.reduce((a: number, b: number) => a + b, 0) / columnCounts.length;
+      const variance = columnCounts.every((count: number) => Math.abs(count - avgCols) <= 1);
+      return variance;
+    });
+    
+  } catch (error) {
+    console.error('Error extracting tables:', error);
+    return [];
+  }
 }
