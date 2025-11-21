@@ -112,3 +112,92 @@ This project is a comprehensive web application offering over 1004 free online t
 3. **HTML Conversion:** Refactor to properly handle raw HTML input
 4. **Form Tools:** Add PDF form filling and extraction (15 tools)
 5. **eBook Conversion:** Implement EPUB/MOBI support (6 tools)
+
+---
+
+### Session: November 21, 2025 - Text Extraction Tools Exploration
+
+**📊 Current Status:**
+- **Tools Implemented:** 722/1004 (71.9% complete)
+- **Tools Remaining:** 194 coming-soon, 88 AI-dependent
+- **Session Goal:** Implement text extraction/processing tools
+
+**⚠️ What Was Attempted:**
+
+1. **New Utility Module Created** (`server/utils/text-extraction-utils.ts`)
+   - Text extraction functions: emails, URLs, phone numbers, hashtags, mentions, numbers
+   - Text comparison: line-based diff, similarity calculation
+   - Data conversion: CSV ↔ JSON
+   - Text cleaning: remove HTML tags, remove special characters
+
+2. **Backend API Endpoints Added** (server/routes.ts)
+   - `/api/text/extract` - Multi-purpose text extraction endpoint
+   - `/api/text/compare` - Text difference and similarity
+   - `/api/text/convert-data` - CSV/JSON conversion
+
+3. **Frontend Routing Updated** (`client/src/lib/tool-utils.ts`)
+   - Added routing logic for text extraction tool IDs
+   - Maps tools to new endpoints
+
+**🔴 Architect Review Findings - Implementation NOT Production-Ready:**
+
+The architect identified **critical issues** that prevent these tools from being marked as "implemented":
+
+1. **No Input Validation**
+   - Missing Zod schemas for endpoint payloads
+   - Uncontrolled `type` parameter (manual switch guard only)
+   - No sanitization or normalization
+
+2. **Weak Algorithms & Edge Cases**
+   - **URL extraction:** Naive regex matches bare domains without schemes, false positives
+   - **Phone extraction:** Treats any 7-10 digits as phone number, no locale support
+   - **CSV parsing:** Simple `split()` doesn't handle quoted fields, embedded commas/newlines, escaped quotes
+   - **Text diff:** Line-based only, doesn't highlight word/character differences (what users expect)
+   - **Similarity:** Whitespace-split tokens without stemming/punctuation cleaning, returns NaN for empty texts
+
+3. **Incomplete Frontend Routing**
+   - Only matches literal substrings ("extract-email", "find-email")
+   - Misses many actual tool IDs from schema
+   - Many tools still fall through to wrong endpoints
+
+4. **Premature Tool Enablement**
+   - Marked `text-difference-checker` as "implemented" even though it can't do inline diffs
+
+**✅ Actions Taken:**
+- Reverted `text-difference-checker` to "coming-soon"
+- Documented limitations for future improvement
+- Basic endpoints remain in codebase but no tools marked as implemented
+
+**📚 Lessons Learned:**
+
+1. **Quality Over Quantity:** Even simple text tools need proper validation and battle-tested libraries
+2. **Recommended Libraries for Future:**
+   - URL extraction: `linkify-it`
+   - Phone validation: `libphonenumber-js`
+   - Text diff: `diff-match-patch`
+   - CSV parsing: `papaparse` or similar
+3. **Implementation Checklist:**
+   - Always add Zod schemas before endpoints
+   - Use established libraries for complex parsing
+   - Match ALL tool IDs in routing logic
+   - Test edge cases before marking "implemented"
+
+**🎯 Revised Next Steps:**
+
+**Recommended Strategy: Focus on simpler, self-contained tools that don't require complex parsing libraries:**
+
+1. **Image Utilities** - Simple transformations without dependencies
+   - Image resizer, format converters, basic filters
+2. **QR Code Tools** - Already have qrcode library
+   - QR generator variations, QR reader enhancements
+3. **Color Tools** - Pure algorithm-based
+   - Color pickers, palette generators, converters
+4. **Math/Calculator Tools** - No external dependencies
+   - Unit converters, percentage calculators
+5. **Hash/Encoding Tools** - Built-in Node.js crypto
+   - MD5, SHA, Base64, etc.
+
+**Tools to Defer Until Proper Libraries Added:**
+- Text extraction/processing (needs linkify-it, libphonenumber-js, diff-match-patch)
+- Advanced CSV/JSON tools (needs papaparse)
+- Security scanning tools (need specialized validators)
