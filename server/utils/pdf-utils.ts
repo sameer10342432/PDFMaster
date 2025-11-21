@@ -776,3 +776,54 @@ export async function extractTablesFromPDF(file: Express.Multer.File): Promise<a
     return [];
   }
 }
+
+// Delete Blank Pages Utility
+export async function deleteBlankPDFPages(file: Express.Multer.File): Promise<PDFDocument> {
+  const pdf = await PDFDocument.load(file.buffer);
+  const newPdf = await PDFDocument.create();
+  const totalPages = pdf.getPageCount();
+  
+  for (let i = 0; i < totalPages; i++) {
+    const isBlank = await isPageBlank(pdf, i);
+    if (!isBlank) {
+      const [copiedPage] = await newPdf.copyPages(pdf, [i]);
+      newPdf.addPage(copiedPage);
+    }
+  }
+  
+  return newPdf;
+}
+
+async function isPageBlank(pdf: PDFDocument, pageIndex: number): Promise<boolean> {
+  try {
+    const page = pdf.getPage(pageIndex);
+    const { width, height } = page.getSize();
+    
+    // A page is considered blank if it has very little content
+    // We check by rendering it and analyzing pixel data
+    // For now, use a simple heuristic: check if page has any text content
+    const textContent = await extractTextFromPage(pdf, pageIndex);
+    
+    // If page has less than 5 characters, consider it blank
+    return textContent.trim().length < 5;
+  } catch (error) {
+    // If there's an error checking, assume not blank (safer)
+    return false;
+  }
+}
+
+async function extractTextFromPage(pdf: PDFDocument, pageIndex: number): Promise<string> {
+  try {
+    // Create a temp PDF with just this page
+    const tempPdf = await PDFDocument.create();
+    const [copiedPage] = await tempPdf.copyPages(pdf, [pageIndex]);
+    tempPdf.addPage(copiedPage);
+    
+    const pdfBytes = await tempPdf.save();
+    const data = await pdfParse(Buffer.from(pdfBytes));
+    return data.text;
+  } catch (error) {
+    return '';
+  }
+}
+

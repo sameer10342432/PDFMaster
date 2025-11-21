@@ -258,6 +258,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
           singleResult = await pdfUtils.deletePDFPages(file, options.pageNumbers || []);
           break;
 
+        case 'extract-specific-pages':
+          singleResult = await pdfUtils.extractSpecificPages(file.buffer, options.pageSpec || '1');
+          break;
+
+        case 'delete-blank-pdf-pages':
+          singleResult = await pdfUtils.deleteBlankPDFPages(file);
+          break;
+
         default:
           return res.status(400).json({ error: `Unknown split tool: ${toolId}` });
       }

@@ -178,7 +178,7 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
       return '/api/pdf/merge';
     }
     // PDF split
-    if (lowerToolId.includes('split') || lowerToolId.includes('divide') || lowerToolId.includes('break') || lowerToolId.includes('extract-pdf-pages') || lowerToolId.includes('delete-pdf-pages') || lowerToolId.includes('page-extractor')) {
+    if (lowerToolId.includes('split') || lowerToolId.includes('divide') || lowerToolId.includes('break') || lowerToolId.includes('extract-pdf-pages') || lowerToolId.includes('delete-pdf-pages') || lowerToolId.includes('page-extractor') || lowerToolId.includes('extract-specific-pages') || lowerToolId.includes('delete-blank')) {
       return '/api/pdf/split';
     }
     // PDF compress
