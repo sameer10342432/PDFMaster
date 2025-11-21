@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useRoute, Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet";
@@ -10,16 +10,19 @@ import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { Progress } from "@/components/ui/progress";
 import { getToolIcon } from "@/lib/tool-icons";
 import { getToolType, getToolConfig, getProcessingEndpoint, getMimeTypesForToolType } from "@/lib/tool-utils";
 import type { Tool } from "@shared/schema";
-import { Download, ArrowRight, CheckCircle2, FileText } from "lucide-react";
+import { Download, ArrowRight, CheckCircle2, FileText, Loader2, Sparkles } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export default function ToolPage() {
   const [, params] = useRoute("/tool/:id");
   const [files, setFiles] = useState<File[]>([]);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [processingProgress, setProcessingProgress] = useState(0);
+  const [processingStatus, setProcessingStatus] = useState<string>("");
   const { toast } = useToast();
 
   const { data: tool, isLoading: toolLoading } = useQuery<Tool>({
@@ -96,6 +99,23 @@ export default function ToolPage() {
     );
   }
 
+  // Simulate progress for better UX
+  useEffect(() => {
+    if (isProcessing) {
+      setProcessingProgress(0);
+      const interval = setInterval(() => {
+        setProcessingProgress((prev) => {
+          if (prev >= 90) return prev; // Stop at 90% until actual completion
+          return prev + 10;
+        });
+      }, 300);
+      return () => clearInterval(interval);
+    } else {
+      setProcessingProgress(0);
+      setProcessingStatus("");
+    }
+  }, [isProcessing]);
+
   const handleProcess = async () => {
     if (files.length === 0) {
       toast({
@@ -118,6 +138,7 @@ export default function ToolPage() {
     }
 
     setIsProcessing(true);
+    setProcessingStatus("Preparing files...");
     
     try {
       const formData = new FormData();
@@ -141,6 +162,7 @@ export default function ToolPage() {
       
       formData.append('toolId', tool.id);
 
+      setProcessingStatus("Uploading files...");
       const response = await fetch(processingEndpoint, {
         method: 'POST',
         body: formData,
@@ -167,6 +189,7 @@ export default function ToolPage() {
         return;
       }
 
+      setProcessingStatus("Processing files...");
       const blob = await response.blob();
       
       if (!blob || blob.size === 0) {
@@ -178,6 +201,9 @@ export default function ToolPage() {
         return;
       }
       
+      setProcessingProgress(100);
+      setProcessingStatus("Preparing download...");
+      
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -188,7 +214,7 @@ export default function ToolPage() {
       document.body.removeChild(a);
 
       toast({
-        title: "Success!",
+        title: "✨ Success!",
         description: "Your file has been processed and downloaded.",
       });
 
@@ -261,23 +287,52 @@ export default function ToolPage() {
                     />
 
                     {files.length > 0 && (
-                      <div className="flex justify-center">
-                        <Button
-                          size="lg"
-                          onClick={handleProcess}
-                          disabled={isProcessing}
-                          className="gap-2"
-                          data-testid="button-process-file"
-                        >
-                          {isProcessing ? (
-                            <>Processing...</>
-                          ) : (
-                            <>
-                              <Download className="h-5 w-5" />
-                              Process & Download
-                            </>
-                          )}
-                        </Button>
+                      <div className="space-y-6">
+                        {isProcessing && (
+                          <Card className="p-6 border-primary/20 bg-primary/5">
+                            <div className="space-y-4">
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-3">
+                                  <Loader2 className="h-5 w-5 animate-spin text-primary" />
+                                  <div>
+                                    <p className="font-semibold text-sm">Processing your files</p>
+                                    <p className="text-xs text-muted-foreground">{processingStatus}</p>
+                                  </div>
+                                </div>
+                                <Badge variant="secondary" className="gap-1">
+                                  <Sparkles className="h-3 w-3" />
+                                  {processingProgress}%
+                                </Badge>
+                              </div>
+                              <Progress value={processingProgress} className="h-2" />
+                              <p className="text-xs text-muted-foreground text-center">
+                                Please wait while we process your files. This may take a moment.
+                              </p>
+                            </div>
+                          </Card>
+                        )}
+                        
+                        <div className="flex justify-center">
+                          <Button
+                            size="lg"
+                            onClick={handleProcess}
+                            disabled={isProcessing}
+                            className="gap-2"
+                            data-testid="button-process-file"
+                          >
+                            {isProcessing ? (
+                              <>
+                                <Loader2 className="h-5 w-5 animate-spin" />
+                                Processing...
+                              </>
+                            ) : (
+                              <>
+                                <Download className="h-5 w-5" />
+                                Process & Download
+                              </>
+                            )}
+                          </Button>
+                        </div>
                       </div>
                     )}
                   </>
@@ -330,49 +385,51 @@ export default function ToolPage() {
             </div>
           </section>
 
-          <section className="py-16">
-            <div className="container mx-auto max-w-4xl px-4">
-              <article className="prose prose-gray dark:prose-invert max-w-none">
-                <h2 className="text-3xl font-semibold mb-6">{tool.article.title}</h2>
-                
-                <div 
-                  className="space-y-6 text-base leading-relaxed text-foreground"
-                  dangerouslySetInnerHTML={{ 
-                    __html: tool.article.content.replace(/\n\n/g, '</p><p>').replace(/##/g, '<h3 class="text-2xl font-semibold mt-8 mb-4">').replace(/\n/g, '<br/>') 
-                  }}
-                />
-              </article>
+          {tool.article && (
+            <section className="py-16">
+              <div className="container mx-auto max-w-4xl px-4">
+                <article className="prose prose-gray dark:prose-invert max-w-none">
+                  <h2 className="text-3xl font-semibold mb-6">{tool.article.title}</h2>
+                  
+                  <div 
+                    className="space-y-6 text-base leading-relaxed text-foreground"
+                    dangerouslySetInnerHTML={{ 
+                      __html: tool.article.content.replace(/\n\n/g, '</p><p>').replace(/##/g, '<h3 class="text-2xl font-semibold mt-8 mb-4">').replace(/\n/g, '<br/>') 
+                    }}
+                  />
+                </article>
 
-              <Separator className="my-12" />
+                <Separator className="my-12" />
 
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold">Related Tools</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {tool.article.relatedTools.map((relatedId) => {
-                    const relatedTool = allTools.find(t => t.id === relatedId);
-                    if (!relatedTool) return null;
-                    const RelatedIconComponent = getToolIcon(relatedId);
-                    
-                    return (
-                      <Link key={relatedId} href={`/tool/${relatedId}`}>
-                        <Card className="p-6 hover-elevate active-elevate-2 cursor-pointer h-full">
-                          <div className="flex items-center gap-3">
-                            <div className="rounded-lg bg-primary/10 p-2 flex items-center justify-center">
-                              <RelatedIconComponent className="w-5 h-5 text-primary" aria-label={relatedTool.title} />
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold">Related Tools</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {tool.article.relatedTools.map((relatedId: string) => {
+                      const relatedTool = allTools.find(t => t.id === relatedId);
+                      if (!relatedTool) return null;
+                      const RelatedIconComponent = getToolIcon(relatedId);
+                      
+                      return (
+                        <Link key={relatedId} href={`/tool/${relatedId}`}>
+                          <Card className="p-6 hover-elevate active-elevate-2 cursor-pointer h-full">
+                            <div className="flex items-center gap-3">
+                              <div className="rounded-lg bg-primary/10 p-2 flex items-center justify-center">
+                                <RelatedIconComponent className="w-5 h-5 text-primary" aria-label={relatedTool.title} />
+                              </div>
+                              <div className="flex-1">
+                                <p className="font-semibold text-sm">{relatedTool.title}</p>
+                              </div>
+                              <ArrowRight className="h-4 w-4 text-muted-foreground" />
                             </div>
-                            <div className="flex-1">
-                              <p className="font-semibold text-sm">{relatedTool.title}</p>
-                            </div>
-                            <ArrowRight className="h-4 w-4 text-muted-foreground" />
-                          </div>
-                        </Card>
-                      </Link>
-                    );
-                  })}
+                          </Card>
+                        </Link>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+          )}
 
           <section className="py-12 bg-primary/5">
             <div className="container mx-auto max-w-4xl px-4">
