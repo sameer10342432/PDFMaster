@@ -1,7 +1,0 @@
-Analyzing schema.ts to find tools that map to working endpoints...
-
-Found 1004 tools in schema.ts
-
-Tools to update: 0
-
-No tools to update!
