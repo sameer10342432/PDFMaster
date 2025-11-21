@@ -959,6 +959,127 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.post('/api/text/extract', upload.none(), async (req, res) => {
+    try {
+      const extractTextUtils = await import('./utils/text-extraction-utils');
+      const { text, type } = req.body;
+
+      if (!text || typeof text !== 'string') {
+        return res.status(400).json({ error: 'Text input is required' });
+      }
+
+      let result: any;
+
+      switch (type) {
+        case 'emails':
+          result = extractTextUtils.extractEmails(text);
+          break;
+        case 'urls':
+          result = extractTextUtils.extractUrls(text);
+          break;
+        case 'phone-numbers':
+          result = extractTextUtils.extractPhoneNumbers(text);
+          break;
+        case 'numbers':
+          result = extractTextUtils.extractNumbers(text);
+          break;
+        case 'hashtags':
+          result = extractTextUtils.extractHashtags(text);
+          break;
+        case 'mentions':
+          result = extractTextUtils.extractMentions(text);
+          break;
+        case 'sentences':
+          result = extractTextUtils.extractSentences(text);
+          break;
+        case 'paragraphs':
+          result = extractTextUtils.extractParagraphs(text);
+          break;
+        case 'remove-html':
+          result = { text: extractTextUtils.removeHtmlTags(text) };
+          break;
+        case 'remove-special':
+          const keepSpaces = req.body.keepSpaces !== false;
+          result = { text: extractTextUtils.removeSpecialCharacters(text, keepSpaces) };
+          break;
+        default:
+          return res.status(400).json({ error: 'Invalid extraction type' });
+      }
+
+      res.json(result);
+    } catch (error) {
+      handleTextToolError(error, 'extract from text', res);
+    }
+  });
+
+  app.post('/api/text/compare', upload.none(), async (req, res) => {
+    try {
+      const extractTextUtils = await import('./utils/text-extraction-utils');
+      const { text1, text2, type } = req.body;
+
+      if (!text1 || !text2) {
+        return res.status(400).json({ error: 'Both text1 and text2 are required' });
+      }
+
+      let result: any;
+
+      switch (type) {
+        case 'diff':
+          result = extractTextUtils.textDiff(text1, text2);
+          break;
+        case 'similarity':
+          result = extractTextUtils.calculateTextSimilarity(text1, text2);
+          break;
+        default:
+          return res.status(400).json({ error: 'Invalid comparison type' });
+      }
+
+      res.json(result);
+    } catch (error) {
+      handleTextToolError(error, 'compare text', res);
+    }
+  });
+
+  app.post('/api/text/convert-data', upload.none(), async (req, res) => {
+    try {
+      const extractTextUtils = await import('./utils/text-extraction-utils');
+      const { data, type, delimiter } = req.body;
+
+      if (!data) {
+        return res.status(400).json({ error: 'Data input is required' });
+      }
+
+      let result: any;
+
+      switch (type) {
+        case 'csv-to-json':
+          if (typeof data !== 'string') {
+            return res.status(400).json({ error: 'CSV data must be a string' });
+          }
+          result = extractTextUtils.csvToJson(data, delimiter || ',');
+          break;
+        case 'json-to-csv':
+          if (typeof data === 'string') {
+            try {
+              const jsonData = JSON.parse(data);
+              result = extractTextUtils.jsonToCsv(Array.isArray(jsonData) ? jsonData : [jsonData], delimiter || ',');
+            } catch (e) {
+              return res.status(400).json({ error: 'Invalid JSON data' });
+            }
+          } else {
+            result = extractTextUtils.jsonToCsv(Array.isArray(data) ? data : [data], delimiter || ',');
+          }
+          break;
+        default:
+          return res.status(400).json({ error: 'Invalid conversion type' });
+      }
+
+      res.json({ result });
+    } catch (error) {
+      handleTextToolError(error, 'convert data format', res);
+    }
+  });
+
   app.post('/api/text/format', upload.none(), async (req, res) => {
     try {
       const indentValue = req.body.indent ? parseInt(req.body.indent, 10) : 2;

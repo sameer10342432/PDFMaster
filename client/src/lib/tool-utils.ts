@@ -241,6 +241,45 @@ export function getProcessingEndpoint(toolId: string, toolType: ToolType): strin
   // TEXT TOOLS
   // ========================================
   if (toolType === 'text') {
+    // Text extraction tools
+    if (lowerToolId.includes('extract-email') || lowerToolId.includes('find-email')) {
+      return '/api/text/extract';
+    }
+    if (lowerToolId.includes('extract-url') || lowerToolId.includes('find-url')) {
+      return '/api/text/extract';
+    }
+    if (lowerToolId.includes('extract-phone') || lowerToolId.includes('find-phone')) {
+      return '/api/text/extract';
+    }
+    if (lowerToolId.includes('extract-number') || lowerToolId.includes('find-number')) {
+      return '/api/text/extract';
+    }
+    if (lowerToolId.includes('extract-hashtag') || lowerToolId.includes('find-hashtag')) {
+      return '/api/text/extract';
+    }
+    if (lowerToolId.includes('extract-mention') || lowerToolId.includes('find-mention')) {
+      return '/api/text/extract';
+    }
+    if (lowerToolId.includes('remove-html') || lowerToolId.includes('strip-html')) {
+      return '/api/text/extract';
+    }
+    if (lowerToolId.includes('remove-special') || lowerToolId.includes('strip-special')) {
+      return '/api/text/extract';
+    }
+    // Text comparison
+    if (lowerToolId.includes('diff') || lowerToolId.includes('compare-text')) {
+      return '/api/text/compare';
+    }
+    if (lowerToolId.includes('similarity') || lowerToolId.includes('text-similarity')) {
+      return '/api/text/compare';
+    }
+    // Data format conversion
+    if (lowerToolId.includes('csv-to-json')) {
+      return '/api/text/convert-data';
+    }
+    if (lowerToolId.includes('json-to-csv')) {
+      return '/api/text/convert-data';
+    }
     // Code formatting
     if (lowerToolId.includes('json') || lowerToolId.includes('xml') || lowerToolId.includes('html') || lowerToolId.includes('css') || lowerToolId.includes('formatter') || lowerToolId.includes('minifier') || lowerToolId.includes('beautifier')) {
       return '/api/text/format';
