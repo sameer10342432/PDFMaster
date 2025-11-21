@@ -683,6 +683,87 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.post('/api/convert/word-to-html', upload.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No Word file uploaded' });
+      }
+
+      const htmlContent = await docConverter.wordToHtml(file.buffer);
+
+      res.setHeader('Content-Type', 'text/html');
+      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.(docx?|odt)$/i, '.html')}"`);
+      res.send(htmlContent);
+
+    } catch (error) {
+      console.error('Word to HTML conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert Word to HTML: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/word-to-txt', upload.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No Word file uploaded' });
+      }
+
+      const textContent = await docConverter.wordToText(file.buffer);
+
+      res.setHeader('Content-Type', 'text/plain');
+      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.(docx?|odt)$/i, '.txt')}"`);
+      res.send(textContent);
+
+    } catch (error) {
+      console.error('Word to TXT conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert Word to TXT: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/html-to-word', upload.none(), async (req, res) => {
+    try {
+      const htmlContent = req.body.htmlContent;
+      if (!htmlContent) {
+        return res.status(400).json({ error: 'No HTML content provided' });
+      }
+
+      const docxBuffer = await docConverter.htmlToWord(htmlContent);
+
+      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+      res.setHeader('Content-Disposition', `attachment; filename="document.docx"`);
+      res.send(docxBuffer);
+
+    } catch (error) {
+      console.error('HTML to Word conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert HTML to Word: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/txt-to-word', upload.none(), async (req, res) => {
+    try {
+      const textContent = req.body.textContent;
+      if (!textContent) {
+        return res.status(400).json({ error: 'No text content provided' });
+      }
+
+      const htmlContent = await docConverter.textToHtml(textContent);
+      const docxBuffer = await docConverter.htmlToWord(htmlContent);
+
+      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+      res.setHeader('Content-Disposition', `attachment; filename="document.docx"`);
+      res.send(docxBuffer);
+
+    } catch (error) {
+      console.error('TXT to Word conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert TXT to Word: ${errorMessage}` });
+    }
+  });
+
   // DISABLED (Chromium dependency):   app.post('/api/convert/word-to-pdf', upload.single('file'), async (req, res) => {
   // DISABLED (Chromium dependency):     try {
   // DISABLED (Chromium dependency):       const file = req.file;
@@ -731,6 +812,172 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Note: HTML conversion endpoints removed temporarily
   // These require special handling for raw HTML input vs file uploads
   // Will be re-implemented in future with proper frontend integration
+
+  // ========================================
+
+  // DATA FORMAT CONVERSION TOOLS
+  // ========================================
+  
+  const dataFormatUtils = await import('./utils/data-format-utils.js');
+  const utilityTools = await import('./utils/utility-tools.js');
+
+  app.post('/api/convert/excel-to-json', upload.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No Excel file uploaded' });
+      }
+
+      const options = JSON.parse(req.body.options || '{}');
+      const jsonString = await dataFormatUtils.excelToJson(file.buffer, options);
+
+      res.setHeader('Content-Type', 'application/json');
+      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.(xlsx?|xls)$/i, '.json')}"`);
+      res.send(jsonString);
+
+    } catch (error) {
+      console.error('Excel to JSON conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert Excel to JSON: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/json-to-excel', upload.none(), async (req, res) => {
+    try {
+      const jsonString = req.body.jsonData;
+      if (!jsonString) {
+        return res.status(400).json({ error: 'No JSON data provided' });
+      }
+
+      const options = JSON.parse(req.body.options || '{}');
+      const excelBuffer = await dataFormatUtils.jsonToExcel(jsonString, options);
+
+      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+      res.setHeader('Content-Disposition', `attachment; filename="data.xlsx"`);
+      res.send(excelBuffer);
+
+    } catch (error) {
+      console.error('JSON to Excel conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert JSON to Excel: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/convert/excel-to-csv', upload.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No Excel file uploaded' });
+      }
+
+      const options = JSON.parse(req.body.options || '{}');
+      const csvData = await dataFormatUtils.excelToCsv(file.buffer, options);
+
+      res.setHeader('Content-Type', 'text/csv');
+      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.(xlsx?|xls)$/i, '.csv')}"`);
+      res.send(csvData);
+
+    } catch (error) {
+      console.error('Excel to CSV conversion error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert Excel to CSV: ${errorMessage}` });
+    }
+  });
+
+  // UTILITY & BROWSER TOOLS
+  // ========================================
+
+  app.get('/api/utility/my-ip', async (req, res) => {
+    try {
+      const ip = utilityTools.getMyIP(req);
+      res.json({ ip });
+    } catch (error) {
+      console.error('Get IP error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to get IP: ${errorMessage}` });
+    }
+  });
+
+  app.get('/api/utility/browser-info', async (req, res) => {
+    try {
+      const info = utilityTools.getBrowserInfo(req);
+      res.json(info);
+    } catch (error) {
+      console.error('Get browser info error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to get browser info: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/utility/screen-resolution', upload.none(), async (req, res) => {
+    try {
+      const width = parseInt(req.body.width || '0');
+      const height = parseInt(req.body.height || '0');
+      const resolution = utilityTools.getScreenResolution(width, height);
+      res.json(resolution);
+    } catch (error) {
+      console.error('Get screen resolution error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to get screen resolution: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/utility/world-clock', upload.none(), async (req, res) => {
+    try {
+      const timezone = req.body.timezone || 'UTC';
+      const clockInfo = utilityTools.getWorldClock(timezone);
+      res.json(clockInfo);
+    } catch (error) {
+      console.error('World clock error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to get world clock: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/utility/http-status', upload.none(), async (req, res) => {
+    try {
+      const url = req.body.url;
+      if (!url) {
+        return res.status(400).json({ error: 'URL is required' });
+      }
+      const statusInfo = await utilityTools.checkHttpStatus(url);
+      res.json(statusInfo);
+    } catch (error) {
+      console.error('HTTP status check error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to check HTTP status: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/utility/validate-email', upload.none(), async (req, res) => {
+    try {
+      const email = req.body.email;
+      if (!email) {
+        return res.status(400).json({ error: 'Email is required' });
+      }
+      const validation = utilityTools.validateEmail(email);
+      res.json(validation);
+    } catch (error) {
+      console.error('Email validation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to validate email: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/utility/validate-iban', upload.none(), async (req, res) => {
+    try {
+      const iban = req.body.iban;
+      if (!iban) {
+        return res.status(400).json({ error: 'IBAN is required' });
+      }
+      const validation = utilityTools.validateIBAN(iban);
+      res.json(validation);
+    } catch (error) {
+      console.error('IBAN validation error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to validate IBAN: ${errorMessage}` });
+    }
+  });
 
   // ========================================
   
@@ -3223,6 +3470,93 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error('Image metadata error:', error);
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       res.status(500).json({ error: `Metadata extraction failed: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // IMAGE CREATIVE TOOLS
+  // ========================================
+  app.post('/api/image/add-border', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const borderWidth = parseInt(req.body.borderWidth || '10');
+      const borderColor = JSON.parse(req.body.borderColor || '{"r":0,"g":0,"b":0,"alpha":1}');
+
+      const result = await imageUtils.addImageBorder(file.buffer, borderWidth, borderColor);
+
+      res.setHeader('Content-Type', file.mimetype);
+      res.setHeader('Content-Disposition', `attachment; filename="bordered.${file.originalname.split('.').pop()}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Add border error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to add border: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/image/round-corners', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const radius = parseInt(req.body.radius || '20');
+      const result = await imageUtils.roundImageCorners(file.buffer, radius);
+
+      res.setHeader('Content-Type', file.mimetype);
+      res.setHeader('Content-Disposition', `attachment; filename="rounded.${file.originalname.split('.').pop()}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Round corners error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to round corners: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/image/color-palette', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const colorsCount = parseInt(req.body.colorsCount || '5');
+      const palette = await imageUtils.getImageColorPalette(file.buffer, colorsCount);
+
+      res.json({ palette });
+
+    } catch (error) {
+      console.error('Color palette error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to extract color palette: ${errorMessage}` });
+    }
+  });
+
+  app.post('/api/image/change-dpi', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+      if (!file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const dpi = parseInt(req.body.dpi || '300');
+      const result = await imageUtils.changeImageDPI(file.buffer, dpi);
+
+      res.setHeader('Content-Type', file.mimetype);
+      res.setHeader('Content-Disposition', `attachment; filename="dpi-${dpi}.${file.originalname.split('.').pop()}"`);
+      res.send(result);
+
+    } catch (error) {
+      console.error('Change DPI error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to change DPI: ${errorMessage}` });
     }
   });
 

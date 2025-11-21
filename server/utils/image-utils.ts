@@ -239,3 +239,85 @@ export async function optimizeImage(buffer: Buffer): Promise<Buffer> {
     .jpeg({ quality: 85, progressive: true, mozjpeg: true })
     .toBuffer();
 }
+
+// Add Border to Image
+export async function addImageBorder(
+  imageBuffer: Buffer,
+  borderWidth: number = 10,
+  borderColor: { r: number; g: number; b: number; alpha?: number } = { r: 0, g: 0, b: 0, alpha: 1 }
+): Promise<Buffer> {
+  const image = sharp(imageBuffer);
+  
+  return image
+    .extend({
+      top: borderWidth,
+      bottom: borderWidth,
+      left: borderWidth,
+      right: borderWidth,
+      background: borderColor
+    })
+    .toBuffer();
+}
+
+// Round Image Corners
+export async function roundImageCorners(
+  imageBuffer: Buffer,
+  radius: number = 20
+): Promise<Buffer> {
+  const image = sharp(imageBuffer);
+  const metadata = await image.metadata();
+  const width = metadata.width || 0;
+  const height = metadata.height || 0;
+  
+  const roundedCorners = Buffer.from(
+    `<svg><rect x="0" y="0" width="${width}" height="${height}" rx="${radius}" ry="${radius}"/></svg>`
+  );
+  
+  return image
+    .composite([{
+      input: roundedCorners,
+      blend: 'dest-in'
+    }])
+    .toBuffer();
+}
+
+// Get Image Color Palette
+export async function getImageColorPalette(imageBuffer: Buffer, colorsCount: number = 5): Promise<Array<{ hex: string; rgb: { r: number; g: number; b: number } }>> {
+  const image = sharp(imageBuffer);
+  const { data, info } = await image
+    .resize(100, 100, { fit: 'inside' })
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  
+  const colorMap = new Map<string, number>();
+  
+  for (let i = 0; i < data.length; i += info.channels) {
+    const r = Math.round(data[i] / 51) * 51;
+    const g = Math.round(data[i + 1] / 51) * 51;
+    const b = Math.round(data[i + 2] / 51) * 51;
+    const key = `${r},${g},${b}`;
+    colorMap.set(key, (colorMap.get(key) || 0) + 1);
+  }
+  
+  const sorted = Array.from(colorMap.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, colorsCount);
+  
+  return sorted.map(([key]) => {
+    const [r, g, b] = key.split(',').map(Number);
+    return {
+      hex: `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`,
+      rgb: { r, g, b }
+    };
+  });
+}
+
+// Change Image DPI
+export async function changeImageDPI(
+  imageBuffer: Buffer,
+  dpi: number = 300
+): Promise<Buffer> {
+  return sharp(imageBuffer)
+    .withMetadata({ density: dpi })
+    .toBuffer();
+}

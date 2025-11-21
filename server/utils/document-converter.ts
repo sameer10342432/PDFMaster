@@ -183,3 +183,62 @@ export async function htmlToPdf(htmlContent: string, options: ConversionOptions 
   const pdfBuffer = await pdf.generatePdf(file, pdfOptions);
   return pdfBuffer;
 }
+
+export async function wordToHtml(docxBuffer: Buffer): Promise<string> {
+  try {
+    const result = await mammoth.convertToHtml({ buffer: docxBuffer });
+    return result.value;
+  } catch (error: any) {
+    throw new Error(`Word to HTML conversion failed: ${error.message}`);
+  }
+}
+
+export async function wordToText(docxBuffer: Buffer): Promise<string> {
+  try {
+    const result = await mammoth.extractRawText({ buffer: docxBuffer });
+    return result.value;
+  } catch (error: any) {
+    throw new Error(`Word to Text conversion failed: ${error.message}`);
+  }
+}
+
+export async function htmlToText(htmlContent: string): Promise<string> {
+  return htmlContent
+    .replace(/<style[^>]*>.*?<\/style>/gi, '')
+    .replace(/<script[^>]*>.*?<\/script>/gi, '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .trim();
+}
+
+export async function textToHtml(text: string): Promise<string> {
+  const escaped = text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+  
+  const paragraphs = escaped.split('\n\n').map(para => 
+    `<p>${para.replace(/\n/g, '<br>')}</p>`
+  ).join('\n');
+  
+  return `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+    p { margin-bottom: 1em; }
+  </style>
+</head>
+<body>
+  ${paragraphs}
+</body>
+</html>`;
+}

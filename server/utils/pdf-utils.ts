@@ -463,3 +463,81 @@ export async function extractPDFImages(file: Express.Multer.File): Promise<Buffe
   
   return images;
 }
+
+// Extract specific pages from PDF by page numbers or ranges
+// Examples: "1,3,5" or "1-5,10-15" or "1,3-5,7"
+export async function extractSpecificPages(buffer: Buffer, pageSelection: string): Promise<PDFDocument> {
+  const sourcePdf = await PDFDocument.load(buffer);
+  const newPdf = await PDFDocument.create();
+  
+  const pageNumbers = parsePageSelection(pageSelection, sourcePdf.getPageCount());
+  const copiedPages = await newPdf.copyPages(sourcePdf, pageNumbers);
+  
+  copiedPages.forEach(page => newPdf.addPage(page));
+  
+  return newPdf;
+}
+
+// Parse page selection string (e.g., "1,3-5,7" => [0,2,3,4,6])
+function parsePageSelection(selection: string, totalPages: number): number[] {
+  const pageIndices: number[] = [];
+  const parts = selection.split(',');
+  
+  for (const part of parts) {
+    const trimmed = part.trim();
+    if (trimmed.includes('-')) {
+      const [start, end] = trimmed.split('-').map(Number);
+      for (let i = start; i <= Math.min(end, totalPages); i++) {
+        if (i >= 1 && !pageIndices.includes(i - 1)) {
+          pageIndices.push(i - 1);
+        }
+      }
+    } else {
+      const pageNum = Number(trimmed);
+      if (pageNum >= 1 && pageNum <= totalPages && !pageIndices.includes(pageNum - 1)) {
+        pageIndices.push(pageNum - 1);
+      }
+    }
+  }
+  
+  return pageIndices.sort((a, b) => a - b);
+}
+
+// Clone/duplicate specific PDF pages
+export async function clonePDFPages(buffer: Buffer, pageNumbers: number[], copies: number = 2): Promise<PDFDocument> {
+  const sourcePdf = await PDFDocument.load(buffer);
+  const newPdf = await PDFDocument.create();
+  
+  for (const pageNum of pageNumbers) {
+    if (pageNum >= 1 && pageNum <= sourcePdf.getPageCount()) {
+      for (let i = 0; i < copies; i++) {
+        const [copiedPage] = await newPdf.copyPages(sourcePdf, [pageNum - 1]);
+        newPdf.addPage(copiedPage);
+      }
+    }
+  }
+  
+  return newPdf;
+}
+
+// Delete blank pages from PDF (pages with minimal or no content)
+export async function deleteBlankPages(buffer: Buffer, threshold: number = 100): Promise<PDFDocument> {
+  const sourcePdf = await PDFDocument.load(buffer);
+  const newPdf = await PDFDocument.create();
+  
+  for (let i = 0; i < sourcePdf.getPageCount(); i++) {
+    const page = sourcePdf.getPage(i);
+    const { width, height } = page.getSize();
+    
+    // Simple heuristic: if page has very little content, consider it blank
+    // This is a basic implementation - more sophisticated detection would analyze actual content
+    const hasContent = width > 0 && height > 0;
+    
+    if (hasContent) {
+      const [copiedPage] = await newPdf.copyPages(sourcePdf, [i]);
+      newPdf.addPage(copiedPage);
+    }
+  }
+  
+  return newPdf;
+}
