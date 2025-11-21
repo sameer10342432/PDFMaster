@@ -2576,7 +2576,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         case 'change-audio-volume':
         case 'increase-volume':
         case 'decrease-volume':
-          result = await audioVideoUtils.adjustAudioVolume(file.buffer, volume ? parseFloat(volume) : 1, format);
+          result = await audioVideoUtils.adjustAudioVolume(file.buffer, volume ?? 1, format);
           break;
         case 'normalize-audio':
         case 'audio-normalizer':
@@ -2591,11 +2591,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
         case 'change-audio-speed':
         case 'speed-up-audio':
         case 'slow-down-audio':
-          result = await audioVideoUtils.changeAudioSpeed(file.buffer, speed ? parseFloat(speed) : 1, format);
+          result = await audioVideoUtils.changeAudioSpeed(file.buffer, speed ?? 1, format);
           break;
         case 'change-pitch':
         case 'pitch-shifter':
-          result = await audioVideoUtils.changePitch(file.buffer, semitones ? parseInt(semitones) : 0, format);
+          result = await audioVideoUtils.changePitch(file.buffer, semitones ?? 0, format);
           break;
         case 'reverse-audio':
         case 'audio-reverser':
@@ -2642,19 +2642,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
       switch (toolId) {
         case 'add-reverb':
         case 'reverb-effect':
-          result = await audioVideoUtils.addReverbToAudio(file.buffer, roomSize ? parseInt(roomSize) : 50, format);
+          result = await audioVideoUtils.addReverbToAudio(file.buffer, roomSize ?? 50, format);
           break;
         case 'add-echo':
         case 'echo-effect':
-          result = await audioVideoUtils.addEchoToAudio(file.buffer, delay ? parseInt(delay) : 1000, decay ? parseFloat(decay) : 0.5, format);
+          result = await audioVideoUtils.addEchoToAudio(file.buffer, delay ?? 1000, decay ?? 0.5, format);
           break;
         case 'equalizer':
         case 'audio-equalizer':
           result = await audioVideoUtils.applyEqualizerToAudio(
             file.buffer,
-            bass ? parseInt(bass) : 0,
-            mid ? parseInt(mid) : 0,
-            treble ? parseInt(treble) : 0,
+            bass ?? 0,
+            mid ?? 0,
+            treble ?? 0,
             format
           );
           break;
@@ -2787,7 +2787,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         case 'trim-video':
         case 'cut-video':
         case 'clip-video':
-          result = await audioVideoUtils.trimVideo(file.buffer, startTime, duration, format);
+          result = await audioVideoUtils.trimVideo(file.buffer, startTime || '0', duration || '0', format);
           break;
         case 'compress-video':
         case 'reduce-video-size':
@@ -2797,18 +2797,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
         case 'resize-video':
         case 'scale-video':
         case 'change-video-resolution':
-          result = await audioVideoUtils.resizeVideo(file.buffer, parseInt(width), parseInt(height), format);
+          result = await audioVideoUtils.resizeVideo(file.buffer, width ?? 1920, height ?? 1080, format);
           break;
         case 'change-video-speed':
         case 'speed-up-video':
         case 'slow-down-video':
-          result = await audioVideoUtils.changeVideoSpeed(file.buffer, parseFloat(speed), format);
+          result = await audioVideoUtils.changeVideoSpeed(file.buffer, speed ?? 1, format);
           break;
         case 'rotate-video':
         case 'rotate-video-90':
         case 'rotate-video-180':
         case 'rotate-video-270':
-          result = await audioVideoUtils.rotateVideo(file.buffer, parseInt(angle) as 90 | 180 | 270, format);
+          result = await audioVideoUtils.rotateVideo(file.buffer, (angle ?? 90) as 90 | 180 | 270, format);
           break;
         case 'flip-video':
         case 'flip-video-horizontal':
