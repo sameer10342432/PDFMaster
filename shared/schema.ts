@@ -21850,6 +21850,249 @@ Create GIFs that work everywhere.`,
     }
   },
   {
+    id: "optimize-gif",
+    title: "Optimize GIF",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["gif", "optimize", "compress", "reduce"],
+    capability: "implemented" as ToolCapability,
+    metaTitle: "Optimize GIF Online Free - Compress Animated GIFs",
+    metaDescription: "Optimize GIF files online for free. Compress and reduce GIF file size while maintaining quality. Fast GIF optimizer.",
+    description: "Optimize and compress GIF files to reduce file size",
+    icon: "minimize",
+    howTo: [
+      "Upload your GIF file",
+      "Choose optimization level",
+      "Click 'Optimize GIF'",
+      "Download your optimized GIF"
+    ],
+    article: {
+      title: "Optimizing GIF Files",
+      content: `Reduce GIF file size while maintaining quality. Perfect for faster web loading and easier sharing.
+
+## Optimization Techniques
+
+- Color palette reduction
+- Frame deduplication
+- Lossy compression options
+- Smart dithering
+
+## Benefits
+
+- Faster loading times
+- Reduced bandwidth usage
+- Better performance
+- Smaller storage needs
+
+## Quality Control
+
+Choose between maximum compression or quality preservation.`,
+      relatedTools: ["compress-gif", "resize-gif", "gif-maker"]
+    }
+  },
+  {
+    id: "crop-gif",
+    title: "Crop GIF",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["gif", "crop", "trim", "cut"],
+    capability: "implemented" as ToolCapability,
+    metaTitle: "Crop GIF Online Free - Trim Animated GIFs",
+    metaDescription: "Crop GIF animations online for free. Trim and cut GIF borders. Remove unwanted areas from animated GIFs.",
+    description: "Crop and trim animated GIF files",
+    icon: "crop",
+    howTo: [
+      "Upload your GIF file",
+      "Select crop area visually",
+      "Adjust crop dimensions",
+      "Download cropped GIF"
+    ],
+    article: {
+      title: "Cropping Animated GIFs",
+      content: `Remove unwanted areas from animated GIFs while preserving animation quality.
+
+## Crop Features
+
+- Visual crop selector
+- Precise dimension input
+- Aspect ratio locking
+- Preview before download
+
+## Common Uses
+
+- Remove watermarks
+- Focus on subject
+- Fit specific dimensions
+- Remove borders
+
+## Animation Preservation
+
+All frames are cropped consistently.`,
+      relatedTools: ["resize-gif", "rotate-gif", "gif-maker"]
+    }
+  },
+  {
+    id: "rotate-gif",
+    title: "Rotate GIF",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["gif", "rotate", "turn", "orientation"],
+    capability: "implemented" as ToolCapability,
+    metaTitle: "Rotate GIF Online Free - Rotate Animated GIFs",
+    metaDescription: "Rotate GIF animations online for free. Turn GIFs 90, 180, or 270 degrees. Fix GIF orientation easily.",
+    description: "Rotate animated GIF files to correct orientation",
+    icon: "rotate-cw",
+    howTo: [
+      "Upload your GIF animation",
+      "Choose rotation angle (90°, 180°, 270°)",
+      "Preview rotation",
+      "Download rotated GIF"
+    ],
+    article: {
+      title: "Rotating Animated GIFs",
+      content: `Rotate GIF animations to correct orientation or create new perspectives.
+
+## Rotation Options
+
+- 90° clockwise
+- 180° flip
+- 270° clockwise (90° counter-clockwise)
+- Custom angles
+
+## Use Cases
+
+- Fix vertical videos
+- Correct orientation
+- Creative effects
+- Mobile optimization
+
+## Quality Maintained
+
+All frames rotated with quality preservation.`,
+      relatedTools: ["flip-gif", "crop-gif", "gif-maker"]
+    }
+  },
+  {
+    id: "flip-gif",
+    title: "Flip GIF",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["gif", "flip", "mirror", "reflect"],
+    capability: "implemented" as ToolCapability,
+    metaTitle: "Flip GIF Online Free - Mirror Animated GIFs",
+    metaDescription: "Flip GIF animations online for free. Mirror GIFs horizontally or vertically. Create mirrored GIF effects.",
+    description: "Flip and mirror animated GIF files",
+    icon: "flip-horizontal",
+    howTo: [
+      "Upload your GIF file",
+      "Choose flip direction (horizontal or vertical)",
+      "Preview flipped animation",
+      "Download flipped GIF"
+    ],
+    article: {
+      title: "Flipping Animated GIFs",
+      content: `Mirror GIF animations horizontally or vertically for creative effects or corrections.
+
+## Flip Options
+
+- Horizontal flip (mirror)
+- Vertical flip (upside-down)
+- Both directions
+- Preview before download
+
+## Common Applications
+
+- Creative effects
+- Direction correction
+- Symmetry creation
+- Text reversal fix
+
+## All Frames Flipped
+
+Consistent flipping across entire animation.`,
+      relatedTools: ["rotate-gif", "crop-gif", "gif-maker"]
+    }
+  },
+  {
+    id: "watermark-gif",
+    title: "Watermark GIF",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["gif", "watermark", "logo", "brand"],
+    capability: "implemented" as ToolCapability,
+    metaTitle: "Add Watermark to GIF Online Free - Watermark Animated GIFs",
+    metaDescription: "Add watermark to GIF online for free. Brand your animated GIFs with logo or text. Protect your GIF content.",
+    description: "Add watermark or logo to animated GIF files",
+    icon: "tag",
+    howTo: [
+      "Upload your GIF animation",
+      "Upload watermark image or enter text",
+      "Position and adjust watermark",
+      "Download watermarked GIF"
+    ],
+    article: {
+      title: "Adding Watermarks to Animated GIFs",
+      content: `Protect and brand your GIF animations with custom watermarks or logos.
+
+## Watermark Types
+
+- Image watermarks
+- Text watermarks
+- Logo overlays
+- Custom positioning
+
+## Customization
+
+- Opacity control
+- Size adjustment
+- Position selection
+- Color customization
+
+## Use Cases
+
+Brand content, protect copyright, add attribution, professional branding.`,
+      relatedTools: ["gif-maker", "optimize-gif", "resize-gif"]
+    }
+  },
+  {
+    id: "gif-metadata",
+    title: "GIF Metadata Viewer",
+    category: "GIF Tools" as ToolCategory,
+    tags: ["gif", "metadata", "info", "details"],
+    capability: "implemented" as ToolCapability,
+    metaTitle: "GIF Metadata Viewer Online Free - View GIF Information",
+    metaDescription: "View GIF metadata online for free. Extract GIF information including dimensions, frame count, duration, and file size.",
+    description: "View detailed metadata and information about GIF files",
+    icon: "info",
+    howTo: [
+      "Upload your GIF file",
+      "View complete metadata",
+      "See frame-by-frame details",
+      "Export metadata if needed"
+    ],
+    article: {
+      title: "Viewing GIF Metadata",
+      content: `Extract and view detailed information about GIF animations including technical specifications.
+
+## Available Information
+
+- Dimensions (width x height)
+- Frame count
+- Total duration
+- File size
+- Color palette size
+- Loop count
+- Frame delays
+
+## Use Cases
+
+- Technical analysis
+- Quality assessment
+- Format verification
+- Content inspection
+
+## Complete Details
+
+Get all technical specifications in one view.`,
+      relatedTools: ["optimize-gif", "gif-maker", "video-to-gif"]
+    }
+  },
+  {
     id: "bmp-to-jpg",
     title: "BMP to JPG",
     category: "Image Conversion" as ToolCategory,

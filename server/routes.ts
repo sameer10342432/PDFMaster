@@ -16,6 +16,7 @@ import * as imageValidators from './utils/image-validators';
 import * as ocrUtils from './utils/ocr-utils';
 import * as docConverter from './utils/document-converter';
 import * as pdfSecurity from './utils/pdf-security';
+import * as gifUtils from './utils/gif-utils';
 
 // Configure multer for file uploads
 const upload = multer({ 
@@ -3768,6 +3769,285 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error('Change DPI error:', error);
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       res.status(500).json({ error: `Failed to change DPI: ${errorMessage}` });
+    }
+  });
+
+  // ========================================
+  // GIF TOOLS - Create, Convert, Optimize
+  // ========================================
+  
+  // Create GIF from multiple images
+  app.post('/api/gif/create-from-images', imageOnly.array('files', 100), async (req, res) => {
+    try {
+      const files = req.files as Express.Multer.File[];
+
+      if (!files || files.length === 0) {
+        return res.status(400).json({ error: 'At least one image file is required' });
+      }
+
+      const delay = parseInt(req.body.delay || '500');
+      const repeat = parseInt(req.body.repeat || '0');
+      const quality = parseInt(req.body.quality || '10');
+      const width = req.body.width ? parseInt(req.body.width) : undefined;
+      const height = req.body.height ? parseInt(req.body.height) : undefined;
+
+      const gifBuffer = await gifUtils.createGifFromImages(
+        files.map(f => f.buffer),
+        { delay, repeat, quality, width, height }
+      );
+
+      res.setHeader('Content-Type', 'image/gif');
+      res.setHeader('Content-Disposition', 'attachment; filename="animated.gif"');
+      res.send(gifBuffer);
+
+    } catch (error) {
+      console.error('Create GIF error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to create GIF: ${errorMessage}` });
+    }
+  });
+
+  // Convert video to GIF
+  app.post('/api/gif/video-to-gif', videoOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No video file uploaded' });
+      }
+
+      const startTime = parseFloat(req.body.startTime || '0');
+      const duration = parseFloat(req.body.duration || '3');
+      const fps = parseInt(req.body.fps || '10');
+      const width = parseInt(req.body.width || '480');
+      const quality = (req.body.quality || 'medium') as 'high' | 'medium' | 'low';
+
+      const gifBuffer = await gifUtils.convertVideoToGif(file.buffer, {
+        startTime,
+        duration,
+        fps,
+        width,
+        quality
+      });
+
+      res.setHeader('Content-Type', 'image/gif');
+      res.setHeader('Content-Disposition', 'attachment; filename="video-converted.gif"');
+      res.send(gifBuffer);
+
+    } catch (error) {
+      console.error('Video to GIF error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to convert video to GIF: ${errorMessage}` });
+    }
+  });
+
+  // Optimize GIF
+  app.post('/api/gif/optimize', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No GIF file uploaded' });
+      }
+
+      if (!file.mimetype.includes('gif')) {
+        return res.status(400).json({ error: 'Only GIF files are allowed for this operation' });
+      }
+
+      const quality = parseInt(req.body.quality || '80');
+      const maxWidth = parseInt(req.body.maxWidth || '800');
+      const maxHeight = parseInt(req.body.maxHeight || '600');
+
+      const gifBuffer = await gifUtils.optimizeGif(file.buffer, {
+        quality,
+        maxWidth,
+        maxHeight
+      });
+
+      res.setHeader('Content-Type', 'image/gif');
+      res.setHeader('Content-Disposition', 'attachment; filename="optimized.gif"');
+      res.send(gifBuffer);
+
+    } catch (error) {
+      console.error('Optimize GIF error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to optimize GIF: ${errorMessage}` });
+    }
+  });
+
+  // Resize GIF
+  app.post('/api/gif/resize', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No GIF file uploaded' });
+      }
+
+      if (!file.mimetype.includes('gif')) {
+        return res.status(400).json({ error: 'Only GIF files are allowed for this operation' });
+      }
+
+      const width = req.body.width ? parseInt(req.body.width) : undefined;
+      const height = req.body.height ? parseInt(req.body.height) : undefined;
+      const fit = (req.body.fit || 'inside') as 'cover' | 'contain' | 'fill' | 'inside' | 'outside';
+
+      const gifBuffer = await gifUtils.resizeGif(file.buffer, width, height, fit);
+
+      res.setHeader('Content-Type', 'image/gif');
+      res.setHeader('Content-Disposition', 'attachment; filename="resized.gif"');
+      res.send(gifBuffer);
+
+    } catch (error) {
+      console.error('Resize GIF error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to resize GIF: ${errorMessage}` });
+    }
+  });
+
+  // Crop GIF
+  app.post('/api/gif/crop', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No GIF file uploaded' });
+      }
+
+      if (!file.mimetype.includes('gif')) {
+        return res.status(400).json({ error: 'Only GIF files are allowed for this operation' });
+      }
+
+      const left = parseInt(req.body.left || '0');
+      const top = parseInt(req.body.top || '0');
+      const width = parseInt(req.body.width || '100');
+      const height = parseInt(req.body.height || '100');
+
+      const gifBuffer = await gifUtils.cropGif(file.buffer, left, top, width, height);
+
+      res.setHeader('Content-Type', 'image/gif');
+      res.setHeader('Content-Disposition', 'attachment; filename="cropped.gif"');
+      res.send(gifBuffer);
+
+    } catch (error) {
+      console.error('Crop GIF error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to crop GIF: ${errorMessage}` });
+    }
+  });
+
+  // Rotate GIF
+  app.post('/api/gif/rotate', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No GIF file uploaded' });
+      }
+
+      if (!file.mimetype.includes('gif')) {
+        return res.status(400).json({ error: 'Only GIF files are allowed for this operation' });
+      }
+
+      const angle = parseInt(req.body.angle || '90');
+
+      const gifBuffer = await gifUtils.rotateGif(file.buffer, angle);
+
+      res.setHeader('Content-Type', 'image/gif');
+      res.setHeader('Content-Disposition', 'attachment; filename="rotated.gif"');
+      res.send(gifBuffer);
+
+    } catch (error) {
+      console.error('Rotate GIF error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to rotate GIF: ${errorMessage}` });
+    }
+  });
+
+  // Flip GIF
+  app.post('/api/gif/flip', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No GIF file uploaded' });
+      }
+
+      if (!file.mimetype.includes('gif')) {
+        return res.status(400).json({ error: 'Only GIF files are allowed for this operation' });
+      }
+
+      const horizontal = req.body.horizontal === 'true';
+      const vertical = req.body.vertical === 'true';
+
+      const gifBuffer = await gifUtils.flipGif(file.buffer, horizontal, vertical);
+
+      res.setHeader('Content-Type', 'image/gif');
+      res.setHeader('Content-Disposition', 'attachment; filename="flipped.gif"');
+      res.send(gifBuffer);
+
+    } catch (error) {
+      console.error('Flip GIF error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to flip GIF: ${errorMessage}` });
+    }
+  });
+
+  // Add watermark to GIF
+  app.post('/api/gif/watermark', upload.fields([{ name: 'gif', maxCount: 1 }, { name: 'watermark', maxCount: 1 }]), async (req, res) => {
+    try {
+      const files = req.files as { [fieldname: string]: Express.Multer.File[] };
+
+      if (!files.gif || !files.gif[0]) {
+        return res.status(400).json({ error: 'No GIF file uploaded' });
+      }
+
+      if (!files.watermark || !files.watermark[0]) {
+        return res.status(400).json({ error: 'No watermark image uploaded' });
+      }
+
+      const position = (req.body.position || 'bottom-right') as 'center' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+      const opacity = parseFloat(req.body.opacity || '0.5');
+
+      const gifBuffer = await gifUtils.addGifWatermark(
+        files.gif[0].buffer,
+        files.watermark[0].buffer,
+        position,
+        opacity
+      );
+
+      res.setHeader('Content-Type', 'image/gif');
+      res.setHeader('Content-Disposition', 'attachment; filename="watermarked.gif"');
+      res.send(gifBuffer);
+
+    } catch (error) {
+      console.error('GIF watermark error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to add watermark to GIF: ${errorMessage}` });
+    }
+  });
+
+  // Get GIF metadata
+  app.post('/api/gif/metadata', imageOnly.single('file'), async (req, res) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({ error: 'No GIF file uploaded' });
+      }
+
+      if (!file.mimetype.includes('gif')) {
+        return res.status(400).json({ error: 'Only GIF files are allowed for this operation' });
+      }
+
+      const metadata = await gifUtils.getGifMetadata(file.buffer);
+
+      res.json({ metadata });
+
+    } catch (error) {
+      console.error('GIF metadata error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      res.status(500).json({ error: `Failed to get GIF metadata: ${errorMessage}` });
     }
   });
 
