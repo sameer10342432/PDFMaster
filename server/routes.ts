@@ -710,45 +710,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.post('/api/convert/word-to-pdf', upload.single('file'), async (req, res) => {
-    try {
-      const file = req.file;
-      if (!file) {
-        return res.status(400).json({ error: 'No Word file uploaded' });
-      }
-
-      const pdfBuffer = await docConverter.wordToPdf(file.buffer);
-
-      res.setHeader('Content-Type', 'application/pdf');
-      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.(docx?|odt)$/, '.pdf')}"`);
-      res.send(pdfBuffer);
-
-    } catch (error) {
-      console.error('Word to PDF conversion error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to convert Word to PDF: ${errorMessage}` });
-    }
-  });
-
-  app.post('/api/convert/excel-to-pdf', upload.single('file'), async (req, res) => {
-    try {
-      const file = req.file;
-      if (!file) {
-        return res.status(400).json({ error: 'No Excel file uploaded' });
-      }
-
-      const pdfBuffer = await docConverter.excelToPdf(file.buffer);
-
-      res.setHeader('Content-Type', 'application/pdf');
-      res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.(xlsx?|ods|csv)$/, '.pdf')}"`);
-      res.send(pdfBuffer);
-
-    } catch (error) {
-      console.error('Excel to PDF conversion error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      res.status(500).json({ error: `Failed to convert Excel to PDF: ${errorMessage}` });
-    }
-  });
+  // DISABLED (Chromium dependency):   app.post('/api/convert/word-to-pdf', upload.single('file'), async (req, res) => {
+  // DISABLED (Chromium dependency):     try {
+  // DISABLED (Chromium dependency):       const file = req.file;
+  // DISABLED (Chromium dependency):       if (!file) {
+  // DISABLED (Chromium dependency):         return res.status(400).json({ error: 'No Word file uploaded' });
+  // DISABLED (Chromium dependency):       }
+  // DISABLED (Chromium dependency): 
+  // DISABLED (Chromium dependency):       const pdfBuffer = await docConverter.wordToPdf(file.buffer);
+  // DISABLED (Chromium dependency): 
+  // DISABLED (Chromium dependency):       res.setHeader('Content-Type', 'application/pdf');
+  // DISABLED (Chromium dependency):       res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.(docx?|odt)$/, '.pdf')}"`);
+  // DISABLED (Chromium dependency):       res.send(pdfBuffer);
+  // DISABLED (Chromium dependency): 
+  // DISABLED (Chromium dependency):     } catch (error) {
+  // DISABLED (Chromium dependency):       console.error('Word to PDF conversion error:', error);
+  // DISABLED (Chromium dependency):       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+  // DISABLED (Chromium dependency):       res.status(500).json({ error: `Failed to convert Word to PDF: ${errorMessage}` });
+  // DISABLED (Chromium dependency):     }
+  // DISABLED (Chromium dependency):   });
+  // DISABLED (Chromium dependency): 
+  // DISABLED (Chromium dependency):   app.post('/api/convert/excel-to-pdf', upload.single('file'), async (req, res) => {
+  // DISABLED (Chromium dependency):     try {
+  // DISABLED (Chromium dependency):       const file = req.file;
+  // DISABLED (Chromium dependency):       if (!file) {
+  // DISABLED (Chromium dependency):         return res.status(400).json({ error: 'No Excel file uploaded' });
+  // DISABLED (Chromium dependency):       }
+  // DISABLED (Chromium dependency): 
+  // DISABLED (Chromium dependency):       const pdfBuffer = await docConverter.excelToPdf(file.buffer);
+  // DISABLED (Chromium dependency): 
+  // DISABLED (Chromium dependency):       res.setHeader('Content-Type', 'application/pdf');
+  // DISABLED (Chromium dependency):       res.setHeader('Content-Disposition', `attachment; filename="${file.originalname.replace(/\.(xlsx?|ods|csv)$/, '.pdf')}"`);
+  // DISABLED (Chromium dependency):       res.send(pdfBuffer);
+  // DISABLED (Chromium dependency): 
+  // DISABLED (Chromium dependency):     } catch (error) {
+  // DISABLED (Chromium dependency):       console.error('Excel to PDF conversion error:', error);
+  // DISABLED (Chromium dependency):       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+  // DISABLED (Chromium dependency):       res.status(500).json({ error: `Failed to convert Excel to PDF: ${errorMessage}` });
+  // DISABLED (Chromium dependency):     }
+  // DISABLED (Chromium dependency):   });
 
   // Note: PPT to PDF conversion endpoint removed temporarily  
   // Requires proper PPT processing library (officegen/pptxgenjs) integration
