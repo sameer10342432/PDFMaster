@@ -3943,6 +3943,76 @@ export const allTools: Tool[] = [
     category: 'Legal & Compliance',
     icon: '📏',
     path: '/tools/property-line-encroachment-analyzer'
+  },
+  {
+    name: 'Adverse Possession (Squatter\'s Rights) Checker',
+    description: 'Analyze potential adverse possession claims and understand squatter\'s rights laws by state',
+    category: 'Legal & Compliance',
+    icon: '⚖️',
+    path: '/tools/adverse-possession-checker'
+  },
+  {
+    name: 'HOA Special Assessment Risk Calculator',
+    description: 'Evaluate the risk of unexpected HOA special assessments and estimate potential costs',
+    category: 'Legal & Compliance',
+    icon: '🏘️',
+    path: '/tools/hoa-special-assessment-risk-calculator'
+  },
+  {
+    name: 'HOA Document (CC&Rs) Red Flag Finder',
+    description: 'Identify potential red flags and restrictive covenants in HOA CC&Rs before you buy',
+    category: 'Legal & Compliance',
+    icon: '🚩',
+    path: '/tools/hoa-ccrs-red-flag-finder'
+  },
+  {
+    name: 'Lis Pendens (Pending Lawsuit) Checker',
+    description: 'Assess the risk and impact of a lis pendens notice on property purchase or sale',
+    category: 'Legal & Compliance',
+    icon: '⚠️',
+    path: '/tools/lis-pendens-checker'
+  },
+  {
+    name: 'Mechanic\'s Lien Risk Analyzer',
+    description: 'Assess the risk of mechanic\'s liens on property and calculate potential exposure',
+    category: 'Legal & Compliance',
+    icon: '🔧',
+    path: '/tools/mechanics-lien-risk-analyzer'
+  },
+  {
+    name: 'Due on Sale Clause Analyzer',
+    description: 'Analyze due-on-sale clause implications and creative financing strategies',
+    category: 'Legal & Compliance',
+    icon: '📜',
+    path: '/tools/due-on-sale-clause-analyzer'
+  },
+  {
+    name: 'Acceleration Clause Analyzer',
+    description: 'Understand acceleration clauses in mortgages and how they affect default scenarios',
+    category: 'Legal & Compliance',
+    icon: '⏩',
+    path: '/tools/acceleration-clause-analyzer'
+  },
+  {
+    name: 'Prepayment Penalty Calculator',
+    description: 'Calculate prepayment penalties when paying off your mortgage early or refinancing',
+    category: 'Financial Analysis',
+    icon: '💰',
+    path: '/tools/prepayment-penalty-calculator'
+  },
+  {
+    name: 'Usury Law (Loan Shark) Checker by State',
+    description: 'Check if an interest rate violates usury laws and maximum legal rates by state',
+    category: 'Legal & Compliance',
+    icon: '🏦',
+    path: '/tools/usury-law-checker'
+  },
+  {
+    name: 'Seasoning Requirement (Flipping) Checker',
+    description: 'Check seasoning requirements for property flips and rapid resales to avoid lending issues',
+    category: 'Legal & Compliance',
+    icon: '🔄',
+    path: '/tools/seasoning-requirement-checker'
   }
 ];
 
