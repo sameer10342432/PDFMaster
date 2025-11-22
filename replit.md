@@ -1,10 +1,24 @@
 # Overview
 
-Property Tools is a comprehensive Next.js web application providing 547 interactive calculators and educational content for real estate professionals, investors, and homebuyers. It covers a wide array of real estate facets including mortgage analysis, investment evaluation, tax calculations, seller tools, agent tools, land development, opportunity zones, market analysis, closing costs, estate planning, lifestyle & housing, location-specific tools, sustainability tools, and AI-powered content. The platform features an admin panel for content management, a centralized tools data system, client-side calculation storage, scenario comparison, export capabilities, and smart insights. The project aims to be a leading resource in real estate analytics and decision-making, with a business vision to empower informed real estate decisions and capture a significant market share in property tech.
+Property Tools is a comprehensive Next.js web application providing 557 interactive calculators and educational content for real estate professionals, investors, and homebuyers. It covers a wide array of real estate facets including mortgage analysis, investment evaluation, tax calculations, seller tools, agent tools, land development, opportunity zones, market analysis, closing costs, estate planning, lifestyle & housing, location-specific tools, sustainability tools, legal & compliance tools, and AI-powered content. The platform features an admin panel for content management, a centralized tools data system, client-side calculation storage, scenario comparison, export capabilities, and smart insights. The project aims to be a leading resource in real estate analytics and decision-making, with a business vision to empower informed real estate decisions and capture a significant market share in property tech.
 
 # Recent Changes
 
-**November 22, 2025**: Added 10 new sustainability-focused calculators, expanding the Green & Sustainable category (total platform count: 547):
+**November 22, 2025** (Latest): Added 10 new specialized real estate tools across Green & Sustainable and Legal & Compliance categories (total platform count: 557):
+- **Green & Sustainable Tools (5):**
+  - Home Air Quality (IAQ) Improvement ROI Calculator - Calculate ROI for improving indoor air quality with air purifiers, HVAC upgrades, and ventilation
+  - Radon Mitigation System Cost Calculator - Estimate cost of radon mitigation systems with health benefits and home value impact
+  - Water-Efficient Fixture ROI Calculator - Calculate savings from water-efficient toilets, faucets, and showerheads
+  - Pool Solar Heater ROI Calculator - Calculate ROI for solar pool heating systems
+  - Sustainable Home Feature Value-Add Calculator - Calculate how much green features add to property value
+- **Legal & Compliance Tools (5 - New Category):**
+  - Real Estate Contract Review Checklist - Comprehensive checklist to review purchase agreements and spot red flags
+  - Title Search "Red Flag" Finder - Identify potential title issues, liens, and encumbrances before closing
+  - Cloud on Title Risk Calculator - Assess financial and legal risk of purchasing property with title defects
+  - Easement Finder (by Address) - Discover potential easements and their impact on property rights
+  - Property Line (Encroachment) Analyzer - Identify and assess property line encroachment issues
+
+**November 22, 2025** (Earlier): Added 10 new sustainability-focused calculators, expanding the Green & Sustainable category (total platform count: 547):
 - Inflate-Proof Home (Energy) Calculator - Calculate long-term energy savings and protection against rising utility costs
 - Drought-Tolerant Landscaping Cost Calculator - Calculate costs and water savings from xeriscaping
 - Deconstruction vs. Demolition Value Calculator - Compare building removal methods with salvage value analysis
@@ -48,10 +62,10 @@ Preferred communication style: Simple, everyday language.
 
 ## Content Management
 - **Blog System**: Admin panel includes a block-based rich text editor for articles, supporting multimedia, draft/publish workflow, and SEO metadata.
-- **Calculator Content**: Centralized data system (`src/content/tools/`) acts as a single source of truth for all 547 calculators across various categories, including specialized tools for commercial real estate, state-specific taxes, location intelligence, estate planning, agent tools (E&O insurance, MLS fees, marketing ROI, lead generation, CRM ROI, cost per lead, commission calculators), sustainability tools (energy efficiency, green building, walkability, transit-oriented development), and AI-powered content. Each calculator entry includes title, description, icon, category, slug, article, and calculation logic.
+- **Calculator Content**: Centralized data system (`src/content/tools/`) acts as a single source of truth for all 557 calculators across various categories, including specialized tools for commercial real estate, state-specific taxes, location intelligence, estate planning, agent tools (E&O insurance, MLS fees, marketing ROI, lead generation, CRM ROI, cost per lead, commission calculators), sustainability tools (energy efficiency, green building, walkability, transit-oriented development, indoor air quality, water conservation), legal & compliance tools (contract review, title search, easements, property lines), and AI-powered content. Each calculator entry includes title, description, icon, category, slug, article, and calculation logic.
 
 ## Core Features
-- **Calculator System**: Modular architecture supporting 547 professional tools with features like what-if analysis, real-time updates, search/filter, and responsive UI. Supports text-based results for qualitative assessments.
+- **Calculator System**: Modular architecture supporting 557 professional tools with features like what-if analysis, real-time updates, search/filter, and responsive UI. Supports text-based results for qualitative assessments.
 - **Enhancement Features**: Scenario Manager for comparisons, export utilities (CSV, JSON, PDF), shareable links, smart insights, calculation history, notes, favorites, and goals tracking.
 - **Client Storage**: Custom `StorageManager` handles localStorage with quota management (5MB limit) and usage monitoring.
 
