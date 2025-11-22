@@ -3803,6 +3803,76 @@ export const allTools: Tool[] = [
     category: 'Green & Sustainable',
     icon: '🔍',
     path: '/tools/green-rebate-finder-by-zip'
+  },
+  {
+    name: 'Inflate-Proof Home (Energy) Calculator',
+    description: 'Calculate long-term energy savings and protection against rising utility costs with energy-efficient home improvements',
+    category: 'Green & Sustainable',
+    icon: '🛡️',
+    path: '/tools/inflate-proof-home-energy-calculator'
+  },
+  {
+    name: 'Drought-Tolerant Landscaping Cost Calculator',
+    description: 'Calculate costs and water savings from drought-resistant landscaping and xeriscaping',
+    category: 'Green & Sustainable',
+    icon: '🌵',
+    path: '/tools/drought-tolerant-landscaping-cost'
+  },
+  {
+    name: 'Deconstruction vs Demolition Value Calculator',
+    description: 'Compare costs and benefits of deconstructing vs demolishing a building, including material salvage value and tax deductions',
+    category: 'Green & Sustainable',
+    icon: '🔨',
+    path: '/tools/deconstruction-vs-demolition-value'
+  },
+  {
+    name: 'Reclaimed Materials Value Estimator',
+    description: 'Estimate the market value of reclaimed building materials for renovation or resale',
+    category: 'Green & Sustainable',
+    icon: '♻️',
+    path: '/tools/reclaimed-materials-value-estimator'
+  },
+  {
+    name: 'Walk Score vs Driving Cost Calculator',
+    description: 'Compare the financial impact of walkable neighborhoods vs car-dependent locations',
+    category: 'Green & Sustainable',
+    icon: '🚶',
+    path: '/tools/walk-score-vs-driving-cost-calculator'
+  },
+  {
+    name: 'Bike Score (Impact on Health Savings) Calculator',
+    description: 'Calculate health and financial benefits from living in bike-friendly neighborhoods',
+    category: 'Green & Sustainable',
+    icon: '🚴',
+    path: '/tools/bike-score-health-savings-calculator'
+  },
+  {
+    name: 'Proximity to Public Transit Savings Calculator',
+    description: 'Calculate financial benefits of living near quality public transportation',
+    category: 'Green & Sustainable',
+    icon: '🚇',
+    path: '/tools/transit-proximity-savings-calculator'
+  },
+  {
+    name: 'Community Solar vs Rooftop Solar Calculator',
+    description: 'Compare costs and benefits of community solar programs vs installing rooftop solar panels',
+    category: 'Green & Sustainable',
+    icon: '☀️',
+    path: '/tools/community-solar-vs-rooftop-solar'
+  },
+  {
+    name: 'Aging in Place (Green) Renovation Calculator',
+    description: 'Calculate costs and benefits of eco-friendly home modifications for aging in place',
+    category: 'Green & Sustainable',
+    icon: '🏡',
+    path: '/tools/aging-in-place-green-renovation'
+  },
+  {
+    name: 'Non-Toxic Building Material Finder',
+    description: 'Find and compare costs of healthy, non-toxic building materials vs conventional options',
+    category: 'Green & Sustainable',
+    icon: '🌿',
+    path: '/tools/non-toxic-building-material-finder'
   }
 ];
 
