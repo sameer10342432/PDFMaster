@@ -1,10 +1,22 @@
 # Overview
 
-Property Tools is a comprehensive Next.js web application providing 487 interactive calculators and educational content for real estate professionals, investors, and homebuyers. It covers a wide array of real estate facets including mortgage analysis, investment evaluation, tax calculations, seller tools, agent tools, land development, opportunity zones, market analysis, closing costs, estate planning, lifestyle & housing, location-specific tools, and AI-powered content. The platform features an admin panel for content management, a centralized tools data system, client-side calculation storage, scenario comparison, export capabilities, and smart insights. The project aims to be a leading resource in real estate analytics and decision-making, with a business vision to empower informed real estate decisions and capture a significant market share in property tech.
+Property Tools is a comprehensive Next.js web application providing 547 interactive calculators and educational content for real estate professionals, investors, and homebuyers. It covers a wide array of real estate facets including mortgage analysis, investment evaluation, tax calculations, seller tools, agent tools, land development, opportunity zones, market analysis, closing costs, estate planning, lifestyle & housing, location-specific tools, sustainability tools, and AI-powered content. The platform features an admin panel for content management, a centralized tools data system, client-side calculation storage, scenario comparison, export capabilities, and smart insights. The project aims to be a leading resource in real estate analytics and decision-making, with a business vision to empower informed real estate decisions and capture a significant market share in property tech.
 
 # Recent Changes
 
-**November 18, 2025**: Added 10 new real estate agent calculators, expanding the Agent Tools category from 10 to 20 tools (total platform count: 487):
+**November 22, 2025**: Added 10 new sustainability-focused calculators, expanding the Green & Sustainable category (total platform count: 547):
+- Inflate-Proof Home (Energy) Calculator - Calculate long-term energy savings and protection against rising utility costs
+- Drought-Tolerant Landscaping Cost Calculator - Calculate costs and water savings from xeriscaping
+- Deconstruction vs. Demolition Value Calculator - Compare building removal methods with salvage value analysis
+- Reclaimed Materials Value Estimator - Estimate market value of salvaged building materials
+- Walk Score vs. Driving Cost Calculator - Compare financial impact of walkable vs. car-dependent locations
+- Bike Score (Impact on Health Savings) Calculator - Calculate health and financial benefits of bike-friendly neighborhoods
+- Proximity to Public Transit Savings Calculator - Calculate benefits of living near public transportation
+- Community Solar vs. Rooftop Solar Calculator - Compare solar energy options and savings
+- Aging in Place (Green) Renovation Calculator - Calculate eco-friendly home modifications for aging in place
+- Non-Toxic Building Material Finder - Compare costs of healthy vs. conventional building materials
+
+**November 18, 2025**: Added 10 new real estate agent calculators, expanding the Agent Tools category from 10 to 20 tools (total platform count: 537):
 - CRM ROI Calculator - Calculate ROI for CRM systems with cost savings and productivity analysis
 - Cost Per Lead (CPL) Calculator - Optimize marketing budget by tracking lead generation costs
 - Cost Per Acquisition (CPA) Calculator - Calculate client acquisition costs across marketing channels
@@ -36,10 +48,10 @@ Preferred communication style: Simple, everyday language.
 
 ## Content Management
 - **Blog System**: Admin panel includes a block-based rich text editor for articles, supporting multimedia, draft/publish workflow, and SEO metadata.
-- **Calculator Content**: Centralized data system (`src/content/tools/`) acts as a single source of truth for all 487 calculators across various categories, including specialized tools for commercial real estate, state-specific taxes, location intelligence, estate planning, agent tools (E&O insurance, MLS fees, marketing ROI, lead generation, CRM ROI, cost per lead, commission calculators), and AI-powered content. Each calculator entry includes title, description, icon, category, slug, article, and calculation logic.
+- **Calculator Content**: Centralized data system (`src/content/tools/`) acts as a single source of truth for all 547 calculators across various categories, including specialized tools for commercial real estate, state-specific taxes, location intelligence, estate planning, agent tools (E&O insurance, MLS fees, marketing ROI, lead generation, CRM ROI, cost per lead, commission calculators), sustainability tools (energy efficiency, green building, walkability, transit-oriented development), and AI-powered content. Each calculator entry includes title, description, icon, category, slug, article, and calculation logic.
 
 ## Core Features
-- **Calculator System**: Modular architecture supporting 487 professional tools with features like what-if analysis, real-time updates, search/filter, and responsive UI. Supports text-based results for qualitative assessments.
+- **Calculator System**: Modular architecture supporting 547 professional tools with features like what-if analysis, real-time updates, search/filter, and responsive UI. Supports text-based results for qualitative assessments.
 - **Enhancement Features**: Scenario Manager for comparisons, export utilities (CSV, JSON, PDF), shareable links, smart insights, calculation history, notes, favorites, and goals tracking.
 - **Client Storage**: Custom `StorageManager` handles localStorage with quota management (5MB limit) and usage monitoring.
 
