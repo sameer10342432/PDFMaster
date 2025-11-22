@@ -3733,6 +3733,76 @@ export const allTools: Tool[] = [
     category: 'Energy Efficiency',
     icon: '🪟',
     path: '/tools/double-pane-vs-triple-pane-window-roi'
+  },
+  {
+    name: 'Insulation ROI Calculator',
+    description: 'Calculate return on investment for attic and wall insulation upgrades including energy savings, installation costs, and payback period',
+    category: 'Green & Sustainable',
+    icon: '🏠',
+    path: '/tools/insulation-roi-calculator'
+  },
+  {
+    name: 'Home Energy Tax Credit Finder',
+    description: 'Find federal and state tax credits and rebates for home energy efficiency upgrades including solar, insulation, HVAC, and windows',
+    category: 'Green & Sustainable',
+    icon: '💰',
+    path: '/tools/home-energy-tax-credit-finder'
+  },
+  {
+    name: 'Carbon Footprint of Home Calculator',
+    description: 'Calculate your home\'s carbon footprint from energy use, heating, cooling, and identify opportunities to reduce greenhouse gas emissions',
+    category: 'Green & Sustainable',
+    icon: '🌍',
+    path: '/tools/carbon-footprint-home-calculator'
+  },
+  {
+    name: 'Sustainable Building Materials Calculator',
+    description: 'Calculate costs and environmental impact of sustainable building materials vs conventional options for green home construction and renovation',
+    category: 'Green & Sustainable',
+    icon: '🌱',
+    path: '/tools/sustainable-building-materials-calculator'
+  },
+  {
+    name: 'Green Mortgage Lender Finder',
+    description: 'Find green mortgage lenders offering special financing for energy-efficient homes including FHA EEM, Fannie Mae HomeStyle Energy, and green home loans',
+    category: 'Green & Sustainable',
+    icon: '🏦',
+    path: '/tools/green-mortgage-lender-finder'
+  },
+  {
+    name: 'ADU (Green Build) Cost Estimator',
+    description: 'Estimate costs for building a sustainable, energy-efficient ADU with green materials, solar panels, and efficient systems',
+    category: 'Green & Sustainable',
+    icon: '🏡',
+    path: '/tools/adu-green-build-cost-estimator'
+  },
+  {
+    name: 'Off-Grid Home Feasibility Calculator',
+    description: 'Calculate costs and feasibility of going off-grid with solar power, water systems, septic, and energy storage for self-sufficient living',
+    category: 'Green & Sustainable',
+    icon: '⚡',
+    path: '/tools/off-grid-home-feasibility-calculator'
+  },
+  {
+    name: 'Passive House Cost vs Benefit Calculator',
+    description: 'Calculate costs and benefits of building to Passive House standard including construction premium, energy savings, and comfort benefits',
+    category: 'Green & Sustainable',
+    icon: '🏠',
+    path: '/tools/passive-house-cost-benefit-calculator'
+  },
+  {
+    name: 'Home Composting Waste Savings Calculator',
+    description: 'Calculate savings on waste bills and environmental impact from home composting food scraps and yard waste',
+    category: 'Green & Sustainable',
+    icon: '♻️',
+    path: '/tools/home-composting-waste-savings-calculator'
+  },
+  {
+    name: 'Local Green Rebate Finder by ZIP Code',
+    description: 'Find local, state, and utility green rebates and incentives for energy efficiency upgrades by ZIP code',
+    category: 'Green & Sustainable',
+    icon: '🔍',
+    path: '/tools/green-rebate-finder-by-zip'
   }
 ];
 
@@ -3758,7 +3828,8 @@ export const categories = [
   'Renter Tools',
   'Rent & Lease Tools',
   'Energy Efficiency',
-  'Water Conservation'
+  'Water Conservation',
+  'Green & Sustainable'
 ];
 
 export const getToolsByCategory = (category: string): Tool[] => {
