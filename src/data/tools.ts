@@ -3873,6 +3873,76 @@ export const allTools: Tool[] = [
     category: 'Green & Sustainable',
     icon: '🌿',
     path: '/tools/non-toxic-building-material-finder'
+  },
+  {
+    name: 'Home Air Quality (IAQ) Improvement ROI Calculator',
+    description: 'Calculate the return on investment for improving indoor air quality with air purifiers, HVAC upgrades, and ventilation systems',
+    category: 'Green & Sustainable',
+    icon: '🌬️',
+    path: '/tools/home-air-quality-iaq-improvement-roi'
+  },
+  {
+    name: 'Radon Mitigation System Cost Calculator',
+    description: 'Estimate the cost of installing a radon mitigation system and calculate long-term health benefits and home value impact',
+    category: 'Green & Sustainable',
+    icon: '☢️',
+    path: '/tools/radon-mitigation-system-cost'
+  },
+  {
+    name: 'Water-Efficient Fixture ROI Calculator',
+    description: 'Calculate savings from installing water-efficient toilets, faucets, and showerheads with payback period and environmental impact',
+    category: 'Green & Sustainable',
+    icon: '💧',
+    path: '/tools/water-efficient-fixture-roi'
+  },
+  {
+    name: 'Pool Solar Heater ROI Calculator',
+    description: 'Calculate the return on investment for solar pool heating systems including installation costs, energy savings, and extended swimming season value',
+    category: 'Green & Sustainable',
+    icon: '🏊',
+    path: '/tools/pool-solar-heater-roi-calculator'
+  },
+  {
+    name: 'Sustainable Home Feature Value-Add Calculator',
+    description: 'Calculate how much green and sustainable home features add to your property value including solar, smart tech, and energy-efficient upgrades',
+    category: 'Green & Sustainable',
+    icon: '🏡',
+    path: '/tools/sustainable-home-feature-value-add'
+  },
+  {
+    name: 'Real Estate Contract Review Checklist',
+    description: 'Comprehensive checklist to review purchase agreements, spot red flags, and ensure all critical contract elements are properly addressed before signing',
+    category: 'Legal & Compliance',
+    icon: '📋',
+    path: '/tools/real-estate-contract-review-checklist'
+  },
+  {
+    name: 'Title Search "Red Flag" Finder',
+    description: 'Identify potential title issues, liens, encumbrances, and ownership problems before closing to protect your real estate investment',
+    category: 'Legal & Compliance',
+    icon: '🚩',
+    path: '/tools/title-search-red-flag-finder'
+  },
+  {
+    name: 'Cloud on Title Risk Calculator',
+    description: 'Assess the financial and legal risk of purchasing property with a "cloud on title" - defects that impair clear ownership',
+    category: 'Legal & Compliance',
+    icon: '⚠️',
+    path: '/tools/cloud-on-title-risk-calculator'
+  },
+  {
+    name: 'Easement Finder (by Address)',
+    description: 'Discover potential easements affecting your property and understand their impact on ownership rights, land use, and property value',
+    category: 'Legal & Compliance',
+    icon: '🗺️',
+    path: '/tools/easement-finder-by-address'
+  },
+  {
+    name: 'Property Line (Encroachment) Analyzer',
+    description: 'Identify and assess potential property line encroachment issues including fences, structures, driveways, and trees that cross boundary lines',
+    category: 'Legal & Compliance',
+    icon: '📏',
+    path: '/tools/property-line-encroachment-analyzer'
   }
 ];
 
@@ -3899,7 +3969,8 @@ export const categories = [
   'Rent & Lease Tools',
   'Energy Efficiency',
   'Water Conservation',
-  'Green & Sustainable'
+  'Green & Sustainable',
+  'Legal & Compliance'
 ];
 
 export const getToolsByCategory = (category: string): Tool[] => {
